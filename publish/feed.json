@@ -3,7 +3,7 @@
   "description": "A Create-powered SMP that still feels like Minecraft. Build factories, rail networks and airships, explore a reworked world, and fight your way up the ages.",
   "server": {
     "name": "LemurSaucePacket",
-    "address": "play.example.com"
+    "address": "mc.limas.ca"
   },
   "strictMods": true,
   "recommendedMemoryMB": 6144,

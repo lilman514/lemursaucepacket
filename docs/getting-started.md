@@ -14,6 +14,8 @@ Press **Play**. The launcher asks you to sign in with the Microsoft account that
 
 Press **Play** again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server.
 
+The server's address is **mc.limas.ca**. The launcher puts it in your multiplayer list for you, so you never have to type it.
+
 ![The title screen](images/title-screen.png)
 
 If you'd rather see the title screen first, turn off *Join the server automatically* on the launcher's Settings page.
