@@ -1,0 +1,334 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "landfall"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "minecraft:oak_sapling"
+	}
+	id: "55ED1DC4BC96FEB5"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/landfall.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 0
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:cogwheel"
+			}
+			id: "5B6534D87A4D5267"
+			rewards: [
+				{
+					id: "1D64D233025F1A65"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "4833FBE1B9C7F0B9"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "6393242D91DCD278"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B6534D87A4D5267"]
+			icon: {
+				id: "minecraft:book"
+			}
+			id: "6FBEA446F15D78AF"
+			rewards: [
+				{
+					id: "33FC272ED6395FF3"
+					type: "xp"
+					xp: 5
+				}
+			]
+			tasks: [
+				{
+					id: "028A827B62B8932F"
+					type: "checkmark"
+				}
+			]
+			x: 2.25d
+			y: -1.75d
+		}
+		{
+			dependencies: ["5B6534D87A4D5267"]
+			icon: {
+				id: "minecraft:white_banner"
+			}
+			id: "003B74D7023418AD"
+			rewards: [
+				{
+					id: "21EE4D369B411D73"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1BBD804E98164CF0"
+					type: "checkmark"
+				}
+			]
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B6534D87A4D5267"]
+			icon: {
+				id: "minecraft:crafting_table"
+			}
+			id: "79ABE8B917DF9C5F"
+			rewards: [
+				{
+					id: "5ED36CF311374434"
+					type: "xp"
+					xp: 5
+				}
+			]
+			tasks: [
+				{
+					id: "186644C01F1BBFF9"
+					item: {
+						count: 1
+						id: "minecraft:crafting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: 1.75d
+		}
+		{
+			dependencies: ["79ABE8B917DF9C5F"]
+			icon: {
+				id: "minecraft:stone_pickaxe"
+			}
+			id: "3A55BEAD0546926A"
+			rewards: [
+				{
+					id: "1FE1ACBE8478B09B"
+					item: {
+						count: 4
+						id: "numismatics:spur"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/upgrade_tools"
+					criterion: ""
+					id: "5293A86776CCFD9D"
+					type: "advancement"
+				}
+			]
+			x: 4.5d
+			y: -0.875d
+		}
+		{
+			dependencies: ["79ABE8B917DF9C5F"]
+			icon: {
+				id: "minecraft:red_bed"
+			}
+			id: "66DF651D226A3355"
+			rewards: [
+				{
+					id: "3E7335E1BC91547C"
+					item: {
+						count: 4
+						id: "numismatics:spur"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/sleep_in_bed"
+					criterion: ""
+					id: "6EB0DCA9A6611806"
+					type: "advancement"
+				}
+			]
+			x: 4.5d
+			y: 0.875d
+		}
+		{
+			dependencies: ["3A55BEAD0546926A"]
+			icon: {
+				id: "minecraft:iron_ingot"
+			}
+			id: "4C4715A2B03EDF3B"
+			rewards: [
+				{
+					id: "1EA72A901742813B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "069617370D2A5840"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: -1.75d
+		}
+		{
+			dependencies: ["3A55BEAD0546926A"]
+			icon: {
+				id: "minecraft:andesite"
+			}
+			id: "54FDF2788C384A54"
+			rewards: [
+				{
+					id: "691D6143CEA54756"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "3FAFE50E7F04E9E3"
+					item: {
+						count: 1
+						id: "minecraft:andesite"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4C4715A2B03EDF3B"]
+			icon: {
+				id: "sophisticatedbackpacks:backpack"
+			}
+			id: "280E376FA3E64DCB"
+			rewards: [
+				{
+					id: "4D275B589F6D1C2D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "21BB407CDEA7F7F3"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:backpack"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66DF651D226A3355"]
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "144919363DECDDF8"
+			rewards: [
+				{
+					id: "18C2ADC120D4B77F"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1070F8E6374521BC"
+					structure: "#minecraft:village"
+					type: "structure"
+				}
+			]
+			x: 6.75d
+			y: 1.75d
+		}
+		{
+			dependencies: ["4C4715A2B03EDF3B", "54FDF2788C384A54", "280E376FA3E64DCB"]
+			icon: {
+				id: "create:wrench"
+			}
+			id: "5B021E3E2BC589C2"
+			rewards: [
+				{
+					id: "01BA7F21846D924A"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "047F3B85B71B0AAB"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "309DEAF2219E7CC8"
+					item: {
+						count: 1
+						id: "create:wrench"
+					}
+					type: "item"
+				}
+			]
+			x: 11.25d
+			y: 0.0d
+		}
+	]
+}

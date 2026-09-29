@@ -1,0 +1,13 @@
+node_modules/
+launcher/out/
+launcher/dist/
+launcher/.headless/
+# Build output of publish/publish.mjs (CI rebuilds and deploys it)
+site/
+# Local Minecraft test server data
+server/data/
+*.log
+# Scratch file written by quests/id-index.mjs
+quests/.nested.jar
+# Local Claude Code tooling
+.claude/

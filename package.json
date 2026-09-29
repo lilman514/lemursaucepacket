@@ -1,0 +1,12 @@
+{
+  "name": "lemursaucepacket",
+  "private": true,
+  "description": "Pack publishing and server tooling for LemurSaucePacket (the launcher lives in launcher/).",
+  "scripts": {
+    "publish-pack": "node publish/publish.mjs",
+    "serve": "node publish/serve.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.3"
+  }
+}

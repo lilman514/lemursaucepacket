@@ -1,0 +1,456 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "atlas"
+	group: "7DAB9BE5981EE62A"
+	icon: {
+		id: "minecraft:filled_map"
+	}
+	id: "09B4C4E200CCB72C"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/atlas.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: -2.3d
+			y: 1.75d
+		}
+	]
+	order_index: 11
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:cherry_sapling"
+			}
+			id: "5DF2E384FBD2EB9A"
+			rewards: [
+				{
+					id: "6E7E0D1E1D27CE0B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:cherry_grove"
+					id: "380B8F629644F1B4"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:pale_oak_sapling"
+			}
+			id: "3838D00F121D3CDE"
+			rewards: [
+				{
+					id: "7B76D1B3555A199E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "56E8777C73975D78"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:pale_garden"
+					id: "468112A6821D230D"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:spruce_sapling"
+			}
+			id: "11A0F7D4826132F6"
+			rewards: [
+				{
+					id: "70CF15417207576B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5320854BBE48132E"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:moonlight_grove"
+					id: "4BFEAB36311D8C92"
+					type: "biome"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:yellow_terracotta"
+			}
+			id: "1891D83C31D88A02"
+			rewards: [
+				{
+					id: "7F6271979B5ECD68"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5F49E47CD96547B6"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:yellowstone"
+					id: "63CE616A0D441031"
+					type: "biome"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:basalt"
+			}
+			id: "3536D4075D5DBE2D"
+			rewards: [
+				{
+					id: "1A33EDCC76EFCD4E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "35A334FE0E22B249"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:volcanic_peaks"
+					id: "1F7DEBC964098F54"
+					type: "biome"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:prismarine"
+			}
+			id: "6284374DE34C8056"
+			rewards: [
+				{
+					id: "6E6FC4199EFC5385"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "19E557CBBB00FF37"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:mirage_isles"
+					id: "01B6C230743FBA96"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:grass_block"
+			}
+			id: "0551A72C76DF01A7"
+			rewards: [
+				{
+					id: "0225F32AC01A420A"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "#lemursaucepacket:skylands"
+					id: "6FC6585399C60FAE"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:amethyst_cluster"
+			}
+			id: "21552DA9280D44D4"
+			rewards: [
+				{
+					id: "44ED0BE84187BDD9"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "49156040DB132365"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:amethyst_canyon"
+					id: "002C4F949F0B349A"
+					type: "biome"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:lilac"
+			}
+			id: "76FD82415416508F"
+			rewards: [
+				{
+					id: "78E53ABE1B137FBD"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:lavender_valley"
+					id: "69FF65BA3511B0B1"
+					type: "biome"
+				}
+			]
+			x: 6.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:pink_petals"
+			}
+			id: "31AED216A1C35403"
+			rewards: [
+				{
+					id: "6E14AE4788EA98D6"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "terralith:sakura_valley"
+					id: "5D1B2CC773F883C9"
+					type: "biome"
+				}
+			]
+			x: 8.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:barrel"
+			}
+			id: "3572EA16FB19CC9E"
+			rewards: [
+				{
+					id: "671429C3BEAFF0A3"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1375F6259B05222C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "146D6AFDF1BE09F6"
+					structure: "#lemursaucepacket:taverns"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			icon: {
+				id: "minecraft:prismarine_bricks"
+			}
+			id: "238821EBD0168DC4"
+			rewards: [
+				{
+					id: "3BA76FB9A0B0E075"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6E6EAB27024429C7"
+					structure: "betteroceanmonuments:ocean_monument"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			icon: {
+				id: "minecraft:sandstone"
+			}
+			id: "542A03B2E755A962"
+			rewards: [
+				{
+					id: "2ABA2E9705021C2E"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "57016026998E49F8"
+					structure: "betterdeserttemples:desert_temple"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			icon: {
+				id: "minecraft:mossy_cobblestone"
+			}
+			id: "311FD1C3F8C48610"
+			rewards: [
+				{
+					id: "714C30AB2A59F222"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "60556796C571F9BD"
+					structure: "betterjungletemples:jungle_temple"
+					type: "structure"
+				}
+			]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			icon: {
+				id: "minecraft:trial_key"
+			}
+			id: "64F0759A533C66F2"
+			rewards: [
+				{
+					id: "4AFE5C427A3A33F0"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3F53F5D875E511E6"
+					structure: "minecraft:trial_chambers"
+					type: "structure"
+				}
+			]
+			x: 8.0d
+			y: 3.5d
+		}
+	]
+}

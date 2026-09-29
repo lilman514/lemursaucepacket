@@ -1,0 +1,70 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = title_screen
+  render_custom_elements_behind_vanilla = true
+  last_edited_time = 1790000000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+}
+
+menu_background {
+  instance_identifier = lemursaucepacket_title_background
+  background_type = image
+  image_path = [source:local]/config/fancymenu/assets/lemursaucepacket/title.jpg
+  slide = false
+  repeat_texture = false
+  parallax = true
+  parallax_intensity_x = 0.012
+  parallax_intensity_y = 0.012
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+element {
+  element_type = image
+  instance_identifier = lemursaucepacket_logo
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/logo.png
+  anchor_point = top-centered
+  x = -128
+  y = 12
+  width = 256
+  height = 59
+  stay_on_screen = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = minecraft_logo_widget
+  is_hidden = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = minecraft_realms_notification_icons_widget
+  is_hidden = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_realms_button
+  is_hidden = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = forge_titlescreen_mods_button
+  anchor_point = element
+  anchor_point_element = mc_titlescreen_multiplayer_button
+  x = 0
+  y = 24
+  width = 200
+  height = 20
+  stay_on_screen = true
+}

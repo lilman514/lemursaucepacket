@@ -1,0 +1,13 @@
+name = "LemurSaucePacket"
+author = "LemurSaucePacket admins"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "e9f20ec60fa618c3983e747351853e371da1c0a7980d7ed963988443abd770bb"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.252"

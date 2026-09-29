@@ -1,0 +1,423 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "iron_roads"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "create:track"
+	}
+	id: "07CB50B8CDC2ECDE"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/iron_roads.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 4
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:track"
+			}
+			id: "280686E040BA87A1"
+			rewards: [
+				{
+					id: "3256B05226452308"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "0DAC9C42227B7D33"
+					item: {
+						count: 1
+						id: "create:track"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["280686E040BA87A1"]
+			icon: {
+				id: "create:track_station"
+			}
+			id: "6EB7B8DFC89F71B5"
+			rewards: [
+				{
+					id: "198E8798E9ACBDC0"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "525800643DA9E19D"
+					item: {
+						count: 1
+						id: "create:track_station"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6EB7B8DFC89F71B5"]
+			icon: {
+				id: "create:controls"
+			}
+			id: "4418FF4F51A1595D"
+			rewards: [
+				{
+					id: "0203F281E58475A3"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "59ED1555D2AC3D10"
+					item: {
+						count: 1
+						id: "create:railway_casing"
+					}
+					type: "item"
+				}
+				{
+					id: "24B7C99368F943B1"
+					item: {
+						count: 1
+						id: "create:controls"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -0.875d
+		}
+		{
+			dependencies: ["4418FF4F51A1595D"]
+			icon: {
+				id: "create:schedule"
+			}
+			id: "36CFDC0FABF55773"
+			rewards: [
+				{
+					id: "064AED523A0FB731"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "63E7435A1514B455"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "561D5646109DF7E4"
+					item: {
+						count: 1
+						id: "create:schedule"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: -1.75d
+		}
+		{
+			dependencies: ["4418FF4F51A1595D"]
+			icon: {
+				id: "create:track_signal"
+			}
+			id: "46411B0858C1ED5B"
+			rewards: [
+				{
+					id: "3C2E2EB5CE224290"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5143B4813429D9F3"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "216DAE170FBD0A7A"
+					item: {
+						count: 1
+						id: "create:track_signal"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36CFDC0FABF55773"]
+			icon: {
+				id: "createrailwaysnavigator:navigator"
+			}
+			id: "4804708C84965F94"
+			rewards: [
+				{
+					id: "3F447F2CB6FD0BF0"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "48869EA13C3B3CCD"
+					item: {
+						count: 1
+						id: "createrailwaysnavigator:navigator"
+					}
+					type: "item"
+				}
+				{
+					id: "7C170D135964697A"
+					item: {
+						count: 1
+						id: "createrailwaysnavigator:train_station_clock"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: -1.75d
+		}
+		{
+			dependencies: ["36CFDC0FABF55773"]
+			icon: {
+				id: "create:display_board"
+			}
+			id: "48057ACA9CE3D95A"
+			rewards: [
+				{
+					id: "65C38D1723CAF93E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "735BCD13FF58BA58"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "4042BA8521E7E5B7"
+					item: {
+						count: 1
+						id: "create:display_board"
+					}
+					type: "item"
+				}
+				{
+					id: "65D6455CA98A82CE"
+					item: {
+						count: 1
+						id: "create:display_link"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6EB7B8DFC89F71B5"]
+			icon: {
+				id: "create:packager"
+			}
+			id: "0390E0DEB91A43F2"
+			rewards: [
+				{
+					id: "6AA4AF3F7E8FB8FD"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "20078EDC33C6B2B2"
+					item: {
+						count: 1
+						id: "create:packager"
+					}
+					type: "item"
+				}
+				{
+					id: "417460F5BFFA375A"
+					item: {
+						count: 1
+						id: "create:package_frogport"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.875d
+		}
+		{
+			dependencies: ["0390E0DEB91A43F2"]
+			icon: {
+				id: "create:stock_ticker"
+			}
+			id: "5D58AE189D939930"
+			rewards: [
+				{
+					id: "2DE9C23F99A40D51"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0D9C2797589691FB"
+					item: {
+						count: 1
+						id: "create:stock_link"
+					}
+					type: "item"
+				}
+				{
+					id: "06B20D6D2CBBF5D3"
+					item: {
+						count: 1
+						id: "create:stock_ticker"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 1.75d
+		}
+		{
+			dependencies: ["5D58AE189D939930"]
+			icon: {
+				id: "create:factory_gauge"
+			}
+			id: "070D708592F9FCA2"
+			rewards: [
+				{
+					id: "2582CA840E821764"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "2BBA9B2444CB1C33"
+					item: {
+						count: 1
+						id: "create:factory_gauge"
+					}
+					type: "item"
+				}
+				{
+					id: "00509BD24627DC67"
+					item: {
+						count: 1
+						id: "create:redstone_requester"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 1.75d
+		}
+		{
+			dependencies: ["46411B0858C1ED5B", "4804708C84965F94"]
+			icon: {
+				id: "create:track_station"
+			}
+			id: "1C8C064C0C2008FC"
+			rewards: [
+				{
+					id: "2341B5C6EE97BE42"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "7D37ECACCDB9085F"
+					item: {
+						count: 3
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "45F1FB7498B60A70"
+					type: "checkmark"
+				}
+			]
+			x: 11.25d
+			y: 0.0d
+		}
+	]
+}

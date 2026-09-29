@@ -1,0 +1,184 @@
+import { useEffect, useRef, useState, type ReactElement, type ReactNode } from 'react'
+import type { AfterLaunch, FolderKind, InitialState, LauncherFeed, Settings, ToastMessage, UpdateStatus } from '../../../shared/types'
+import { errorMessage, formatMemory } from '../format'
+import { FolderIcon, WrenchIcon } from '../icons'
+
+interface Props {
+  init: InitialState
+  feed: LauncherFeed | null
+  settings: Settings
+  update: UpdateStatus
+  busy: boolean
+  onSave: (patch: Partial<Settings>) => Promise<void>
+  onRepair: () => void
+  onToast: (t: ToastMessage) => void
+}
+
+function Row({ label, hint, children }: { label: string; hint?: ReactNode; children: ReactNode }): ReactElement {
+  return (
+    <div className="setting">
+      <div className="setting-text">
+        <div className="setting-label">{label}</div>
+        {hint && <div className="setting-hint">{hint}</div>}
+      </div>
+      <div className="setting-control">{children}</div>
+    </div>
+  )
+}
+
+function Switch({ checked, onChange, label }: { checked: boolean; onChange: (v: boolean) => void; label: string }): ReactElement {
+  return (
+    <label className="switch">
+      <input type="checkbox" aria-label={label} checked={checked} onChange={(e) => onChange(e.target.checked)} />
+      <span />
+    </label>
+  )
+}
+
+/** Local draft that saves shortly after the player stops typing/dragging. */
+function useDraft<T>(value: T, save: (v: T) => void, delay = 450): [T, (v: T) => void] {
+  const [draft, setDraft] = useState(value)
+  const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
+  useEffect(() => setDraft(value), [value])
+  useEffect(() => () => clearTimeout(timer.current), [])
+  return [
+    draft,
+    (v: T) => {
+      setDraft(v)
+      clearTimeout(timer.current)
+      timer.current = setTimeout(() => save(v), delay)
+    }
+  ]
+}
+
+export function SettingsPage({ init, feed, settings, update, busy, onSave, onRepair, onToast }: Props): ReactElement {
+  const maxMemory = Math.min(32768, Math.max(4096, Math.floor((init.systemMemoryMB - 1536) / 512) * 512))
+  const [memory, setMemory] = useDraft(settings.memoryMB, (v) => void onSave({ memoryMB: v }))
+  const [width, setWidth] = useDraft(settings.width, (v) => void onSave({ width: v }))
+  const [height, setHeight] = useDraft(settings.height, (v) => void onSave({ height: v }))
+  const [javaPath, setJavaPath] = useDraft(settings.javaPath, (v) => void onSave({ javaPath: v }), 800)
+  const [jvmArgs, setJvmArgs] = useDraft(settings.jvmArgs, (v) => void onSave({ jvmArgs: v }), 800)
+
+  const open = (kind: FolderKind): void => {
+    window.launcher.openFolder(kind).catch((e) => onToast({ kind: 'error', text: errorMessage(e) }))
+  }
+  const recommended = feed?.recommendedMemoryMB
+  const lowMemory = recommended !== undefined && memory < recommended
+
+  return (
+    <div className="settings">
+      <section className="card">
+        <h3 className="card-title">Performance</h3>
+        <Row
+          label="Memory"
+          hint={
+            <>
+              {recommended ? `The server recommends ${formatMemory(recommended)}. ` : ''}
+              Your PC has {Math.round(init.systemMemoryMB / 1024)} GB.
+              {lowMemory && <span className="warn-text"> Less than recommended may cause lag or crashes.</span>}
+            </>
+          }
+        >
+          <div className="slider">
+            <input type="range" min={2048} max={maxMemory} step={512} value={Math.min(memory, maxMemory)} onChange={(e) => setMemory(Number(e.target.value))} />
+            <span className="slider-value">{formatMemory(memory)}</span>
+          </div>
+        </Row>
+      </section>
+
+      <section className="card">
+        <h3 className="card-title">Game window</h3>
+        <Row label="Fullscreen">
+          <Switch label="Fullscreen" checked={settings.fullscreen} onChange={(v) => void onSave({ fullscreen: v })} />
+        </Row>
+        <Row label="Window size" hint="Used when not in fullscreen.">
+          <div className="row">
+            <input className="input input-num" type="number" min={640} value={width} disabled={settings.fullscreen} onChange={(e) => setWidth(Number(e.target.value))} aria-label="Width" />
+            <span className="muted">×</span>
+            <input className="input input-num" type="number" min={480} value={height} disabled={settings.fullscreen} onChange={(e) => setHeight(Number(e.target.value))} aria-label="Height" />
+          </div>
+        </Row>
+      </section>
+
+      <section className="card">
+        <h3 className="card-title">Launcher</h3>
+        <Row label="Join the server automatically" hint="Skips the title screen and connects straight to the SMP.">
+          <Switch label="Auto-join" checked={settings.autoJoin} onChange={(v) => void onSave({ autoJoin: v })} />
+        </Row>
+        <Row label="When the game starts">
+          <select className="input" value={settings.afterLaunch} onChange={(e) => void onSave({ afterLaunch: e.target.value as AfterLaunch })}>
+            <option value="minimize">Minimize the launcher</option>
+            <option value="keep">Keep the launcher open</option>
+            <option value="close">Close the launcher</option>
+          </select>
+        </Row>
+      </section>
+
+      <section className="card">
+        <h3 className="card-title">Advanced</h3>
+        <Row label="Java executable" hint="Leave empty to use the Java runtime the launcher installs (recommended).">
+          <input className="input input-wide mono" placeholder="Managed automatically" value={javaPath} onChange={(e) => setJavaPath(e.target.value)} spellCheck={false} />
+        </Row>
+        <Row label="Extra JVM arguments" hint="Only change these if you know what they do.">
+          <input className="input input-wide mono" placeholder="-XX:+UseZGC" value={jvmArgs} onChange={(e) => setJvmArgs(e.target.value)} spellCheck={false} />
+        </Row>
+      </section>
+
+      <section className="card">
+        <h3 className="card-title">Files & repair</h3>
+        <div className="row wrap">
+          <button className="btn" onClick={() => open('game')}>
+            <FolderIcon size={16} /> Game folder
+          </button>
+          <button className="btn" onClick={() => open('screenshots')}>
+            <FolderIcon size={16} /> Screenshots
+          </button>
+          <button className="btn" onClick={() => open('logs')}>
+            <FolderIcon size={16} /> Logs
+          </button>
+          <button className="btn" onClick={() => open('data')}>
+            <FolderIcon size={16} /> Launcher data
+          </button>
+        </div>
+        <Row label="Repair installation" hint="Re-checks every file (Minecraft, Java, NeoForge and mods) and re-downloads anything damaged, then launches.">
+          <button className="btn" disabled={busy} onClick={onRepair}>
+            <WrenchIcon size={16} /> Repair & play
+          </button>
+        </Row>
+      </section>
+
+      <section className="card about">
+        <h3 className="card-title">About</h3>
+        <dl className="facts">
+          <dt>Launcher</dt>
+          <dd>
+            {init.brand.name} {init.brand.version}
+            {init.brand.dev ? ' (development)' : ''}
+          </dd>
+          <dt>Updates</dt>
+          <dd>{updateText(update)}</dd>
+          <dt>Data folder</dt>
+          <dd className="mono small">{init.dataDir}</dd>
+        </dl>
+      </section>
+    </div>
+  )
+}
+
+function updateText(u: UpdateStatus): string {
+  switch (u.state) {
+    case 'disabled':
+      return 'Automatic updates are off for this build'
+    case 'checking':
+      return 'Checking…'
+    case 'available':
+    case 'downloading':
+      return `Downloading ${u.version ?? 'update'}${u.percent !== undefined ? ` (${u.percent}%)` : ''}`
+    case 'ready':
+      return `Version ${u.version} is ready. Restart to install.`
+    case 'error':
+      return `Update check failed: ${u.error}`
+    default:
+      return 'Up to date'
+  }
+}

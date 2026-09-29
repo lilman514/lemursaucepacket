@@ -1,0 +1,257 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "crown_of_fire"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "minecraft:blaze_powder"
+	}
+	id: "7B86A63090539256"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/crown_of_fire.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -3.175d
+		}
+	]
+	order_index: 6
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:nether_bricks"
+			}
+			id: "29458506A5E19077"
+			rewards: [
+				{
+					id: "16C11472ACF767EE"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5D594A922AE63331"
+					structure: "#lemursaucepacket:fortresses"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -0.875d
+		}
+		{
+			dependencies: ["29458506A5E19077"]
+			icon: {
+				id: "minecraft:blaze_rod"
+			}
+			id: "4D3553C972D58E45"
+			rewards: [
+				{
+					id: "2F16736E694A76C1"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 12L
+					id: "3F200B8B1119A31F"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: -1.75d
+		}
+		{
+			dependencies: ["29458506A5E19077"]
+			icon: {
+				id: "minecraft:wither_skeleton_skull"
+			}
+			id: "014760E2F2483D38"
+			rewards: [
+				{
+					id: "7B84CABD3E346907"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "4E8817CA1BAE0629"
+					type: "kill"
+					value: 10L
+				}
+			]
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:gold_ingot"
+			}
+			id: "476FF9B28A244051"
+			rewards: [
+				{
+					id: "467D5EC292FC3907"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "piglinproliferation:piglin_alchemist"
+					id: "3BE240792A08C135"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 0.875d
+		}
+		{
+			dependencies: ["476FF9B28A244051"]
+			icon: {
+				id: "minecraft:gilded_blackstone"
+			}
+			id: "62EBB75D9A0BBFDF"
+			rewards: [
+				{
+					id: "07C86CF3F86E4334"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "395FCA98FA0822A1"
+					structure: "#lemursaucepacket:bastions"
+					type: "structure"
+				}
+			]
+			x: 2.25d
+			y: 1.75d
+		}
+		{
+			dependencies: ["4D3553C972D58E45"]
+			icon: {
+				id: "create:blaze_cake"
+			}
+			id: "466572392C9CC5AE"
+			rewards: [
+				{
+					id: "1D2C75A719637620"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "0789B15F4263E791"
+					item: {
+						count: 1
+						id: "create:blaze_cake"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -1.75d
+		}
+		{
+			dependencies: ["62EBB75D9A0BBFDF"]
+			icon: {
+				id: "minecraft:netherite_ingot"
+			}
+			id: "609C15735B7DD942"
+			rewards: [
+				{
+					id: "5B782CC21BC0AA5C"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "7A794F33677A0E52"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "16BF28C583CFE837"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["014760E2F2483D38"]
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "453EA2E1FEBA74BB"
+			rewards: [
+				{
+					id: "3441A806632D5709"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "35511EC35495357E"
+					item: {
+						count: 4
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "minecraft:wither"
+					id: "5908B992F82EAA07"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.5d
+			y: 1.75d
+		}
+	]
+}

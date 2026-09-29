@@ -1,0 +1,511 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "first_rotation"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "create:water_wheel"
+	}
+	id: "415D393CE79F073C"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/first_rotation.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 1
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:andesite_alloy"
+			}
+			id: "2C051675480F108F"
+			rewards: [
+				{
+					id: "595C493FAA3BA24D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "070B22700B409A34"
+					item: {
+						count: 1
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C051675480F108F"]
+			icon: {
+				id: "create:shaft"
+			}
+			id: "27D0E044CF8AFF5B"
+			rewards: [
+				{
+					id: "23264D31294CE533"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "3802F3158FED6921"
+					item: {
+						count: 1
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "10C39D96478E46FC"
+					item: {
+						count: 1
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "680F8B84EFE14EDE"
+					item: {
+						count: 1
+						id: "create:large_cogwheel"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27D0E044CF8AFF5B"]
+			icon: {
+				id: "create:water_wheel"
+			}
+			id: "21A96E8D9C535CB0"
+			rewards: [
+				{
+					id: "3CF7D2CB57292FD0"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3BFA3AB69983CB0D"
+					item: {
+						count: 1
+						id: "create:water_wheel"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -0.875d
+		}
+		{
+			dependencies: ["27D0E044CF8AFF5B"]
+			icon: {
+				id: "create:windmill_bearing"
+			}
+			id: "65DD30A5E415DC7A"
+			rewards: [
+				{
+					id: "4E8BA141CADEE98A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "56EEE09A8771E6B6"
+					item: {
+						count: 1
+						id: "create:windmill_bearing"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.875d
+		}
+		{
+			dependencies: ["21A96E8D9C535CB0", "65DD30A5E415DC7A"]
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "51653BAD0DD3C091"
+			rewards: [
+				{
+					id: "406F50C5869AB92C"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1389EB7A7D2A958C"
+					item: {
+						count: 1
+						id: "create:mechanical_press"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: -0.875d
+		}
+		{
+			dependencies: ["51653BAD0DD3C091"]
+			icon: {
+				id: "create:iron_sheet"
+			}
+			id: "672B8B2ACFEC0D47"
+			rewards: [
+				{
+					id: "6A7929646D68428B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "024AE9FC1D514AA5"
+					item: {
+						count: 1
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "2D676EFE664B1FA9"
+					item: {
+						count: 1
+						id: "create:copper_sheet"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: -1.75d
+		}
+		{
+			dependencies: ["21A96E8D9C535CB0", "65DD30A5E415DC7A"]
+			icon: {
+				id: "create:millstone"
+			}
+			id: "0C4084AC43F252F4"
+			rewards: [
+				{
+					id: "61FE57E64A95209F"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7E2AC97C546826EF"
+					item: {
+						count: 1
+						id: "create:millstone"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 0.875d
+		}
+		{
+			dependencies: ["51653BAD0DD3C091"]
+			icon: {
+				id: "create:encased_fan"
+			}
+			id: "696E2ECE05FA8FF3"
+			rewards: [
+				{
+					id: "1C9FAA708D0AC6E8"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3C5B09F1A6562900"
+					item: {
+						count: 1
+						id: "create:encased_fan"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["51653BAD0DD3C091"]
+			icon: {
+				id: "create:belt_connector"
+			}
+			id: "1E136B8C0850A837"
+			rewards: [
+				{
+					id: "1D8880363AEF30FC"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "26E8D41C3F56D062"
+					item: {
+						count: 1
+						id: "create:belt_connector"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "17F0F0C77B24F0FE"
+					item: {
+						count: 1
+						id: "create:depot"
+					}
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 1.75d
+		}
+		{
+			dependencies: ["672B8B2ACFEC0D47"]
+			icon: {
+				id: "create:goggles"
+			}
+			id: "69EC1B773C2F1898"
+			rewards: [
+				{
+					id: "199E53860B6E88BC"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "29F887EAB79EA7B9"
+					item: {
+						count: 1
+						id: "create:goggles"
+					}
+					type: "item"
+				}
+			]
+			x: 11.25d
+			y: -1.75d
+		}
+		{
+			dependencies: ["672B8B2ACFEC0D47"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "65362757C5786E54"
+			rewards: [
+				{
+					id: "605618613A33E2E4"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2FB1343DA25A8876"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5CCC0758AAEC63D0"
+					item: {
+						count: 1
+						id: "create:mechanical_bearing"
+					}
+					type: "item"
+				}
+				{
+					id: "5E28B4F621E3304E"
+					item: {
+						count: 1
+						id: "create:super_glue"
+					}
+					type: "item"
+				}
+				{
+					id: "639C7511B1C81A80"
+					item: {
+						count: 1
+						id: "create:mechanical_drill"
+					}
+					type: "item"
+				}
+			]
+			x: 11.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["672B8B2ACFEC0D47"]
+			icon: {
+				id: "create:raw_zinc"
+			}
+			id: "7A8548237DEB6F6E"
+			rewards: [
+				{
+					id: "079FEF23433951D7"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "6FD94B5D293B3AE6"
+					item: {
+						count: 1
+						id: "create:raw_zinc"
+					}
+					type: "item"
+				}
+			]
+			x: 11.25d
+			y: 1.75d
+		}
+		{
+			dependencies: ["7A8548237DEB6F6E"]
+			icon: {
+				id: "createoreexcavation:vein_finder"
+			}
+			id: "737EFC7F3D6819BC"
+			rewards: [
+				{
+					id: "68CEBA82AB52B365"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5C2756C8CBF99686"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5482547F3133893C"
+					item: {
+						count: 1
+						id: "createoreexcavation:vein_finder"
+					}
+					type: "item"
+				}
+			]
+			x: 13.5d
+			y: -0.875d
+		}
+		{
+			dependencies: ["696E2ECE05FA8FF3", "1E136B8C0850A837", "69EC1B773C2F1898", "65362757C5786E54", "0C4084AC43F252F4"]
+			icon: {
+				id: "create:andesite_casing"
+			}
+			id: "52EFD5D9629A9737"
+			rewards: [
+				{
+					id: "410F4299DD564CE7"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "4309F256658C6E98"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					count: 32L
+					id: "7FC40DE7ECB09860"
+					item: {
+						count: 1
+						id: "create:andesite_casing"
+					}
+					type: "item"
+				}
+			]
+			x: 13.5d
+			y: 0.875d
+		}
+	]
+}

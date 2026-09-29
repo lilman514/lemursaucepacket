@@ -1,0 +1,396 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "banners"
+	group: "071A8EAF90A2B719"
+	icon: {
+		components: {
+			"minecraft:banner_patterns": [
+				{
+					color: "cyan"
+					pattern: "minecraft:rhombus"
+				}
+				{
+					color: "light_gray"
+					pattern: "minecraft:stripe_bottom"
+				}
+				{
+					color: "gray"
+					pattern: "minecraft:stripe_center"
+				}
+				{
+					color: "light_gray"
+					pattern: "minecraft:border"
+				}
+				{
+					color: "black"
+					pattern: "minecraft:stripe_middle"
+				}
+				{
+					color: "light_gray"
+					pattern: "minecraft:half_horizontal"
+				}
+				{
+					color: "light_gray"
+					pattern: "minecraft:circle"
+				}
+				{
+					color: "black"
+					pattern: "minecraft:border"
+				}
+			]
+			"minecraft:hide_additional_tooltip": { }
+			"minecraft:item_name": "{\"translate\":\"block.minecraft.ominous_banner\"}"
+		}
+		id: "minecraft:white_banner"
+	}
+	id: "4BB94A94C87CDCB1"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/banners.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: -2.3d
+			y: 0.0d
+		}
+	]
+	order_index: 3
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:crossbow"
+			}
+			id: "0CC49483DCF7A41B"
+			rewards: [
+				{
+					id: "1BFD02B22D775122"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3BFD3CA2E0B499C7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "17AC63EAF269CC1E"
+					structure: "#minecraft:pillager_outpost"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -4.375d
+		}
+		{
+			dependencies: ["0CC49483DCF7A41B"]
+			icon: {
+				id: "minecraft:iron_axe"
+			}
+			id: "29D9FF7A83EFDE49"
+			rewards: [
+				{
+					id: "6344F855CCD0C3CC"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "65BAFB2903B4BD54"
+					type: "kill"
+					value: 10L
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "54D672D81FC61082"
+					type: "kill"
+					value: 5L
+				}
+			]
+			x: 2.25d
+			y: -0.875d
+		}
+		{
+			dependencies: ["29D9FF7A83EFDE49"]
+			icon: {
+				id: "minecraft:emerald"
+			}
+			id: "26E5A5ABB5584E32"
+			rewards: [
+				{
+					id: "745108AB7399D3BA"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "79EBBA3CD8D7EE85"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "0A913FB69BB8BDD9"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "1A96678CB2602351"
+					type: "advancement"
+				}
+			]
+			x: 4.5d
+			y: -0.875d
+		}
+		{
+			dependencies: ["0CC49483DCF7A41B"]
+			icon: {
+				id: "minecraft:stone_bricks"
+			}
+			id: "76E4BD5934F09FD6"
+			rewards: [
+				{
+					id: "7B1BB1CF25FADB97"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3B2ADABC27767E6D"
+					structure: "illagerinvasion:illager_fort"
+					type: "structure"
+				}
+			]
+			x: 2.25d
+			y: 0.875d
+		}
+		{
+			dependencies: ["76E4BD5934F09FD6"]
+			icon: {
+				id: "minecraft:totem_of_undying"
+			}
+			id: "2B59BEE4CAA41223"
+			rewards: [
+				{
+					id: "77032909F1045525"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "66C9A34E261D52DB"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "illagerinvasion:invoker"
+					id: "7DD37E1890C59FB2"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.5d
+			y: 0.875d
+		}
+		{
+			icon: {
+				id: "create:track_station"
+			}
+			id: "37265A91E2BF35CA"
+			rewards: [
+				{
+					id: "0EE99F98C0251646"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "74DE41A805A3ADFD"
+					structure: "create_structures_arise:createlosttrainstation"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -2.625d
+		}
+		{
+			icon: {
+				id: "create:propeller"
+			}
+			id: "6695DF890897A31D"
+			rewards: [
+				{
+					id: "6AF5D46E535BD010"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "700735BB6701A9A7"
+					structure: "create_structures_arise:pillagersteampunkairship"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -0.875d
+		}
+		{
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "792978E03502FA34"
+			rewards: [
+				{
+					id: "49978D48EEA58673"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "03AEE0228BAA1642"
+					structure: "create_ltab:quarry"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 0.875d
+		}
+		{
+			icon: {
+				id: "minecraft:golden_helmet"
+			}
+			id: "2CEEFD1A5DD9339E"
+			rewards: [
+				{
+					id: "35EE653FE3187F16"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "613546D159081980"
+					structure: "create_ltab:kings_castle"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 2.625d
+		}
+		{
+			icon: {
+				id: "create:windmill_bearing"
+			}
+			id: "46EABE2D301523D9"
+			rewards: [
+				{
+					id: "066DEBCE321D12D2"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4EB5C2EAB2257484"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "42056864C2AC157B"
+					structure: "create_rustic_structures:rustic_windmill"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 4.375d
+		}
+		{
+			dependencies: ["26E5A5ABB5584E32", "2B59BEE4CAA41223", "37265A91E2BF35CA", "6695DF890897A31D"]
+			icon: {
+				id: "minecraft:white_banner"
+			}
+			id: "5B2998A954FA90AD"
+			rewards: [
+				{
+					id: "2B5ECE83BF351C39"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "29CD27746CD24CDA"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "1FE287BDCE2A9CDA"
+					item: {
+						count: 1
+						id: "minecraft:white_banner"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "LemurSaucePacket",
+  "shortName": "LemurSaucePacket",
+  "appId": "com.lemursaucepacket.launcher",
+  "feedUrl": "https://lilman514.github.io/lemursaucepacket/launcher.json",
+  "devFeedUrl": "http://localhost:8787/launcher.json",
+  "microsoft": {
+    "clientId": "",
+    "redirectUri": "https://login.microsoftonline.com/common/oauth2/nativeclient"
+  },
+  "contact": "",
+  "updates": {
+    "owner": "lilman514",
+    "repo": "lemursaucepacket"
+  }
+}

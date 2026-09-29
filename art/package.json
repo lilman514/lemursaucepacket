@@ -1,0 +1,12 @@
+{
+  "name": "lemursaucepacket-art",
+  "private": true,
+  "description": "Turns the generated art in art/generated into the files the pack, launcher and server use. Not needed to build or publish the pack.",
+  "type": "module",
+  "scripts": {
+    "process": "node process.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.34.4"
+  }
+}

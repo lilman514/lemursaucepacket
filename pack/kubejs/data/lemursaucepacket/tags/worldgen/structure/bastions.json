@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "minecraft:bastion_remnant",
+      "required": false
+    },
+    {
+      "id": "create_structures_arise:create_bastion",
+      "required": false
+    }
+  ]
+}

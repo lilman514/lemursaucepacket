@@ -1,0 +1,19 @@
+{
+  "name": "LemurSaucePacket",
+  "description": "A Create-powered SMP that still feels like Minecraft. Build factories, rail networks and airships, explore a reworked world, and fight your way up the ages.",
+  "server": {
+    "name": "LemurSaucePacket",
+    "address": "play.example.com"
+  },
+  "strictMods": true,
+  "recommendedMemoryMB": 6144,
+  "minLauncherVersion": "0.1.0",
+  "links": [],
+  "news": [
+    {
+      "title": "Welcome to LemurSaucePacket",
+      "date": "2026-09-28",
+      "body": "Press Play. The launcher installs Minecraft, NeoForge and every mod for you, keeps them in sync with the server, and drops you straight in."
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+	chapter.07CB50B8CDC2ECDE.chapter_subtitle: ["Trains, stations and freight."]
+	chapter.07CB50B8CDC2ECDE.title: "Iron Roads"
+	chapter.09B4C4E200CCB72C.chapter_subtitle: ["A world worth crossing by rail."]
+	chapter.09B4C4E200CCB72C.title: "Atlas"
+	chapter.0E4B734290B837FE.chapter_subtitle: ["Heat, mixing and precision."]
+	chapter.0E4B734290B837FE.title: "Brass Age"
+	chapter.2C2A22A66EC818AF.chapter_subtitle: ["New faces, old foes."]
+	chapter.2C2A22A66EC818AF.title: "Bestiary"
+	chapter.32CB66168B93AD10.chapter_subtitle: ["Farms, kitchens and the happy ghast."]
+	chapter.32CB66168B93AD10.title: "Homestead"
+	chapter.34063B311996CA32.chapter_subtitle: ["Create Aeronautics: balloons, propellers and airships."]
+	chapter.34063B311996CA32.title: "Skyward"
+	chapter.3AD6951FB6CD0EF9.chapter_subtitle: ["The server economy runs on Numismatics."]
+	chapter.3AD6951FB6CD0EF9.title: "Coin & Commerce"
+	chapter.415B5EBB83A4F72E.chapter_subtitle: ["The End, and what you leave behind."]
+	chapter.415B5EBB83A4F72E.title: "Legacy"
+	chapter.415D393CE79F073C.chapter_subtitle: ["The Andesite Age: power, presses and belts."]
+	chapter.415D393CE79F073C.title: "First Rotation"
+	chapter.4BB94A94C87CDCB1.chapter_subtitle: ["Outposts, forts and ruined factories. Salvage what you can."]
+	chapter.4BB94A94C87CDCB1.title: "Banners of the Overworld"
+	chapter.55ED1DC4BC96FEB5.chapter_subtitle: ["Find your feet in a world that has been reworked."]
+	chapter.55ED1DC4BC96FEB5.title: "Landfall"
+	chapter.576718F3DA1B68BA.chapter_subtitle: ["Fair backpacks: every tier is built from its age's Create parts."]
+	chapter.576718F3DA1B68BA.title: "Backpack Workshop"
+	chapter.7B86A63090539256.chapter_subtitle: ["The Nether, properly."]
+	chapter.7B86A63090539256.title: "Crown of Fire"
+	chapter_group.071A8EAF90A2B719.title: "The Ages"
+	chapter_group.7DAB9BE5981EE62A.title: "Field Guides"
+	file.0000000000000001.title: "LemurSaucePacket"
+	quest.003B74D7023418AD.quest_desc: ["Open the world map with &eM&r, right-click the chunks around your base and choose &eClaim&r.", "Claimed chunks are protected from other players, their contraptions and their airships.", "", "&7Press ' for the claims menu. Put friends in your party so they can build in your claim."]
+	quest.003B74D7023418AD.title: "Stake Your Claim"
+	quest.007E391695FCA435.quest_desc: ["Iron sheets and andesite casing."]
+	quest.007E391695FCA435.title: "Iron Backpack"
+	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this."]
+	quest.010023C1444D0FF4.title: "&6Legacy"
+	quest.014760E2F2483D38.title: "Bone Collector"
+	quest.022ED40E89E99353.quest_desc: ["Wild tomatoes, cabbages, onions and rice grow around the world. Replant them at home."]
+	quest.022ED40E89E99353.title: "New Crops"
+	quest.0390E0DEB91A43F2.quest_desc: ["Create packs items into parcels with a packager. Parcels can be addressed and sent anywhere a frogport or train reaches."]
+	quest.0390E0DEB91A43F2.title: "Parcels"
+	quest.0531338213957CA2.quest_desc: ["Quest rewards are paid in Numismatics coins:", "&espur&r 1 · &ebevel&r 8 · &esprocket&r 16 · &ecog&r 64 · &ecrown&r 512 · &esun&r 4096", "Use them to trade with other players."]
+	quest.0531338213957CA2.title: "Coinage"
+	quest.0551A72C76DF01A7.quest_desc: ["Islands floating high above the clouds. Easier to reach by airship."]
+	quest.0551A72C76DF01A7.title: "Skylands"
+	quest.067BD52C411EFB1F.quest_desc: ["Made by sequenced assembly: a golden sheet goes round a loop of deployers and a press, several times.", "&7JEI shows every step. Long recipes have pages: scroll to flip."]
+	quest.067BD52C411EFB1F.title: "Precision Mechanism"
+	quest.06B6B5C52AB737B3.quest_desc: ["Copper sheets and andesite alloy around your backpack. Everything inside comes along."]
+	quest.06B6B5C52AB737B3.title: "Copper Backpack"
+	quest.06D2EBEBB18657B7.title: "Rich Soil"
+	quest.070D708592F9FCA2.quest_desc: ["Factory gauges keep a factory topped up: set a target and it requests ingredients by itself."]
+	quest.070D708592F9FCA2.title: "Factory Gauges"
+	quest.095F6A23CA1BB31E.quest_desc: ["Fly a ship you built from one of your bases to another without touching the ground."]
+	quest.095F6A23CA1BB31E.title: "&aMaiden Voyage"
+	quest.0C4084AC43F252F4.quest_desc: ["A millstone grinds ores and crops. Crushed ore gives extra nuggets when you wash it."]
+	quest.0C4084AC43F252F4.title: "Grinding"
+	quest.0C55D5EB3C5BEC3B.quest_desc: ["Right-click a blaze with an empty blaze burner to capture it. Feed it fuel to heat whatever sits on top."]
+	quest.0C55D5EB3C5BEC3B.title: "Captive Flame"
+	quest.0CC49483DCF7A41B.quest_desc: ["Pillagers hold the high ground, and their outposts now come in a style for every biome."]
+	quest.0CC49483DCF7A41B.title: "Outpost"
+	quest.0CCD3E4E30252510.quest_desc: ["An illager who throws ice. Look for it in the cold."]
+	quest.0CCD3E4E30252510.title: "The Iceologer"
+	quest.0DD06477687A64EC.quest_desc: ["Set a cooking pot over a fire or stove. Hearty meals keep you fed far longer than bread."]
+	quest.0DD06477687A64EC.title: "Cooking Pot"
+	quest.0E23F4609946F60D.title: "Herd"
+	quest.0FF0AB4095D74045.title: "Feast"
+	quest.0FFC66FA887AB948.quest_desc: ["Slice & Dice adds a slicer and sprinklers; Central Kitchen lets Create machines run cooking pots and cutting boards."]
+	quest.0FFC66FA887AB948.title: "Automated Kitchen"
+	quest.1162BBDAABFA380F.quest_desc: ["Deployers use items the way a player would: placing, using, applying."]
+	quest.1162BBDAABFA380F.title: "A Helping Hand"
+	quest.11A0F7D4826132F6.title: "Moonlight Grove"
+	quest.1209889B45004838.quest_desc: ["A dried ghast placed in water slowly revives into a ghastling, and grows into a gentle happy ghast. Saddle it with a harness and it will carry up to four players.", "&7The friendliest way to fly before you have an airship."]
+	quest.1209889B45004838.title: "Happy Ghast"
+	quest.121B7682E75B11E7.title: "Kitchen Knife"
+	quest.144919363DECDDF8.quest_desc: ["Find a village. Villages here come in many new shapes, and some have taverns."]
+	quest.144919363DECDDF8.title: "Neighbours"
+	quest.1891D83C31D88A02.title: "Yellowstone"
+	quest.190D30D37AF325E2.quest_desc: ["Brass needs heat, and heat means blazes. Build a portal."]
+	quest.190D30D37AF325E2.title: "Through the Portal"
+	quest.1C8C064C0C2008FC.quest_desc: ["Run a line from your base to another player's, with a station at each end.", "", "&cNote:&r trains can cross Nether portals, but riding through one is still buggy. Send freight across unmanned."]
+	quest.1C8C064C0C2008FC.title: "Connect Two Towns"
+	quest.1E136B8C0850A837.title: "Conveyor"
+	quest.1E529A715E74C146.quest_desc: ["Not everything wants to fight. Meet a moobloom, a glare and a rascal, and the wildlife of the world: bears, deer, snails, butterflies.", "&7Glares point out dark places where mobs can spawn."]
+	quest.1E529A715E74C146.title: "Friends"
+	quest.2031A04C680089C5.title: "Wings"
+	quest.206401FD17FA8617.quest_desc: ["Golden sheets and brass casing: this one waits for the Brass Age."]
+	quest.206401FD17FA8617.title: "Gold Backpack"
+	quest.21552DA9280D44D4.title: "Amethyst Canyon"
+	quest.21A96E8D9C535CB0.quest_desc: ["A water wheel next to flowing water gives steady rotation, day and night."]
+	quest.21A96E8D9C535CB0.title: "Water Power"
+	quest.21F50FAA76AA6AA4.title: "The Stronghold"
+	quest.238821EBD0168DC4.title: "Ocean Monument"
+	quest.26C7BB4F327F6808.quest_desc: ["Found in trial chambers deep underground."]
+	quest.26C7BB4F327F6808.title: "Breeze"
+	quest.26E5A5ABB5584E32.quest_desc: ["Defeat a raid. Villages remember who stood with them."]
+	quest.26E5A5ABB5584E32.title: "Hero of the Village"
+	quest.27D0E044CF8AFF5B.quest_desc: ["Shafts carry rotation in a line; cogwheels turn corners and change speed."]
+	quest.27D0E044CF8AFF5B.title: "Shafts and Cogs"
+	quest.280686E040BA87A1.quest_desc: ["Train track is laid by clicking two points; it curves and climbs on its own."]
+	quest.280686E040BA87A1.title: "Lay Track"
+	quest.280E376FA3E64DCB.quest_desc: ["A leather backpack is your first real storage on the move. Wear it in the &eback slot&r (the Curios tab in your inventory) and open it with &eB&r.", "", "&7The Backpack Workshop chapter covers the upgrades."]
+	quest.280E376FA3E64DCB.title: "Pack Mule"
+	quest.29458506A5E19077.quest_desc: ["Nether fortresses are bigger and meaner now. Blazes live here."]
+	quest.29458506A5E19077.title: "Fortress"
+	quest.29D9FF7A83EFDE49.title: "Hold the Line"
+	quest.2B59BEE4CAA41223.title: "The Invoker"
+	quest.2BA812CEDF7B09A9.quest_desc: ["Place a claim block on your ship and open it. Turn some of your land claims into &eaero-claims&r: each one protects part of the ship, so bigger ships need more.", "&7Press Refresh in the claim block after you enlarge the ship."]
+	quest.2BA812CEDF7B09A9.title: "Claim Your Ship"
+	quest.2C051675480F108F.quest_desc: ["Andesite plus iron nuggets (or zinc) makes the alloy almost every early machine needs."]
+	quest.2C051675480F108F.title: "Andesite Alloy"
+	quest.2CD0388FFD593882.title: "&5The Dragon"
+	quest.2CEEFD1A5DD9339E.quest_desc: ["A castle full of Create machinery. Explore it carefully."]
+	quest.2CEEFD1A5DD9339E.title: "The King's Castle"
+	quest.2D07A9F53C740CFC.quest_desc: ["Link a grid of mechanical crafters for recipes too big for a crafting table."]
+	quest.2D07A9F53C740CFC.title: "Mechanical Crafting"
+	quest.2F6270CB2985EC5F.quest_desc: ["Copper and zinc in a heated basin give brass."]
+	quest.2F6270CB2985EC5F.title: "Brass"
+	quest.3073E0625A50D025.quest_desc: ["Smart and gyroscopic propellers give you finer control over thrust and direction."]
+	quest.3073E0625A50D025.title: "Steering"
+	quest.311FD1C3F8C48610.title: "Jungle Temple"
+	quest.31AED216A1C35403.title: "Sakura Valley"
+	quest.3536D4075D5DBE2D.title: "Volcanic Peaks"
+	quest.3572EA16FB19CC9E.quest_desc: ["Taverns sit along the roads. Travellers trade here."]
+	quest.3572EA16FB19CC9E.title: "A Warm Tavern"
+	quest.36C5744F5C805AE7.title: "Upgrade Base"
+	quest.36CFDC0FABF55773.quest_desc: ["A schedule tells a train where to go and when. Give it to a conductor: any seated mob, or a blaze burner."]
+	quest.36CFDC0FABF55773.title: "On Schedule"
+	quest.37265A91E2BF35CA.quest_desc: ["Somewhere a train station was abandoned mid-schedule. Salvage its parts."]
+	quest.37265A91E2BF35CA.title: "The Lost Station"
+	quest.374C66390D54AB5C.quest_desc: ["A depositor takes coins before it sends a redstone pulse: pay-to-use doors, farms and rides."]
+	quest.374C66390D54AB5C.title: "Depositor"
+	quest.3838D00F121D3CDE.title: "Pale Garden"
+	quest.3A35D7C2F436EB92.title: "Brass Casing"
+	quest.3A55BEAD0546926A.title: "Stone Age"
+	quest.3EC86527F7D75D14.title: "Bank Account"
+	quest.3FD8D8BCEB833FB9.title: "Cutting Board"
+	quest.411AA73A55A9960F.quest_desc: ["In the pale garden, something only moves when you look away. Break its heart to stop it."]
+	quest.411AA73A55A9960F.title: "The Creaking"
+	quest.4173E1E1A07BC6D2.quest_desc: ["Liquid experience, blaze enchanters and printers turn enchanting into a production line."]
+	quest.4173E1E1A07BC6D2.title: "Enchantment Industry"
+	quest.4418FF4F51A1595D.quest_desc: ["Place bogeys on the track at a station, build a carriage from railway casing, add train controls and assemble it at the station.", "&7Hold W over the station item for the Ponder walkthrough."]
+	quest.4418FF4F51A1595D.title: "Your First Train"
+	quest.453EA2E1FEBA74BB.title: "&cThe Wither"
+	quest.45ABB17E3B52364D.title: "Netherite Backpack"
+	quest.46411B0858C1ED5B.quest_desc: ["Signals split track into blocks so several trains share a line without crashing."]
+	quest.46411B0858C1ED5B.title: "Signals"
+	quest.466572392C9CC5AE.quest_desc: ["Feed a blaze burner a blaze cake and it burns hot enough for the toughest recipes."]
+	quest.466572392C9CC5AE.title: "Superheated"
+	quest.46EABE2D301523D9.quest_desc: ["An old working windmill. See how it was built, then build your own."]
+	quest.46EABE2D301523D9.title: "Rustic Windmill"
+	quest.4751EE190720FC94.quest_desc: ["Diamonds and precision mechanisms."]
+	quest.4751EE190720FC94.title: "Diamond Backpack"
+	quest.476FF9B28A244051.quest_desc: ["Piglins now have castes: travellers wander the wastes, alchemists brew. Bartering with them is worth your gold."]
+	quest.476FF9B28A244051.title: "The Piglin Castes"
+	quest.4804708C84965F94.quest_desc: ["Railways Navigator adds a route planner and station clocks, like a real rail network."]
+	quest.4804708C84965F94.title: "Timetables"
+	quest.48057ACA9CE3D95A.title: "Departure Board"
+	quest.492848993E0A2588.quest_desc: ["Redstone mixed into quartz, then polished on a belt with sandpaper or a deployer."]
+	quest.492848993E0A2588.title: "Rose Quartz"
+	quest.4B9540012C8F2474.quest_desc: ["Blaze bankers and bank terminals turn Numismatics coins into accounts. Every shop on the server can be paid by card."]
+	quest.4B9540012C8F2474.title: "Bank"
+	quest.4C4715A2B03EDF3B.title: "Iron"
+	quest.4D3553C972D58E45.title: "Blaze Rods"
+	quest.4D95E6F141C88AC9.quest_desc: ["Arms pick items up and put them down wherever you point them, even into machines."]
+	quest.4D95E6F141C88AC9.title: "Mechanical Arm"
+	quest.508EB8FEC7604332.title: "Smart Logistics"
+	quest.513C9025A06A10F1.title: "Electron Tubes"
+	quest.51653BAD0DD3C091.quest_desc: ["A mechanical press over a depot or belt flattens ingots into sheets. Sheets are the core of the Andesite Age."]
+	quest.51653BAD0DD3C091.title: "Under Pressure"
+	quest.51B2C901491D69B0.quest_desc: ["Envelopes filled with hot air lift a ship; an adjustable burner controls how much."]
+	quest.51B2C901491D69B0.title: "Lift"
+	quest.52EFD5D9629A9737.quest_desc: ["Andesite casing is the mark of a finished early factory."]
+	quest.52EFD5D9629A9737.quest_subtitle: "Casing up"
+	quest.52EFD5D9629A9737.title: "&aThe Andesite Age"
+	quest.53CEE449BE9A4679.quest_desc: ["Levitite floats on its own. Ships built with it need less balloon."]
+	quest.53CEE449BE9A4679.title: "Levitite"
+	quest.540CA46A64AD3156.title: "Stack Upgrade I"
+	quest.542A03B2E755A962.title: "Desert Temple"
+	quest.54FDF2788C384A54.quest_desc: ["Andesite is everywhere, and Create is built on it. Gather a stack."]
+	quest.54FDF2788C384A54.title: "The Grey Stone"
+	quest.5899B77905DC6F36.quest_desc: ["Crafts & Additions turns rotation into electricity and back. Handy for long distances and for charging tools."]
+	quest.5899B77905DC6F36.title: "Sparks"
+	quest.5B021E3E2BC589C2.quest_desc: ["You have the basics. Everything from here turns on rotation."]
+	quest.5B021E3E2BC589C2.quest_subtitle: "On to the First Rotation"
+	quest.5B021E3E2BC589C2.title: "&aLandfall"
+	quest.5B2998A954FA90AD.quest_desc: ["Raise your own banner over what you have taken back."]
+	quest.5B2998A954FA90AD.title: "&aBanners of the Overworld"
+	quest.5B6534D87A4D5267.quest_desc: ["This is a Create server that still feels like Minecraft.", "", "&eThe rules of the world:&r", "• &cPvP is on.&r Claim your land so your builds are safe.", "• Die and your items wait in a &egrave&r where you fell.", "• No waystones or teleports. You travel by &etrain, airship, horse and happy ghast&r, so the rail network matters.", "• The launcher keeps everyone on the same mods. Your own extras live in its Mods tab.", "", "&7Quests never lock content. They are a road map and they pay you in coins."]
+	quest.5B6534D87A4D5267.quest_subtitle: "Read me first"
+	quest.5B6534D87A4D5267.title: "&6Welcome to LemurSaucePacket"
+	quest.5C3D41ADDC1598B1.quest_desc: ["A propeller bearing with blades attached pushes air. Mount one on anything you want to move."]
+	quest.5C3D41ADDC1598B1.title: "Propeller"
+	quest.5D58AE189D939930.quest_desc: ["Stock links network your storage; a stock keeper lets you order from all of it at once."]
+	quest.5D58AE189D939930.title: "Stock Keeping"
+	quest.5DF2E384FBD2EB9A.title: "Cherry Grove"
+	quest.609C15735B7DD942.title: "Netherite"
+	quest.61128D7E284F0E6D.title: "Feeding and Restock"
+	quest.6284374DE34C8056.title: "Mirage Isles"
+	quest.62EBB75D9A0BBFDF.quest_desc: ["Piglin bastions hold gold and ancient debris. Some have been taken over by Create machinery."]
+	quest.62EBB75D9A0BBFDF.title: "Bastion"
+	quest.64F0759A533C66F2.title: "Trial Chambers"
+	quest.65143E2CCAD21FB2.quest_desc: ["Fluid tanks over heated blaze burners, fed with water, drive steam engines: the strongest early power."]
+	quest.65143E2CCAD21FB2.title: "Full Steam"
+	quest.65362757C5786E54.quest_desc: ["Glue blocks to a mechanical bearing or piston and they move as one contraption. Drills and saws mine and cut as they go."]
+	quest.65362757C5786E54.title: "It Moves!"
+	quest.65DD30A5E415DC7A.quest_desc: ["A windmill bearing plus sails (wool, or sail blocks) glued together turns in the wind. More sails, more power."]
+	quest.65DD30A5E415DC7A.title: "Wind Power"
+	quest.662C96E9CF58163E.quest_desc: ["Zombies and skeletons adapt to their homes: frozen gelids, swamp murks, jungle thickets."]
+	quest.662C96E9CF58163E.title: "Undead Variants"
+	quest.6695DF890897A31D.quest_desc: ["Pillagers have learned to fly. Find one of their steam-powered airships."]
+	quest.6695DF890897A31D.title: "Sky Pirates"
+	quest.66DF651D226A3355.title: "Survive the Night"
+	quest.672B8B2ACFEC0D47.title: "Sheet Metal"
+	quest.696E2ECE05FA8FF3.quest_desc: ["An encased fan blows items through whatever is in front of it:", "• water: &ewashing&r   • fire: &esmoking&r   • lava: &eblasting&r", "Point one at a belt and let the fan cook for you."]
+	quest.696E2ECE05FA8FF3.title: "Bulk Processing"
+	quest.69A9E29EEC4B2ED5.quest_desc: ["A pair of crushing wheels doubles ore output and eats almost anything."]
+	quest.69A9E29EEC4B2ED5.title: "Crushing Wheels"
+	quest.69EC1B773C2F1898.quest_desc: ["With goggles on you can read speed and stress off any machine. Every network has a stress budget; add more wheels when it runs out.", "", "&7Cyber Goggles (optional, in the launcher's Mods tab) show exact numbers."]
+	quest.69EC1B773C2F1898.title: "Engineer's Goggles"
+	quest.6B48EE6BC198801A.quest_desc: ["A blaze queen shielded by a ring of fire. She lives in the Nether. Bring fire resistance."]
+	quest.6B48EE6BC198801A.title: "Wildfire"
+	quest.6EB7B8DFC89F71B5.title: "Station"
+	quest.6ED31CFF32B4DC2F.quest_desc: ["The highest stack upgrade on this server (4x). It needs brass casing."]
+	quest.6ED31CFF32B4DC2F.title: "Stack Upgrade II"
+	quest.6FBEA446F15D78AF.quest_desc: ["Three keys that answer most questions:", "• &eR&r on an item: how to make it (JEI). &eU&r: what it is used for.", "• Hold &eW&r over a Create item: a Ponder scene shows it working.", "• Wear &eEngineer's Goggles&r to read speed and stress off machines.", "• &eF5&r cycles to an over-the-shoulder camera, handy for exploring and fights.", "", "&7The Mods tab in the launcher lists every mod with a short description."]
+	quest.6FBEA446F15D78AF.title: "Field Notes"
+	quest.700E1D9405CC8E60.title: "Pickup and Magnet"
+	quest.7071385904D2EB7A.quest_desc: ["A mechanical mixer above a basin combines ingredients, heated or not."]
+	quest.7071385904D2EB7A.title: "Mix It Up"
+	quest.71B1DE7023B2719A.quest_desc: ["Creepers now match their biome, and each variant has its own trick."]
+	quest.71B1DE7023B2719A.title: "Creepers of Every Kind"
+	quest.737EFC7F3D6819BC.quest_desc: ["Deep under the world lie ore veins that never run dry. A vein finder points at the nearest one; a drilling machine on top mines it forever.", "", "&7No diamond, emerald or netherite veins: those you still dig for."]
+	quest.737EFC7F3D6819BC.title: "Prospector"
+	quest.7535D89CEF267AFC.quest_desc: ["A rotation speed controller lets one network run machines at exactly the speed you choose."]
+	quest.7535D89CEF267AFC.quest_subtitle: "Controlled speed"
+	quest.7535D89CEF267AFC.title: "&aThe Brass Age"
+	quest.7589B78C135663B5.title: "Aviator"
+	quest.76E4BD5934F09FD6.quest_desc: ["Illager Invasion adds fortified camps with new illagers: basher, provoker, invoker. Bring friends."]
+	quest.76E4BD5934F09FD6.title: "The Illager Fort"
+	quest.76FD82415416508F.title: "Lavender Valley"
+	quest.770F2006133B6115.title: "Leather Backpack"
+	quest.77AE5D8ABD348621.quest_desc: ["• Wear one backpack in the &eback slot&r. Only that one runs its upgrades; others in your inventory are plain storage.", "• Carry more than &e3&r and you slow down.", "• No backpacks inside backpacks, and none found in loot.", "• One stack upgrade per backpack, at most &e4x&r.", "• Pump, battery and mob-catcher upgrades are off: Create does those jobs."]
+	quest.77AE5D8ABD348621.title: "How Backpacks Work Here"
+	quest.792978E03502FA34.title: "Abandoned Quarry"
+	quest.79ABE8B917DF9C5F.title: "First Things First"
+	quest.7A8548237DEB6F6E.quest_desc: ["Zinc hides in the middle and lower layers. Press &eR&r on zinc ore in JEI to see the heights it spawns at.", "You will need a lot of it for brass."]
+	quest.7A8548237DEB6F6E.title: "Zinc Hunt"
+	quest.7BFACE0FFE5F74FA.title: "The Illusioner"
+	quest.7C0C3519D95163FE.title: "The End"
+	quest.7D1807BCBA3F00E3.quest_desc: ["Put a vendor in front of your storage, set a price, and sell to anyone who walks by, even while you are offline."]
+	quest.7D1807BCBA3F00E3.title: "Open a Shop"
+	task.028A827B62B8932F.title: "Got it"
+	task.045C049531AE2E11.title: "I built my legacy"
+	task.1BBD804E98164CF0.title: "I claimed my land"
+	task.1D4DC35F70270980.title: "I made some friends"
+	task.2DF4AE8FCB4E1C60.title: "I flew it"
+	task.3F6E8488F223F214.title: "My shop is open"
+	task.419615140253F3EB.title: "Understood"
+	task.45F1FB7498B60A70.title: "Our towns are connected"
+	task.5293A86776CCFD9D.title: "Make a stone pickaxe"
+	task.6393242D91DCD278.title: "I have read this"
+	task.6EB0DCA9A6611806.title: "Sleep in a bed"
+}

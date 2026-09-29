@@ -1,0 +1,40 @@
+{
+  "name": "smp-launcher",
+  "version": "0.1.0",
+  "description": "Custom Minecraft launcher for a modded SMP: signs players in, keeps the modpack in sync, and launches straight into the server.",
+  "main": "./out/main/index.js",
+  "author": "SMP Admin",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/ensure-electron.cjs",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "node scripts/run-tests.mjs",
+    "headless": "tsx scripts/headless.ts",
+    "server": "tsx scripts/server.ts",
+    "dist": "electron-vite build && electron-builder --win --config electron-builder.config.cjs --publish never",
+    "release": "electron-vite build && electron-builder --win --config electron-builder.config.cjs --publish always"
+  },
+  "dependencies": {
+    "@xmcl/core": "2.15.1",
+    "electron-updater": "6.8.9",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3",
+    "electron-vite": "5.0.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tsx": "^4.20.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.6"
+  }
+}

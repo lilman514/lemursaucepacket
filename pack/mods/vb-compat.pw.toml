@@ -1,0 +1,13 @@
+name = "Vanilla Backport Compat"
+filename = "vb-compat-2.2-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/jcYHXHwz/versions/QKEed8gs/vb-compat-2.2-1.21.1.jar"
+hash-format = "sha512"
+hash = "c6ffbe2b5e285052b877d34691f909a7939bf66044802b2604115ab039ac9c9864af06b00649838297fd7914fcd45fc7547a0f0346ca44086861e045e36c5a21"
+
+[update]
+[update.modrinth]
+mod-id = "jcYHXHwz"
+version = "QKEed8gs"

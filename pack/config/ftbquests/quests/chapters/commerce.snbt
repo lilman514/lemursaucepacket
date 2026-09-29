@@ -1,0 +1,136 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "commerce"
+	group: "7DAB9BE5981EE62A"
+	icon: {
+		id: "numismatics:cog"
+	}
+	id: "3AD6951FB6CD0EF9"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/commerce.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 12
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "numismatics:cog"
+			}
+			id: "0531338213957CA2"
+			rewards: [
+				{
+					id: "0B0C65850ABDFE21"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5BF8740DBEC54F06"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0531338213957CA2"]
+			icon: {
+				id: "numismatics:andesite_depositor"
+			}
+			id: "374C66390D54AB5C"
+			rewards: [
+				{
+					id: "07642DA7343AC95A"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "19C3A9695DA67277"
+					item: {
+						count: 1
+						id: "numismatics:andesite_depositor"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: -0.875d
+		}
+		{
+			dependencies: ["374C66390D54AB5C"]
+			icon: {
+				id: "minecraft:emerald"
+			}
+			id: "7D1807BCBA3F00E3"
+			rewards: [
+				{
+					id: "360889BFF0904FCC"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3F6E8488F223F214"
+					type: "checkmark"
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0531338213957CA2"]
+			icon: {
+				id: "numismatics:bank_terminal"
+			}
+			id: "3EC86527F7D75D14"
+			rewards: [
+				{
+					id: "5D472DC1B09B8BA4"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "127EF8517186BAEF"
+					item: {
+						count: 1
+						id: "numismatics:bank_terminal"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: 0.875d
+		}
+	]
+}

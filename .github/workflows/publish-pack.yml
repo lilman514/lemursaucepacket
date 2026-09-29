@@ -1,0 +1,42 @@
+# Push a change under pack/, quests/ or publish/ and this rebuilds launcher.json + the .mrpack and deploys
+# them to GitHub Pages. Players get the update the next time they press Play.
+# One-time setup: repo Settings → Pages → Source: "GitHub Actions".
+name: Publish pack
+
+on:
+  push:
+    branches: [main]
+    paths: ['pack/**', 'publish/**', 'quests/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: go install github.com/packwiz/packwiz@latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node publish/publish.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

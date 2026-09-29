@@ -1,0 +1,268 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bestiary"
+	group: "7DAB9BE5981EE62A"
+	icon: {
+		id: "minecraft:creeper_head"
+	}
+	id: "2C2A22A66EC818AF"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/bestiary.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 10
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:creeper_head"
+			}
+			id: "71B1DE7023B2719A"
+			rewards: [
+				{
+					id: "01EC08E2C88CC543"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "creeperoverhaul:desert_creeper"
+					id: "49BD1CD22060C79D"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "creeperoverhaul:jungle_creeper"
+					id: "3EAB742F6D0FEB02"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "creeperoverhaul:snowy_creeper"
+					id: "4678034D4DA0249E"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "creeperoverhaul:cave_creeper"
+					id: "53B448341A3236C5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:zombie_head"
+			}
+			id: "662C96E9CF58163E"
+			rewards: [
+				{
+					id: "3C7142AE0F1E213B"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "variantsandventures:gelid"
+					id: "0AEAD7F9E16E1840"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "variantsandventures:murk"
+					id: "18E81F863D200CE2"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "variantsandventures:thicket"
+					id: "39DA78FDE3D1929B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:ice"
+			}
+			id: "0CCD3E4E30252510"
+			rewards: [
+				{
+					id: "5DC9CE0DD7873BB5"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "friendsandfoes:iceologer"
+					id: "5FAB000416760124"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:bow"
+			}
+			id: "7BFACE0FFE5F74FA"
+			rewards: [
+				{
+					id: "7D2E5FAD9991FB73"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "friendsandfoes:illusioner"
+					id: "4957A5642620BFA5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:fire_charge"
+			}
+			id: "6B48EE6BC198801A"
+			rewards: [
+				{
+					id: "34246FC439057859"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "050A60B8A998CF54"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "friendsandfoes:wildfire"
+					id: "5A65145B29DCA9C9"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:wind_charge"
+			}
+			id: "26C7BB4F327F6808"
+			rewards: [
+				{
+					id: "14F7B68018423F9D"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:breeze"
+					id: "67F340D8CC79F648"
+					type: "kill"
+					value: 2L
+				}
+			]
+			x: 0.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:poppy"
+			}
+			id: "1E529A715E74C146"
+			rewards: [
+				{
+					id: "1412A13DB8CB421E"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1D4DC35F70270980"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:creaking_heart"
+			}
+			id: "411AA73A55A9960F"
+			rewards: [
+				{
+					id: "70854252823445E2"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "29ED8177592AF1BD"
+					item: {
+						count: 1
+						id: "minecraft:creaking_heart"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.75d
+		}
+	]
+}

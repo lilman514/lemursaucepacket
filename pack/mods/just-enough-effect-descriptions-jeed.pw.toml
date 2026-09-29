@@ -1,0 +1,13 @@
+name = "Just Enough Effect Descriptions (JEED)"
+filename = "jeed-1.21-2.3.4-neoforge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/EO27GKs1/versions/Rm5m1ASj/jeed-1.21-2.3.4-neoforge.jar"
+hash-format = "sha512"
+hash = "f25d1dac7f9b43ebdee50557c090aad37ab96b44288cb53b6d76d25994c7eacbc687fb815c59469d50958cb2188930a2cfd3c612e3be8b44123801a8e3b256cb"
+
+[update]
+[update.modrinth]
+mod-id = "EO27GKs1"
+version = "Rm5m1ASj"

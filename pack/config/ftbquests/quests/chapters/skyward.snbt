@@ -1,0 +1,256 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skyward"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "aeronautics:propeller_bearing"
+	}
+	id: "34063B311996CA32"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/skyward.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: 0.0d
+			y: -2.3d
+		}
+	]
+	order_index: 5
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "aeronautics:wooden_propeller"
+			}
+			id: "5C3D41ADDC1598B1"
+			rewards: [
+				{
+					id: "73C87E2C71C708FC"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2F47228ECAB73B70"
+					item: {
+						count: 1
+						id: "aeronautics:propeller_bearing"
+					}
+					type: "item"
+				}
+				{
+					id: "747B8221E66953E7"
+					item: {
+						count: 1
+						id: "aeronautics:wooden_propeller"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C3D41ADDC1598B1"]
+			icon: {
+				id: "aeronautics:white_envelope"
+			}
+			id: "51B2C901491D69B0"
+			rewards: [
+				{
+					id: "5CF5C591FD03C0F4"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "2227EB1C5FA55B62"
+					item: {
+						count: 1
+						id: "aeronautics:white_envelope"
+					}
+					type: "item"
+				}
+				{
+					id: "7E01D320FBBC85A3"
+					item: {
+						count: 1
+						id: "aeronautics:adjustable_burner"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: -0.875d
+		}
+		{
+			dependencies: ["51B2C901491D69B0"]
+			icon: {
+				id: "aeronautics:levitite"
+			}
+			id: "53CEE449BE9A4679"
+			rewards: [
+				{
+					id: "29C876408ABC6704"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "36355E0ADB2ADDC8"
+					item: {
+						count: 1
+						id: "aeronautics:levitite"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -1.75d
+		}
+		{
+			dependencies: ["5C3D41ADDC1598B1"]
+			icon: {
+				id: "aeronautics:aviators_goggles"
+			}
+			id: "7589B78C135663B5"
+			rewards: [
+				{
+					id: "5346A7F2A70DB958"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "578C170C946ECA99"
+					item: {
+						count: 1
+						id: "aeronautics:aviators_goggles"
+					}
+					type: "item"
+				}
+			]
+			x: 2.25d
+			y: 0.875d
+		}
+		{
+			dependencies: ["51B2C901491D69B0"]
+			icon: {
+				id: "aeronautics:smart_propeller"
+			}
+			id: "3073E0625A50D025"
+			rewards: [
+				{
+					id: "43632BDE9D69E762"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7F1521DD90EF19D6"
+					item: {
+						count: 1
+						id: "aeronautics:smart_propeller"
+					}
+					type: "item"
+				}
+				{
+					id: "6605E599CE050553"
+					item: {
+						count: 1
+						id: "aeronautics:gyroscopic_propeller_bearing"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["51B2C901491D69B0"]
+			icon: {
+				id: "aeroclaims:claim_block"
+			}
+			id: "2BA812CEDF7B09A9"
+			rewards: [
+				{
+					id: "52F3E22E6EACE67B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "726ECCAED505DE15"
+					item: {
+						count: 1
+						id: "aeroclaims:claim_block"
+					}
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 1.75d
+		}
+		{
+			dependencies: ["3073E0625A50D025", "53CEE449BE9A4679", "2BA812CEDF7B09A9"]
+			icon: {
+				id: "aeronautics:propeller_bearing"
+			}
+			id: "095F6A23CA1BB31E"
+			rewards: [
+				{
+					id: "215ED0BE376778CB"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3A2D612D0F060E57"
+					item: {
+						count: 4
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					id: "2DF4AE8FCB4E1C60"
+					type: "checkmark"
+				}
+			]
+			x: 6.75d
+			y: 0.0d
+		}
+	]
+}

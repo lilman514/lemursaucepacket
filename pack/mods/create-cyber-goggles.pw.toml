@@ -1,0 +1,18 @@
+name = "Create: Cyber Goggles"
+filename = "CreateCyberGoggles-1.21.1-8.6.5-NeoForge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/TlQAWQCY/versions/rK4DoUvM/CreateCyberGoggles-1.21.1-8.6.5-NeoForge.jar"
+hash-format = "sha512"
+hash = "e6c7d21d8baaee55c2b0bcde1808d5e131d9d0ecbcf80215fce30a913def9883b32b1d4af2dde77821cc34e376f5278bf750f95bb4e46b208a248b7446a904e1"
+
+[update]
+[update.modrinth]
+mod-id = "TlQAWQCY"
+version = "rK4DoUvM"
+
+[option]
+optional = true
+default = true
+description = "Exact RPM and stress readouts while wearing goggles."

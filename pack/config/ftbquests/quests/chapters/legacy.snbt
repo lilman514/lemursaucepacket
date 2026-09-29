@@ -1,0 +1,286 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "legacy"
+	group: "071A8EAF90A2B719"
+	icon: {
+		id: "minecraft:dragon_egg"
+	}
+	id: "415B5EBB83A4F72E"
+	images: [
+		{
+			height: 2.2d
+			image: "lemursaucepacket:textures/quests/legacy.png"
+			rotation: 0.0d
+			width: 2.2d
+			x: -2.3d
+			y: 0.0d
+		}
+	]
+	order_index: 7
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:ender_eye"
+			}
+			id: "21F50FAA76AA6AA4"
+			rewards: [
+				{
+					id: "39AAEA106B462756"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6C08D16939E01853"
+					structure: "betterstrongholds:stronghold"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -2.625d
+		}
+		{
+			dependencies: ["21F50FAA76AA6AA4"]
+			icon: {
+				id: "minecraft:end_stone"
+			}
+			id: "7C0C3519D95163FE"
+			rewards: [
+				{
+					id: "1FCFAC6CECC4F356"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "72C8AED98ADC7A18"
+					type: "dimension"
+				}
+			]
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7C0C3519D95163FE"]
+			icon: {
+				id: "minecraft:dragon_head"
+			}
+			id: "2CD0388FFD593882"
+			rewards: [
+				{
+					id: "332B3728EF1BC663"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "632C74C85C2613CC"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "0071C625ED1D257B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CD0388FFD593882"]
+			icon: {
+				id: "minecraft:elytra"
+			}
+			id: "2031A04C680089C5"
+			rewards: [
+				{
+					id: "011D6D860FAC8C19"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3F252FA0029C6407"
+					item: {
+						count: 1
+						id: "minecraft:elytra"
+					}
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "create_enchantment_industry:blaze_enchanter"
+			}
+			id: "4173E1E1A07BC6D2"
+			rewards: [
+				{
+					id: "69D7EC4218C1D28C"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "73CDB266C977AE5F"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6D9C83E184A7B6FD"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:blaze_enchanter"
+					}
+					type: "item"
+				}
+				{
+					id: "6644C19CBB33377A"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:printer"
+					}
+					type: "item"
+				}
+				{
+					id: "39118B99234D354E"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:experience_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.875d
+		}
+		{
+			icon: {
+				id: "create:crushing_wheel"
+			}
+			id: "69A9E29EEC4B2ED5"
+			rewards: [
+				{
+					id: "24D660C12A72E359"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "5AC5B51EB48EFD94"
+					item: {
+						count: 1
+						id: "create:crushing_wheel"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.875d
+		}
+		{
+			icon: {
+				id: "numismatics:blaze_banker"
+			}
+			id: "4B9540012C8F2474"
+			rewards: [
+				{
+					id: "3861EFB9933D980E"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7C84C0BC1E19716F"
+					item: {
+						count: 1
+						id: "numismatics:bank_terminal"
+					}
+					type: "item"
+				}
+				{
+					id: "40E6754B58F9F285"
+					item: {
+						count: 1
+						id: "numismatics:blaze_banker"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.625d
+		}
+		{
+			dependencies: ["2031A04C680089C5", "4173E1E1A07BC6D2", "69A9E29EEC4B2ED5", "4B9540012C8F2474"]
+			icon: {
+				id: "minecraft:beacon"
+			}
+			id: "010023C1444D0FF4"
+			rewards: [
+				{
+					id: "1634B841E55CCF7B"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "1F46EBDE33490B06"
+					item: {
+						count: 2
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "045C049531AE2E11"
+					type: "checkmark"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+	]
+}

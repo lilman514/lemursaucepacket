@@ -1,0 +1,12 @@
+version:3955
+resourcePacks:["vanilla","mod_resources","file/FreshAnimations.zip"]
+onboardAccessibility:false
+skipMultiplayerWarning:true
+joinedFirstServer:true
+tutorialStep:none
+key_gui.xaero_new_waypoint:key.keyboard.j
+key_key.mute_microphone:key.keyboard.o
+key_key.voice_chat_group:key.keyboard.unknown
+key_key.shouldersurfing.swap_shoulder:key.keyboard.unknown
+key_key.shouldersurfing.free_look:key.keyboard.unknown
+key_gui.xaero_enlarge_map:key.keyboard.unknown

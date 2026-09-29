@@ -1,0 +1,39 @@
+# Dedicated server that installs the same .mrpack the launcher gives players, so client and
+# server can never drift apart. Client-only mods (env.server = unsupported) are skipped.
+#
+#   docker compose up -d          start (first boot installs NeoForge + mods)
+#   docker compose logs -f        watch the console
+#   docker compose restart        pick up a newly published pack
+#   docker attach lemursaucepacket      server console (detach: Ctrl+P, Ctrl+Q)
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:java21
+    container_name: lemursaucepacket
+    ports:
+      - "25565:25565"
+    environment:
+      # Setting this to TRUE means you accept the Minecraft EULA: https://aka.ms/MinecraftEULA
+      EULA: "TRUE"
+      TYPE: MODRINTH
+      # Same host as launcher.json. latest.mrpack always points at the newest publish.
+      MODRINTH_MODPACK: "https://lilman514.github.io/lemursaucepacket/packs/latest.mrpack"
+      MEMORY: "8G"
+      USE_AIKAR_FLAGS: "true"
+      ONLINE_MODE: "TRUE"
+      ENFORCE_SECURE_PROFILE: "TRUE"
+      MOTD: "LemurSaucePacket"
+      DIFFICULTY: normal
+      MAX_PLAYERS: 40
+      VIEW_DISTANCE: 10
+      SIMULATION_DISTANCE: 8
+      # Keep the SMP private: only listed players can join. Comma-separated usernames.
+      ENABLE_WHITELIST: "true"
+      WHITELIST: ""
+      OPS: ""
+      TZ: "America/New_York"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
