@@ -94,6 +94,8 @@ export interface ServerStatus {
   latencyMs?: number
   favicon?: string
   error?: string
+  /** True when this PC runs the server itself, so the launcher joins it at localhost. */
+  local?: boolean
 }
 
 export interface ModEntry {

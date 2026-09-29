@@ -131,7 +131,21 @@ export class Launcher extends EventEmitter<LauncherEvents> {
   async getServerStatus(): Promise<ServerStatus> {
     const feed = await this.getFeed()
     if (!feed) return { online: false, error: 'No server configured' }
-    return pingServer(feed.server.address, feed.server.port)
+    const target = await this.resolveServer(feed)
+    return target.localStatus ?? pingServer(target.host, target.port)
+  }
+
+  /**
+   * Where to join: the pack's address, or localhost when this PC is running the server itself. Many home
+   * routers can't loop a PC's own public address back to it, so the host couldn't join otherwise.
+   */
+  private async resolveServer(feed: LauncherFeed): Promise<{ host: string; port?: number; localStatus?: ServerStatus }> {
+    const { server } = feed
+    const port = server.port ?? 25565
+    const local = await pingServer('localhost', port, 800).catch(() => null)
+    const name = (server.name ?? feed.name).toLowerCase()
+    if (local?.online && (local.motd ?? '').toLowerCase().includes(name)) return { host: 'localhost', port, localStatus: { ...local, local: true } }
+    return { host: server.address, port: server.port }
   }
 
   async getMods(): Promise<ModEntry[]> {
@@ -369,6 +383,8 @@ export class Launcher extends EventEmitter<LauncherEvents> {
 
       const server = feed?.server
       if (server) await this.ensureServerListed(server.name ?? feed.name, server.address, server.port)
+      const join = feed && settings.autoJoin ? await this.resolveServer(feed) : null
+      if (join?.localStatus) log('This PC is running the server; joining it at localhost')
 
       this.progress({ stage: 'launch', label: 'Starting Minecraft' })
       if (abort.signal.aborted) throw new CancelledError()
@@ -380,7 +396,7 @@ export class Launcher extends EventEmitter<LauncherEvents> {
         account,
         memoryMB: settings.memoryMB,
         resolution: { width: settings.width, height: settings.height, fullscreen: settings.fullscreen },
-        server: server && settings.autoJoin ? { host: server.address, port: server.port } : undefined,
+        server: join ? { host: join.host, port: join.port } : undefined,
         extraJvmArgs: [...(feed?.jvmArgs ?? []), ...splitArgs(settings.jvmArgs)],
         launcherName: brand.name,
         launcherVersion: app.getVersion()

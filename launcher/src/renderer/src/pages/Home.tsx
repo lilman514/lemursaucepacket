@@ -165,6 +165,7 @@ function ServerPill({ status, address }: { status: ServerStatus | null; address?
       {status.online ? (
         <>
           Online <UsersIcon size={14} /> {status.players?.online ?? 0}/{status.players?.max ?? 0}
+          {status.local && <span title="The server runs on this PC, so the launcher joins it locally."> · this PC</span>}
         </>
       ) : (
         (status.error ?? 'Offline')

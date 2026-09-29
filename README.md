@@ -104,6 +104,8 @@ Start the server with `start.bat` in that folder.
 
 Put your public address (or a free dynamic-DNS name, since home IPs change) in `publish/feed.json` → `server.address`. The launcher uses it for the Play button's auto-join and for the online/players indicator.
 
+**Playing on the server PC itself:** the launcher notices when this PC is running the server and joins it at `localhost`. The server indicator then says "· this PC". Many home routers can't loop a PC's own public address back to it, so this is how the host plays. It recognises the server by the pack name in its description (`motd` in `server.properties`), so keep "LemurSaucePacket" in there.
+
 With 64 GB of RAM, 10–12 GB for the server is plenty for about 8 players. Chunky (included) can pre-generate the world: `/chunky radius 3000` then `/chunky start` in the server console, run once before opening the server.
 
 *Docker alternative:* `server/docker-compose.yml` uses the itzg image with `MODRINTH_MODPACK`. It was written before FTB Quests came from CurseForge's CDN and hasn't been re-tested since, so prefer the server tool above.
