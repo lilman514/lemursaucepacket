@@ -5,6 +5,7 @@
 // --launch starts the game with an OFFLINE dev profile (singleplayer / offline-mode servers only)
 // and kills it after --seconds once the window is up. Useful for testing packs and loader installs.
 
+import { execFile } from 'node:child_process'
 import path from 'node:path'
 import type { ProgressInfo } from '../src/shared/types'
 import { fetchFeed, obtainMrpack } from '../src/core/feed'
@@ -46,6 +47,17 @@ function onProgress(p: ProgressInfo): void {
   console.log(`${stamp()} ${line}${p.detail ? `  · ${p.detail}` : ''}`)
 }
 const log = (s: string): void => console.log(`${stamp()} ${s}`)
+
+/** Crash Assistant (in the pack) watches the game from its own process and opens a window when we kill the game; close ours. */
+function closeCrashAssistant(): Promise<void> {
+  if (process.platform !== 'win32') return Promise.resolve()
+  const quote = (s: string): string => `'${s.replace(/'/g, "''")}'`
+  const script =
+    `Get-CimInstance Win32_Process -Filter "Name='javaw.exe' OR Name='java.exe'" | ` +
+    `Where-Object { $_.CommandLine -and $_.CommandLine.Contains('crash_assistant') -and $_.CommandLine.Contains(${quote(dataDir)}) } | ` +
+    `ForEach-Object { Stop-Process -Id $_.ProcessId -Force }`
+  return new Promise((resolve) => execFile('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', script], () => resolve()))
+}
 
 async function main(): Promise<void> {
   setUserAgent('smp-launcher-headless/0.1.0')
@@ -136,6 +148,7 @@ async function main(): Promise<void> {
       resolve()
     })
   )
+  await closeCrashAssistant()
 }
 
 main().catch((e) => {

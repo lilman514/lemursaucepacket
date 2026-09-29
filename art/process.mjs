@@ -175,7 +175,22 @@ async function installerArt() {
   console.log('installer: installerSidebar.bmp (164x314), installerHeader.bmp (150x57)')
 }
 
+/**
+ * The quest book's info-card background: a flat translucent panel (FTB stretches it to each card).
+ * Also a fully transparent image for spacers that steer where FTB centres a chapter (see quests/build.mjs).
+ */
+async function questPanel() {
+  await sharp({ create: { width: 16, height: 16, channels: 4, background: { r: 12, g: 14, b: 20, alpha: 0.74 } } })
+    .png()
+    .toFile(target(`${QUEST_TEXTURES}/panel.png`))
+  await sharp({ create: { width: 1, height: 1, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+    .png()
+    .toFile(target(`${QUEST_TEXTURES}/blank.png`))
+  console.log('quests: panel.png, blank.png')
+}
+
 await backgrounds()
 await logo()
 await emblems()
 await installerArt()
+await questPanel()

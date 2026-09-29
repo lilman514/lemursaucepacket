@@ -9,12 +9,27 @@
 	id: "09B4C4E200CCB72C"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "7716892D5EF37B93"
 			image: "lemursaucepacket:textures/quests/atlas.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: -2.3d
-			y: 1.75d
+			width: 2.0d
+			x: 0.35d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "378495272D3FABC3"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 5.668085106382979d
+			x: 4.05d
+			y: -2.0d
 		}
 	]
 	order_index: 11
@@ -44,7 +59,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -76,8 +91,8 @@
 					type: "biome"
 				}
 			]
-			x: 2.0d
-			y: 0.0d
+			x: 2.1d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -109,8 +124,8 @@
 					type: "biome"
 				}
 			]
-			x: 4.0d
-			y: 0.0d
+			x: 4.2d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -142,8 +157,8 @@
 					type: "biome"
 				}
 			]
-			x: 6.0d
-			y: 0.0d
+			x: 6.3d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -175,8 +190,8 @@
 					type: "biome"
 				}
 			]
-			x: 8.0d
-			y: 0.0d
+			x: 8.4d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -209,7 +224,7 @@
 				}
 			]
 			x: 0.0d
-			y: 1.75d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -233,8 +248,8 @@
 					type: "biome"
 				}
 			]
-			x: 2.0d
-			y: 1.75d
+			x: 2.1d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -266,8 +281,8 @@
 					type: "biome"
 				}
 			]
-			x: 4.0d
-			y: 1.75d
+			x: 4.2d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -291,8 +306,8 @@
 					type: "biome"
 				}
 			]
-			x: 6.0d
-			y: 1.75d
+			x: 6.3d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -316,8 +331,8 @@
 					type: "biome"
 				}
 			]
-			x: 8.0d
-			y: 1.75d
+			x: 8.4d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -350,7 +365,7 @@
 				}
 			]
 			x: 0.0d
-			y: 3.5d
+			y: 4.3d
 		}
 		{
 			icon: {
@@ -374,8 +389,8 @@
 					type: "structure"
 				}
 			]
-			x: 2.0d
-			y: 3.5d
+			x: 2.1d
+			y: 4.3d
 		}
 		{
 			icon: {
@@ -399,8 +414,8 @@
 					type: "structure"
 				}
 			]
-			x: 4.0d
-			y: 3.5d
+			x: 4.2d
+			y: 4.3d
 		}
 		{
 			icon: {
@@ -424,8 +439,8 @@
 					type: "structure"
 				}
 			]
-			x: 6.0d
-			y: 3.5d
+			x: 6.3d
+			y: 4.3d
 		}
 		{
 			icon: {
@@ -449,8 +464,8 @@
 					type: "structure"
 				}
 			]
-			x: 8.0d
-			y: 3.5d
+			x: 8.4d
+			y: 4.3d
 		}
 	]
 }

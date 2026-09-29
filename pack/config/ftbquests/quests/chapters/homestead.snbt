@@ -9,12 +9,27 @@
 	id: "32CB66168B93AD10"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "3316FCA2A87F7968"
 			image: "lemursaucepacket:textures/quests/homestead.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -3.175d
+			width: 2.0d
+			x: -4.35d
+			y: -0.9d
+		}
+		{
+			height: 2.527659574468085d
+			id: "133712B15DC30ACA"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 5.080851063829787d
+			x: -0.9d
+			y: -0.9d
 		}
 	]
 	order_index: 9
@@ -47,7 +62,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.875d
+			y: 2.15d
 		}
 		{
 			dependencies: ["121B7682E75B11E7"]
@@ -75,8 +90,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: -2.625d
+			x: 2.3d
+			y: 0.5d
 		}
 		{
 			dependencies: ["121B7682E75B11E7"]
@@ -104,8 +119,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: -0.875d
+			x: 2.3d
+			y: 2.1d
 		}
 		{
 			dependencies: ["121B7682E75B11E7"]
@@ -157,8 +172,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.875d
+			x: 2.3d
+			y: 3.9d
 		}
 		{
 			dependencies: ["022ED40E89E99353"]
@@ -187,8 +202,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -1.75d
+			x: 4.6d
+			y: 4.05d
 		}
 		{
 			dependencies: ["0DD06477687A64EC", "3FD8D8BCEB833FB9"]
@@ -224,8 +239,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.0d
+			x: 4.6d
+			y: 0.85d
 		}
 		{
 			dependencies: ["0DD06477687A64EC"]
@@ -253,8 +268,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 1.75d
+			x: 4.6d
+			y: 2.45d
 		}
 		{
 			icon: {
@@ -280,7 +295,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.875d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0E23F4609946F60D"]
@@ -316,8 +331,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 2.625d
+			x: 2.3d
+			y: 5.5d
 		}
 	]
 }

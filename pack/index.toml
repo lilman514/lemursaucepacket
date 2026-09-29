@@ -34,55 +34,55 @@ hash = "b13971265ec59eed4896d19410a411e2d4be4c3a1cf8991ce391485f4fd1c4ac"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/atlas.snbt"
-hash = "6a52b186674095575dac3e2c727d776daab66d6f1db001253d7110c262082afe"
+hash = "e472bab6b2c340c9644f58212405aa16946122a08e30d711f1e1cd47053867fb"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/backpack_workshop.snbt"
-hash = "87ee4b0538ab7ff8639148cfb29ed77546d53b0146692c925a79e9ef37d451a5"
+hash = "3710374c46b824f97e1bbd22dce83c917e04c8b506e8c3c6f450dafaa8b3fec2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/banners.snbt"
-hash = "ba3afb78639688d05e875ff9d4d43eecdf65f27c9d934b84eb41b75e87b0ef3f"
+hash = "784c4b83929dbc3ad5bcbcbbea8b43b24bc5feaa98400e756b16bd6760becfff"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/bestiary.snbt"
-hash = "98787b2d63ed9e5399aee6935395d9742adea14614f09c56f54d7f1875f1567e"
+hash = "1eb44dabff1718bec0ce01306e80db22f2f453b28e14b7bdbfbcafd34db6895f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/brass_age.snbt"
-hash = "8cdc3785fd6f6d866971d7b737e8eb9edbb3d90ad74850ad353ab9915f790edb"
+hash = "f0b2a010aaffcc23871eb6bf63baacac366042c0ec36cc5cd73d8baa6c6e2f57"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/commerce.snbt"
-hash = "3ad6deacb24293596cba33077e96874366a0e8dab54bd4fcd33514cae49bcc65"
+hash = "167c67f63852fe56d5b42672ffa5c74b21e1c957559565a6917f9bf0460bc5fb"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/crown_of_fire.snbt"
-hash = "3b50ba7783b70d1464c821a7b42d30f9d56b660bad6f1ac07e6f9f0c822017c0"
+hash = "abc7d5a56d21843cd553f8e0aa8cafa9ea5b9c4d7bfd99806031389496431545"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/first_rotation.snbt"
-hash = "d24bba144c8af65e65c467a7c198c3ea84fc49412e2abbe6309bb0a17732ce55"
+hash = "5ddbb2f13d4b8a26c4895525772bc8a9680b8db85d81614c3b80cc2e18bed666"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homestead.snbt"
-hash = "972bdf042786d4a24c33bdbc8c1c8c3b8371a3cb53dccd8fccd94e8d8f374140"
+hash = "577d85cc11f1a1e117de55799052caa0971a0615257a01419192627b8c4578ab"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/iron_roads.snbt"
-hash = "7547a9fcd0f085f2faf6076619ead51d8b25960820cbbecfedc23b376d7c7f38"
+hash = "808264fbdb6977eeb100ae4ee5812ad7dc3eaec4b69dfa9f0df6acf3e96f5cb9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landfall.snbt"
-hash = "006fb7505dcf73e6a95e8b278fc5bc650698f869f9b577aa9354ab6224ec440c"
+hash = "bd9185a5aeffd37c768ab3015ae3813e919d643b1c714e71507259391c27ccdd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/legacy.snbt"
-hash = "02a370b3a84cc8d7677f033ec423dbb0b1555357d9206e9a2a510ac9e740733c"
+hash = "b30cc30c375d6c1d62b3165790aca7b73051228ca79126d8b8bd7be82f43b39a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
-hash = "006dfdd545ce837d13d1194faf40e88707d88e43efadd1257443f6e737d39f29"
+hash = "9324decdf1391d063b92bed127661673da732c71aa969aa7a4ae9fdd391ef690"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -90,7 +90,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "dead5b87c9b4b6a69cbc1a9bbe849a2120de81408b21548daf5f28b9db2e4b85"
+hash = "a308fa93bb57987411a48fe24e807769fd9b9346ae9587895c60741d85a79927"
 
 [[files]]
 file = "config/iris.properties"
@@ -141,6 +141,10 @@ file = "kubejs/assets/lemursaucepacket/textures/quests/bestiary.png"
 hash = "267a2647cafe22cc4e05f01ea775b3f2c1bf6b17fa05018d643667d53c0aa28e"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/quests/blank.png"
+hash = "e95aa00319150968be8c715c611b077ecf380647908bc9babed72a137a1d11e9"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/quests/brass_age.png"
 hash = "58e62101f7c72b59fb817ab6dd2dc1c953d0f522566f19c6e4c0e59f83b74179"
 
@@ -175,6 +179,10 @@ hash = "3b6e498dcfb1786b34d7c81df05a918bf59891fe72f804c77de66f46b8c0467d"
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/quests/mascot.png"
 hash = "f8b8b58f81b74896da0869be872fb47e1a88b0a01c3dd673d5ee889dfc246b36"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/quests/panel.png"
+hash = "f0bdcec8cde1ca15a10e80e3426636129d00d00eb5d4e8f405441620b4193b73"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/quests/quest_book.png"

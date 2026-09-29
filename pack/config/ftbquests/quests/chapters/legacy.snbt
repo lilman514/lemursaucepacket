@@ -9,12 +9,27 @@
 	id: "415B5EBB83A4F72E"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "46F7222684DD9817"
 			image: "lemursaucepacket:textures/quests/legacy.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: -2.3d
-			y: 0.0d
+			width: 2.0d
+			x: 0.35d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "7367AF30B1A8A05A"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 5.617021276595745d
+			x: 4.0d
+			y: -2.0d
 		}
 	]
 	order_index: 7
@@ -44,7 +59,7 @@
 				}
 			]
 			x: 0.0d
-			y: -2.625d
+			y: 0.5d
 		}
 		{
 			dependencies: ["21F50FAA76AA6AA4"]
@@ -69,8 +84,8 @@
 					type: "dimension"
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 0.5d
 		}
 		{
 			dependencies: ["7C0C3519D95163FE"]
@@ -101,8 +116,8 @@
 					value: 1L
 				}
 			]
-			x: 4.5d
-			y: 0.0d
+			x: 4.6d
+			y: 0.5d
 		}
 		{
 			dependencies: ["2CD0388FFD593882"]
@@ -130,10 +145,11 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.0d
+			x: 6.9d
+			y: 0.55d
 		}
 		{
+			dependencies: ["69A9E29EEC4B2ED5"]
 			icon: {
 				id: "create_enchantment_industry:blaze_enchanter"
 			}
@@ -182,8 +198,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: -0.875d
+			x: 2.3d
+			y: 2.1d
 		}
 		{
 			icon: {
@@ -212,9 +228,10 @@
 				}
 			]
 			x: 0.0d
-			y: 0.875d
+			y: 2.1d
 		}
 		{
+			dependencies: ["4173E1E1A07BC6D2"]
 			icon: {
 				id: "numismatics:blaze_banker"
 			}
@@ -247,11 +264,11 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 2.625d
+			x: 4.6d
+			y: 2.1d
 		}
 		{
-			dependencies: ["2031A04C680089C5", "4173E1E1A07BC6D2", "69A9E29EEC4B2ED5", "4B9540012C8F2474"]
+			dependencies: ["2031A04C680089C5", "4B9540012C8F2474"]
 			icon: {
 				id: "minecraft:beacon"
 			}
@@ -279,8 +296,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 1.3d
 		}
 	]
 }

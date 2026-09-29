@@ -9,12 +9,36 @@
 	id: "576718F3DA1B68BA"
 	images: [
 		{
-			height: 2.2d
+			height: 0.1d
+			id: "46F2BBB12A7004F6"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: 3.8d
+			y: -3.35d
+		}
+		{
+			height: 2.0d
+			id: "4B6C0B44478F465D"
 			image: "lemursaucepacket:textures/quests/backpack_workshop.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 1.05d
+			y: -1.7d
+		}
+		{
+			height: 2.7574468085106383d
+			id: "314F29A3CC992CB6"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 5.948936170212766d
+			x: 4.85d
+			y: -1.7d
 		}
 	]
 	order_index: 8
@@ -43,7 +67,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 2.45d
 		}
 		{
 			dependencies: ["77AE5D8ABD348621"]
@@ -71,8 +95,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 2.45d
 		}
 		{
 			dependencies: ["770F2006133B6115"]
@@ -100,8 +124,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 1.15d
 		}
 		{
 			dependencies: ["06B6B5C52AB737B3"]
@@ -137,8 +161,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -2.625d
+			x: 6.9d
+			y: 0.5d
 		}
 		{
 			dependencies: ["007E391695FCA435"]
@@ -166,8 +190,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 0.95d
 		}
 		{
 			dependencies: ["206401FD17FA8617"]
@@ -203,8 +227,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: -0.875d
+			x: 11.5d
+			y: 0.55d
 		}
 		{
 			dependencies: ["4751EE190720FC94"]
@@ -232,8 +256,8 @@
 					type: "item"
 				}
 			]
-			x: 13.5d
-			y: 0.0d
+			x: 13.8d
+			y: 0.55d
 		}
 		{
 			dependencies: ["770F2006133B6115"]
@@ -262,8 +286,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 3.55d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -299,8 +323,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -0.875d
+			x: 6.9d
+			y: 2.1d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -336,8 +360,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.875d
+			x: 6.9d
+			y: 5.35d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -373,8 +397,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 2.625d
+			x: 6.9d
+			y: 3.7d
 		}
 		{
 			dependencies: ["540CA46A64AD3156", "206401FD17FA8617"]
@@ -402,8 +426,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: 0.875d
+			x: 11.5d
+			y: 2.15d
 		}
 	]
 }

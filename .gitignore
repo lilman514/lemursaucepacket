@@ -11,3 +11,5 @@ server/data/
 quests/.nested.jar
 # Local Claude Code tooling
 .claude/
+# Layout previews from node quests/build.mjs --preview
+quests/preview/

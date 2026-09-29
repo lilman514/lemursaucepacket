@@ -9,12 +9,27 @@
 	id: "3AD6951FB6CD0EF9"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "372AC247A5D52036"
 			image: "lemursaucepacket:textures/quests/commerce.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 0.35d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "19441437222BDB59"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.3319148936170215d
+			x: 4.35d
+			y: -2.0d
 		}
 	]
 	order_index: 12
@@ -47,7 +62,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 1.3d
 		}
 		{
 			dependencies: ["0531338213957CA2"]
@@ -75,8 +90,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: -0.875d
+			x: 2.3d
+			y: 0.5d
 		}
 		{
 			dependencies: ["374C66390D54AB5C"]
@@ -100,8 +115,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 4.5d
-			y: 0.0d
+			x: 4.6d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0531338213957CA2"]
@@ -129,8 +144,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.875d
+			x: 2.3d
+			y: 2.1d
 		}
 	]
 }

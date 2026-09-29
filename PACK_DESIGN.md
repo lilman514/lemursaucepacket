@@ -33,7 +33,7 @@ FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a r
 
 **Field Guides** (side books): Backpack Workshop, Homestead (Farmer's Delight, Slice & Dice, happy ghast), Bestiary, Atlas (15 biomes and structures), and Coin & Commerce.
 
-Each chapter has a painted crest; the lemur mascot and the chapter crests come from one Higgsfield sheet (see the README).
+Each chapter opens with a painted crest and an info card. The card says what the chapter is for and what it unlocks (Bestiary and Atlas list their rewards instead). The lemur mascot and the chapter crests come from one Higgsfield sheet (see the README).
 
 ## Balance
 

@@ -47,12 +47,27 @@
 	id: "4BB94A94C87CDCB1"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "034D9FF351D1E0F2"
 			image: "lemursaucepacket:textures/quests/banners.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: -2.3d
-			y: 0.0d
+			width: 2.0d
+			x: 0.35d
+			y: -2.1d
+		}
+		{
+			height: 2.7574468085106383d
+			id: "5D0CDDF39B344909"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.817021276595745d
+			x: 4.55d
+			y: -2.1d
 		}
 	]
 	order_index: 3
@@ -90,7 +105,7 @@
 				}
 			]
 			x: 0.0d
-			y: -4.375d
+			y: 1.3d
 		}
 		{
 			dependencies: ["0CC49483DCF7A41B"]
@@ -122,8 +137,8 @@
 					value: 5L
 				}
 			]
-			x: 2.25d
-			y: -0.875d
+			x: 2.3d
+			y: 0.5d
 		}
 		{
 			dependencies: ["29D9FF7A83EFDE49"]
@@ -162,8 +177,8 @@
 					type: "advancement"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0CC49483DCF7A41B"]
@@ -188,8 +203,8 @@
 					type: "structure"
 				}
 			]
-			x: 2.25d
-			y: 0.875d
+			x: 2.3d
+			y: 2.1d
 		}
 		{
 			dependencies: ["76E4BD5934F09FD6"]
@@ -220,10 +235,11 @@
 					value: 1L
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 2.1d
 		}
 		{
+			dependencies: ["792978E03502FA34"]
 			icon: {
 				id: "create:track_station"
 			}
@@ -245,10 +261,11 @@
 					type: "structure"
 				}
 			]
-			x: 0.0d
-			y: -2.625d
+			x: 4.6d
+			y: 3.7d
 		}
 		{
+			dependencies: ["37265A91E2BF35CA"]
 			icon: {
 				id: "create:propeller"
 			}
@@ -270,10 +287,11 @@
 					type: "structure"
 				}
 			]
-			x: 0.0d
-			y: -0.875d
+			x: 6.9d
+			y: 3.5d
 		}
 		{
+			dependencies: ["46EABE2D301523D9"]
 			icon: {
 				id: "create:mechanical_drill"
 			}
@@ -295,10 +313,11 @@
 					type: "structure"
 				}
 			]
-			x: 0.0d
-			y: 0.875d
+			x: 2.3d
+			y: 3.7d
 		}
 		{
+			dependencies: ["6695DF890897A31D"]
 			icon: {
 				id: "minecraft:golden_helmet"
 			}
@@ -320,8 +339,8 @@
 					type: "structure"
 				}
 			]
-			x: 0.0d
-			y: 2.625d
+			x: 9.2d
+			y: 3.3d
 		}
 		{
 			icon: {
@@ -354,10 +373,10 @@
 				}
 			]
 			x: 0.0d
-			y: 4.375d
+			y: 3.7d
 		}
 		{
-			dependencies: ["26E5A5ABB5584E32", "2B59BEE4CAA41223", "37265A91E2BF35CA", "6695DF890897A31D"]
+			dependencies: ["26E5A5ABB5584E32", "2B59BEE4CAA41223", "2CEEFD1A5DD9339E"]
 			icon: {
 				id: "minecraft:white_banner"
 			}
@@ -389,8 +408,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.0d
+			x: 11.5d
+			y: 2.1d
 		}
 	]
 }

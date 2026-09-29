@@ -1,6 +1,7 @@
 // Builds the FTB Quests book (config/ftbquests/quests) from quests/book.mjs.
 //   node quests/build.mjs            write into pack/config/ftbquests/quests
 //   node quests/build.mjs --check    validate ids only
+//   node quests/build.mjs --preview  also draw every chapter to quests/preview/<chapter>.svg
 // Every item/entity/biome/structure/advancement id is checked against quests/.id-index.json
 // (made by quests/id-index.mjs from the real mod jars), so a typo fails the build instead of
 // producing a quest nobody can complete.
@@ -10,11 +11,14 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import book from './book.mjs'
+import { layoutGrid, layoutQuality, layoutTree, reduceDependencies, textWidth, wrap } from './layout.mjs'
+import { chapterSvg } from './preview.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outDir = path.join(root, 'pack', 'config', 'ftbquests', 'quests')
 const emblemDir = path.join(root, 'pack', 'kubejs', 'assets', 'lemursaucepacket', 'textures', 'quests')
 const checkOnly = process.argv.includes('--check')
+const preview = process.argv.includes('--preview')
 
 // ---------------------------------------------------------------- ids
 
@@ -165,31 +169,200 @@ function rewardData(reward, key, where) {
   return out
 }
 
-/** Dependency-depth layout: each "generation" of quests is a column, centred vertically. */
-function layout(quests) {
-  const byKey = new Map(quests.map((q) => [q.key, q]))
-  const depth = new Map()
-  const depthOf = (q, stack = []) => {
-    if (depth.has(q.key)) return depth.get(q.key)
-    if (stack.includes(q.key)) throw new Error(`dependency cycle at ${q.key}`)
-    const d = (q.after ?? []).length === 0 ? 0 : 1 + Math.max(...q.after.map((k) => depthOf(byKey.get(k), [...stack, q.key])))
-    depth.set(q.key, d)
-    return d
-  }
-  const columns = new Map()
-  for (const q of quests) {
-    const d = depthOf(q)
-    if (!columns.has(d)) columns.set(d, [])
-    columns.get(d).push(q)
-  }
-  const pos = new Map()
-  for (const [d, col] of columns) col.forEach((q, row) => pos.set(q.key, [d * 2.25, (row - (col.length - 1) / 2) * 1.75]))
-  return pos
+// ---------------------------------------------------------------- chapter header
+// Every chapter opens with a header row above its quests: the crest (art/process.mjs) and an info card
+// saying what the chapter is for and what it unlocks. FTB draws the card's text onto a translucent panel
+// image (text_on_image), scaled to fit the image, so the card is sized from its text to keep every
+// chapter's text the same size.
+
+const TEXT_UNIT = 0.024 // quest-map units per font pixel: about two thirds of UI text size at default zoom
+const LINE_PX = 9 // Minecraft font line height
+const CARD_WRAP_PX = 300 // wrap width for card text
+const CARD_INSET = 3 // text_inset, percent of the card on each side
+const CREST = 2
+const CREST_GAP = 0.4 // between the crest and the card
+const HEADER_GAP = 0.9 // air between the header and the first quests when it sits above them
+const HEADER_CLEARANCE = 0.5 // minimum distance from the header to any quest or dependency line
+// FTB opens a chapter centred on the middle of everything in it, at zoom 16. That shows about 13.8 x 8.6
+// map units on a 720p/1440p/4K screen at automatic GUI scale (more at 1080p); a little less for margin.
+const VIEW_W = 13.4
+const VIEW_H = 8.2
+// FTB sizes chapter images (and quests) in quest-size units but positions them in quest-spacing units,
+// 24 vs 28 GUI px at the default spacing (QuestPanel.alignWidgets), so an image is drawn at 6/7 of its
+// nominal size around its centre, while the bounds FTB centres the view on use the nominal size.
+const IMAGE_SCALE = 6 / 7
+
+function chapterCard(chapter) {
+  // FTB starts a new line at every style change (TextUtils.processComponentWithPossibleNewlines), so
+  // every line is one style: the "Unlocks:" label gets a line of its own.
+  // A colour code keeps bold on in FTB text; only &r clears it.
+  const lines = [' ', `&6&l${chapter.title}`]
+  if (chapter.subtitle) lines.push(...wrap(chapter.subtitle, CARD_WRAP_PX, '&r&7'))
+  if (chapter.about) lines.push(' ', ...wrap(chapter.about, CARD_WRAP_PX, '&r&f'))
+  if (chapter.unlocks) lines.push(' ', `&r&e${chapter.unlocksLabel ?? 'Unlocks'}:`, ...wrap(chapter.unlocks, CARD_WRAP_PX, '&r&f'))
+  lines.push(' ')
+  const pad = 1 / (1 - (2 * CARD_INSET) / 100)
+  return { lines, width: Math.max(...lines.map(textWidth)) * TEXT_UNIT * pad, height: lines.length * LINE_PX * TEXT_UNIT * pad }
 }
 
-/** Grid layout for chapters that are collections rather than a progression. */
-function grid(quests, columns = 5) {
-  return new Map(quests.map((q, i) => [q.key, [(i % columns) * 2, Math.floor(i / columns) * 1.75]]))
+const overlaps = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1
+const outside = (r, view) => Math.max(0, view.x0 - r.x0) + Math.max(0, r.x1 - view.x1) + Math.max(0, view.y0 - r.y0) + Math.max(0, r.y1 - view.y1)
+
+/** Whether segment p→q passes through rectangle r (Liang–Barsky clipping). */
+function segmentHits([px, py], [qx, qy], r) {
+  let t0 = 0
+  let t1 = 1
+  const dx = qx - px
+  const dy = qy - py
+  for (const [p, q] of [
+    [-dx, px - r.x0],
+    [dx, r.x1 - px],
+    [-dy, py - r.y0],
+    [dy, r.y1 - py]
+  ]) {
+    if (p === 0) {
+      if (q < 0) return false
+    } else {
+      const t = q / p
+      if (p < 0) t0 = Math.max(t0, t)
+      else t1 = Math.min(t1, t)
+      if (t0 > t1) return false
+    }
+  }
+  return true
+}
+
+/**
+ * Header images (crest + card) for a laid-out chapter, plus the card's text for the lang file.
+ * The header goes above the first quests, left-aligned, unless the chapter would then be too big to open
+ * with the card in view; then it moves to the free spot in the chapter's top half (clear of every quest
+ * and line) that shows the most of the chapter while staying closest to that default spot. Crest beside
+ * the card, or above it. A chapter still taller than the view gets a transparent spacer above the header,
+ * which moves FTB's centred opening view up so the card is in it (the bottom of the tree starts off-screen).
+ */
+function chapterHeader(chapter, positions, deps) {
+  const boxes = chapter.quests.map((q) => {
+    const [x, y] = positions.get(q.key)
+    const s = q.size ?? 1
+    return { x0: x - s / 2, x1: x + s / 2, y0: y - s / 2, y1: y + s / 2 }
+  })
+  const segments = chapter.quests.flatMap((q) => (deps.get(q.key) ?? []).map((p) => [positions.get(p), positions.get(q.key)]))
+  const tree = {
+    x0: Math.min(...boxes.map((b) => b.x0)),
+    x1: Math.max(...boxes.map((b) => b.x1)),
+    y0: Math.min(...boxes.map((b) => b.y0)),
+    y1: Math.max(...boxes.map((b) => b.y1))
+  }
+  const card = chapter.about || chapter.unlocks ? chapterCard(chapter) : null
+  const crest = existsSync(path.join(emblemDir, `${chapter.key}.png`))
+  if (!card && !crest) return { images: [], lang: {} }
+  const cw = card?.width ?? 0
+  const ch = card?.height ?? 0
+  // Layout uses drawn sizes (see IMAGE_SCALE); the view bounds use nominal ones.
+  const crestD = CREST * IMAGE_SCALE
+  const cwD = cw * IMAGE_SCALE
+  const chD = ch * IMAGE_SCALE
+  const nominal = (r) => {
+    const gx = ((r.x1 - r.x0) * (1 / IMAGE_SCALE - 1)) / 2
+    const gy = ((r.y1 - r.y0) * (1 / IMAGE_SCALE - 1)) / 2
+    return { x0: r.x0 - gx, x1: r.x1 + gx, y0: r.y0 - gy, y1: r.y1 + gy }
+  }
+
+  // Each shape places the drawn crest and card relative to the header's top-left corner.
+  const shapes = []
+  if (!crest) shapes.push({ w: cwD, h: chD, card: [0, 0], penalty: 0 })
+  else if (!card) shapes.push({ w: crestD, h: crestD, crest: [0, 0], penalty: 0 })
+  else {
+    const h = Math.max(crestD, chD)
+    shapes.push({ w: crestD + CREST_GAP + cwD, h, crest: [0, (h - crestD) / 2], card: [crestD + CREST_GAP, (h - chD) / 2], penalty: 0 })
+    const w = Math.max(crestD, cwD)
+    shapes.push({ w, h: crestD + CREST_GAP + chD, crest: [(w - crestD) / 2, 0], card: [(w - cwD) / 2, crestD + CREST_GAP], penalty: 2 })
+  }
+
+  let best = null
+  for (const shape of shapes) {
+    // Candidates on a 0.1 grid through the default spot, anywhere from left of the tree to right of it.
+    const home = [tree.x0, tree.y0 - HEADER_GAP - shape.h]
+    const step = 0.1
+    for (let i = Math.floor((-shape.w - 1) / step); i <= Math.ceil((tree.x1 - tree.x0 + 1) / step); i++) {
+      for (let j = Math.floor(-1.5 / step); j <= Math.ceil((tree.y1 - tree.y0 + HEADER_GAP + shape.h + 1) / step); j++) {
+        const hx = home[0] + i * step
+        const hy = home[1] + j * step
+        const rect = { x0: hx, x1: hx + shape.w, y0: hy, y1: hy + shape.h }
+        if (rect.y0 + rect.y1 > tree.y0 + tree.y1) continue // top half only: the card is read first
+        const clear = { x0: rect.x0 - HEADER_CLEARANCE, x1: rect.x1 + HEADER_CLEARANCE, y0: rect.y0 - HEADER_CLEARANCE, y1: rect.y1 + HEADER_CLEARANCE }
+        if (boxes.some((b) => overlaps(b, clear)) || segments.some(([p, q]) => segmentHits(p, q, clear))) continue
+        const place = (at, w, h) => at && { x0: hx + at[0], x1: hx + at[0] + w, y0: hy + at[1], y1: hy + at[1] + h }
+        const crestRect = place(shape.crest, crestD, crestD)
+        const cardRect = place(shape.card, cwD, chD)
+        const all = { ...tree }
+        for (const n of [crestRect, cardRect].filter(Boolean).map(nominal)) {
+          all.x0 = Math.min(all.x0, n.x0)
+          all.x1 = Math.max(all.x1, n.x1)
+          all.y0 = Math.min(all.y0, n.y0)
+          all.y1 = Math.max(all.y1, n.y1)
+        }
+        const spacer = Math.max(0, all.y0 + all.y1 - VIEW_H - 2 * (cardRect ?? crestRect).y0)
+        all.y0 -= spacer
+        const cx = (all.x0 + all.x1) / 2
+        const cy = (all.y0 + all.y1) / 2
+        const view = { x0: cx - VIEW_W / 2, x1: cx + VIEW_W / 2, y0: cy - VIEW_H / 2, y1: cy + VIEW_H / 2 }
+        const score =
+          (cardRect ? outside(cardRect, view) : 0) * 1000 +
+          (crestRect ? outside(crestRect, view) : 0) * 50 +
+          (Math.max(0, all.x1 - all.x0 - VIEW_W) + Math.max(0, all.y1 - all.y0 - VIEW_H)) * 20 +
+          Math.hypot(hx - home[0], hy - home[1]) +
+          shape.penalty
+        if (!best || score < best.score - 1e-9) best = { score, rect, crestRect, cardRect, spacer, top: all.y0 }
+      }
+    }
+  }
+
+  const { rect, crestRect, cardRect, spacer, top } = best
+  const r = (v) => Math.round(v * 20) / 20
+  const mid = (a, b) => r((a + b) / 2)
+  const images = []
+  if (spacer > 0) {
+    images.push({
+      height: D(0.1),
+      id: hexId(`spacer/${chapter.key}`),
+      image: 'lemursaucepacket:textures/quests/blank.png',
+      rotation: D(0),
+      width: D(0.1),
+      x: D(mid(rect.x0, rect.x1)),
+      y: D(r(top + 0.05))
+    })
+  }
+  if (crestRect) {
+    images.push({
+      height: D(CREST),
+      id: hexId(`crest/${chapter.key}`),
+      image: `lemursaucepacket:textures/quests/${chapter.key}.png`,
+      rotation: D(0),
+      width: D(CREST),
+      x: D(mid(crestRect.x0, crestRect.x1)),
+      y: D(mid(crestRect.y0, crestRect.y1))
+    })
+  }
+  const cardId = hexId(`card/${chapter.key}`)
+  if (cardRect) {
+    images.push({
+      height: D(ch),
+      id: cardId,
+      image: 'lemursaucepacket:textures/quests/panel.png',
+      rotation: D(0),
+      text_h_align: 'start',
+      text_inset: CARD_INSET,
+      text_on_image: true,
+      text_shadow: true,
+      text_v_align: 'start',
+      width: D(cw),
+      x: D(mid(cardRect.x0, cardRect.x1)),
+      y: D(mid(cardRect.y0, cardRect.y1))
+    })
+  }
+  // FTB turns the two characters backslash + n into line breaks.
+  return { images, lang: card ? { [`image.${cardId}.title`]: card.lines.join('\\n') } : {} }
 }
 
 const files = new Map()
@@ -206,7 +379,12 @@ book.chapters.forEach((chapter, order) => {
   for (const q of chapter.quests) {
     for (const dep of q.after ?? []) if (!questIds.has(dep)) problems.push(`${where}/${q.key}: depends on unknown quest "${dep}"`)
   }
-  const positions = chapter.layout === 'grid' ? grid(chapter.quests) : layout(chapter.quests)
+  const deps = reduceDependencies(chapter.quests)
+  const positions = chapter.layout === 'grid' ? layoutGrid(chapter.quests) : layoutTree(chapter.quests, deps)
+  if (preview) {
+    const quality = layoutQuality(chapter.quests, deps, new Map(chapter.quests.map((q) => [q.key, q.pos ?? positions.get(q.key)])))
+    console.log(`  ${chapter.key}: ${quality.crossings} crossing(s)${quality.through.length ? `; ${quality.through.join(', ')}` : ''}`)
+  }
   const chapterLang = {}
   const quests = chapter.quests.map((q) => {
     const id = questIds.get(q.key)
@@ -222,7 +400,7 @@ book.chapters.forEach((chapter, order) => {
     if (q.subtitle) chapterLang[`quest.${id}.quest_subtitle`] = q.subtitle
     if (q.desc) chapterLang[`quest.${id}.quest_desc`] = q.desc
     return {
-      dependencies: (q.after ?? []).map((k) => questIds.get(k)).filter(Boolean),
+      dependencies: deps.get(q.key).map((k) => questIds.get(k)).filter(Boolean),
       icon,
       id,
       rewards: rewardData(q.reward ?? {}, `reward/${chapter.key}/${q.key}`, qWhere),
@@ -236,18 +414,9 @@ book.chapters.forEach((chapter, order) => {
   quests.forEach((q) => {
     if (q.dependencies.length === 0) delete q.dependencies
   })
-  // Chapter crest: the emblem art (art/process.mjs). FTB centres its first view on the quests only, so the
-  // crest goes right above the chapter's first column when that column is short, else to its left.
-  const images = [...(chapter.images ?? [])]
-  if (existsSync(path.join(emblemDir, `${chapter.key}.png`))) {
-    const at = chapter.quests.map((q) => q.pos ?? positions.get(q.key))
-    const minX = Math.min(...at.map(([x]) => x))
-    const firstColumn = at.filter(([x]) => x === minX).map(([, y]) => y)
-    const top = Math.min(...firstColumn)
-    const bottom = Math.max(...firstColumn)
-    const [x, y] = bottom - top <= 1.75 ? [minX, top - 2.3] : [minX - 2.3, (top + bottom) / 2]
-    images.push({ height: D(2.2), image: `lemursaucepacket:textures/quests/${chapter.key}.png`, rotation: D(0), width: D(2.2), x: D(x), y: D(y) })
-  }
+  const header = chapterHeader(chapter, new Map(chapter.quests.map((q) => [q.key, q.pos ?? positions.get(q.key)])), deps)
+  const images = [...(chapter.images ?? []), ...header.images]
+  Object.assign(chapterLang, header.lang)
   files.set(`chapters/${chapter.key}.snbt`, {
     default_hide_dependency_lines: false,
     default_quest_shape: '',
@@ -288,7 +457,11 @@ files.set('data.snbt', {
   show_lock_icons: true,
   version: 13
 })
-files.set('lang/en_us.snbt', lang)
+// FTB rich text (FTB Library's TextComponentParser) rejects a whole string when '&' is not followed by a
+// formatting code (so "Coin & Commerce" showed an error instead of the title), and '{' starts a
+// substitution; a backslash makes either literal.
+const ftbText = (v) => (Array.isArray(v) ? v.map(ftbText) : String(v).replace(/&(?![0-9a-fk-orz#])/g, '\\&').replace(/\{/g, '\\{'))
+files.set('lang/en_us.snbt', Object.fromEntries(Object.entries(lang).map(([k, v]) => [k, ftbText(v)])))
 
 const questCount = book.chapters.reduce((n, c) => n + c.quests.length, 0)
 if (problems.length > 0) {
@@ -305,3 +478,12 @@ for (const [rel, data] of files) {
   writeFileSync(file, snbt(data) + '\n')
 }
 console.log(`Wrote ${files.size} files to ${path.relative(root, outDir)}`)
+
+if (preview) {
+  const previewDir = path.join(root, 'quests', 'preview')
+  mkdirSync(previewDir, { recursive: true })
+  for (const chapter of book.chapters) {
+    writeFileSync(path.join(previewDir, `${chapter.key}.svg`), chapterSvg(files.get(`chapters/${chapter.key}.snbt`), lang, emblemDir))
+  }
+  console.log(`Previews in ${path.relative(root, previewDir)}`)
+}

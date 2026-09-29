@@ -12,7 +12,7 @@
 	chapter.34063B311996CA32.chapter_subtitle: ["Create Aeronautics: balloons, propellers and airships."]
 	chapter.34063B311996CA32.title: "Skyward"
 	chapter.3AD6951FB6CD0EF9.chapter_subtitle: ["The server economy runs on Numismatics."]
-	chapter.3AD6951FB6CD0EF9.title: "Coin & Commerce"
+	chapter.3AD6951FB6CD0EF9.title: "Coin \\& Commerce"
 	chapter.415B5EBB83A4F72E.chapter_subtitle: ["The End, and what you leave behind."]
 	chapter.415B5EBB83A4F72E.title: "Legacy"
 	chapter.415D393CE79F073C.chapter_subtitle: ["The Andesite Age: power, presses and belts."]
@@ -28,6 +28,19 @@
 	chapter_group.071A8EAF90A2B719.title: "The Ages"
 	chapter_group.7DAB9BE5981EE62A.title: "Field Guides"
 	file.0000000000000001.title: "LemurSaucePacket"
+	image.12E3C18622AFD831.title: " \\n&6&lBestiary\\n&r&7New faces, old foes.\\n \\n&r&fThe world has new creatures and\\n&r&ftougher bosses. Track down each one.\\n \\n&r&eRewards:\\n&r&fcoins for every first encounter, and\\n&r&ftips on what each creature does.\\n "
+	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
+	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7The server economy runs on Numismatics.\\n \\n&r&fQuest rewards are Numismatics coins. Trade them\\n&r&fwith other players or open a shop of your own.\\n \\n&r&eUnlocks:\\n&r&fpay-to-use machines, player shops that\\n&r&fsell while you're offline, and bank accounts.\\n "
+	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery.\\n \\n&r&eUnlocks:\\n&r&fflying bases, travel over any terrain,\\n&r&fand claims that protect your ship.\\n "
+	image.314F29A3CC992CB6.title: " \\n&6&lBackpack Workshop\\n&r&7Fair backpacks: every tier is\\n&r&7built from its age's Create parts.\\n \\n&r&fBackpacks here follow your Create progress:\\n&r&feach tier needs parts from the matching age.\\n \\n&r&eUnlocks:\\n&r&fmore room on the move, plus pickup,\\n&r&fmagnet, feeding and restock upgrades.\\n "
+	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fcoins for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
+	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
+	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
+	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, claim a safe base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fa protected claim, your first backpack,\\n&r&fand the wrench that starts Create.\\n "
+	image.5C7F14B75509F33F.title: " \\n&6&lIron Roads\\n&r&7Trains, stations and freight.\\n \\n&r&fLay track between bases, run trains on schedules,\\n&r&fand let parcels and stock links move your goods.\\n \\n&r&eUnlocks:\\n&r&ffast travel between towns, automated freight, and\\n&r&fordering items from anywhere on your network.\\n "
+	image.5D0CDDF39B344909.title: " \\n&6&lBanners of the Overworld\\n&r&7Outposts, forts and ruined\\n&r&7factories. Salvage what you can.\\n \\n&r&fPillagers hold the high ground and old Create ruins\\n&r&fdot the world. Fight, explore and bring the loot home.\\n \\n&r&eUnlocks:\\n&r&fraid and fort loot, salvaged Create parts,\\n&r&fand cheaper trades as Hero of the Village.\\n "
+	image.62A8A054B28677FD.title: " \\n&6&lCrown of Fire\\n&r&7The Nether, properly.\\n \\n&r&fBrave fortresses and bastions for blaze\\n&r&frods, netherite and the Wither's star.\\n \\n&r&eUnlocks:\\n&r&fsuperheated blaze burners for the hardest\\n&r&frecipes, netherite gear, and a beacon.\\n "
+	image.7367AF30B1A8A05A.title: " \\n&6&lLegacy\\n&r&7The End, and what you leave behind.\\n \\n&r&fFace the dragon, earn your wings, and\\n&r&fturn enchanting into an assembly line.\\n \\n&r&eUnlocks:\\n&r&felytra flight, automated enchanting, banking,\\n&r&fand a build the whole server will remember.\\n "
 	quest.003B74D7023418AD.quest_desc: ["Open the world map with &eM&r, right-click the chunks around your base and choose &eClaim&r.", "Claimed chunks are protected from other players, their contraptions and their airships.", "", "&7Press ' for the claims menu. Put friends in your party so they can build in your claim."]
 	quest.003B74D7023418AD.title: "Stake Your Claim"
 	quest.007E391695FCA435.quest_desc: ["Iron sheets and andesite casing."]
@@ -64,7 +77,7 @@
 	quest.0DD06477687A64EC.title: "Cooking Pot"
 	quest.0E23F4609946F60D.title: "Herd"
 	quest.0FF0AB4095D74045.title: "Feast"
-	quest.0FFC66FA887AB948.quest_desc: ["Slice & Dice adds a slicer and sprinklers; Central Kitchen lets Create machines run cooking pots and cutting boards."]
+	quest.0FFC66FA887AB948.quest_desc: ["Slice \\& Dice adds a slicer and sprinklers; Central Kitchen lets Create machines run cooking pots and cutting boards."]
 	quest.0FFC66FA887AB948.title: "Automated Kitchen"
 	quest.1162BBDAABFA380F.quest_desc: ["Deployers use items the way a player would: placing, using, applying."]
 	quest.1162BBDAABFA380F.title: "A Helping Hand"
@@ -178,7 +191,7 @@
 	quest.542A03B2E755A962.title: "Desert Temple"
 	quest.54FDF2788C384A54.quest_desc: ["Andesite is everywhere, and Create is built on it. Gather a stack."]
 	quest.54FDF2788C384A54.title: "The Grey Stone"
-	quest.5899B77905DC6F36.quest_desc: ["Crafts & Additions turns rotation into electricity and back. Handy for long distances and for charging tools."]
+	quest.5899B77905DC6F36.quest_desc: ["Crafts \\& Additions turns rotation into electricity and back. Handy for long distances and for charging tools."]
 	quest.5899B77905DC6F36.title: "Sparks"
 	quest.5B021E3E2BC589C2.quest_desc: ["You have the basics. Everything from here turns on rotation."]
 	quest.5B021E3E2BC589C2.quest_subtitle: "On to the First Rotation"

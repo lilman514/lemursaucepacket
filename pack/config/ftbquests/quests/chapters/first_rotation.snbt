@@ -9,12 +9,27 @@
 	id: "415D393CE79F073C"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "6C6DF2560A5F3700"
 			image: "lemursaucepacket:textures/quests/first_rotation.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 1.25d
+			y: -0.4d
+		}
+		{
+			height: 2.527659574468085d
+			id: "3C351D3EC5ADA9D5"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.919148936170213d
+			x: 5.5d
+			y: -0.4d
 		}
 	]
 	order_index: 1
@@ -48,7 +63,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 4.9d
 		}
 		{
 			dependencies: ["2C051675480F108F"]
@@ -95,8 +110,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 4.9d
 		}
 		{
 			dependencies: ["27D0E044CF8AFF5B"]
@@ -124,8 +139,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 4.1d
 		}
 		{
 			dependencies: ["27D0E044CF8AFF5B"]
@@ -153,11 +168,11 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 5.7d
 		}
 		{
-			dependencies: ["21A96E8D9C535CB0", "65DD30A5E415DC7A"]
+			dependencies: ["21A96E8D9C535CB0"]
 			icon: {
 				id: "create:mechanical_press"
 			}
@@ -182,8 +197,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -0.875d
+			x: 6.9d
+			y: 4.15d
 		}
 		{
 			dependencies: ["51653BAD0DD3C091"]
@@ -221,11 +236,11 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: -1.75d
+			x: 9.2d
+			y: 2.3d
 		}
 		{
-			dependencies: ["21A96E8D9C535CB0", "65DD30A5E415DC7A"]
+			dependencies: ["65DD30A5E415DC7A"]
 			icon: {
 				id: "create:millstone"
 			}
@@ -250,8 +265,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.875d
+			x: 6.9d
+			y: 5.75d
 		}
 		{
 			dependencies: ["51653BAD0DD3C091"]
@@ -279,8 +294,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 4.4d
 		}
 		{
 			dependencies: ["51653BAD0DD3C091"]
@@ -318,8 +333,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 1.75d
+			x: 9.2d
+			y: 6.0d
 		}
 		{
 			dependencies: ["672B8B2ACFEC0D47"]
@@ -347,8 +362,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: -1.75d
+			x: 11.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["672B8B2ACFEC0D47"]
@@ -400,8 +415,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: 0.0d
+			x: 11.5d
+			y: 3.7d
 		}
 		{
 			dependencies: ["672B8B2ACFEC0D47"]
@@ -430,8 +445,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: 1.75d
+			x: 11.5d
+			y: 2.1d
 		}
 		{
 			dependencies: ["7A8548237DEB6F6E"]
@@ -467,11 +482,11 @@
 					type: "item"
 				}
 			]
-			x: 13.5d
-			y: -0.875d
+			x: 13.8d
+			y: 2.1d
 		}
 		{
-			dependencies: ["696E2ECE05FA8FF3", "1E136B8C0850A837", "69EC1B773C2F1898", "65362757C5786E54", "0C4084AC43F252F4"]
+			dependencies: ["696E2ECE05FA8FF3", "1E136B8C0850A837", "65362757C5786E54"]
 			icon: {
 				id: "create:andesite_casing"
 			}
@@ -504,8 +519,8 @@
 					type: "item"
 				}
 			]
-			x: 13.5d
-			y: 0.875d
+			x: 13.8d
+			y: 4.9d
 		}
 	]
 }

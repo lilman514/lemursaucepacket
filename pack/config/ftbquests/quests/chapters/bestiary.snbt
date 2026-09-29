@@ -9,12 +9,27 @@
 	id: "2C2A22A66EC818AF"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "2B303F9F47FCC765"
 			image: "lemursaucepacket:textures/quests/bestiary.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 0.35d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "12E3C18622AFD831"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 4.978723404255319d
+			x: 3.75d
+			y: -2.0d
 		}
 	]
 	order_index: 10
@@ -63,7 +78,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -100,8 +115,8 @@
 					value: 1L
 				}
 			]
-			x: 2.0d
-			y: 0.0d
+			x: 2.1d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -126,8 +141,8 @@
 					value: 1L
 				}
 			]
-			x: 4.0d
-			y: 0.0d
+			x: 4.2d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -152,8 +167,8 @@
 					value: 1L
 				}
 			]
-			x: 6.0d
-			y: 0.0d
+			x: 6.3d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -183,8 +198,8 @@
 					value: 1L
 				}
 			]
-			x: 8.0d
-			y: 0.0d
+			x: 8.4d
+			y: 0.5d
 		}
 		{
 			icon: {
@@ -209,8 +224,8 @@
 					value: 2L
 				}
 			]
-			x: 0.0d
-			y: 1.75d
+			x: 2.1d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -233,8 +248,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 2.0d
-			y: 1.75d
+			x: 4.2d
+			y: 2.4d
 		}
 		{
 			icon: {
@@ -261,8 +276,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 1.75d
+			x: 6.3d
+			y: 2.4d
 		}
 	]
 }

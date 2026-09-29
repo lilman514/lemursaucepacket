@@ -9,12 +9,36 @@
 	id: "0E4B734290B837FE"
 	images: [
 		{
-			height: 2.2d
+			height: 0.1d
+			id: "5E01F0D6DCFBB156"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: 5.9d
+			y: -2.9d
+		}
+		{
+			height: 2.0d
+			id: "1ADECBBC73DCDAF9"
 			image: "lemursaucepacket:textures/quests/brass_age.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 2.45d
+			y: -1.6d
+		}
+		{
+			height: 2.527659574468085d
+			id: "3F530A450715CB7D"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.5574468085106385d
+			x: 6.95d
+			y: -1.6d
 		}
 	]
 	order_index: 2
@@ -44,7 +68,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 3.2d
 		}
 		{
 			dependencies: ["190D30D37AF325E2"]
@@ -80,8 +104,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: -0.875d
+			x: 2.3d
+			y: 4.0d
 		}
 		{
 			dependencies: ["190D30D37AF325E2"]
@@ -117,8 +141,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.875d
+			x: 2.3d
+			y: 2.4d
 		}
 		{
 			dependencies: ["0C55D5EB3C5BEC3B", "7071385904D2EB7A"]
@@ -147,8 +171,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 3.75d
 		}
 		{
 			dependencies: ["7071385904D2EB7A"]
@@ -177,8 +201,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 1.5d
 		}
 		{
 			dependencies: ["492848993E0A2588"]
@@ -207,8 +231,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -1.75d
+			x: 6.9d
+			y: 1.0d
 		}
 		{
 			dependencies: ["2F6270CB2985EC5F"]
@@ -237,11 +261,11 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.0d
+			x: 6.9d
+			y: 3.0d
 		}
 		{
-			dependencies: ["2F6270CB2985EC5F", "513C9025A06A10F1"]
+			dependencies: ["1162BBDAABFA380F"]
 			icon: {
 				id: "create:precision_mechanism"
 			}
@@ -267,11 +291,11 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: -3.5d
+			x: 11.5d
+			y: 0.7d
 		}
 		{
-			dependencies: ["3A35D7C2F436EB92"]
+			dependencies: ["3A35D7C2F436EB92", "513C9025A06A10F1"]
 			icon: {
 				id: "create:deployer"
 			}
@@ -296,8 +320,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: -1.75d
+			x: 9.2d
+			y: 0.5d
 		}
 		{
 			dependencies: ["067BD52C411EFB1F"]
@@ -325,8 +349,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: 0.0d
+			x: 13.8d
+			y: 0.9d
 		}
 		{
 			dependencies: ["3A35D7C2F436EB92"]
@@ -355,8 +379,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 3.7d
 		}
 		{
 			dependencies: ["3A35D7C2F436EB92"]
@@ -410,11 +434,11 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 1.75d
+			x: 9.2d
+			y: 5.3d
 		}
 		{
-			dependencies: ["0C55D5EB3C5BEC3B", "3A35D7C2F436EB92"]
+			dependencies: ["3A35D7C2F436EB92"]
 			icon: {
 				id: "create:steam_engine"
 			}
@@ -448,8 +472,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 3.5d
+			x: 9.2d
+			y: 2.1d
 		}
 		{
 			dependencies: ["2F6270CB2985EC5F"]
@@ -485,11 +509,11 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 1.75d
+			x: 6.9d
+			y: 4.7d
 		}
 		{
-			dependencies: ["067BD52C411EFB1F", "4D95E6F141C88AC9", "2D07A9F53C740CFC", "65143E2CCAD21FB2"]
+			dependencies: ["4D95E6F141C88AC9", "2D07A9F53C740CFC", "65143E2CCAD21FB2"]
 			icon: {
 				id: "create:rotation_speed_controller"
 			}
@@ -521,8 +545,8 @@
 					type: "item"
 				}
 			]
-			x: 13.5d
-			y: 0.0d
+			x: 16.1d
+			y: 2.1d
 		}
 	]
 }

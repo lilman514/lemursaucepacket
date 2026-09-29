@@ -9,12 +9,27 @@
 	id: "07CB50B8CDC2ECDE"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "6839CB26A4CFBE02"
 			image: "lemursaucepacket:textures/quests/iron_roads.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: 0.35d
+			y: -1.3d
+		}
+		{
+			height: 2.527659574468085d
+			id: "5C7F14B75509F33F"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.587234042553192d
+			x: 4.45d
+			y: -1.3d
 		}
 	]
 	order_index: 4
@@ -48,7 +63,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 3.55d
 		}
 		{
 			dependencies: ["280686E040BA87A1"]
@@ -76,8 +91,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 3.55d
 		}
 		{
 			dependencies: ["6EB7B8DFC89F71B5"]
@@ -114,8 +129,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 2.55d
 		}
 		{
 			dependencies: ["4418FF4F51A1595D"]
@@ -151,8 +166,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -1.75d
+			x: 6.9d
+			y: 1.45d
 		}
 		{
 			dependencies: ["4418FF4F51A1595D"]
@@ -189,8 +204,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.0d
+			x: 6.9d
+			y: 3.4d
 		}
 		{
 			dependencies: ["36CFDC0FABF55773"]
@@ -226,8 +241,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: -1.75d
+			x: 9.2d
+			y: 0.5d
 		}
 		{
 			dependencies: ["36CFDC0FABF55773"]
@@ -272,8 +287,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 2.1d
 		}
 		{
 			dependencies: ["6EB7B8DFC89F71B5"]
@@ -309,8 +324,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 4.65d
 		}
 		{
 			dependencies: ["0390E0DEB91A43F2"]
@@ -346,8 +361,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 1.75d
+			x: 6.9d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5D58AE189D939930"]
@@ -384,8 +399,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 1.75d
+			x: 9.2d
+			y: 5.1d
 		}
 		{
 			dependencies: ["46411B0858C1ED5B", "4804708C84965F94"]
@@ -416,8 +431,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.25d
-			y: 0.0d
+			x: 11.5d
+			y: 2.05d
 		}
 	]
 }

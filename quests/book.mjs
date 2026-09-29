@@ -1,5 +1,8 @@
 // The LemurSaucePacket quest book. Edit this file, then run `node quests/build.mjs`.
 //
+// Chapter fields: key, group, title, subtitle, icon, layout ('grid' for collections), and about / unlocks
+// (the info card at the top of the chapter: what the questline is for and what finishing it lets you do).
+//
 // Quest fields: key (stable id, never rename once players have progress), title, subtitle, desc
 // (array of lines; "" = blank line; & colour codes), after (quest keys in the same chapter),
 // tasks, reward { xp, coins (in spurs: 1 bevel = 8, 1 cog = 64), items }, icon, shape, size.
@@ -43,6 +46,8 @@ export default {
       group: 'ages',
       title: 'Landfall',
       subtitle: 'Find your feet in a world that has been reworked.',
+      about: "Start here. Learn the server's rules, claim a safe base, and gather the basics every other chapter builds on.",
+      unlocks: "a protected claim, your first backpack, and the wrench that starts Create.",
       icon: 'minecraft:oak_sapling',
       quests: [
         {
@@ -174,6 +179,8 @@ export default {
       group: 'ages',
       title: 'First Rotation',
       subtitle: 'The Andesite Age: power, presses and belts.',
+      about: "Turn water and wind into rotational power, then use it to press sheets, wash ores and move items on belts.",
+      unlocks: "automatic ore and sheet processing, moving contraptions, and infinite ore veins to mine.",
       icon: 'create:water_wheel',
       quests: [
         {
@@ -214,7 +221,7 @@ export default {
         {
           key: 'press',
           title: 'Under Pressure',
-          after: ['water_wheel', 'windmill'],
+          after: ['water_wheel'],
           desc: ['A mechanical press over a depot or belt flattens ingots into sheets. Sheets are the core of the Andesite Age.'],
           tasks: [{ item: 'create:mechanical_press' }],
           reward: { coins: 16 }
@@ -232,7 +239,7 @@ export default {
         {
           key: 'millstone',
           title: 'Grinding',
-          after: ['water_wheel', 'windmill'],
+          after: ['windmill'],
           desc: ['A millstone grinds ores and crops. Crushed ore gives extra nuggets when you wash it.'],
           tasks: [{ item: 'create:millstone' }],
           reward: { coins: 8 }
@@ -311,7 +318,7 @@ export default {
           key: 'andesite_age',
           title: '&aThe Andesite Age',
           subtitle: 'Casing up',
-          after: ['fan', 'belts', 'goggles', 'contraptions', 'millstone'],
+          after: ['fan', 'belts', 'contraptions'],
           shape: 'gear',
           size: 1.75,
           desc: ['Andesite casing is the mark of a finished early factory.'],
@@ -325,6 +332,8 @@ export default {
       group: 'ages',
       title: 'Brass Age',
       subtitle: 'Heat, mixing and precision.',
+      about: "Capture a blaze to heat your basins. Brass and precision mechanisms are the gateway to Create's smarter machines.",
+      unlocks: "mechanical arms and crafters, sorting with brass tunnels, steam engines and electricity.",
       icon: 'create:brass_ingot',
       quests: [
         {
@@ -388,7 +397,7 @@ export default {
         {
           key: 'precision',
           title: 'Precision Mechanism',
-          after: ['brass', 'tubes'],
+          after: ['deployer'],
           desc: [
             'Made by sequenced assembly: a golden sheet goes round a loop of deployers and a press, several times.',
             tip('JEI shows every step. Long recipes have pages: scroll to flip.')
@@ -399,7 +408,7 @@ export default {
         {
           key: 'deployer',
           title: 'A Helping Hand',
-          after: ['brass_casing'],
+          after: ['brass_casing', 'tubes'],
           desc: ['Deployers use items the way a player would: placing, using, applying.'],
           tasks: [{ item: 'create:deployer' }],
           reward: { coins: 16 }
@@ -435,7 +444,7 @@ export default {
         {
           key: 'steam',
           title: 'Full Steam',
-          after: ['blaze_burner', 'brass_casing'],
+          after: ['brass_casing'],
           desc: ['Fluid tanks over heated blaze burners, fed with water, drive steam engines: the strongest early power.'],
           tasks: [
             { item: 'create:steam_engine' },
@@ -460,7 +469,7 @@ export default {
           key: 'brass_age_done',
           title: '&aThe Brass Age',
           subtitle: 'Controlled speed',
-          after: ['precision', 'arm', 'crafters', 'steam'],
+          after: ['arm', 'crafters', 'steam'],
           shape: 'gear',
           size: 1.75,
           desc: ['A rotation speed controller lets one network run machines at exactly the speed you choose.'],
@@ -474,6 +483,8 @@ export default {
       group: 'ages',
       title: 'Banners of the Overworld',
       subtitle: 'Outposts, forts and ruined factories. Salvage what you can.',
+      about: "Pillagers hold the high ground and old Create ruins dot the world. Fight, explore and bring the loot home.",
+      unlocks: "raid and fort loot, salvaged Create parts, and cheaper trades as Hero of the Village.",
       icon: OMINOUS_BANNER,
       quests: [
         {
@@ -524,6 +535,7 @@ export default {
         {
           key: 'lost_station',
           title: 'The Lost Station',
+          after: ['quarry'],
           desc: ['Somewhere a train station was abandoned mid-schedule. Salvage its parts.'],
           tasks: [{ structure: 'create_structures_arise:createlosttrainstation' }],
           icon: 'create:track_station',
@@ -532,6 +544,7 @@ export default {
         {
           key: 'sky_pirates',
           title: 'Sky Pirates',
+          after: ['lost_station'],
           desc: ['Pillagers have learned to fly. Find one of their steam-powered airships.'],
           tasks: [{ structure: 'create_structures_arise:pillagersteampunkairship' }],
           icon: 'create:propeller',
@@ -540,6 +553,7 @@ export default {
         {
           key: 'quarry',
           title: 'Abandoned Quarry',
+          after: ['rustic_windmill'],
           tasks: [{ structure: 'create_ltab:quarry' }],
           icon: 'create:mechanical_drill',
           reward: { coins: 32 }
@@ -547,6 +561,7 @@ export default {
         {
           key: 'kings_castle',
           title: 'The King\'s Castle',
+          after: ['sky_pirates'],
           desc: ['A castle full of Create machinery. Explore it carefully.'],
           tasks: [{ structure: 'create_ltab:kings_castle' }],
           icon: 'minecraft:golden_helmet',
@@ -563,7 +578,7 @@ export default {
         {
           key: 'banners_done',
           title: '&aBanners of the Overworld',
-          after: ['hero', 'invoker', 'lost_station', 'sky_pirates'],
+          after: ['hero', 'invoker', 'kings_castle'],
           shape: 'gear',
           size: 1.5,
           desc: ['Raise your own banner over what you have taken back.'],
@@ -577,6 +592,8 @@ export default {
       group: 'ages',
       title: 'Iron Roads',
       subtitle: 'Trains, stations and freight.',
+      about: "Lay track between bases, run trains on schedules, and let parcels and stock links move your goods.",
+      unlocks: "fast travel between towns, automated freight, and ordering items from anywhere on your network.",
       icon: 'create:track',
       quests: [
         {
@@ -705,6 +722,8 @@ export default {
       group: 'ages',
       title: 'Skyward',
       subtitle: 'Create Aeronautics: balloons, propellers and airships.',
+      about: "Build ships that fly. Lift, thrust and steering all come from real Create machinery.",
+      unlocks: "flying bases, travel over any terrain, and claims that protect your ship.",
       icon: 'aeronautics:propeller_bearing',
       quests: [
         {
@@ -786,6 +805,8 @@ export default {
       group: 'ages',
       title: 'Crown of Fire',
       subtitle: 'The Nether, properly.',
+      about: "Brave fortresses and bastions for blaze rods, netherite and the Wither's star.",
+      unlocks: "superheated blaze burners for the hardest recipes, netherite gear, and a beacon.",
       icon: 'minecraft:blaze_powder',
       quests: [
         {
@@ -860,6 +881,8 @@ export default {
       group: 'ages',
       title: 'Legacy',
       subtitle: 'The End, and what you leave behind.',
+      about: "Face the dragon, earn your wings, and turn enchanting into an assembly line.",
+      unlocks: "elytra flight, automated enchanting, banking, and a build the whole server will remember.",
       icon: 'minecraft:dragon_egg',
       quests: [
         {
@@ -895,6 +918,7 @@ export default {
         {
           key: 'enchanting',
           title: 'Enchantment Industry',
+          after: ['crushing'],
           desc: ['Liquid experience, blaze enchanters and printers turn enchanting into a production line.'],
           tasks: [
             { item: 'create_enchantment_industry:blaze_enchanter' },
@@ -914,6 +938,7 @@ export default {
         {
           key: 'bank',
           title: 'Bank',
+          after: ['enchanting'],
           desc: ['Blaze bankers and bank terminals turn Numismatics coins into accounts. Every shop on the server can be paid by card.'],
           tasks: [
             { item: 'numismatics:bank_terminal' },
@@ -925,7 +950,7 @@ export default {
         {
           key: 'legacy',
           title: '&6Legacy',
-          after: ['elytra', 'enchanting', 'crushing', 'bank'],
+          after: ['elytra', 'bank'],
           shape: 'gear',
           size: 2,
           desc: ['Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.'],
@@ -942,6 +967,8 @@ export default {
       group: 'guides',
       title: 'Backpack Workshop',
       subtitle: 'Fair backpacks: every tier is built from its age\'s Create parts.',
+      about: "Backpacks here follow your Create progress: each tier needs parts from the matching age.",
+      unlocks: "more room on the move, plus pickup, magnet, feeding and restock upgrades.",
       icon: 'sophisticatedbackpacks:backpack',
       quests: [
         {
@@ -1055,6 +1082,8 @@ export default {
       group: 'guides',
       title: 'Homestead',
       subtitle: 'Farms, kitchens and the happy ghast.',
+      about: "Grow new crops, cook proper meals, breed animals and raise a happy ghast.",
+      unlocks: "food that lasts far longer, automated kitchens, and a friendly flying mount.",
       icon: 'farmersdelight:cooking_pot',
       quests: [
         {
@@ -1147,6 +1176,9 @@ export default {
       group: 'guides',
       title: 'Bestiary',
       subtitle: 'New faces, old foes.',
+      about: "The world has new creatures and tougher bosses. Track down each one.",
+      unlocksLabel: "Rewards",
+      unlocks: "coins for every first encounter, and tips on what each creature does.",
       icon: 'minecraft:creeper_head',
       layout: 'grid',
       quests: [
@@ -1232,6 +1264,9 @@ export default {
       group: 'guides',
       title: 'Atlas',
       subtitle: 'A world worth crossing by rail.',
+      about: "Terralith biomes and rebuilt structures are worth the trip. Visit each landmark once.",
+      unlocksLabel: "Rewards",
+      unlocks: "coins for exploring, and a head start on where to lay rail lines.",
       icon: 'minecraft:filled_map',
       layout: 'grid',
       quests: [
@@ -1257,6 +1292,8 @@ export default {
       group: 'guides',
       title: 'Coin & Commerce',
       subtitle: 'The server economy runs on Numismatics.',
+      about: "Quest rewards are Numismatics coins. Trade them with other players or open a shop of your own.",
+      unlocks: "pay-to-use machines, player shops that sell while you're offline, and bank accounts.",
       icon: 'numismatics:cog',
       quests: [
         {

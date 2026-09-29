@@ -149,6 +149,14 @@ Every item, mob, biome, structure and advancement id is checked against `quests/
 
 `book.mjs` is the source of truth. Edits made in-game with FTB's editor are overwritten the next time you publish a changed book. Rewards are Numismatics coins, which feed the player economy.
 
+Quest positions are not written by hand. Each chapter is laid out left to right in unlock order, with no crossing lines. A chapter's `about` and `unlocks` text becomes an info card next to its crest. The card is placed where it's readable as soon as the chapter opens. To look at every chapter without starting Minecraft:
+
+```bash
+node quests/build.mjs --preview
+```
+
+It writes one SVG per chapter to `quests/preview/` and reports any crossing lines.
+
 ## Art
 
 `art/generated/` holds the original images, made with Higgsfield (GPT Image 2.5):

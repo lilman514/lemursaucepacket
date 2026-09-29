@@ -9,12 +9,27 @@
 	id: "7B86A63090539256"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "5A2692DD75441F8F"
 			image: "lemursaucepacket:textures/quests/crown_of_fire.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -3.175d
+			width: 2.0d
+			x: 0.35d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "62A8A054B28677FD"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 5.770212765957447d
+			x: 4.1d
+			y: -2.0d
 		}
 	]
 	order_index: 6
@@ -44,7 +59,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.875d
+			y: 1.45d
 		}
 		{
 			dependencies: ["29458506A5E19077"]
@@ -73,8 +88,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: -1.75d
+			x: 2.3d
+			y: 0.55d
 		}
 		{
 			dependencies: ["29458506A5E19077"]
@@ -100,8 +115,8 @@
 					value: 10L
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 2.3d
 		}
 		{
 			icon: {
@@ -127,7 +142,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.875d
+			y: 4.2d
 		}
 		{
 			dependencies: ["476FF9B28A244051"]
@@ -152,8 +167,8 @@
 					type: "structure"
 				}
 			]
-			x: 2.25d
-			y: 1.75d
+			x: 2.3d
+			y: 4.2d
 		}
 		{
 			dependencies: ["4D3553C972D58E45"]
@@ -182,8 +197,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -1.75d
+			x: 4.6d
+			y: 0.5d
 		}
 		{
 			dependencies: ["62EBB75D9A0BBFDF"]
@@ -216,8 +231,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: 0.0d
+			x: 4.6d
+			y: 4.2d
 		}
 		{
 			dependencies: ["014760E2F2483D38"]
@@ -250,8 +265,8 @@
 					value: 1L
 				}
 			]
-			x: 4.5d
-			y: 1.75d
+			x: 4.6d
+			y: 2.35d
 		}
 	]
 }

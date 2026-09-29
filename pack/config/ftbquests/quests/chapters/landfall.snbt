@@ -9,12 +9,27 @@
 	id: "55ED1DC4BC96FEB5"
 	images: [
 		{
-			height: 2.2d
+			height: 2.0d
+			id: "49B525BC3291F1F6"
 			image: "lemursaucepacket:textures/quests/landfall.png"
 			rotation: 0.0d
-			width: 2.2d
-			x: 0.0d
-			y: -2.3d
+			width: 2.0d
+			x: -0.15d
+			y: -2.0d
+		}
+		{
+			height: 2.527659574468085d
+			id: "496C74611560E5DB"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.276595744680851d
+			x: 4.25d
+			y: -2.0d
 		}
 	]
 	order_index: 0
@@ -50,7 +65,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 2.4d
 		}
 		{
 			dependencies: ["5B6534D87A4D5267"]
@@ -71,8 +86,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 2.25d
-			y: -1.75d
+			x: 2.3d
+			y: 0.75d
 		}
 		{
 			dependencies: ["5B6534D87A4D5267"]
@@ -96,8 +111,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 2.25d
-			y: 0.0d
+			x: 2.3d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5B6534D87A4D5267"]
@@ -122,8 +137,8 @@
 					type: "item"
 				}
 			]
-			x: 2.25d
-			y: 1.75d
+			x: 2.3d
+			y: 2.4d
 		}
 		{
 			dependencies: ["79ABE8B917DF9C5F"]
@@ -149,8 +164,8 @@
 					type: "advancement"
 				}
 			]
-			x: 4.5d
-			y: -0.875d
+			x: 4.6d
+			y: 1.45d
 		}
 		{
 			dependencies: ["79ABE8B917DF9C5F"]
@@ -176,8 +191,8 @@
 					type: "advancement"
 				}
 			]
-			x: 4.5d
-			y: 0.875d
+			x: 4.6d
+			y: 3.45d
 		}
 		{
 			dependencies: ["3A55BEAD0546926A"]
@@ -206,8 +221,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: -1.75d
+			x: 6.9d
+			y: 0.5d
 		}
 		{
 			dependencies: ["3A55BEAD0546926A"]
@@ -236,8 +251,8 @@
 					type: "item"
 				}
 			]
-			x: 6.75d
-			y: 0.0d
+			x: 6.9d
+			y: 2.1d
 		}
 		{
 			dependencies: ["4C4715A2B03EDF3B"]
@@ -265,8 +280,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 0.0d
+			x: 9.2d
+			y: 0.55d
 		}
 		{
 			dependencies: ["66DF651D226A3355"]
@@ -291,11 +306,11 @@
 					type: "structure"
 				}
 			]
-			x: 6.75d
-			y: 1.75d
+			x: 6.9d
+			y: 3.7d
 		}
 		{
-			dependencies: ["4C4715A2B03EDF3B", "54FDF2788C384A54", "280E376FA3E64DCB"]
+			dependencies: ["54FDF2788C384A54", "280E376FA3E64DCB"]
 			icon: {
 				id: "create:wrench"
 			}
@@ -327,8 +342,8 @@
 					type: "item"
 				}
 			]
-			x: 11.25d
-			y: 0.0d
+			x: 11.5d
+			y: 1.3d
 		}
 	]
 }
