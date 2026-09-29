@@ -1,8 +1,13 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import type { AccountInfo, GameStatus, InitialState, LauncherFeed, ProgressInfo, ServerStatus, ToastMessage } from '../../../shared/types'
 import logoUrl from '../assets/logo.png'
+import filesIcon from '../assets/icons/files.png'
+import mapIcon from '../assets/icons/map.png'
+import newsIcon from '../assets/icons/news.png'
+import playIcon from '../assets/icons/play.png'
+import repairIcon from '../assets/icons/repair.png'
 import { errorMessage, formatBytes, formatDate, loaderName } from '../format'
-import { AlertIcon, ExternalIcon, FolderIcon, PlayIcon, StopIcon, UsersIcon, XIcon } from '../icons'
+import { ExternalIcon, StopIcon, UsersIcon, XIcon } from '../icons'
 
 interface Props {
   init: InitialState
@@ -87,7 +92,9 @@ export function HomePage({ init, feed, account, status, progress, onPlay, onSign
 
       <div className="home-grid">
         <section className="card">
-          <h3 className="card-title">News</h3>
+          <h3 className="card-title">
+            <img src={newsIcon} alt="" /> News
+          </h3>
           {feed?.news?.length ? (
             <ul className="news">
               {feed.news.map((n, i) => (
@@ -111,7 +118,9 @@ export function HomePage({ init, feed, account, status, progress, onPlay, onSign
         </section>
 
         <section className="card">
-          <h3 className="card-title">Server</h3>
+          <h3 className="card-title">
+            <img src={mapIcon} alt="" /> Server
+          </h3>
           <dl className="facts">
             <dt>Address</dt>
             <dd className="mono">{feed ? (feed.server.port ? `${feed.server.address}:${feed.server.port}` : feed.server.address) : '—'}</dd>
@@ -216,7 +225,7 @@ function PlayPanel({ account, status, progress, onPlay, onSignIn, meta, note }: 
   } else {
     button = (
       <button className="play-btn" onClick={() => onPlay()}>
-        <PlayIcon size={20} /> Play
+        <img src={playIcon} alt="" draggable={false} /> Play
       </button>
     )
   }
@@ -261,7 +270,7 @@ function CrashCard({ status, onToast }: { status: Extract<GameStatus, { state: '
   return (
     <section className="card crash-card">
       <div className="crash-head">
-        <AlertIcon size={20} />
+        <img src={repairIcon} alt="" width={28} height={28} />
         <div>
           <strong>Minecraft closed unexpectedly</strong>
           <div className="muted small">Exit code {status.code ?? 'unknown'}. If this keeps happening, send the crash report to an admin.</div>
@@ -269,10 +278,10 @@ function CrashCard({ status, onToast }: { status: Extract<GameStatus, { state: '
       </div>
       <div className="row">
         <button className="btn btn-sm" onClick={() => open_('crash-reports')}>
-          <FolderIcon size={15} /> Crash reports
+          <img src={filesIcon} alt="" /> Crash reports
         </button>
         <button className="btn btn-sm" onClick={() => open_('logs')}>
-          <FolderIcon size={15} /> Logs
+          <img src={filesIcon} alt="" /> Logs
         </button>
         <button className="btn btn-ghost btn-sm" onClick={() => setOpen(!open)}>
           {open ? 'Hide output' : 'Show last output'}

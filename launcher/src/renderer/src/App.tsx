@@ -5,7 +5,10 @@ import { Avatar } from './components/Avatar'
 import { Toasts, type Toast } from './components/Toasts'
 import { errorMessage } from './format'
 import mascotUrl from './assets/mascot.png'
-import { BoxIcon, CogMark, DownloadIcon, GearIcon, HomeIcon } from './icons'
+import homeIcon from './assets/icons/home.png'
+import modsIcon from './assets/icons/mods.png'
+import settingsIcon from './assets/icons/settings.png'
+import { CogMark, DownloadIcon } from './icons'
 import { HomePage } from './pages/Home'
 import { ModsPage } from './pages/Mods'
 import { SettingsPage } from './pages/Settings'
@@ -95,10 +98,10 @@ export function App(): ReactElement {
     )
   }
 
-  const nav: { id: Page; label: string; icon: ReactElement }[] = [
-    { id: 'home', label: 'Home', icon: <HomeIcon /> },
-    { id: 'mods', label: 'Mods', icon: <BoxIcon /> },
-    { id: 'settings', label: 'Settings', icon: <GearIcon /> }
+  const nav: { id: Page; label: string; icon: string }[] = [
+    { id: 'home', label: 'Home', icon: homeIcon },
+    { id: 'mods', label: 'Mods', icon: modsIcon },
+    { id: 'settings', label: 'Settings', icon: settingsIcon }
   ]
   const titles: Record<Page, string> = { home: feed?.name ?? init.brand.shortName, mods: 'Mods', settings: 'Settings' }
 
@@ -111,13 +114,13 @@ export function App(): ReactElement {
         <nav className="sidebar-nav">
           {nav.map((n) => (
             <button key={n.id} className={`nav-btn${page === n.id ? ' active' : ''}`} onClick={() => setPage(n.id)} title={n.label}>
-              {n.icon}
+              <img src={n.icon} alt="" draggable={false} />
               <span>{n.label}</span>
             </button>
           ))}
         </nav>
         <button className="nav-account" onClick={() => setAccountOpen(true)} title={account ? account.name : 'Sign in'}>
-          <Avatar account={account} size={34} />
+          <Avatar account={account} size={34} ring />
         </button>
       </aside>
 

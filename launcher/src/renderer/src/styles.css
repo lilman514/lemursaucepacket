@@ -1,24 +1,32 @@
+/*
+ * LemurSaucePacket launcher: the same brass-and-iron kit as the game's menus.
+ * Buttons, fields and card frames are the pack's own pixel sprites (assets/pixel, drawn at 3x with CSS
+ * border-image, exactly like Minecraft draws them at GUI scale 3); the hero and the play button use the
+ * hi-res frame kit (assets/ui). Colours come from art/pixel-kit.mjs.
+ */
+
 :root {
-  --bg: #0f1115;
-  --bg-raised: #14171d;
-  --bg-card: #181c24;
-  --bg-hover: #20252f;
-  --bg-input: #11141a;
-  --line: #262c38;
-  --line-strong: #323a4a;
-  --text: #e8eaef;
-  --text-2: #a6aebd;
-  --text-3: #6d7688;
-  --accent: #e9a940;
-  --accent-hi: #f6c46a;
+  --bg: #191715;
+  --bg-raised: #201d1b;
+  --bg-card: #2a2624;
+  --bg-hover: #3a3531;
+  --bg-input: #141210;
+  --line: #3a3430;
+  --line-strong: #87591a;
+  --text: #f1e4c2;
+  --text-2: #b9a98a;
+  --text-3: #7d7367;
+  --accent: #e0ac46;
+  --accent-hi: #f8d982;
   --accent-ink: #1d1407;
-  --accent-soft: rgba(233, 169, 64, 0.14);
-  --green: #3fcf8e;
-  --red: #f06363;
+  --accent-soft: rgba(224, 172, 70, 0.14);
+  --green: #8fc44a;
+  --red: #e8623a;
   --warn: #f2b441;
-  --radius: 14px;
-  --radius-sm: 9px;
+  --radius: 4px;
+  --radius-sm: 2px;
   --titlebar: 40px;
+  --px: 3px; /* one game pixel */
   color-scheme: dark;
   font-family: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
@@ -39,7 +47,8 @@ body,
 }
 
 body {
-  background: var(--bg);
+  background: var(--bg) url('./assets/pixel/plate-plain.png') 0 0 / 96px 96px repeat;
+  image-rendering: auto;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   user-select: none;
@@ -106,6 +115,74 @@ code,
   }
 }
 
+/* ---------------------------------------------------------------- pixel frames */
+
+/* A brass button drawn from the game's 200x20 sprite (border 4) at 3x. */
+.px-button,
+.btn,
+.play-btn-cancel,
+.icon-btn-lg,
+.segmented button.active {
+  border: var(--px) solid transparent;
+  border-width: calc(var(--px) * 4);
+  border-image: url('./assets/pixel/button.png') 4 fill / calc(var(--px) * 4) stretch;
+  image-rendering: pixelated;
+  border-radius: 0;
+  background: none;
+}
+
+.btn:hover:not(:disabled),
+.play-btn-cancel:hover:not(:disabled),
+.icon-btn-lg:hover:not(:disabled) {
+  border-image-source: url('./assets/pixel/button-hover.png');
+}
+
+.btn:disabled {
+  border-image-source: url('./assets/pixel/button-disabled.png');
+  opacity: 0.8;
+}
+
+/* A recessed text field from the 200x20 sprite (border 2). */
+.input {
+  border: calc(var(--px) * 2) solid transparent;
+  border-image: url('./assets/pixel/field.png') 2 fill / calc(var(--px) * 2) stretch;
+  image-rendering: pixelated;
+  border-radius: 0;
+  background: none;
+}
+
+.input:focus {
+  border-image-source: url('./assets/pixel/field-focus.png');
+}
+
+/* A framed plate from the 48x48 panel sprite (border 8). */
+.card,
+.modal,
+.toast,
+.account-card,
+.login-code,
+.callout,
+.log-tail {
+  border: calc(var(--px) * 8) solid transparent;
+  border-image: url('./assets/pixel/panel.png') 8 fill / calc(var(--px) * 8) stretch;
+  image-rendering: pixelated;
+  border-radius: 0;
+}
+
+/* Text and images inside frames should stay smooth. */
+.card > *,
+.modal > *,
+.toast > *,
+.mod-row > *,
+.account-card > *,
+.login-code > *,
+.callout > *,
+.btn > *,
+.input,
+.px-button > * {
+  image-rendering: auto;
+}
+
 /* ---------------------------------------------------------------- layout */
 
 .app {
@@ -119,9 +196,15 @@ code,
   flex-direction: column;
   align-items: center;
   padding: 10px 0 14px;
-  background: var(--bg-raised);
-  border-right: 1px solid var(--line);
+  background: var(--bg-raised) url('./assets/pixel/plate.png') 0 0 / 96px 96px repeat;
+  image-rendering: pixelated;
+  border-right: var(--px) solid var(--line-strong);
+  box-shadow: inset calc(var(--px) * -1) 0 0 #553710;
   -webkit-app-region: drag;
+}
+
+.sidebar > * {
+  image-rendering: auto;
 }
 
 .sidebar-mark {
@@ -134,7 +217,7 @@ code,
 .sidebar-mascot {
   width: 40px;
   height: 40px;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
 }
 
 .sidebar-nav {
@@ -145,14 +228,14 @@ code,
 }
 
 .nav-btn {
-  width: 58px;
-  padding: 9px 0 7px;
+  width: 60px;
+  padding: 7px 0 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   border: 0;
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: transparent;
   color: var(--text-3);
   font-size: 11px;
@@ -161,13 +244,26 @@ code,
     color 0.15s;
 }
 
+.nav-btn img {
+  width: 30px;
+  height: 30px;
+  filter: saturate(0.4) brightness(0.8);
+  transition: filter 0.15s;
+}
+
 .nav-btn:hover {
-  background: var(--bg-hover);
+  background: rgba(0, 0, 0, 0.35);
   color: var(--text);
 }
 
+.nav-btn:hover img,
+.nav-btn.active img {
+  filter: none;
+}
+
 .nav-btn.active {
-  background: var(--accent-soft);
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
   color: var(--accent-hi);
 }
 
@@ -175,20 +271,35 @@ code,
   margin-top: auto;
   padding: 3px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 50%;
   background: transparent;
   -webkit-app-region: no-drag;
 }
 
 .nav-account:hover {
-  background: var(--bg-hover);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* The player's head inside the brass ring from the frame kit. */
+.avatar-ring {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+}
+
+.avatar-ring::after {
+  content: '';
+  position: absolute;
+  inset: -22%;
+  background: url('./assets/ui/ring.png') center / 100% 100% no-repeat;
+  pointer-events: none;
 }
 
 .avatar {
   display: block;
-  border-radius: 8px;
+  border-radius: 50%;
   image-rendering: pixelated;
-  background: var(--bg-hover);
+  background: var(--bg-input);
 }
 
 .avatar-empty {
@@ -218,10 +329,12 @@ code,
 
 .titlebar h1 {
   margin: 0;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-2);
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #000;
 }
 
 .titlebar-spacer {
@@ -247,81 +360,88 @@ code,
 }
 
 .page::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
+}
+
+.page::-webkit-scrollbar-track {
+  background: var(--bg-input);
+  border-left: 1px solid #000;
 }
 
 .page::-webkit-scrollbar-thumb {
-  background: var(--line-strong);
-  border-radius: 10px;
-  border: 3px solid var(--bg);
+  background: linear-gradient(90deg, #f8d982 0 2px, #bd8a2e 2px 8px, #87591a 8px);
+  border: 1px solid #14110d;
 }
 
 /* ---------------------------------------------------------------- primitives */
 
 .card {
   background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 8px 10px 10px;
 }
 
 .card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0 0 12px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-3);
+  letter-spacing: 0.12em;
+  color: var(--accent-hi);
+  text-shadow: 0 1px 0 #000;
+}
+
+.card-title img {
+  width: 22px;
+  height: 22px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 36px;
-  padding: 0 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-sm);
-  background: var(--bg-hover);
-  font-weight: 500;
-  transition:
-    background 0.15s,
-    border-color 0.15s;
+  height: 38px;
+  padding: 0 10px;
+  color: var(--text);
+  font-weight: 600;
+  text-shadow: 0 1px 0 #000;
 }
 
 .btn:hover:not(:disabled) {
-  background: #29303c;
-  border-color: #3d4658;
+  color: #fff;
 }
 
 .btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
-  font-weight: 600;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background: var(--accent-hi);
-  border-color: var(--accent-hi);
+  color: var(--accent-hi);
 }
 
 .btn-ghost {
+  border-image: none;
+  border: 1px solid transparent;
   background: transparent;
-  border-color: transparent;
   color: var(--text-2);
+  font-weight: 500;
+  height: 34px;
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background: var(--bg-hover);
+  border-image: none;
+  background: rgba(0, 0, 0, 0.35);
+  border-color: var(--line);
   color: var(--text);
-  border-color: transparent;
 }
 
 .btn-sm {
-  height: 30px;
-  padding: 0 10px;
+  height: 32px;
+  padding: 0 8px;
   font-size: 13px;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
 }
 
 .icon-btn {
@@ -330,21 +450,20 @@ code,
   width: 30px;
   height: 30px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius);
   background: transparent;
   color: var(--text-2);
 }
 
 .icon-btn:hover:not(:disabled) {
-  background: var(--bg-hover);
+  background: rgba(0, 0, 0, 0.35);
   color: var(--text);
 }
 
 .icon-btn-lg {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  border: 1px solid var(--line-strong);
+  width: 54px;
+  height: 54px;
+  color: var(--text);
 }
 
 .link-btn {
@@ -368,9 +487,9 @@ code,
   gap: 6px;
   height: 24px;
   padding: 0 10px;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: var(--bg-hover);
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.35);
   color: var(--text-2);
   font-size: 12px;
   white-space: nowrap;
@@ -378,7 +497,7 @@ code,
 
 .chip-accent {
   background: var(--accent);
-  border-color: var(--accent);
+  border-color: var(--accent-hi);
   color: var(--accent-ink);
   font-weight: 600;
 }
@@ -393,9 +512,9 @@ code,
 .badge {
   display: inline-block;
   padding: 1px 7px;
-  border-radius: 6px;
-  background: var(--bg-hover);
-  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--line);
   color: var(--text-2);
   font-size: 11px;
   font-weight: 600;
@@ -403,22 +522,16 @@ code,
 
 .badge-accent {
   background: var(--accent-soft);
-  border-color: rgba(233, 169, 64, 0.35);
+  border-color: rgba(224, 172, 70, 0.45);
   color: var(--accent-hi);
 }
 
 .input {
   height: 36px;
-  padding: 0 11px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-sm);
-  background: var(--bg-input);
+  padding: 0 8px;
+  color: var(--text);
   outline: none;
   user-select: text;
-}
-
-.input:focus {
-  border-color: var(--accent);
 }
 
 .input:disabled {
@@ -427,6 +540,7 @@ code,
 
 select.input {
   padding-right: 28px;
+  background-color: var(--bg-input);
 }
 
 .input-num {
@@ -438,24 +552,21 @@ select.input {
 }
 
 .callout {
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line-strong);
+  padding: 4px 6px;
   background: var(--bg-input);
   color: var(--text-2);
   font-size: 13px;
 }
 
 .callout-error {
-  border-color: rgba(240, 99, 99, 0.45);
-  background: rgba(240, 99, 99, 0.08);
-  color: #ffb4b4;
+  background: rgba(232, 98, 58, 0.12);
+  color: #ffc0a8;
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 42px;
+  width: 46px;
   height: 24px;
   flex: none;
 }
@@ -471,8 +582,11 @@ select.input {
 .switch span {
   position: absolute;
   inset: 0;
-  border-radius: 999px;
-  background: var(--line-strong);
+  border-radius: 2px;
+  background: var(--bg-input);
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px #553710;
   transition: background 0.15s;
   pointer-events: none;
 }
@@ -484,18 +598,18 @@ select.input {
   left: 3px;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  background: #cfd5df;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #f8d982, #bd8a2e 55%, #87591a);
+  box-shadow: 0 0 0 1px #14110d;
   transition: transform 0.15s;
 }
 
 .switch input:checked + span {
-  background: var(--accent);
+  background: var(--amber, #5e4218);
 }
 
 .switch input:checked + span::after {
-  transform: translateX(18px);
-  background: #fff;
+  transform: translateX(22px);
 }
 
 .switch input:focus-visible + span {
@@ -512,17 +626,28 @@ select.input {
   max-width: 1100px;
 }
 
+/* The hero: key art inside the hi-res brass frame (border only; the plate in the sheet is not used). */
 .hero {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  padding: 30px 30px 24px;
-  /* Key art on the right, darkened on the left where the text sits. */
+  padding: 22px 26px 20px;
+  border: 52px solid transparent;
+  border-image: url('./assets/ui/frame.png') 160 / 52px round;
+  margin: -12px -14px 0;
   background:
-    linear-gradient(90deg, rgba(13, 15, 20, 0.94) 0%, rgba(13, 15, 20, 0.8) 38%, rgba(13, 15, 20, 0.25) 72%, rgba(13, 15, 20, 0.1) 100%),
+    linear-gradient(90deg, rgba(20, 17, 13, 0.94) 0%, rgba(20, 17, 13, 0.8) 38%, rgba(20, 17, 13, 0.25) 72%, rgba(20, 17, 13, 0.1) 100%),
     url('./assets/hero.jpg') 70% 55% / cover no-repeat,
-    #13161c;
+    #191715;
+  background-clip: padding-box;
+}
+
+.hero::before {
+  /* The frame's inner shadow. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
 }
 
 .hero-body {
@@ -548,13 +673,14 @@ select.input {
   height: 72px;
   width: auto;
   max-width: 100%;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
 }
 
 .hero-desc {
   margin: 10px 0 0;
   color: var(--text-2);
   font-size: 15px;
+  text-shadow: 0 1px 2px #000;
 }
 
 .pill {
@@ -563,8 +689,8 @@ select.input {
   gap: 7px;
   height: 28px;
   padding: 0 12px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
   border: 1px solid var(--line-strong);
   color: var(--text-2);
   font-size: 12.5px;
@@ -579,13 +705,13 @@ select.input {
 }
 
 .pill-online {
-  color: #bff3d9;
-  border-color: rgba(63, 207, 142, 0.35);
+  color: #d6f0b8;
+  border-color: rgba(143, 196, 74, 0.45);
 }
 
 .pill-online .dot {
   background: var(--green);
-  box-shadow: 0 0 0 3px rgba(63, 207, 142, 0.18);
+  box-shadow: 0 0 0 3px rgba(143, 196, 74, 0.2);
 }
 
 .pill-offline .dot {
@@ -601,36 +727,40 @@ select.input {
   margin-top: 26px;
 }
 
+/* The big button: the hi-res brass plate, lit amber on hover. */
 .play-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-width: 190px;
-  height: 56px;
-  padding: 0 28px;
-  border: 0;
-  border-radius: 14px;
-  background: linear-gradient(180deg, var(--accent-hi), var(--accent));
-  color: var(--accent-ink);
-  font-size: 18px;
+  min-width: 200px;
+  height: 64px;
+  padding: 0 22px;
+  border: 22px solid transparent;
+  border-image: url('./assets/ui/button.png') 88 fill / 22px stretch;
+  background: none;
+  color: var(--accent-hi);
+  font-size: 19px;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  box-shadow:
-    0 8px 24px rgba(233, 169, 64, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 #000;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
   transition:
     transform 0.12s,
-    box-shadow 0.12s,
     filter 0.12s;
 }
 
+.play-btn img {
+  width: 26px;
+  height: 26px;
+}
+
 .play-btn:hover:not(:disabled) {
+  border-image-source: url('./assets/ui/button-hover.png');
+  color: #fff;
   transform: translateY(-1px);
-  filter: brightness(1.05);
-  box-shadow:
-    0 12px 30px rgba(233, 169, 64, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  filter: drop-shadow(0 10px 22px rgba(224, 172, 70, 0.35));
 }
 
 .play-btn:active:not(:disabled) {
@@ -639,21 +769,21 @@ select.input {
 
 .play-btn:disabled {
   opacity: 1;
-  background: var(--bg-hover);
   color: var(--text-2);
-  box-shadow: none;
+  filter: saturate(0.5) brightness(0.85);
 }
 
 .play-btn-cancel {
-  background: var(--bg-hover);
+  height: 54px;
   color: var(--text);
-  box-shadow: none;
-  border: 1px solid var(--line-strong);
+  font-size: 16px;
+  filter: none;
 }
 
 .play-running {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .play-info {
@@ -664,6 +794,7 @@ select.input {
 .play-meta {
   color: var(--text-2);
   font-size: 13px;
+  text-shadow: 0 1px 2px #000;
 }
 
 .play-note {
@@ -671,6 +802,7 @@ select.input {
   color: var(--accent-hi);
   font-size: 13px;
   font-weight: 500;
+  text-shadow: 0 1px 2px #000;
 }
 
 .progress-block {
@@ -684,20 +816,22 @@ select.input {
   margin-bottom: 7px;
   font-weight: 500;
   font-size: 13.5px;
+  text-shadow: 0 1px 2px #000;
 }
 
+/* The progress bar is the recessed slider track from the game, filled with brass. */
 .progress {
   position: relative;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.35);
+  height: 20px;
+  border: calc(var(--px) * 4) solid transparent;
+  border-image: url('./assets/pixel/slider.png') 4 fill / calc(var(--px) * 4) stretch;
+  image-rendering: pixelated;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-hi));
+  background: linear-gradient(180deg, #f8d982, #e0ac46 40%, #bd8a2e 70%, #87591a);
   transition: width 0.25s ease-out;
 }
 
@@ -720,6 +854,7 @@ select.input {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 2px #000;
 }
 
 .home-grid {
@@ -795,8 +930,6 @@ select.input {
 }
 
 .crash-card {
-  border-color: rgba(240, 99, 99, 0.4);
-  background: linear-gradient(180deg, rgba(240, 99, 99, 0.07), var(--bg-card));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -806,7 +939,7 @@ select.input {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  color: #ffb4b4;
+  color: #ffb4a0;
 }
 
 .crash-head strong {
@@ -817,13 +950,11 @@ select.input {
   margin: 0;
   max-height: 260px;
   overflow: auto;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  background: #0a0c0f;
-  border: 1px solid var(--line);
+  padding: 4px 6px;
+  background: #0d0b0a;
   font-family: 'Cascadia Code', Consolas, monospace;
   font-size: 11.5px;
-  color: #c5cbd6;
+  color: #c9c0ae;
   white-space: pre-wrap;
   user-select: text;
 }
@@ -852,6 +983,7 @@ select.input {
   position: absolute;
   left: 11px;
   top: 10px;
+  z-index: 1;
 }
 
 .search .input {
@@ -861,17 +993,18 @@ select.input {
 
 .segmented {
   display: inline-flex;
+  gap: 4px;
   padding: 3px;
-  border-radius: 10px;
-  background: var(--bg-input);
-  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--line);
 }
 
 .segmented button {
-  height: 28px;
+  height: 30px;
   padding: 0 12px;
   border: 0;
-  border-radius: 7px;
+  border-radius: 2px;
   background: transparent;
   color: var(--text-2);
   font-size: 13px;
@@ -879,8 +1012,8 @@ select.input {
 }
 
 .segmented button.active {
-  background: var(--bg-hover);
-  color: var(--text);
+  color: var(--accent-hi);
+  text-shadow: 0 1px 0 #000;
 }
 
 .mods-hint {
@@ -893,17 +1026,20 @@ select.input {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
+/* Mod rows: plain plates with a thin brass rim, so the list doesn't turn into a wall of frames. */
 .mod-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px 16px;
-  border-radius: 12px;
+  padding: 10px 14px;
+  min-height: 52px;
   background: var(--bg-card);
-  border: 1px solid var(--line);
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px #553710;
   transition: opacity 0.15s;
 }
 
@@ -925,12 +1061,14 @@ select.input {
 }
 
 .mod-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   flex: none;
-  border-radius: 10px;
   object-fit: cover;
-  background: var(--bg-hover);
+  background: var(--bg-input);
+  box-shadow:
+    0 0 0 1px #14110d,
+    0 0 0 2px #87591a;
 }
 
 .mod-icon-empty {
@@ -1059,18 +1197,16 @@ select.input {
   z-index: 50;
   display: grid;
   place-items: center;
-  background: rgba(5, 6, 9, 0.62);
+  background: rgba(8, 6, 5, 0.7);
   backdrop-filter: blur(3px);
   animation: fade-in 0.15s ease-out;
 }
 
 .modal {
   width: min(460px, calc(100vw - 40px));
-  padding: 20px 22px 22px;
-  border-radius: 16px;
+  padding: 6px 8px 8px;
   background: var(--bg-card);
-  border: 1px solid var(--line-strong);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1084,7 +1220,12 @@ select.input {
 
 .modal-head h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-hi);
+  text-shadow: 0 1px 0 #000;
 }
 
 .modal p {
@@ -1105,11 +1246,9 @@ select.input {
 .account-card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px;
-  border-radius: 12px;
+  gap: 18px;
+  padding: 4px 10px;
   background: var(--bg-input);
-  border: 1px solid var(--line);
 }
 
 .account-name {
@@ -1118,9 +1257,7 @@ select.input {
 }
 
 .login-code {
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid var(--line-strong);
+  padding: 4px 8px;
   background: var(--bg-input);
   display: flex;
   flex-direction: column;
@@ -1148,7 +1285,6 @@ select.input {
 
 .dev-box {
   padding: 12px;
-  border-radius: 12px;
   border: 1px dashed rgba(242, 180, 65, 0.4);
   display: flex;
   flex-direction: column;
@@ -1182,11 +1318,9 @@ select.input {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 11px 8px 11px 14px;
-  border-radius: 12px;
-  background: #1f2430;
-  border: 1px solid var(--line-strong);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  padding: 0 0 0 4px;
+  background: var(--bg-card);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
   animation: toast-in 0.2s ease-out;
   font-size: 13.5px;
 }
@@ -1204,10 +1338,6 @@ select.input {
 
 .toast-warn > svg {
   color: var(--warn);
-}
-
-.toast-error {
-  border-color: rgba(240, 99, 99, 0.5);
 }
 
 .toast-error > svg {

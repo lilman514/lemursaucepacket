@@ -5,7 +5,7 @@ Why the pack is built the way it is. The README covers how to run it.
 ## Pillars
 
 1. **Create is the spine.** Every stage of progress runs through Create machines. Other mods either feed Create (ore veins, crops, coins) or give it a reason to exist (structures to reach, a server economy, airships to fly). There are no tech mods that compete with Create (no Mekanism, no AE2) and no magic mods.
-2. **It still feels like Minecraft.** Vanilla UI, the vanilla crafting grid, vanilla mobs and biomes. Mods enhance these rather than replace them. New mobs, biomes and structures look like things Mojang could have added.
+2. **It still feels like Minecraft.** The vanilla crafting grid, vanilla mobs and biomes, vanilla screens (re-skinned in one brass-and-iron kit, not replaced). Mods enhance these rather than replace them. New mobs, biomes and structures look like things Mojang could have added.
 3. **Exploration has a purpose.** Structures are built from Create blocks and hold Create parts. Infinite ore veins are something to find and claim. The Atlas and Banners quest chapters pay for going out and looking.
 4. **A fair SMP.** PvP is on, so the rules protect builders:
    - land and airship claims;
@@ -86,11 +86,11 @@ Every 10 levels sets off fireworks and lists what the new level unlocks. Crits a
 
 **Dungeons.** When Dungeons Arise adds 30+ large dungeons. Its loot includes three enchantments of its own. Lootr gives every player their own copy of each loot chest, so nobody gets beaten to one.
 
-**The ESC menu is a hub.**
-- **Left column:** Map, Quests, Missions, Claims.
-- **Right column:** Skills (Project MMO's glossary of what each level unlocks), Backpack, Team, Settings.
-- Every vanilla and mod button stays where it was.
-- It's a FancyMenu layout (`config/fancymenu/customization/lemursaucepacket_pause.txt`). Its buttons press the matching keys, so the pack sets a key layout without clashes:
+**The ESC menu is a hub** (see "Look and feel" below for how it's drawn).
+- **Adventure panel:** Map, Quests, Missions, Claims, and where you are (coordinates, time, biome).
+- **Player panel:** your character, Skills (Project MMO's glossary of what each level unlocks), Backpack, Team, Voice.
+- **Game Menu panel:** every vanilla and mod button, moved in but never removed; "Options" reads "Settings".
+- It's a FancyMenu layout (`config/fancymenu/customization/lemursaucepacket_pause.txt`, written by `art/hub.mjs`). Its buttons press the matching keys, so the pack sets a key layout without clashes:
   - `options.txt` for new installs;
   - `kubejs/client_scripts/keybinds.js`, which moves keys once on existing installs, only where a key is still on a default that clashes.
 - Keys:
@@ -103,6 +103,18 @@ Every 10 levels sets off fireworks and lists what the new level unlocks. Crits a
   | B | Backpack |
   | ; | Team |
   | ' | Claims |
+  | V | Voice chat |
+
+## Look and feel: one kit everywhere
+
+Everything a player looks at outside the world — the launcher, the loading screen, the title screen, the ESC menu, the options screens, the quest book, the skills screen — is built from one kit, so it reads as one designer's work:
+
+- **Materials:** dark riveted iron plates, polished brass bands with corner rivets, parchment text, amber for hover. The palette is sampled from the logo (`art/pixel-kit.mjs` has the hex values).
+- **Widgets:** the pack replaces the vanilla button, slider, tab, text field, checkbox and scrollbar sprites and the menu backgrounds with pixel-drawn brass versions (a resource pack in `kubejs/assets`). Anything that uses vanilla widgets — the options screens, FTB Quests, most mod screens — inherits the look. The launcher draws its buttons, fields and cards from the same sprites at 3×.
+- **Icons:** the ESC menu, the launcher pages and the 13 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
+- **The ESC menu** is a riveted board with three recessed panels: *Adventure* (Map, Quests, Missions, Claims, plus where you are), *Game Menu* (the vanilla pause buttons, moved into the panel; "Options" is renamed "Settings") and *Player* (your character, Skills, Backpack, Team, Voice). Buttons added by other mods land in free slots or a tray under Disconnect, so nothing disappears. The vanilla "Game Menu" title is blanked through a language override.
+
+Not skinned, on purpose: inventories and machine GUIs (Create's own look is part of the pack's identity), Brassworks Missions, Xaero's map screens and JEI. They sit inside the brass-framed screens rather than fighting them.
 
 ## Balance
 

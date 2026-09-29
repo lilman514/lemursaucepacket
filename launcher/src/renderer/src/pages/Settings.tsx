@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState, type ReactElement, type ReactNode } from 'react'
 import type { AfterLaunch, FolderKind, InitialState, LauncherFeed, Settings, ToastMessage, UpdateStatus } from '../../../shared/types'
+import accountIcon from '../assets/icons/account.png'
+import filesIcon from '../assets/icons/files.png'
+import homeIcon from '../assets/icons/home.png'
+import repairIcon from '../assets/icons/repair.png'
+import settingsIcon from '../assets/icons/settings.png'
+import skillsIcon from '../assets/icons/skills.png'
 import { errorMessage, formatMemory } from '../format'
-import { FolderIcon, WrenchIcon } from '../icons'
+
+/** A card heading with one of the pack's icons. */
+function Title({ icon, children }: { icon: string; children: ReactNode }): ReactElement {
+  return (
+    <h3 className="card-title">
+      <img src={icon} alt="" /> {children}
+    </h3>
+  )
+}
 
 interface Props {
   init: InitialState
@@ -68,7 +82,7 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
   return (
     <div className="settings">
       <section className="card">
-        <h3 className="card-title">Performance</h3>
+        <Title icon={skillsIcon}>Performance</Title>
         <Row
           label="Memory"
           hint={
@@ -87,7 +101,7 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
       </section>
 
       <section className="card">
-        <h3 className="card-title">Game window</h3>
+        <Title icon={settingsIcon}>Game window</Title>
         <Row label="Fullscreen">
           <Switch label="Fullscreen" checked={settings.fullscreen} onChange={(v) => void onSave({ fullscreen: v })} />
         </Row>
@@ -101,7 +115,7 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
       </section>
 
       <section className="card">
-        <h3 className="card-title">Launcher</h3>
+        <Title icon={homeIcon}>Launcher</Title>
         <Row label="Join the server automatically" hint="Skips the title screen and connects straight to the SMP.">
           <Switch label="Auto-join" checked={settings.autoJoin} onChange={(v) => void onSave({ autoJoin: v })} />
         </Row>
@@ -115,7 +129,7 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
       </section>
 
       <section className="card">
-        <h3 className="card-title">Advanced</h3>
+        <Title icon={repairIcon}>Advanced</Title>
         <Row label="Java executable" hint="Leave empty to use the Java runtime the launcher installs (recommended).">
           <input className="input input-wide mono" placeholder="Managed automatically" value={javaPath} onChange={(e) => setJavaPath(e.target.value)} spellCheck={false} />
         </Row>
@@ -125,30 +139,30 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
       </section>
 
       <section className="card">
-        <h3 className="card-title">Files & repair</h3>
+        <Title icon={filesIcon}>Files & repair</Title>
         <div className="row wrap">
           <button className="btn" onClick={() => open('game')}>
-            <FolderIcon size={16} /> Game folder
+            <img src={filesIcon} alt="" /> Game folder
           </button>
           <button className="btn" onClick={() => open('screenshots')}>
-            <FolderIcon size={16} /> Screenshots
+            <img src={filesIcon} alt="" /> Screenshots
           </button>
           <button className="btn" onClick={() => open('logs')}>
-            <FolderIcon size={16} /> Logs
+            <img src={filesIcon} alt="" /> Logs
           </button>
           <button className="btn" onClick={() => open('data')}>
-            <FolderIcon size={16} /> Launcher data
+            <img src={filesIcon} alt="" /> Launcher data
           </button>
         </div>
         <Row label="Repair installation" hint="Re-checks every file (Minecraft, Java, NeoForge and mods) and re-downloads anything damaged, then launches.">
           <button className="btn" disabled={busy} onClick={onRepair}>
-            <WrenchIcon size={16} /> Repair & play
+            <img src={repairIcon} alt="" /> Repair & play
           </button>
         </Row>
       </section>
 
       <section className="card about">
-        <h3 className="card-title">About</h3>
+        <Title icon={accountIcon}>About</Title>
         <dl className="facts">
           <dt>Launcher</dt>
           <dd>

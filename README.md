@@ -179,21 +179,25 @@ The level curve is cached per player, so restart the server after changing it.
 `art/generated/` holds the original images, made with Higgsfield (GPT Image 2.5):
 - two key-art scenes;
 - the logo;
-- a 4×4 emblem sheet with the 13 chapter crests, the lemur mascot, a book and tools.
+- a 4×4 emblem sheet with the 13 chapter crests, the lemur mascot, a book and tools;
+- a 4×4 sheet of ESC-menu and launcher icons, and a 4×4 sheet of skill icons;
+- a hi-res brass frame, plaque, button and ring for the launcher.
 
 `art/process.mjs` turns them into every file the pack, launcher and server use:
-- title and loading backgrounds and the logo (`pack/config/fancymenu/assets/`);
-- quest crests (`pack/kubejs/assets/lemursaucepacket/textures/quests/`);
+- title and loading backgrounds, the logo and the ESC menu's icons (`pack/config/fancymenu/assets/`);
+- quest crests and skill icons (`pack/kubejs/assets/lemursaucepacket/textures/`);
 - `pack/server-icon.png`;
-- the launcher's icon, hero image and mascot.
+- the launcher's icon, hero image, mascot, icons and frame kit.
 
-Replace an image and re-run:
+It also *draws* the in-game widget kit (`art/pixel-kit.mjs`): brass-and-iron buttons, sliders, tabs, text fields, checkboxes, scrollbars, menu backgrounds and the ESC menu board, pixel by pixel in the palette sampled from the logo. They are written over the vanilla GUI sprites through the pack's resource pack (`pack/kubejs/assets/minecraft/textures/gui/`), so every screen built from vanilla widgets (options, FTB Quests, most mod screens) uses them without per-mod work. The launcher draws its buttons, fields and cards from the same sprites with CSS `border-image` at 3×, which is exactly how the game draws them at GUI scale 3.
+
+Replace an image, or change a colour in `pixel-kit.mjs`, and re-run:
 
 ```bash
 cd art && npm install && npm run process
 ```
 
-The title screen and loading screen layouts are FancyMenu files in `pack/config/fancymenu/customization/`. You can also edit them in-game: press Ctrl+Alt+C on the title screen to show FancyMenu's editor bar (it's hidden for players).
+The ESC menu's geometry lives in `art/hub.mjs`; the same script writes the FancyMenu layout (`lemursaucepacket_pause.txt`), the board texture and `pack/config/lemursaucepacket/hub_layout.json`, which the client script that moves the vanilla pause buttons into the board reads (`pack/kubejs/startup_scripts/pause_hub.js`). The title screen and loading screen layouts are hand-written FancyMenu files in `pack/config/fancymenu/customization/`. You can also edit them in-game: press Ctrl+Alt+C on the title screen to show FancyMenu's editor bar (it's hidden for players). The quest book's colours and background are `pack/kubejs/assets/ftbquests/ftb_quests_theme.txt`.
 
 ## Publishing
 

@@ -38,27 +38,30 @@ const RUNESCAPE_LEVELS = (() => {
   return out
 })()
 
+// Skill icons are the pack's own art (art/generated/skill-icons.png, cut by art/process.mjs into
+// pack/kubejs/assets/lemursaucepacket/textures/skills), in the same style as the quest emblems.
+const SKILL_ICON_SIZE = 64
 const SKILLS = {
   combat: {
-    attack: ['Attack', 0x9b1c1c, 'minecraft:textures/item/iron_sword.png'],
-    strength: ['Strength', 0x0f7a3a, 'minecraft:textures/mob_effect/strength.png'],
-    defence: ['Defence', 0x3b5ba5, 'minecraft:textures/item/iron_chestplate.png'],
-    ranged: ['Ranged', 0x6b8e23, 'minecraft:textures/item/bow.png'],
-    hitpoints: ['Hitpoints', 0xc0392b, 'minecraft:textures/mob_effect/regeneration.png']
+    attack: ['Attack', 0x9b1c1c],
+    strength: ['Strength', 0x0f7a3a],
+    defence: ['Defence', 0x3b5ba5],
+    ranged: ['Ranged', 0x6b8e23],
+    hitpoints: ['Hitpoints', 0xc0392b]
   },
   gathering: {
-    mining: ['Mining', 0x7f8c8d, 'minecraft:textures/item/iron_pickaxe.png'],
-    woodcutting: ['Woodcutting', 0x8b5a2b, 'minecraft:textures/item/iron_axe.png'],
-    farming: ['Farming', 0x2e9e4f, 'minecraft:textures/item/wheat.png'],
-    fishing: ['Fishing', 0x3498db, 'minecraft:textures/item/fishing_rod.png']
+    mining: ['Mining', 0x7f8c8d],
+    woodcutting: ['Woodcutting', 0x8b5a2b],
+    farming: ['Farming', 0x2e9e4f],
+    fishing: ['Fishing', 0x3498db]
   },
   artisan: {
-    cooking: ['Cooking', 0xd35400, 'minecraft:textures/item/cooked_beef.png'],
-    smithing: ['Smithing', 0x95a5a6, 'minecraft:textures/item/iron_ingot.png'],
-    crafting: ['Crafting', 0xa0522d, 'minecraft:textures/item/stick.png']
+    cooking: ['Cooking', 0xd35400],
+    smithing: ['Smithing', 0x95a5a6],
+    crafting: ['Crafting', 0xa0522d]
   },
   support: {
-    agility: ['Agility', 0x1abc9c, 'minecraft:textures/item/feather.png']
+    agility: ['Agility', 0x1abc9c]
   }
 }
 const TYPE_NAMES = { combat: 'Combat', gathering: 'Gathering', artisan: 'Artisan', support: 'Support' }
@@ -178,7 +181,7 @@ const allSkills = Object.values(SKILLS).flatMap((group) => Object.keys(group))
 const skillsJson = {
   skills: Object.fromEntries(
     Object.values(SKILLS).flatMap((group) =>
-      Object.entries(group).map(([id, [, color, icon]]) => [id, { color, icon, iconSize: 16, maxLevel: 99 }])
+      Object.entries(group).map(([id, [, color]]) => [id, { color, icon: `lemursaucepacket:textures/skills/${id}.png`, iconSize: SKILL_ICON_SIZE, maxLevel: 99 }])
     )
   ),
   types: Object.fromEntries(Object.entries(SKILLS).map(([type, group], order) => [type, { order, color: Object.values(group)[0][1], skills: Object.keys(group) }]))

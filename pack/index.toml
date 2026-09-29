@@ -5,6 +5,86 @@ file = "config/brassworksmissions-server.toml"
 hash = "ca6ceb882bcc50e62253db61156068fe8fb3d0fa90a2d5968d0f32344486bb4d"
 
 [[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/account.png"
+hash = "be230f110cde6d648b59966e1f837e23290375f0d9f9e4fd14fb08eb2fa96695"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/advancements.png"
+hash = "6568d0e5a6f46abf5b8b3e410d791de755bd5f274278829e700884b6057568ac"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/backpack.png"
+hash = "1cf694765a9ce57eb1602695a75b601c1f88f4b0a48132df919dffd9d8fcdd07"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/claims.png"
+hash = "4fc22e2a001c5e14b1c19f6669dfe1076fdfdf6b884f2c8a5411372883b0a2e0"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/disconnect.png"
+hash = "db9fa83654a50f0658a6ffa1846e320b38b8437766fdd977643d5d07b1c78154"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/files.png"
+hash = "08452d692acbe6b61b923abf3e8e828cabc5abdffecb9cd4d2f537f2a839454d"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/home.png"
+hash = "604035a1b0f5cfdfe87ca92c38eec90822722572b4f328f21828ff0e921b2168"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/link.png"
+hash = "cf7c5e210971e6f4ad02d582889fcac138e1fdc38071cf817628c7298514509c"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/map.png"
+hash = "0c323eb1fc24a6a05bbcc84a2be5ad370c19993dcf58d512330092b2cddbd46c"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/missions.png"
+hash = "74a45c109649a83f61a3917db18e459050e9996fc7d7867f36c791db4d717ed7"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/mods.png"
+hash = "0f44748dddfb7145e57d3a062d307514e9f17ec3ea9e3a6500dbc42a8d8fc556"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/news.png"
+hash = "e9e8c966f4e299929a0fcbeb1f74160663dfa0095a15a4bc06978588f914dbbc"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/play.png"
+hash = "a7ada9b4f63468699fc4a180fc9fcc296b8b4d33549027fe98fbb29154d17ad2"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/quests.png"
+hash = "d57edb795f461b6e803fc395bfe233e0a4b6c6ac158dc08b36302fa399682fdb"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/repair.png"
+hash = "b92281cfbf0ca1aa4b241c44350f7c7ab77773fbe2e07a4ac757bb673ce4c318"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/settings.png"
+hash = "90cce743da006e7469c65f06d35bfb4f6f1f9a4e787da56d7f2c7b071ee1f4ef"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/skills.png"
+hash = "9c92dcac63a5746071113e3dd50d49a2e52f8e2b92bd56d35bff083885a1c2c5"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/statistics.png"
+hash = "e2496d02975fb53eb51903e758953197f554e872f8be2f3df2a19bf4fc51cdfa"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/team.png"
+hash = "aa1800727e0fe5e33854d6f2d1d7bcbd71f47c38dd69e80205cf6991dd860e6d"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/icons/voice.png"
+hash = "9f56bc52bcb2ae7dcb72852c653c5870cbac17a81f19e559dfbc41c184f37bdd"
+
+[[files]]
 file = "config/fancymenu/assets/lemursaucepacket/loading.jpg"
 hash = "1c7457de126a4871f905537f8c434546d622eef23ae5d40777799bf50cb7ba0c"
 
@@ -17,20 +97,28 @@ file = "config/fancymenu/assets/lemursaucepacket/title.jpg"
 hash = "3fcf5cfc35044e2c633391725dfb22dcda57477e49d9fd7bb14cdc01a0d6c494"
 
 [[files]]
+file = "config/fancymenu/assets/lemursaucepacket/ui/board.png"
+hash = "3e16522cc5c00beab0746de79f1503a39daa2a4aa8d396b878113fadc7c0e8e3"
+
+[[files]]
+file = "config/fancymenu/assets/lemursaucepacket/ui/panel.png"
+hash = "662a697526738a4d86b5a474f90ae862209260c89c027d132d1c44b87b0a0c82"
+
+[[files]]
 file = "config/fancymenu/customizablemenus.txt"
 hash = "b0f5169a67538e0a89046c5c65afa9aa643dd3b0ffeef279f52d50eaad9d6975"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_loading.txt"
-hash = "9d066db56bcca6e0f1898693b9d184de71ee0fe99f2d27f2c24cfb11d318ec8d"
+hash = "89c7757dc3aacc26acb364469a56259ab50b81fb93ee2844d5a57a2b6d87be7a"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_pause.txt"
-hash = "ca96c038cb1bdc1cb262bf424ef7715fc3104fa2eebbdd5bbf680565f3fd580f"
+hash = "dc6881ad911613635d91180b5e4d4d75bf4d2a43509084fd21d28b27f6084b99"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_title.txt"
-hash = "0e12d6ca6e2e2fc1eed8999187baec89ccac470482f46dc954b27222e9ad06bb"
+hash = "c9ce1ddbc779e4264f2bcee065fa9441228f1ae6d69906ffa34792f3780f3665"
 
 [[files]]
 file = "config/fancymenu/options.txt"
@@ -105,6 +193,10 @@ file = "config/iris.properties"
 hash = "b8cb849503ba21289ccefe2f9e222a1a55c45ea5d72dd8bad3b94d2234dd3dfd"
 
 [[files]]
+file = "config/lemursaucepacket/hub_layout.json"
+hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
+
+[[files]]
 file = "config/lithium.properties"
 hash = "10b0af2fb4c92dbf9ef6d79c107b82aa34840cc0df37e1d8a09a3d2a78d10c65"
 
@@ -135,6 +227,14 @@ hash = "796e044d55578d6cbfe4481b4ab1a86938c59e809375d2bc998cbbfaa41e2b29"
 [[files]]
 file = "config/xaero/world-map/server_profiles/default.cfg"
 hash = "ef6cd61db7b1c94a4ab896693a3482240e41b27d93a3a0d95d1b22918d0630ba"
+
+[[files]]
+file = "kubejs/assets/ftbquests/ftb_quests_theme.txt"
+hash = "2945bc982607d8e19379aa2c0cab0a477c5974d4301d03e43aae1d5068319af2"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/gui/plate.png"
+hash = "6f63d9d56191c88d8d7a9f5782298470cb26141ee8dafe66b81746871c3fc4a1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/quests/atlas.png"
@@ -209,8 +309,272 @@ file = "kubejs/assets/lemursaucepacket/textures/quests/tools.png"
 hash = "017131f3d44a5ebfeff64d7c4743a6a555565d44482b5b64615aa8f33654e4a9"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/agility.png"
+hash = "f1d23ebe7c866e0095e2726fd770dfc5085609303dce512c10350f6e4289f7a2"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/attack.png"
+hash = "ebd98c062527c145c2da462598db38a7d92990f37c52a842f5b2c7f60a0fe1f7"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/cooking.png"
+hash = "84d2708dadf044d320dff344458317d71ca3d2cbc05223d2359e73ba86fdc59c"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/crafting.png"
+hash = "e3933d360500c25510a9c694412f4caea11dd245a7725e436c112e050fabde11"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/defence.png"
+hash = "abf17da7be82fea6f674b1cd01a74a7e3cfc76e5c08bc6b96fd58a516ebc7507"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/experience.png"
+hash = "0e372d1a1ab7deace1ad392160d04d5b3fd060feddb6a962dae8028c93d909a8"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/farming.png"
+hash = "e883a231602f3c7f59503aedf54a10ef831223ce06f374a0d63e7cdbff6afea2"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/fishing.png"
+hash = "58a8ef7bd98be9dbf84b1a90f5c571babe6f1c78c7480784d1f5d3c00335cf7d"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/hitpoints.png"
+hash = "494a541f0aadd5f07936e82adeee7c849196b5898877b425135540a6d2f9b2cf"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/level_up.png"
+hash = "9b7b2ee3ec105c5d90bb3cf8acf1b977c9e21ae4e7ff42c3f4c54684c18ec5a6"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/mining.png"
+hash = "d38861b909a3e5f43af4100be5ec15d11ab1ce1d5ec92c12157d29dc97a0ac79"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/ranged.png"
+hash = "7501969ec9833fecc20ac4c4058f782af59afc2b12ff4d5e445a8331840777e1"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/smithing.png"
+hash = "ef61a6f3a958b366c17c4ec476fa62c768a13be082ede042c0affce332b2629a"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/strength.png"
+hash = "66c79431aed5dfa86d79e0a036ad059fb0633205a7a3fec6ff50482d3e18e08b"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/total_level.png"
+hash = "933d8749903d5f84c4c3ed49395c42c3697939fe0507d67eea2037e84a4491cd"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/woodcutting.png"
+hash = "be94d10c7cbf45e4e229ac50e44158318b8644cb03874451b539a81d531c37ef"
+
+[[files]]
+file = "kubejs/assets/minecraft/lang/en_us.json"
+hash = "b22ca9b0e424a959b85995c106b57a29483a7e6143d0cc353a21ac7768e12305"
+
+[[files]]
+file = "kubejs/assets/minecraft/texts/splashes.txt"
+hash = "4faafe34bf6eb85556e31a4c00555b780945511a36af295abe96a99e41763101"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/footer_separator.png"
+hash = "e7f752cc700ee0c807807ba66380131747e97165980eff2a40078b41ee1a048f"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/header_separator.png"
+hash = "e7f752cc700ee0c807807ba66380131747e97165980eff2a40078b41ee1a048f"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/inworld_footer_separator.png"
+hash = "89ef3fc26f1e874546ff67ca980e6ca93d3438cdaf816203593b458e7f516eaa"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/inworld_header_separator.png"
+hash = "89ef3fc26f1e874546ff67ca980e6ca93d3438cdaf816203593b458e7f516eaa"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/inworld_menu_background.png"
+hash = "2b3d0417fd8a73fcd1f2166b6c8d073a494fd361d35297710d1163678f61c4af"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/inworld_menu_list_background.png"
+hash = "c831c331807459e8d9e327e1dc8bd3cfc1ace7d9effa1b16d8a76b84d1e138ac"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/menu_background.png"
+hash = "6f63d9d56191c88d8d7a9f5782298470cb26141ee8dafe66b81746871c3fc4a1"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/menu_list_background.png"
+hash = "097302b79eb502b5c1bfba111b2a5f2ddd9cd71df0d89728c899e0a9023fd2f1"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button.png"
+hash = "f643dfdde835ae292b39d2308df76656f54f71a88e607e45784543773e4bae6c"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button.png.mcmeta"
+hash = "f9287a449f595137d48c3cb493eec46fd3b831d8c038a3ccb4a85ce0a3544151"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button_disabled.png"
+hash = "d3df00ac541ee1d1ecf934910c339fbf01ff4cd5f966be06ef5d82cf63741ac8"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button_disabled.png.mcmeta"
+hash = "f9287a449f595137d48c3cb493eec46fd3b831d8c038a3ccb4a85ce0a3544151"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
+hash = "f8c1a5202dbc1be581c794da18ea6d7031841fb85b7c13149deb374e559e358c"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/button_highlighted.png.mcmeta"
+hash = "f9287a449f595137d48c3cb493eec46fd3b831d8c038a3ccb4a85ce0a3544151"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/checkbox.png"
+hash = "aa524ee16f31e9e3cbe3d00c48b0b87c8daabb616e1ff050039977062f4030b5"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/checkbox_highlighted.png"
+hash = "61f04d32d7b5419193b1285ac47346b8c31e33a2c22de8058d74c0fc095532cd"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/checkbox_selected.png"
+hash = "c123003ac8f1051fccc2895def1aad4265f5cd5fb352fd8ae54ab8fb1de279f8"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/checkbox_selected_highlighted.png"
+hash = "d7e970b63eb18723ca15d27da693e3554b84957d2c3e154b540bcee427b31203"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/scroller.png"
+hash = "417ce254c7a070044a4af6d008c700d5d55a4f45fb713ef834157e9e75af0f42"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/scroller.png.mcmeta"
+hash = "f6a77d3537ff679b691e3d4b7bab0a1e076f71d1dec602bd65fa16a505092c53"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/scroller_background.png"
+hash = "c52d00da2a046687ade57c41fc7998490cdee0f512bbb460ebdcc69d66c6109f"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/scroller_background.png.mcmeta"
+hash = "f6a77d3537ff679b691e3d4b7bab0a1e076f71d1dec602bd65fa16a505092c53"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider.png"
+hash = "243428eb02842b802f693c1d5c4d27cf8fb058ac5057e6cb4a582e42359a533c"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider.png.mcmeta"
+hash = "f9287a449f595137d48c3cb493eec46fd3b831d8c038a3ccb4a85ce0a3544151"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle.png"
+hash = "d49d13c25c8a5da205571e147b582a465d264504c4d7aaaa28a7e1a49a4e88f4"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle.png.mcmeta"
+hash = "9ecf324f340ac117631939372d93ec59043f22d6caec7b7ea7c140b4d8d77c22"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle_highlighted.png"
+hash = "44a4391a2c9ac0bf939a1fe0e2511b2ac0dd18f2580db5a7c7ff412a92f3ee29"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_handle_highlighted.png.mcmeta"
+hash = "9ecf324f340ac117631939372d93ec59043f22d6caec7b7ea7c140b4d8d77c22"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_highlighted.png"
+hash = "42f682a3c2950ab46d0313839497658ba3be954d8731eb552105604459458925"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/slider_highlighted.png.mcmeta"
+hash = "f9287a449f595137d48c3cb493eec46fd3b831d8c038a3ccb4a85ce0a3544151"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab.png"
+hash = "87bce0fbfa7c5555e86a5d251139d9a3b479ced4b49b00f05f508c2fec12d428"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab.png.mcmeta"
+hash = "e64f92329b45d82936e7574d1adc5944fd66ca20c94da8911d5da61bc06c46e4"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_highlighted.png"
+hash = "a337c29fef6eff2b7cb5db8fa2957b46ba4766d19fc46f0b85819a0f065dc3ff"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_highlighted.png.mcmeta"
+hash = "e64f92329b45d82936e7574d1adc5944fd66ca20c94da8911d5da61bc06c46e4"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_selected.png"
+hash = "eed5fac99fbaafbb6df88d8bdd60cee4202ab9cfb83259ee78edc941c46efe73"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_selected.png.mcmeta"
+hash = "e64f92329b45d82936e7574d1adc5944fd66ca20c94da8911d5da61bc06c46e4"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_selected_highlighted.png"
+hash = "de05ab2236250af8c8b486bcb052960eab6fc57c4b073124876efcc6d2bc1477"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/tab_selected_highlighted.png.mcmeta"
+hash = "e64f92329b45d82936e7574d1adc5944fd66ca20c94da8911d5da61bc06c46e4"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field.png"
+hash = "99d7d55563943c31a9256999ef4c8b2e82a88bb214717bc7fb414eb3f1956243"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field.png.mcmeta"
+hash = "5a404cf8cce870f162f9b08039a1f66b624b3c81bb71efcbb6db0250901fa55a"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field_highlighted.png"
+hash = "df91c55e00de1f5982540e498d242cbf841fcf2733035054ab53a6e362b60dcf"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/sprites/widget/text_field_highlighted.png.mcmeta"
+hash = "5a404cf8cce870f162f9b08039a1f66b624b3c81bb71efcbb6db0250901fa55a"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/gui/tab_header_background.png"
+hash = "b058450ef6ce1bbc831feec405fa2103dbc2b097c2fb02c1cc23dfca96f1e234"
+
+[[files]]
 file = "kubejs/assets/pmmo/lang/en_us.json"
 hash = "dbcaeb75879e0dba9c1614de555683d00e992b6a2288d412217ad26572db21ee"
+
+[[files]]
+file = "kubejs/assets/pmmo/textures/gui/player_stats.png"
+hash = "27867b1dc2fa75ae8be4a36947ef8665bf24d3109e223f8e4a4c24912d0730e0"
+
+[[files]]
+file = "kubejs/assets/pmmo/textures/gui/sprites/pmmo_button.png"
+hash = "6be5c16f87ccd6cbcbc9cbfded3b803d8ceea8edaf068e8c9688b9e1f3cfccff"
+
+[[files]]
+file = "kubejs/assets/pmmo/textures/gui/sprites/pmmo_button_highlighted.png"
+hash = "176988ff41ad97b89c38c1dd60a90fc4db755d9c6c48727405bc1e807fc82560"
+
+[[files]]
+file = "kubejs/assets/pmmo/textures/gui/sprites/stat_background.png"
+hash = "517fe9d726cb99ae6bf5d3a14b4bafdbb9e7b9b1c54144c6a9f851b0494c6c9f"
+
+[[files]]
+file = "kubejs/assets/pmmo/textures/gui/sprites/stat_background_highlighted.png"
+hash = "7205a580e96b186fab9719ebc5981c7f45284e26fff21f400ef6ceb3277a272d"
 
 [[files]]
 file = "kubejs/client_scripts/keybinds.js"
@@ -538,7 +902,7 @@ hash = "22e62837a7e60199c572e4a89459f29044afb288bf9a7b57ee9a309236878c5f"
 
 [[files]]
 file = "kubejs/data/pmmo/config/skills.json"
-hash = "a70c3dc886d0ec0a8c22f708f35cdd6b8fc4646d2b6df3bd5ac3e2a92851dae5"
+hash = "3a96eb4e0d4fd0cf30bc198e12aa9cba5c1dac2db04907d2a8c578bad3e3cbf2"
 
 [[files]]
 file = "kubejs/server_scripts/backpacks.js"
@@ -555,6 +919,10 @@ hash = "ce892832f540dd4bc3469a1ecef1eac3b5dd7fa79a9aac0ea2e6b358cda0eedf"
 [[files]]
 file = "kubejs/server_scripts/skills.js"
 hash = "d10483274c86df1fcf0d67bb6c08b42df927a6626242c09e698eaea26e3b1f73"
+
+[[files]]
+file = "kubejs/startup_scripts/pause_hub.js"
+hash = "6f25eef3ebe438cb4e6f8b980de628b6abaf33d1c204182528dbba3f1bc35939"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -809,6 +1177,11 @@ metafile = true
 [[files]]
 file = "mods/fallingleavesforge.pw.toml"
 hash = "f2a80e0b2cfc960912234edb79fd2f15ba489e481f49b98818dc1ff7860d887d"
+metafile = true
+
+[[files]]
+file = "mods/fancy-entity-renderer.pw.toml"
+hash = "caf827968238a015dbf96f2ec7aa845b1f55dfd47b65580eed245fcc0d262457"
 metafile = true
 
 [[files]]

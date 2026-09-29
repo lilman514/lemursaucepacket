@@ -39,6 +39,46 @@ element {
   stay_on_screen = true
 }
 
+element {
+  element_type = image
+  instance_identifier = lemursaucepacket_title_panel
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/ui/panel.png
+  nine_slice_texture = true
+  nine_slice_texture_border_x = 8
+  nine_slice_texture_border_y = 8
+  anchor_point = element
+  anchor_point_element = mc_titlescreen_singleplayer_button
+  x = -32
+  y = -12
+  width = 264
+  height = 116
+  stay_on_screen = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_singleplayer_button
+  anchor_point = element
+  anchor_point_element = mc_titlescreen_options_button
+  x = 0
+  y = -72
+  width = 200
+  height = 20
+  stay_on_screen = true
+}
+
+vanilla_button {
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_multiplayer_button
+  anchor_point = element
+  anchor_point_element = mc_titlescreen_singleplayer_button
+  x = 0
+  y = 24
+  width = 200
+  height = 20
+  stay_on_screen = true
+}
+
 vanilla_button {
   element_type = vanilla_button
   instance_identifier = minecraft_logo_widget
