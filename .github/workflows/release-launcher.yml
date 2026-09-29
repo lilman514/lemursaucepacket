@@ -29,6 +29,16 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      # electron-builder uploads files in parallel and each upload tries to create a missing release,
+      # which races (422 "already_exists"). Creating it first means they all just upload into it.
+      - name: Create the release for this version
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          gh release view "v$version" > /dev/null 2>&1 || gh release create "v$version" --target "$GITHUB_SHA" --title "LemurSaucePacket $version" \
+            --notes "Download LemurSaucePacket-Setup-$version.exe below and run it. If Windows says it protected your PC, click More info, then Run anyway. Installed launchers update themselves."
       - run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
