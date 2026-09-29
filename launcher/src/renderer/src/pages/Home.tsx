@@ -214,7 +214,7 @@ function PlayPanel({ account, status, progress, onPlay, onSignIn, meta, note }: 
     )
   } else {
     button = (
-      <button className="play-btn" onClick={onPlay}>
+      <button className="play-btn" onClick={() => onPlay()}>
         <PlayIcon size={20} /> Play
       </button>
     )

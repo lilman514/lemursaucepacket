@@ -1,6 +1,6 @@
 {
   "name": "smp-launcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Custom Minecraft launcher for a modded SMP: signs players in, keeps the modpack in sync, and launches straight into the server.",
   "main": "./out/main/index.js",
   "author": "SMP Admin",

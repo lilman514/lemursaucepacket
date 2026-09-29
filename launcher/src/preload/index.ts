@@ -26,7 +26,8 @@ const api: LauncherApi = {
   cancelLogin: () => call('account:cancelLogin'),
   loginOffline: (name) => call('account:loginOffline', name),
   logout: () => call('account:logout'),
-  play: (options) => call('game:play', options),
+  // Only plain data can cross IPC ("An object could not be cloned" otherwise), so rebuild the options.
+  play: (options) => call('game:play', { repair: options?.repair === true }),
   cancel: () => call('game:cancel'),
   stopGame: () => call('game:stop'),
   openFolder: (kind) => call('shell:openFolder', kind),

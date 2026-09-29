@@ -10,9 +10,12 @@ import { initLog, log } from './log'
 import { AccountStore, SettingsStore, systemMemoryMB } from './store'
 import { initUpdater, type Updater } from './updater'
 
-// Keep all data under %APPDATA%/<name> regardless of how the exe is named.
+// Keep all data under %APPDATA%/<name> regardless of how the exe is named. Dev builds can point
+// LAUNCHER_DATA_DIR elsewhere to run a separate copy next to an installed launcher (whose
+// single-instance lock would otherwise close the dev copy straight away).
 app.setName(brand.name)
-app.setPath('userData', path.join(app.getPath('appData'), brand.name))
+const devDataDir = isDev ? process.env.LAUNCHER_DATA_DIR : undefined
+app.setPath('userData', devDataDir ? path.resolve(devDataDir) : path.join(app.getPath('appData'), brand.name))
 if (process.platform === 'win32') app.setAppUserModelId(brand.appId)
 
 let mainWindow: BrowserWindow | null = null

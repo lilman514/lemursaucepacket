@@ -61,13 +61,14 @@ export function App(): ReactElement {
   }, [pushToast])
 
   const play = useCallback(
-    async (repair = false) => {
+    // Only a literal true means repair: an onClick handler would otherwise pass its event object here.
+    async (repair?: boolean) => {
       if (!account) {
         setAccountOpen(true)
         return
       }
       try {
-        await api.play({ repair })
+        await api.play({ repair: repair === true })
       } catch (e) {
         pushToast({ kind: 'error', text: errorMessage(e) })
       }
