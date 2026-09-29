@@ -1,0 +1,44 @@
+{
+  "name": "Getting started",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:oak_door",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You need a Minecraft: Java Edition account, Windows 10 or 11 (64-bit) and about 8 GB of RAM to spare."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "1. Install the launcher",
+      "text": "Download the installer from the server's $(l:https://github.com/lilman514/lemursaucepacket/releases/latest)releases page$(/l) ($(#e0ac46)LemurSaucePacket-Setup-x.y.z.exe$()) and run it. It installs for your user only - no admin rights - and puts a shortcut on the desktop and in the Start menu."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "2. Sign in",
+      "text": "Press $(bold)Play$(). The launcher asks you to sign in with the Microsoft account that owns Minecraft. Your browser opens Microsoft's page; enter the code the launcher shows if it asks for one. Your password never goes through the launcher."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "3. Play",
+      "text": "Press $(bold)Play$() again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/title-screen.png"
+      ],
+      "title": "The title screen",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "If you'd rather see the title screen first, turn off $(italic)Join the server automatically$() on the launcher's Settings page."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What next",
+      "text": "$(li)Press $(bold)ESC$() in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)Open the quest book (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins.$(br)$(li)You start with the $(bold)LemurSaucePacket Guide$(), this wiki as a book. ESC → Guide (or $(#e0ac46)/guide$()) opens it anywhere; a book and a brass nugget craft another.$(br)$(li)Read $(l:lemursaucepacket:world)The world and its rules$(/l) before you build anything you'd miss."
+    }
+  ]
+}

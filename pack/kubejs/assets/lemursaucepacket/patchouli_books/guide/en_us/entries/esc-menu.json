@@ -1,0 +1,35 @@
+{
+  "name": "The ESC menu",
+  "category": "lemursaucepacket:wiki",
+  "icon": "create:brass_casing",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Pressing ESC opens a riveted board with three panels."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/esc-menu.png"
+      ],
+      "title": "The ESC menu",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Adventure (left)",
+      "text": "$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Map$() - Xaero's world map - M$(br)$(bold)Quests$() - The quest book - -$(br)$(bold)Missions$() - This week's Brassworks missions - H$(br)$(bold)Waypoints$() - Your Xaero waypoints - U$(br)$(bold)Capes$() - Your wardrobe: the $(l:lemursaucepacket:capes)capes$(/l) you've earned - $(#e0ac46)/capes$()$(br2)Between the buttons: your coordinates, the time and the biome you're in."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Game menu (middle)",
+      "text": "Every normal pause-menu button: Back to Game, Settings, Mods, Advancements, Statistics, Player Reporting, Give Feedback, Report Bugs, Disconnect. Buttons other mods add appear in the free slots or in the small tray under Disconnect."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Player (right)",
+      "text": "Your character as you look right now, then:$(br2)$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Skills$() - Your inventory, whose skills panel lists every skill and level - E$(br)$(bold)Backpack$() - The backpack you're wearing - B$(br)$(bold)Team$() - FTB Teams: invite friends, share quest progress - ;$(br)$(bold)Voice$() - Voice chat settings, groups and your microphone - V$(br)$(bold)Guide$() - This wiki as an in-game book - $(#e0ac46)/guide$()"
+    }
+  ]
+}

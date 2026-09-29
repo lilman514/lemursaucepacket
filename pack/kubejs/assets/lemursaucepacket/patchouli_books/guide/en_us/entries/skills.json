@@ -1,0 +1,47 @@
+{
+  "name": "Skills",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Thirteen RuneScape-style skills, levels 1–99, with the RuneScape XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger; some items need a level before you can use them."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/skills-panel.png"
+      ],
+      "title": "The skills panel in the inventory",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Open your inventory ($(bold)E$(), or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The skills",
+      "text": "$(#b9a98a)Group - Skill - Trained by - Each level gives$()$(br)$(bold)Combat$() - Attack - Hitting things - +0.04 melee damage, +0.4 % bow damage; wields weapons$(br)$(bold)Combat$() - Strength - Hitting things - +0.3 % melee critical chance (1.5× damage)$(br)$(bold)Combat$() - Defence - Being hit while wearing armour - +0.02 armour; wears armour$(br)$(bold)Combat$() - Ranged - Arrows, tridents, rockets - +0.3 % ranged critical chance$(br)$(bold)Combat$() - Hitpoints - Any fight (slowly) - +0.2 max health (a heart per ten levels)$(br)$(bold)Gathering$() - Mining - Ores and stone - Faster mining; unlocks pickaxes$"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "(br)$(bold)Gathering$() - Woodcutting - Logs - Faster chopping; unlocks axes$(br)$(bold)Gathering$() - Farming - Harvesting crops - Faster tilling; unlocks hoes$(br)$(bold)Gathering$() - Fishing - Catching fish - Better catches$(br)$(bold)Artisan$() - Cooking - Cooking food - -$(br)$(bold)Artisan$() - Smithing - Smelting metals, smithing gear - -$(br)$(bold)Artisan$() - Crafting - Crafting - -$(br)$(bold)Support$() - Agility - Moving, sprinting, swimming - +0.01 % speed, −0.5 % fall damage (max 50 %); unlocks the elytra$(br2)Every ten levels a skill fires fireworks."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Level gates",
+      "text": "$(#b9a98a)Level - Attack (wield) - Defence (wear) - Mining / Woodcutting / Farming (use)$()$(br)$(bold)5$() - Stone swords, axes - Copper diving gear - Stone tools$(br)$(bold)10$() - Golden - Golden, chainmail - Golden$(br)$(bold)15$() - Iron, crossbow - Iron - Iron$(br)$(bold)20$() - Potato cannon - Turtle helmet - -$(br)$(bold)30$() - Diamond - Diamond - Diamond$(br)$(bold)40$() - Trident - - - -$(br)$(bold)50$() - Netherite, mace - Netherite, netherite diving gear - Netherite"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weakness; wearing armour you're not ready for gives Slowness. You keep every level when you die."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where the numbers come from",
+      "text": "The curve, perks and requirements are generated from $(#e0ac46)skills/build.mjs$() in the pack's repository, so this table is the same as the game's."
+    }
+  ]
+}

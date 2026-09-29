@@ -6,7 +6,7 @@ name: Publish pack
 on:
   push:
     branches: [main]
-    paths: ['pack/**', 'publish/**', 'quests/**', 'skills/**']
+    paths: ['pack/**', 'publish/**', 'quests/**', 'skills/**', 'gear/**', 'docs/**']
   workflow_dispatch:
 
 permissions:

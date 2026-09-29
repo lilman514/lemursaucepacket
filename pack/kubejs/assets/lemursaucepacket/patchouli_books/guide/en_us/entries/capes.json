@@ -1,0 +1,45 @@
+{
+  "name": "Capes",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:white_banner",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Everyone on the server sees the cape you wear. Some capes have a $(bold)perk$() while worn; the legendary ones are $(bold)animated$().$(br2)$(bold)Wardrobe:$() ESC → Capes, or $(#e0ac46)/capes$(). It lists what you have unlocked; click a cape to wear it, or $(#e0ac46)/capes off$() for none. Unlocks announce themselves in chat."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Skill capes",
+      "text": "One per skill, at level 99. Each has a perk while worn."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Attack Cape$() - Attack 99. - +5% crit chance$(br)$(bold)Strength Cape$() - Strength 99. - +10% crit damage$(br)$(bold)Defence Cape$() - Defence 99. - +2 armour$(br)$(bold)Ranged Cape$() - Ranged 99. - +5% crit chance$(br)$(bold)Hitpoints Cape$() - Hitpoints 99. - +1 heart$(br)$(bold)Mining Cape$() - Mining 99. - +15% dig speed$(br)$(bold)Woodcutting Cape$() - Woodcutting 99. - +25% Woodcutting XP from logs$(br)$(bold)Farming Cape$() - Farming 99. - 20% chance of double crop drops$(br)$(bold)Fishing Cape$() - Fishing 99. - +3 luck$(br)$(bold)Cooking Cape$() - C"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ooking 99. - eating heals 2 extra hearts$(br)$(bold)Smithing Cape$() - Smithing 99. - +1 armour toughness$(br)$(bold)Crafting Cape$() - Crafting 99. - the item in your hand mends one durability every ten seconds$(br)$(bold)Agility Cape$() - Agility 99. - +10% speed"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Quest capes",
+      "text": "Finish a chapter of the quest book (its last quest hands the cape over).$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Settler's Cape$() - Finish the Landfall chapter. - -$(br)$(bold)Brass Age Cape$() - Finish the Brass Age chapter. - -$(br)$(bold)Iron Roads Cape$() - Finish the Iron Roads chapter. - -$(br)$(bold)Skyward Cape$() - Finish the Skyward chapter. - -$(br)$(bold)Crown of Fire Cape$() - Finish the Crown of Fire chapter. - -$(br)$(bold)Legacy Cape$() - Finish the Legacy chapter. - +1 heart$(br)$(bold)Armory Cape$() - Finish the Armory chapter. - -"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Achievement capes",
+      "text": "Vanilla advancements that take real effort.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Explorer Cape$() - Visit every Overworld biome (Adventuring Time). - -$(br)$(bold)Hero of the Village Cape$() - Save a village from a raid. - -$(br)$(bold)Beaconeer Cape$() - Build a full-power beacon. - -$(br)$(bold)Wings Cape$() - Find an elytra. - -"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Legendary capes",
+      "text": "Animated, and exceedingly hard to earn.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Maxed Cape $(italic)(animated)$()$() - Every skill at 99. - +5% crit chance, +5% crit damage, +1 heart$(br)$(bold)Completionist Cape $(italic)(animated)$()$() - Every chapter of the quest book finished. - +10% speed$(br)$(bold)Dragonslayer Cape $(italic)(animated)$()$() - Kill the Ender Dragon. - Fire Resistance"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The owner's cape",
+      "text": "Not earnable.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Lemur Cape$() - Given by the server owner. - -$(br2)Generated from $(#e0ac46)capes/capes.mjs$(), so this page matches the game."
+    }
+  ]
+}

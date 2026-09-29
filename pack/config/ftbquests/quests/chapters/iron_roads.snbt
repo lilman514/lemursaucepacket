@@ -472,6 +472,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:iron_roads"
+					elevate_perms: true
+					id: "750CC21080FB681E"
+					silent: true
+					type: "command"
+				}
 			]
 			shape: "gear"
 			size: 1.5d

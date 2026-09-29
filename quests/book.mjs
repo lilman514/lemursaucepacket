@@ -156,7 +156,7 @@ export default {
           size: 1.5,
           desc: ['You have the basics. Everything from here turns on rotation.'],
           tasks: [{ item: 'create:wrench' }],
-          reward: { xp: 25, coins: 32 }
+          reward: { commands: ['lsp cape flag {p} chapter:landfall'], xp: 25, coins: 32 }
         }
       ]
     },
@@ -460,7 +460,7 @@ export default {
           size: 1.75,
           desc: ['A rotation speed controller lets one network run machines at exactly the speed you choose.'],
           tasks: [{ item: 'create:rotation_speed_controller' }],
-          reward: { xp: 100, coins: 128 }
+          reward: { commands: ['lsp cape flag {p} chapter:brass_age'], xp: 100, coins: 128 }
         }
       ]
     },
@@ -699,7 +699,7 @@ export default {
           ],
           tasks: [{ checkmark: true, title: 'Our towns are connected' }],
           icon: 'create:track_station',
-          reward: { xp: 100, coins: 192 }
+          reward: { commands: ['lsp cape flag {p} chapter:iron_roads'], xp: 100, coins: 192 }
         }
       ]
     },
@@ -771,7 +771,7 @@ export default {
           desc: ['Fly a ship you built from one of your bases to another without touching the ground.'],
           tasks: [{ checkmark: true, title: 'I flew it' }],
           icon: 'aeronautics:propeller_bearing',
-          reward: { xp: 150, coins: 256 }
+          reward: { commands: ['lsp cape flag {p} chapter:skyward'], xp: 150, coins: 256 }
         }
       ]
     },
@@ -847,7 +847,7 @@ export default {
           size: 1.5,
           tasks: [{ kill: 'minecraft:wither' }],
           icon: 'minecraft:nether_star',
-          reward: { xp: 200, coins: 256 }
+          reward: { commands: ['lsp cape flag {p} chapter:crown_of_fire'], xp: 200, coins: 256 }
         }
       ]
     },
@@ -865,7 +865,7 @@ export default {
           title: 'The Stronghold',
           tasks: [{ structure: 'betterstrongholds:stronghold' }],
           icon: 'minecraft:ender_eye',
-          reward: { coins: 48 }
+          reward: { commands: ['lsp cape flag {p} chapter:legacy'], coins: 48 }
         },
         {
           key: 'the_end',
@@ -1306,6 +1306,186 @@ export default {
           after: ['coins'],
           tasks: [{ item: 'numismatics:bank_terminal' }],
           reward: { coins: 32 }
+        }
+      ]
+    },
+    {
+      key: 'armory',
+      group: 'guides',
+      title: 'The Armory',
+      subtitle: "The pack's own gear: tools that save time, weapons with real stats, armour sets with bonuses.",
+      about: 'Everything here is made with Create and gated by skills. Tooltips show the stats and how to get each piece; JEI (R on an item) has the recipe and an info page with the same text.',
+      unlocks: 'a tree-felling axe, a 3x3 pickaxe, an auto-smelting pickaxe, a scythe, a wand, and five armour sets.',
+      icon: 'lemursaucepacket:brass_sabre',
+      quests: [
+        {
+          key: 'rules',
+          title: 'How Gear Works',
+          desc: [
+            '• Every piece has &estats&r in its tooltip: damage, crit chance, crit damage, defense, speed, luck.',
+            '• A &efull set&r (all four pieces) adds a bonus; some pieces have a perk on their own.',
+            '• A set plus one specific &dRelics&r item is a &esynergy&r: stronger than either alone.',
+            '• Recipes are Create mechanical crafting and compacting. Some pieces only drop in dungeons.',
+            '• Each piece needs a skill level. Item tooltips say which.'
+          ],
+          tasks: [{ checkmark: true, title: 'Understood' }],
+          icon: 'lemursaucepacket:compacted_diamond',
+          reward: { coins: 8 }
+        },
+        {
+          key: 'lumber_axe',
+          title: 'Lumber Axe',
+          after: ['rules'],
+          desc: ['Iron sheets, andesite alloy and a mechanical saw in the mechanical crafter. Chop one log and the whole tree comes down.', tip('Needs Woodcutting 30.')],
+          tasks: [{ item: 'lemursaucepacket:lumber_axe' }],
+          reward: { coins: 32, xp: 200 }
+        },
+        {
+          key: 'prospectors_pickaxe',
+          title: "Prospector's Pickaxe",
+          after: ['lumber_axe'],
+          desc: ['A blaze burner in the head: ores come out already smelted.', tip('Needs Mining 30.')],
+          tasks: [{ item: 'lemursaucepacket:prospectors_pickaxe' }],
+          reward: { coins: 32, xp: 200 }
+        },
+        {
+          key: 'excavators_pickaxe',
+          title: "Excavator's Pickaxe",
+          after: ['prospectors_pickaxe'],
+          desc: ['A mechanical drill and brass: mines a 3x3. Sneak to mine one block.', tip('Needs Mining 40.')],
+          tasks: [{ item: 'lemursaucepacket:excavators_pickaxe' }],
+          reward: { coins: 48, xp: 300 }
+        },
+        {
+          key: 'harvesters_scythe',
+          title: "Harvester's Scythe",
+          after: ['lumber_axe'],
+          desc: ['A mechanical harvester on a handle. Right-click a ripe crop: a 5x5 is harvested and replanted.', tip('Needs Farming 30.')],
+          tasks: [{ item: 'lemursaucepacket:harvesters_scythe' }],
+          reward: { coins: 32, xp: 200 }
+        },
+        {
+          key: 'builders_wand',
+          title: "Builder's Wand",
+          after: ['harvesters_scythe'],
+          desc: ['Brass, a precision mechanism and a schematicannon. Right-click a block face to extend it with matching blocks from your inventory, up to 32 at a time.', tip('Needs Crafting 30.')],
+          tasks: [{ item: 'lemursaucepacket:builders_wand' }],
+          reward: { coins: 64, xp: 300 }
+        },
+        {
+          key: 'brass_sabre',
+          title: 'Brass Sabre',
+          after: ['rules'],
+          desc: ['Fast, with +10% crit chance. Brass ingots and a sturdy sheet.', tip('Needs Attack 25.')],
+          tasks: [{ item: 'lemursaucepacket:brass_sabre' }],
+          reward: { coins: 32, xp: 200 }
+        },
+        {
+          key: 'sturdy_warhammer',
+          title: 'Sturdy Warhammer',
+          after: ['brass_sabre'],
+          desc: ['Slow and heavy, and it sends things flying. Sturdy sheets and a precision mechanism.', tip('Needs Attack 45.')],
+          tasks: [{ item: 'lemursaucepacket:sturdy_warhammer' }],
+          reward: { coins: 64, xp: 400 }
+        },
+        {
+          key: 'stormcallers_sabre',
+          title: "Stormcaller's Sabre",
+          after: ['sturdy_warhammer'],
+          desc: ['No recipe. It waits in pillager outposts and Dungeons Arise chests; one hit in ten shocks the target.', tip('Needs Attack 50.')],
+          tasks: [{ item: 'lemursaucepacket:stormcallers_sabre' }],
+          reward: { coins: 128, xp: 600 }
+        },
+        {
+          key: 'anglers_cap',
+          title: "Angler's Cap",
+          after: ['rules'],
+          desc: ['Leather and a fishing rod. +2 Luck: better catches, better loot.', tip('Needs Fishing 25.')],
+          tasks: [{ item: 'lemursaucepacket:anglers_cap' }],
+          reward: { coins: 24, xp: 150 }
+        },
+        {
+          key: 'prospector_set',
+          title: "Prospector's Set",
+          after: ['anglers_cap'],
+          desc: ['Brass casings, andesite alloy and a lantern. The lamp alone gives Night Vision underground; the full set gives Haste and a chance of double ore drops.', tip('Needs Mining 35. With the Clot of Time relic: Haste II.')],
+          tasks: [
+            { item: 'lemursaucepacket:prospector_helmet' },
+            { item: 'lemursaucepacket:prospector_chestplate' },
+            { item: 'lemursaucepacket:prospector_leggings' },
+            { item: 'lemursaucepacket:prospector_boots' }
+          ],
+          reward: { coins: 96, xp: 500 }
+        },
+        {
+          key: 'aeronaut_set',
+          title: "Aeronaut's Set",
+          after: ['prospector_set'],
+          desc: ['Leather, sturdy sheets and propeller bearings. The boots alone cancel fall damage; the full set makes you faster, lets you step up whole blocks and swim faster.', tip('Needs Agility 40. With the Kinetic Belt relic: faster still.')],
+          tasks: [
+            { item: 'lemursaucepacket:aeronaut_helmet' },
+            { item: 'lemursaucepacket:aeronaut_chestplate' },
+            { item: 'lemursaucepacket:aeronaut_leggings' },
+            { item: 'lemursaucepacket:aeronaut_boots' }
+          ],
+          reward: { coins: 96, xp: 500 }
+        },
+        {
+          key: 'duelist_set',
+          title: 'Brass Duelist Set',
+          after: ['aeronaut_set'],
+          desc: ["Brass sheets, precision mechanisms and a Duelist's Pattern per piece. Patterns only drop in Dungeons Arise, stronghold and ancient city chests. Every piece adds crit chance; the full set adds crit damage.", tip('Needs Attack 40. With the Ring of the Seven Deadly Sins relic: more crit damage.')],
+          tasks: [
+            { item: 'lemursaucepacket:duelist_helmet' },
+            { item: 'lemursaucepacket:duelist_chestplate' },
+            { item: 'lemursaucepacket:duelist_leggings' },
+            { item: 'lemursaucepacket:duelist_boots' }
+          ],
+          reward: { coins: 160, xp: 800 }
+        },
+        {
+          key: 'compacted_diamond',
+          title: 'Compacted Diamond',
+          after: ['rules'],
+          desc: ['Four diamonds in a basin under a mechanical press.'],
+          tasks: [{ item: 'lemursaucepacket:compacted_diamond', count: 4 }],
+          reward: { coins: 48, xp: 200 }
+        },
+        {
+          key: 'compacted_diamond_set',
+          title: 'Compacted Diamond Set',
+          after: ['compacted_diamond'],
+          desc: ['Compacted diamond, sturdy sheets and precision mechanisms. Bulwark: the full set takes 10% less damage from everything.', tip('Needs Defence 45.')],
+          tasks: [
+            { item: 'lemursaucepacket:compacted_diamond_helmet' },
+            { item: 'lemursaucepacket:compacted_diamond_chestplate' },
+            { item: 'lemursaucepacket:compacted_diamond_leggings' },
+            { item: 'lemursaucepacket:compacted_diamond_boots' }
+          ],
+          reward: { coins: 160, xp: 800 }
+        },
+        {
+          key: 'compacted_netherite_set',
+          title: '&aCompacted Netherite Set',
+          after: ['compacted_diamond_set'],
+          shape: 'gear',
+          size: 1.75,
+          desc: ['Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.', tip('Needs Defence 60.')],
+          tasks: [
+            { item: 'lemursaucepacket:compacted_netherite_helmet' },
+            { item: 'lemursaucepacket:compacted_netherite_chestplate' },
+            { item: 'lemursaucepacket:compacted_netherite_leggings' },
+            { item: 'lemursaucepacket:compacted_netherite_boots' }
+          ],
+          reward: { commands: ['lsp cape flag {p} chapter:armory'], coins: 512, xp: 2000 }
+        },
+        {
+          key: 'ember_crown',
+          title: 'Ember Crown',
+          after: ['compacted_diamond'],
+          desc: ['No recipe: Nether fortress and bastion chests. Fire Resistance while worn, and +1 damage.', tip('Needs Defence 40.')],
+          tasks: [{ item: 'lemursaucepacket:ember_crown' }],
+          reward: { coins: 128, xp: 600 }
         }
       ]
     }

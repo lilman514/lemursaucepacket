@@ -55,6 +55,13 @@ if (existsSync(path.join(root, 'quests', 'book.mjs'))) {
 if (existsSync(path.join(root, 'skills', 'build.mjs'))) {
   execFileSync(process.execPath, [path.join(root, 'skills', 'build.mjs')], { stdio: 'inherit' })
 }
+// Gear and capes: scripts, configs and wiki pages generated from their definitions.
+execFileSync(process.execPath, [path.join(root, 'gear', 'build.mjs')], { stdio: 'inherit' })
+execFileSync(process.execPath, [path.join(root, 'capes', 'build.mjs')], { stdio: 'inherit' })
+// The wiki (docs/) goes up next to the feed as site/wiki/, and into the pack as a Patchouli guide book —
+// so it has to be built before the pack is exported.
+execFileSync(process.execPath, [path.join(root, 'publish', 'docs.mjs')], { stdio: 'inherit' })
+execFileSync(process.execPath, [path.join(root, 'publish', 'patchouli.mjs')], { stdio: 'inherit' })
 execFileSync(packwiz, ['refresh'], { cwd: packDir, stdio: 'inherit' })
 
 const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')

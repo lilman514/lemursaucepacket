@@ -251,6 +251,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:skyward"
+					elevate_perms: true
+					id: "0A11321BF8364134"
+					silent: true
+					type: "command"
+				}
 			]
 			shape: "gear"
 			size: 1.75d

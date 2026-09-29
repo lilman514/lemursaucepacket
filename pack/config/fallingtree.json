@@ -1,0 +1,45 @@
+{
+  "sneakMode": "SNEAK_DISABLE",
+  "breakInCreative": true,
+  "lootInCreative": true,
+  "notificationMode": "ACTION_BAR",
+  "trees": {
+    "breakMode": "INSTANTANEOUS",
+    "detectionMode": "WHOLE_TREE",
+    "maxScanSize": 800,
+    "minSize": 1,
+    "maxSize": 200,
+    "maxSizeAction": "ABORT",
+    "breakOrder": "FURTHEST_FIRST",
+    "treeBreaking": true,
+    "leavesBreaking": true,
+    "leavesBreakingForceRadius": 0,
+    "allowMixedLogs": false,
+    "breakNetherTreeWarts": true,
+    "breakMangroveRoots": true,
+    "searchAreaRadius": -1,
+    "spawnItemsAtBreakPoint": true,
+    "trunkLootPercentage": 100
+  },
+  "tools": {
+    "allowed": [
+      "lemursaucepacket:lumber_axe"
+    ],
+    "denied": [],
+    "durabilityMode": "PERCENTAGE",
+    "ignoreTools": false,
+    "damageMultiplicand": 0.25,
+    "damageRounding": "ROUND",
+    "speedMultiplicand": 0,
+    "forceToolUsage": true
+  },
+  "player": {
+    "allowedTags": []
+  },
+  "enchantment": {
+    "registerEnchant": false,
+    "registerSpecificEnchant": false,
+    "hideEnchant": true,
+    "requireEnchantment": false
+  }
+}

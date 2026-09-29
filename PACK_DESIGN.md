@@ -105,6 +105,32 @@ Every 10 levels sets off fireworks and lists what the new level unlocks. Crits a
   | U | Waypoints |
   | V | Voice chat |
 
+## Gear: SkyBlock-style items, Create-made
+
+The pack has its own line of gear (`gear/gear.mjs`; the player-facing version is `docs/gear.md`), built so it never overlaps the Relics mod, which covers trinkets and single-purpose accessories:
+
+- **Armour sets** with a theme, per-piece stats, single-piece perks that work alone (a helmet with a headlamp, boots that cancel fall damage) and a **full-set bonus**. Some sets have a **synergy** with one Relics item, roguelike-style: the set plus that relic is stronger than either.
+- **Weapons** with real stat lines (damage, attack speed, crit chance, crit damage, knockback) that plug into the skills' crit roll.
+- **Utility tools** that each remove one tedious job: the Lumber Axe (FallingTree, whitelisted to this one item), the Excavator's 3×3, the Prospector's auto-smelting pickaxe, the Harvester's Scythe, the Builder's Wand.
+- **Nothing is easy or infinite.** Recipes are Create mechanical crafting and compacting with brass, sturdy sheets and precision mechanisms; every piece has a Project MMO level gate; the best pieces are **loot-only** (LootJS) or need a loot-only pattern.
+- Tooltips carry the stats and a "How to get" line, JEI has the same text on each item's information page (KubeJS 7 registers it through `RecipeViewerEvents.addInformation`, not the old `JEIEvents`), and the quest book's *Armory* chapter walks players through the line.
+
+Rules for adding gear: one clear job per item, no duplicate of a Relics purpose, and always add the quest, the "How to get" tooltip/JEI text and the wiki row (the build does the last two from `howToGet`).
+
+The same idea covers the other mods' loot: `publish/sources.mjs` reads every mod jar's loot tables (and Relics' code) and writes a "Found in …" JEI information page and tooltip line for each loot-only modded item, plus `docs/where-to-find.md`, so JEI, the tooltips and the wiki answer "where do I get this?" for the whole pack. Run it by hand after adding or removing mods; its output is committed.
+
+## Capes: earned, never crafted
+
+Capes are cosmetics with a story (`capes/capes.mjs`; players read `docs/capes.md`). They are unlocks, not items, so they can't be traded, lost or duped:
+
+- **Skill capes** at level 99, one per skill, each with a small perk (crit, armour, luck, speed, mending, extra XP).
+- **Quest capes** for finishing a chapter: the chapter's last quest runs `lsp cape flag {p} chapter:<key>`.
+- **Achievement capes** for vanilla feats (Adventuring Time, Hero of the Village, a full beacon, an elytra).
+- **Legendary capes**, animated: every skill at 99, every chapter done, the dragon killed.
+- **The Lemur Cape**: the owner's, by command.
+
+How it works: the server keeps who unlocked and wears what (persistent data, `/capes` wardrobe, `/lsp cape` admin commands) and tells every client who wears which cape; the client script gives each player a texture slot through CapeJS and swaps the texture behind it, frame by frame for animated capes. Art: two Higgsfield sheets of cape fronts, composed into Minecraft's cape layout at 8× by `art/process.mjs`, with generated shimmer frames.
+
 ## Look and feel: one kit everywhere
 
 Everything a player looks at outside the world — the launcher, the loading screen, the title screen, the ESC menu, the options screens, the quest book, the skills screen — is built from one kit, so it reads as one designer's work:
@@ -176,7 +202,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 
 **SMP:** Simple Voice Chat (proximity voice), Gravestone, Xaero's Minimap and World Map, FTB Quests (with FTB Library and Teams).
 
-**RPG layer:** Project MMO (skills), Create: Brassworks Missions, When Dungeons Arise, Lootr, Sable Assembly Fix.
+**RPG layer:** Project MMO (skills), Create: Brassworks Missions, When Dungeons Arise, Lootr, Relics (with OctoLib and Curios), LootJS (loot-only gear), FallingTree (the Lumber Axe), CapeJS (capes), Patchouli (the in-game guide), Sable Assembly Fix.
 
 **Look and feel.** Minecraft Legends is a third-person strategy game with chunky, painterly visuals. The pack moves toward that without leaving Minecraft's look:
 - Animation: Fresh Animations (with EMF and ETF), Not Enough Animations.

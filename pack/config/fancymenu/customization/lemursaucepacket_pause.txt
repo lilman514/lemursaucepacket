@@ -190,13 +190,37 @@ element {
   height = 14
   stay_on_screen = true
 }
+element {
+  element_type = custom_button
+  instance_identifier = lsp_pause_capes_14
+  anchor_point = mid-centered
+  x = -197
+  y = 86
+  width = 84
+  height = 20
+  label = Capes
+  description = Your wardrobe: wear a cape you have earned (/capes)
+  buttonaction = closegui%btnaction_splitter_fm%sendmessage;/capes%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+element {
+  element_type = image
+  instance_identifier = lsp_pause_capes_icon_15
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/capes.png
+  anchor_point = mid-centered
+  x = -194
+  y = 89
+  width = 14
+  height = 14
+  stay_on_screen = true
+}
 
 element {
   element_type = custom_button
-  instance_identifier = lsp_pause_skills_14
+  instance_identifier = lsp_pause_skills_16
   anchor_point = mid-centered
   x = 113
-  y = 10
+  y = -8
   width = 84
   height = 20
   label = Skills
@@ -206,21 +230,21 @@ element {
 }
 element {
   element_type = image
-  instance_identifier = lsp_pause_skills_icon_15
+  instance_identifier = lsp_pause_skills_icon_17
   source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/skills.png
   anchor_point = mid-centered
   x = 116
-  y = 13
+  y = -5
   width = 14
   height = 14
   stay_on_screen = true
 }
 element {
   element_type = custom_button
-  instance_identifier = lsp_pause_backpack_16
+  instance_identifier = lsp_pause_backpack_18
   anchor_point = mid-centered
   x = 113
-  y = 33
+  y = 15
   width = 84
   height = 20
   label = Backpack
@@ -230,21 +254,21 @@ element {
 }
 element {
   element_type = image
-  instance_identifier = lsp_pause_backpack_icon_17
+  instance_identifier = lsp_pause_backpack_icon_19
   source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/backpack.png
   anchor_point = mid-centered
   x = 116
-  y = 36
+  y = 18
   width = 14
   height = 14
   stay_on_screen = true
 }
 element {
   element_type = custom_button
-  instance_identifier = lsp_pause_team_18
+  instance_identifier = lsp_pause_team_20
   anchor_point = mid-centered
   x = 113
-  y = 56
+  y = 38
   width = 84
   height = 20
   label = Team
@@ -254,21 +278,21 @@ element {
 }
 element {
   element_type = image
-  instance_identifier = lsp_pause_team_icon_19
+  instance_identifier = lsp_pause_team_icon_21
   source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/team.png
   anchor_point = mid-centered
   x = 116
-  y = 59
+  y = 41
   width = 14
   height = 14
   stay_on_screen = true
 }
 element {
   element_type = custom_button
-  instance_identifier = lsp_pause_voice_20
+  instance_identifier = lsp_pause_voice_22
   anchor_point = mid-centered
   x = 113
-  y = 79
+  y = 61
   width = 84
   height = 20
   label = Voice
@@ -278,11 +302,35 @@ element {
 }
 element {
   element_type = image
-  instance_identifier = lsp_pause_voice_icon_21
+  instance_identifier = lsp_pause_voice_icon_23
   source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/voice.png
   anchor_point = mid-centered
   x = 116
-  y = 82
+  y = 64
+  width = 14
+  height = 14
+  stay_on_screen = true
+}
+element {
+  element_type = custom_button
+  instance_identifier = lsp_pause_guide_24
+  anchor_point = mid-centered
+  x = 113
+  y = 86
+  width = 84
+  height = 20
+  label = Guide
+  description = The in-game wiki: everything about the pack (/guide)
+  buttonaction = closegui%btnaction_splitter_fm%sendmessage;/guide%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+element {
+  element_type = image
+  instance_identifier = lsp_pause_guide_icon_25
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/news.png
+  anchor_point = mid-centered
+  x = 116
+  y = 89
   width = 14
   height = 14
   stay_on_screen = true
@@ -290,14 +338,14 @@ element {
 
 element {
   element_type = player_entity_v2
-  instance_identifier = lsp_pause_player_22
+  instance_identifier = lsp_pause_player_26
   anchor_point = mid-centered
   x = 130
   y = -66
   width = 50
-  height = 58
+  height = 54
   copy_client_player = true
-  showname = false
+  showname = true
   head_follows_mouse = true
   body_follows_mouse = false
   body_movement = false
@@ -306,25 +354,7 @@ element {
 
 element {
   element_type = text_v2
-  instance_identifier = lsp_pause_player_name_23
-  source_mode = direct
-  source = {"placeholder":"playername"}
-  anchor_point = mid-centered
-  x = 114
-  y = -7
-  width = 86
-  height = 16
-  text_border = 0
-  base_color = #F8D982
-  shadow = true
-  auto_line_wrapping = false
-  enable_scrolling = false
-  stay_on_screen = true
-}
-
-element {
-  element_type = text_v2
-  instance_identifier = lsp_pause_info_0_24
+  instance_identifier = lsp_pause_info_0_27
   source_mode = direct
   source = X {"placeholder":"player_x_coordinate"}  Z {"placeholder":"player_z_coordinate"}
   anchor_point = mid-centered
@@ -342,7 +372,7 @@ element {
 
 element {
   element_type = text_v2
-  instance_identifier = lsp_pause_info_1_25
+  instance_identifier = lsp_pause_info_1_28
   source_mode = direct
   source = Y {"placeholder":"player_y_coordinate"}  {"placeholder":"world_daytime_hour"}:{"placeholder":"world_daytime_minute"}
   anchor_point = mid-centered
@@ -360,7 +390,7 @@ element {
 
 element {
   element_type = text_v2
-  instance_identifier = lsp_pause_info_2_26
+  instance_identifier = lsp_pause_info_2_29
   source_mode = direct
   source = {"placeholder":"replace_text","values":{"text":"{"placeholder":"replace_text","values":{"text":"{"placeholder":"current_biome"}","search":"minecraft:","replacement":""}}","search":"_","replacement":" "}}
   anchor_point = mid-centered

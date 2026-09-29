@@ -334,6 +334,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:landfall"
+					elevate_perms: true
+					id: "7AF163095C760066"
+					silent: true
+					type: "command"
+				}
 			]
 			shape: "gear"
 			size: 1.5d

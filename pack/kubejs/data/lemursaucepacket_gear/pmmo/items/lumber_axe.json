@@ -1,0 +1,10 @@
+{
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 30
+    },
+    "USE": {
+      "woodcutting": 30
+    }
+  }
+}

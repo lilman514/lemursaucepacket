@@ -1,0 +1,15 @@
+# Table of contents
+
+* [LemurSaucePacket](README.md)
+* [Getting started](getting-started.md)
+* [The launcher](launcher.md)
+* [The world and its rules](world.md)
+* [The ESC menu](esc-menu.md)
+* [Quests](quests.md)
+* [Skills](skills.md)
+* [Gear](gear.md)
+* [Capes](capes.md)
+* [Where to find things](where-to-find.md)
+* [Keys](keys.md)
+* [Mods in the pack](mods.md)
+* [FAQ and troubleshooting](faq.md)

@@ -1,0 +1,774 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "armory"
+	group: "7DAB9BE5981EE62A"
+	icon: {
+		id: "lemursaucepacket:brass_sabre"
+	}
+	id: "2FED25899EA206C8"
+	images: [
+		{
+			height: 3.2170212765957444d
+			id: "219EF655FEFAE9B1"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.536170212765957d
+			x: 10.7d
+			y: 1.9d
+		}
+	]
+	order_index: 13
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "lemursaucepacket:compacted_diamond"
+			}
+			id: "59A1B6D0EE111D6F"
+			rewards: [
+				{
+					id: "63BEE0F89C58F371"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "7B56C1C6BC71C7CB"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "22C3280D7A0095C0"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 4.55d
+		}
+		{
+			dependencies: ["59A1B6D0EE111D6F"]
+			icon: {
+				id: "lemursaucepacket:lumber_axe"
+			}
+			id: "7E2F07E0DFBB02E0"
+			rewards: [
+				{
+					id: "33A933FF8A4FCE0B"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "4D36EE7E2E4D8158"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "72867581E6DA8AF5"
+					item: {
+						count: 1
+						id: "lemursaucepacket:lumber_axe"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 1.75d
+		}
+		{
+			dependencies: ["7E2F07E0DFBB02E0"]
+			icon: {
+				id: "lemursaucepacket:prospectors_pickaxe"
+			}
+			id: "7ED5141FF9D485A0"
+			rewards: [
+				{
+					id: "1CFC499B932132A9"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "34EBFD174F47DCCD"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "696F6C5DC260866A"
+					item: {
+						count: 1
+						id: "lemursaucepacket:prospectors_pickaxe"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 0.55d
+		}
+		{
+			dependencies: ["7ED5141FF9D485A0"]
+			icon: {
+				id: "lemursaucepacket:excavators_pickaxe"
+			}
+			id: "08287C0834890E64"
+			rewards: [
+				{
+					id: "7FCE6A2ED82A221D"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "35E3778C9AC8C5A3"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7B5A6134853E7706"
+					item: {
+						count: 1
+						id: "lemursaucepacket:excavators_pickaxe"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7E2F07E0DFBB02E0"]
+			icon: {
+				id: "lemursaucepacket:harvesters_scythe"
+			}
+			id: "36627C71A554969C"
+			rewards: [
+				{
+					id: "51EDE1D25111F8F7"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "35A1FD1C54DF33B2"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4E629DC736100553"
+					item: {
+						count: 1
+						id: "lemursaucepacket:harvesters_scythe"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 2.15d
+		}
+		{
+			dependencies: ["36627C71A554969C"]
+			icon: {
+				id: "lemursaucepacket:builders_wand"
+			}
+			id: "54C7F963AD111556"
+			rewards: [
+				{
+					id: "1340FF7034C8DCAA"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "01D4D7138B30EA3D"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "68DB89CFCBD06FB9"
+					item: {
+						count: 1
+						id: "lemursaucepacket:builders_wand"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["59A1B6D0EE111D6F"]
+			icon: {
+				id: "lemursaucepacket:brass_sabre"
+			}
+			id: "441B3FCCBBFCDD4E"
+			rewards: [
+				{
+					id: "0357FB7D96E5EA69"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "0E22B2EA1D14A40E"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "39F190D348700DC5"
+					item: {
+						count: 1
+						id: "lemursaucepacket:brass_sabre"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 3.75d
+		}
+		{
+			dependencies: ["441B3FCCBBFCDD4E"]
+			icon: {
+				id: "lemursaucepacket:sturdy_warhammer"
+			}
+			id: "3C870C551F93DB89"
+			rewards: [
+				{
+					id: "18FAE3FF78E6F9C1"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "25709CADDD7872CF"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1078E10B5EAF3FFA"
+					item: {
+						count: 1
+						id: "lemursaucepacket:sturdy_warhammer"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 3.75d
+		}
+		{
+			dependencies: ["3C870C551F93DB89"]
+			icon: {
+				id: "lemursaucepacket:stormcallers_sabre"
+			}
+			id: "5A3E4BC44D6EACDE"
+			rewards: [
+				{
+					id: "27BABAA5AA83C0BA"
+					type: "xp"
+					xp: 600
+				}
+				{
+					id: "2B87E3961861BC9F"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "167BD82CD4D2E3F9"
+					item: {
+						count: 1
+						id: "lemursaucepacket:stormcallers_sabre"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 3.7d
+		}
+		{
+			dependencies: ["59A1B6D0EE111D6F"]
+			icon: {
+				id: "lemursaucepacket:anglers_cap"
+			}
+			id: "2348D594EF1CBA8B"
+			rewards: [
+				{
+					id: "2986E914BB7365C3"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7C68CC8702BBA5CF"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "34BB9E1332D6F75C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6A4FC9E70F0369D2"
+					item: {
+						count: 1
+						id: "lemursaucepacket:anglers_cap"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 5.35d
+		}
+		{
+			dependencies: ["2348D594EF1CBA8B"]
+			icon: {
+				id: "lemursaucepacket:prospector_helmet"
+			}
+			id: "763B2E40973AE7F7"
+			rewards: [
+				{
+					id: "5EDDD766C2DB3FED"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "285EE363E0CE1415"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "153AB06F1C7EBE01"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "165F0492264933A0"
+					item: {
+						count: 1
+						id: "lemursaucepacket:prospector_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "6813DC772A63C9EC"
+					item: {
+						count: 1
+						id: "lemursaucepacket:prospector_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "6B76FDA5C3104D88"
+					item: {
+						count: 1
+						id: "lemursaucepacket:prospector_leggings"
+					}
+					type: "item"
+				}
+				{
+					id: "5F354994A6819403"
+					item: {
+						count: 1
+						id: "lemursaucepacket:prospector_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 5.35d
+		}
+		{
+			dependencies: ["763B2E40973AE7F7"]
+			icon: {
+				id: "lemursaucepacket:aeronaut_helmet"
+			}
+			id: "39FD1FA2F1B75A78"
+			rewards: [
+				{
+					id: "6153DED4A7A7EABF"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "08199E574C5AC87C"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "552090D661DC3E7E"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1E9B72B015EDD8D2"
+					item: {
+						count: 1
+						id: "lemursaucepacket:aeronaut_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "03D039C0B9DE26F5"
+					item: {
+						count: 1
+						id: "lemursaucepacket:aeronaut_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "7C4B7E90A86B632C"
+					item: {
+						count: 1
+						id: "lemursaucepacket:aeronaut_leggings"
+					}
+					type: "item"
+				}
+				{
+					id: "4EA34197A07426BA"
+					item: {
+						count: 1
+						id: "lemursaucepacket:aeronaut_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 5.3d
+		}
+		{
+			dependencies: ["39FD1FA2F1B75A78"]
+			icon: {
+				id: "lemursaucepacket:duelist_helmet"
+			}
+			id: "10C25BE4B070CB76"
+			rewards: [
+				{
+					id: "4D3554FEDF81E886"
+					type: "xp"
+					xp: 800
+				}
+				{
+					id: "32CB495F94617AB3"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6604E36FCAE6DA1E"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "03312B2EA09161E5"
+					item: {
+						count: 1
+						id: "lemursaucepacket:duelist_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "3C2BB7A5E1C7AAF0"
+					item: {
+						count: 1
+						id: "lemursaucepacket:duelist_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "0FD561F8F9CCB9BD"
+					item: {
+						count: 1
+						id: "lemursaucepacket:duelist_leggings"
+					}
+					type: "item"
+				}
+				{
+					id: "2FB725144A840405"
+					item: {
+						count: 1
+						id: "lemursaucepacket:duelist_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 5.3d
+		}
+		{
+			dependencies: ["59A1B6D0EE111D6F"]
+			icon: {
+				id: "lemursaucepacket:compacted_diamond"
+			}
+			id: "4F4A58B9C1A5E8F7"
+			rewards: [
+				{
+					id: "6F7F8F92FA5F4E59"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "7F9E34B7210F9A8E"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "6CCE5CD6A3254B83"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_diamond"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 7.4d
+		}
+		{
+			dependencies: ["4F4A58B9C1A5E8F7"]
+			icon: {
+				id: "lemursaucepacket:compacted_diamond_helmet"
+			}
+			id: "3C6DF3A2C011D6EF"
+			rewards: [
+				{
+					id: "5BB5A7E4601FEF4A"
+					type: "xp"
+					xp: 800
+				}
+				{
+					id: "229DDB67073639ED"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "4B13962A3D3DC2F6"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "67D6D7F2B99C64CD"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_diamond_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "6E977116DF594D0C"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_diamond_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "6254C57A864C97B5"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_diamond_leggings"
+					}
+					type: "item"
+				}
+				{
+					id: "6FAB742BE0EE6B16"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_diamond_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 7.05d
+		}
+		{
+			dependencies: ["3C6DF3A2C011D6EF"]
+			icon: {
+				id: "lemursaucepacket:compacted_netherite_helmet"
+			}
+			id: "0CFC00143EBFBB0B"
+			rewards: [
+				{
+					id: "6F5DF8EC4D8AB476"
+					type: "xp"
+					xp: 2000
+				}
+				{
+					id: "658E0A981A6D082B"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					command: "lsp cape flag {p} chapter:armory"
+					elevate_perms: true
+					id: "6F3EAC8055402EF9"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					id: "58F737C163F2F3D9"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_netherite_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "60A95DDDE24ADE2A"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_netherite_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "573646A1A64BBD62"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_netherite_leggings"
+					}
+					type: "item"
+				}
+				{
+					id: "1E37D997E9392F34"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_netherite_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 7.3d
+		}
+		{
+			dependencies: ["4F4A58B9C1A5E8F7"]
+			icon: {
+				id: "lemursaucepacket:ember_crown"
+			}
+			id: "04C7712E7888DC6B"
+			rewards: [
+				{
+					id: "5D0790C0EE970A23"
+					type: "xp"
+					xp: 600
+				}
+				{
+					id: "0B91784870FFB173"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "23B7D81A9DD7DC22"
+					item: {
+						count: 1
+						id: "lemursaucepacket:ember_crown"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 8.65d
+		}
+	]
+}

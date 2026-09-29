@@ -1,0 +1,10 @@
+{
+  "requirements": {
+    "TOOL": {
+      "mining": 30
+    },
+    "USE": {
+      "mining": 30
+    }
+  }
+}

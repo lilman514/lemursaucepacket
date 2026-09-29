@@ -1,0 +1,15 @@
+{
+  "name": "LemurSaucePacket Guide",
+  "landing_text": "Everything about the server, from the launcher to the last cape. The same pages as the wiki, kept current with every pack version.$(br2)Press $(bold)ESC$() in-game for the menu that reaches most of what this book describes.",
+  "version": 1,
+  "creative_tab": "minecraft:tools_and_utilities",
+  "book_texture": "patchouli:textures/gui/book_brown.png",
+  "model": "patchouli:book_brown",
+  "use_resource_pack": true,
+  "show_progress": false,
+  "text_color": "1a1409",
+  "header_color": "5a3a10",
+  "nameplate_color": "3a2a10",
+  "link_color": "7a4a10",
+  "link_hover_color": "b8862b"
+}

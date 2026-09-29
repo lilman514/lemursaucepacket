@@ -66,8 +66,14 @@ if (!existsSync(sourcePath)) {
   process.exit(2)
 }
 const index = JSON.parse(readFileSync(sourcePath, 'utf8'))
+// The pack's own gear (gear/gear.mjs) is registered by KubeJS, so a registry dump made before it won't list it.
+const gear = await import('../gear/gear.mjs')
+const gearIds = [
+  ...gear.SETS.flatMap((s) => Object.keys(s.pieces).map((slot) => `${gear.NAMESPACE}:${s.id}_${slot}`)),
+  ...[...gear.PIECES, ...gear.WEAPONS, ...gear.TOOLS, ...gear.MATERIAL_ITEMS].map((x) => `${gear.NAMESPACE}:${x.id}`)
+]
 const known = {
-  item: new Set(index.item),
+  item: new Set([...index.item, ...gearIds]),
   entity: new Set(index.entity),
   biome: new Set([...index.biome, ...index.biomeTag]),
   structure: new Set([...index.structure, ...index.structureTag]),
@@ -174,6 +180,10 @@ function rewardData(reward, key, where) {
   for (const [i, it] of (reward.items ?? []).entries()) {
     need('item', it.item, where)
     out.push({ id: hexId(`${key}/item/${i}`), item: { count: it.count ?? 1, id: it.item }, type: 'item' })
+  }
+  // A server command run for the player ({p} is their name), e.g. unlocking a cape. Runs with permissions.
+  for (const [i, command] of (reward.commands ?? []).entries()) {
+    out.push({ id: hexId(`${key}/command/${i}`), type: 'command', command, elevate_perms: true, silent: true })
   }
   return out
 }

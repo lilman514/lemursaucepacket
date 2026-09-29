@@ -7,6 +7,8 @@
 	chapter.0E4B734290B837FE.title: "Brass Age"
 	chapter.2C2A22A66EC818AF.chapter_subtitle: ["New faces, old foes."]
 	chapter.2C2A22A66EC818AF.title: "Bestiary"
+	chapter.2FED25899EA206C8.chapter_subtitle: ["The pack's own gear: tools that save time, weapons with real stats, armour sets with bonuses."]
+	chapter.2FED25899EA206C8.title: "The Armory"
 	chapter.32CB66168B93AD10.chapter_subtitle: ["Farms, kitchens and the happy ghast."]
 	chapter.32CB66168B93AD10.title: "Homestead"
 	chapter.34063B311996CA32.chapter_subtitle: ["Create Aeronautics: balloons, propellers and airships."]
@@ -32,6 +34,7 @@
 	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
 	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7The server economy runs on Numismatics.\\n \\n&r&fQuest rewards are Numismatics coins. Trade them\\n&r&fwith other players or open a shop of your own.\\n \\n&r&eUnlocks:\\n&r&fpay-to-use machines, player shops that\\n&r&fsell while you're offline, and bank accounts.\\n "
 	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery.\\n \\n&r&eUnlocks:\\n&r&fflying bases and travel over any terrain.\\n "
+	image.219EF655FEFAE9B1.title: " \\n&6&lThe Armory\\n&r&7The pack's own gear: tools that save time, weapons\\n&r&7with real stats, armour sets with bonuses.\\n \\n&r&fEverything here is made with Create and gated\\n&r&fby skills. Tooltips show the stats and how to\\n&r&fget each piece; JEI (R on an item) has the\\n&r&frecipe and an info page with the same text.\\n \\n&r&eUnlocks:\\n&r&fa tree-felling axe, a 3x3 pickaxe, an auto-smelting\\n&r&fpickaxe, a scythe, a wand, and five armour sets.\\n "
 	image.314F29A3CC992CB6.title: " \\n&6&lBackpack Workshop\\n&r&7Fair backpacks: every tier is\\n&r&7built from its age's Create parts.\\n \\n&r&fBackpacks here follow your Create progress:\\n&r&feach tier needs parts from the matching age.\\n \\n&r&eUnlocks:\\n&r&fmore room on the move, plus pickup,\\n&r&fmagnet, feeding and restock upgrades.\\n "
 	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fcoins for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
 	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
@@ -50,6 +53,8 @@
 	quest.022ED40E89E99353.title: "New Crops"
 	quest.0390E0DEB91A43F2.quest_desc: ["Create packs items into parcels with a packager. Parcels can be addressed and sent anywhere a frogport or train reaches."]
 	quest.0390E0DEB91A43F2.title: "Parcels"
+	quest.04C7712E7888DC6B.quest_desc: ["No recipe: Nether fortress and bastion chests. Fire Resistance while worn, and +1 damage.", "&7Needs Defence 40."]
+	quest.04C7712E7888DC6B.title: "Ember Crown"
 	quest.0531338213957CA2.quest_desc: ["Quest rewards are paid in Numismatics coins:", "&espur&r 1 · &ebevel&r 8 · &esprocket&r 16 · &ecog&r 64 · &ecrown&r 512 · &esun&r 4096", "Use them to trade with other players."]
 	quest.0531338213957CA2.title: "Coinage"
 	quest.0551A72C76DF01A7.quest_desc: ["Islands floating high above the clouds. Easier to reach by airship."]
@@ -61,6 +66,8 @@
 	quest.06D2EBEBB18657B7.title: "Rich Soil"
 	quest.070D708592F9FCA2.quest_desc: ["Factory gauges keep a factory topped up: set a target and it requests ingredients by itself."]
 	quest.070D708592F9FCA2.title: "Factory Gauges"
+	quest.08287C0834890E64.quest_desc: ["A mechanical drill and brass: mines a 3x3. Sneak to mine one block.", "&7Needs Mining 40."]
+	quest.08287C0834890E64.title: "Excavator's Pickaxe"
 	quest.095F6A23CA1BB31E.quest_desc: ["Fly a ship you built from one of your bases to another without touching the ground."]
 	quest.095F6A23CA1BB31E.title: "&aMaiden Voyage"
 	quest.0C4084AC43F252F4.quest_desc: ["A millstone grinds ores and crops. Crushed ore gives extra nuggets when you wash it."]
@@ -71,12 +78,16 @@
 	quest.0CC49483DCF7A41B.title: "Outpost"
 	quest.0CCD3E4E30252510.quest_desc: ["An illager who throws ice. Look for it in the cold."]
 	quest.0CCD3E4E30252510.title: "The Iceologer"
+	quest.0CFC00143EBFBB0B.quest_desc: ["Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.", "&7Needs Defence 60."]
+	quest.0CFC00143EBFBB0B.title: "&aCompacted Netherite Set"
 	quest.0DD06477687A64EC.quest_desc: ["Set a cooking pot over a fire or stove. Hearty meals keep you fed far longer than bread."]
 	quest.0DD06477687A64EC.title: "Cooking Pot"
 	quest.0E23F4609946F60D.title: "Herd"
 	quest.0FF0AB4095D74045.title: "Feast"
 	quest.0FFC66FA887AB948.quest_desc: ["Slice \\& Dice adds a slicer and sprinklers; Central Kitchen lets Create machines run cooking pots and cutting boards."]
 	quest.0FFC66FA887AB948.title: "Automated Kitchen"
+	quest.10C25BE4B070CB76.quest_desc: ["Brass sheets, precision mechanisms and a Duelist's Pattern per piece. Patterns only drop in Dungeons Arise, stronghold and ancient city chests. Every piece adds crit chance; the full set adds crit damage.", "&7Needs Attack 40. With the Ring of the Seven Deadly Sins relic: more crit damage."]
+	quest.10C25BE4B070CB76.title: "Brass Duelist Set"
 	quest.1162BBDAABFA380F.quest_desc: ["Deployers use items the way a player would: placing, using, applying."]
 	quest.1162BBDAABFA380F.title: "A Helping Hand"
 	quest.11A0F7D4826132F6.title: "Moonlight Grove"
@@ -100,6 +111,8 @@
 	quest.21A96E8D9C535CB0.quest_desc: ["A water wheel next to flowing water gives steady rotation, day and night."]
 	quest.21A96E8D9C535CB0.title: "Water Power"
 	quest.21F50FAA76AA6AA4.title: "The Stronghold"
+	quest.2348D594EF1CBA8B.quest_desc: ["Leather and a fishing rod. +2 Luck: better catches, better loot.", "&7Needs Fishing 25."]
+	quest.2348D594EF1CBA8B.title: "Angler's Cap"
 	quest.238821EBD0168DC4.title: "Ocean Monument"
 	quest.26C7BB4F327F6808.quest_desc: ["Found in trial chambers deep underground."]
 	quest.26C7BB4F327F6808.title: "Breeze"
@@ -131,6 +144,8 @@
 	quest.3536D4075D5DBE2D.title: "Volcanic Peaks"
 	quest.3572EA16FB19CC9E.quest_desc: ["Taverns sit along the roads. Travellers trade here."]
 	quest.3572EA16FB19CC9E.title: "A Warm Tavern"
+	quest.36627C71A554969C.quest_desc: ["A mechanical harvester on a handle. Right-click a ripe crop: a 5x5 is harvested and replanted.", "&7Needs Farming 30."]
+	quest.36627C71A554969C.title: "Harvester's Scythe"
 	quest.36C5744F5C805AE7.title: "Upgrade Base"
 	quest.36CFDC0FABF55773.quest_desc: ["A schedule tells a train where to go and when. Give it to a conductor: any seated mob, or a blaze burner."]
 	quest.36CFDC0FABF55773.title: "On Schedule"
@@ -139,8 +154,14 @@
 	quest.374C66390D54AB5C.quest_desc: ["A depositor takes coins before it sends a redstone pulse: pay-to-use doors, farms and rides."]
 	quest.374C66390D54AB5C.title: "Depositor"
 	quest.3838D00F121D3CDE.title: "Pale Garden"
+	quest.39FD1FA2F1B75A78.quest_desc: ["Leather, sturdy sheets and propeller bearings. The boots alone cancel fall damage; the full set makes you faster, lets you step up whole blocks and swim faster.", "&7Needs Agility 40. With the Kinetic Belt relic: faster still."]
+	quest.39FD1FA2F1B75A78.title: "Aeronaut's Set"
 	quest.3A35D7C2F436EB92.title: "Brass Casing"
 	quest.3A55BEAD0546926A.title: "Stone Age"
+	quest.3C6DF3A2C011D6EF.quest_desc: ["Compacted diamond, sturdy sheets and precision mechanisms. Bulwark: the full set takes 10% less damage from everything.", "&7Needs Defence 45."]
+	quest.3C6DF3A2C011D6EF.title: "Compacted Diamond Set"
+	quest.3C870C551F93DB89.quest_desc: ["Slow and heavy, and it sends things flying. Sturdy sheets and a precision mechanism.", "&7Needs Attack 45."]
+	quest.3C870C551F93DB89.title: "Sturdy Warhammer"
 	quest.3EC86527F7D75D14.title: "Bank Account"
 	quest.3FD8D8BCEB833FB9.title: "Cutting Board"
 	quest.411AA73A55A9960F.quest_desc: ["In the pale garden, something only moves when you look away. Break its heart to stop it."]
@@ -149,6 +170,8 @@
 	quest.4173E1E1A07BC6D2.title: "Enchantment Industry"
 	quest.4418FF4F51A1595D.quest_desc: ["Place bogeys on the track at a station, build a carriage from railway casing, add train controls and assemble it at the station.", "&7Hold W over the station item for the Ponder walkthrough."]
 	quest.4418FF4F51A1595D.title: "Your First Train"
+	quest.441B3FCCBBFCDD4E.quest_desc: ["Fast, with +10% crit chance. Brass ingots and a sturdy sheet.", "&7Needs Attack 25."]
+	quest.441B3FCCBBFCDD4E.title: "Brass Sabre"
 	quest.453EA2E1FEBA74BB.title: "&cThe Wither"
 	quest.45ABB17E3B52364D.title: "Netherite Backpack"
 	quest.46411B0858C1ED5B.quest_desc: ["Signals split track into blocks so several trains share a line without crashing."]
@@ -172,6 +195,8 @@
 	quest.4D3553C972D58E45.title: "Blaze Rods"
 	quest.4D95E6F141C88AC9.quest_desc: ["Arms pick items up and put them down wherever you point them, even into machines."]
 	quest.4D95E6F141C88AC9.title: "Mechanical Arm"
+	quest.4F4A58B9C1A5E8F7.quest_desc: ["Four diamonds in a basin under a mechanical press."]
+	quest.4F4A58B9C1A5E8F7.title: "Compacted Diamond"
 	quest.508EB8FEC7604332.title: "Smart Logistics"
 	quest.513C9025A06A10F1.title: "Electron Tubes"
 	quest.51653BAD0DD3C091.quest_desc: ["A mechanical press over a depot or belt flattens ingots into sheets. Sheets are the core of the Andesite Age."]
@@ -185,10 +210,16 @@
 	quest.53CEE449BE9A4679.title: "Levitite"
 	quest.540CA46A64AD3156.title: "Stack Upgrade I"
 	quest.542A03B2E755A962.title: "Desert Temple"
+	quest.54C7F963AD111556.quest_desc: ["Brass, a precision mechanism and a schematicannon. Right-click a block face to extend it with matching blocks from your inventory, up to 32 at a time.", "&7Needs Crafting 30."]
+	quest.54C7F963AD111556.title: "Builder's Wand"
 	quest.54FDF2788C384A54.quest_desc: ["Andesite is everywhere, and Create is built on it. Gather a stack."]
 	quest.54FDF2788C384A54.title: "The Grey Stone"
 	quest.5899B77905DC6F36.quest_desc: ["Crafts \\& Additions turns rotation into electricity and back. Handy for long distances and for charging tools."]
 	quest.5899B77905DC6F36.title: "Sparks"
+	quest.59A1B6D0EE111D6F.quest_desc: ["• Every piece has &estats&r in its tooltip: damage, crit chance, crit damage, defense, speed, luck.", "• A &efull set&r (all four pieces) adds a bonus; some pieces have a perk on their own.", "• A set plus one specific &dRelics&r item is a &esynergy&r: stronger than either alone.", "• Recipes are Create mechanical crafting and compacting. Some pieces only drop in dungeons.", "• Each piece needs a skill level. Item tooltips say which."]
+	quest.59A1B6D0EE111D6F.title: "How Gear Works"
+	quest.5A3E4BC44D6EACDE.quest_desc: ["No recipe. It waits in pillager outposts and Dungeons Arise chests; one hit in ten shocks the target.", "&7Needs Attack 50."]
+	quest.5A3E4BC44D6EACDE.title: "Stormcaller's Sabre"
 	quest.5B021E3E2BC589C2.quest_desc: ["You have the basics. Everything from here turns on rotation."]
 	quest.5B021E3E2BC589C2.quest_subtitle: "On to the First Rotation"
 	quest.5B021E3E2BC589C2.title: "&aLandfall"
@@ -244,6 +275,8 @@
 	quest.7535D89CEF267AFC.quest_subtitle: "Controlled speed"
 	quest.7535D89CEF267AFC.title: "&aThe Brass Age"
 	quest.7589B78C135663B5.title: "Aviator"
+	quest.763B2E40973AE7F7.quest_desc: ["Brass casings, andesite alloy and a lantern. The lamp alone gives Night Vision underground; the full set gives Haste and a chance of double ore drops.", "&7Needs Mining 35. With the Clot of Time relic: Haste II."]
+	quest.763B2E40973AE7F7.title: "Prospector's Set"
 	quest.76E4BD5934F09FD6.quest_desc: ["Illager Invasion adds fortified camps with new illagers: basher, provoker, invoker. Bring friends."]
 	quest.76E4BD5934F09FD6.title: "The Illager Fort"
 	quest.76FD82415416508F.title: "Lavender Valley"
@@ -258,9 +291,14 @@
 	quest.7C0C3519D95163FE.title: "The End"
 	quest.7D1807BCBA3F00E3.quest_desc: ["Put a vendor in front of your storage, set a price, and sell to anyone who walks by, even while you are offline."]
 	quest.7D1807BCBA3F00E3.title: "Open a Shop"
+	quest.7E2F07E0DFBB02E0.quest_desc: ["Iron sheets, andesite alloy and a mechanical saw in the mechanical crafter. Chop one log and the whole tree comes down.", "&7Needs Woodcutting 30."]
+	quest.7E2F07E0DFBB02E0.title: "Lumber Axe"
+	quest.7ED5141FF9D485A0.quest_desc: ["A blaze burner in the head: ores come out already smelted.", "&7Needs Mining 30."]
+	quest.7ED5141FF9D485A0.title: "Prospector's Pickaxe"
 	task.028A827B62B8932F.title: "Got it"
 	task.045C049531AE2E11.title: "I built my legacy"
 	task.1D4DC35F70270980.title: "I made some friends"
+	task.22C3280D7A0095C0.title: "Understood"
 	task.2DF4AE8FCB4E1C60.title: "I flew it"
 	task.3F6E8488F223F214.title: "My shop is open"
 	task.419615140253F3EB.title: "Understood"

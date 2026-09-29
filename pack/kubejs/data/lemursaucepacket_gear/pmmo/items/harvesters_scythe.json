@@ -1,0 +1,10 @@
+{
+  "requirements": {
+    "TOOL": {
+      "farming": 30
+    },
+    "USE": {
+      "farming": 30
+    }
+  }
+}

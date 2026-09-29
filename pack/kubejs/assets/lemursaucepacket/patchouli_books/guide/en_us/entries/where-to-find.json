@@ -1,0 +1,80 @@
+{
+  "name": "Where to find things",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:paper",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "JEI shows every recipe; this page (and the JEI info tab, the $(#e0ac46)i$() button on an item) covers what you can't craft: the modded items that only turn up in structure chests, as mob drops, from fishing or from brushing suspicious sand. Vanilla items are left out, and so are plain block drops. Generated from the pack's mod jars by $(#e0ac46)publish/sources.mjs$(), so it matches the installed versions."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Relics",
+      "text": "Relics never appear in recipes: the mod rolls them into loot chests that match each relic's theme (any chest for some, only nether- or village-flavoured chests for others). Weights are configurable in $(#e0ac46)config/relics.yaml$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Chef's Hat$() - Village and pillager chests (Pillager Outpost, Village (16 houses), Dungeons and Taverns (3 structures), When Dungeons Arise: Bandit village, and 1 more)$(br)$(bold)Chorus Staff$() - Any loot chest in the End; End and stronghold chests (End City, Stronghold (3 rooms), Dungeons and Taverns: End castle, Dungeons and Taverns: End lighthouse)$(br)$(bold)Clot of Time$() - Any loot chest in the End; End and stronghold chests (End City, Stronghold (3 rooms), Dungeons and Taverns: End castle, Dungeons and Taverns: End lighthouse)$(br)$(bold)Cut Glass Boot$() - Loot che"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "sts in ocean, beach and river biomes$(br)$(bold)Experience Disperser$() - Any loot chest$(br)$(bold)Ghostly Mantle$() - Any loot chest in the Nether; nether-themed chests (Nether Fortress, Ruined Portal, Dungeons and Taverns (5 structures), When Dungeons Arise: Foundry)$(br)$(bold)Glitchy Mantle$() - Any loot chest in the End; End and stronghold chests (End City, Stronghold (3 rooms), Dungeons and Taverns: End castle, Dungeons and Taverns: End lighthouse)$(br)$(bold)Hunting Belt$() - Village and pillager chests (Pillager Outpost, Village (16 houses), Dungeons and Taverns (3 structures), When Dungeons Arise: Bandi"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "t village, and 1 more)$(br)$(bold)Jellyfish Necklace$() - Loot chests in ocean, beach and river biomes$(br)$(bold)Kinetic Belt$() - Any loot chest in the End; End and stronghold chests (End City, Stronghold (3 rooms), Dungeons and Taverns: End castle, Dungeons and Taverns: End lighthouse)$(br)$(bold)Leafy Mantle$() - Loot chests in forest biomes; loot chests in jungle biomes$(br)$(bold)Midnight Mantle$() - Any loot chest in the End; End and stronghold chests (End City, Stronghold (3 rooms), Dungeons and Taverns: End castle, Dungeons and Taverns: End lighthouse)$(br)$(bold)Piglin Mask$() - Bastion and piglin chest"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "s (Bastion Remnant (4 rooms), Dungeons and Taverns (3 structures))$(br)$(bold)Reflective Necklace$() - Any loot chest in the Nether; nether-themed chests (Nether Fortress, Ruined Portal, Dungeons and Taverns (5 structures), When Dungeons Arise: Foundry)$(br)$(bold)Rider Flute$() - Loot chests in cave biomes; village and pillager chests (Pillager Outpost, Village (16 houses), Dungeons and Taverns (3 structures), When Dungeons Arise: Bandit village, and 1 more)$(br)$(bold)Ring of the Seven Deadly Sins$() - Any loot chest in the Nether; nether-themed chests (Nether Fortress, Ruined Portal, Dungeons and Taverns (5 st"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ructures), When Dungeons Arise: Foundry)$(br)$(bold)Roller Skate$() - Any Overworld loot chest$(br)$(bold)Shield of Retaliation$() - Any loot chest in the Nether; nether-themed chests (Nether Fortress, Ruined Portal, Dungeons and Taverns (5 structures), When Dungeons Arise: Foundry)$(br)$(bold)Sphere of Self-Sacrifice$() - Any loot chest in the Nether; nether-themed chests (Nether Fortress, Ruined Portal, Dungeons and Taverns (5 structures), When Dungeons Arise: Foundry)$(br)$(bold)Springy Boot$() - Loot chests in mountain and hill biomes"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Farmer's Delight",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Ham$() - Bastion Remnant (hoglin stable), Village butcher; dropped by Hoglins, Pigs"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Friends&Foes",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Crab Claw$() - Dropped by Crabs (Friends&Foes)$(br)$(bold)Music Disc (Cleo - Around the Corner)$() - Abandoned Mineshaft$(br)$(bold)Totem of Freezing$() - Dropped by Iceologers (Friends&Foes)$(br)$(bold)Totem of Illusion$() - Dropped by Illusioners (Friends&Foes)$(br)$(bold)Wildfire Crown Fragment$() - Dropped by Wildfires (Friends&Foes)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Illager Invasion",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Illusionary Dust$() - Illager Invasion: Illusioner tower chests; dropped by Illusioners$(br)$(bold)Lost Candle$() - Illager Invasion: Labyrinth chests$(br)$(bold)Platinum Chunk$() - Dropped by Pillagers, Ravagers, Inquisitors (Illager Invasion)$(br)$(bold)Primal Essence$() - Dropped by Invokers (Illager Invasion)$(br)$(bold)Unusual Dust$() - Illager Invasion: Sorcerer hut chests; dropped by Sorcerers (Illager Invasion)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "LemurSaucePacket",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Duelist's Pattern$() - Ancient City, Stronghold (library), When Dungeons Arise chests (38 structures)$(br)$(bold)Ember Crown$() - Bastion Remnant (treasure), Nether Fortress$(br)$(bold)Stormcaller's Sabre$() - Pillager Outpost, When Dungeons Arise chests (38 structures)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lootr",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Centennial Trophy$() - Lootr: Trophy reward"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Naturalist",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Anglerfish$() - Dropped by Anglerfish (Naturalist)$(br)$(bold)Antler$() - Dropped by Deer (Naturalist)$(br)$(bold)Azure Froglass$() - Dropped by Dragonflies (Naturalist)$(br)$(bold)Blobfish$() - Dropped by Blobfish (Naturalist)$(br)$(bold)Bushmeat$() - Dropped by Capybaras, Elephants, Giraffes, Komodo Dragons, Rhinos, Zebras (Naturalist)$(br)$(bold)Clam Meat$() - Dropped by Clams (Naturalist)$(br)$(bold)Crab Meat$() - Dropped by Crabs, Rays (Naturalist)$(br)$(bold)Crimson Froglass$() - Dropped by Dragonflies (Naturalist)$(br)$(bold)Drumstick$() - Dropped by Ostriches, Turkeys "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "(Naturalist)$(br)$(bold)Fat$() - Dropped by Boars, Mammoths, Whales (Naturalist)$(br)$(bold)Fur$() - Dropped by Bears, Black Bears, Capybaras, Lions, Mammoths, Moles, and 2 more (Naturalist)$(br)$(bold)Hide$() - Dropped by Boars, Elephants, Komodo Dragons, Rhinos (Naturalist)$(br)$(bold)Lizard Tail$() - Dropped by Lizard Tails (Naturalist)$(br)$(bold)Morsel$() - Dropped by Hedgehogs, Lizards, Rats, Snakes, Vultures (Naturalist)$(br)$(bold)Piranha$() - Dropped by Piranhas (Naturalist)$(br)$(bold)Raw Bass$() - Fishing (Naturalist); dropped by Bass (Naturalist)$(br)$(bold)Raw Catfish$() - Dropped by Catfish (Natural"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ist)$(br)$(bold)Raw Duck$() - Dropped by Ducks (Naturalist)$(br)$(bold)Raw Mammoth Meat$() - Dropped by Mammoths (Naturalist)$(br)$(bold)Scorpion Poison Gland$() - Dropped by Desert Scorpions, Jungle Scorpions (Naturalist)$(br)$(bold)Tooth$() - Dropped by Alligators, Great White Sharks, Lions, Snakes, Tigers (Naturalist)$(br)$(bold)Venison$() - Dropped by Deer (Naturalist)$(br)$(bold)Verdant Froglass$() - Dropped by Dragonflies (Naturalist)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Piglin Proliferation",
+      "text": "$(#b9a98a)Item - Where$()$(br)$(bold)Traveler's Compass$() - Piglin Proliferation: Traveler bartering"
+    }
+  ]
+}

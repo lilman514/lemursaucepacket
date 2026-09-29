@@ -116,7 +116,8 @@ async function main(): Promise<void> {
   const failure = new RegExp(
     'Mod loading has failed|Missing or unsupported mandatory dependencies|ModLoadingException|Failed to create mod instance|Crash report saved to|' +
       'Encountered an unexpected exception|Error during pre-loading phase|broken mod state' +
-      (arg('join') ? '|Disconnected from server|Couldn.t connect to server|Connection refused|Mismatched mod|Incompatible client|disconnect\\.' : '')
+      // (FallingTree logs "Disconnected from server, resetting proxy config values" on every join; that one doesn't count.)
+      (arg('join') ? '|Disconnected from server(?!, resetting)|Couldn.t connect to server|Connection refused|Mismatched mod|Incompatible client|disconnect\\.' : '')
   )
   const timeoutSec = Number(arg('timeout', '600'))
   const handle = await launchMinecraft(params)

@@ -17,7 +17,7 @@
 // Re-run after replacing any of them. The FancyMenu layouts in pack/config/fancymenu/customization
 // size the logo from its aspect ratio, which this script prints.
 
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
@@ -233,7 +233,7 @@ async function iconSheet(file, names, outputs) {
 async function icons() {
   await iconSheet('hub-icons.png', HUB_ICONS, [[HUB_ASSETS, 64, 0.02], [`${LAUNCHER_ASSETS}/icons`, 96, 0.02]])
   // Three hub buttons reuse quest emblems, so the menu and the quest book share symbols.
-  await iconSheet('emblems.png', [['', '', '', ''], ['', '', '', ''], ['backpack', '', '', 'map'], ['', 'account', 'quests', '']], [[HUB_ASSETS, 64, 0.02], [`${LAUNCHER_ASSETS}/icons`, 96, 0.02]])
+  await iconSheet('emblems.png', [['', '', '', 'capes'], ['', '', '', ''], ['backpack', '', '', 'map'], ['', 'account', 'quests', '']], [[HUB_ASSETS, 64, 0.02], [`${LAUNCHER_ASSETS}/icons`, 96, 0.02]])
   await iconSheet('skill-icons.png', SKILL_ICONS, [['pack/kubejs/assets/lemursaucepacket/textures/skills', 64, 0.02]])
   console.log(`icons: ${HUB_ICONS.flat().length + 3} hub/launcher icons, ${SKILL_ICONS.flat().length} skill icons`)
 }
@@ -335,6 +335,180 @@ async function pixelKit() {
   console.log('pixel kit: 19 vanilla widget sprites, 10 menu backgrounds/separators, plate.png, 4 Project MMO sprites, panel.png, board.png')
 }
 
+// Gear icon sheets (art/generated/gear-a.png, gear-b.png): pixel-art cells, cut to 32x32 item textures.
+const GEAR_SHEETS = {
+  'gear-a.png': [
+    ['prospector_helmet', 'prospector_chestplate', 'prospector_leggings', 'prospector_boots'],
+    ['aeronaut_helmet', 'aeronaut_chestplate', 'aeronaut_leggings', 'aeronaut_boots'],
+    ['duelist_helmet', 'duelist_chestplate', 'duelist_leggings', 'duelist_boots'],
+    ['compacted_diamond_helmet', 'compacted_diamond_chestplate', 'compacted_diamond_leggings', 'compacted_diamond_boots']
+  ],
+  'gear-b.png': [
+    ['compacted_netherite_helmet', 'compacted_netherite_chestplate', 'compacted_netherite_leggings', 'compacted_netherite_boots'],
+    ['anglers_cap', 'ember_crown', 'brass_sabre', 'sturdy_warhammer'],
+    ['stormcallers_sabre', 'lumber_axe', 'excavators_pickaxe', 'prospectors_pickaxe'],
+    ['harvesters_scythe', 'builders_wand', 'compacted_diamond', 'compacted_netherite']
+  ]
+}
+const ITEM_TEXTURES = 'pack/kubejs/assets/lemursaucepacket/textures/item'
+
+/**
+ * Gear item icons: each sheet cell is trimmed, fitted into 30x30 and centred on a 32x32 canvas with nearest
+ * sampling, so the model's pixel look survives as real pixels. Two bilinear passes first, so thin outlines don't
+ * drop out; nearest for the last step.
+ */
+async function gearIcons() {
+  let count = 0
+  for (const [file, rows] of Object.entries(GEAR_SHEETS)) {
+    if (!existsSync(source(file))) {
+      console.log(`gear icons: ${file} missing, skipped`)
+      continue
+    }
+    const sheet = await cleanAlpha(source(file))
+    const cell = sheet.info.width / 4
+    for (const [row, names] of rows.entries()) {
+      for (const [col, name] of names.entries()) {
+        const cut = await fromRaw(sheet).extract({ left: col * cell, top: row * cell, width: cell, height: cell }).raw().toBuffer({ resolveWithObject: true })
+        const raw = { data: cut.data, info: { ...cut.info, channels: 4 } }
+        const box = opaqueBounds(raw, 80)
+        const side = Math.max(box.width, box.height)
+        const cropped = await fromRaw(raw)
+          .extract(box)
+          .resize(side, side, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+          .resize(120, 120, { kernel: 'lanczos3' })
+          .resize(30, 30, { kernel: 'nearest' })
+          .png()
+          .toBuffer()
+        const { data, info } = await sharp({ create: { width: 32, height: 32, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+          .composite([{ input: cropped, left: 1, top: 1 }])
+          .raw()
+          .toBuffer({ resolveWithObject: true })
+        // Hard alpha: pixel art has no half-transparent edges.
+        for (let i = 3; i < data.length; i += 4) data[i] = data[i] >= 110 ? 255 : 0
+        await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } }).png({ compressionLevel: 9 }).toFile(target(`${ITEM_TEXTURES}/${name}.png`))
+        count++
+      }
+    }
+  }
+  console.log(`gear icons: ${count} item textures`)
+}
+
+// Armour as worn: vanilla layer textures tinted per material (see gear/gear.mjs MATERIALS). The vanilla
+// textures come from the client jar and are not kept in the repo.
+const ARMOR_LAYERS = {
+  prospector: ['iron', '#b8862b'],
+  aeronaut: ['leather', '#7a5230'],
+  duelist: ['iron', '#d9a441'],
+  compacted_diamond: ['diamond', '#4fd6d0'],
+  compacted_netherite: ['netherite', '#6b5b6f']
+}
+
+async function armorLayers() {
+  const jar = process.env.MINECRAFT_JAR ?? path.join(process.env.LOCALAPPDATA ?? '', 'Temp', 'claude', 'C--Create-Modpack', 'ab1859ba-46fb-401e-9816-544fdbbd5524', 'scratchpad', 'headless', 'minecraft', 'versions', '1.21.1', '1.21.1.jar')
+  if (!existsSync(jar)) {
+    console.log('armour layers: no client jar (set MINECRAFT_JAR), skipped')
+    return
+  }
+  const { unzipSync } = await import('fflate')
+  const zip = unzipSync(new Uint8Array(readFileSync(jar)), { filter: (f) => f.name.startsWith('assets/minecraft/textures/models/armor/') })
+  const tint = (hex) => {
+    const n = parseInt(hex.slice(1), 16)
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255]
+  }
+  for (const [material, [base, hex]] of Object.entries(ARMOR_LAYERS)) {
+    const [tr, tg, tb] = tint(hex)
+    for (const layer of [1, 2]) {
+      const name = `assets/minecraft/textures/models/armor/${base}_layer_${layer}.png`
+      if (!zip[name]) continue
+      const { data, info } = await sharp(Buffer.from(zip[name])).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
+      // Keep the vanilla shading (luminance) and give it the material's hue; leather's flat grey becomes the colour itself.
+      for (let i = 0; i < data.length; i += 4) {
+        if (data[i + 3] === 0) continue
+        const lum = (0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]) / 255
+        const k = base === 'leather' ? lum * 1.35 : lum * 1.15
+        data[i] = Math.min(255, tr * k)
+        data[i + 1] = Math.min(255, tg * k)
+        data[i + 2] = Math.min(255, tb * k)
+      }
+      await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
+        .png({ compressionLevel: 9 })
+        .toFile(target(`pack/kubejs/assets/lemursaucepacket/textures/models/armor/${material}_layer_${layer}.png`))
+    }
+  }
+  console.log(`armour layers: ${Object.keys(ARMOR_LAYERS).length} materials tinted`)
+}
+
+/**
+ * Capes (capes/capes.mjs, art/generated/capes-a.png and capes-b.png: 4x4 sheets of cape fronts in that order).
+ * Each front becomes a full cape texture in Minecraft's layout at 8x (512x256): front, back (mirrored), and
+ * 1-unit edges in the front's border colour. Animated capes get frames with a moving shimmer.
+ */
+async function capes() {
+  const { CAPES } = await import('../capes/capes.mjs')
+  const CAPE_TEXTURES = 'pack/kubejs/assets/lemursaucepacket/textures/capes'
+  const S = 8
+  const sheets = ['capes-a.png', 'capes-b.png'].filter((f) => existsSync(source(f)))
+  // A fully transparent cape for "none".
+  await sharp({ create: { width: 64, height: 32, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } }).png().toFile(target(`${CAPE_TEXTURES}/none.png`))
+  if (sheets.length === 0) {
+    console.log('capes: no sheets, skipped')
+    return
+  }
+  const fronts = []
+  for (const file of sheets) {
+    const sheet = await cleanAlpha(source(file))
+    const cell = sheet.info.width / 4
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 4; col++) {
+        const cut = await fromRaw(sheet).extract({ left: col * cell, top: row * cell, width: cell, height: cell }).raw().toBuffer({ resolveWithObject: true })
+        const raw = { data: cut.data, info: { ...cut.info, channels: 4 } }
+        const box = opaqueBounds(raw, 120)
+        fronts.push(await fromRaw(raw).extract(box).resize(10 * S, 16 * S, { fit: 'fill' }).removeAlpha().png().toBuffer())
+      }
+    }
+  }
+  const layout = async (front) => {
+    const back = await sharp(front).flop().toBuffer()
+    // Edge colour: the front's average, darkened a little.
+    const { dominant } = await sharp(front).stats()
+    const edge = { r: Math.round(dominant.r * 0.7), g: Math.round(dominant.g * 0.7), b: Math.round(dominant.b * 0.7), alpha: 1 }
+    const strip = (w, h) => sharp({ create: { width: w, height: h, channels: 4, background: edge } }).png().toBuffer()
+    return sharp({ create: { width: 64 * S, height: 32 * S, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } }).composite([
+      { input: await strip(1 * S, 16 * S), left: 0, top: 1 * S }, // left edge
+      { input: front, left: 1 * S, top: 1 * S }, // front
+      { input: await strip(1 * S, 16 * S), left: 11 * S, top: 1 * S }, // right edge
+      { input: back, left: 12 * S, top: 1 * S }, // back
+      { input: await strip(10 * S, 1 * S), left: 1 * S, top: 0 }, // top
+      { input: await strip(10 * S, 1 * S), left: 11 * S, top: 0 } // bottom
+    ])
+  }
+  let count = 0
+  for (const [i, cape] of CAPES.entries()) {
+    const front = fronts[i]
+    if (!front) {
+      console.log(`capes: no art for ${cape.id}, skipped`)
+      continue
+    }
+    await (await layout(front)).png({ compressionLevel: 9 }).toFile(target(`${CAPE_TEXTURES}/${cape.id}.png`))
+    count++
+    for (let f = 0; f < (cape.animated ?? 0); f++) {
+      // A soft diagonal highlight that travels down the cape, plus a few drifting sparkles.
+      const phase = f / cape.animated
+      const y = Math.round(16 * S * phase)
+      const shimmer = Buffer.from(
+        `<svg width="${10 * S}" height="${16 * S}"><defs><linearGradient id="g" x1="0" y1="0" x2="0.3" y2="1">` +
+          `<stop offset="${Math.max(0, phase - 0.25)}" stop-color="#fff" stop-opacity="0"/><stop offset="${phase}" stop-color="#ffe9a8" stop-opacity="0.55"/><stop offset="${Math.min(1, phase + 0.25)}" stop-color="#fff" stop-opacity="0"/>` +
+          `</linearGradient></defs><rect width="${10 * S}" height="${16 * S}" fill="url(#g)"/>` +
+          [0, 1, 2, 3].map((k) => `<circle cx="${((k * 37 + f * 11) % (10 * S - 8)) + 4}" cy="${((k * 53 + y) % (16 * S - 8)) + 4}" r="${2 + (k % 2)}" fill="#fff8d0" fill-opacity="0.85"/>`).join('') +
+          `</svg>`
+      )
+      const frame = await sharp(front).composite([{ input: shimmer, blend: 'screen' }]).png().toBuffer()
+      await (await layout(frame)).png({ compressionLevel: 9 }).toFile(target(`${CAPE_TEXTURES}/${cape.id}_f${f}.png`))
+    }
+  }
+  console.log(`capes: ${count} cape textures (${CAPES.filter((c) => c.animated).length} animated)`)
+}
+
 /** The ESC menu layout and the geometry its client script shares. */
 async function pauseMenu() {
   await writePauseLayout(target('pack/config/fancymenu/customization/lemursaucepacket_pause.txt'), target(`${MENU_ASSETS}/logo.png`))
@@ -351,3 +525,6 @@ await icons()
 await launcherKit()
 await pixelKit()
 await pauseMenu()
+await gearIcons()
+await armorLayers()
+await capes()

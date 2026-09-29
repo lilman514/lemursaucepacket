@@ -41,9 +41,14 @@ It piggybacks on infrastructure that already exists instead of hosting everythin
 | `launcher/brand.json` | **Your settings**: name, feed URL, Microsoft client ID, update repo |
 | `launcher/scripts/server.ts` | Installs or updates the dedicated server from the published pack (`npm run server`) |
 | `pack/` | The modpack, managed with packwiz (NeoForge 21.1.252, Minecraft 1.21.1) |
-| `pack/kubejs/` | Server scripts: backpack recipes, ore-vein balance, fixes for broken mod recipes |
+| `pack/kubejs/` | Scripts and the pack's resource/data pack: skills, gear behaviour, the ESC menu, backpack recipes, ore-vein balance, fixes for broken mod recipes |
 | `quests/book.mjs` | **The quest book**, as readable JavaScript. `quests/build.mjs` turns it into FTB Quests files |
-| `art/` | Generated art (title screen, loading screen, logo, quest emblems, icons) and the script that sizes it |
+| `skills/build.mjs` | The RuneScape-style skills: curve, perks, level gates (Project MMO configs) |
+| `gear/gear.mjs` | **The pack's own gear**: sets, perks, weapons, tools, recipes, loot. `gear/build.mjs` writes the scripts, gates, "How to get" tooltips and JEI pages, and the wiki page |
+| `capes/capes.mjs` | **The capes**: unlock rules and perks. `capes/build.mjs` writes the config the scripts read and the wiki page |
+| `publish/sources.mjs` | **Where loot-only items come from**: scans the mod jars' loot tables (run it by hand after changing mods) and writes the "Found in" JEI pages and tooltips plus `docs/where-to-find.md` |
+| `docs/` | **The wiki** (GitBook layout). `publish/docs.mjs` renders it to `site/wiki/`; GitBook can sync it straight from the repo |
+| `art/` | Generated art (title screen, loading screen, logo, quest emblems, icons, gear sprites) and the script that sizes it, plus the pixel widget kit |
 | `publish/feed.json` | Server address, description, news and links shown in the launcher |
 | `publish/publish.mjs` | Builds `site/` (launcher.json + .mrpack) from `pack/` |
 | `publish/serve.mjs` | Serves `site/` on http://localhost:8787 for local testing |

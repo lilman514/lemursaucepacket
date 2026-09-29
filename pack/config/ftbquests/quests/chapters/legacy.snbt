@@ -55,6 +55,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:legacy"
+					elevate_perms: true
+					id: "0B3024CBCBB1456D"
+					silent: true
+					type: "command"
+				}
 			]
 			tasks: [
 				{

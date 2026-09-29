@@ -1,0 +1,38 @@
+{
+  "name": "Quests",
+  "category": "lemursaucepacket:wiki",
+  "icon": "ftbquests:book",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it. Every quest pays $(bold)skill XP$() and most pay $(bold)coins$(); the big gear-shaped quests at the end of a chapter pay the most."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/quest-book.png"
+      ],
+      "title": "The quest book",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Chapters",
+      "text": "$(bold)The Ages$() - the main line, one chapter per stage of progress:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Chapter - What it teaches - Ends with$()$(br)$(bold)Landfall$() - Rules, first tools, first backpack, a village - A wrench$(br)$(bold)First Rotation$() - Water wheels, cogs, the millstone and press - Andesite alloy at scale$(br)$(bold)Brass Age$() - Blaze burners, mixing, brass and precision - The mechanical crafter$(br)$(bold)Banners$() - Raids, ominous banners, the illager threat - A pillager outpost cleared$(br)$(bold)Iron Roads$() - Trains, stations, signals, freight - A working line between bases$(br)$(bold)Skyward$() - Create Aeronautics: propellers, envelopes, levitite, steering - Maiden voyage$("
+    },
+    {
+      "type": "patchouli:text",
+      "text": "br)$(bold)Crown of Fire$() - The Nether, netherite, the blaze economy - A netherite tool$(br)$(bold)Legacy$() - The End, the dragon, and what comes after - The dragon egg on a pedestal$(br2)$(bold)Field Guides$() - side chapters you dip into: Backpack Workshop, Homestead (farming and cooking), Bestiary (the new mobs), Atlas (exploring, structures, ore veins) and Coin & Commerce (Numismatics).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How rewards work",
+      "text": "$(li)Coins arrive as Numismatics spurs/bevels/cogs; keep them in a bank card or a coin purse.$(br)$(li)Skill XP goes to the skill that fits the quest (mining quests pay Mining, and so on).$(br)$(li)Team progress is shared: if you're in a team, everyone gets the quest and its rewards."
+    }
+  ]
+}

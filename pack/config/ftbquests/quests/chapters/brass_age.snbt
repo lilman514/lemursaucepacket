@@ -602,6 +602,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:brass_age"
+					elevate_perms: true
+					id: "00BB778CF4772265"
+					silent: true
+					type: "command"
+				}
 			]
 			shape: "gear"
 			size: 1.75d

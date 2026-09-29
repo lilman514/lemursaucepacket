@@ -1,0 +1,37 @@
+{
+  "name": "The launcher",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:compass",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The launcher is the only thing you install. It keeps your mods identical to the server's, so \"mismatched mods\" can't happen, and it updates itself."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Home",
+      "text": "The Play button, the server's status and player list, and news from the pack's admins. When a pack update is out, the Play button says so and installs it before launching."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mods",
+      "text": "The full list of mods with a link to each one's Modrinth page. Mods marked $(bold)Optional$() are client-side extras you can switch off (shaders, first-person model, controller support…). Everything else is required by the server."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Settings",
+      "text": "$(li)$(bold)Memory:$() how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.$(br)$(li)$(bold)Window size / fullscreen.$()$(br)$(li)$(bold)Join the server automatically:$() skips the title screen.$(br)$(li)$(bold)When the game starts:$() minimise, keep or close the launcher.$(br)$(li)$(bold)Java executable / JVM arguments:$() leave empty unless you know why.$(br)$(li)$(bold)Files & repair:$() opens the game, screenshots and logs folders. $(italic)Repair & play$() re-checks every file and re-downloads anything damaged."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where things are",
+      "text": "Everything lives in $(#e0ac46)%APPDATA%\\LemurSaucePacket$(): $(#e0ac46)instance$() is the game folder (screenshots, logs, options), $(#e0ac46)minecraft$() and $(#e0ac46)runtime$() are the game and Java files it manages."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Updates",
+      "text": "The launcher checks GitHub Releases on start. When a new version has downloaded, a \"Restart to update\" chip appears in the title bar."
+    }
+  ]
+}

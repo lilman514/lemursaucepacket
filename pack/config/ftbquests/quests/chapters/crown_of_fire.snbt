@@ -284,6 +284,13 @@
 					}
 					type: "item"
 				}
+				{
+					command: "lsp cape flag {p} chapter:crown_of_fire"
+					elevate_perms: true
+					id: "65ED0FE4AF7074CF"
+					silent: true
+					type: "command"
+				}
 			]
 			shape: "gear"
 			size: 1.5d

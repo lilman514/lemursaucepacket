@@ -1,0 +1,27 @@
+{
+  "name": "The world and its rules",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:grass_block",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Rules",
+      "text": "$(li)$(bold)PvP is on$() and there are $(bold)no land claims$(). Pick your spot with care, keep valuables close, and settle things like adults.$(br)$(li)$(bold)Die and your items wait in a grave$() where you fell. Only you can open it (a teammate can with your permission).$(br)$(li)$(bold)No waystones, no teleports.$() You travel by train, airship, horse and happy ghast, so the rail network matters. Nether portals are linked properly (a portal always leads back where it came from).$(br)$(li)$(bold)The launcher decides the mods.$() Your own extras go in its Mods tab."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What's different from vanilla",
+      "text": "$(li)$(bold)Create is the spine.$() Every stage of progress runs through Create machines; other mods feed it (ore veins, crops, coins) or give it a reason to exist (structures, an economy, airships).$(br)$(li)$(bold)Terrain:$() Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.$(br)$(li)$(bold)Structures:$() When Dungeons Arise, YUNG's structures, Create-themed ruins and towns. Loot chests are per player (Lootr), so nobody gets beaten to one.$(br)$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find with a prospector and drill with Create"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " machines.$(br)$(li)$(bold)Economy:$() Numismatics coins pay for quests and missions and buy from other players' vendors.$(br)$(li)$(bold)Skills:$() RuneScape-style levels gate weapons, tools and armour and make you stronger. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play).$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for its settings; $(bold)O$() mutes your microphone."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Weekly missions",
+      "text": "Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or $(bold)H$()). They pay coins and quest XP."
+    }
+  ]
+}

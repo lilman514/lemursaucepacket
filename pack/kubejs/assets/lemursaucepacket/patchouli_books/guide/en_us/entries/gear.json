@@ -1,0 +1,70 @@
+{
+  "name": "Gear",
+  "category": "lemursaucepacket:wiki",
+  "icon": "lemursaucepacket:brass_sabre",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The pack's own tools, weapons and armour, made with Create and gated by $(l:lemursaucepacket:skills)skills$(/l). Every piece shows its stats and a \"How to get\" line in its tooltip, and JEI has the same \"how to get\" text on the item's information page (the $(#e0ac46)i$() tab next to its recipes; press R on any item)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Stats: $(bold)Damage$(), $(bold)Attack Speed$(), $(bold)Crit Chance$() (added to the Strength/Ranged crit roll), $(bold)Crit Damage$() (added to the 1.5× critical multiplier), $(bold)Defense$(), $(bold)Toughness$(), $(bold)Health$(), $(bold)Speed$(), $(bold)Luck$(). Perks are named effects a piece has on its own; a $(bold)full set$() bonus needs all four pieces; a $(bold)synergy$() is a Relics item that makes a full set stronger."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Prospector's Set",
+      "text": "Mining utility: light where you dig, haste when you commit to the whole set.$(br2)Wear: Mining 35. Defense 2/6/5/2, toughness 0.$(br2)$(#b9a98a)Piece - Stats and perk$()$(br)$(bold)Prospector's Lamp$() - Night Vision below Y=32 (alone too)$(br)$(bold)Prospector's Vest$() - -$(br)$(bold)Prospector's Trousers$() - -$(br)$(bold)Prospector's Boots$() - -$(br2)$(bold)Full set:$() Haste I, and a 15% chance of double ore drops. $(bold)With the clot of time:$() Haste II instead of Haste I.$(br2)$(bold)How to get:$() Mechanical crafting from brass casings, andesite alloy and a lamp."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Aeronaut's Set",
+      "text": "Mobility for people who live on airships and rooftops.$(br2)Wear: Agility 40. Defense 2/5/4/2, toughness 0.$(br2)$(#b9a98a)Piece - Stats and perk$()$(br)$(bold)Aeronaut's Goggles$() - -$(br)$(bold)Aeronaut's Jacket$() - -$(br)$(bold)Aeronaut's Trousers$() - -$(br)$(bold)Aeronaut's Boots$() - No fall damage (alone too)$(br2)$(bold)Full set:$() +15% speed, step up whole blocks, swim faster. $(bold)With the kinetic belt:$() another +10% speed.$(br2)$(bold)How to get:$() Mechanical crafting from leather, propeller parts and sturdy sheets."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brass Duelist Set",
+      "text": "Fighting armour: every piece sharpens your criticals.$(br2)Wear: Attack 40. Defense 3/7/5/3, toughness 1.$(br2)$(#b9a98a)Piece - Stats and perk$()$(br)$(bold)Duelist Helm$() - ☣ Crit Chance +2%$(br)$(bold)Duelist Cuirass$() - ☣ Crit Chance +2%$(br)$(bold)Duelist Greaves$() - ☣ Crit Chance +2%$(br)$(bold)Duelist Sabatons$() - ☣ Crit Chance +2%$(br2)$(bold)Full set:$() +10% crit chance and +25% crit damage. $(bold)With the ring of the seven deadly sins:$() another +15% crit damage.$(br2)$(bold)How to get:$() Mechanical crafting from brass plates, precision mechanisms and a duelist's pattern."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Compacted Diamond Set",
+      "text": "Heavy plate pressed from compacted diamond.$(br2)Wear: Defence 45. Defense 4/9/7/4, toughness 3, knockback resistance 0.1.$(br2)$(#b9a98a)Piece - Stats and perk$()$(br)$(bold)Compacted Diamond Helmet$() - -$(br)$(bold)Compacted Diamond Chestplate$() - -$(br)$(bold)Compacted Diamond Leggings$() - -$(br)$(bold)Compacted Diamond Boots$() - -$(br2)$(bold)Full set:$() Bulwark: 10% less damage from everything.$(br2)$(bold)How to get:$() Press diamonds into compacted diamond (basin + mechanical press), then mechanical crafting."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Compacted Netherite Set",
+      "text": "The last armour you will need.$(br2)Wear: Defence 60. Defense 5/10/8/5, toughness 4, knockback resistance 0.2.$(br2)$(#b9a98a)Piece - Stats and perk$()$(br)$(bold)Compacted Netherite Helmet$() - -$(br)$(bold)Compacted Netherite Chestplate$() - -$(br)$(bold)Compacted Netherite Leggings$() - -$(br)$(bold)Compacted Netherite Boots$() - -$(br2)$(bold)Full set:$() +4 hearts and Bulwark.$(br2)$(bold)How to get:$() Compacted netherite (basin + press) and smithing over compacted diamond."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Single pieces",
+      "text": "$(#b9a98a)Piece - Slot - Stats and perk - Wear - How to get$()$(br)$(bold)Angler's Cap$() - helmet - ✦ Luck +2; +2 Luck: better catches and better loot - Fishing 25 - Crafted from leather, string and a fishing rod.$(br)$(bold)Ember Crown$() - helmet - Fire Resistance while worn, +1 damage - Defence 40 - Only found in Nether fortress and bastion chests."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Weapons",
+      "text": "$(#b9a98a)Weapon - Damage - Attack speed - Extra - Wield - How to get$()$(br)$(bold)Brass Sabre$() - 6 - 2.0 - ☣ Crit Chance +10%; Fast, and +10% crit chance - Attack 25 - Mechanical crafting from brass ingots and a sturdy sheet.$(br)$(bold)Sturdy Warhammer$() - 11 - 0.8 - ➶ Knockback +1; Slow, heavy, sends things flying - Attack 45 - Mechanical crafting from sturdy sheets, a precision mechanism and a shaft.$(br)$(bold)Stormcaller's Sabre$() - 8 - 1.8 - ☣ Crit Chance +5%; One hit in ten shocks the target for 3 extra damage - Attack 50 - Only found in pillager outpost and Dungeons Arise chests."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Tools",
+      "text": "$(#b9a98a)Tool - Does - Use - How to get$()$(br)$(bold)Lumber Axe$() - Chop one log and the whole tree comes down - Woodcutting 30 - Mechanical crafting from iron sheets, andesite alloy and a mechanical saw.$(br)$(bold)Excavator's Pickaxe$() - Mines a 3x3 (sneak for a single block) - Mining 40 - Mechanical crafting from iron sheets, a drill and brass.$(br)$(bold)Prospector's Pickaxe$() - Ores come out already smelted - Mining 30 - Mechanical crafting from iron sheets, a blaze burner and copper.$(br)$(bold)Harvester's Scythe$() - Right-click: harvests and replants a 5x5 of ripe crops - Farming 30 - Mechanical craf"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ting from iron sheets, a mechanical harvester and a shaft.$(br)$(bold)Builder's Wand$() - Right-click a block face to extend it with matching blocks from your inventory (up to 32) - Crafting 30 - Mechanical crafting from brass, a precision mechanism and a schematicannon core."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Materials",
+      "text": "$(#b9a98a)Material - How to get$()$(br)$(bold)Compacted Diamond$() - Four diamonds compacted in a basin under a mechanical press.$(br)$(bold)Compacted Netherite$() - Four netherite ingots compacted in a basin under a heated mechanical press.$(br)$(bold)Duelist's Pattern$() - Only found in Dungeons Arise chests; one pattern per set piece."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Loot-only gear",
+      "text": "Some pieces never have a recipe:$(br2)$(li)$(bold)Ember Crown$(): 12% per chest in nether bridge, bastion treasure.$(br)$(li)$(bold)Stormcaller's Sabre$(): 6% per chest in pillager outpost, dungeons_arise structures.$(br)$(li)$(bold)Duelist's Pattern$(): 25% per chest in dungeons_arise structures, stronghold library, ancient city.$(br2)Generated from $(#e0ac46)gear/gear.mjs$(), so this page matches the game."
+    }
+  ]
+}

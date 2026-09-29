@@ -32,7 +32,8 @@ export const HUB_BUTTONS = {
     ['map', 'Map', 'The world map (M)', CLOSE_THEN(KEY('gui.xaero_open_map')), 'map'],
     ['quests', 'Quests', 'The quest book: guided goals with rewards', CLOSE_THEN('sendmessage;/ftbquests open_book'), 'quests'],
     ['missions', 'Missions', "This week's Create missions (H)", CLOSE_THEN(KEY('key.brassworksmissions.open_missions_ui')), 'missions'],
-    ['waypoints', 'Waypoints', 'Your waypoints: rename, colour, teleport-free travel notes (U)', CLOSE_THEN(KEY('gui.xaero_waypoints_key')), 'claims']
+    ['waypoints', 'Waypoints', 'Your waypoints: rename, colour, teleport-free travel notes (U)', CLOSE_THEN(KEY('gui.xaero_waypoints_key')), 'claims'],
+    ['capes', 'Capes', 'Your wardrobe: wear a cape you have earned (/capes)', CLOSE_THEN('sendmessage;/capes'), 'capes']
   ],
   right: [
     // The inventory's skills panel, not Project MMO's glossary: the glossary registers textures off the render
@@ -40,7 +41,8 @@ export const HUB_BUTTONS = {
     ['skills', 'Skills', 'Your skills and levels, in the inventory (E). Item tooltips show what each level unlocks.', CLOSE_THEN(KEY('key.inventory')), 'skills'],
     ['backpack', 'Backpack', "Open the backpack you're wearing (B)", CLOSE_THEN(KEY('key.sophisticatedbackpacks.open_backpack')), 'backpack'],
     ['team', 'Team', 'Your team: invite friends, share quest progress (;)', CLOSE_THEN(KEY('key.ftbteams.open_gui')), 'team'],
-    ['voice', 'Voice', 'Voice chat: volume, groups and your microphone (V)', CLOSE_THEN(KEY('key.voice_chat')), 'voice']
+    ['voice', 'Voice', 'Voice chat: volume, groups and your microphone (V)', CLOSE_THEN(KEY('key.voice_chat')), 'voice'],
+    ['guide', 'Guide', 'The in-game wiki: everything about the pack (/guide)', CLOSE_THEN('sendmessage;/guide'), 'news']
   ]
 }
 
@@ -69,7 +71,8 @@ export async function pauseLayout(logoFile) {
   const meta = await sharp(logoFile).metadata()
   const logoH = 22
   const logoW = Math.round((logoH * meta.width) / meta.height)
-  const column = (side, x, top) => HUB_BUTTONS[side].map((b, i) => hubButton(b, x, top + i * BUTTON.pitch)).join('')
+  // The left column's fifth button (Capes) sits under the three info lines.
+  const column = (side, x, top) => HUB_BUTTONS[side].map((b, i) => hubButton(b, x, i === 4 ? 86 : top + i * BUTTON.pitch)).join('')
   const info = (line, i) => text(`info_${i}`, line, PANELS.left.x + 4, 48 + i * 11, PANELS.left.w - 8, '#E8DCC0')
   const placeholder = (name) => `{"placeholder":"${name}"}`
   const replace = (text, search, replacement) => `{"placeholder":"replace_text","values":{"text":"${text}","search":"${search}","replacement":"${replacement}"}}`
@@ -98,21 +101,20 @@ export async function pauseLayout(logoFile) {
     title('GAME MENU', 0, PANELS.center.y + 4),
     title('PLAYER', PANELS.right.x + PANELS.right.w / 2, PANELS.right.y + 4),
     column('left', PANELS.left.x + 3, -50),
-    column('right', PANELS.right.x + 3, 10),
-    // The player, as they look right now, at the top of the right panel with their name under them.
+    column('right', PANELS.right.x + 3, -8),
+    // The player, as they look right now, at the top of the right panel (the name tag is drawn over the head).
     element('player_entity_v2', 'player', {
       anchor_point: 'mid-centered',
       x: PANELS.right.x + 20,
       y: -66,
       width: 50,
-      height: 58,
+      height: 54,
       copy_client_player: true,
-      showname: false,
+      showname: true,
       head_follows_mouse: true,
       body_follows_mouse: false,
       body_movement: false
     }),
-    text('player_name', placeholder('playername'), PANELS.right.x + 4, -4, PANELS.right.w - 8),
     // Where the player is, under the adventure buttons.
     info(`X ${placeholder('player_x_coordinate')}  Z ${placeholder('player_z_coordinate')}`, 0),
     info(`Y ${placeholder('player_y_coordinate')}  ${placeholder('world_daytime_hour')}:${placeholder('world_daytime_minute')}`, 1),
