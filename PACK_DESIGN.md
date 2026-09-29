@@ -53,6 +53,7 @@ Each chapter opens with a painted crest and an info card. The card says what the
   - pump, battery and mob catcher, because Create does those jobs;
   - infinity.
 - No backpacks in loot chests or on mobs. Magnet range is 4. XP pump mending is off.
+- Create Backpack Upgrades adds a pressing and a mixing upgrade that run Create recipes inside the backpack, without rotational power. This was the server owner's call. Their recipes need the real machines: a mechanical press, depot and brass casing, or a mixer, basin, fluid tank and blaze burner. So they're a Brass-age convenience rather than a way around building the machines.
 
 **Ore veins (Create Ore Excavation):** veins are infinite and hidden per chunk, which gives prospecting a purpose. Diamond, emerald and netherite veins are removed, because infinite diamonds would flatten both progression and villager trading (`ore_veins.js`).
 
@@ -77,7 +78,7 @@ Each chapter opens with a painted crest and an info card. The card says what the
 - Numismatics
 - Farmer's Delight with Slice & Dice and Central Kitchen
 - Create Ore Excavation
-- Sophisticated Backpacks' Create integration
+- Sophisticated Backpacks' Create integration, and Create Backpack Upgrades (pressing and mixing upgrades)
 - KubeJS with KubeJS Create
 
 **Worldgen and structures:**
@@ -107,7 +108,10 @@ Each chapter opens with a painted crest and an info card. The card says what the
 - Create: Cyber Goggles (exact numbers when wearing goggles).
 - Enchantment Descriptions, Better Advanced Tooltips, AppleSkin.
 
-**Quality of life:** Mouse Tweaks, Just Zoom, Controlling, Searchables, Chat Heads, Shulker Box Tooltip, Inventory Essentials, and Controlify (controller support, off by default).
+**Quality of life:**
+- Sorting: Sophisticated Inventory Interactions adds sort, sort-mode, search and transfer-all buttons to chests, barrels, shulker boxes and your own inventory, matching the backpacks' controls.
+- Mouse Tweaks, Inventory Essentials, Searchables, Shulker Box Tooltip.
+- Just Zoom, Controlling, Chat Heads, and Controlify (controller support, off by default).
 
 **Performance.** These mirror Fabulously Optimized where NeoForge builds exist:
 - Rendering: Sodium, Sodium Extra, Reese's Sodium Options, ImmediatelyFast.
@@ -137,6 +141,14 @@ Launcher toggles: 18 client mods are optional on the launcher's Mods page. Shade
 - Create Deco 2.1.3's "wash a placard with white dye" recipe uses an ingredient format 1.21 rejects.
 
 Remove an entry when the mod fixes it upstream.
+
+**Sable Assembly Fix** closes an airship duplication exploit.
+- When Sable 2.0.5 assembles blocks into a ship, it copies each block entity onto the ship, then removes the original block.
+- Block entities that don't implement Minecraft's `Clearable` keep their contents, so the removed original drops them too.
+- Tested in this pack, that duplicated items on weighted ejectors, mechanical arms and andesite, brass and copper table cloths.
+- Backpacks, Numismatics vendors, vaults, toolboxes, copycats and the other storage blocks tested were already safe.
+- The mod clears every such block entity first. It crashes at startup, rather than failing silently, if a Sable update moves the code it patches.
+- Sable's own `sable:silent_assembly_removal` block tag is the fallback if the mod ever lags behind Sable.
 
 ## Known quirks
 

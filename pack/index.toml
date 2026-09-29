@@ -320,6 +320,11 @@ hash = "3b8895369640b2a52d3e05f7186185ba6798e44d513f11c5427a0fe9c16769e9"
 metafile = true
 
 [[files]]
+file = "mods/create-backpack-upgrades.pw.toml"
+hash = "576b0fe42b0896a69ace00599ecb673ab7bddc553f6ef9e10e0fe41ef40305ba"
+metafile = true
+
+[[files]]
 file = "mods/create-central-kitchen.pw.toml"
 hash = "07c51c2d97b8a9dd5fefb51798923f5621d46f5db44b4d7327a567f945f375f0"
 metafile = true
@@ -735,6 +740,11 @@ hash = "e55ca32b338a0e0540f4fec5170675d860566255ae0f45692a00cb4ebf2eb535"
 metafile = true
 
 [[files]]
+file = "mods/sable-assembly-fix.pw.toml"
+hash = "a68b0924c8a76b0571f5cfdc9b833f1a8c83c4bdd6803336b64971f971334e97"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "a1fa121ed5d0207e4cdd3f545d043f68f9a4bb38dcb21278b968fad5e4cefe4a"
 metafile = true
@@ -792,6 +802,11 @@ metafile = true
 [[files]]
 file = "mods/sophisticated-core.pw.toml"
 hash = "5d4e493a74a7deb175d278274e6990f92d1a3910fae5d4866a1520bbca9acce2"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-inventory-interactions.pw.toml"
+hash = "77a67db95237817f5a3bbf8254769548d3b331ca8f1322cd443e4f41b0d03b17"
 metafile = true
 
 [[files]]
