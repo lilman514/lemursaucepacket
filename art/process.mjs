@@ -22,7 +22,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import { BOARD, PANELS, PLAQUE, hubLayoutJson, writePauseLayout } from './hub.mjs'
-import { STYLE, board, checkbox, panel, plate, plateTile, pmmoAtlas, scroller, scrollerBackground, separator, sliderHandle, tab, textField } from './pixel-kit.mjs'
+import { STYLE, board, checkbox, panel, plate, plateTile, pmmoAtlas, rowPlate, scroller, scrollerBackground, separator, sliderHandle, tab, textField } from './pixel-kit.mjs'
 
 const artDir = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(artDir, '..')
@@ -311,8 +311,8 @@ async function pixelKit() {
   // The same plate behind the quest book (see pack/kubejs/assets/ftbquests/ftb_quests_theme.txt).
   await plateTile().png().toFile(target('pack/kubejs/assets/lemursaucepacket/textures/gui/plate.png'))
   // Project MMO's skill rows and small buttons.
-  await plate(123, 24, STYLE.normal).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/stat_background.png'))
-  await plate(123, 24, STYLE.hover).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/stat_background_highlighted.png'))
+  await rowPlate(false).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/stat_background.png'))
+  await rowPlate(true).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/stat_background_highlighted.png'))
   await plate(20, 18, STYLE.normal, { rivets: false }).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/pmmo_button.png'))
   await plate(20, 18, STYLE.hover, { rivets: false }).png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/sprites/pmmo_button_highlighted.png'))
   await pmmoAtlas().png().toFile(target('pack/kubejs/assets/pmmo/textures/gui/player_stats.png'))

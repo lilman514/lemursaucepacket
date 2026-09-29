@@ -202,7 +202,7 @@ hash = "10b0af2fb4c92dbf9ef6d79c107b82aa34840cc0df37e1d8a09a3d2a78d10c65"
 
 [[files]]
 file = "config/pmmo-client.toml"
-hash = "a566e1167868f401d521f70a2b73c183ed2c93ed47200c798d1922bd76e651b2"
+hash = "4c5cfe3563c307db1cf1b92a1ed901ee831b374d9f031b442c6ca991b42bd6f0"
 
 [[files]]
 file = "config/shouldersurfing-client.toml"
@@ -558,7 +558,7 @@ hash = "dbcaeb75879e0dba9c1614de555683d00e992b6a2288d412217ad26572db21ee"
 
 [[files]]
 file = "kubejs/assets/pmmo/textures/gui/player_stats.png"
-hash = "27867b1dc2fa75ae8be4a36947ef8665bf24d3109e223f8e4a4c24912d0730e0"
+hash = "2f17198e8ab7777e2c4da09217c62059e0a2afb2405b633d502b9927d589fba9"
 
 [[files]]
 file = "kubejs/assets/pmmo/textures/gui/sprites/pmmo_button.png"
@@ -570,11 +570,11 @@ hash = "176988ff41ad97b89c38c1dd60a90fc4db755d9c6c48727405bc1e807fc82560"
 
 [[files]]
 file = "kubejs/assets/pmmo/textures/gui/sprites/stat_background.png"
-hash = "517fe9d726cb99ae6bf5d3a14b4bafdbb9e7b9b1c54144c6a9f851b0494c6c9f"
+hash = "0c3bbb8f45bcfe04c890e6413077525d1bfba19a3a060186c96aa83c349f5242"
 
 [[files]]
 file = "kubejs/assets/pmmo/textures/gui/sprites/stat_background_highlighted.png"
-hash = "7205a580e96b186fab9719ebc5981c7f45284e26fff21f400ef6ceb3277a272d"
+hash = "9efc7a56135b350da23976c97a2f79e4dc5f6e325bb39a4d42245d94542116ff"
 
 [[files]]
 file = "kubejs/client_scripts/keybinds.js"
@@ -902,7 +902,7 @@ hash = "22e62837a7e60199c572e4a89459f29044afb288bf9a7b57ee9a309236878c5f"
 
 [[files]]
 file = "kubejs/data/pmmo/config/skills.json"
-hash = "3a96eb4e0d4fd0cf30bc198e12aa9cba5c1dac2db04907d2a8c578bad3e3cbf2"
+hash = "ee55f3be815348813a4994a6e64d6d2e92adb768c6ba8250d83866fdfd1d9f95"
 
 [[files]]
 file = "kubejs/server_scripts/backpacks.js"

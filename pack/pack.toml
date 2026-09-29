@@ -1,12 +1,12 @@
 name = "LemurSaucePacket"
 author = "LemurSaucePacket admins"
-version = "1.0.6"
+version = "1.0.7"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "1828021946c667a90114d81689f527204206bd67b5757902fcc8573f0a26d6b0"
+hash = "a5a541789602f6f35a1ddd25a9c20bd4a25a8db6bba63eec85450ac81dc822a7"
 
 [versions]
 minecraft = "1.21.1"

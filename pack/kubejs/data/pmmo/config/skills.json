@@ -1,79 +1,79 @@
 {
   "skills": {
     "attack": {
-      "color": 10165276,
+      "color": 15229498,
       "icon": "lemursaucepacket:textures/skills/attack.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "strength": {
-      "color": 1014330,
+      "color": 15229498,
       "icon": "lemursaucepacket:textures/skills/strength.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "defence": {
-      "color": 3890085,
+      "color": 15229498,
       "icon": "lemursaucepacket:textures/skills/defence.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "ranged": {
-      "color": 7048739,
+      "color": 15229498,
       "icon": "lemursaucepacket:textures/skills/ranged.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "hitpoints": {
-      "color": 12597547,
+      "color": 15229498,
       "icon": "lemursaucepacket:textures/skills/hitpoints.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "mining": {
-      "color": 8359053,
+      "color": 9421898,
       "icon": "lemursaucepacket:textures/skills/mining.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "woodcutting": {
-      "color": 9132587,
+      "color": 9421898,
       "icon": "lemursaucepacket:textures/skills/woodcutting.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "farming": {
-      "color": 3055183,
+      "color": 9421898,
       "icon": "lemursaucepacket:textures/skills/farming.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "fishing": {
-      "color": 3447003,
+      "color": 9421898,
       "icon": "lemursaucepacket:textures/skills/fishing.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "cooking": {
-      "color": 13849600,
+      "color": 14724166,
       "icon": "lemursaucepacket:textures/skills/cooking.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "smithing": {
-      "color": 9807270,
+      "color": 14724166,
       "icon": "lemursaucepacket:textures/skills/smithing.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "crafting": {
-      "color": 10506797,
+      "color": 14724166,
       "icon": "lemursaucepacket:textures/skills/crafting.png",
       "iconSize": 64,
       "maxLevel": 99
     },
     "agility": {
-      "color": 1752220,
+      "color": 7321576,
       "icon": "lemursaucepacket:textures/skills/agility.png",
       "iconSize": 64,
       "maxLevel": 99
@@ -82,7 +82,7 @@
   "types": {
     "combat": {
       "order": 0,
-      "color": 10165276,
+      "color": 15229498,
       "skills": [
         "attack",
         "strength",
@@ -93,7 +93,7 @@
     },
     "gathering": {
       "order": 1,
-      "color": 8359053,
+      "color": 9421898,
       "skills": [
         "mining",
         "woodcutting",
@@ -103,7 +103,7 @@
     },
     "artisan": {
       "order": 2,
-      "color": 13849600,
+      "color": 14724166,
       "skills": [
         "cooking",
         "smithing",
@@ -112,7 +112,7 @@
     },
     "support": {
       "order": 3,
-      "color": 1752220,
+      "color": 7321576,
       "skills": [
         "agility"
       ]

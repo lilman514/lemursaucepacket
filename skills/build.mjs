@@ -38,30 +38,30 @@ const RUNESCAPE_LEVELS = (() => {
   return out
 })()
 
-// Skill icons are the pack's own art (art/generated/skill-icons.png, cut by art/process.mjs into
+// Skill colours are one per group (ember, green, brass, sky), matching the UI kit. Skill icons are the pack's own art (art/generated/skill-icons.png, cut by art/process.mjs into
 // pack/kubejs/assets/lemursaucepacket/textures/skills), in the same style as the quest emblems.
 const SKILL_ICON_SIZE = 64
 const SKILLS = {
   combat: {
-    attack: ['Attack', 0x9b1c1c],
-    strength: ['Strength', 0x0f7a3a],
-    defence: ['Defence', 0x3b5ba5],
-    ranged: ['Ranged', 0x6b8e23],
-    hitpoints: ['Hitpoints', 0xc0392b]
+    attack: ['Attack', 0xe8623a],
+    strength: ['Strength', 0xe8623a],
+    defence: ['Defence', 0xe8623a],
+    ranged: ['Ranged', 0xe8623a],
+    hitpoints: ['Hitpoints', 0xe8623a]
   },
   gathering: {
-    mining: ['Mining', 0x7f8c8d],
-    woodcutting: ['Woodcutting', 0x8b5a2b],
-    farming: ['Farming', 0x2e9e4f],
-    fishing: ['Fishing', 0x3498db]
+    mining: ['Mining', 0x8fc44a],
+    woodcutting: ['Woodcutting', 0x8fc44a],
+    farming: ['Farming', 0x8fc44a],
+    fishing: ['Fishing', 0x8fc44a]
   },
   artisan: {
-    cooking: ['Cooking', 0xd35400],
-    smithing: ['Smithing', 0x95a5a6],
-    crafting: ['Crafting', 0xa0522d]
+    cooking: ['Cooking', 0xe0ac46],
+    smithing: ['Smithing', 0xe0ac46],
+    crafting: ['Crafting', 0xe0ac46]
   },
   support: {
-    agility: ['Agility', 0x1abc9c]
+    agility: ['Agility', 0x6fb7e8]
   }
 }
 const TYPE_NAMES = { combat: 'Combat', gathering: 'Gathering', artisan: 'Artisan', support: 'Support' }

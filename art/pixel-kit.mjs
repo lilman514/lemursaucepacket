@@ -287,11 +287,23 @@ export function pmmoAtlas() {
   p.vline(5, 5, h - 10, C.ironDeep)
   p.grain(6, 6, w - 12, h - 12, 2)
   for (const [x, y] of [[2, 2], [w - 5, 2], [2, h - 5], [w - 5, h - 5]]) p.rivet(x, y, 3)
-  p.fill(0, 217, 102, 5, C.ironDeep)
-  p.hline(0, 217, 102, C.outline)
-  p.hline(0, 221, 102, C.ironLight)
-  const fill = [C.brassHi, C.brassLight, C.brass, C.brassDark, C.brassDeep]
-  fill.forEach((c, i) => p.hline(0, 223 + i, 102, c))
+  // The mod tints both bars with the skill's colour, so they are greys: a dark track, a bright fill.
+  ;[[20, 18, 16], [60, 56, 52], [60, 56, 52], [60, 56, 52], [78, 72, 66]].forEach(([r, g, b], i) => p.hline(0, 217 + i, 102, [r, g, b, 255]))
+  ;[[255, 255, 255], [236, 236, 236], [222, 222, 222], [196, 196, 196], [150, 150, 150]].forEach(([r, g, b], i) => p.hline(0, 223 + i, 102, [r, g, b, 255]))
+  return p
+}
+
+/**
+ * A skill row in Project MMO's panels (123x24, stretched to the row): a plain dark plate with a thin outline,
+ * so the icon, the coloured name and the progress bar carry the row. Hover warms the face.
+ */
+export function rowPlate(hover = false) {
+  const p = new Pix(123, 24)
+  p.fill(0, 0, 123, 24, hover ? C.amber : C.ironDark)
+  p.grain(0, 0, 123, 24, 2)
+  p.box(0, 0, 123, 24, C.outline)
+  p.hline(1, 1, 121, hover ? C.amberHi : C.ironLight)
+  p.hline(1, 22, 121, C.ironDeep)
   return p
 }
 
