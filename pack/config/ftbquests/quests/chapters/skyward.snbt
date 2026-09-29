@@ -15,10 +15,10 @@
 			rotation: 0.0d
 			width: 2.0d
 			x: 0.35d
-			y: -2.0d
+			y: -1.9d
 		}
 		{
-			height: 2.527659574468085d
+			height: 2.297872340425532d
 			id: "1E6AC162DFC49BA8"
 			image: "lemursaucepacket:textures/quests/panel.png"
 			rotation: 0.0d
@@ -29,7 +29,7 @@
 			text_v_align: "start"
 			width: 6.995744680851065d
 			x: 4.6d
-			y: -2.0d
+			y: -1.9d
 		}
 	]
 	order_index: 5
@@ -75,7 +75,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.9d
+			y: 2.1d
 		}
 		{
 			dependencies: ["5C3D41ADDC1598B1"]
@@ -118,7 +118,7 @@
 				}
 			]
 			x: 2.3d
-			y: 2.1d
+			y: 1.3d
 		}
 		{
 			dependencies: ["51B2C901491D69B0"]
@@ -187,7 +187,7 @@
 				}
 			]
 			x: 2.3d
-			y: 3.7d
+			y: 2.9d
 		}
 		{
 			dependencies: ["51B2C901491D69B0"]
@@ -232,41 +232,7 @@
 			y: 2.1d
 		}
 		{
-			dependencies: ["51B2C901491D69B0"]
-			icon: {
-				id: "aeroclaims:claim_block"
-			}
-			id: "2BA812CEDF7B09A9"
-			rewards: [
-				{
-					id: "7ADAEBAC316493C5"
-					type: "xp"
-					xp: 26
-				}
-				{
-					id: "52F3E22E6EACE67B"
-					item: {
-						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-			]
-			tasks: [
-				{
-					id: "726ECCAED505DE15"
-					item: {
-						count: 1
-						id: "aeroclaims:claim_block"
-					}
-					type: "item"
-				}
-			]
-			x: 4.6d
-			y: 3.7d
-		}
-		{
-			dependencies: ["3073E0625A50D025", "53CEE449BE9A4679", "2BA812CEDF7B09A9"]
+			dependencies: ["3073E0625A50D025", "53CEE449BE9A4679"]
 			icon: {
 				id: "aeronautics:propeller_bearing"
 			}
@@ -295,7 +261,7 @@
 				}
 			]
 			x: 6.9d
-			y: 2.1d
+			y: 1.3d
 		}
 	]
 }

@@ -31,18 +31,16 @@
 	image.12E3C18622AFD831.title: " \\n&6&lBestiary\\n&r&7New faces, old foes.\\n \\n&r&fThe world has new creatures and\\n&r&ftougher bosses. Track down each one.\\n \\n&r&eRewards:\\n&r&fcoins for every first encounter, and\\n&r&ftips on what each creature does.\\n "
 	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
 	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7The server economy runs on Numismatics.\\n \\n&r&fQuest rewards are Numismatics coins. Trade them\\n&r&fwith other players or open a shop of your own.\\n \\n&r&eUnlocks:\\n&r&fpay-to-use machines, player shops that\\n&r&fsell while you're offline, and bank accounts.\\n "
-	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery.\\n \\n&r&eUnlocks:\\n&r&fflying bases, travel over any terrain,\\n&r&fand claims that protect your ship.\\n "
+	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery.\\n \\n&r&eUnlocks:\\n&r&fflying bases and travel over any terrain.\\n "
 	image.314F29A3CC992CB6.title: " \\n&6&lBackpack Workshop\\n&r&7Fair backpacks: every tier is\\n&r&7built from its age's Create parts.\\n \\n&r&fBackpacks here follow your Create progress:\\n&r&feach tier needs parts from the matching age.\\n \\n&r&eUnlocks:\\n&r&fmore room on the move, plus pickup,\\n&r&fmagnet, feeding and restock upgrades.\\n "
 	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fcoins for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
 	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
 	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
-	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, claim a safe base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fa protected claim, your first backpack,\\n&r&fand the wrench that starts Create.\\n "
+	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, settle a base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fyour first backpack, a bed in a village,\\n&r&fand the wrench that starts Create.\\n "
 	image.5C7F14B75509F33F.title: " \\n&6&lIron Roads\\n&r&7Trains, stations and freight.\\n \\n&r&fLay track between bases, run trains on schedules,\\n&r&fand let parcels and stock links move your goods.\\n \\n&r&eUnlocks:\\n&r&ffast travel between towns, automated freight, and\\n&r&fordering items from anywhere on your network.\\n "
 	image.5D0CDDF39B344909.title: " \\n&6&lBanners of the Overworld\\n&r&7Outposts, forts and ruined\\n&r&7factories. Salvage what you can.\\n \\n&r&fPillagers hold the high ground and old Create ruins\\n&r&fdot the world. Fight, explore and bring the loot home.\\n \\n&r&eUnlocks:\\n&r&fraid and fort loot, salvaged Create parts,\\n&r&fand cheaper trades as Hero of the Village.\\n "
 	image.62A8A054B28677FD.title: " \\n&6&lCrown of Fire\\n&r&7The Nether, properly.\\n \\n&r&fBrave fortresses and bastions for blaze\\n&r&frods, netherite and the Wither's star.\\n \\n&r&eUnlocks:\\n&r&fsuperheated blaze burners for the hardest\\n&r&frecipes, netherite gear, and a beacon.\\n "
 	image.7367AF30B1A8A05A.title: " \\n&6&lLegacy\\n&r&7The End, and what you leave behind.\\n \\n&r&fFace the dragon, earn your wings, and\\n&r&fturn enchanting into an assembly line.\\n \\n&r&eUnlocks:\\n&r&felytra flight, automated enchanting, banking,\\n&r&fand a build the whole server will remember.\\n "
-	quest.003B74D7023418AD.quest_desc: ["Open the world map with &eM&r, right-click the chunks around your base and choose &eClaim&r.", "Claimed chunks are protected from other players, their contraptions and their airships.", "", "&7Press ' for the claims menu. Put friends in your party so they can build in your claim."]
-	quest.003B74D7023418AD.title: "Stake Your Claim"
 	quest.007E391695FCA435.quest_desc: ["Iron sheets and andesite casing."]
 	quest.007E391695FCA435.title: "Iron Backpack"
 	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this."]
@@ -117,8 +115,6 @@
 	quest.29458506A5E19077.title: "Fortress"
 	quest.29D9FF7A83EFDE49.title: "Hold the Line"
 	quest.2B59BEE4CAA41223.title: "The Invoker"
-	quest.2BA812CEDF7B09A9.quest_desc: ["Place a claim block on your ship and open it. Turn some of your land claims into &eaero-claims&r: each one protects part of the ship, so bigger ships need more.", "&7Press Refresh in the claim block after you enlarge the ship."]
-	quest.2BA812CEDF7B09A9.title: "Claim Your Ship"
 	quest.2C051675480F108F.quest_desc: ["Andesite plus iron nuggets (or zinc) makes the alloy almost every early machine needs."]
 	quest.2C051675480F108F.title: "Andesite Alloy"
 	quest.2CD0388FFD593882.title: "&5The Dragon"
@@ -198,7 +194,7 @@
 	quest.5B021E3E2BC589C2.title: "&aLandfall"
 	quest.5B2998A954FA90AD.quest_desc: ["Raise your own banner over what you have taken back."]
 	quest.5B2998A954FA90AD.title: "&aBanners of the Overworld"
-	quest.5B6534D87A4D5267.quest_desc: ["This is a Create server that still feels like Minecraft.", "", "&eThe rules of the world:&r", "• &cPvP is on.&r Claim your land so your builds are safe.", "• Die and your items wait in a &egrave&r where you fell.", "• No waystones or teleports. You travel by &etrain, airship, horse and happy ghast&r, so the rail network matters.", "• The launcher keeps everyone on the same mods. Your own extras live in its Mods tab.", "", "&7Quests never lock content. They are a road map and they pay you in coins."]
+	quest.5B6534D87A4D5267.quest_desc: ["This is a Create server that still feels like Minecraft.", "", "&eThe rules of the world:&r", "• &cPvP is on&r and there are no land claims. Pick your spot with care and keep valuables close.", "• Die and your items wait in a &egrave&r where you fell.", "• No waystones or teleports. You travel by &etrain, airship, horse and happy ghast&r, so the rail network matters.", "• The launcher keeps everyone on the same mods. Your own extras live in its Mods tab.", "", "&7Quests never lock content. They are a road map and they pay you in coins."]
 	quest.5B6534D87A4D5267.quest_subtitle: "Read me first"
 	quest.5B6534D87A4D5267.title: "&6Welcome to LemurSaucePacket"
 	quest.5C3D41ADDC1598B1.quest_desc: ["A propeller bearing with blades attached pushes air. Mount one on anything you want to move."]
@@ -264,7 +260,6 @@
 	quest.7D1807BCBA3F00E3.title: "Open a Shop"
 	task.028A827B62B8932F.title: "Got it"
 	task.045C049531AE2E11.title: "I built my legacy"
-	task.1BBD804E98164CF0.title: "I claimed my land"
 	task.1D4DC35F70270980.title: "I made some friends"
 	task.2DF4AE8FCB4E1C60.title: "I flew it"
 	task.3F6E8488F223F214.title: "My shop is open"

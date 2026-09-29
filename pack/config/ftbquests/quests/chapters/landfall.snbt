@@ -27,8 +27,8 @@
 			text_on_image: true
 			text_shadow: true
 			text_v_align: "start"
-			width: 7.276595744680851d
-			x: 4.25d
+			width: 6.970212765957447d
+			x: 4.1d
 			y: -2.0d
 		}
 	]
@@ -65,7 +65,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.4d
+			y: 1.6d
 		}
 		{
 			dependencies: ["5B6534D87A4D5267"]
@@ -88,36 +88,6 @@
 			]
 			x: 2.3d
 			y: 0.75d
-		}
-		{
-			dependencies: ["5B6534D87A4D5267"]
-			icon: {
-				id: "minecraft:white_banner"
-			}
-			id: "003B74D7023418AD"
-			rewards: [
-				{
-					id: "0813EAECA110C123"
-					type: "xp"
-					xp: 18
-				}
-				{
-					id: "21EE4D369B411D73"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
-					}
-					type: "item"
-				}
-			]
-			tasks: [
-				{
-					id: "1BBD804E98164CF0"
-					type: "checkmark"
-				}
-			]
-			x: 2.3d
-			y: 4.0d
 		}
 		{
 			dependencies: ["5B6534D87A4D5267"]

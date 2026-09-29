@@ -114,7 +114,7 @@ hash = "89c7757dc3aacc26acb364469a56259ab50b81fb93ee2844d5a57a2b6d87be7a"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_pause.txt"
-hash = "dc6881ad911613635d91180b5e4d4d75bf4d2a43509084fd21d28b27f6084b99"
+hash = "05ec8b9dae903f9411bdfd2a1c44e2ead253cc166eafe35fb7eaa69e2404ed63"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_title.txt"
@@ -170,7 +170,7 @@ hash = "fca52b7c3deb1d10349e77daad288515eeea0a1ab2159a8086f52118739f3b91"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landfall.snbt"
-hash = "ed5c05772a59d981ea61986a5678a7145d1b2849506449b2d143800dbe391954"
+hash = "d502635afcd50200221f0f8e65b60b80e4f40a821f9ffc5f6f410a8e98a154af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/legacy.snbt"
@@ -178,7 +178,7 @@ hash = "d2f50b7469a468d5030de2d386303da1e9e124e7b3cc209fdacc2087dfc69a95"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
-hash = "88f65cd68eae1df1bbd3bd9b5be225f66aa46273d6768a849d6279c4d1831bec"
+hash = "0f1668b51783d673411410e74d40df933b117156212dd859618ff5577fe94c3a"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -186,7 +186,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "a308fa93bb57987411a48fe24e807769fd9b9346ae9587895c60741d85a79927"
+hash = "af9c230e0eeccc20eb48d7b6b854c8590dace0ac75360539f1b3d31384a3a9d9"
 
 [[files]]
 file = "config/iris.properties"
@@ -202,7 +202,7 @@ hash = "10b0af2fb4c92dbf9ef6d79c107b82aa34840cc0df37e1d8a09a3d2a78d10c65"
 
 [[files]]
 file = "config/pmmo-client.toml"
-hash = "c852b335929aaa003c2ea4c9ed1ca874f4f484cd0de8254563cd0632c3a1b725"
+hash = "a566e1167868f401d521f70a2b73c183ed2c93ed47200c798d1922bd76e651b2"
 
 [[files]]
 file = "config/shouldersurfing-client.toml"
@@ -578,7 +578,7 @@ hash = "7205a580e96b186fab9719ebc5981c7f45284e26fff21f400ef6ceb3277a272d"
 
 [[files]]
 file = "kubejs/client_scripts/keybinds.js"
-hash = "e14785c496e7b068865080ce86427fa1026b7926ea5411afba02429ecf6d9e2c"
+hash = "70a07c2944903328e42c5bd795e0f2f1586d87afa4a322c998d50224201b72f3"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_ancient_debris.json"
@@ -927,11 +927,6 @@ hash = "6f25eef3ebe438cb4e6f8b980de628b6abaf33d1c204182528dbba3f1bc35939"
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "4a5a13e918e04a66edcbe7c829d4f999775998ff7f2e93369edba830fcac0c5e"
-metafile = true
-
-[[files]]
-file = "mods/aeroclaims.pw.toml"
-hash = "1c5563e7403bacd29da9faac0d4ca293165f11bebd1a282322134a4912b3bb0a"
 metafile = true
 
 [[files]]
@@ -1415,11 +1410,6 @@ hash = "840eb517a83c586b9f543ab9781d4c8529b6fedf2d679f411577c7a583e50fe5"
 metafile = true
 
 [[files]]
-file = "mods/open-parties-and-claims.pw.toml"
-hash = "97660396e7f075f4c9ca8447878ec3da58ebea9ed464cdb494d4db1d62989936"
-metafile = true
-
-[[files]]
 file = "mods/packet-fixer.pw.toml"
 hash = "84cb0dcad9ac46d22adba4fb7924951affa6ac5e46027a3b25fa9a0db8d91b2b"
 metafile = true
@@ -1711,7 +1701,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "06bbab57f4c5d715418e4d6d2200c48a0fdab4aee3b000ebafda4d22146c8bbd"
+hash = "4502e5e46a36de35527e1488fca5342905d163584c732f122beb185b3c16ad24"
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"

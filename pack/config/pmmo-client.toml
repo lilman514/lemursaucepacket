@@ -56,11 +56,11 @@
 		#should skillups only show in chat if content is actually unlocked.
 		strict_skillup_unlocks = true
 		#if true, the skills side panel on the inventory screen starts expanded instead of collapsed.
-		skill_panel_open_by_default = false
+		skill_panel_open_by_default = true
 		#extra pixels to push the top of the skills side panel down. Useful when an overlay mod (e.g. EMI) does not register its widgets on the screen and the panel cannot detect them automatically.
-		skill_panel_top_margin = 0
+		skill_panel_top_margin = 4
 		#extra pixels to lift the bottom of the skills side panel up. Useful when an overlay mod (e.g. EMI) does not register its widgets on the screen and the panel cannot detect them automatically.
-		skill_panel_bottom_margin = 0
+		skill_panel_bottom_margin = 26
 
 	#Generic Tooltip Settings
 	[Client.ToolTip_Settings]

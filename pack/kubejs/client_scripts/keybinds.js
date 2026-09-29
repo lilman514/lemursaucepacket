@@ -4,14 +4,17 @@
 // version this moves a key only if it's still on the default that clashes (e.g. Project MMO's glossary on P,
 // which is also Social Interactions): anything a player rebound themselves is left alone.
 // The ESC menu's buttons press some of these keys (config/fancymenu/customization/lemursaucepacket_pause.txt).
-const KEYBIND_RULES_VERSION = 1
+const KEYBIND_RULES_VERSION = 2
 const KEYBIND_RULES = [
   // [keybind, only if currently on, move to]
-  ['key.pmmo.openMenu', 'key.keyboard.p', 'key.keyboard.k'], // Skills (ESC menu); P is Social Interactions
+  // Project MMO's glossary crashes with Sodium in this pack (it registers a texture per biome off the render
+  // thread), so it stays unbound; the inventory's skills panel is the skills screen.
+  ['key.pmmo.openMenu', 'key.keyboard.p', 'key.keyboard.unknown'],
+  ['key.pmmo.openMenu', 'key.keyboard.k', 'key.keyboard.unknown'],
   ['key.kubejs.kubedex', 'key.keyboard.k', 'key.keyboard.unknown'],
   ['key.pmmo.showList', 'key.keyboard.left.alt', 'key.keyboard.unknown'], // Left Alt is Create's toolbelt
   ['key.pmmo.showVein', 'key.keyboard.tab', 'key.keyboard.unknown'], // Tab is the player list
-  ['key.pmmo.cyclevein', 'key.keyboard.apostrophe', 'key.keyboard.unknown'], // ' is the claims menu
+  ['key.pmmo.cyclevein', 'key.keyboard.apostrophe', 'key.keyboard.unknown'], // vein mining is off in this pack
   ['key.pmmo.addVein', 'key.keyboard.left.bracket', 'key.keyboard.unknown'],
   ['key.pmmo.subVein', 'key.keyboard.right.bracket', 'key.keyboard.unknown'],
   ['key.hide_icons', 'key.keyboard.h', 'key.keyboard.unknown'], // H opens Missions (ESC menu)

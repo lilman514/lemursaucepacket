@@ -168,20 +168,20 @@ element {
 }
 element {
   element_type = custom_button
-  instance_identifier = lsp_pause_claims_12
+  instance_identifier = lsp_pause_waypoints_12
   anchor_point = mid-centered
   x = -197
   y = 19
   width = 84
   height = 20
-  label = Claims
-  description = Claim land and choose who can use it (')
-  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;gui.xaero_pac_key_open_menu%btnaction_splitter_fm%
+  label = Waypoints
+  description = Your waypoints: rename, colour, teleport-free travel notes (U)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;gui.xaero_waypoints_key%btnaction_splitter_fm%
   stay_on_screen = true
 }
 element {
   element_type = image
-  instance_identifier = lsp_pause_claims_icon_13
+  instance_identifier = lsp_pause_waypoints_icon_13
   source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/claims.png
   anchor_point = mid-centered
   x = -194
@@ -200,8 +200,8 @@ element {
   width = 84
   height = 20
   label = Skills
-  description = Your skills, levels and what they unlock (K)
-  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.pmmo.openMenu|||true|||150%btnaction_splitter_fm%
+  description = Your skills and levels, in the inventory (E). Item tooltips show what each level unlocks.
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.inventory%btnaction_splitter_fm%
   stay_on_screen = true
 }
 element {
@@ -248,7 +248,7 @@ element {
   width = 84
   height = 20
   label = Team
-  description = Your team: invite friends, share claims (;)
+  description = Your team: invite friends, share quest progress (;)
   buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.ftbteams.open_gui%btnaction_splitter_fm%
   stay_on_screen = true
 }

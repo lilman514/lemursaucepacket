@@ -11,9 +11,14 @@
   "links": [],
   "news": [
     {
+      "title": "Land claims are gone",
+      "date": "2026-09-29",
+      "body": "Open Parties and Claims and Aeroclaims have been removed: no more chunk claims, so pick your spot with care and keep valuables close. The ESC menu's Claims button is now Waypoints, and Skills opens the skills panel in your inventory."
+    },
+    {
       "title": "A new look, one kit everywhere",
       "date": "2026-09-29",
-      "body": "The ESC menu is now a riveted board: Map, Quests, Missions and Claims on the left, your character with Skills, Backpack, Team and Voice on the right, and every usual button in the middle. Brass buttons and iron plates run through every screen, the quest book and the skills screen, with icons painted in the same style. The launcher got the same treatment. Press ESC in-game and have a look."
+      "body": "The ESC menu is now a riveted board: Map, Quests, Missions and Waypoints on the left, your character with Skills, Backpack, Team and Voice on the right, and every usual button in the middle. Brass buttons and iron plates run through every screen, the quest book and the skills screen, with icons painted in the same style. The launcher got the same treatment. Press ESC in-game and have a look."
     },
     {
       "title": "Welcome to LemurSaucePacket",

@@ -8,7 +8,7 @@ Why the pack is built the way it is. The README covers how to run it.
 2. **It still feels like Minecraft.** The vanilla crafting grid, vanilla mobs and biomes, vanilla screens (re-skinned in one brass-and-iron kit, not replaced). Mods enhance these rather than replace them. New mobs, biomes and structures look like things Mojang could have added.
 3. **Exploration has a purpose.** Structures are built from Create blocks and hold Create parts. Infinite ore veins are something to find and claim. The Atlas and Banners quest chapters pay for going out and looking.
 4. **A fair SMP.** PvP is on, so the rules protect builders:
-   - land and airship claims;
+   - no land claims (the owner's call): what you build is yours to defend, so bases go where you can watch them;
    - graves for your items;
    - no minimap radar or cave maps;
    - backpacks that don't replace chests.
@@ -22,12 +22,12 @@ FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a r
 
 | Chapter | What it covers | Milestone |
 |---|---|---|
-| Landfall | Rules, claims, first tools, first backpack, a village | A wrench |
+| Landfall | Rules, first tools, first backpack, a village | A wrench |
 | First Rotation | Andesite age: water and wind power, presses, fans, belts, contraptions, zinc, ore veins | 32 andesite casing |
 | Brass Age | Blaze burners, mixing, brass, precision mechanisms, arms, crafters, steam, electricity | Rotation speed controller |
 | Banners of the Overworld | Outposts, raids, the Illager fort and Invoker, Create ruins (lost station, sky-pirate airship, quarry, castle) | Raise your banner |
 | Iron Roads | Track, stations, schedules, signals, departure boards, parcels, stock keeping, factory gauges | Connect two towns |
-| Skyward | Create Aeronautics: propellers, envelopes, burners, levitite, steering, ship claims | Maiden voyage |
+| Skyward | Create Aeronautics: propellers, envelopes, burners, levitite, steering | Maiden voyage |
 | Crown of Fire | Fortresses, bastions, piglin castes, blaze cakes, netherite | The Wither |
 | Legacy | Stronghold, the End, the dragon, elytra, enchantment industry, crushing wheels, banking | Build your legacy |
 
@@ -87,8 +87,8 @@ Every 10 levels sets off fireworks and lists what the new level unlocks. Crits a
 **Dungeons.** When Dungeons Arise adds 30+ large dungeons. Its loot includes three enchantments of its own. Lootr gives every player their own copy of each loot chest, so nobody gets beaten to one.
 
 **The ESC menu is a hub** (see "Look and feel" below for how it's drawn).
-- **Adventure panel:** Map, Quests, Missions, Claims, and where you are (coordinates, time, biome).
-- **Player panel:** your character, Skills (Project MMO's glossary of what each level unlocks), Backpack, Team, Voice.
+- **Adventure panel:** Map, Quests, Missions, Waypoints, and where you are (coordinates, time, biome).
+- **Player panel:** your character, Skills (the inventory's skills panel; item tooltips show what each level needs), Backpack, Team, Voice.
 - **Game Menu panel:** every vanilla and mod button, moved in but never removed; "Options" reads "Settings".
 - It's a FancyMenu layout (`config/fancymenu/customization/lemursaucepacket_pause.txt`, written by `art/hub.mjs`). Its buttons press the matching keys, so the pack sets a key layout without clashes:
   - `options.txt` for new installs;
@@ -99,10 +99,10 @@ Every 10 levels sets off fireworks and lists what the new level unlocks. Crits a
   |---|---|
   | M | Map |
   | H | Missions |
-  | K | Skills |
+  | E | Skills (inventory panel) |
   | B | Backpack |
   | ; | Team |
-  | ' | Claims |
+  | U | Waypoints |
   | V | Voice chat |
 
 ## Look and feel: one kit everywhere
@@ -112,7 +112,7 @@ Everything a player looks at outside the world — the launcher, the loading scr
 - **Materials:** dark riveted iron plates, polished brass bands with corner rivets, parchment text, amber for hover. The palette is sampled from the logo (`art/pixel-kit.mjs` has the hex values).
 - **Widgets:** the pack replaces the vanilla button, slider, tab, text field, checkbox and scrollbar sprites and the menu backgrounds with pixel-drawn brass versions (a resource pack in `kubejs/assets`). Anything that uses vanilla widgets — the options screens, FTB Quests, most mod screens — inherits the look. The launcher draws its buttons, fields and cards from the same sprites at 3×.
 - **Icons:** the ESC menu, the launcher pages and the 13 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
-- **The ESC menu** is a riveted board with three recessed panels: *Adventure* (Map, Quests, Missions, Claims, plus where you are), *Game Menu* (the vanilla pause buttons, moved into the panel; "Options" is renamed "Settings") and *Player* (your character, Skills, Backpack, Team, Voice). Buttons added by other mods land in free slots or a tray under Disconnect, so nothing disappears. The vanilla "Game Menu" title is blanked through a language override.
+- **The ESC menu** is a riveted board with three recessed panels: *Adventure* (Map, Quests, Missions, Waypoints, plus where you are), *Game Menu* (the vanilla pause buttons, moved into the panel; "Options" is renamed "Settings") and *Player* (your character, Skills, Backpack, Team, Voice). Buttons added by other mods land in free slots or a tray under Disconnect, so nothing disappears. The vanilla "Game Menu" title is blanked through a language override.
 
 Not skinned, on purpose: inventories and machine GUIs (Create's own look is part of the pack's identity), Brassworks Missions, Xaero's map screens and JEI. They sit inside the brass-framed screens rather than fighting them.
 
@@ -142,7 +142,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 
 **PvP fairness:**
 - Xaero's minimap and world map run in fair-play mode (no entity radar, no cave maps), enforced by Xaero's server profiles in `pack/config/xaero/*/server_profiles/`.
-- Open Parties and Claims protects land, and Aeroclaims protects airships.
+- No land-claim mod, by the owner's decision; graves and the rules in the Landfall chapter are the safety net.
 - Gravestone keeps your items where you died.
 
 **Economy:** quest rewards are Numismatics coins (spur 1, bevel 8, sprocket 16, cog 64, crown 512, sun 4096), not items. Coins buy things from other players' shops, so progress feeds trade instead of skipping it.
@@ -174,7 +174,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Illager Invasion, Piglin Proliferation, Guard Villagers
 - Vanilla Backport (happy ghast, pale garden, creaking), with its compatibility patch
 
-**SMP:** Open Parties and Claims, Aeroclaims, Simple Voice Chat (proximity voice), Gravestone, Xaero's Minimap and World Map, FTB Quests (with FTB Library and Teams).
+**SMP:** Simple Voice Chat (proximity voice), Gravestone, Xaero's Minimap and World Map, FTB Quests (with FTB Library and Teams).
 
 **RPG layer:** Project MMO (skills), Create: Brassworks Missions, When Dungeons Arise, Lootr, Sable Assembly Fix.
 
@@ -253,6 +253,7 @@ Remove an entry when the mod fixes it upstream.
   - the broken recipe files that `fixes.js` replaces (the jars still contain them; the replacements load fine).
 - **Create trains through Nether portals:** trains can cross them, but riders can get kicked. Send freight across unmanned (the Iron Roads chapter says so).
 - **Chat verification toast:** it only appears on offline-mode test servers.
+- **Project MMO's glossary is off-limits** (its key is unbound and nothing links to it). Opening it builds every section on a thread pool and registers a `textures/biome/<id>.png` texture per biome off the render thread; with Terralith, Regions Unexplored and Nullscape that's hundreds of missing textures racing the texture manager, and Sodium crashes (`DynamicTexture cannot be cast to TextureAtlasAccessor`). PMMO 2.10.47 is the latest at the time of writing. The skills panel in the inventory is the skills screen; item tooltips show level requirements.
 
 ## Credits
 

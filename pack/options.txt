@@ -10,7 +10,7 @@ key_key.voice_chat_group:key.keyboard.unknown
 key_key.shouldersurfing.swap_shoulder:key.keyboard.unknown
 key_key.shouldersurfing.free_look:key.keyboard.unknown
 key_gui.xaero_enlarge_map:key.keyboard.unknown
-key_key.pmmo.openMenu:key.keyboard.k
+key_key.pmmo.openMenu:key.keyboard.unknown
 key_key.kubejs.kubedex:key.keyboard.unknown
 key_key.pmmo.showList:key.keyboard.unknown
 key_key.pmmo.showVein:key.keyboard.unknown

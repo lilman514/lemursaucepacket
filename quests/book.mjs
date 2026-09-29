@@ -46,8 +46,8 @@ export default {
       group: 'ages',
       title: 'Landfall',
       subtitle: 'Find your feet in a world that has been reworked.',
-      about: "Start here. Learn the server's rules, claim a safe base, and gather the basics every other chapter builds on.",
-      unlocks: "a protected claim, your first backpack, and the wrench that starts Create.",
+      about: "Start here. Learn the server's rules, settle a base, and gather the basics every other chapter builds on.",
+      unlocks: "your first backpack, a bed in a village, and the wrench that starts Create.",
       icon: 'minecraft:oak_sapling',
       quests: [
         {
@@ -61,7 +61,7 @@ export default {
             'This is a Create server that still feels like Minecraft.',
             '',
             '&eThe rules of the world:&r',
-            '• &cPvP is on.&r Claim your land so your builds are safe.',
+            '• &cPvP is on&r and there are no land claims. Pick your spot with care and keep valuables close.',
             '• Die and your items wait in a &egrave&r where you fell.',
             '• No waystones or teleports. You travel by &etrain, airship, horse and happy ghast&r, so the rail network matters.',
             '• The launcher keeps everyone on the same mods. Your own extras live in its Mods tab.',
@@ -87,20 +87,6 @@ export default {
           ],
           tasks: [{ checkmark: true, title: 'Got it' }],
           reward: { xp: 5 }
-        },
-        {
-          key: 'claim',
-          title: 'Stake Your Claim',
-          after: ['welcome'],
-          icon: 'minecraft:white_banner',
-          desc: [
-            'Open the world map with &eM&r, right-click the chunks around your base and choose &eClaim&r.',
-            'Claimed chunks are protected from other players, their contraptions and their airships.',
-            '',
-            tip("Press ' for the claims menu. Put friends in your party so they can build in your claim.")
-          ],
-          tasks: [{ checkmark: true, title: 'I claimed my land' }],
-          reward: { coins: 8 }
         },
         {
           key: 'workbench',
@@ -723,7 +709,7 @@ export default {
       title: 'Skyward',
       subtitle: 'Create Aeronautics: balloons, propellers and airships.',
       about: "Build ships that fly. Lift, thrust and steering all come from real Create machinery.",
-      unlocks: "flying bases, travel over any terrain, and claims that protect your ship.",
+      unlocks: "flying bases and travel over any terrain.",
       icon: 'aeronautics:propeller_bearing',
       quests: [
         {
@@ -777,20 +763,9 @@ export default {
           reward: { coins: 64 }
         },
         {
-          key: 'claim_ship',
-          title: 'Claim Your Ship',
-          after: ['envelope'],
-          desc: [
-            'Place a claim block on your ship and open it. Turn some of your land claims into &eaero-claims&r: each one protects part of the ship, so bigger ships need more.',
-            tip('Press Refresh in the claim block after you enlarge the ship.')
-          ],
-          tasks: [{ item: 'aeroclaims:claim_block' }],
-          reward: { coins: 16 }
-        },
-        {
           key: 'maiden_voyage',
           title: '&aMaiden Voyage',
-          after: ['smart', 'levitite', 'claim_ship'],
+          after: ['smart', 'levitite'],
           shape: 'gear',
           size: 1.75,
           desc: ['Fly a ship you built from one of your bases to another without touching the ground.'],

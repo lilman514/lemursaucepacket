@@ -32,12 +32,14 @@ export const HUB_BUTTONS = {
     ['map', 'Map', 'The world map (M)', CLOSE_THEN(KEY('gui.xaero_open_map')), 'map'],
     ['quests', 'Quests', 'The quest book: guided goals with rewards', CLOSE_THEN('sendmessage;/ftbquests open_book'), 'quests'],
     ['missions', 'Missions', "This week's Create missions (H)", CLOSE_THEN(KEY('key.brassworksmissions.open_missions_ui')), 'missions'],
-    ['claims', 'Claims', "Claim land and choose who can use it (')", CLOSE_THEN(KEY('gui.xaero_pac_key_open_menu')), 'claims']
+    ['waypoints', 'Waypoints', 'Your waypoints: rename, colour, teleport-free travel notes (U)', CLOSE_THEN(KEY('gui.xaero_waypoints_key')), 'claims']
   ],
   right: [
-    ['skills', 'Skills', 'Your skills, levels and what they unlock (K)', CLOSE_THEN(KEY('key.pmmo.openMenu', 150)), 'skills'],
+    // The inventory's skills panel, not Project MMO's glossary: the glossary registers textures off the render
+    // thread while it loads every biome, which crashes with Sodium in a pack with this many biomes.
+    ['skills', 'Skills', 'Your skills and levels, in the inventory (E). Item tooltips show what each level unlocks.', CLOSE_THEN(KEY('key.inventory')), 'skills'],
     ['backpack', 'Backpack', "Open the backpack you're wearing (B)", CLOSE_THEN(KEY('key.sophisticatedbackpacks.open_backpack')), 'backpack'],
-    ['team', 'Team', 'Your team: invite friends, share claims (;)', CLOSE_THEN(KEY('key.ftbteams.open_gui')), 'team'],
+    ['team', 'Team', 'Your team: invite friends, share quest progress (;)', CLOSE_THEN(KEY('key.ftbteams.open_gui')), 'team'],
     ['voice', 'Voice', 'Voice chat: volume, groups and your microphone (V)', CLOSE_THEN(KEY('key.voice_chat')), 'voice']
   ]
 }
