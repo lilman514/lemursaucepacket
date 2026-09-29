@@ -83,6 +83,7 @@ Each chapter opens with a painted crest and an info card. The card says what the
 
 **Worldgen and structures:**
 - Terrain and biomes: Terralith, Tectonic, Lithostitched, Nullscape.
+- New trees: Regions Unexplored. It adds about 18 woods, among them maple, redwood, willow, magnolia, baobab, cypress and blackwood, in forests that turn up between Terralith's biomes. In a 1,600-point sample of the biome map, about 7% was Regions Unexplored, 31% Terralith and the rest vanilla, mostly ocean. It's by the author of Tectonic and Lithostitched, and version 0.6 places its biomes through Lithostitched.
 - Structures: YUNG's (11 mods), Structory and Structory Towers, Towns and Towers, Dungeons and Taverns.
 - Create-built structures: Create: Structures Arise, Let the Adventure Begin, Rustic Structures.
 - Support: Sparse Structures keeps structures from crowding, and Structure Layout Optimizer keeps generation fast.
@@ -107,6 +108,16 @@ Each chapter opens with a painted crest and an info card. The card says what the
 - Jade with Jade Addons.
 - Create: Cyber Goggles (exact numbers when wearing goggles).
 - Enchantment Descriptions, Better Advanced Tooltips, AppleSkin.
+
+**Building:**
+- Macaw's Furniture: chairs, tables, desks, counters, wardrobes.
+- Woodworks: vanilla-style chests, bookshelves, ladders, beehives and boards in every wood, plus a sawmill.
+- Every Compat makes each wood in the pack available for:
+  - those two mods;
+  - Create's windows;
+  - Farmer's Delight's cabinets.
+
+  It adds about 1,700 blocks for Regions Unexplored's woods.
 
 **Quality of life:**
 - Sorting: Sophisticated Inventory Interactions adds sort, sort-mode, search and transfer-all buttons to chests, barrels, shulker boxes and your own inventory, matching the backpacks' controls.
