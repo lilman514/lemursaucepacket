@@ -1,0 +1,13 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:cake",
+    "minecraft:rabbit_stew",
+    "minecraft:golden_carrot"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "cooking": 20
+    }
+  }
+}

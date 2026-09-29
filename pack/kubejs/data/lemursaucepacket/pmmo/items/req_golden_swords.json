@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:golden_sword"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 10
+    },
+    "WEAR": {
+      "attack": 10
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

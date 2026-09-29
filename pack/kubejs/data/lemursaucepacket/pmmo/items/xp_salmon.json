@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:salmon"
+  ],
+  "xp_values": {
+    "FISH": {
+      "fishing": 15
+    }
+  }
+}

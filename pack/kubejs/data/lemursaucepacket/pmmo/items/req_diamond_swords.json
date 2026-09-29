@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:diamond_sword"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 30
+    },
+    "WEAR": {
+      "attack": 30
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

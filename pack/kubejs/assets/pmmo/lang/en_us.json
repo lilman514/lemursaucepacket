@@ -1,0 +1,19 @@
+{
+  "pmmo.attack": "Attack",
+  "pmmo.strength": "Strength",
+  "pmmo.defence": "Defence",
+  "pmmo.ranged": "Ranged",
+  "pmmo.hitpoints": "Hitpoints",
+  "pmmo.mining": "Mining",
+  "pmmo.woodcutting": "Woodcutting",
+  "pmmo.farming": "Farming",
+  "pmmo.fishing": "Fishing",
+  "pmmo.cooking": "Cooking",
+  "pmmo.smithing": "Smithing",
+  "pmmo.crafting": "Crafting",
+  "pmmo.agility": "Agility",
+  "pmmo.type.combat": "Combat",
+  "pmmo.type.gathering": "Gathering",
+  "pmmo.type.artisan": "Artisan",
+  "pmmo.type.support": "Support"
+}

@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#c:ores/emerald"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "mining": 100
+    }
+  }
+}

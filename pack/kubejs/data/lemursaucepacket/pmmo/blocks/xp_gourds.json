@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:melon",
+    "minecraft:pumpkin"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "farming": 6
+    }
+  }
+}

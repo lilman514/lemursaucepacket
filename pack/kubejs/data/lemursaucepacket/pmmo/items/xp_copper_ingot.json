@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:copper_ingot"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "smithing": 5
+    }
+  }
+}

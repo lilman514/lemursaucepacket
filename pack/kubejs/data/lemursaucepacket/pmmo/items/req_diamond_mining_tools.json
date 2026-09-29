@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:diamond_pickaxe",
+    "minecraft:diamond_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 30
+    }
+  }
+}

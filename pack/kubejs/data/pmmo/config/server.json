@@ -1,0 +1,204 @@
+{
+  "general": {
+    "creative_reach": 50,
+    "salvage_block": "minecraft:smithing_table",
+    "treasure_enabled": false,
+    "brewing_tracked": true
+  },
+  "levels": {
+    "max_level": 99,
+    "static_levels": [
+      0,
+      83,
+      91,
+      102,
+      112,
+      124,
+      138,
+      151,
+      168,
+      185,
+      204,
+      226,
+      249,
+      274,
+      304,
+      335,
+      369,
+      408,
+      450,
+      497,
+      548,
+      606,
+      667,
+      737,
+      814,
+      898,
+      990,
+      1094,
+      1207,
+      1332,
+      1470,
+      1623,
+      1791,
+      1977,
+      2182,
+      2409,
+      2658,
+      2935,
+      3240,
+      3576,
+      3947,
+      4358,
+      4810,
+      5310,
+      5863,
+      6471,
+      7144,
+      7887,
+      8707,
+      9612,
+      10612,
+      11715,
+      12934,
+      14278,
+      15764,
+      17404,
+      19214,
+      21212,
+      23420,
+      25856,
+      28546,
+      31516,
+      34795,
+      38416,
+      42413,
+      46826,
+      51699,
+      57079,
+      63019,
+      69576,
+      76818,
+      84812,
+      93638,
+      103383,
+      114143,
+      126022,
+      139138,
+      153619,
+      169608,
+      187260,
+      206750,
+      228269,
+      252027,
+      278259,
+      307221,
+      339198,
+      374502,
+      413482,
+      456519,
+      504037,
+      556499,
+      614422,
+      678376,
+      748985,
+      826944,
+      913019,
+      1008052,
+      1112977,
+      1228825
+    ],
+    "loss_on_death": 0,
+    "lose_only_excess": true,
+    "global_modifier": 1,
+    "skill_modifiers": {
+      "hitpoints": 0.33
+    },
+    "xp_min": 200,
+    "xp_base": 1.025,
+    "per_level": 1.1
+  },
+  "requirements": {
+    "requirement_enabled": {
+      "USE_ENCHANTMENT": false,
+      "KILL": false,
+      "TRAVEL": false,
+      "RIDE": false,
+      "TAME": false,
+      "BREED": false,
+      "ENTITY_INTERACT": false
+    }
+  },
+  "xp_gains": {
+    "reuse_penalty": 0,
+    "perks_plus_config": false,
+    "player_actions": {
+      "SPRINTING": {
+        "agility": 0.5
+      },
+      "JUMP": {
+        "agility": 2.5
+      },
+      "SPRINT_JUMP": {
+        "agility": 2.5
+      }
+    },
+    "damage": {
+      "DEAL_DAMAGE": {
+        "minecraft:player_attack": {
+          "attack": 4,
+          "strength": 4,
+          "hitpoints": 1.33
+        },
+        "#minecraft:is_projectile": {
+          "attack": 2,
+          "ranged": 4,
+          "hitpoints": 1.33
+        }
+      },
+      "RECEIVE_DAMAGE": {
+        "minecraft:mob_attack": {
+          "hitpoints": 1
+        },
+        "minecraft:player_attack": {
+          "hitpoints": 1
+        },
+        "#minecraft:is_projectile": {
+          "hitpoints": 1
+        }
+      },
+      "MITIGATE_DAMAGE": {
+        "minecraft:mob_attack": {
+          "defence": 4
+        },
+        "minecraft:player_attack": {
+          "defence": 4
+        },
+        "#minecraft:is_projectile": {
+          "defence": 4
+        }
+      }
+    }
+  },
+  "party": {
+    "party_range": 50,
+    "party_bonus": {}
+  },
+  "mob_scaling": {
+    "enabled": false,
+    "scaling_aoe": 150,
+    "base_level": 0,
+    "boss_scaling": 1.1,
+    "use_exponential_formula": true,
+    "per_level": 1,
+    "power_base": 1.104088404342588,
+    "ratios": {}
+  },
+  "vein_miner": {
+    "enabled": false,
+    "require_settings": false,
+    "default_consume": 1,
+    "charge_modifier": 1,
+    "blacklist": []
+  }
+}

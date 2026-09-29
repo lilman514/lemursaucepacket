@@ -43,6 +43,11 @@
 			id: "5C3D41ADDC1598B1"
 			rewards: [
 				{
+					id: "014DAE11E5B4242E"
+					type: "xp"
+					xp: 42
+				}
+				{
 					id: "73C87E2C71C708FC"
 					item: {
 						count: 2
@@ -79,6 +84,11 @@
 			}
 			id: "51B2C901491D69B0"
 			rewards: [
+				{
+					id: "2B7A6238BB8F284B"
+					type: "xp"
+					xp: 58
+				}
 				{
 					id: "5CF5C591FD03C0F4"
 					item: {
@@ -118,6 +128,11 @@
 			id: "53CEE449BE9A4679"
 			rewards: [
 				{
+					id: "670F773B37B82DA4"
+					type: "xp"
+					xp: 58
+				}
+				{
 					id: "29C876408ABC6704"
 					item: {
 						count: 3
@@ -148,6 +163,11 @@
 			id: "7589B78C135663B5"
 			rewards: [
 				{
+					id: "60C57CAB366144B0"
+					type: "xp"
+					xp: 26
+				}
+				{
 					id: "5346A7F2A70DB958"
 					item: {
 						count: 1
@@ -176,6 +196,11 @@
 			}
 			id: "3073E0625A50D025"
 			rewards: [
+				{
+					id: "5E2A0D491B5E0F6B"
+					type: "xp"
+					xp: 74
+				}
 				{
 					id: "43632BDE9D69E762"
 					item: {
@@ -214,6 +239,11 @@
 			id: "2BA812CEDF7B09A9"
 			rewards: [
 				{
+					id: "7ADAEBAC316493C5"
+					type: "xp"
+					xp: 26
+				}
+				{
 					id: "52F3E22E6EACE67B"
 					item: {
 						count: 1
@@ -245,7 +275,7 @@
 				{
 					id: "215ED0BE376778CB"
 					type: "xp"
-					xp: 150
+					xp: 798
 				}
 				{
 					id: "3A2D612D0F060E57"

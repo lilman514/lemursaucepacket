@@ -1,0 +1,32 @@
+{
+  "enabled": false,
+  "enabled_requirements": {},
+  "enabled_xp_awards": {},
+  "xp_awards": {
+    "rarities_multiplier": 10,
+    "item_xp": {},
+    "block_xp": {},
+    "axe_breakable_override": {},
+    "hoe_breakable_override": {},
+    "shovel_breakable_override": {},
+    "entity_xp": {}
+  },
+  "requirements": {
+    "items": {},
+    "shovel_override": {},
+    "sword_override": {},
+    "axe_override": {},
+    "hoe_override": {},
+    "penalties": {
+      "minecraft:slowness": 2,
+      "minecraft:weakness": 1
+    },
+    "block_default": {}
+  },
+  "tweaks": {
+    "hardness_modifier": 0.65,
+    "tool_tweaks": {},
+    "wearable_tweaks": {},
+    "entity_tweaks": {}
+  }
+}

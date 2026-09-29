@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:netherite_pickaxe",
+    "minecraft:netherite_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 50
+    }
+  }
+}

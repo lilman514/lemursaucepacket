@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:*"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "crafting": 3
+    }
+  }
+}

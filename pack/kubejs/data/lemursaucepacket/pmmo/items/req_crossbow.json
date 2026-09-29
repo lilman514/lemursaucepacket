@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:crossbow"
+  ],
+  "requirements": {
+    "USE": {
+      "attack": 15
+    },
+    "WEAPON": {
+      "attack": 15
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/brassworksmissions-server.toml"
+hash = "ca6ceb882bcc50e62253db61156068fe8fb3d0fa90a2d5968d0f32344486bb4d"
+
+[[files]]
 file = "config/fancymenu/assets/lemursaucepacket/loading.jpg"
 hash = "1c7457de126a4871f905537f8c434546d622eef23ae5d40777799bf50cb7ba0c"
 
@@ -14,11 +18,15 @@ hash = "3fcf5cfc35044e2c633391725dfb22dcda57477e49d9fd7bb14cdc01a0d6c494"
 
 [[files]]
 file = "config/fancymenu/customizablemenus.txt"
-hash = "8e15b8fdd11e054e25d49c37ce6a448807a7e6e34f9c3b46dc4d222aa0aca44b"
+hash = "b0f5169a67538e0a89046c5c65afa9aa643dd3b0ffeef279f52d50eaad9d6975"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_loading.txt"
 hash = "9d066db56bcca6e0f1898693b9d184de71ee0fe99f2d27f2c24cfb11d318ec8d"
+
+[[files]]
+file = "config/fancymenu/customization/lemursaucepacket_pause.txt"
+hash = "ca96c038cb1bdc1cb262bf424ef7715fc3104fa2eebbdd5bbf680565f3fd580f"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_title.txt"
@@ -34,55 +42,55 @@ hash = "b13971265ec59eed4896d19410a411e2d4be4c3a1cf8991ce391485f4fd1c4ac"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/atlas.snbt"
-hash = "e472bab6b2c340c9644f58212405aa16946122a08e30d711f1e1cd47053867fb"
+hash = "c0167f29ca3fc20de5320c93af80e4a71ca9befe2225e07f71e2b8a93264de01"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/backpack_workshop.snbt"
-hash = "3710374c46b824f97e1bbd22dce83c917e04c8b506e8c3c6f450dafaa8b3fec2"
+hash = "a02d4996427d5abce9f75f3deba1db912adc1795df39a1b9b0011e261b0590bb"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/banners.snbt"
-hash = "784c4b83929dbc3ad5bcbcbbea8b43b24bc5feaa98400e756b16bd6760becfff"
+hash = "c3540527bd2a42c5e7d13d76f76df48cbe90d87bef382b6e8abf81a9f5729080"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/bestiary.snbt"
-hash = "1eb44dabff1718bec0ce01306e80db22f2f453b28e14b7bdbfbcafd34db6895f"
+hash = "da25058bf9986587a110dc65798c791c3b586dedf155530ca2bd04a2082268ff"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/brass_age.snbt"
-hash = "f0b2a010aaffcc23871eb6bf63baacac366042c0ec36cc5cd73d8baa6c6e2f57"
+hash = "0ddbee7e6f4ade0a08fee29938a037ae0f6665def271f44d416aea9176022bd0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/commerce.snbt"
-hash = "167c67f63852fe56d5b42672ffa5c74b21e1c957559565a6917f9bf0460bc5fb"
+hash = "2faad401a49858c3c55ae3a2d2f999ce50f9d7857e64e4afdc272f17eb872a09"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/crown_of_fire.snbt"
-hash = "abc7d5a56d21843cd553f8e0aa8cafa9ea5b9c4d7bfd99806031389496431545"
+hash = "7965774358e0a2328a9daf455169deba81f646c6c1e856754bd22fb788fe1b41"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/first_rotation.snbt"
-hash = "5ddbb2f13d4b8a26c4895525772bc8a9680b8db85d81614c3b80cc2e18bed666"
+hash = "4388c36def17acfa01194a06f9ef46013667510395324caa959cc514c6cd42c4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homestead.snbt"
-hash = "577d85cc11f1a1e117de55799052caa0971a0615257a01419192627b8c4578ab"
+hash = "597908555b79eeaddff4fcb9f031f1cf2c43679b505436fb92169000c90f91df"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/iron_roads.snbt"
-hash = "808264fbdb6977eeb100ae4ee5812ad7dc3eaec4b69dfa9f0df6acf3e96f5cb9"
+hash = "fca52b7c3deb1d10349e77daad288515eeea0a1ab2159a8086f52118739f3b91"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landfall.snbt"
-hash = "bd9185a5aeffd37c768ab3015ae3813e919d643b1c714e71507259391c27ccdd"
+hash = "ed5c05772a59d981ea61986a5678a7145d1b2849506449b2d143800dbe391954"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/legacy.snbt"
-hash = "b30cc30c375d6c1d62b3165790aca7b73051228ca79126d8b8bd7be82f43b39a"
+hash = "d2f50b7469a468d5030de2d386303da1e9e124e7b3cc209fdacc2087dfc69a95"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
-hash = "9324decdf1391d063b92bed127661673da732c71aa969aa7a4ae9fdd391ef690"
+hash = "88f65cd68eae1df1bbd3bd9b5be225f66aa46273d6768a849d6279c4d1831bec"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -99,6 +107,10 @@ hash = "b8cb849503ba21289ccefe2f9e222a1a55c45ea5d72dd8bad3b94d2234dd3dfd"
 [[files]]
 file = "config/lithium.properties"
 hash = "10b0af2fb4c92dbf9ef6d79c107b82aa34840cc0df37e1d8a09a3d2a78d10c65"
+
+[[files]]
+file = "config/pmmo-client.toml"
+hash = "c852b335929aaa003c2ea4c9ed1ca874f4f484cd0de8254563cd0632c3a1b725"
 
 [[files]]
 file = "config/shouldersurfing-client.toml"
@@ -197,6 +209,306 @@ file = "kubejs/assets/lemursaucepacket/textures/quests/tools.png"
 hash = "017131f3d44a5ebfeff64d7c4743a6a555565d44482b5b64615aa8f33654e4a9"
 
 [[files]]
+file = "kubejs/assets/pmmo/lang/en_us.json"
+hash = "dbcaeb75879e0dba9c1614de555683d00e992b6a2288d412217ad26572db21ee"
+
+[[files]]
+file = "kubejs/client_scripts/keybinds.js"
+hash = "e14785c496e7b068865080ce86427fa1026b7926ea5411afba02429ecf6d9e2c"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_ancient_debris.json"
+hash = "87f4329656fc5579a298b3e34a22b557c166dba419ac262883396e83b9f8d9cc"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_coal_ore.json"
+hash = "8f950a49c74439c2b911c1b7801ef6b72012c03166b3b1e22008bb3f8bcf8410"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_copper_ore.json"
+hash = "7fedc1d46807d4c288a6117245b3681547b21db56e0525430049561bbd2213ba"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_crops.json"
+hash = "33f17a54ab77e2f563ec2eefe7c2dd3b2110cb7846bc9c7ef3f773163b7a3d91"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_diamond_ore.json"
+hash = "434dbeb9ffe64130695dd166a9a26e619054bec4d3d9332f7b01b0588678fca2"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_emerald_ore.json"
+hash = "f8a2a0d8cc64a09ab3c88a62bc69a53b76ae58ff7834dada774b755cf7bb9c22"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_gold_ore.json"
+hash = "95c1214208ca5c6f210d38bb87efbb9da91fdfc332803fe0e59e7442f43a600b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_gourds.json"
+hash = "57386ac35774c3102e81f5467b7f51fc0c77f922b7106703b6d30cd43ce38702"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_iron_ore.json"
+hash = "39bb350f818f1da805cb10e0235836ed7e6757c7d0c76eb6c22369f66cffc00c"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_lapis_ore.json"
+hash = "402fdf66cc6259b08c36fe95d85a4497b210f058adeb181c451494b70d813301"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_logs.json"
+hash = "8dddee9e0ad3c0a15a52aea8ea4e87b4ec5a8abe19c5201acc0565ee2e1d3114"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_quartz_ore.json"
+hash = "dd83b3c29bc89d025b9905f00b3459dd7c54881892b7359c14b1ae520c68a71d"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_redstone_ore.json"
+hash = "450507430d6a07177a64ef0bf72805e3e880a520203ff0c4a2cf3b40920178e0"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_stone.json"
+hash = "a4ed7821ebc0beb7d2a72d6a640f0640fe4c9133cb895d2470cb4ae0c2675af2"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/blocks/xp_zinc_ore.json"
+hash = "9d60075f138e3b3821942c369a6c5d6d8e8cc03de001a307c6670861411b32a6"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_chainmail_armor.json"
+hash = "7b70e224bc29064f7bac7cd4aee7c48ba442f38f814d364949f5d1ce7ea43fe6"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_copper_diving_gear.json"
+hash = "3a74dbe17d0601469b0cb9a99462a9c349cadbfe3fb56aa41e3d808ed6b262ad"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_crossbow.json"
+hash = "f130c11666149d4fa602fdd3325f6c423f91e84ddbd393bc420f207679224a02"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_armor.json"
+hash = "f36812b970ecf9d2e55860b613468e8ca595926e173f4d5c3d5f948e7659c912"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_axe_weapons.json"
+hash = "bf692e66beec0eaea62e61a307071e0e7f64de5684f17a1079892783913bcd25"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_axes.json"
+hash = "14862bbb00c221a6564aa1bc9a93caa095b71efae1e06361de3eee2a612be889"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_hoes.json"
+hash = "6fb4cc18a6a50fefa689e5325bd1c53cc13ebad35e1c4a3935d530ffb4bcc5e6"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_mining_tools.json"
+hash = "fdb703c8d9a40f5c15518b728aa1433cc9040d06c0616359a532bef9a71ca089"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_diamond_swords.json"
+hash = "229249f1010b4cf9059571ac5272c8905fe67784ce1ed0eabecc8c6f0ee609e7"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_elytra.json"
+hash = "b8d4bfaa3d647094dfe23027736b8139ba1136b4d1371a9cb5c003fe848a5763"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_armor.json"
+hash = "9b052945f3af437f19f62f59e63ed035535b3674cdbfa515547b8cb0ade1d1c9"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_axe_weapons.json"
+hash = "0c178c39f206b7ec27e8258691d4fafaf8e48ee04c594e66903d3c31f7cb41a2"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_axes.json"
+hash = "4799a6b112b4c85655674f330e1f8def29b7f0ac155fbd550110eaaf05269ae1"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_hoes.json"
+hash = "c9c8b4d82a15cc377b793641f246ba5823ed84fe84999826e92582092a869d53"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_mining_tools.json"
+hash = "8f4d2f79548f40c40209653d03e92ad907eaa946a8649fdacd6574acfbbbffe1"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_golden_swords.json"
+hash = "ef32dc1842d1dfd10032104eab22991ef095477c9cd1c40c547068bab8d072ca"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_armor.json"
+hash = "ad00fff6dd83cf02ef1c421b5120ab1f8863e8f8af72c2dde3ad11cc479aef78"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_axe_weapons.json"
+hash = "42aa0b47971a412d792783fa47c4a199d09a2e5ab7c0a8e2530cf420cf0fbee7"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_axes.json"
+hash = "b457d988e0eeba7859dd772c54003c63068ad439075984f6fd3d334befd18886"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_hoes.json"
+hash = "0afff73b9abce5425ca0d8485dc69c28ecc554b8ddc50834b73b2151079a875b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_mining_tools.json"
+hash = "a1cc0e5a12a02defd9ed417f78d9979ac913d712cbbe925d93d7b589fbf84362"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_iron_swords.json"
+hash = "c95387088b40f72e55d0821e19662fffc32dbcfb161b692332740fea58bb0749"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_mace.json"
+hash = "88a079cd9d2c0a70425ed8f2ea5e26502a3b9e8ca1cb2ce96a7218928d0655e3"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_armor.json"
+hash = "f454c4f6d954088fff59031dd20a2471753b4ee335406e7c49acc7727cd4d622"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_axe_weapons.json"
+hash = "064fc4ee0e3565b6d15d9ca505d972d9c4183f9cfcfb8d8a607b5b09181c191a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_axes.json"
+hash = "7a924204753b206f0f25f854d23be5e73e106894b71ec6e85cc411189261cd8a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_diving_gear.json"
+hash = "03b5d503744e38c778416ea2910acd75a65f0a0a302c2a40345edf2653f5a1ca"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_hoes.json"
+hash = "73e69526be993d4f8388e3cd611b47e93a0b56e299b9a9ab74786b2f6a45210b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_mining_tools.json"
+hash = "b96cd212847b1d15ef3f5d7c0cdfcc2db27827ac7963b961c78d69f4b49f478f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_netherite_swords.json"
+hash = "1008d29493d29a4a7f67352682fb6cd5662ec16d87d7a155a89cf811800a094f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_potato_cannon.json"
+hash = "be371b7b24791277063fc101b06fb28b7ba039b21b1f9800574ec4ebf0a8d1eb"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_stone_axe_weapons.json"
+hash = "eb9baba5cd7b9ddbcc565694f2c279928b8dff68b5bbe384c54b29923bf886c5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_stone_axes.json"
+hash = "cd3ccbd01a682a9b80682184762999e494d5c68b45a5d48e039b2ad2e8c0665b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_stone_hoes.json"
+hash = "35be39e5f98f25ac2c908aa78c50d93fdfd64b3470a4bb421a3a644d7a9779e0"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_stone_mining_tools.json"
+hash = "db36784ae1780bb3f90bb94b5e0fe67c5dc000f94c59d2f960b694fe97a401a5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_stone_swords.json"
+hash = "9217d5d7efe9a5d01368c5dc385a35f146fceb9b206a97cfa9891b8ea6ab62c8"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_trident.json"
+hash = "fb799383e8311a580b97c2a503c193e65832de7ff5bb011351f048498d0a9aa5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/req_turtle_helmet.json"
+hash = "0b278399d7d51e9e42c509281cbace2511a0705aa3111c943685e5c8aa087423"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_backpack_crafting.json"
+hash = "418e128b4a70b0a735e6dc5d846d136d51fe94c91399cd08e11fe372cd6b758b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_baked_goods.json"
+hash = "21069f268dc6b5d605663eae88a618a591d2d2ce8f7111c26f5267f75b0ea67e"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_baked_potato.json"
+hash = "08f603231274cc89cb389d6d7a6fc16b07db981f2e4b88fcd208b28bdf1b6285"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_cooked_meat.json"
+hash = "030f759cd9b3e63687231dcc060de21968f407b1fdca2fc45d626a0a3ae3dd4f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_cooked_poultry_fish.json"
+hash = "bca95342a0362369dc684cd2107bdd8b5f9a66bc6adef462917690cc16da8e8c"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_copper_ingot.json"
+hash = "5157a5dbfc1b2106ed489fe4b5ca22ded9211d68cdb48b427af6a838e6133963"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_create_crafting.json"
+hash = "c8265f9acc1c446944b8729f6a925aed634665040b19e357b33b90a25b2bd8e1"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_diamond_gear_smithing.json"
+hash = "828f9961741eb067428b635b4b40b8e0b5491804df95e671ceaa09e17c79a0fe"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_exotic_fish.json"
+hash = "e59b1cb3cb52f71642e2b9e356e3b4436b0cca4397ddc88c13653e1b3c4c8fa4"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_feasts.json"
+hash = "0396cedd5920f1cfd6a5a451c160ea28baca2c7ab0626c55e58bdb64f70bcef1"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_fish.json"
+hash = "09977fd088ce3162ac72f62bd3b164bb42f1933c34cafb6e642f9ff652ec712a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_furniture_crafting.json"
+hash = "a5c0ffc463e8177280ce8d0ce77ec3ab13566e8d07edf7c0ff386aa9f4f2ee42"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_gold_ingot.json"
+hash = "f072fb7d4c5ae736a21ac7ca87357bf7334b744fa441df53b35a37f6306bb8c5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_golden_gear_smithing.json"
+hash = "5930ec6e51ae05e278781611d04bfdd0b5577444f928bbad4fa81af692622758"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_iron_gear_smithing.json"
+hash = "25a5633165732b52855b53a0221ca0991488aa296b0db553951a5b01dd2b6bc3"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_iron_ingot.json"
+hash = "9aece11378d4876a17b600e2f293dfe1c0ed5111d88e563bc37c1757f2d3cd8b"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_netherite_scrap.json"
+hash = "7aa4b8397348dddba4bda134a2f048915899f131ae41b7966d8853c8dc4afb4d"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_salmon.json"
+hash = "9e1378db3a6ff1d199f84250cc520d9229bc9ea96fa2541761212c6465c9ccec"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_vanilla_crafting.json"
+hash = "8588bea0fce99e237045d022173524581927bc97dd77e8d3b8df2f6e7ac422a5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/pmmo/items/xp_zinc_ingot.json"
+hash = "5faa50a6fdc41b05d0289364c31ceb693a7b77d721ada9b35c685ac10ab10a51"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/tags/worldgen/biome/skylands.json"
 hash = "963f58189373bf2895b361d220e5bc94dafcd55387961e1c70b6cc2e574fc206"
 
@@ -213,6 +525,22 @@ file = "kubejs/data/lemursaucepacket/tags/worldgen/structure/taverns.json"
 hash = "08d4afbf8c60ec5253afa3bfe6f4001e3f02f96d5079926d2e7e213281d24b35"
 
 [[files]]
+file = "kubejs/data/pmmo/config/autovalues.json"
+hash = "5adb02eb51eca4d1d1b0152f3a312ec09247f6d1f425d2cd0610e7d664f59995"
+
+[[files]]
+file = "kubejs/data/pmmo/config/perks.json"
+hash = "e6a200297595b649c91f8af6e123e446712a90ef9b523923a3d6bbe319c45801"
+
+[[files]]
+file = "kubejs/data/pmmo/config/server.json"
+hash = "22e62837a7e60199c572e4a89459f29044afb288bf9a7b57ee9a309236878c5f"
+
+[[files]]
+file = "kubejs/data/pmmo/config/skills.json"
+hash = "a70c3dc886d0ec0a8c22f708f35cdd6b8fc4646d2b6df3bd5ac3e2a92851dae5"
+
+[[files]]
 file = "kubejs/server_scripts/backpacks.js"
 hash = "8830c1b0ae382433fc4f6b66242f9c5b11930214cfcc6772a4b680f9af2d0062"
 
@@ -223,6 +551,10 @@ hash = "4975352b58174866372a55151e3b6e46cd2e6b571766effd29f6182aebbc34b4"
 [[files]]
 file = "kubejs/server_scripts/ore_veins.js"
 hash = "ce892832f540dd4bc3469a1ecef1eac3b5dd7fa79a9aac0ea2e6b358cda0eedf"
+
+[[files]]
+file = "kubejs/server_scripts/skills.js"
+hash = "d10483274c86df1fcf0d67bb6c08b42df927a6626242c09e698eaea26e3b1f73"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -327,6 +659,11 @@ metafile = true
 [[files]]
 file = "mods/create-backpack-upgrades.pw.toml"
 hash = "576b0fe42b0896a69ace00599ecb673ab7bddc553f6ef9e10e0fe41ef40305ba"
+metafile = true
+
+[[files]]
+file = "mods/create-brassworks-missions.pw.toml"
+hash = "068fe3ba9e6010ef3b639110c1fb0b508edf4bbe3fcd70d5ec62d7af7bfb096f"
 metafile = true
 
 [[files]]
@@ -645,6 +982,11 @@ hash = "0294264654da6777cfbbbd24ffa6dd1d082768fa7ae28b36b76f78261f53fce9"
 metafile = true
 
 [[files]]
+file = "mods/lootr.pw.toml"
+hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
+metafile = true
+
+[[files]]
 file = "mods/macaws-furniture.pw.toml"
 hash = "52019f01292cb860fa135485f941fff42f97910267bf122f2f797e31109bb93f"
 metafile = true
@@ -732,6 +1074,11 @@ metafile = true
 [[files]]
 file = "mods/prism-lib.pw.toml"
 hash = "d9b38ba42434eb436d036b1c8add839bee003240dc85cc54ec626aac58c59070"
+metafile = true
+
+[[files]]
+file = "mods/project-mmo.pw.toml"
+hash = "134d8749bbc9ddec1f831ffc913c596c6c627bdd7e4d5e61dd8dc2d789c289e4"
 metafile = true
 
 [[files]]
@@ -905,6 +1252,11 @@ hash = "8c73c4a89ae6927a789176bc3dd44676b596a997081523bace7ccbe1f459f81b"
 metafile = true
 
 [[files]]
+file = "mods/when-dungeons-arise.pw.toml"
+hash = "485906ff55a5d6ad06070abb80663d6adadc3e4b32f8b52240d8596e7aaef9fa"
+metafile = true
+
+[[files]]
 file = "mods/woodworks.pw.toml"
 hash = "c528ce61fc0e0036a7b6055ad71b1a5bf1cb388537397b6852464b9855d69345"
 metafile = true
@@ -986,7 +1338,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "d994b5194f417a2bb23d9586279cc3525b4d694e1310b69e12bba0ccb88218c0"
+hash = "06bbab57f4c5d715418e4d6d2200c48a0fdab4aee3b000ebafda4d22146c8bbd"
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"

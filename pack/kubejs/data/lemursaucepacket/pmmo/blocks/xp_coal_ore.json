@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#c:ores/coal"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "mining": 10
+    }
+  }
+}

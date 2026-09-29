@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:golden_pickaxe",
+    "minecraft:golden_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 10
+    }
+  }
+}

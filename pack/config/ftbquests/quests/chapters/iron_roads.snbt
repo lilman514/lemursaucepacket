@@ -43,6 +43,11 @@
 			id: "280686E040BA87A1"
 			rewards: [
 				{
+					id: "68D33A4FBB6F1673"
+					type: "xp"
+					xp: 42
+				}
+				{
 					id: "3256B05226452308"
 					item: {
 						count: 2
@@ -73,6 +78,11 @@
 			id: "6EB7B8DFC89F71B5"
 			rewards: [
 				{
+					id: "26DE1C284A2C74C3"
+					type: "xp"
+					xp: 26
+				}
+				{
 					id: "198E8798E9ACBDC0"
 					item: {
 						count: 1
@@ -101,6 +111,11 @@
 			}
 			id: "4418FF4F51A1595D"
 			rewards: [
+				{
+					id: "7BA25473AFEA7A85"
+					type: "xp"
+					xp: 58
+				}
 				{
 					id: "0203F281E58475A3"
 					item: {
@@ -140,6 +155,11 @@
 			id: "36CFDC0FABF55773"
 			rewards: [
 				{
+					id: "0BD33F8D208E3489"
+					type: "xp"
+					xp: 34
+				}
+				{
 					id: "064AED523A0FB731"
 					item: {
 						count: 1
@@ -176,6 +196,11 @@
 			}
 			id: "46411B0858C1ED5B"
 			rewards: [
+				{
+					id: "4BB8D6A3D8FE0535"
+					type: "xp"
+					xp: 34
+				}
 				{
 					id: "3C2E2EB5CE224290"
 					item: {
@@ -215,6 +240,11 @@
 			id: "4804708C84965F94"
 			rewards: [
 				{
+					id: "314E6909C0EF8025"
+					type: "xp"
+					xp: 42
+				}
+				{
 					id: "3F447F2CB6FD0BF0"
 					item: {
 						count: 2
@@ -251,6 +281,11 @@
 			}
 			id: "48057ACA9CE3D95A"
 			rewards: [
+				{
+					id: "71398C9B9FAC9D0E"
+					type: "xp"
+					xp: 34
+				}
 				{
 					id: "65C38D1723CAF93E"
 					item: {
@@ -298,6 +333,11 @@
 			id: "0390E0DEB91A43F2"
 			rewards: [
 				{
+					id: "13DC0D65D09918CD"
+					type: "xp"
+					xp: 42
+				}
+				{
 					id: "6AA4AF3F7E8FB8FD"
 					item: {
 						count: 2
@@ -335,6 +375,11 @@
 			id: "5D58AE189D939930"
 			rewards: [
 				{
+					id: "3CD6FE92DE8B46A2"
+					type: "xp"
+					xp: 58
+				}
+				{
 					id: "2DE9C23F99A40D51"
 					item: {
 						count: 3
@@ -371,6 +416,11 @@
 			}
 			id: "070D708592F9FCA2"
 			rewards: [
+				{
+					id: "1B154A78CEF5BF8F"
+					type: "xp"
+					xp: 74
+				}
 				{
 					id: "2582CA840E821764"
 					item: {
@@ -412,7 +462,7 @@
 				{
 					id: "2341B5C6EE97BE42"
 					type: "xp"
-					xp: 100
+					xp: 606
 				}
 				{
 					id: "7D37ECACCDB9085F"

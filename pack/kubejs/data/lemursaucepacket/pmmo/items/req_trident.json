@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:trident"
+  ],
+  "requirements": {
+    "USE": {
+      "attack": 40
+    },
+    "WEAPON": {
+      "attack": 40
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

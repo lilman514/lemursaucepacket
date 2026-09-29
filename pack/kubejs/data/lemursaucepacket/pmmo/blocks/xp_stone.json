@@ -1,0 +1,13 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#minecraft:base_stone_overworld",
+    "#minecraft:base_stone_nether",
+    "#c:stones"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "mining": 1
+    }
+  }
+}

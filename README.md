@@ -157,6 +157,23 @@ node quests/build.mjs --preview
 
 It writes one SVG per chapter to `quests/preview/` and reports any crossing lines.
 
+## Skills
+
+The RuneScape-style skills are Project MMO configs generated from `skills/build.mjs`. `publish.mjs` runs it. The tables at the top of that file set:
+
+- the skills;
+- what each level gives;
+- which items each skill gates, and at what level;
+- how much XP each action is worth.
+
+Change a number there and publish; don't edit the generated JSON under `pack/kubejs/data/pmmo/` and `pack/kubejs/data/lemursaucepacket/pmmo/`.
+
+Useful admin commands:
+- `/pmmo admin <player> set <skill> level <n>` sets a level.
+- `/pmmo admin <player> attributes refresh` re-applies level bonuses after a config change.
+
+The level curve is cached per player, so restart the server after changing it.
+
 ## Art
 
 `art/generated/` holds the original images, made with Higgsfield (GPT Image 2.5):

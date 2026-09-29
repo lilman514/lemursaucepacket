@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:chainmail_helmet",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_boots"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 10
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

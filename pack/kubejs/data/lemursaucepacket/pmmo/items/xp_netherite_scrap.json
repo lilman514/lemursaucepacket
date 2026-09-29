@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:netherite_scrap"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "smithing": 60
+    }
+  }
+}

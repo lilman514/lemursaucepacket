@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:golden_axe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 10
+    }
+  }
+}

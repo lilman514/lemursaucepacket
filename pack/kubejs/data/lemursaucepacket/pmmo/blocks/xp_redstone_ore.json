@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#c:ores/redstone"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "mining": 18
+    }
+  }
+}

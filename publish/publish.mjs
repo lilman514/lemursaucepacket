@@ -51,6 +51,10 @@ console.log(`Publishing ${name} ${version} (Minecraft ${minecraft}, ${loader} ${
 if (existsSync(path.join(root, 'quests', 'book.mjs'))) {
   execFileSync(process.execPath, [path.join(root, 'quests', 'build.mjs')], { stdio: 'inherit' })
 }
+// Likewise the RuneScape-style skills (Project MMO config) come from skills/build.mjs.
+if (existsSync(path.join(root, 'skills', 'build.mjs'))) {
+  execFileSync(process.execPath, [path.join(root, 'skills', 'build.mjs')], { stdio: 'inherit' })
+}
 execFileSync(packwiz, ['refresh'], { cwd: packDir, stdio: 'inherit' })
 
 const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')

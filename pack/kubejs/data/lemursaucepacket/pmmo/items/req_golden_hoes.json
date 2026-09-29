@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:golden_hoe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "farming": 10
+    },
+    "USE": {
+      "farming": 10
+    }
+  }
+}

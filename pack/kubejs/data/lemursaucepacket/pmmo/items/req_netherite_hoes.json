@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:netherite_hoe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "farming": 50
+    },
+    "USE": {
+      "farming": 50
+    }
+  }
+}

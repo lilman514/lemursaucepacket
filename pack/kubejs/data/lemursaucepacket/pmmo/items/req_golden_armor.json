@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:golden_helmet",
+    "minecraft:golden_chestplate",
+    "minecraft:golden_leggings",
+    "minecraft:golden_boots"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 10
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

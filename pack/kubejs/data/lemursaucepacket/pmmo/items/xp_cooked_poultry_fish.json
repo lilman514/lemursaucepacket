@@ -1,0 +1,13 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:cooked_chicken",
+    "minecraft:cooked_cod",
+    "minecraft:cooked_salmon"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "cooking": 9
+    }
+  }
+}

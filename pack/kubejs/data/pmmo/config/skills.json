@@ -1,0 +1,121 @@
+{
+  "skills": {
+    "attack": {
+      "color": 10165276,
+      "icon": "minecraft:textures/item/iron_sword.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "strength": {
+      "color": 1014330,
+      "icon": "minecraft:textures/mob_effect/strength.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "defence": {
+      "color": 3890085,
+      "icon": "minecraft:textures/item/iron_chestplate.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "ranged": {
+      "color": 7048739,
+      "icon": "minecraft:textures/item/bow.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "hitpoints": {
+      "color": 12597547,
+      "icon": "minecraft:textures/mob_effect/regeneration.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "mining": {
+      "color": 8359053,
+      "icon": "minecraft:textures/item/iron_pickaxe.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "woodcutting": {
+      "color": 9132587,
+      "icon": "minecraft:textures/item/iron_axe.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "farming": {
+      "color": 3055183,
+      "icon": "minecraft:textures/item/wheat.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "fishing": {
+      "color": 3447003,
+      "icon": "minecraft:textures/item/fishing_rod.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "cooking": {
+      "color": 13849600,
+      "icon": "minecraft:textures/item/cooked_beef.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "smithing": {
+      "color": 9807270,
+      "icon": "minecraft:textures/item/iron_ingot.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "crafting": {
+      "color": 10506797,
+      "icon": "minecraft:textures/item/stick.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    },
+    "agility": {
+      "color": 1752220,
+      "icon": "minecraft:textures/item/feather.png",
+      "iconSize": 16,
+      "maxLevel": 99
+    }
+  },
+  "types": {
+    "combat": {
+      "order": 0,
+      "color": 10165276,
+      "skills": [
+        "attack",
+        "strength",
+        "defence",
+        "ranged",
+        "hitpoints"
+      ]
+    },
+    "gathering": {
+      "order": 1,
+      "color": 8359053,
+      "skills": [
+        "mining",
+        "woodcutting",
+        "farming",
+        "fishing"
+      ]
+    },
+    "artisan": {
+      "order": 2,
+      "color": 13849600,
+      "skills": [
+        "cooking",
+        "smithing",
+        "crafting"
+      ]
+    },
+    "support": {
+      "order": 3,
+      "color": 1752220,
+      "skills": [
+        "agility"
+      ]
+    }
+  }
+}

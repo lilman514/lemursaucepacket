@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#c:ores/diamond"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "mining": 80
+    }
+  }
+}

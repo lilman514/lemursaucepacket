@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:bread",
+    "minecraft:pumpkin_pie",
+    "minecraft:mushroom_stew",
+    "minecraft:beetroot_soup"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "cooking": 8
+    }
+  }
+}

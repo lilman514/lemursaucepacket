@@ -1,0 +1,13 @@
+{
+  "override": false,
+  "isTagFor": [
+    "mcwfurnitures:*",
+    "woodworks:*",
+    "everycomp:*"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "crafting": 3
+    }
+  }
+}

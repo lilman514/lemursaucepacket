@@ -1,0 +1,16 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:copper_diving_helmet",
+    "create:copper_backtank",
+    "create:copper_diving_boots"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 5
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

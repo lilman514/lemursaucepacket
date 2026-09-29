@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#minecraft:crops"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "farming": 4
+    }
+  }
+}

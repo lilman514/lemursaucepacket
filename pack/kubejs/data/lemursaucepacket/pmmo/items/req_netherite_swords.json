@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:netherite_sword"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 50
+    },
+    "WEAR": {
+      "attack": 50
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

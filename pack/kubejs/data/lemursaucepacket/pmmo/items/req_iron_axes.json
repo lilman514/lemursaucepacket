@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:iron_axe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 15
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:tropical_fish",
+    "minecraft:pufferfish"
+  ],
+  "xp_values": {
+    "FISH": {
+      "fishing": 20
+    }
+  }
+}

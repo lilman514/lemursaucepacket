@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#minecraft:logs"
+  ],
+  "xp_values": {
+    "BLOCK_BREAK": {
+      "woodcutting": 12
+    }
+  }
+}

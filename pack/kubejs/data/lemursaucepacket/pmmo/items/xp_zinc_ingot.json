@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:zinc_ingot"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "smithing": 8
+    }
+  }
+}

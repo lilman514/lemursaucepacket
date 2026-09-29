@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "sophisticatedbackpacks:*"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "crafting": 8
+    }
+  }
+}

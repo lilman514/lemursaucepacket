@@ -1,0 +1,129 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = pause_screen
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1790000000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_map
+  anchor_point = mid-centered
+  x = -210
+  y = -58
+  width = 76
+  height = 20
+  label = Map
+  description = Open the world map (M)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;gui.xaero_open_map%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_quests
+  anchor_point = mid-centered
+  x = -210
+  y = -34
+  width = 76
+  height = 20
+  label = Quests
+  description = Open the quest book
+  buttonaction = closegui%btnaction_splitter_fm%sendmessage;/ftbquests open_book%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_missions
+  anchor_point = mid-centered
+  x = -210
+  y = -10
+  width = 76
+  height = 20
+  label = Missions
+  description = This week's missions (H)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.brassworksmissions.open_missions_ui%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_skills
+  anchor_point = mid-centered
+  x = 134
+  y = -58
+  width = 76
+  height = 20
+  label = Skills
+  description = Your skills, levels and what they unlock (K)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.pmmo.openMenu%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_backpack
+  anchor_point = mid-centered
+  x = 134
+  y = -34
+  width = 76
+  height = 20
+  label = Backpack
+  description = Open the backpack you're wearing (B)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.sophisticatedbackpacks.open_backpack%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_team
+  anchor_point = mid-centered
+  x = 134
+  y = -10
+  width = 76
+  height = 20
+  label = Team
+  description = Your team: invite friends, share claims (;)
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.ftbteams.open_gui%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_claims
+  anchor_point = mid-centered
+  x = -210
+  y = 14
+  width = 76
+  height = 20
+  label = Claims
+  description = Claim land and manage who can use it (')
+  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;gui.xaero_pac_key_open_menu%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lemursaucepacket_pause_settings
+  anchor_point = mid-centered
+  x = 134
+  y = 14
+  width = 76
+  height = 20
+  label = Settings
+  description = Video, sound, controls and all other options
+  buttonaction = opengui;net.minecraft.client.gui.screens.options.OptionsScreen%btnaction_splitter_fm%
+  stay_on_screen = true
+}

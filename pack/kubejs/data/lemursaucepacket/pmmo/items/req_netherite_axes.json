@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:netherite_axe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 50
+    }
+  }
+}

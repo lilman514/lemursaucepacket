@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:stone_sword"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 5
+    },
+    "WEAR": {
+      "attack": 5
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

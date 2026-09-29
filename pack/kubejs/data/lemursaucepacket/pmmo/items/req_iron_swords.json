@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:iron_sword"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 15
+    },
+    "WEAR": {
+      "attack": 15
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

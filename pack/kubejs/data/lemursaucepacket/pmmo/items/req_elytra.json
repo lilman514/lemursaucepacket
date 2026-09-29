@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:elytra"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 30
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

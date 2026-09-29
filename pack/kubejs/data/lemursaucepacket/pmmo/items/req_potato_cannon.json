@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:potato_cannon"
+  ],
+  "requirements": {
+    "USE": {
+      "attack": 20
+    }
+  }
+}

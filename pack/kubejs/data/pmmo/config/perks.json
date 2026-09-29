@@ -1,0 +1,142 @@
+{
+  "perks": {
+    "SKILL_UP": [
+      {
+        "perk": "pmmo:attribute",
+        "skill": "attack",
+        "attribute": "minecraft:generic.attack_damage",
+        "per_level": 0.04,
+        "max_boost": 3.96
+      },
+      {
+        "perk": "pmmo:attribute",
+        "skill": "hitpoints",
+        "attribute": "minecraft:generic.max_health",
+        "per_level": 0.2,
+        "max_boost": 19.8
+      },
+      {
+        "perk": "pmmo:attribute",
+        "skill": "defence",
+        "attribute": "minecraft:generic.armor",
+        "per_level": 0.02,
+        "max_boost": 1.98
+      },
+      {
+        "perk": "pmmo:attribute",
+        "skill": "agility",
+        "attribute": "minecraft:generic.movement_speed",
+        "per_level": 0.0001,
+        "max_boost": 0.0099
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "attack",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "strength",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "defence",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "ranged",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "hitpoints",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "mining",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "woodcutting",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "farming",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "fishing",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "cooking",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "smithing",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "crafting",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
+        "skill": "agility",
+        "per_x_level": 10
+      }
+    ],
+    "DEAL_DAMAGE": [
+      {
+        "perk": "pmmo:damage_boost",
+        "skill": "attack",
+        "applies_to": [
+          "minecraft:bow",
+          "minecraft:crossbow"
+        ],
+        "for_damage": [
+          "minecraft:arrow"
+        ],
+        "per_level": 0.004,
+        "base": 1,
+        "multiplicative": true
+      }
+    ],
+    "RECEIVE_DAMAGE": [
+      {
+        "perk": "pmmo:damage_reduce",
+        "skill": "agility",
+        "for_damage": "minecraft:fall",
+        "per_level": 0.005,
+        "max_boost": 0.5
+      }
+    ],
+    "BREAK_SPEED": [
+      {
+        "perk": "pmmo:break_speed",
+        "skill": "mining",
+        "pickaxe_dig": 0.005,
+        "shovel_dig": 0.005
+      },
+      {
+        "perk": "pmmo:break_speed",
+        "skill": "woodcutting",
+        "axe_dig": 0.005
+      },
+      {
+        "perk": "pmmo:break_speed",
+        "skill": "farming",
+        "hoe_dig": 0.005
+      }
+    ]
+  }
+}

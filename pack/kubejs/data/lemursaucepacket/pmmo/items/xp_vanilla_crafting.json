@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:*"
+  ],
+  "xp_values": {
+    "CRAFT": {
+      "crafting": 1
+    }
+  }
+}

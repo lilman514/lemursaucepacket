@@ -156,6 +156,15 @@ function taskData(task, id, where) {
   throw new Error(`${where}: unknown task ${JSON.stringify(task)}`)
 }
 
+/**
+ * XP points every quest pays on top of its coins, scaled by difficulty: the coin value (which already
+ * reflects it) plus 10, tripled for milestones (the gear-shaped quests). An `xp` in book.mjs is a minimum.
+ */
+function questXp(quest) {
+  const auto = (10 + (quest.reward?.coins ?? 0)) * (quest.shape === 'gear' ? 3 : 1)
+  return Math.max(auto, quest.reward?.xp ?? 0)
+}
+
 function rewardData(reward, key, where) {
   const out = []
   if (reward.xp) out.push({ id: hexId(`${key}/xp`), type: 'xp', xp: reward.xp })
@@ -403,7 +412,7 @@ book.chapters.forEach((chapter, order) => {
       dependencies: deps.get(q.key).map((k) => questIds.get(k)).filter(Boolean),
       icon,
       id,
-      rewards: rewardData(q.reward ?? {}, `reward/${chapter.key}/${q.key}`, qWhere),
+      rewards: rewardData({ ...q.reward, xp: questXp(q) }, `reward/${chapter.key}/${q.key}`, qWhere),
       shape: q.shape,
       size: q.size ? D(q.size) : undefined,
       tasks,

@@ -16,7 +16,7 @@ Why the pack is built the way it is. The README covers how to run it.
 
 ## Progression: the quest book
 
-FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a road map that pays out in Numismatics coins. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
+FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a road map that pays out in Numismatics coins and XP. XP is 10 plus the coin value, tripled for milestones: 10 to 3,102 XP a quest, about 12,400 over the whole book. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
 
 **The Ages** (the main line)
 
@@ -34,6 +34,75 @@ FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a r
 **Field Guides** (side books): Backpack Workshop, Homestead (Farmer's Delight, Slice & Dice, happy ghast), Bestiary, Atlas (15 biomes and structures), and Coin & Commerce.
 
 Each chapter opens with a painted crest and an info card. The card says what the chapter is for and what it unlocks (Bestiary and Atlas list their rewards instead). The lemur mascot and the chapter crests come from one Higgsfield sheet (see the README).
+
+## Progression: RuneScape-style skills
+
+The server owner asked for a full RPG layer in the style of RuneScape, combat stats included. Project MMO runs it, configured from `skills/build.mjs`.
+
+**Levels.** There are 13 skills, each levelling 1–99 on RuneScape's own XP table: level 50 takes 101,333 XP and level 99 takes 13,034,431. XP comes from doing the thing:
+- Combat: 4 XP per point of damage to the style used, as in RuneScape.
+- Mining and woodcutting: ores (scaled by rarity), stone and logs.
+- Farming: harvests.
+- Fishing: catches.
+- Cooking: food from furnaces and smokers, and bread, pies and stews.
+- Smithing: ingots, and crafted tools or armour.
+- Crafting: anything crafted.
+- Agility: sprinting and jumping.
+- Quest XP is vanilla XP and doesn't count towards skills.
+- Create's machines earn nobody skill XP.
+- Deaths cost no skill XP.
+
+| Skill | What it does |
+|---|---|
+| Attack | Needed to wield weapons. Adds melee damage (+0.04 per level, +2 at 50) and bow or crossbow damage (+0.4% per level) |
+| Strength | Melee crit chance, 0.3% per level (15% at 50): 1.5× damage |
+| Ranged | Ranged crit chance for arrows, tridents and rockets, 0.3% per level: 1.5× damage |
+| Defence | Needed to wear armour. +0.02 armour per level |
+| Hitpoints | +1 heart per 10 levels. Deliberately expensive: Hitpoints earns a third of normal XP, and only in combat |
+| Mining / Woodcutting / Farming | Needed for pickaxes and shovels, axes, and hoes. +0.5% dig speed per level with the matching tool |
+| Fishing, Cooking, Smithing, Crafting | XP and level-up rewards |
+| Agility | Needed to wear an elytra (30). Up to +10% speed and −50% fall damage |
+
+**Level requirements**, the way RuneScape gates its metals:
+
+| Tier | Level |
+|---|---|
+| Wood, leather | 1 |
+| Stone | 5 |
+| Gold, chainmail | 10 |
+| Iron | 15 |
+| Diamond | 30 |
+| Netherite | 50 |
+
+- The tier level applies to swords, axes, pickaxes, shovels and hoes, each gated by its own skill, and to armour, gated by Defence.
+- Crossbow needs Attack 15, the Create potato cannon Attack 20, trident Attack 40 and mace Attack 50.
+- Create's diving gear needs Defence 5 (copper) or 50 (netherite), and the turtle shell Defence 20.
+- A weapon you can't wield does fist damage. Armour or a sword you're not skilled enough for gives Slowness or Weakness while worn or held.
+- Tooltips show the requirement.
+
+Every 10 levels sets off fireworks and lists what the new level unlocks. Crits are rolled in `kubejs/server_scripts/skills.js`, which also switches off Project MMO's "builtin/default" datapack. That datapack would add requirements for Project MMO's own skills.
+
+**Missions.** Create: Brassworks Missions gives each player six random missions a week, many of them Create jobs such as pressing, mixing or crushing. Each pays 5–12 bevels (40–96 coins), so a week's missions are worth roughly 250–575 coins.
+
+**Dungeons.** When Dungeons Arise adds 30+ large dungeons. Its loot includes three enchantments of its own. Lootr gives every player their own copy of each loot chest, so nobody gets beaten to one.
+
+**The ESC menu is a hub.**
+- **Left column:** Map, Quests, Missions, Claims.
+- **Right column:** Skills (Project MMO's glossary of what each level unlocks), Backpack, Team, Settings.
+- Every vanilla and mod button stays where it was.
+- It's a FancyMenu layout (`config/fancymenu/customization/lemursaucepacket_pause.txt`). Its buttons press the matching keys, so the pack sets a key layout without clashes:
+  - `options.txt` for new installs;
+  - `kubejs/client_scripts/keybinds.js`, which moves keys once on existing installs, only where a key is still on a default that clashes.
+- Keys:
+
+  | Key | Opens |
+  |---|---|
+  | M | Map |
+  | H | Missions |
+  | K | Skills |
+  | B | Backpack |
+  | ; | Team |
+  | ' | Claims |
 
 ## Balance
 
@@ -94,6 +163,8 @@ Each chapter opens with a painted crest and an info card. The card says what the
 - Vanilla Backport (happy ghast, pale garden, creaking), with its compatibility patch
 
 **SMP:** Open Parties and Claims, Aeroclaims, Simple Voice Chat (proximity voice), Gravestone, Xaero's Minimap and World Map, FTB Quests (with FTB Library and Teams).
+
+**RPG layer:** Project MMO (skills), Create: Brassworks Missions, When Dungeons Arise, Lootr, Sable Assembly Fix.
 
 **Look and feel.** Minecraft Legends is a third-person strategy game with chunky, painterly visuals. The pack moves toward that without leaving Minecraft's look:
 - Animation: Fresh Animations (with EMF and ETF), Not Enough Animations.

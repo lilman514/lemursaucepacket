@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:baked_potato"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "cooking": 4
+    }
+  }
+}

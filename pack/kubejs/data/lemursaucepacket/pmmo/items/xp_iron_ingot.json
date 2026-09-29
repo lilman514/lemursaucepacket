@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:iron_ingot"
+  ],
+  "xp_values": {
+    "SMELTED": {
+      "smithing": 10
+    }
+  }
+}
