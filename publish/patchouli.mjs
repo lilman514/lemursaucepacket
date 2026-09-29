@@ -12,7 +12,15 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import sharp from '../art/node_modules/sharp/lib/index.js'
+
+// The wiki pictures are shrunk for the book with sharp, which lives under art/ (npm install there). Where it
+// isn't installed (the GitHub Actions publish), the pictures already committed to the pack are kept.
+let sharp = null
+try {
+  sharp = (await import('../art/node_modules/sharp/lib/index.js')).default
+} catch (e) {
+  console.warn('guide book: sharp is not installed under art/, keeping the committed pictures')
+}
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const docsDir = path.join(root, 'docs')
@@ -127,9 +135,15 @@ async function images() {
   const source = path.join(docsDir, 'images')
   let count = 0
   for (const file of readdirSync(source)) {
+    const target = path.join(imageDir, file.replace(/\.[a-z]+$/, '.png'))
+    if (sharp == null) {
+      if (!existsSync(target)) throw new Error(`guide book: ${target} is missing and sharp is not installed to make it (npm install in art/)`)
+      count++
+      continue
+    }
     // Patchouli draws image pages into a square; letterbox the screenshot on a dark plate.
     const inner = await sharp(path.join(source, file)).resize(512, 512, { fit: 'contain', background: { r: 36, g: 33, b: 32, alpha: 1 } }).png().toBuffer()
-    await sharp(inner).png({ compressionLevel: 9 }).toFile(path.join(imageDir, file.replace(/\.[a-z]+$/, '.png')))
+    await sharp(inner).png({ compressionLevel: 9 }).toFile(target)
     count++
   }
   return count
