@@ -2,11 +2,11 @@
   "name": "Quests",
   "category": "lemursaucepacket:wiki",
   "icon": "ftbquests:book",
-  "sortnum": 4,
+  "sortnum": 5,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it. Every quest pays $(bold)skill XP$() and most pay $(bold)coins$(); the big gear-shaped quests at the end of a chapter pay the most."
+      "text": "The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip."
     },
     {
       "type": "patchouli:image",
@@ -18,21 +18,74 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(bold)Ctrl + mouse wheel$() zooms the quest map. Drag to pan. Click a quest to read it and to claim its rewards once it is done."
+    },
+    {
+      "type": "patchouli:text",
       "title": "Chapters",
-      "text": "$(bold)The Ages$() - the main line, one chapter per stage of progress:"
+      "text": "Twenty-nine chapters in five groups. The Ages are the main line; the rest are questlines you dip into whenever they fit what you are doing.$(br2)$(bold)The Ages$() - one chapter per stage of progress:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it teaches - Ends with$()$(br)$(bold)Landfall$() - Rules, first tools, first backpack, a village - A wrench$(br)$(bold)First Rotation$() - Water wheels, cogs, the millstone and press - Andesite alloy at scale$(br)$(bold)Brass Age$() - Blaze burners, mixing, brass and precision - The mechanical crafter$(br)$(bold)Banners$() - Raids, ominous banners, the illager threat - A pillager outpost cleared$(br)$(bold)Iron Roads$() - Trains, stations, signals, freight - A working line between bases$(br)$(bold)Skyward$() - Create Aeronautics: propellers, envelopes, levitite, steering - Maiden voyage$("
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Landfall$() - Rules, first tools, iron and Hardness I, a backpack, a village - A wrench, and a starter crate of alloy and cogs$(br)$(bold)First Rotation$() - Water and wind power, presses, fans, belts, saws, drills, zinc, ore veins - 32 andesite casing$(br)$(bold)Brass Age$() - Blaze burners, mixing, brass, precision, sturdy sheets, arms, crafters, steam - A rotation speed controller$(br)$(bold)Banners of the Overworld$() - Outposts, raids, the Illager fort and Invoker, Create ruins - Raise your banner$(br)$(bold)Iron Roads$() - Track, stations, schedul"
     },
     {
       "type": "patchouli:text",
-      "text": "br)$(bold)Crown of Fire$() - The Nether, netherite, the blaze economy - A netherite tool$(br)$(bold)Legacy$() - The End, the dragon, and what comes after - The dragon egg on a pedestal$(br2)$(bold)Field Guides$() - side chapters you dip into: Backpack Workshop, Homestead (farming and cooking), Bestiary (the new mobs), Atlas (exploring, structures, ore veins) and Coin & Commerce (Numismatics).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
+      "text": "es, signals, parcels, stock keeping, and waystones for the trip home - A line between two towns$(br)$(bold)Skyward$() - Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation - Maiden voyage$(br)$(bold)Crown of Fire$() - Fortresses, citadels, bastions, piglin castes, blaze cakes, netherite - The Wither$(br)$(bold)Legacy$() - The stronghold, the End, the dragon, elytra, crushing wheels, banking - Build your legacy$(br2)$(bold)Industry$() - factories and production lines:"
     },
     {
       "type": "patchouli:text",
-      "title": "How rewards work",
-      "text": "$(li)Coins arrive as Numismatics spurs/bevels/cogs; keep them in a bank card or a coin purse.$(br)$(li)Skill XP goes to the skill that fits the quest (mining quests pay Mining, and so on).$(br)$(li)Team progress is shared: if you're in a team, everyone gets the quest and its rewards."
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Factory Floor$() - Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler - Factory gauges ordering their own ingredients$(br)$(bold)Railway Company$() - Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory - Grand Central: a station where three lines meet$(br)$(bold)The Foundry$() - Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving - Four compacted netherite$(br)$(bold)The Enc"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hanter$() - The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes - A book of Sharpness X$(br)$(bold)Arcane Works$() - Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experience - A blaze enchanter used a thousand times$(br)$(bold)The Warehouse$() - Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades - 32 vaults, stock-linked$(br)$(bold)Grand Kitchen$() - Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ion, a netherite knife - Master Chef: every meal eaten$(br2)$(bold)Expeditions$() - places to go and things to hunt:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Cartographer$() - Waypoints and maps, Lootr chests, When Dungeons Arise, Structory towers, Towers of the Wild, Dungeons and Taverns, Regions Unexplored - Adventuring Time: every Overworld biome$(br)$(bold)Deep Dark$() - Sculk, sneaking, the ancient city, echo shards, disc 5, the ward and silence trims - The Warden$(br)$(bold)Beyond the Dragon$() - Gateways, chorus, end cities, shulkers, dragon's breath, Nullscape biomes, the End castle - Respawn the dragon$(br)$(bold)Village Life$() - Trading, Towns & Towers, bells, golems, guards, curing, fortified vil"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "lages, raid captains - Hero of the Village$(br)$(bold)Relic Hunter$() - The twenty relics, where each one drops, research and levelling, set synergies - Relic Master: fifteen of twenty$(br2)$(bold)Field Guides$() - side chapters:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Backpack Workshop$() - Backpack tiers by Create age, upgrades, stack upgrades - The netherite backpack$(br)$(bold)Homestead$() - Farmer's Delight basics, new crops, rich soil, breeding - The happy ghast$(br)$(bold)Bestiary$() - The new mobs and bosses, one quest each - - (a collection)$(br)$(bold)Atlas$() - Terralith biomes and rebuilt structures - - (a collection)$(br)$(bold)Coin & Commerce$() - Numismatics coins, depositors, shops, banking - A crown coin$(br)$(bold)The Armory$() - The pack's own gear: tools, weapons, armour sets - The Compacted Nether"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ite set$(br)$(bold)Hearts & Graves$() - The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart - A new Heart made from a Heart of the Sea$(br2)$(bold)Mastery$() - the long game: Skills (below) and Contracts (Brassworks Missions milestones from 10 to 1000 missions).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How rewards scale",
+      "text": "Every quest has a tier. The tier sets its XP, its coins and the crate it rolls on once:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Tier - XP - Coins - Crate - What the crate holds$()$(br)$(bold)1 Settler$() - 25 - 8 - Settler's Supplies - Ingots, alloy, torches, food, coal, arrows, tea$(br)$(bold)2 Engineer$() - 60 - 24 - Engineer's Crate - Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases$(br)$(bold)3 Artisan$() - 150 - 48 - Artisan's Crate - Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts$(br)$(bold)4 Master$() - 400 - 128 - Master's Cache - Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades$(br)$(bold)5 Legend$() "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "- 1000 - 512 - Legend's Hoard - Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending$(br2)Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, sun coins, capes), so the last quest of a line is always worth reaching."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)XP is vanilla experience, for enchanting; it does not train skills.$(br)$(li)Coins are Numismatics: spur 1, bevel 8, sprocket 16, cog 64, crown 512, sun 4096. Trade them or bank them.$(br)$(li)Team progress is shared: if you are in a team, everyone gets the quest and can claim its rewards."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Skills chapter",
+      "text": "Every Project MMO skill has a milestone quest at 10, 25, 50, 75 and 99, and the total-level ladder runs 100, 250, 500, 750, 1000 and Maxed (1386, every skill at 99). You cannot tick these: the server reads your levels every few seconds, and shortly after you log in, and completes the ones you have reached. A chat line tells you, with a link to the book, and the reward waits there to be claimed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The rewards climb with the level: a Settler crate at 10, a Legend's Hoard at 99. Level 50 and 75 add a prize made for the skill (the Excavator's Pickaxe for Mining, the Stormcaller's Sabre for Attack, an elytra for Agility, a relic for Cooking). Level 99 pays a sun coin, a relic and two rolls on the Legend's Hoard, and the skill's cape unlocks by itself ($(#e0ac46)/capes$()). Maxed is two suns and the Maxed Cape."
     }
   ]
 }

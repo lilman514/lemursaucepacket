@@ -2,9 +2,14 @@
 //   node quests/build.mjs            write into pack/config/ftbquests/quests
 //   node quests/build.mjs --check    validate ids only
 //   node quests/build.mjs --preview  also draw every chapter to quests/preview/<chapter>.svg
-// Every item/entity/biome/structure/advancement id is checked against quests/.id-index.json
-// (made by quests/id-index.mjs from the real mod jars), so a typo fails the build instead of
-// producing a quest nobody can complete.
+// Every item/entity/biome/structure/advancement id is checked against quests/.registry.json (a dump from
+// a real server, quests/registry-dump.js) or quests/.id-index.json (made by quests/id-index.mjs from the
+// mod jars), so a typo fails the build instead of producing a quest nobody can complete.
+//
+// Besides the chapters it writes:
+//   - reward_tables/<key>.snbt: the reward tables (book.tables) that quest tiers and finales roll on;
+//   - pack/config/lemursaucepacket/milestones.json: the ids of the Skills chapter's milestone quests, which
+//     pack/kubejs/server_scripts/quest_milestones.js completes when a player's Project MMO level gets there.
 
 import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
@@ -16,6 +21,7 @@ import { chapterSvg } from './preview.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outDir = path.join(root, 'pack', 'config', 'ftbquests', 'quests')
+const milestonesFile = path.join(root, 'pack', 'config', 'lemursaucepacket', 'milestones.json')
 const emblemDir = path.join(root, 'pack', 'kubejs', 'assets', 'lemursaucepacket', 'textures', 'quests')
 const checkOnly = process.argv.includes('--check')
 const preview = process.argv.includes('--preview')
@@ -31,7 +37,10 @@ function hexId(key) {
 // ---------------------------------------------------------------- SNBT
 
 const D = (n) => ({ __snbt: `${Number.isInteger(n) ? n.toFixed(1) : n}d` })
+const F = (n) => ({ __snbt: `${Number.isInteger(n) ? n.toFixed(1) : n}f` })
 const L = (n) => ({ __snbt: `${n}L` })
+/** A hex id as the signed decimal long FTB writes for cross-references (reward tables). */
+const hexLong = (hex) => L(BigInt(`0x${hex}`).toString())
 
 function snbtString(s) {
   return `"${String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`
@@ -72,13 +81,17 @@ const gearIds = [
   ...gear.SETS.flatMap((s) => Object.keys(s.pieces).map((slot) => `${gear.NAMESPACE}:${s.id}_${slot}`)),
   ...[...gear.PIECES, ...gear.WEAPONS, ...gear.TOOLS, ...gear.MATERIAL_ITEMS].map((x) => `${gear.NAMESPACE}:${x.id}`)
 ]
+// Mods added after the dump (Waystones, Regions Unexplored): ids read from their jars.
+const later = await import('./later-ids.mjs')
 const known = {
-  item: new Set([...index.item, ...gearIds]),
+  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS]),
   entity: new Set(index.entity),
-  biome: new Set([...index.biome, ...index.biomeTag]),
+  biome: new Set([...index.biome, ...index.biomeTag, ...later.REGIONS_UNEXPLORED_BIOMES]),
   structure: new Set([...index.structure, ...index.structureTag]),
   advancement: new Set(index.advancement),
-  dimension: new Set(index.dimension ?? ['minecraft:overworld', 'minecraft:the_nether', 'minecraft:the_end'])
+  dimension: new Set(index.dimension ?? ['minecraft:overworld', 'minecraft:the_nether', 'minecraft:the_end']),
+  // Blocks are checked as their items; block tags come from the list in later-ids.mjs.
+  blockTag: new Set(later.BLOCK_TAGS)
 }
 const problems = []
 const need = (kind, id, where) => {
@@ -134,58 +147,120 @@ function coinItems(value) {
 // ---------------------------------------------------------------- build
 
 function taskData(task, id, where) {
+  const base = { id, icon: iconData(task.icon, where) }
   if (task.item) {
     need('item', task.item, where)
-    return { id, item: { count: 1, id: task.item }, type: 'item', count: (task.count ?? 1) > 1 ? L(task.count) : undefined }
+    // `components` with match 'fuzzy' means every listed component must be on the item (an enchanted book with
+    // exactly that stored enchantment); the default matches the item id alone.
+    if (task.match && !['fuzzy', 'strict'].includes(task.match)) problems.push(`${where}: unknown match "${task.match}"`)
+    return {
+      ...base,
+      count: (task.count ?? 1) > 1 ? L(task.count) : undefined,
+      item: { components: task.components, count: 1, id: task.item },
+      match_components: task.match,
+      type: 'item'
+    }
   }
+  // A task only a server script can complete (FTB's CustomTask has no button and no checker of its own):
+  // the Skills chapter's milestones, finished by pack/kubejs/server_scripts/quest_milestones.js.
+  if (task.custom) return { ...base, type: 'custom' }
   if (task.kill) {
     need('entity', task.kill, where)
-    return { entity: task.kill, id, type: 'kill', value: L(task.count ?? 1) }
+    return { ...base, entity: task.kill, type: 'kill', value: L(task.count ?? 1) }
   }
   if (task.structure) {
     need('structure', task.structure, where)
-    return { id, structure: task.structure, type: 'structure' }
+    return { ...base, structure: task.structure, type: 'structure' }
   }
   if (task.biome) {
     need('biome', task.biome, where)
-    return { biome: task.biome, id, type: 'biome' }
+    return { ...base, biome: task.biome, type: 'biome' }
   }
   if (task.dimension) {
     need('dimension', task.dimension, where)
-    return { dimension: task.dimension, id, type: 'dimension' }
+    return { ...base, dimension: task.dimension, type: 'dimension' }
   }
   if (task.advancement) {
     need('advancement', task.advancement, where)
-    return { advancement: task.advancement, criterion: '', id, type: 'advancement' }
+    return { ...base, advancement: task.advancement, criterion: '', type: 'advancement' }
   }
-  if (task.checkmark) return { id, type: 'checkmark' }
+  if (task.observe) {
+    // Look at a block (or any block in a "#tag") for a moment: proof you found one without taking it.
+    const isTag = task.observe.startsWith('#')
+    need(isTag ? 'blockTag' : 'item', task.observe, where)
+    // FTB's ObservationTask: observe_type is the ObserveType ordinal (0 block, 1 block tag); timer in ticks.
+    return { ...base, observe_type: isTag ? 1 : 0, timer: L(task.ticks ?? 20), to_observe: task.observe, type: 'observation' }
+  }
+  if (task.checkmark) return { ...base, type: 'checkmark' }
   throw new Error(`${where}: unknown task ${JSON.stringify(task)}`)
 }
 
-/**
- * XP points every quest pays on top of its coins, scaled by difficulty: the coin value (which already
- * reflects it) plus 10, tripled for milestones (the gear-shaped quests). An `xp` in book.mjs is a minimum.
- */
-function questXp(quest) {
-  const auto = (10 + (quest.reward?.coins ?? 0)) * (quest.shape === 'gear' ? 3 : 1)
-  return Math.max(auto, quest.reward?.xp ?? 0)
+// ---------------------------------------------------------------- rewards
+// Every quest has a difficulty tier (book.tiers): the tier sets its XP, its coins and the reward table it rolls
+// on once. A quest's own `reward` adds to that: more xp/coins, fixed `items` (the chapter prizes players can see
+// coming), extra `tables` to roll, and `commands` (cape flags). `rolls` rolls the tier table more than once.
+
+const tableIds = new Map((book.tables ?? []).map((t) => [t.key, hexId(`table/${t.key}`)]))
+
+/** An item stack for a reward or table entry: an id string, or { id/item, count, components }. */
+function stackData(it, where) {
+  const stack = typeof it === 'string' ? { id: it } : { ...it, id: it.id ?? it.item }
+  need('item', stack.id, where)
+  return { count: stack.count ?? 1, id: stack.id, components: stack.components }
 }
 
-function rewardData(reward, key, where) {
+function tableReward(table, key, where) {
+  if (!tableIds.has(table)) problems.push(`${where}: unknown reward table "${table}"`)
+  return { id: hexId(key), table_id: hexLong(tableIds.get(table) ?? '0'), type: 'random' }
+}
+
+function rewardData(quest, key, where) {
+  const reward = quest.reward ?? {}
+  const tier = book.tiers[quest.tier ?? 1]
+  if (!tier) problems.push(`${where}: unknown tier ${quest.tier}`)
+  const xp = (tier?.xp ?? 0) + (reward.xp ?? 0)
+  const coins = (tier?.coins ?? 0) + (reward.coins ?? 0)
   const out = []
-  if (reward.xp) out.push({ id: hexId(`${key}/xp`), type: 'xp', xp: reward.xp })
-  if (reward.coins) {
-    for (const c of coinItems(reward.coins)) out.push({ id: hexId(`${key}/coin/${c.item}`), item: { count: c.count, id: c.item }, type: 'item' })
-  }
+  if (xp > 0) out.push({ id: hexId(`${key}/xp`), type: 'xp', xp })
+  for (const c of coinItems(coins)) out.push({ id: hexId(`${key}/coin/${c.item}`), item: { count: c.count, id: c.item }, type: 'item' })
   for (const [i, it] of (reward.items ?? []).entries()) {
-    need('item', it.item, where)
-    out.push({ id: hexId(`${key}/item/${i}`), item: { count: it.count ?? 1, id: it.item }, type: 'item' })
+    out.push({ id: hexId(`${key}/item/${i}`), item: stackData(it, where), type: 'item' })
   }
+  const rolls = [...Array.from({ length: reward.rolls ?? (tier?.table ? 1 : 0) }, () => tier.table), ...(reward.tables ?? [])]
+  rolls.forEach((table, i) => out.push(tableReward(table, `${key}/roll/${i}`, where)))
   // A server command run for the player ({p} is their name), e.g. unlocking a cape. Runs with permissions.
   for (const [i, command] of (reward.commands ?? []).entries()) {
     out.push({ id: hexId(`${key}/command/${i}`), type: 'command', command, elevate_perms: true, silent: true })
   }
   return out
+}
+
+/** reward_tables/<key>.snbt: weighted entries a `random` reward picks one of. Entries may roll another table. */
+function tableData(table, order) {
+  const where = `table ${table.key}`
+  const id = tableIds.get(table.key)
+  const rewards = table.entries.map((entry, i) => {
+    const key = `table/${table.key}/${i}`
+    const weight = F(entry.weight ?? 1)
+    if (entry.table) return { ...tableReward(entry.table, key, where), weight }
+    if (entry.xp) return { id: hexId(key), type: 'xp', weight, xp: entry.xp }
+    // [item id or stack, count, weight]
+    if (Array.isArray(entry)) {
+      const stack = typeof entry[0] === 'string' ? { id: entry[0] } : entry[0]
+      return { id: hexId(key), item: stackData({ ...stack, count: entry[1] }, where), type: 'item', weight: F(entry[2] ?? 1) }
+    }
+    return { id: hexId(key), item: stackData(entry, where), type: 'item', weight }
+  })
+  return {
+    empty_weight: F(0),
+    hide_tooltip: false,
+    icon: iconData(table.icon, where),
+    id,
+    loot_size: 1,
+    order_index: order,
+    rewards,
+    use_title: true
+  }
 }
 
 // ---------------------------------------------------------------- chapter header
@@ -391,17 +466,36 @@ const lang = { 'file.0000000000000001.title': book.title }
 const groupIds = new Map(book.groups.map((g) => [g.key, hexId(`group/${g.key}`)]))
 for (const g of book.groups) lang[`chapter_group.${groupIds.get(g.key)}.title`] = g.title
 
+;(book.tables ?? []).forEach((table, order) => {
+  files.set(`reward_tables/${table.key}.snbt`, tableData(table, order))
+  lang[`reward_table.${tableIds.get(table.key)}.title`] = table.title
+})
+
+// Skills chapter milestones ({ milestone: { skill, level } } or { milestone: { total } }) → milestones.json.
+// Lists rather than level-keyed objects: KubeJS reads JSON into Java maps, where a numeric key breaks Rhino.
+const milestones = { levels: [], skills: [], total: [] }
+const milestoneSkill = (skill, name) => {
+  let entry = milestones.skills.find((s) => s.skill === skill)
+  if (!entry) milestones.skills.push((entry = { skill, name, milestones: [] }))
+  return entry
+}
+
 book.chapters.forEach((chapter, order) => {
   const chapterId = hexId(`chapter/${chapter.key}`)
   const where = `chapter ${chapter.key}`
   const questIds = new Map(chapter.quests.map((q) => [q.key, hexId(`quest/${chapter.key}/${q.key}`)]))
+  const seen = new Set()
   for (const q of chapter.quests) {
+    if (seen.has(q.key)) problems.push(`${where}: duplicate quest key "${q.key}"`)
+    seen.add(q.key)
     for (const dep of q.after ?? []) if (!questIds.has(dep)) problems.push(`${where}/${q.key}: depends on unknown quest "${dep}"`)
   }
   const deps = reduceDependencies(chapter.quests)
   const positions = chapter.layout === 'grid' ? layoutGrid(chapter.quests) : layoutTree(chapter.quests, deps)
   if (preview) {
-    const quality = layoutQuality(chapter.quests, deps, new Map(chapter.quests.map((q) => [q.key, q.pos ?? positions.get(q.key)])))
+    // Lines FTB will not draw (hideLines) are not judged.
+    const drawn = new Map(chapter.quests.map((q) => [q.key, q.hideLines ? [] : deps.get(q.key)]))
+    const quality = layoutQuality(chapter.quests, drawn, new Map(chapter.quests.map((q) => [q.key, q.pos ?? positions.get(q.key)])))
     console.log(`  ${chapter.key}: ${quality.crossings} crossing(s)${quality.through.length ? `; ${quality.through.join(', ')}` : ''}`)
   }
   const chapterLang = {}
@@ -414,15 +508,26 @@ book.chapters.forEach((chapter, order) => {
       if (t.title) chapterLang[`task.${taskId}.title`] = t.title
       return taskData(t, taskId, qWhere)
     })
-    const icon = iconData(q.icon ?? q.tasks.find((t) => t.item)?.item, qWhere)
+    const firstItem = q.tasks.find((t) => t.item)
+    const icon = iconData(q.icon ?? (firstItem && { id: firstItem.item, components: firstItem.components }), qWhere)
     chapterLang[`quest.${id}.title`] = q.title
     if (q.subtitle) chapterLang[`quest.${id}.quest_subtitle`] = q.subtitle
     if (q.desc) chapterLang[`quest.${id}.quest_desc`] = q.desc
+    if (q.milestone) {
+      if (q.milestone.skill) {
+        milestoneSkill(q.milestone.skill, q.milestone.name ?? q.milestone.skill).milestones.push({ level: q.milestone.level, quest: id })
+        if (!milestones.levels.includes(q.milestone.level)) milestones.levels.push(q.milestone.level)
+      } else milestones.total.push({ level: q.milestone.total, quest: id })
+    }
     return {
       dependencies: deps.get(q.key).map((k) => questIds.get(k)).filter(Boolean),
+      hide_dependency_lines: q.hideLines ? true : undefined,
+      hide_until_deps_complete: q.hidden ? true : undefined,
       icon,
       id,
-      rewards: rewardData({ ...q.reward, xp: questXp(q) }, `reward/${chapter.key}/${q.key}`, qWhere),
+      min_required_dependencies: q.minDeps,
+      optional: q.optional ? true : undefined,
+      rewards: rewardData(q, `reward/${chapter.key}/${q.key}`, qWhere),
       shape: q.shape,
       size: q.size ? D(q.size) : undefined,
       tasks,
@@ -487,7 +592,13 @@ if (problems.length > 0) {
   console.error(`${problems.length} problem(s):\n  ${problems.join('\n  ')}`)
   process.exit(1)
 }
-console.log(`${book.chapters.length} chapters, ${questCount} quests, all ids valid (checked against ${path.basename(sourcePath)})`)
+milestones.levels.sort((a, b) => a - b)
+for (const s of milestones.skills) s.milestones.sort((a, b) => a.level - b.level)
+milestones.total.sort((a, b) => a.level - b.level)
+const milestoneCount = milestones.skills.reduce((n, s) => n + s.milestones.length, 0) + milestones.total.length
+console.log(
+  `${book.chapters.length} chapters, ${questCount} quests, ${(book.tables ?? []).length} reward tables, ${milestoneCount} skill milestones, all ids valid (checked against ${path.basename(sourcePath)})`
+)
 if (checkOnly) process.exit(0)
 
 rmSync(outDir, { recursive: true, force: true })
@@ -496,7 +607,9 @@ for (const [rel, data] of files) {
   mkdirSync(path.dirname(file), { recursive: true })
   writeFileSync(file, snbt(data) + '\n')
 }
-console.log(`Wrote ${files.size} files to ${path.relative(root, outDir)}`)
+mkdirSync(path.dirname(milestonesFile), { recursive: true })
+writeFileSync(milestonesFile, JSON.stringify(milestones, null, 2) + '\n')
+console.log(`Wrote ${files.size} files to ${path.relative(root, outDir)} and ${path.relative(root, milestonesFile)}`)
 
 if (preview) {
   const previewDir = path.join(root, 'quests', 'preview')

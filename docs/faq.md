@@ -10,6 +10,9 @@
 
 **My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are optional and off by default.
 
+**How do I get home fast?** A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See [Waystones](waystones.md).
 **Where are my screenshots?** Launcher → Settings → Files & repair → Screenshots.
 
 **Can I add my own mods?** Client-side ones (minimap tweaks, shaders): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server.
+
+**What do the colours on an item's tooltip mean?** The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gold legendary), stats are listed under it, and the bold last line repeats the rarity and what the item is. A red "❣ Requires" line means a skill isn't high enough yet; it turns green with a tick when it is. Hold Shift over an item for the details: which skills it trains, how to get it, and set bonuses.

@@ -1,0 +1,193 @@
+{
+	empty_weight: 0.0f
+	hide_tooltip: false
+	icon: {
+		id: "relics:clot_of_time"
+	}
+	id: "36BDBF4F01FE3397"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{
+			id: "06C259364417EA2D"
+			item: {
+				count: 1
+				id: "relics:leafy_mantle"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "79D8515CE6ED2F0C"
+			item: {
+				count: 1
+				id: "relics:springy_boot"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "5323E1314043C4EF"
+			item: {
+				count: 1
+				id: "relics:kinetic_belt"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "49C7549DD1D5E236"
+			item: {
+				count: 1
+				id: "relics:reflective_necklace"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "297361972779CA5F"
+			item: {
+				count: 1
+				id: "relics:jellyfish_necklace"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "3D47D71C2CCF9401"
+			item: {
+				count: 1
+				id: "relics:midnight_mantle"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "5A9D6CCC648BB441"
+			item: {
+				count: 1
+				id: "relics:roller_skate"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "5BAF2F1AE7CD92C8"
+			item: {
+				count: 1
+				id: "relics:chorus_staff"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "06BC1DA3F00AF864"
+			item: {
+				count: 1
+				id: "relics:clot_of_time"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "766BF54474AC4594"
+			item: {
+				count: 1
+				id: "relics:piglin_mask"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "57D9DE9CDD729510"
+			item: {
+				count: 1
+				id: "relics:chef_hat"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "311883CE50D1B6BA"
+			item: {
+				count: 1
+				id: "relics:cut_glass_boot"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "3E200A34D5CAA9A9"
+			item: {
+				count: 1
+				id: "relics:rider_flute"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "0D0C61504658894C"
+			item: {
+				count: 1
+				id: "relics:ring_of_the_seven_deadly_sins"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "0ED4CDC9A49DF75F"
+			item: {
+				count: 1
+				id: "relics:sphere_of_self_sacrifice"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "2DF1D3E426D649D1"
+			item: {
+				count: 1
+				id: "relics:hunting_belt"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "49A6EFCA86E81362"
+			item: {
+				count: 1
+				id: "relics:experience_disperser"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "7A5889ACD68310D7"
+			item: {
+				count: 1
+				id: "relics:glitchy_mantle"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "2F041AFF3CB8797A"
+			item: {
+				count: 1
+				id: "relics:ghostly_mantle"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "4C91A33A54596B5A"
+			item: {
+				count: 1
+				id: "relics:shield_of_retaliation"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+	]
+	use_title: true
+}

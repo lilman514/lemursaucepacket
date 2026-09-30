@@ -32,7 +32,7 @@
 			y: -2.0d
 		}
 	]
-	order_index: 10
+	order_index: 22
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [
@@ -45,15 +45,28 @@
 				{
 					id: "079B184B50D1C29D"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "01EC08E2C88CC543"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "3E0EE04D2F64932D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "79998747C12B4726"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -94,15 +107,28 @@
 				{
 					id: "529B0605F2A75AE7"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "3C7142AE0F1E213B"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "633F309E8BF39C8C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "325F5080D1A12418"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -137,15 +163,28 @@
 				{
 					id: "346AA988B51E7856"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "5DC9CE0DD7873BB5"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "13126A09B03B1A26"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "31BF13E55CE7E378"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -168,15 +207,28 @@
 				{
 					id: "48438C905BE1D2AF"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "7D2E5FAD9991FB73"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "599F5CDA3F0346CE"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6484236CA6B72582"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -199,7 +251,7 @@
 				{
 					id: "34246FC439057859"
 					type: "xp"
-					xp: 138
+					xp: 400
 				}
 				{
 					id: "050A60B8A998CF54"
@@ -208,6 +260,11 @@
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "120C06AB870286D0"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -230,15 +287,28 @@
 				{
 					id: "674C7826E0D9734F"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "14F7B68018423F9D"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "27C52CA74BDA798B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0133BC215F243682"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -249,7 +319,7 @@
 					value: 2L
 				}
 			]
-			x: 2.1d
+			x: 0.0d
 			y: 2.4d
 		}
 		{
@@ -261,15 +331,28 @@
 				{
 					id: "219C9F49A1AC733B"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "1412A13DB8CB421E"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "1647B6232861C3BA"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4CAA750C0B267B28"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -278,7 +361,7 @@
 					type: "checkmark"
 				}
 			]
-			x: 4.2d
+			x: 2.1d
 			y: 2.4d
 		}
 		{
@@ -290,7 +373,7 @@
 				{
 					id: "183EFD8B7189B24E"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "70854252823445E2"
@@ -299,6 +382,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "322A65087AA34293"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -311,7 +399,79 @@
 					type: "item"
 				}
 			]
+			x: 4.2d
+			y: 2.4d
+		}
+		{
+			icon: {
+				id: "minecraft:rotten_flesh"
+			}
+			id: "077898A31D2B2294"
+			rewards: [
+				{
+					id: "193B93E5B97B277F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "07929F643B1B7202"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1978AFE82123799B"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "friendsandfoes:adventure/it_bites"
+					criterion: ""
+					id: "3EBCF5580B297448"
+					type: "advancement"
+				}
+			]
 			x: 6.3d
+			y: 2.4d
+		}
+		{
+			icon: {
+				id: "minecraft:prismarine_shard"
+			}
+			id: "11580C49523F17F8"
+			rewards: [
+				{
+					id: "2D1E26C684F04571"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "76137BAA00E886F2"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "4A18EAC432C62CFE"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:elder_guardian"
+					id: "0820A8C9ECE99448"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.4d
 			y: 2.4d
 		}
 	]

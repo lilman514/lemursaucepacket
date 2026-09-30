@@ -2,7 +2,7 @@
   "name": "Capes",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:white_banner",
-  "sortnum": 7,
+  "sortnum": 9,
   "pages": [
     {
       "type": "patchouli:text",
@@ -19,7 +19,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "ooking 99. - eating heals 2 extra hearts$(br)$(bold)Smithing Cape$() - Smithing 99. - +1 armour toughness$(br)$(bold)Crafting Cape$() - Crafting 99. - the item in your hand mends one durability every ten seconds$(br)$(bold)Agility Cape$() - Agility 99. - +10% speed"
+      "text": "ooking 99. - eating heals 2 extra hearts$(br)$(bold)Smithing Cape$() - Smithing 99. - +1 armour toughness$(br)$(bold)Crafting Cape$() - Crafting 99. - the item in your hand mends one durability every ten seconds$(br)$(bold)Agility Cape$() - Agility 99. - +10% speed$(br)$(bold)Enchanting Cape$() - Enchanting 99. - +20% Enchanting XP"
     },
     {
       "type": "patchouli:text",

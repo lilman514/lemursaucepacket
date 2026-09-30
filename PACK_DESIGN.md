@@ -16,7 +16,9 @@ Why the pack is built the way it is. The README covers how to run it.
 
 ## Progression: the quest book
 
-FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a road map that pays out in Numismatics coins and XP. XP is 10 plus the coin value, tripled for milestones: 10 to 3,102 XP a quest, about 12,400 over the whole book. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
+FTB Quests, built from `quests/book.mjs`: 29 chapters and about 435 quests. Quests never lock content; they're a road map that pays out in XP, Numismatics coins and loot. Every quest has a **tier** (1 Settler, 2 Engineer, 3 Artisan, 4 Master, 5 Legend) that sets its XP (25 to 1,000), its coins (8 to 512) and one roll on the tier's reward table (`reward_tables/*.snbt`: ingots and torches at tier 1, cogs and casings at 2, brass and precision mechanisms at 3, enchanted books, relics and gear tools at 4, loot-only gear, waystones and netherite at 5), so a hard quest pays like one. Chapter finales add a fixed prize (a gear piece, a relic roll, a warp stone, a cape flag) so the whole line is worth finishing. Objectives are the mods' real advancements wherever one exists, not checkmarks. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
+
+Beyond the Ages below: **Industry** (Factory Floor, Railway Company, The Foundry, The Enchanter, Arcane Works, The Warehouse, Grand Kitchen), **Expeditions** (Cartographer, Deep Dark, Beyond the Dragon, Village Life, Relic Hunter with all 20 relics and collector quests), **Field Guides** (Backpack Workshop, Homestead, Bestiary, Atlas, Commerce, Armory, Hearts & Graves) and **Mastery**: a *Skills* chapter with every skill's 10/25/50/75/99 milestones and a total-level ladder up to Maxed, plus *Contracts* for Brassworks missions. Milestones are custom tasks completed by `server_scripts/quest_milestones.js` (every 10 s, and after login) from Project MMO levels, with per-skill prizes at 50 and 75 and a relic, a sun coin and Hoard rolls at 99.
 
 **The Ages** (the main line)
 
@@ -30,8 +32,6 @@ FTB Quests, built from `quests/book.mjs`. Quests never lock content; they're a r
 | Skyward | Create Aeronautics: propellers, envelopes, burners, levitite, steering | Maiden voyage |
 | Crown of Fire | Fortresses, bastions, piglin castes, blaze cakes, netherite | The Wither |
 | Legacy | Stronghold, the End, the dragon, elytra, enchantment industry, crushing wheels, banking | Build your legacy |
-
-**Field Guides** (side books): Backpack Workshop, Homestead (Farmer's Delight, Slice & Dice, happy ghast), Bestiary, Atlas (15 biomes and structures), and Coin & Commerce.
 
 Each chapter opens with a painted crest and an info card. The card says what the chapter is for and what it unlocks (Bestiary and Atlas list their rewards instead). The lemur mascot and the chapter crests come from one Higgsfield sheet (see the README).
 
@@ -129,7 +129,45 @@ Capes are cosmetics with a story (`capes/capes.mjs`; players read `docs/capes.md
 - **Legendary capes**, animated: every skill at 99, every chapter done, the dragon killed.
 - **The Lemur Cape**: the owner's, by command.
 
+How they look: the static capes are woven cloth drawn in code at Minecraft's own 64x32 cape size (`art/capes-px.mjs`): a dyed field with fold shading, a band near the hem and a small stitched emblem for skill capes (the Old School RuneScape idea), heraldic patterns for the rest (rails for Iron Roads, a beacon beam, a crimson saltire for the Armory, ring-tail bands for the Lemur). An earlier version framed a painted picture on each cape; it looked like wearing a poster, so only the three animated legendary capes keep painted art.
+
 How it works: the server keeps who unlocked and wears what (persistent data, `/capes` wardrobe, `/lsp cape` admin commands) and tells every client who wears which cape; the client script gives each player a texture slot through CapeJS and swaps the texture behind it, frame by frame for animated capes. Art: two Higgsfield sheets of cape fronts, composed into Minecraft's cape layout at 8× by `art/process.mjs`, with generated shimmer frames.
+
+## Enchanting: caps that grow, and Hardness
+
+Enchanting is the fourteenth skill (`enchanting/enchanting.mjs`, built by `enchanting/build.mjs`; players read `docs/enchanting.md`). The table trains it, and it decides how far an enchantment can go:
+
+- **Raised caps.** Every enchantment whose effect keeps scaling is raised to X (a few stop earlier where the effect does); single-level ones (Mending, Infinity, Silk Touch, the curses) are untouched. The allowed level is vanilla max plus a share of the extra levels that grows with the skill, so everything reaches its cap at 99. Above your level an item does nothing and armour slows you (Project MMO's own use-gate idea). Table costs stay linear (1.21 allows nothing else) and the table's third slot scales with the skill; Enchantment Industry's super enchanting is told not to go past the caps.
+- **Telekinesis** (one level, tools and weapons): drops go straight to the inventory. Rolls at the table and shows up in loot like anything else.
+- **Hardness** (the OSRS mining-level idea): a pickaxe tier alone doesn't break the good stuff. Tier I is iron, zinc and lapis; II gold and redstone; III diamond, emerald and obsidian; IV ancient debris; V reinforced deepslate and budding amethyst, each needing a Mining level (10/20/30/40/50) to work. Hardness is an enchanted-book *tome* applied at the anvil: tier I from a crafting table (andesite, copper, a book: iron sits behind it, and every Create machine needs iron or zinc, so a mechanical recipe there would have been circular), the rest by mechanical crafting from lower-tier materials. Tier II is the first real wall by design: the Mechanical Crafter needs brass and an electron tube, so the routes are a drill contraption (machines break up to tier II, through `create:non_breakable`), Ore Excavation veins (diamond, emerald and netherite veins are removed), witches and loot, and a Nether trip through a portal cast in place. Obsidian sits at III so an enchanting table and sturdy sheets don't wait for Mining 40.
+- **The use-gate** (the owner's call: TNT, other players' chests and loot are "no biggie", the item just can't be used). A material from a gated block (`HARDNESS.materials`: raw ores, lapis, redstone, diamonds, obsidian, ancient debris; emeralds and ingots are free) can be carried, kept in a chest, barrel, shulker box or ender chest, placed or dropped, but recipes, machines and every other container refuse it until the Mining level reaches its tier. Two hooks: the companion mod's `UseGateMixin` checks every menu click (`AbstractContainerMenu#clicked`, so crafting grids, furnaces, anvils, hoppers, backpacks and every mod's machine menu are covered, and the client never predicts a refused move), and `server_scripts/enchanting.js` denies right-clicking a machine block with the item. Automation is exempt, so a funnel can still feed a diamond off the floor into a machine.
+- **Tooltips** show the gate on every enchantment line: needs Enchanting N, the next level's unlock, the cap; Hardness lines show the Mining level and the blocks.
+
+Rules for changing it: edit `enchanting.mjs` only (tiers, unlock levels, recipes, which enchantments are raised) and rebuild; the scripts read `config/lemursaucepacket/enchanting.json`, and the wiki page is generated.
+
+## Hearts, graves and elimination (lifesteal)
+
+A lifesteal layer for the PvP server (`docs/lifesteal.md` for players; numbers in `config/lemursaucepacket/lifesteal.json`, switches in `config/lsp_fixes-common.toml`):
+
+- **Hearts** are the player's own health bar: 10, plus Hitpoints (one per ten levels), plus Hearts used, minus deaths. Gear, capes and potions never count. A death costs one and drops a **Heart** item (invulnerable, never despawns, never in the grave); right-click to gain one, or hand it to someone. Each Heart has a serial and works once, so a duped one crumbles. No loss in a player's first two hours or to the same killer within 30 minutes. New Hearts are a late-game sequenced assembly (Heart of the Sea, nether star, liquid XP, a totem).
+- **Graves need Grave Essence.** The Gravestone mod only places a grave when the dead player carried one (inventory, Curios or a backpack); otherwise the items drop as in vanilla. A companion-mod mixin cancels the mod's handler before it places anything.
+- **Ownership:** an item is stamped with its first owner when it first enters an inventory (not Hearts, coins or books).
+- **Elimination** at zero hearts: the death screen asks the player to confirm, several times, typing ERASE and holding. Their placed blocks and owned items are then erased everywhere, chunk by chunk and throttled, with a full archive first (`/lsp restore`), a dry-run mode and an off switch. Friends can `/revive` them with a Heart, even offline. They restart at spawn with 10 hearts and keep their skills.
+- **Compasses:** the Lost Item Compass points at your own dropped items; the Seeker's Compass points at containers or players last seen holding a chosen item, without saying which.
+
+KubeJS does the rules (`lifesteal.js`, `lifesteal_recipes.js`); the companion mod (`mods-src/lemursaucepacket-fixes`, package `lifesteal`) does what scripts can't: the grave veto, holding the respawn, the erasure and its archive, the compass GUI and index.
+
+**Never load a chunk to read a container** (`SafeItems`). NeoForge's item capability for a chest asks vanilla for the double chest, which reads the neighbouring block and loads its chunk if needed. The first version read containers that way from chunk load and unload events, so chunks loaded each other: the world kept loading outward from chests on chunk edges, and the server never finished stopping (found with `jstack` on a scratch server stuck after "Stopping the server"). Plain containers are now read directly, a chest as its own half, and the capability only when the 3x3 chunks around the block are loaded.
+
+## Travel: waystones you find before you can make
+
+Waystones (with Balm) are in for fast travel, on the owner's terms: found in the world first, expensive to build.
+
+- **Finding them:** Towers of the Wild: Modded adds tall towers with a waystone on top; Towns and Towers, Structory Towers and Dungeons and Taverns carry their own waystone compat that switches on when Waystones is present; the mod's wild waystones spawn too, and `pack/kubejs/data/waystones/tags/worldgen/biome` extends that to the Terralith and Regions Unexplored biomes the mod's tags don't list. Found waystones are breakable, so a player can take one home (Silk Touch keeps its name).
+- **Making them:** `pack/kubejs/server_scripts/waystones.js` replaces all of the mod's recipes. Warp dust comes from heated mixing (ender pearl + amethyst), a warp stone from mechanical crafting with a precision mechanism, and a waystone from mechanical crafting with an ender eye, a precision mechanism, sturdy sheets and a brass casing; scrolls, sharestones, portstones and warp plates follow the same pattern. Consumables stay affordable; placeable waystones are the expensive part.
+- **Maps:** Xaero's Minimap shows activated waystones as waypoints natively and the world map reads them; no extra mod.
+- **Airships:** Waystones + Sable compat so a waystone on a ship teleports correctly.
+- Travel costs are the mod's defaults (XP points by distance, capped); `warpRequirements` is the knob if it ever feels too free.
 
 ## Look and feel: one kit everywhere
 
@@ -137,7 +175,9 @@ Everything a player looks at outside the world — the launcher, the loading scr
 
 - **Materials:** dark riveted iron plates, polished brass bands with corner rivets, parchment text, amber for hover. The palette is sampled from the logo (`art/pixel-kit.mjs` has the hex values).
 - **Widgets:** the pack replaces the vanilla button, slider, tab, text field, checkbox and scrollbar sprites and the menu backgrounds with pixel-drawn brass versions (a resource pack in `kubejs/assets`). Anything that uses vanilla widgets — the options screens, FTB Quests, most mod screens — inherits the look. The launcher draws its buttons, fields and cards from the same sprites at 3×.
-- **Icons:** the ESC menu, the launcher pages and the 13 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
+- **Tooltips** follow Hypixel SkyBlock's layout on every item (`pack/kubejs/client_scripts/tooltips.js`, and `gear/build.mjs` for the pack's own gear): the name in its rarity colour, a stat block (Damage, Attack Speed, Defense, Health… with the value coloured by stat, built from the item's real attribute modifiers, which vanilla's own attribute lines no longer duplicate), gold section headers for abilities and set bonuses, Project MMO requirements as "❣ Requires Mining 35" in red until met and green with a tick after, a "Hold Shift for details" hint that reveals skill XP, the "How to get"/"Found in" hints and set-bonus text, and a bold "UNCOMMON HELMET"-style footer. Create items keep Create's own Shift summary; Relics items keep their research hold. Project MMO's own tooltip lines are switched off in the shipped client config.
+- **Item art:** the pack's own items are 16x16 pixel art in the style of the Relics mod (`art/items.mjs`, drawn in code): coloured outlines instead of black, hue-shifted shading, small sparkles, and Relics' shimmer animation (a long still frame, then a quick light sweep, with the pause varied per item). Vanilla armour and tool sprites give the silhouettes so a helmet still reads as a helmet; the unusual items (scythe, wand, pattern, crown) are hand-placed pixels. The two Relics status-effect icons Relics 0.12.8 ships without (Flight, Tremor) are drawn the same way into `assets/relics`. The lifesteal compasses get 32 needle frames of their own, vanilla's compass frames recoloured by role (casing, face, needle) with one colour table so the needle never flickers as it turns; their frame models are static files next to the textures.
+- **Icons:** the ESC menu, the launcher pages and the 14 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
 - **The ESC menu** is a riveted board with three recessed panels: *Adventure* (Map, Quests, Missions, Waypoints, plus where you are), *Game Menu* (the vanilla pause buttons, moved into the panel; "Options" is renamed "Settings") and *Player* (your character, Skills, Backpack, Team, Voice). Buttons added by other mods land in free slots or a tray under Disconnect, so nothing disappears. The vanilla "Game Menu" title is blanked through a language override.
 
 Not skinned, on purpose: inventories and machine GUIs (Create's own look is part of the pack's identity), Brassworks Missions, Xaero's map screens and JEI. They sit inside the brass-framed screens rather than fighting them.
@@ -247,7 +287,7 @@ Launcher toggles: 18 client mods are optional on the launcher's Mods page. Shade
 ## Deliberately left out
 
 - **Seamless portals.** Immersive Portals' official NeoForge build conflicts with Sodium 0.8 and Sable. The community fork (Immersive Portals CE 6.0.9, built for Sable 2.0.5) was tested and then dropped at the server owner's call.
-- **Waystones and teleport commands:** see *Travel* above.
+- **Teleport commands** (`/home`, `/tpa`, `/spawn`): waystones cover fast travel on the owner's terms, see *Travel* above.
 - **EMI:** the Create-specific JEI add-ons (Create JEI Compat, JEI World Gen) are JEI-only.
 - **OptiFine:** incompatible with this stack. Sodium, Iris, EMF and ETF cover what it did.
 - **Quark, Supplementaries and similar big content mods:** they change the vanilla feel more than they add to a Create server.
@@ -269,6 +309,14 @@ Remove an entry when the mod fixes it upstream.
 - Backpacks, Numismatics vendors, vaults, toolboxes, copycats and the other storage blocks tested were already safe.
 - The mod clears every such block entity first. It crashes at startup, rather than failing silently, if a Sable update moves the code it patches.
 - Sable's own `sable:silent_assembly_removal` block tag is the fallback if the mod ever lags behind Sable.
+
+**LemurSaucePacket Fixes** (`mods-src/lemursaucepacket-fixes`, mod id `lsp_fixes`, shipped as `pack/mods/lsp_fixes-*.jar` on both sides) is the pack's own companion mod for what scripts can't reach:
+- Project MMO 2.10.47's inventory skills panel couldn't be scrolled at larger interface sizes (its scroll step was the overflow divided by 100 in whole numbers, so it rounded to zero under 200 px of overflow, and it crawled 1–2 px per notch otherwise). A mixin gives it one row per notch and the full range.
+- The same panel is 130 px wide and overlapped the inventory at the minimum interface width (427 px); it now starts collapsed when it would reach into the inventory or the recipe book.
+- The Hardness use-gate's menu half (`UseGateMixin` on `AbstractContainerMenu#clicked`, see *Enchanting*) and the Java half of the lifesteal system (see *Hearts, graves and elimination*).
+- Its mixins only apply when the target mod is present and switch off with a warning instead of crashing if a mod update renames what they patch. Build: `./gradlew build` then `./gradlew copyToPack`.
+
+**Script gotchas this KubeJS build (2101.7) taught us:** KubeJS's bean properties shadow same-named vanilla methods (`player.level`, `level.dimension`, `server.overworld` are properties, so `player.level()` fails); some vanilla methods aren't reachable from scripts at all (`getUUID`, use `player.uuid`; `closeContainer`/`openMenu`; `getSharedSpawnPos`); overloaded Java methods whose arguments KubeJS can convert several ways are "ambiguous" (`Style.withColor`, use `component.color(...)`; the two-argument Curios `getItemStackSlots`; and any method with String and UUID overloads, since KubeJS converts a string into a UUID: call the one you mean by signature, `cache['get(java.lang.String)'](name)`); and `net.neoforged.fml` classes are blocked by the class filter (Project MMO's `LogicalSide` comes from `Core.get(level).getSide()` instead). Headless tests catch these; the Node tooltip harness doesn't.
 
 ## Known quirks
 

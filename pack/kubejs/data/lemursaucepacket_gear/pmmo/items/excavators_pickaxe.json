@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:excavators_pickaxe"
+  ],
   "requirements": {
     "TOOL": {
       "mining": 40

@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:duelist_boots"
+  ],
   "requirements": {
     "WEAR": {
       "attack": 40

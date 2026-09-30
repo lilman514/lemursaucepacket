@@ -12,12 +12,17 @@
 // - item/block files are merged per id, highest level per skill wins; "isTagFor" applies a file to items/tags;
 // - the "builtin/default" datapack adds requirements for PMMO's own skills (e.g. combat 60 for diamond swords),
 //   so the pack disables it (kubejs/server_scripts/skills.js);
-// - static_levels is the XP each level costs (not cumulative), capped at its length.
+// - static_levels is the XP each level costs (not cumulative), capped at its length;
+// - USE_ENCHANTMENT requirements stay off: in 2.10.47 an enchantment's requirements replace the item's own
+//   (Core.getReqMap -> getCommonReqData only reads item data when the map is still empty), so a Sharpness VI
+//   sword would need Enchanting but no Attack. Enchanting caps are enforced by kubejs/*/enchanting.js instead.
 // Crit chances for Strength and Ranged are not PMMO perks: kubejs/server_scripts/skills.js rolls them.
+// Enchanting (the skill) is defined here; what it unlocks lives in enchanting/enchanting.mjs.
 
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = path.join(root, 'pack', 'kubejs', 'data')
@@ -58,7 +63,8 @@ const SKILLS = {
   artisan: {
     cooking: ['Cooking', 0xe0ac46],
     smithing: ['Smithing', 0xe0ac46],
-    crafting: ['Crafting', 0xe0ac46]
+    crafting: ['Crafting', 0xe0ac46],
+    enchanting: ['Enchanting', 0xe0ac46]
   },
   support: {
     agility: ['Agility', 0x6fb7e8]
@@ -171,7 +177,11 @@ const ITEM_XP = [
   ['vanilla_crafting', ['minecraft:*'], { CRAFT: { crafting: 1 } }],
   ['create_crafting', ['create:*'], { CRAFT: { crafting: 3 } }],
   ['furniture_crafting', ['mcwfurnitures:*', 'woodworks:*', 'everycomp:*'], { CRAFT: { crafting: 3 } }],
-  ['backpack_crafting', ['sophisticatedbackpacks:*'], { CRAFT: { crafting: 8 } }]
+  ['backpack_crafting', ['sophisticatedbackpacks:*'], { CRAFT: { crafting: 8 } }],
+  // Enchanting: PMMO's ENCHANT event fires at the table (XP scaled by level / max level for each enchantment
+  // rolled, so a level-5-of-10 roll gives half) and at the anvil when a book is involved (flat, for the output).
+  // Grindstones have no PMMO event, and disenchanting is not worth XP anyway.
+  ['enchanting', ['#c:enchantables', '#minecraft:enchantable/durability', 'minecraft:book', 'minecraft:enchanted_book'], { ENCHANT: { enchanting: ENCHANT_XP } }]
 ]
 
 // ---------------------------------------------------------------- PMMO config files

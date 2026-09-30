@@ -1,0 +1,457 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "deep_dark"
+	group: "05D7205A6D5637F0"
+	icon: {
+		id: "minecraft:sculk_catalyst"
+	}
+	id: "46E4D335D0BCE4EC"
+	images: [
+		{
+			height: 2.7574468085106383d
+			id: "7866688CE01BD9F9"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.536170212765957d
+			x: 2.3d
+			y: -2.1d
+		}
+	]
+	order_index: 16
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:sculk"
+			}
+			id: "4787851D06C5AD77"
+			rewards: [
+				{
+					id: "40A86364C0661BAE"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "272DAF177A43ADBA"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "307F16DB9A74244F"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "39BDCC12298919DE"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "04C3FAFA510FCFE0"
+					item: {
+						count: 1
+						id: "minecraft:sculk"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.9d
+		}
+		{
+			dependencies: ["4787851D06C5AD77"]
+			icon: {
+				id: "minecraft:sculk_sensor"
+			}
+			id: "0E15A5F94789A015"
+			rewards: [
+				{
+					id: "5B0D72AF10348F55"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "07D36F60DF3287F9"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1BDD2D567565CA49"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2E1AEAD49AC1482B"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/avoid_vibration"
+					criterion: ""
+					id: "545E22929D2FC3A4"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["0E15A5F94789A015"]
+			icon: {
+				id: "minecraft:reinforced_deepslate"
+			}
+			id: "5E90413E753B9D8D"
+			rewards: [
+				{
+					id: "5A23AC85EA42DCAE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "048E23B1F9263909"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6D6192AB54BADF15"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "6304C82AB2ABA416"
+					structure: "minecraft:ancient_city"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["4787851D06C5AD77"]
+			icon: {
+				id: "minecraft:sculk_catalyst"
+			}
+			id: "2A066EC0CDE8CF63"
+			rewards: [
+				{
+					id: "18DD9BA948E2FEF7"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "2660299E41F1C78F"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "67012047972C1F6B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "557D0A12F9C07C96"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/kill_mob_near_sculk_catalyst"
+					criterion: ""
+					id: "6965B4E3CDB16836"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
+			dependencies: ["5E90413E753B9D8D"]
+			icon: {
+				id: "minecraft:echo_shard"
+			}
+			id: "1B27DD2D44942954"
+			rewards: [
+				{
+					id: "5106F81980B49A67"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "66DA5AD3EB48D298"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "606E560C4BDEAE14"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "167B9323CEE58DAD"
+					item: {
+						count: 1
+						id: "minecraft:echo_shard"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1B27DD2D44942954"]
+			icon: {
+				id: "minecraft:recovery_compass"
+			}
+			id: "5EFD1F15D600A4B8"
+			rewards: [
+				{
+					id: "2348D758E387BCA6"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "40567D4F6A5EB583"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "69DC27109C91D401"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "7E4556B6A9E73828"
+					item: {
+						count: 1
+						id: "minecraft:recovery_compass"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 0.6d
+		}
+		{
+			dependencies: ["5E90413E753B9D8D"]
+			icon: {
+				id: "minecraft:music_disc_5"
+			}
+			id: "360F444D7711B328"
+			rewards: [
+				{
+					id: "3C92C4293B73A5A1"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "471565321142FA27"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5A28E443082CA1FE"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0A4CA25EAF399D43"
+					item: {
+						count: 1
+						id: "minecraft:music_disc_5"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["5E90413E753B9D8D"]
+			icon: {
+				id: "minecraft:ward_armor_trim_smithing_template"
+			}
+			id: "18E83D5A3727EEC3"
+			rewards: [
+				{
+					id: "2EA88E37659D5BA8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5308292A6692F1E8"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4860A7F5A206B66D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "31A494EABDDDFDA0"
+					item: {
+						count: 1
+						id: "minecraft:ward_armor_trim_smithing_template"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 3.7d
+		}
+		{
+			dependencies: ["18E83D5A3727EEC3"]
+			icon: {
+				id: "minecraft:silence_armor_trim_smithing_template"
+			}
+			id: "1BBB44E783C90A6B"
+			rewards: [
+				{
+					id: "61FCDDA417167B5D"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "5FA64BF4A460A7CD"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "275A24DED257330F"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2BAA0FED5B94F2B1"
+					item: {
+						count: 1
+						id: "minecraft:silence_armor_trim_smithing_template"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 3.6d
+		}
+		{
+			dependencies: ["5EFD1F15D600A4B8", "360F444D7711B328", "1BBB44E783C90A6B"]
+			icon: {
+				id: "minecraft:sculk_shrieker"
+			}
+			id: "24A74A9AE03817A1"
+			rewards: [
+				{
+					id: "1A657763654C5450"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "4050CCFE90691EE0"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "3972603567236024"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "3C21D90CB1498FA5"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "65557EC729F5943E"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "54DB755E5BB7070B"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					entity: "minecraft:warden"
+					id: "6F2F707D839BEF01"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 11.5d
+			y: 2.1d
+		}
+	]
+}

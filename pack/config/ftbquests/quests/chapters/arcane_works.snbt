@@ -1,0 +1,515 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "arcane_works"
+	group: "6C6400F8A74B6D9F"
+	icon: {
+		id: "create_enchantment_industry:blaze_enchanter"
+	}
+	id: "7C57D87C2A66E36C"
+	images: [
+		{
+			height: 2.9872340425531916d
+			id: "5E3F4597D7BA6766"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.072340425531915d
+			x: 4.65d
+			y: -1.8d
+		}
+	]
+	order_index: 12
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:experience_nugget"
+			}
+			id: "0B0E3F5877B936D7"
+			rewards: [
+				{
+					id: "0AFBA8C1A37E5A37"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "3B810CCB96C3F313"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3BCA5BC27ADA271A"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:experienced_engineer"
+					criterion: ""
+					id: "36D9364B933E096E"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 2.85d
+		}
+		{
+			dependencies: ["0B0E3F5877B936D7"]
+			icon: {
+				id: "create_enchantment_industry:mechanical_grindstone"
+			}
+			id: "2DCBA603428C116C"
+			rewards: [
+				{
+					id: "6865499EB1F82B32"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "1C28105480A60E91"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2346F25D3D907A31"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3224C457E362ECF1"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:gone_with_the_foil"
+					criterion: ""
+					id: "2997735B3909663C"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 2.05d
+		}
+		{
+			dependencies: ["0B0E3F5877B936D7"]
+			icon: {
+				id: "create_enchantment_industry:experience_hatch"
+			}
+			id: "49FBDD60BE536D27"
+			rewards: [
+				{
+					id: "6F794BDAFC2BB6F4"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "17AC9E5234EB5EFA"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0BF70183106F3420"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "447FAC476E31F661"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:spirit_taking"
+					criterion: ""
+					id: "5A55792FFEAC94F9"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 3.65d
+		}
+		{
+			dependencies: ["2DCBA603428C116C", "49FBDD60BE536D27"]
+			icon: {
+				id: "create_enchantment_industry:blaze_enchanter"
+			}
+			id: "63262AE8B48DF4D5"
+			rewards: [
+				{
+					id: "6193FF73019C53BF"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "6498A6D67AFD73BF"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3A23DDC204D412C8"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:blaze_enchantery"
+					criterion: ""
+					id: "378C9080FF311EAA"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 2.25d
+		}
+		{
+			dependencies: ["63262AE8B48DF4D5"]
+			icon: {
+				id: "minecraft:enchanted_book"
+			}
+			id: "703D761DDAD49C6C"
+			rewards: [
+				{
+					id: "5F5C08EB422F3BCE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2D858969D75D9CD3"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "45471786CCE9FB37"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:blazing_enchantment"
+					criterion: ""
+					id: "7481F2571690158A"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["63262AE8B48DF4D5"]
+			icon: {
+				id: "create_enchantment_industry:printer"
+			}
+			id: "0C2D956CF7AEE52E"
+			rewards: [
+				{
+					id: "06287EAD6817D43D"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7D0E9C68F8663994"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4386EEDD6E14583A"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:copiable_mystery"
+					criterion: ""
+					id: "1F919604B2A26A31"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 3.7d
+		}
+		{
+			dependencies: ["63262AE8B48DF4D5"]
+			icon: {
+				id: "create_enchantment_industry:blaze_forger"
+			}
+			id: "046A889E2F3F50C9"
+			rewards: [
+				{
+					id: "27E5636A5C93EC83"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "32FE47615281891C"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1BD73BB9C1956889"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:born_talent_of_fire"
+					criterion: ""
+					id: "6A95230CF0E815B1"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["046A889E2F3F50C9"]
+			icon: {
+				id: "minecraft:anvil"
+			}
+			id: "52D7BBAF34E66ED5"
+			rewards: [
+				{
+					id: "571862CAD1D056E1"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "26825381BAD1D8AA"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "149E95F8D494CD01"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:blazing_fusion"
+					criterion: ""
+					id: "47E1A332AC9D019B"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 2.2d
+		}
+		{
+			dependencies: ["52D7BBAF34E66ED5", "703D761DDAD49C6C"]
+			icon: {
+				id: "create_enchantment_industry:enchanting_template"
+			}
+			id: "0BAF680FAA3ED610"
+			rewards: [
+				{
+					id: "3E2F4414DF0E1995"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "15E72BD6CF81357D"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "0F0634FE67E16F39"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:sigil_forging"
+					criterion: ""
+					id: "076BEAA70434E897"
+					type: "advancement"
+				}
+			]
+			x: 11.5d
+			y: 1.7d
+		}
+		{
+			dependencies: ["49FBDD60BE536D27"]
+			icon: {
+				id: "create_enchantment_industry:experience_lantern"
+			}
+			id: "7771A2253B9EC82B"
+			rewards: [
+				{
+					id: "55542C3E7C3A423A"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "172146ED3D613C0C"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0B09B9F61F5CB983"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:lumen_nexus"
+					criterion: ""
+					id: "0E9C2C0CA54C59A9"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 4.6d
+		}
+		{
+			dependencies: ["0BAF680FAA3ED610"]
+			icon: {
+				id: "create_enchantment_industry:super_experience_nugget"
+			}
+			id: "68FF069C47899582"
+			rewards: [
+				{
+					id: "50CD8C9EFD31C785"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6FE36470AB033A3B"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "71EAEEFA789639DB"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:lightning_catalysis"
+					criterion: ""
+					id: "222EAA342EEA88DD"
+					type: "advancement"
+				}
+			]
+			x: 13.8d
+			y: 2.15d
+		}
+		{
+			dependencies: ["68FF069C47899582", "0C2D956CF7AEE52E", "7771A2253B9EC82B"]
+			icon: {
+				id: "create_enchantment_industry:classic_blaze_enchanter"
+			}
+			id: "3204042BCE50D667"
+			rewards: [
+				{
+					id: "00D877EABBE8959E"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "385B8719B43CBBDA"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "7B9FB34F59C1327C"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:mending": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "6649C33BDAE39E98"
+					item: {
+						count: 2
+						id: "create_enchantment_industry:experience_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "6ED07FB5ADA93E0A"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					advancement: "create_enchantment_industry:thousand_runes"
+					criterion: ""
+					id: "14F9B740ED2FE099"
+					type: "advancement"
+				}
+			]
+			x: 16.1d
+			y: 3.35d
+		}
+	]
+}

@@ -1,0 +1,1116 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "relic_hunter"
+	group: "05D7205A6D5637F0"
+	icon: {
+		id: "relics:clot_of_time"
+	}
+	id: "4B0B7C46188E3D93"
+	images: [
+		{
+			height: 0.1d
+			id: "58B4F78D503327A9"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: 0.25d
+			y: -8.55d
+		}
+		{
+			height: 3.2170212765957444d
+			id: "2ECA9CC78A608427"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.868085106382979d
+			x: 0.25d
+			y: -0.5d
+		}
+	]
+	order_index: 19
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:book"
+			}
+			id: "5F56628DA2CF2B6F"
+			rewards: [
+				{
+					id: "08F83EB9F6BA54D9"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "77359EECEB198FDC"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "396C2C1BC84C6A3D"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5092FA5802B1D659"
+					type: "checkmark"
+				}
+			]
+			x: 4.2d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "relics:leafy_mantle"
+			}
+			id: "6A6C2B0374B4AF96"
+			rewards: [
+				{
+					id: "196340D7C3D0BE5B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "117D5EC00F95376A"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "09383D70F021AF9B"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2C9C7A876CCF5699"
+					item: {
+						count: 1
+						id: "relics:leafy_mantle"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.9d
+		}
+		{
+			icon: {
+				id: "relics:springy_boot"
+			}
+			id: "6EBB60FE413753B0"
+			rewards: [
+				{
+					id: "77B1E6583ECAFE5E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "1596C1D70281EA32"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "388E988FB277AAD0"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3AF5787706A48051"
+					item: {
+						count: 1
+						id: "relics:springy_boot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.1d
+			y: 1.9d
+		}
+		{
+			icon: {
+				id: "relics:kinetic_belt"
+			}
+			id: "71FEB518791AB733"
+			rewards: [
+				{
+					id: "6A14E43EC191A1E4"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0778F356218FC962"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "71EA2BB85FBA4F45"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "43E707EAC94AB219"
+					item: {
+						count: 1
+						id: "relics:kinetic_belt"
+					}
+					type: "item"
+				}
+			]
+			x: 4.2d
+			y: 1.9d
+		}
+		{
+			icon: {
+				id: "relics:reflective_necklace"
+			}
+			id: "5083EB00561A1467"
+			rewards: [
+				{
+					id: "5E218F7276527E97"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "380D90D0B5D9ACC1"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0CBA0B6698A9E0AC"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2F4636D4DCB0B4B3"
+					item: {
+						count: 1
+						id: "relics:reflective_necklace"
+					}
+					type: "item"
+				}
+			]
+			x: 6.3d
+			y: 1.9d
+		}
+		{
+			icon: {
+				id: "relics:jellyfish_necklace"
+			}
+			id: "7393DB62B7B71460"
+			rewards: [
+				{
+					id: "0852CE98E214FECC"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "37A27A14D55D7225"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "60FD7D31E7881E8C"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1269381B424507D6"
+					item: {
+						count: 1
+						id: "relics:jellyfish_necklace"
+					}
+					type: "item"
+				}
+			]
+			x: 8.4d
+			y: 1.9d
+		}
+		{
+			icon: {
+				id: "relics:midnight_mantle"
+			}
+			id: "41E8E96D246F67C9"
+			rewards: [
+				{
+					id: "4653F66E4556D31A"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5BF37E91E0124A86"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "241CAC4E9F139E6A"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "50D182D331194DE4"
+					item: {
+						count: 1
+						id: "relics:midnight_mantle"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.8d
+		}
+		{
+			icon: {
+				id: "relics:roller_skate"
+			}
+			id: "51D4D4DE639B2F76"
+			rewards: [
+				{
+					id: "4865350A96124C49"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5DF1FD325A64FDE3"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2DDA65F80F691FE2"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "202D452A83ACF1F5"
+					item: {
+						count: 1
+						id: "relics:roller_skate"
+					}
+					type: "item"
+				}
+			]
+			x: 2.1d
+			y: 3.8d
+		}
+		{
+			icon: {
+				id: "relics:chorus_staff"
+			}
+			id: "063ECCC94ECC90C1"
+			rewards: [
+				{
+					id: "6BA947DDC065D3F9"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7E3F614551D726B1"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "79F3A51DEF6A0279"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "792E7D03F5C6BFE9"
+					item: {
+						count: 1
+						id: "relics:chorus_staff"
+					}
+					type: "item"
+				}
+			]
+			x: 4.2d
+			y: 3.8d
+		}
+		{
+			icon: {
+				id: "relics:clot_of_time"
+			}
+			id: "52F1F5F8668AF757"
+			rewards: [
+				{
+					id: "6EA76D2E902A7562"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "34654FB47C536890"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "27846D5747CBBAED"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0FAA5A8B4914AE5A"
+					item: {
+						count: 1
+						id: "relics:clot_of_time"
+					}
+					type: "item"
+				}
+			]
+			x: 6.3d
+			y: 3.8d
+		}
+		{
+			icon: {
+				id: "relics:piglin_mask"
+			}
+			id: "5870968770A17FF5"
+			rewards: [
+				{
+					id: "1F15E54773E1FD13"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5968C89F9EC09475"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2C60139D960372AC"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "72AC07A9C70889F0"
+					item: {
+						count: 1
+						id: "relics:piglin_mask"
+					}
+					type: "item"
+				}
+			]
+			x: 8.4d
+			y: 3.8d
+		}
+		{
+			icon: {
+				id: "relics:chef_hat"
+			}
+			id: "6225212C6A5DC11C"
+			rewards: [
+				{
+					id: "3FE5D10035459836"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0CC46CA00AE68015"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1496BDDC8F9C6014"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4FBEE7051B990CEA"
+					item: {
+						count: 1
+						id: "relics:chef_hat"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.7d
+		}
+		{
+			icon: {
+				id: "relics:cut_glass_boot"
+			}
+			id: "2C116A8515CA8574"
+			rewards: [
+				{
+					id: "284BB559DE917339"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "62150CE43EB0772D"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3E95992DC2E3E989"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "229A23EBAC3C5685"
+					item: {
+						count: 1
+						id: "relics:cut_glass_boot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.1d
+			y: 5.7d
+		}
+		{
+			icon: {
+				id: "relics:rider_flute"
+			}
+			id: "18F4D883CEADC699"
+			rewards: [
+				{
+					id: "463F587639FDB55C"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "39811370031BC7BF"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0889478A22C280AD"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1307EB3602335F99"
+					item: {
+						count: 1
+						id: "relics:rider_flute"
+					}
+					type: "item"
+				}
+			]
+			x: 4.2d
+			y: 5.7d
+		}
+		{
+			icon: {
+				id: "relics:ring_of_the_seven_deadly_sins"
+			}
+			id: "7167FD1EB7C9FE3B"
+			rewards: [
+				{
+					id: "2E7C959C454AECEE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0A0AD4006C021132"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2831848B4E4A3942"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "11896C1A888EFEEB"
+					item: {
+						count: 1
+						id: "relics:ring_of_the_seven_deadly_sins"
+					}
+					type: "item"
+				}
+			]
+			x: 6.3d
+			y: 5.7d
+		}
+		{
+			icon: {
+				id: "relics:sphere_of_self_sacrifice"
+			}
+			id: "53E321CFDE3A9385"
+			rewards: [
+				{
+					id: "423DB0E05DF856DD"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2EFE62995A5B9091"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3A401F9E5CED8097"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0CC119612F66CEDE"
+					item: {
+						count: 1
+						id: "relics:sphere_of_self_sacrifice"
+					}
+					type: "item"
+				}
+			]
+			x: 8.4d
+			y: 5.7d
+		}
+		{
+			icon: {
+				id: "relics:hunting_belt"
+			}
+			id: "54D0E314F5B3B32E"
+			rewards: [
+				{
+					id: "093A276AB44CA277"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7C0111549CA291A7"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "07A166BC4231A59C"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4BDCC4027D532655"
+					item: {
+						count: 1
+						id: "relics:hunting_belt"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.6d
+		}
+		{
+			icon: {
+				id: "relics:experience_disperser"
+			}
+			id: "4D9CAEF491D34D66"
+			rewards: [
+				{
+					id: "62166D7CBE758F5F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5DF1F512EBA13467"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "72BCFBD187F0785E"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "46435D42ED5EBB2C"
+					item: {
+						count: 1
+						id: "relics:experience_disperser"
+					}
+					type: "item"
+				}
+			]
+			x: 2.1d
+			y: 7.6d
+		}
+		{
+			icon: {
+				id: "relics:glitchy_mantle"
+			}
+			id: "5B864EF78266D4B1"
+			rewards: [
+				{
+					id: "2AC4BC07895700D5"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "15C18E515B1F628A"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "01C4B19940DBCEF4"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "39701B3BF38FD036"
+					item: {
+						count: 1
+						id: "relics:glitchy_mantle"
+					}
+					type: "item"
+				}
+			]
+			x: 4.2d
+			y: 7.6d
+		}
+		{
+			icon: {
+				id: "relics:ghostly_mantle"
+			}
+			id: "28528AE6141E4DD2"
+			rewards: [
+				{
+					id: "03FA593416219729"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "23B1B13FB3647291"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1A7CBB0362DCD073"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3F783044D228F4FA"
+					item: {
+						count: 1
+						id: "relics:ghostly_mantle"
+					}
+					type: "item"
+				}
+			]
+			x: 6.3d
+			y: 7.6d
+		}
+		{
+			icon: {
+				id: "relics:shield_of_retaliation"
+			}
+			id: "5032BD083368AADD"
+			rewards: [
+				{
+					id: "2A03A5585026C8DF"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "456A610B949E9BE0"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2D0B99FF8F190BBB"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "59B22EEFDC77916F"
+					item: {
+						count: 1
+						id: "relics:shield_of_retaliation"
+					}
+					type: "item"
+				}
+			]
+			x: 8.4d
+			y: 7.6d
+		}
+		{
+			dependencies: ["6A6C2B0374B4AF96", "6EBB60FE413753B0", "71FEB518791AB733", "5083EB00561A1467", "7393DB62B7B71460", "41E8E96D246F67C9", "51D4D4DE639B2F76", "063ECCC94ECC90C1", "52F1F5F8668AF757", "5870968770A17FF5", "6225212C6A5DC11C", "2C116A8515CA8574", "18F4D883CEADC699", "7167FD1EB7C9FE3B", "53E321CFDE3A9385", "54D0E314F5B3B32E", "4D9CAEF491D34D66", "5B864EF78266D4B1", "28528AE6141E4DD2", "5032BD083368AADD"]
+			hide_dependency_lines: true
+			icon: {
+				id: "relics:roller_skate"
+			}
+			id: "0B0F5256E0C52D02"
+			min_required_dependencies: 1
+			rewards: [
+				{
+					id: "0B076498F4028FCE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "6168323F349BB036"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2508C79E96235EAD"
+					item: {
+						count: 16
+						id: "minecraft:experience_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "7E9C3B505F25C58D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "16065580B9B7F7F3"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 9.9d
+		}
+		{
+			dependencies: ["0B0F5256E0C52D02"]
+			icon: {
+				id: "minecraft:experience_bottle"
+			}
+			id: "43D0DD9F045FD962"
+			rewards: [
+				{
+					id: "1EFD0BDE3DC880B8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "25FCF48E6CE6E5B4"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6409696701434980"
+					item: {
+						count: 32
+						id: "minecraft:experience_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "48F74715496C052D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "47F368A1955E2EA4"
+					type: "checkmark"
+				}
+			]
+			x: 2.1d
+			y: 9.9d
+		}
+		{
+			dependencies: ["6A6C2B0374B4AF96", "6EBB60FE413753B0", "71FEB518791AB733", "5083EB00561A1467", "7393DB62B7B71460", "41E8E96D246F67C9", "51D4D4DE639B2F76", "063ECCC94ECC90C1", "52F1F5F8668AF757", "5870968770A17FF5", "6225212C6A5DC11C", "2C116A8515CA8574", "18F4D883CEADC699", "7167FD1EB7C9FE3B", "53E321CFDE3A9385", "54D0E314F5B3B32E", "4D9CAEF491D34D66", "5B864EF78266D4B1", "28528AE6141E4DD2", "5032BD083368AADD"]
+			hide_dependency_lines: true
+			icon: {
+				id: "relics:hunting_belt"
+			}
+			id: "6E3533FCD9B8000A"
+			min_required_dependencies: 5
+			rewards: [
+				{
+					id: "725FB025066EEF2D"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "1D6289FC136C085B"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "5FEBACB00256DD41"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					id: "191368DCA8380BEB"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3DE024B0530A24C0"
+					type: "checkmark"
+				}
+			]
+			x: 4.2d
+			y: 9.9d
+		}
+		{
+			dependencies: ["6A6C2B0374B4AF96", "6EBB60FE413753B0", "71FEB518791AB733", "5083EB00561A1467", "7393DB62B7B71460", "41E8E96D246F67C9", "51D4D4DE639B2F76", "063ECCC94ECC90C1", "52F1F5F8668AF757", "5870968770A17FF5", "6225212C6A5DC11C", "2C116A8515CA8574", "18F4D883CEADC699", "7167FD1EB7C9FE3B", "53E321CFDE3A9385", "54D0E314F5B3B32E", "4D9CAEF491D34D66", "5B864EF78266D4B1", "28528AE6141E4DD2", "5032BD083368AADD"]
+			hide_dependency_lines: true
+			icon: {
+				id: "relics:midnight_mantle"
+			}
+			id: "5C9E3BE3B41C7A10"
+			min_required_dependencies: 10
+			rewards: [
+				{
+					id: "56D0267639A730CE"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "3B2A68BAF6648012"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "0B3C3FECFE8A1B1A"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					id: "7ADEFDF3880E8B1E"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "70B0D306CBF71848"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "27FBC230B98AD878"
+					type: "checkmark"
+				}
+			]
+			x: 6.3d
+			y: 9.9d
+		}
+		{
+			dependencies: ["43D0DD9F045FD962"]
+			icon: {
+				id: "lemursaucepacket:prospector_helmet"
+			}
+			id: "42C46F2D83C6FAAB"
+			rewards: [
+				{
+					id: "41920D4B31C869C4"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "182623A573CCD75E"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "3E5033FC5354A381"
+					item: {
+						count: 1
+						id: "lemursaucepacket:duelists_pattern"
+					}
+					type: "item"
+				}
+				{
+					id: "239147C6DFC79DE4"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "08DF0297AFE991AB"
+					type: "checkmark"
+				}
+			]
+			x: 2.1d
+			y: 12.2d
+		}
+		{
+			dependencies: ["6A6C2B0374B4AF96", "6EBB60FE413753B0", "71FEB518791AB733", "5083EB00561A1467", "7393DB62B7B71460", "41E8E96D246F67C9", "51D4D4DE639B2F76", "063ECCC94ECC90C1", "52F1F5F8668AF757", "5870968770A17FF5", "6225212C6A5DC11C", "2C116A8515CA8574", "18F4D883CEADC699", "7167FD1EB7C9FE3B", "53E321CFDE3A9385", "54D0E314F5B3B32E", "4D9CAEF491D34D66", "5B864EF78266D4B1", "28528AE6141E4DD2", "5032BD083368AADD"]
+			hide_dependency_lines: true
+			icon: {
+				id: "relics:ring_of_the_seven_deadly_sins"
+			}
+			id: "4BFF60896108B40E"
+			min_required_dependencies: 15
+			rewards: [
+				{
+					id: "71527BC971F541EB"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "6DDF738E8BE06488"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "40F3A9A10A3BB779"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "2EADF0674ADF13F8"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "403E9AFA7D253FDD"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "4BF88B41AF11F9E3"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "2925CAD8D02497AB"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					id: "52FD7F6B27268EC4"
+					type: "checkmark"
+				}
+			]
+			x: 4.2d
+			y: 12.2d
+		}
+	]
+}

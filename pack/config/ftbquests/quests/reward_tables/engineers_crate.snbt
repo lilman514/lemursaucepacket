@@ -1,0 +1,220 @@
+{
+	empty_weight: 0.0f
+	hide_tooltip: false
+	icon: {
+		id: "create:andesite_casing"
+	}
+	id: "4A769831A3D17A9D"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{
+			id: "45F8F48DF02E26E4"
+			item: {
+				count: 8
+				id: "create:cogwheel"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "6CDFEFD24DBABBA1"
+			item: {
+				count: 16
+				id: "create:shaft"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "1F5967A24026573E"
+			item: {
+				count: 8
+				id: "create:andesite_casing"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "4D30EDF7CC7B4D08"
+			item: {
+				count: 4
+				id: "create:large_cogwheel"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "1A103B5FCCE03DD7"
+			item: {
+				count: 8
+				id: "create:iron_sheet"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "7717AB9955215961"
+			item: {
+				count: 8
+				id: "create:copper_sheet"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "67AD6347BB696924"
+			item: {
+				count: 8
+				id: "create:belt_connector"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "24066CCFE0FD283F"
+			item: {
+				count: 4
+				id: "create:chute"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "430132205684BA47"
+			item: {
+				count: 4
+				id: "create:andesite_funnel"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "622605AE2C39161E"
+			item: {
+				count: 8
+				id: "create:zinc_ingot"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "1BF110C6EE9BADD4"
+			item: {
+				count: 8
+				id: "create:experience_nugget"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "1C211651DCE77B74"
+			item: {
+				count: 2
+				id: "sophisticatedbackpacks:upgrade_base"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "1B419A3898F95323"
+			item: {
+				count: 2
+				id: "create:depot"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "6BB7D7038BD7696C"
+			item: {
+				count: 4
+				id: "create:andesite_tunnel"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "3A5A1151870C9F26"
+			item: {
+				count: 1
+				id: "create:super_glue"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "45A96F4D33B5799B"
+			item: {
+				count: 2
+				id: "create:filter"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "0108F541145CFFA6"
+			item: {
+				count: 2
+				id: "create:sand_paper"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "291489E7EF574D42"
+			item: {
+				count: 4
+				id: "create:sweet_roll"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "492D73659C23BF27"
+			item: {
+				count: 2
+				id: "create:honeyed_apple"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "56FFB3ADE6BB8ED1"
+			item: {
+				count: 2
+				id: "minecraft:iron_block"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "557F277B44AC2615"
+			item: {
+				count: 1
+				id: "create:encased_fan"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "7E47BC8270947051"
+			item: {
+				count: 1
+				id: "create:water_wheel"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "43A85B9BE9EB0AC1"
+			item: {
+				count: 1
+				id: "create:mechanical_saw"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+	]
+	use_title: true
+}

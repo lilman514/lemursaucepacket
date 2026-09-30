@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:duelist_helmet"
+  ],
   "requirements": {
     "WEAR": {
       "attack": 40

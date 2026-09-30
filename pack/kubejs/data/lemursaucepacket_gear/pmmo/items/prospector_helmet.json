@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:prospector_helmet"
+  ],
   "requirements": {
     "WEAR": {
       "mining": 35

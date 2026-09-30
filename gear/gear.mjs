@@ -13,6 +13,12 @@
 //   defense/toughness/knockbackResistance   armour attributes  health       max health (attribute)
 //   speed         movement speed (fraction, multiply-total)    luck         luck attribute
 // Perks are named behaviours the server script implements (see pack/kubejs/server_scripts/gear.js).
+//
+// Tooltips follow Hypixel SkyBlock's layout (kubejs/client_scripts/tooltips.js draws them; gear_client.js has
+// this file's part): `rarity` is COMMON, UNCOMMON, RARE, EPIC, LEGENDARY or MYTHIC and colours the name and the
+// "RARE HELMET" line; `perkName` titles the "Piece Bonus" (armour) or "Ability" (weapons, tools) section,
+// `perkTrigger` adds a SkyBlock trigger such as RIGHT CLICK, `perkDesc` is the tooltip's wording of the perk
+// (falls back to perkText/text), and `lore` is a grey description for an item without a perk.
 
 export const NAMESPACE = 'lemursaucepacket'
 
@@ -82,8 +88,15 @@ export const SETS = [
     material: 'prospector',
     theme: 'Mining utility: light where you dig, haste when you commit to the whole set.',
     requirement: { skill: 'mining', level: 35 },
+    rarity: 'UNCOMMON',
     pieces: {
-      helmet: { name: "Prospector's Lamp", perk: 'night_vision_underground', perkText: 'Night Vision below Y=32 (alone too)' },
+      helmet: {
+        name: "Prospector's Lamp",
+        perk: 'night_vision_underground',
+        perkText: 'Night Vision below Y=32 (alone too)',
+        perkName: "Miner's Lamp",
+        perkDesc: 'Night Vision while you are below Y=32, even without the rest of the set.'
+      },
       chestplate: { name: "Prospector's Vest" },
       leggings: { name: "Prospector's Trousers" },
       boots: { name: "Prospector's Boots" }
@@ -98,11 +111,18 @@ export const SETS = [
     material: 'aeronaut',
     theme: 'Mobility for people who live on airships and rooftops.',
     requirement: { skill: 'agility', level: 40 },
+    rarity: 'UNCOMMON',
     pieces: {
       helmet: { name: "Aeronaut's Goggles" },
       chestplate: { name: "Aeronaut's Jacket" },
       leggings: { name: "Aeronaut's Trousers" },
-      boots: { name: "Aeronaut's Boots", perk: 'no_fall_damage', perkText: 'No fall damage (alone too)' }
+      boots: {
+        name: "Aeronaut's Boots",
+        perk: 'no_fall_damage',
+        perkText: 'No fall damage (alone too)',
+        perkName: 'Soft Landing',
+        perkDesc: 'You take no fall damage, even without the rest of the set.'
+      }
     },
     set: { attributes: { speed: 0.15, stepHeight: 0.6, swimSpeed: 0.5 }, text: '+15% speed, step up whole blocks, swim faster' },
     synergy: { relic: 'relics:kinetic_belt', attributes: { speed: 0.1 }, text: 'another +10% speed' },
@@ -114,6 +134,7 @@ export const SETS = [
     material: 'duelist',
     theme: 'Fighting armour: every piece sharpens your criticals.',
     requirement: { skill: 'attack', level: 40 },
+    rarity: 'RARE',
     pieces: {
       helmet: { name: 'Duelist Helm', stats: { critChance: 0.02 } },
       chestplate: { name: 'Duelist Cuirass', stats: { critChance: 0.02 } },
@@ -130,6 +151,7 @@ export const SETS = [
     material: 'compacted_diamond',
     theme: 'Heavy plate pressed from compacted diamond.',
     requirement: { skill: 'defence', level: 45 },
+    rarity: 'RARE',
     pieces: {
       helmet: { name: 'Compacted Diamond Helmet' },
       chestplate: { name: 'Compacted Diamond Chestplate' },
@@ -145,6 +167,7 @@ export const SETS = [
     material: 'compacted_netherite',
     theme: 'The last armour you will need.',
     requirement: { skill: 'defence', level: 60 },
+    rarity: 'EPIC',
     pieces: {
       helmet: { name: 'Compacted Netherite Helmet' },
       chestplate: { name: 'Compacted Netherite Chestplate' },
@@ -166,6 +189,8 @@ export const PIECES = [
     stats: { luck: 2 },
     requirement: { skill: 'fishing', level: 25 },
     text: '+2 Luck: better catches and better loot',
+    rarity: 'UNCOMMON',
+    lore: 'Luck means better catches and better loot.',
     howToGet: 'Crafted from leather, string and a fishing rod.'
   },
   {
@@ -178,6 +203,9 @@ export const PIECES = [
     requirement: { skill: 'defence', level: 40 },
     source: 'loot',
     text: 'Fire Resistance while worn, +1 damage',
+    rarity: 'LEGENDARY',
+    perkName: 'Ember Ward',
+    perkDesc: 'Fire Resistance for as long as you wear it.',
     howToGet: 'Only found in Nether fortress and bastion chests.'
   }
 ]
@@ -193,6 +221,8 @@ export const WEAPONS = [
     stats: { critChance: 0.1 },
     requirement: { skill: 'attack', level: 25 },
     text: 'Fast, and +10% crit chance',
+    rarity: 'UNCOMMON',
+    lore: 'Light, quick and made for critical hits.',
     howToGet: 'Mechanical crafting from brass ingots and a sturdy sheet.'
   },
   {
@@ -205,6 +235,8 @@ export const WEAPONS = [
     stats: { knockback: 1 },
     requirement: { skill: 'attack', level: 45 },
     text: 'Slow, heavy, sends things flying',
+    rarity: 'RARE',
+    lore: 'Slow and heavy; every hit sends things flying.',
     howToGet: 'Mechanical crafting from sturdy sheets, a precision mechanism and a shaft.'
   },
   {
@@ -219,6 +251,8 @@ export const WEAPONS = [
     requirement: { skill: 'attack', level: 50 },
     source: 'loot',
     text: 'One hit in ten shocks the target for 3 extra damage',
+    rarity: 'LEGENDARY',
+    perkName: 'Stormcall',
     howToGet: 'Only found in pillager outpost and Dungeons Arise chests.'
   }
 ]
@@ -232,6 +266,8 @@ export const TOOLS = [
     perk: 'fell_tree',
     requirement: { skill: 'woodcutting', level: 30 },
     text: 'Chop one log and the whole tree comes down',
+    rarity: 'UNCOMMON',
+    perkName: 'Timber',
     howToGet: 'Mechanical crafting from iron sheets, andesite alloy and a mechanical saw.'
   },
   {
@@ -242,6 +278,9 @@ export const TOOLS = [
     perk: 'mine_3x3',
     requirement: { skill: 'mining', level: 40 },
     text: 'Mines a 3x3 (sneak for a single block)',
+    rarity: 'RARE',
+    perkName: 'Excavate',
+    perkDesc: 'Mines a 3x3 around the block you break. Sneak to mine a single block.',
     howToGet: 'Mechanical crafting from iron sheets, a drill and brass.'
   },
   {
@@ -252,6 +291,8 @@ export const TOOLS = [
     perk: 'auto_smelt',
     requirement: { skill: 'mining', level: 30 },
     text: 'Ores come out already smelted',
+    rarity: 'UNCOMMON',
+    perkName: 'Auto-Smelt',
     howToGet: 'Mechanical crafting from iron sheets, a blaze burner and copper.'
   },
   {
@@ -262,25 +303,34 @@ export const TOOLS = [
     perk: 'harvest_radius',
     requirement: { skill: 'farming', level: 30 },
     text: 'Right-click: harvests and replants a 5x5 of ripe crops',
+    rarity: 'UNCOMMON',
+    perkName: 'Reap',
+    perkTrigger: 'RIGHT CLICK',
+    perkDesc: 'Harvests and replants every ripe crop in a 5x5 around the one you click.',
     howToGet: 'Mechanical crafting from iron sheets, a mechanical harvester and a shaft.'
   },
   {
     id: 'builders_wand',
     name: "Builder's Wand",
     type: 'basic',
+    kind: 'WAND',
     perk: 'extend_face',
     maxDamage: 512,
     requirement: { skill: 'crafting', level: 30 },
     text: 'Right-click a block face to extend it with matching blocks from your inventory (up to 32)',
+    rarity: 'RARE',
+    perkName: 'Extend',
+    perkTrigger: 'RIGHT CLICK',
+    perkDesc: 'Extends the clicked face with matching blocks from your inventory, up to 32 at a time.',
     howToGet: 'Mechanical crafting from brass, a precision mechanism and a schematicannon core.'
   }
 ]
 
 /** Intermediate materials. */
 export const MATERIAL_ITEMS = [
-  { id: 'compacted_diamond', name: 'Compacted Diamond', howToGet: 'Four diamonds compacted in a basin under a mechanical press.' },
-  { id: 'compacted_netherite', name: 'Compacted Netherite', howToGet: 'Four netherite ingots compacted in a basin under a heated mechanical press.', fireResistant: true },
-  { id: 'duelists_pattern', name: "Duelist's Pattern", howToGet: 'Only found in Dungeons Arise chests; one pattern per set piece.' }
+  { id: 'compacted_diamond', name: 'Compacted Diamond', rarity: 'RARE', howToGet: 'Four diamonds compacted in a basin under a mechanical press.' },
+  { id: 'compacted_netherite', name: 'Compacted Netherite', rarity: 'EPIC', howToGet: 'Four netherite ingots compacted in a basin under a heated mechanical press.', fireResistant: true },
+  { id: 'duelists_pattern', name: "Duelist's Pattern", rarity: 'RARE', howToGet: 'Only found in Dungeons Arise chests; one pattern per set piece.' }
 ]
 
 /**

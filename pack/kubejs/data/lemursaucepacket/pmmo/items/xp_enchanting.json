@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "#c:enchantables",
+    "#minecraft:enchantable/durability",
+    "minecraft:book",
+    "minecraft:enchanted_book"
+  ],
+  "xp_values": {
+    "ENCHANT": {
+      "enchanting": 250
+    }
+  }
+}

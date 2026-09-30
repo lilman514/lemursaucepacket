@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:lumber_axe"
+  ],
   "requirements": {
     "TOOL": {
       "woodcutting": 30

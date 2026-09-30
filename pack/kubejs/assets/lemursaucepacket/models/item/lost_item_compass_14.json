@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lemursaucepacket:item/lost_item_compass_14"
+  }
+}

@@ -55,6 +55,8 @@ if (existsSync(path.join(root, 'quests', 'book.mjs'))) {
 if (existsSync(path.join(root, 'skills', 'build.mjs'))) {
   execFileSync(process.execPath, [path.join(root, 'skills', 'build.mjs')], { stdio: 'inherit' })
 }
+// Enchanting: the level caps, the Enchanting skill's unlock table and the pack's own enchantments.
+execFileSync(process.execPath, [path.join(root, 'enchanting', 'build.mjs')], { stdio: 'inherit' })
 // Gear and capes: scripts, configs and wiki pages generated from their definitions.
 execFileSync(process.execPath, [path.join(root, 'gear', 'build.mjs')], { stdio: 'inherit' })
 execFileSync(process.execPath, [path.join(root, 'capes', 'build.mjs')], { stdio: 'inherit' })
@@ -72,6 +74,7 @@ const exportArgs = process.argv.includes('--allow-external') ? ['--restrictDomai
 execFileSync(packwiz, ['modrinth', 'export', '-o', output, ...exportArgs], { cwd: packDir, stdio: 'inherit' })
 await linkCurseForgeFiles(output)
 await moveServerOnlyFiles(output)
+await checkLocalJars(output)
 copyFileSync(output, path.join(packsDir, 'latest.mrpack'))
 
 const data = readFileSync(output)
@@ -118,6 +121,28 @@ console.log('Upload the site/ folder to your host (or push to GitHub and let the
  * which would mean re-hosting someone else's file. Replace each copy with a link to CurseForge's own
  * CDN instead, so every player downloads it from CurseForge. Hashes are checked here at publish time.
  */
+/**
+ * The pack's own jars (pack/mods/*.jar, e.g. lsp_fixes) ride along as overrides. Once, right after a rebuild of
+ * one, the export carried the previous build (the index already had the new hash), and a scratch server ran the
+ * old code; so every such jar in the .mrpack is compared with the file on disk, and a mismatch stops the publish.
+ */
+async function checkLocalJars(mrpackPath) {
+  const { unzipSync } = await import('fflate')
+  const modsDir = path.join(packDir, 'mods')
+  const jars = readdirSync(modsDir).filter((f) => f.endsWith('.jar'))
+  if (jars.length === 0) return
+  const wanted = new Set(jars.map((f) => `overrides/mods/${f}`))
+  const entries = unzipSync(readFileSync(mrpackPath), { filter: (f) => wanted.has(f.name) })
+  for (const f of jars) {
+    const packed = entries[`overrides/mods/${f}`]
+    const onDisk = readFileSync(path.join(modsDir, f))
+    const hash = (b) => createHash('sha1').update(b).digest('hex')
+    if (!packed) throw new Error(`${f} is in pack/mods but not in the exported pack`)
+    if (hash(packed) !== hash(onDisk)) throw new Error(`${f} in the exported pack (${packed.length} bytes) is not the one in pack/mods (${onDisk.length} bytes): run the publish again`)
+  }
+  console.log(`Checked ${jars.length} local jar(s) in the pack against pack/mods`)
+}
+
 /** Moves files that only mean something to the dedicated server into server-overrides (packwiz can only emit shared overrides). */
 async function moveServerOnlyFiles(mrpackPath) {
   const SERVER_ONLY = ['server-icon.png']

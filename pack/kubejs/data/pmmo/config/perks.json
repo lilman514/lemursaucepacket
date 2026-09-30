@@ -91,6 +91,11 @@
       },
       {
         "perk": "pmmo:fireworks",
+        "skill": "enchanting",
+        "per_x_level": 10
+      },
+      {
+        "perk": "pmmo:fireworks",
         "skill": "agility",
         "per_x_level": 10
       }

@@ -1,0 +1,747 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "enchanter"
+	group: "6C6400F8A74B6D9F"
+	icon: {
+		id: "minecraft:enchanting_table"
+	}
+	id: "724775AA8236458B"
+	images: [
+		{
+			height: 2.9872340425531916d
+			id: "0A5D205330DDDF01"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.5574468085106385d
+			x: 9.15d
+			y: -1.0d
+		}
+	]
+	order_index: 11
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:enchanting_table"
+			}
+			id: "53022893A269221D"
+			rewards: [
+				{
+					id: "3296AF2CFEEA41B6"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "52B689B6AEE21945"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4CFFAC4463859846"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4226D8407CF528F6"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "51EFCEB1BD8DCB36"
+					item: {
+						count: 1
+						id: "minecraft:enchanting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.45d
+		}
+		{
+			dependencies: ["53022893A269221D"]
+			icon: {
+				id: "minecraft:bookshelf"
+			}
+			id: "410E3279D242D02C"
+			rewards: [
+				{
+					id: "7D4E56CB24780235"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "78520B76BE1CF7B2"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "022AA845A6CEF2FD"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "27CD5F21A8ADC266"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 15L
+					id: "59272157F68C9871"
+					item: {
+						count: 1
+						id: "minecraft:bookshelf"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 3.45d
+		}
+		{
+			dependencies: ["53022893A269221D"]
+			icon: {
+				id: "minecraft:lapis_lazuli"
+			}
+			id: "70B8478F4E2B143D"
+			rewards: [
+				{
+					id: "7F82856D9675118C"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "658AB61B215B21B4"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4FD31CCE3DDDE82C"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/enchant_item"
+					criterion: ""
+					id: "27AA4EFE917C3F6D"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 1.45d
+		}
+		{
+			dependencies: ["70B8478F4E2B143D"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:telekinesis": 1
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "0BA86957CF5A5277"
+			rewards: [
+				{
+					id: "449416379C216290"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0EF2BACC77555F87"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "7DB9DF923C029540"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "608E61D21E606CFC"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:telekinesis": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["410E3279D242D02C"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:sharpness": 6
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "6F86C5A7CA35337C"
+			rewards: [
+				{
+					id: "691C93D607BE6D22"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "37BA4641FF1447AD"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6E377A04820E8AB6"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "21CF1FBAB2230319"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:sharpness": 6
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["70B8478F4E2B143D"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:mending": 1
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "563583BD661DA7DA"
+			rewards: [
+				{
+					id: "3FE167A41B6B76F0"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "65687DF304E24622"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3C47A671A6E5F91F"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0F82105158D6AB10"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:mending": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["6F86C5A7CA35337C"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:sharpness": 8
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "6E5CBF9205B8157C"
+			rewards: [
+				{
+					id: "72143ED5533D127F"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "1FF6D1CD577B2A52"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "461AF753BD0BCFA2"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3FAC20D5D82FFB77"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:sharpness": 8
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 3.35d
+		}
+		{
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:hardness": 1
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "1119859B7479C81D"
+			rewards: [
+				{
+					id: "3D2DDD895E41B19E"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "771696EF2330F256"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1A6CC1D5CBC0796A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "5AD24BF1484DA7E1"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "45732281E2C50D3B"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			dependencies: ["1119859B7479C81D"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:hardness": 2
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "0C04E898EDFA8531"
+			rewards: [
+				{
+					id: "7EE47AB0D1054FBA"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5FAC10087EC1DF83"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3E2608FAABB84143"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3AA0B781EAE67323"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4302EE8671BDD900"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 2
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 5.25d
+		}
+		{
+			dependencies: ["0C04E898EDFA8531"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:hardness": 3
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "373FC2254A526ABB"
+			rewards: [
+				{
+					id: "16FF269793C59FE6"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7C4E411D1C91F4B7"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "395B05D30CD4D0CA"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "456AC5A73D3B04DF"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 3
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 5.3d
+		}
+		{
+			dependencies: ["373FC2254A526ABB"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:hardness": 4
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "048F8CB749BA0A23"
+			rewards: [
+				{
+					id: "4D8E8365D649DEEF"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "40792DC8A0218FC1"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "67A26030AF14DFC1"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "79081D743E510EEA"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 4
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 4.95d
+		}
+		{
+			dependencies: ["048F8CB749BA0A23"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:hardness": 5
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "76E8CCC8FC0428CC"
+			rewards: [
+				{
+					id: "46B631086F64AFC1"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "668CE599D272086A"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "40B567D00BFDFAB8"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "45B9B8A0B9DE83B9"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 4.6d
+		}
+		{
+			dependencies: ["6E5CBF9205B8157C", "76E8CCC8FC0428CC", "0BA86957CF5A5277"]
+			icon: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:sharpness": 10
+						}
+					}
+				}
+				id: "minecraft:enchanted_book"
+			}
+			id: "691B1E3F949C5DB7"
+			rewards: [
+				{
+					id: "35FC2168A53822B3"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "758655EB73DBE51B"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "7FEE924B2E96852C"
+					item: {
+						count: 1
+						id: "create_enchantment_industry:experience_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "572A075D65DCEF90"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:telekinesis": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "07FA4CA72C460C26"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "450BA639676217B4"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					id: "11D0A8B5370E498A"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:sharpness": 10
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					match_components: "fuzzy"
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 3.15d
+		}
+	]
+}

@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:stormcallers_sabre"
+  ],
   "requirements": {
     "WEAPON": {
       "attack": 50

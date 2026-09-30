@@ -15,7 +15,7 @@
 			rotation: 0.0d
 			width: 2.0d
 			x: -4.35d
-			y: -0.9d
+			y: -1.0d
 		}
 		{
 			height: 2.527659574468085d
@@ -29,10 +29,10 @@
 			text_v_align: "start"
 			width: 5.080851063829787d
 			x: -0.9d
-			y: -0.9d
+			y: -1.0d
 		}
 	]
-	order_index: 9
+	order_index: 21
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [
@@ -45,15 +45,20 @@
 				{
 					id: "7911DF98CC8CDC5D"
 					type: "xp"
-					xp: 14
+					xp: 25
 				}
 				{
-					id: "4096BE9E2AD640E7"
+					id: "1755471345F93CB6"
 					item: {
-						count: 4
-						id: "numismatics:spur"
+						count: 1
+						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "38F1EF4DE2C180B7"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -67,7 +72,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.15d
+			y: 2.3d
 		}
 		{
 			dependencies: ["121B7682E75B11E7"]
@@ -79,7 +84,7 @@
 				{
 					id: "6D8BCFE5790088CD"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "084B154AF56017A9"
@@ -88,6 +93,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "010D390E272A0172"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -113,7 +123,7 @@
 				{
 					id: "2412CCA3A22B50A7"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "1C1134C9EE2C054B"
@@ -122,6 +132,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "78EE0E8D7C345C91"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2F60EC0987D3693D"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -147,7 +170,7 @@
 				{
 					id: "18D16F45C0F0F38C"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "1658A861361C01A1"
@@ -156,6 +179,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "7346F937EE1545B7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1D6335A82187C966"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -193,7 +229,7 @@
 				}
 			]
 			x: 2.3d
-			y: 3.9d
+			y: 4.3d
 		}
 		{
 			dependencies: ["022ED40E89E99353"]
@@ -205,7 +241,7 @@
 				{
 					id: "3408AAD8502CFBBD"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "512FB0D2BAA015CE"
@@ -214,6 +250,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "063EC768D0850D90"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2483220F95048BF0"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -228,7 +277,7 @@
 				}
 			]
 			x: 4.6d
-			y: 4.05d
+			y: 5.4d
 		}
 		{
 			dependencies: ["0DD06477687A64EC", "3FD8D8BCEB833FB9"]
@@ -240,7 +289,7 @@
 				{
 					id: "6996B9DA5664D40B"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "7890A9C92ED88544"
@@ -249,6 +298,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "565BF6375FCF7675"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -270,7 +324,7 @@
 				}
 			]
 			x: 4.6d
-			y: 0.85d
+			y: 0.6d
 		}
 		{
 			dependencies: ["0DD06477687A64EC"]
@@ -282,15 +336,20 @@
 				{
 					id: "2E707D2A0C8FA986"
 					type: "xp"
-					xp: 42
+					xp: 150
 				}
 				{
 					id: "109632BFEB947AB3"
 					item: {
-						count: 2
+						count: 3
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "6574DC4CB2585844"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -304,9 +363,10 @@
 				}
 			]
 			x: 4.6d
-			y: 2.45d
+			y: 2.2d
 		}
 		{
+			dependencies: ["022ED40E89E99353"]
 			icon: {
 				id: "minecraft:wheat"
 			}
@@ -315,7 +375,7 @@
 				{
 					id: "0A000772911EF12A"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "746C9B44CCC8AF81"
@@ -324,6 +384,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "4EECC9075630E98E"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -334,11 +399,11 @@
 					type: "advancement"
 				}
 			]
-			x: 0.0d
-			y: 5.5d
+			x: 4.6d
+			y: 3.8d
 		}
 		{
-			dependencies: ["0E23F4609946F60D"]
+			dependencies: ["0E23F4609946F60D", "0FF0AB4095D74045"]
 			icon: {
 				id: "minecraft:dried_ghast"
 			}
@@ -347,17 +412,40 @@
 				{
 					id: "6C048D67051CF90C"
 					type: "xp"
-					xp: 74
+					xp: 400
 				}
 				{
 					id: "2E1D092238A7DFDA"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
 				}
+				{
+					id: "75B9423BB89DC884"
+					item: {
+						count: 1
+						id: "minecraft:white_harness"
+					}
+					type: "item"
+				}
+				{
+					id: "6F80C7D2D360AF94"
+					item: {
+						count: 1
+						id: "farmersdelight:roast_chicken_block"
+					}
+					type: "item"
+				}
+				{
+					id: "5358030A2701C110"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
 			]
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
 					id: "76E9C292B7AEBCA2"
@@ -376,8 +464,8 @@
 					type: "item"
 				}
 			]
-			x: 2.3d
-			y: 5.5d
+			x: 6.9d
+			y: 3.0d
 		}
 	]
 }

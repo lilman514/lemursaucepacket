@@ -1,0 +1,20 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.create.capacity"
+  },
+  "max_cost": {
+    "base": 115,
+    "per_level_above_first": 13
+  },
+  "max_level": 10,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 13
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#create:pressurized_air_sources",
+  "weight": 10
+}

@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:harvesters_scythe"
+  ],
   "requirements": {
     "TOOL": {
       "farming": 30

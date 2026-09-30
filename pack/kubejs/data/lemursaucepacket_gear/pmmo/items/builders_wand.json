@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:builders_wand"
+  ],
   "requirements": {
     "TOOL": {
       "crafting": 30

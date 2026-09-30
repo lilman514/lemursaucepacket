@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:duelist_leggings"
+  ],
   "requirements": {
     "WEAR": {
       "attack": 40

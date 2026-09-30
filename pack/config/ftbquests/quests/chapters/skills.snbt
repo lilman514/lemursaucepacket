@@ -1,0 +1,4227 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skills"
+	group: "70BC9AA571D15575"
+	icon: {
+		components: {
+			"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+		}
+		id: "ftbquests:custom_icon"
+	}
+	id: "78EE8FA17C687CCA"
+	images: [
+		{
+			height: 0.1d
+			id: "034C4A17FA5171F6"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: 5.25d
+			y: -13.65d
+		}
+		{
+			height: 3.446808510638298d
+			id: "1B208C463904DB4D"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.634042553191489d
+			x: 5.25d
+			y: -2.7d
+		}
+	]
+	order_index: 27
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/attack.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6157DAB0F1B7355A"
+			rewards: [
+				{
+					id: "29DF11B7B49EA336"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "24A32B41F6E585F6"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2F1E002DE6C917BB"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "172A92192C0C9305"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6157DAB0F1B7355A"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/attack.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3DEE9A11DAD5A1B7"
+			rewards: [
+				{
+					id: "77A7213ED697919C"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5240E1515BB5B801"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5E07D255B35D6312"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "38C2FA73DEC0AE96"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7F9454B762355FD5"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3DEE9A11DAD5A1B7"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/attack.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0A6BE44E61F5573B"
+			rewards: [
+				{
+					id: "3626D2E295EEDE75"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7D73510A9DE836B5"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "59BE534D20DFEC8A"
+					item: {
+						count: 1
+						id: "lemursaucepacket:sturdy_warhammer"
+					}
+					type: "item"
+				}
+				{
+					id: "19F20C82033EC1FC"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "4601E4D8ACAF15AB"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A6BE44E61F5573B"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/attack.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5D6EED2480322461"
+			rewards: [
+				{
+					id: "268AB1A793A382C1"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "2CB964FD565ADC52"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "4A16FB935A9532C3"
+					item: {
+						count: 1
+						id: "lemursaucepacket:stormcallers_sabre"
+					}
+					type: "item"
+				}
+				{
+					id: "5879F62CD40FDFD9"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "79C5460DEBB5155C"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D6EED2480322461"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/attack.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "06869B1E4A020D77"
+			rewards: [
+				{
+					id: "172D8FE0FFCEEC5E"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "1A2A6EC54A8C82A2"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "502FD97EF3A43872"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "5C91AABDACA0529F"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "16C2ECBF1D25F321"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "265FA29894702E21"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "4B1C7BE52A2C4FD7"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 0.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/strength.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5E559A8373189164"
+			rewards: [
+				{
+					id: "543668DEAD8951B8"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "5691E1772FDD3DE3"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1D4A15AC5DCEA9C6"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7B457DEFB8B20436"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5E559A8373189164"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/strength.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "649E555235E44A96"
+			rewards: [
+				{
+					id: "4A5723543CFE9338"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "0A2F7AA5F0495449"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0F47E764D805EA12"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7D5F25D6C6E30D76"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3335D6261C4F7589"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 1.5d
+		}
+		{
+			dependencies: ["649E555235E44A96"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/strength.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "2369CF8983CE0CA8"
+			rewards: [
+				{
+					id: "2D10BA9B9D82C6B9"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "46069243C9C5BB48"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4860D7CED14109DA"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:sharpness": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "7F09D7E8123D8FBF"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "748A833715661317"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2369CF8983CE0CA8"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/strength.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "08CB68987F5A93F5"
+			rewards: [
+				{
+					id: "4D922DE44AC65BED"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "4C9BC6AD4044FD52"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "3DB8194D21FCDD28"
+					item: {
+						count: 1
+						id: "relics:ring_of_the_seven_deadly_sins"
+					}
+					type: "item"
+				}
+				{
+					id: "6C150DB6140F3AF5"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2B8470A6E7BD9DA9"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 1.5d
+		}
+		{
+			dependencies: ["08CB68987F5A93F5"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/strength.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6471A85F0370A033"
+			rewards: [
+				{
+					id: "71A045B4924B6956"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "2F775BE77EC7916A"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "6D6F5D475A92E044"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "654168FF84777938"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "52DFE50D5FAA3A6A"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "1EB4DD562780630B"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "63810048009B9EF3"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 1.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/defence.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "067418C3A35E0C99"
+			rewards: [
+				{
+					id: "58CF460B536D8F35"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "305CF95D0C4969AA"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7FF9CEB21DEEC88D"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "36C16DA6DFDE0B7F"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["067418C3A35E0C99"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/defence.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "4582AD519CFF0442"
+			rewards: [
+				{
+					id: "1F93B297A48E8BB9"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "0CF9B5923ED4CAA6"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6E052A8CAF0D6A51"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7BBCE4CB5AF29D2B"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "62B595F971E27726"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4582AD519CFF0442"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/defence.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3C106E95B4AD258E"
+			rewards: [
+				{
+					id: "2EE65FCEE5050139"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "62D884146041AFF6"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5EBD8F2CF46BF38A"
+					item: {
+						count: 8
+						id: "lemursaucepacket:compacted_diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "2FF0EEF1B10B47D0"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "66E7BFB36BCBD166"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3C106E95B4AD258E"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/defence.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "099FB9C19BA0566C"
+			rewards: [
+				{
+					id: "2C0E1D5EF6ED25EA"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "4E8B6FD81FEE1F04"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "009E59E4EBBE09D9"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "50575416A6B0401A"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:protection": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "2EEA7D9E8D6AFAD4"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "35EAB0B028B4A946"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 3.0d
+		}
+		{
+			dependencies: ["099FB9C19BA0566C"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/defence.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "7E6AE4EBA6DB21F9"
+			rewards: [
+				{
+					id: "67E2F1AC94DCBF4D"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "38097D8C429DBE1D"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "27797029F7B1E7FE"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "3915130FBAF8714F"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "04AED23919CC32D5"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "438E5C4A9400B20A"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "228A7F3F36CA07D6"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 3.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/ranged.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "1F388EBB7382CC44"
+			rewards: [
+				{
+					id: "638D6F6E35907E31"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "09D9F89B0B4CFFFF"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6B625008B60A634C"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7CF415573FABFB55"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1F388EBB7382CC44"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/ranged.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "2E3C640C0E9BCEDF"
+			rewards: [
+				{
+					id: "5C7BAE92594C686A"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "0180B46DFA0C8C04"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "34A58AC8FF482C3C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "63604E0D514DFC72"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "50D354438D24A15C"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2E3C640C0E9BCEDF"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/ranged.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6B32CD0BF0880CAA"
+			rewards: [
+				{
+					id: "3F253950CD7C6933"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "54E5791E0270C09A"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4AF7AF3543CBE3E9"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:power": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "2DD50376F752988E"
+					item: {
+						count: 32
+						id: "minecraft:spectral_arrow"
+					}
+					type: "item"
+				}
+				{
+					id: "4B0CBCDFBFBB273D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "603C8C4165B0931C"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6B32CD0BF0880CAA"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/ranged.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "062134ACC5953AEC"
+			rewards: [
+				{
+					id: "0D72D0CEB94EF436"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "0294199C9F5448B7"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "067C71D794D08645"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:infinity": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "597908949C71E57B"
+					item: {
+						count: 1
+						id: "minecraft:trident"
+					}
+					type: "item"
+				}
+				{
+					id: "579DA7D80DAE9A8F"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "0F5CCDCB1C3211E3"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 4.5d
+		}
+		{
+			dependencies: ["062134ACC5953AEC"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/ranged.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6023EB023769D255"
+			rewards: [
+				{
+					id: "078319CB72CCD0C8"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "1838C542037BCA91"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "2ECD30BD0C036327"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "39F308DA87F1F8FA"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "73192CC853FC47BA"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "2290BEBBF1D0D27A"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "66B7B361C4CA44DA"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 4.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/hitpoints.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "22594C04715A3EDC"
+			rewards: [
+				{
+					id: "1D46BAC776614770"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "0AFFFAE67EA61135"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3751C30D588767B5"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "6230418B9675D00B"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["22594C04715A3EDC"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/hitpoints.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "752F35B53EA89004"
+			rewards: [
+				{
+					id: "52AA47E953BDBC66"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "4AA5D315402C11D2"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "783F9F6F5F718B46"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "624BF666E9A5ED76"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2A78072C0F2F4D13"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 6.0d
+		}
+		{
+			dependencies: ["752F35B53EA89004"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/hitpoints.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "63FACB40AF50B90A"
+			rewards: [
+				{
+					id: "7CB7D370B2228C47"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2C845F77338DE67C"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "21FE16CBA9EA2F2D"
+					item: {
+						count: 8
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1E69B7147FED7268"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "17DC0AE191486D0F"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 6.0d
+		}
+		{
+			dependencies: ["63FACB40AF50B90A"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/hitpoints.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "79C2647D374D0278"
+			rewards: [
+				{
+					id: "7CD69BADBA8B26FD"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "586C096A5D96763C"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F9B195300CA3942"
+					item: {
+						count: 2
+						id: "minecraft:enchanted_golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "631DE02C148A6160"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "6277E7229AAAA0F2"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2847206169ED51F0"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 6.0d
+		}
+		{
+			dependencies: ["79C2647D374D0278"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/hitpoints.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "21FEF4092AE26D1C"
+			rewards: [
+				{
+					id: "1489A6190FA21BF0"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "3F0A62E35A9458D7"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "6060B54350689613"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "2CA9D1ABB230B210"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "49F36A868335321B"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "5A394005E7903FCD"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7022C49B919B2773"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 6.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/agility.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "314B641BBB80CD1C"
+			rewards: [
+				{
+					id: "04288E9650E8C0CD"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "27703D302CD6593A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6DBD98BA05E05E52"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2722328AA1DEEA98"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["314B641BBB80CD1C"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/agility.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "423584777E56D96A"
+			rewards: [
+				{
+					id: "47E15F009D6AF34D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "378F133DDBCA7655"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3A9BFF1B5FCDCC90"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1DAA928F6163B77A"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "131C978427B18D57"
+					type: "custom"
+				}
+			]
+			x: 1.7d
+			y: 7.5d
+		}
+		{
+			dependencies: ["423584777E56D96A"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/agility.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0444095009517E71"
+			rewards: [
+				{
+					id: "440F4B3D7F805148"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7295E6E627CD7172"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "76EDDE74F99A7C41"
+					item: {
+						count: 1
+						id: "lemursaucepacket:aeronaut_boots"
+					}
+					type: "item"
+				}
+				{
+					id: "623685AC4F897195"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7FF3F3E40486C7AB"
+					type: "custom"
+				}
+			]
+			x: 3.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0444095009517E71"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/agility.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0913243E056A9EB7"
+			rewards: [
+				{
+					id: "79904FACA6C63E50"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "3C3C41258A433F14"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "481D18A500D3A571"
+					item: {
+						count: 1
+						id: "minecraft:elytra"
+					}
+					type: "item"
+				}
+				{
+					id: "741181A1C3F09874"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "43953FE61E3F5FCC"
+					type: "custom"
+				}
+			]
+			x: 5.1d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0913243E056A9EB7"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/agility.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0E57C80EC4E538D3"
+			rewards: [
+				{
+					id: "7064A657D4C31D59"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "4B25DB338C75347D"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "0EFD7D84A4A468D8"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "68F8C7E5F8CDDC92"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "4841F42A3C2D0980"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "1C6B87241A515138"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "0F859D5EAA3757A9"
+					type: "custom"
+				}
+			]
+			x: 6.8d
+			y: 7.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/mining.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6908E235099BD1DF"
+			rewards: [
+				{
+					id: "397A9E0AA35A3B3B"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "07AF4C3BFCBCE72D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1E7348B3297F70E5"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "25D933E538A4AB77"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6908E235099BD1DF"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/mining.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "20DC7B4C0A7F46B7"
+			rewards: [
+				{
+					id: "2E7762F782DB3A22"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "16EA145CF127BDCB"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1C2D3CBDCFE834C3"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6B53942C0BDEFEFA"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "17820BE4E53E8696"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["20DC7B4C0A7F46B7"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/mining.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "4FEE26AC564DC139"
+			rewards: [
+				{
+					id: "37DAD02191912AF8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "624C8301E6722BC6"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1D3B2D236CA31156"
+					item: {
+						count: 1
+						id: "lemursaucepacket:excavators_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "4E1641479ABF5F82"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "0BFC231DBC52126C"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FEE26AC564DC139"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/mining.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "55BC4C80831ECB99"
+			rewards: [
+				{
+					id: "717D1829B562B12B"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6A362FB1305B6354"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "2519C571B19C7878"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:fortune": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "5430DB110D678FB0"
+					item: {
+						count: 1
+						id: "createoreexcavation:diamond_drill"
+					}
+					type: "item"
+				}
+				{
+					id: "694DB13D67761255"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "47E2826A1445F96B"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["55BC4C80831ECB99"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/mining.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "01C3F051E3FA4FDC"
+			rewards: [
+				{
+					id: "1750956EA5427D3E"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "5C8F2B558A10F8FD"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "71E125362D3A4454"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "2A5CC027820721CD"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "55B24FD703D4C8B8"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "5A9BC02D58DE46D1"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "681D2FB4E0CCA481"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 0.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/woodcutting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5A53738DE534DF33"
+			rewards: [
+				{
+					id: "6F9B1580F9C8C334"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "0B55D5696D34589F"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "26B3730BC7128EB4"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2028DDC3AEA57E4C"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A53738DE534DF33"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/woodcutting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "70FBA22C44AA6C51"
+			rewards: [
+				{
+					id: "0D926DDF7A5AB223"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "40EB663BE69C3931"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "746274C4766A980B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2B1367AB26C298AC"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "57DE43A1214E8616"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 1.5d
+		}
+		{
+			dependencies: ["70FBA22C44AA6C51"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/woodcutting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "4E5E16FA82583530"
+			rewards: [
+				{
+					id: "16E975823A7B3BDA"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "22AF2706A073D4B7"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "196A78643B4B1CC8"
+					item: {
+						count: 1
+						id: "lemursaucepacket:lumber_axe"
+					}
+					type: "item"
+				}
+				{
+					id: "1302D3D1DD2AD95D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "14BABADC4BF07ACA"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E5E16FA82583530"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/woodcutting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5AA682A10DF00E37"
+			rewards: [
+				{
+					id: "4768C0F6A55CF3B6"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "1694D439589EAB9E"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6EF55A84DCB2018A"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:efficiency": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "596DEF565261DC4E"
+					item: {
+						count: 4
+						id: "create:mechanical_saw"
+					}
+					type: "item"
+				}
+				{
+					id: "02796C99A3A4D5AC"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "33D91DC9B1B7BB6F"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5AA682A10DF00E37"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/woodcutting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3BD270C52A42450F"
+			rewards: [
+				{
+					id: "3178399296ED416E"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "724320AF2F640C68"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "6C89E2802A585EC5"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "66B00A30ACE0A1B9"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "73016FC3B45B4A89"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "2CB4FB81CF354D66"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "747BDA36F8642A2D"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 1.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/farming.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "299BAFE3BAE18EE0"
+			rewards: [
+				{
+					id: "6649741578155A48"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "0710BE766B6D2DCF"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "64A6A43638DD9A5A"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "6E7D1F7BB53A2A51"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["299BAFE3BAE18EE0"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/farming.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "4947E85286FBECA2"
+			rewards: [
+				{
+					id: "372CBEBA2AC50E76"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "69D3C5AF7A4E8E23"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "682C00A0906207AE"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "634D075D67E5F494"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5C6124F5661AEC47"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4947E85286FBECA2"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/farming.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "1C3DEAB1B1B968EA"
+			rewards: [
+				{
+					id: "6169F84174D0E89F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "1FF325ACFCEA380B"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "4653102C271A000A"
+					item: {
+						count: 1
+						id: "lemursaucepacket:harvesters_scythe"
+					}
+					type: "item"
+				}
+				{
+					id: "2778A4981D9258A6"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "41C3372668E0D35D"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C3DEAB1B1B968EA"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/farming.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "50F24CCC7BFB4E28"
+			rewards: [
+				{
+					id: "736DBD01B7FC5F94"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "669B25EF14B4EE5D"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "590D94024D6E36E5"
+					item: {
+						count: 4
+						id: "sliceanddice:sprinkler"
+					}
+					type: "item"
+				}
+				{
+					id: "6F6EF87B9CF39687"
+					item: {
+						count: 2
+						id: "sliceanddice:fertilizer_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "0066A99FBCB291A7"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "52839873A10CA2AD"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 3.0d
+		}
+		{
+			dependencies: ["50F24CCC7BFB4E28"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/farming.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "66192FFEFDC02054"
+			rewards: [
+				{
+					id: "0EB929D32DE25EA9"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "6413CEA1EB161D16"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "43DDB1DFBFBE78DA"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "0EEEA6F039AE4AEA"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "378EF176AB3CBBF9"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "5375C35EF61F1B80"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5A88981357C5EF90"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 3.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/fishing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0B9FEA182865F2C9"
+			rewards: [
+				{
+					id: "151F0049E36E2AFC"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "5ECA656EAA68C40D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "61174CA50402CCF4"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5DA5ABCE9BDF96CA"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0B9FEA182865F2C9"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/fishing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "7CFFEB1D8A44B9F1"
+			rewards: [
+				{
+					id: "7694D9DCE80957EF"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "101D927578C0C6E3"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "682E70175ECCD638"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "29841A21A3271614"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "2D4FB744DB8EEF12"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7CFFEB1D8A44B9F1"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/fishing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "7FBB643180077AD8"
+			rewards: [
+				{
+					id: "1FECD7FE57488C29"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "08B944A25991CEA0"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0C031A20709A05EE"
+					item: {
+						count: 1
+						id: "lemursaucepacket:anglers_cap"
+					}
+					type: "item"
+				}
+				{
+					id: "47C8340BF2AEA77B"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "44CA928F80D0E6B5"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7FBB643180077AD8"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/fishing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3A83D5B48D315F47"
+			rewards: [
+				{
+					id: "696B130106459753"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "2E3B282D51E59215"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "222A7A6C12374E70"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:luck_of_the_sea": 3
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "1D3A255DC9C1E078"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:lure": 3
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "441B189E03356D60"
+					item: {
+						count: 1
+						id: "minecraft:heart_of_the_sea"
+					}
+					type: "item"
+				}
+				{
+					id: "4ABF1366FFCDF06C"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "6C834DACBF8FF89F"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3A83D5B48D315F47"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/fishing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0ED5A6F8166F3911"
+			rewards: [
+				{
+					id: "609DD9AC21AD96F6"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "4EBE7790ACC392D3"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "105878BD1AFE52DC"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "2517657526939AF5"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "17991AE70539DAF6"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "07E11D07E74F99CE"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "4A57C0A5F180A3C2"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 4.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/cooking.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "44E7D333DAC1DDD4"
+			rewards: [
+				{
+					id: "43BEEAA9CA1C634C"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "654E66EFA48E0A8C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4ED76D7E7B25DE06"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5AA84AC0A08EDE22"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["44E7D333DAC1DDD4"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/cooking.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3793ECB6905AEA11"
+			rewards: [
+				{
+					id: "68C1AC99CD9BE9D5"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "0B6D01B1ACE4CD7B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3010E293A4DE27CD"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0E16A2C578B540F1"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "42D294C48AC3EF7F"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3793ECB6905AEA11"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/cooking.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "1C82F5FAFD7A4EFA"
+			rewards: [
+				{
+					id: "5FD5AD663C417F72"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "516AE4545E644D66"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "7488E6956CE0CAF9"
+					item: {
+						count: 1
+						id: "relics:chef_hat"
+					}
+					type: "item"
+				}
+				{
+					id: "4A7C3D169A93E824"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3F9E229FA83BCD41"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1C82F5FAFD7A4EFA"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/cooking.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5C735DF3927CC637"
+			rewards: [
+				{
+					id: "7D20AC1901B90CB6"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "13462CA331CD69CE"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "35AC07A9B7140EDC"
+					item: {
+						count: 1
+						id: "farmersdelight:netherite_knife"
+					}
+					type: "item"
+				}
+				{
+					id: "5B507068AC2C2CB9"
+					item: {
+						count: 2
+						id: "farmersdelight:honey_glazed_ham_block"
+					}
+					type: "item"
+				}
+				{
+					id: "30C83155F28790DA"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "43FB90C3FBF050B4"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5C735DF3927CC637"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/cooking.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6931D3DA0A1E5545"
+			rewards: [
+				{
+					id: "2554A9AF8592C270"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "090DDD75FC86373D"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "72EE2FC2154E7E31"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "406F0E96094E8463"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "38272B22DC7AAEF1"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "688DCC63FB8627B3"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "33C3431F2B99AF49"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 6.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/smithing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "2B73FAE43A855D25"
+			rewards: [
+				{
+					id: "0E88FC340E3994B6"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "53F14FE12F68BCBC"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1501AAFCC0F40A6C"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "0FC05B182BB9DDF1"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2B73FAE43A855D25"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/smithing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "479B0A9CB73D5AF9"
+			rewards: [
+				{
+					id: "7C3C22ADE7656C26"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "7940979C2E686310"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1C3507DAC1109144"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2DF3B52B9CC04D66"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5606E657D0C11EB9"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 7.5d
+		}
+		{
+			dependencies: ["479B0A9CB73D5AF9"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/smithing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "757A2973CCB44D1B"
+			rewards: [
+				{
+					id: "6501F7B7297894E5"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "426064B1F585ED6F"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "63B4721CD26DBF0D"
+					item: {
+						count: 2
+						id: "minecraft:netherite_upgrade_smithing_template"
+					}
+					type: "item"
+				}
+				{
+					id: "0D2603BAB4AB23A0"
+					item: {
+						count: 4
+						id: "minecraft:netherite_scrap"
+					}
+					type: "item"
+				}
+				{
+					id: "5AB552BFFB8F893B"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "642CE076999EF7BC"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 7.5d
+		}
+		{
+			dependencies: ["757A2973CCB44D1B"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/smithing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6B4263C1609B451F"
+			rewards: [
+				{
+					id: "1D96D91653651B02"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "449D00E42C4D065B"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "5338F20CEFEDBEF8"
+					item: {
+						count: 1
+						id: "lemursaucepacket:compacted_netherite"
+					}
+					type: "item"
+				}
+				{
+					id: "091364293801325B"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "25D8AB84468C3529"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "65A1DB4BB67F997B"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6B4263C1609B451F"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/smithing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6C7C4AD923FF97C2"
+			rewards: [
+				{
+					id: "726A726C074D9241"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "7980572A50D1A68F"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "6A63D9C0DD56E8EE"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "3ECE8EBB6B0926DD"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "79E9B0C95E70813B"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "32F64BD322C7699C"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "1E9EE5EB77DE5277"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 7.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/crafting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "69F536FA355762E0"
+			rewards: [
+				{
+					id: "00FD8DB8ECF33345"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "686C3D29A7016838"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "338ED62B98DBAA86"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "78456872482BCB63"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["69F536FA355762E0"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/crafting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "7AD39FF2D6EF980B"
+			rewards: [
+				{
+					id: "59866C67ADC57DBC"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "61A249F65399BF42"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "50569F034B7E68FA"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "59A42BE9C8F38DF8"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "05487329B4EB197A"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7AD39FF2D6EF980B"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/crafting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "25B714A6FCD8983E"
+			rewards: [
+				{
+					id: "12D2E0601965A9C7"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "22518D558F22BE84"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "314C2F2097A49130"
+					item: {
+						count: 1
+						id: "lemursaucepacket:builders_wand"
+					}
+					type: "item"
+				}
+				{
+					id: "1811ED8B1D5A46B7"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "5ADF2065DF1F0B7F"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 9.0d
+		}
+		{
+			dependencies: ["25B714A6FCD8983E"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/crafting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "1917D6689D0B2836"
+			rewards: [
+				{
+					id: "61382F1356672F96"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6BD9456DE3D5E1A9"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6B068F2272B0D9E0"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:crafting_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "3A6230079365632D"
+					item: {
+						count: 9
+						id: "create:mechanical_crafter"
+					}
+					type: "item"
+				}
+				{
+					id: "26B1E5F4325169E9"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "180ACC907BA571E0"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1917D6689D0B2836"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/crafting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "30292594BC7586F9"
+			rewards: [
+				{
+					id: "73D879550A4BE5DA"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "712E730C8B92745A"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "434440290A623A46"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "2E539627A0855CDA"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "32411296B89FB24F"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "0839CFF6036E7EF5"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "46D80A4604F9EF78"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 9.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/enchanting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "171CC58A88C06C2C"
+			rewards: [
+				{
+					id: "2CEA9B7418F018F6"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "13F73165A1823A5D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "21F9FA20FD484270"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "225B6BF1A1D6F9F5"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["171CC58A88C06C2C"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/enchanting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "5DD4B4FAF3A9E37F"
+			rewards: [
+				{
+					id: "3AEB20045EE9792A"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "2690B1D0B679614A"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "46D1D917227FE6C7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3C53B93B4F94EB20"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7E7A97DB6FA8897C"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 10.5d
+		}
+		{
+			dependencies: ["5DD4B4FAF3A9E37F"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/enchanting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "226FAFDCF8627F75"
+			rewards: [
+				{
+					id: "0135569992A650CE"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0480D78393A621CE"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3DE757C886CB97C5"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:mending": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "5FD64FDE8B5ABA9E"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "16CAF1C4D3AC1DAB"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 10.5d
+		}
+		{
+			dependencies: ["226FAFDCF8627F75"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/enchanting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "596B33329E4DE3F3"
+			rewards: [
+				{
+					id: "15FFD2715EABB650"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "10C26B8026DD45B1"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "5A487EF9532C4E41"
+					item: {
+						count: 2
+						id: "create_enchantment_industry:experience_bucket"
+					}
+					type: "item"
+				}
+				{
+					id: "648A5A14B5E00063"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"minecraft:unbreaking": 5
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "448A33F664785704"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "1751965A19215DAA"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 10.5d
+		}
+		{
+			dependencies: ["596B33329E4DE3F3"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/enchanting.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "1AB048DD42AAA115"
+			rewards: [
+				{
+					id: "3A42C8F092028983"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "4B31652F1A37F61C"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "247C0C7FCB6FC9C0"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "0D335C74C696D2F8"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "749742BC5237AC86"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "56BDF039600698E4"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "57C8B19A0CDCD144"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 10.5d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "127F5773383C1521"
+			rewards: [
+				{
+					id: "4B217E20ECE97F2C"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "25D7714908C6C68E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "76C7DD9C6B9467D9"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "536EC8BD798F5BF5"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3B55DEB84677C8AE"
+					type: "custom"
+				}
+			]
+			x: 3.15d
+			y: 12.8d
+		}
+		{
+			dependencies: ["127F5773383C1521"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "515417F3781A968C"
+			rewards: [
+				{
+					id: "1F450613CE56A359"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4C05B8AC7E989C95"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0C290930A88D4279"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "0262E8B8D100926B"
+					type: "custom"
+				}
+			]
+			x: 5.35d
+			y: 12.8d
+		}
+		{
+			dependencies: ["515417F3781A968C"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6524A67A3C268BA2"
+			rewards: [
+				{
+					id: "60181C1ACFF18CC3"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "56B34A13D2BADA85"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "09DDCB5708FD80EE"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "5C0D44E1D785D463"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3F8193F3B57EBE21"
+					type: "custom"
+				}
+			]
+			x: 7.55d
+			y: 12.8d
+		}
+		{
+			dependencies: ["6524A67A3C268BA2"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "65D1AFE50D8ECE8E"
+			rewards: [
+				{
+					id: "35F3D41B92DDCCE7"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "457065E1CEAB2E12"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "77CA05B06E3DD67C"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "710C95CE68826764"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					id: "660903C5174F2BC2"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "1E0B70D49B437B09"
+					type: "custom"
+				}
+			]
+			x: 9.75d
+			y: 12.8d
+		}
+		{
+			dependencies: ["65D1AFE50D8ECE8E"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "6457E540F71D6A7E"
+			rewards: [
+				{
+					id: "22627367C28B2C7F"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "4B8A7D7301EB7951"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "11DECED40652E9A1"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "10D9709D51830F0E"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "690B6C71D0AB6018"
+					type: "custom"
+				}
+			]
+			x: 11.95d
+			y: 12.8d
+		}
+		{
+			dependencies: ["6457E540F71D6A7E"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "232BCECCF98900F6"
+			rewards: [
+				{
+					id: "753E126800BA1D43"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "24F3C209ADA0943B"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "4DEE5277DCDA844A"
+					item: {
+						count: 2
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "522A7797FBB1A903"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "1F0F292E009CC211"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "6E0DDB49ACDE3985"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3AEAB2E3FFD715E5"
+					type: "custom"
+				}
+			]
+			x: 14.15d
+			y: 12.8d
+		}
+	]
+}

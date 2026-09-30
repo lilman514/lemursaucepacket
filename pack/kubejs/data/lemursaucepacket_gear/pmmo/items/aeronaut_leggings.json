@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:aeronaut_leggings"
+  ],
   "requirements": {
     "WEAR": {
       "agility": 40

@@ -2,7 +2,7 @@
   "name": "Where to find things",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:paper",
-  "sortnum": 8,
+  "sortnum": 11,
   "pages": [
     {
       "type": "patchouli:text",

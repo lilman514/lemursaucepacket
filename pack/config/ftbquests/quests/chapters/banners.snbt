@@ -83,7 +83,7 @@
 				{
 					id: "4DFDE5AFFA479FC1"
 					type: "xp"
-					xp: 34
+					xp: 60
 				}
 				{
 					id: "1BFD02B22D775122"
@@ -100,6 +100,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "38D97442D55924DA"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -122,15 +127,28 @@
 				{
 					id: "49650A96E9BBAEB5"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "6344F855CCD0C3CC"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "546BA6B72E4700B0"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "069282C912899A72"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -160,23 +178,28 @@
 				{
 					id: "745108AB7399D3BA"
 					type: "xp"
-					xp: 106
+					xp: 400
 				}
 				{
 					id: "79EBBA3CD8D7EE85"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
 				}
 				{
-					id: "0A913FB69BB8BDD9"
+					id: "2AEEF27371325971"
 					item: {
-						count: 2
-						id: "numismatics:sprocket"
+						count: 16
+						id: "minecraft:emerald"
 					}
 					type: "item"
+				}
+				{
+					id: "6C21BDF756415353"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -200,7 +223,7 @@
 				{
 					id: "223C8196A8CBB331"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "7B1BB1CF25FADB97"
@@ -209,6 +232,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "21DB1AA90182A8A8"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -231,7 +259,7 @@
 				{
 					id: "77032909F1045525"
 					type: "xp"
-					xp: 138
+					xp: 400
 				}
 				{
 					id: "66C9A34E261D52DB"
@@ -240,6 +268,11 @@
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "4D22D18038389351"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -254,6 +287,85 @@
 			y: 2.1d
 		}
 		{
+			icon: {
+				id: "create:windmill_bearing"
+			}
+			id: "46EABE2D301523D9"
+			rewards: [
+				{
+					id: "771FA1B794D1F54A"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "4EB5C2EAB2257484"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "5F4C6E3243601B11"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "42056864C2AC157B"
+					structure: "create_rustic_structures:rustic_windmill"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 3.7d
+		}
+		{
+			dependencies: ["46EABE2D301523D9"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "792978E03502FA34"
+			rewards: [
+				{
+					id: "13E04B1AB573258F"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "49978D48EEA58673"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "7D01242D5E6C41D0"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "34EEA510522556AB"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "03AEE0228BAA1642"
+					structure: "create_ltab:quarry"
+					type: "structure"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
 			dependencies: ["792978E03502FA34"]
 			icon: {
 				id: "create:track_station"
@@ -263,7 +375,7 @@
 				{
 					id: "7BF7C5BD8CC05E6A"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "0EE99F98C0251646"
@@ -272,6 +384,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "5985CD6A9244D513"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -294,15 +411,20 @@
 				{
 					id: "196C5061251B765D"
 					type: "xp"
-					xp: 74
+					xp: 150
 				}
 				{
-					id: "6AF5D46E535BD010"
+					id: "4CEFE20B29EE31E0"
 					item: {
-						count: 1
-						id: "numismatics:cog"
+						count: 3
+						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "6C3DF87E4E19796B"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -316,37 +438,6 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["46EABE2D301523D9"]
-			icon: {
-				id: "create:mechanical_drill"
-			}
-			id: "792978E03502FA34"
-			rewards: [
-				{
-					id: "13E04B1AB573258F"
-					type: "xp"
-					xp: 42
-				}
-				{
-					id: "49978D48EEA58673"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-			]
-			tasks: [
-				{
-					id: "03AEE0228BAA1642"
-					structure: "create_ltab:quarry"
-					type: "structure"
-				}
-			]
-			x: 2.3d
-			y: 3.7d
-		}
-		{
 			dependencies: ["6695DF890897A31D"]
 			icon: {
 				id: "minecraft:golden_helmet"
@@ -356,15 +447,20 @@
 				{
 					id: "14A6ADFBFC8DE243"
 					type: "xp"
-					xp: 74
+					xp: 400
 				}
 				{
 					id: "35EE653FE3187F16"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "038303CB33208591"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -378,44 +474,6 @@
 			y: 3.3d
 		}
 		{
-			icon: {
-				id: "create:windmill_bearing"
-			}
-			id: "46EABE2D301523D9"
-			rewards: [
-				{
-					id: "771FA1B794D1F54A"
-					type: "xp"
-					xp: 34
-				}
-				{
-					id: "066DEBCE321D12D2"
-					item: {
-						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "4EB5C2EAB2257484"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
-					}
-					type: "item"
-				}
-			]
-			tasks: [
-				{
-					id: "42056864C2AC157B"
-					structure: "create_rustic_structures:rustic_windmill"
-					type: "structure"
-				}
-			]
-			x: 0.0d
-			y: 3.7d
-		}
-		{
 			dependencies: ["26E5A5ABB5584E32", "2B59BEE4CAA41223", "2CEEFD1A5DD9339E"]
 			icon: {
 				id: "minecraft:white_banner"
@@ -425,7 +483,7 @@
 				{
 					id: "2B5ECE83BF351C39"
 					type: "xp"
-					xp: 414
+					xp: 400
 				}
 				{
 					id: "29CD27746CD24CDA"
@@ -434,6 +492,29 @@
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "1906B09572023D4D"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "3AA71D5F3663FA9A"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					id: "0E69414FF10E2A32"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "09876A797EFC26AF"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 			]
 			shape: "gear"

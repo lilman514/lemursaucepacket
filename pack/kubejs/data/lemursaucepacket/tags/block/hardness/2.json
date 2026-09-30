@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ores/gold",
+      "required": false
+    },
+    {
+      "id": "#c:ores/redstone",
+      "required": false
+    }
+  ]
+}

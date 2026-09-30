@@ -77,6 +77,7 @@ export function chapterSvg(chapter, lang, textureDir) {
 
   const byId = new Map(quests.map((q) => [q.id, q]))
   for (const q of quests) {
+    if (q.hide_dependency_lines) continue // FTB draws no lines into these (Relic Hunter's collection quests)
     for (const dep of q.dependencies ?? []) {
       const d = byId.get(dep)
       if (d) out.push(`<line x1="${X(num(d.x))}" y1="${Y(num(d.y))}" x2="${X(num(q.x))}" y2="${Y(num(q.y))}" stroke="#b08a5a" stroke-width="3" stroke-opacity="0.85"/>`)

@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:prospector_chestplate"
+  ],
   "requirements": {
     "WEAR": {
       "mining": 35

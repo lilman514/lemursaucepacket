@@ -1,0 +1,292 @@
+{
+	empty_weight: 0.0f
+	hide_tooltip: false
+	icon: {
+		id: "create:brass_casing"
+	}
+	id: "328D7C463A13ADB7"
+	loot_size: 1
+	order_index: 2
+	rewards: [
+		{
+			id: "3AA9C34C02AA146B"
+			item: {
+				count: 8
+				id: "create:brass_ingot"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "31D7F3A09107245D"
+			item: {
+				count: 4
+				id: "create:brass_casing"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "659A8E466CFE3500"
+			item: {
+				count: 8
+				id: "create:brass_sheet"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "320A617883288616"
+			item: {
+				count: 4
+				id: "create:golden_sheet"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "04E34E4AF4B68987"
+			item: {
+				count: 4
+				id: "create:electron_tube"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "19BB6FA7A61344E0"
+			item: {
+				count: 2
+				id: "create:precision_mechanism"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "3A16797606140998"
+			item: {
+				count: 16
+				id: "create:experience_nugget"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "03CCCA2FC704872F"
+			item: {
+				count: 2
+				id: "waystones:warp_scroll"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "0EF308070EAED9B5"
+			item: {
+				count: 2
+				id: "create:sturdy_sheet"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "09D8EF3FDCB0B0A0"
+			item: {
+				count: 2
+				id: "create:brass_funnel"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "71052A764CE2633A"
+			item: {
+				count: 2
+				id: "create:brass_tunnel"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "763DD2AA081AA8C9"
+			item: {
+				count: 1
+				id: "create:smart_chute"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "644064EA18B509C9"
+			item: {
+				count: 1
+				id: "create:deployer"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "20CF48EDD2F929F8"
+			item: {
+				count: 4
+				id: "create:fluid_tank"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "108A220E7BC913E0"
+			item: {
+				count: 3
+				id: "create:mechanical_crafter"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "1C4C00C75B00DB70"
+			item: {
+				count: 4
+				id: "create:bar_of_chocolate"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "6D9FAEEA72B78ABC"
+			item: {
+				count: 4
+				id: "create:chocolate_glazed_berries"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "09A83EF93CC71479"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:magnet_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "5D6A46E1A264B7CD"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:feeding_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "392822EC1ACCF03E"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:restock_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "7A50D8D09D6719CD"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:pickup_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "59D2A95747A31F55"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:crafting_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "05455CA7843E7B31"
+			item: {
+				count: 2
+				id: "waystones:return_scroll"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "1B92908191EFA1A9"
+			item: {
+				count: 2
+				id: "minecraft:golden_apple"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "30ADB3F535E7224C"
+			item: {
+				count: 2
+				id: "minecraft:diamond"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "6429E1FF41D45D61"
+			item: {
+				count: 4
+				id: "create:railway_casing"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "7BEB3F1A50249B64"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:void_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "1948BDFFAE7708E1"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:smelting_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "366B0EBE201DAA22"
+			item: {
+				count: 1
+				id: "farmersdelight:shepherds_pie_block"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "674A961CC56CDFA9"
+			item: {
+				count: 1
+				id: "farmersdelight:roast_chicken_block"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "4B3F4CF78FEF90B1"
+			item: {
+				count: 1
+				id: "farmersdelight:honey_glazed_ham_block"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+	]
+	use_title: true
+}

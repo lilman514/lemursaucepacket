@@ -21,7 +21,7 @@
     {
       "type": "patchouli:text",
       "title": "3. Play",
-      "text": "Press $(bold)Play$() again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server."
+      "text": "Press $(bold)Play$() again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server.$(br2)The server's address is $(bold)mc.limas.ca$(). The launcher puts it in your multiplayer list for you, so you never have to type it."
     },
     {
       "type": "patchouli:image",

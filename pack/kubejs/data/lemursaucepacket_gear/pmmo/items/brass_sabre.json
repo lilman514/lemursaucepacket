@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:brass_sabre"
+  ],
   "requirements": {
     "WEAPON": {
       "attack": 25

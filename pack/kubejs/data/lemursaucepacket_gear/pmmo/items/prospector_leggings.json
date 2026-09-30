@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:prospector_leggings"
+  ],
   "requirements": {
     "WEAR": {
       "mining": 35

@@ -1,0 +1,401 @@
+{
+  "levels": [
+    10,
+    25,
+    50,
+    75,
+    99
+  ],
+  "skills": [
+    {
+      "skill": "attack",
+      "name": "Attack",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "6157DAB0F1B7355A"
+        },
+        {
+          "level": 25,
+          "quest": "3DEE9A11DAD5A1B7"
+        },
+        {
+          "level": 50,
+          "quest": "0A6BE44E61F5573B"
+        },
+        {
+          "level": 75,
+          "quest": "5D6EED2480322461"
+        },
+        {
+          "level": 99,
+          "quest": "06869B1E4A020D77"
+        }
+      ]
+    },
+    {
+      "skill": "strength",
+      "name": "Strength",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "5E559A8373189164"
+        },
+        {
+          "level": 25,
+          "quest": "649E555235E44A96"
+        },
+        {
+          "level": 50,
+          "quest": "2369CF8983CE0CA8"
+        },
+        {
+          "level": 75,
+          "quest": "08CB68987F5A93F5"
+        },
+        {
+          "level": 99,
+          "quest": "6471A85F0370A033"
+        }
+      ]
+    },
+    {
+      "skill": "defence",
+      "name": "Defence",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "067418C3A35E0C99"
+        },
+        {
+          "level": 25,
+          "quest": "4582AD519CFF0442"
+        },
+        {
+          "level": 50,
+          "quest": "3C106E95B4AD258E"
+        },
+        {
+          "level": 75,
+          "quest": "099FB9C19BA0566C"
+        },
+        {
+          "level": 99,
+          "quest": "7E6AE4EBA6DB21F9"
+        }
+      ]
+    },
+    {
+      "skill": "ranged",
+      "name": "Ranged",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "1F388EBB7382CC44"
+        },
+        {
+          "level": 25,
+          "quest": "2E3C640C0E9BCEDF"
+        },
+        {
+          "level": 50,
+          "quest": "6B32CD0BF0880CAA"
+        },
+        {
+          "level": 75,
+          "quest": "062134ACC5953AEC"
+        },
+        {
+          "level": 99,
+          "quest": "6023EB023769D255"
+        }
+      ]
+    },
+    {
+      "skill": "hitpoints",
+      "name": "Hitpoints",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "22594C04715A3EDC"
+        },
+        {
+          "level": 25,
+          "quest": "752F35B53EA89004"
+        },
+        {
+          "level": 50,
+          "quest": "63FACB40AF50B90A"
+        },
+        {
+          "level": 75,
+          "quest": "79C2647D374D0278"
+        },
+        {
+          "level": 99,
+          "quest": "21FEF4092AE26D1C"
+        }
+      ]
+    },
+    {
+      "skill": "agility",
+      "name": "Agility",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "314B641BBB80CD1C"
+        },
+        {
+          "level": 25,
+          "quest": "423584777E56D96A"
+        },
+        {
+          "level": 50,
+          "quest": "0444095009517E71"
+        },
+        {
+          "level": 75,
+          "quest": "0913243E056A9EB7"
+        },
+        {
+          "level": 99,
+          "quest": "0E57C80EC4E538D3"
+        }
+      ]
+    },
+    {
+      "skill": "mining",
+      "name": "Mining",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "6908E235099BD1DF"
+        },
+        {
+          "level": 25,
+          "quest": "20DC7B4C0A7F46B7"
+        },
+        {
+          "level": 50,
+          "quest": "4FEE26AC564DC139"
+        },
+        {
+          "level": 75,
+          "quest": "55BC4C80831ECB99"
+        },
+        {
+          "level": 99,
+          "quest": "01C3F051E3FA4FDC"
+        }
+      ]
+    },
+    {
+      "skill": "woodcutting",
+      "name": "Woodcutting",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "5A53738DE534DF33"
+        },
+        {
+          "level": 25,
+          "quest": "70FBA22C44AA6C51"
+        },
+        {
+          "level": 50,
+          "quest": "4E5E16FA82583530"
+        },
+        {
+          "level": 75,
+          "quest": "5AA682A10DF00E37"
+        },
+        {
+          "level": 99,
+          "quest": "3BD270C52A42450F"
+        }
+      ]
+    },
+    {
+      "skill": "farming",
+      "name": "Farming",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "299BAFE3BAE18EE0"
+        },
+        {
+          "level": 25,
+          "quest": "4947E85286FBECA2"
+        },
+        {
+          "level": 50,
+          "quest": "1C3DEAB1B1B968EA"
+        },
+        {
+          "level": 75,
+          "quest": "50F24CCC7BFB4E28"
+        },
+        {
+          "level": 99,
+          "quest": "66192FFEFDC02054"
+        }
+      ]
+    },
+    {
+      "skill": "fishing",
+      "name": "Fishing",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "0B9FEA182865F2C9"
+        },
+        {
+          "level": 25,
+          "quest": "7CFFEB1D8A44B9F1"
+        },
+        {
+          "level": 50,
+          "quest": "7FBB643180077AD8"
+        },
+        {
+          "level": 75,
+          "quest": "3A83D5B48D315F47"
+        },
+        {
+          "level": 99,
+          "quest": "0ED5A6F8166F3911"
+        }
+      ]
+    },
+    {
+      "skill": "cooking",
+      "name": "Cooking",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "44E7D333DAC1DDD4"
+        },
+        {
+          "level": 25,
+          "quest": "3793ECB6905AEA11"
+        },
+        {
+          "level": 50,
+          "quest": "1C82F5FAFD7A4EFA"
+        },
+        {
+          "level": 75,
+          "quest": "5C735DF3927CC637"
+        },
+        {
+          "level": 99,
+          "quest": "6931D3DA0A1E5545"
+        }
+      ]
+    },
+    {
+      "skill": "smithing",
+      "name": "Smithing",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "2B73FAE43A855D25"
+        },
+        {
+          "level": 25,
+          "quest": "479B0A9CB73D5AF9"
+        },
+        {
+          "level": 50,
+          "quest": "757A2973CCB44D1B"
+        },
+        {
+          "level": 75,
+          "quest": "6B4263C1609B451F"
+        },
+        {
+          "level": 99,
+          "quest": "6C7C4AD923FF97C2"
+        }
+      ]
+    },
+    {
+      "skill": "crafting",
+      "name": "Crafting",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "69F536FA355762E0"
+        },
+        {
+          "level": 25,
+          "quest": "7AD39FF2D6EF980B"
+        },
+        {
+          "level": 50,
+          "quest": "25B714A6FCD8983E"
+        },
+        {
+          "level": 75,
+          "quest": "1917D6689D0B2836"
+        },
+        {
+          "level": 99,
+          "quest": "30292594BC7586F9"
+        }
+      ]
+    },
+    {
+      "skill": "enchanting",
+      "name": "Enchanting",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "171CC58A88C06C2C"
+        },
+        {
+          "level": 25,
+          "quest": "5DD4B4FAF3A9E37F"
+        },
+        {
+          "level": 50,
+          "quest": "226FAFDCF8627F75"
+        },
+        {
+          "level": 75,
+          "quest": "596B33329E4DE3F3"
+        },
+        {
+          "level": 99,
+          "quest": "1AB048DD42AAA115"
+        }
+      ]
+    }
+  ],
+  "total": [
+    {
+      "level": 100,
+      "quest": "127F5773383C1521"
+    },
+    {
+      "level": 250,
+      "quest": "515417F3781A968C"
+    },
+    {
+      "level": 500,
+      "quest": "6524A67A3C268BA2"
+    },
+    {
+      "level": 750,
+      "quest": "65D1AFE50D8ECE8E"
+    },
+    {
+      "level": 1000,
+      "quest": "6457E540F71D6A7E"
+    },
+    {
+      "level": 1386,
+      "quest": "232BCECCF98900F6"
+    }
+  ]
+}

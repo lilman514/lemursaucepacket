@@ -16,7 +16,7 @@ const CAPE_ATTRIBUTES = {
   luck: [CapeAttributes.LUCK, CapeOperation.ADD_VALUE, 'lemursaucepacket:cape_luck'],
   breakSpeed: [CapeAttributes.BLOCK_BREAK_SPEED, CapeOperation.ADD_MULTIPLIED_TOTAL, 'lemursaucepacket:cape_break_speed']
 }
-const SKILLS_FOR_CAPES = ['attack', 'strength', 'defence', 'ranged', 'hitpoints', 'mining', 'woodcutting', 'farming', 'fishing', 'cooking', 'smithing', 'crafting', 'agility']
+const SKILLS_FOR_CAPES = ['attack', 'strength', 'defence', 'ranged', 'hitpoints', 'mining', 'woodcutting', 'farming', 'fishing', 'cooking', 'smithing', 'crafting', 'agility', 'enchanting']
 let capeErrorsLogged = {}
 const capeError = (where, e) => {
   if (String(e).indexOf('EventExit') >= 0) throw e
@@ -141,6 +141,20 @@ function capeApplyPerk(player, tick) {
     if (!held.isEmpty() && held.damageValue > 0) held.setDamageValue(held.damageValue - 1)
   }
 }
+
+// Enchanting Cape: a fifth more Enchanting XP. Project MMO posts XpEvent before it applies the amount, and the
+// amount is a public field.
+NativeEvents.onEvent('harmonised.pmmo.api.events.XpEvent', (event) => {
+  try {
+    if (String(event.skill) !== 'enchanting') return
+    let player = event.getEntity()
+    if (player == null) return
+    let perk = capePerk(player)
+    if (perk && perk.special === 'enchant_xp') event.amountAwarded = Math.round(event.amountAwarded * 1.2)
+  } catch (e) {
+    capeError('xp', e)
+  }
+})
 
 ItemEvents.foodEaten((event) => {
   try {

@@ -2,7 +2,7 @@
   "name": "FAQ and troubleshooting",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:lantern",
-  "sortnum": 11,
+  "sortnum": 14,
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,11 +10,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Voice chat isn't working.$() Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.$(br2)$(bold)My frames are low.$() Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are optional and off by default.$(br2)$(bold)Where are my screenshots?$() Launcher → Settings → Files & repair → Screenshots."
+      "text": "$(bold)Voice chat isn't working.$() Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.$(br2)$(bold)My frames are low.$() Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are optional and off by default."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Can I add my own mods?$() Client-side ones (minimap tweaks, shaders): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server."
+      "text": "$(bold)How do I get home fast?$() A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See $(l:lemursaucepacket:waystones)Waystones$(/l). $(bold)Where are my screenshots?$() Launcher → Settings → Files & repair → Screenshots.$(br2)$(bold)Can I add my own mods?$() Client-side ones (minimap tweaks, shaders): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What do the colours on an item's tooltip mean?$() The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gold legendary), stats are listed under it, and the bold last line repeats the rarity and what the item is. A red \"❣ Requires\" line means a skill isn't high enough yet; it turns green with a tick when it is. Hold Shift over an item for the details: which skills it trains, how to get it, and set bonuses."
     }
   ]
 }

@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:sturdy_warhammer"
+  ],
   "requirements": {
     "WEAPON": {
       "attack": 45

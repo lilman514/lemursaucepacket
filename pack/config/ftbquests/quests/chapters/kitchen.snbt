@@ -1,0 +1,612 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "kitchen"
+	group: "6C6400F8A74B6D9F"
+	icon: {
+		id: "farmersdelight:stove"
+	}
+	id: "51E82E0954F782A5"
+	images: [
+		{
+			height: 2.527659574468085d
+			id: "4CD9468FE484D9D0"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.659574468085107d
+			x: 8.9d
+			y: -1.1d
+		}
+	]
+	order_index: 14
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "farmersdelight:skillet"
+			}
+			id: "154575B8B0B42CBE"
+			rewards: [
+				{
+					id: "3DD0CAFBEDE96E02"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "2C3B2A81467E3705"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "64B0CEB7C1A013DD"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/use_skillet"
+					criterion: ""
+					id: "0C81425927F0EC9C"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 5.3d
+		}
+		{
+			icon: {
+				id: "farmersdelight:straw"
+			}
+			id: "4C4E5D21EACE1E40"
+			rewards: [
+				{
+					id: "44E5679C4CD0A1AD"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "1650E2BCCCAA5120"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "74B78BE3B334ACFE"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/harvest_straw"
+					criterion: ""
+					id: "19F1E8A4C741BEC4"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 1.3d
+		}
+		{
+			icon: {
+				id: "farmersdelight:ham"
+			}
+			id: "5AC50CAB1F5AEA1A"
+			rewards: [
+				{
+					id: "2183AFCE0668EBE8"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "0AB0561B697D152A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6C2A64328B352334"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/get_ham"
+					criterion: ""
+					id: "43248702A5A4120D"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 3.7d
+		}
+		{
+			dependencies: ["4C4E5D21EACE1E40"]
+			icon: {
+				id: "farmersdelight:rice"
+			}
+			id: "0F82F02560A3E793"
+			rewards: [
+				{
+					id: "56D433497AB64EBC"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "038664A8653C4A4A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "645756CCF71AFFFC"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/plant_rice"
+					criterion: ""
+					id: "7BE5A9F21443C4C4"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4C4E5D21EACE1E40"]
+			icon: {
+				id: "farmersdelight:organic_compost"
+			}
+			id: "3949C37922045DC0"
+			rewards: [
+				{
+					id: "5BAC17636481AB1D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "7B9A4763EAB10EC3"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5D688007243E2EB4"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7A94E328E8906DA0"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/place_organic_compost"
+					criterion: ""
+					id: "4393512B0BC543B5"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["0F82F02560A3E793"]
+			icon: {
+				id: "farmersdelight:tomato"
+			}
+			id: "506B714272D7E830"
+			rewards: [
+				{
+					id: "71CAE722184811AA"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "06D042037E98EE31"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1D6D0B9C9D22020F"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "3AE6063CFB97A2DD"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/harvest_ropelogged_tomato"
+					criterion: ""
+					id: "614022739CD74BA6"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 0.55d
+		}
+		{
+			dependencies: ["3949C37922045DC0"]
+			icon: {
+				id: "farmersdelight:brown_mushroom_colony"
+			}
+			id: "1D813B0744C534CF"
+			rewards: [
+				{
+					id: "09C57E949FB8C0DB"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0F3FF71433E06A1C"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "11F98FB023719A13"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/get_mushroom_colony"
+					criterion: ""
+					id: "6DB60A38B1A91D20"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 2.15d
+		}
+		{
+			dependencies: ["5AC50CAB1F5AEA1A"]
+			icon: {
+				id: "farmersdelight:roast_chicken_block"
+			}
+			id: "2D371AC3E7BCEC75"
+			rewards: [
+				{
+					id: "30E60893D93D04E8"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "4E7274FBBC3587BA"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "428D5792F13A7624"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "26938D87DA19BEEB"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/place_feast"
+					criterion: ""
+					id: "40BBB80E75D17A8D"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
+			dependencies: ["2D371AC3E7BCEC75"]
+			icon: {
+				id: "farmersdelight:steak_and_potatoes"
+			}
+			id: "4F8E07BC0C47B163"
+			rewards: [
+				{
+					id: "08152C07EFAC4D78"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5E3AF0A7BD20846E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0725878AEC98DDEB"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "497E163BA99C1BD2"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/eat_nourishing_food"
+					criterion: ""
+					id: "5FB7737EB47E5781"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 3.75d
+		}
+		{
+			dependencies: ["154575B8B0B42CBE"]
+			icon: {
+				id: "create:chocolate_bucket"
+			}
+			id: "4874F26D265B1B65"
+			rewards: [
+				{
+					id: "3DBB0E50978C127C"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "1DFDC2761E30FC59"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "2CD6C71AF02FDFB7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1C31C52ACC5BC84C"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create:chocolate_bucket"
+					criterion: ""
+					id: "28AA232AB4AE89C0"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 5.3d
+		}
+		{
+			dependencies: ["4874F26D265B1B65"]
+			icon: {
+				id: "create:sweet_roll"
+			}
+			id: "688FB4AC407F9776"
+			rewards: [
+				{
+					id: "3D6A346FF24CBC8A"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4F0B6C893D8D1C9F"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "310F60A8228D792D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create:foods"
+					criterion: ""
+					id: "1707CD80839F830A"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 5.35d
+		}
+		{
+			dependencies: ["506B714272D7E830", "1D813B0744C534CF"]
+			icon: {
+				id: "farmersdelight:cabbage"
+			}
+			id: "69F81CCCA0DC03BC"
+			rewards: [
+				{
+					id: "7120CFC806B5C297"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "43E9F09EACD99988"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "45C777DC43BCC200"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/plant_all_crops"
+					criterion: ""
+					id: "514341551027CD15"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 1.85d
+		}
+		{
+			dependencies: ["4F8E07BC0C47B163"]
+			icon: {
+				id: "farmersdelight:netherite_knife"
+			}
+			id: "5C1D3DF014C28628"
+			rewards: [
+				{
+					id: "710065255D4B6631"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "5CA95BD737650E71"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "35A3ADE0F632587B"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "farmersdelight:main/obtain_netherite_knife"
+					criterion: ""
+					id: "217D36BE1E36F130"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 3.45d
+		}
+		{
+			dependencies: ["69F81CCCA0DC03BC", "688FB4AC407F9776", "5C1D3DF014C28628"]
+			icon: {
+				id: "farmersdelight:cooking_pot"
+			}
+			id: "4D852FF2E83582FD"
+			rewards: [
+				{
+					id: "5DA62A5800B0E419"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "2220929EE7382B6C"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "6146F9089EAEFBDA"
+					item: {
+						count: 1
+						id: "relics:chef_hat"
+					}
+					type: "item"
+				}
+				{
+					id: "64B78CDDD612B8CE"
+					item: {
+						count: 1
+						id: "farmersdelight:honey_glazed_ham_block"
+					}
+					type: "item"
+				}
+				{
+					id: "167E2267990E081E"
+					item: {
+						count: 1
+						id: "farmersdelight:shepherds_pie_block"
+					}
+					type: "item"
+				}
+				{
+					id: "39F6AA800B27A66A"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					advancement: "farmersdelight:main/master_chef"
+					criterion: ""
+					id: "3AFFC3CD8B5C906C"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 3.4d
+		}
+	]
+}

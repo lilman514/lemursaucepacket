@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:ember_crown"
+  ],
   "requirements": {
     "WEAR": {
       "defence": 40

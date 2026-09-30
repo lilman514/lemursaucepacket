@@ -5,7 +5,7 @@
 //   pack/kubejs/startup_scripts/gear.js                 armour materials and items (KubeJS registries)
 //   pack/kubejs/server_scripts/gear_recipes.js          recipes
 //   pack/kubejs/server_scripts/gear_loot.js             loot-only items and the auto-smelt pickaxe (LootJS)
-//   pack/kubejs/client_scripts/gear_client.js           tooltips (stats + "How to get") and JEI information pages
+//   pack/kubejs/client_scripts/gear_client.js           the gear's SkyBlock tooltip data (tooltips.js draws it) and JEI info pages
 //   pack/config/lemursaucepacket/gear.json              stats, set bonuses, perks and synergies for gear.js
 //   pack/kubejs/data/lemursaucepacket_gear/pmmo/items/  Project MMO level gates
 //   pack/config/fallingtree.json                        the Lumber Axe is the only tree-felling tool
@@ -34,10 +34,34 @@ const SKILL_NAME = (s) => s.charAt(0).toUpperCase() + s.slice(1)
 const armour = []
 for (const set of SETS) {
   for (const [slot, piece] of Object.entries(set.pieces)) {
-    armour.push({ id: `${set.id}_${slot}`, name: piece.name, slot, material: set.material, stats: piece.stats ?? {}, perk: piece.perk, perkText: piece.perkText, requirement: set.requirement, set: set.id, howToGet: set.howToGet })
+    armour.push({
+      id: `${set.id}_${slot}`,
+      name: piece.name,
+      slot,
+      material: set.material,
+      stats: piece.stats ?? {},
+      perk: piece.perk,
+      perkText: piece.perkText,
+      perkName: piece.perkName,
+      perkDesc: piece.perkDesc,
+      rarity: piece.rarity ?? set.rarity,
+      requirement: set.requirement,
+      set: set.id,
+      howToGet: set.howToGet
+    })
   }
 }
 for (const piece of PIECES) armour.push({ ...piece, stats: piece.stats ?? {}, perkText: piece.text })
+
+// SkyBlock rarities (gear.mjs) and the vanilla rarity each item registers with, so the name keeps a matching
+// colour where the pack's tooltip script doesn't reach (the held-item name above the hotbar, chat).
+const RARITY_CODE = { COMMON: 'f', UNCOMMON: 'a', RARE: '9', EPIC: '5', LEGENDARY: '6', MYTHIC: 'd', SPECIAL: 'c' }
+const VANILLA_RARITY = { COMMON: 'common', UNCOMMON: 'uncommon', RARE: 'rare', EPIC: 'epic', LEGENDARY: 'epic', MYTHIC: 'epic', SPECIAL: 'epic' }
+const rarityOf = (item) => {
+  const rarity = item.rarity ?? 'COMMON'
+  if (!RARITY_CODE[rarity]) throw new Error(`gear: unknown rarity ${rarity} on ${item.id}`)
+  return rarity
+}
 
 const allIds = [...armour.map((a) => a.id), ...WEAPONS.map((w) => w.id), ...TOOLS.map((t) => t.id), ...MATERIAL_ITEMS.map((m) => m.id)]
 
@@ -100,6 +124,8 @@ function startupScript() {
     '',
     '// Attribute modifiers must be a real ItemAttributeModifiers: the item builder stores a plain JS object as-is,',
     '// and the server then throws ClassCastException (and kicks the player) as soon as someone wearing the item ticks.',
+    "// withTooltip(false) hides vanilla's \"When on Head:\" lines: the tooltip shows the same stats in the SkyBlock",
+    '// layout instead (client_scripts/tooltips.js).',
     "const GearModifiers = Java.loadClass('net.minecraft.world.item.component.ItemAttributeModifiers')",
     "const GearModifier = Java.loadClass('net.minecraft.world.entity.ai.attributes.AttributeModifier')",
     "const GearOperation = Java.loadClass('net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation')",
@@ -117,7 +143,7 @@ function startupScript() {
     '      GearSlotGroup.valueOf(m.slot.toUpperCase())',
     '    )',
     '  })',
-    '  return builder.build()',
+    '  return builder.build().withTooltip(false)',
     '}',
     '',
     "StartupEvents.registry('armor_material', (event) => {"
@@ -135,15 +161,14 @@ function startupScript() {
   }
   lines.push('})', '', "StartupEvents.registry('item', (event) => {")
   for (const m of MATERIAL_ITEMS) {
-    lines.push(`  event.create('${NAMESPACE}:${m.id}').displayName(${js(m.name)})${m.fireResistant ? '.fireResistant()' : ''}.rarity('uncommon')`)
+    lines.push(`  event.create('${NAMESPACE}:${m.id}').displayName(${js(m.name)})${m.fireResistant ? '.fireResistant()' : ''}.rarity('${VANILLA_RARITY[rarityOf(m)]}')`)
   }
   for (const piece of armour) {
-    const rarity = piece.source === 'loot' ? 'epic' : piece.set === 'compacted_netherite' ? 'rare' : 'uncommon'
     lines.push(
       `  event.create('${NAMESPACE}:${piece.id}', '${piece.slot}')`,
       `    .material('${NAMESPACE}:${piece.material}')`,
       `    .displayName(${js(piece.name)})`,
-      `    .rarity('${rarity}')`,
+      `    .rarity('${VANILLA_RARITY[rarityOf(piece)]}')`,
       `    .component('minecraft:attribute_modifiers', gearModifiers(${js(armourModifiers(piece))}))${MATERIALS[piece.material].fireResistant ? '\n    .fireResistant()' : ''}`
     )
   }
@@ -152,15 +177,15 @@ function startupScript() {
       `  event.create('${NAMESPACE}:${w.id}', 'sword')`,
       `    .tier('${w.tier}')`,
       `    .displayName(${js(w.name)})`,
-      `    .rarity('${w.source === 'loot' ? 'epic' : 'uncommon'}')`,
+      `    .rarity('${VANILLA_RARITY[rarityOf(w)]}')`,
       `    .component('minecraft:attribute_modifiers', gearModifiers(${js(weaponModifiers(w))}))`
     )
   }
   for (const t of TOOLS) {
     if (t.type === 'basic') {
-      lines.push(`  event.create('${NAMESPACE}:${t.id}').displayName(${js(t.name)}).rarity('uncommon').unstackable().maxDamage(${t.maxDamage ?? 256})`)
+      lines.push(`  event.create('${NAMESPACE}:${t.id}').displayName(${js(t.name)}).rarity('${VANILLA_RARITY[rarityOf(t)]}').unstackable().maxDamage(${t.maxDamage ?? 256})`)
     } else {
-      lines.push(`  event.create('${NAMESPACE}:${t.id}', '${t.type}').tier('${t.tier}').displayName(${js(t.name)}).rarity('uncommon')`)
+      lines.push(`  event.create('${NAMESPACE}:${t.id}', '${t.type}').tier('${t.tier}').displayName(${js(t.name)}).rarity('${VANILLA_RARITY[rarityOf(t)]}')`)
     }
   }
   lines.push('})', '')
@@ -249,45 +274,145 @@ const STAT_LINES = (stats) => {
   return lines
 }
 
-function clientScript() {
-  const tooltips = []
-  const info = []
-  const add = (id, name, lines, howToGet, req) => {
-    tooltips.push({ id: ns(id), lines })
-    info.push({ id: ns(id), text: [`${name}.`, howToGet, req ? `Needs ${SKILL_NAME(req.skill)} ${req.level}.` : ''].filter(Boolean).join(' ') })
+// SkyBlock wraps descriptions at roughly this many characters.
+const TOOLTIP_WIDTH = 38
+const TOOL_TYPE = { axe: 'AXE', pickaxe: 'PICKAXE', shovel: 'SHOVEL', hoe: 'HOE', sword: 'SWORD' }
+
+/** Greedy word wrap; every line starts with the colour code. */
+function wrap(code, text, width = TOOLTIP_WIDTH) {
+  const lines = []
+  let line = ''
+  for (const word of text.split(/\s+/).filter(Boolean)) {
+    if (line && line.length + 1 + word.length > width) {
+      lines.push(line)
+      line = word
+    } else line = line ? `${line} ${word}` : word
   }
+  if (line) lines.push(line)
+  return lines.map((l) => `§${code}${l}`)
+}
+const sentence = (text) => {
+  const t = text.trim()
+  const s = t.charAt(0).toUpperCase() + t.slice(1)
+  return /[.!?]$/.test(s) ? s : `${s}.`
+}
+// JS source with § written as §, so the generated file stays ASCII.
+const jsText = (v) => js(v).replace(/§/g, '\\u00a7')
+
+/**
+ * Tooltip data for every gear item. client_scripts/tooltips.js draws every tooltip in SkyBlock's layout and
+ * asks gearTipSpec() (below, generated too) for these: the rarity, the type word on the last line, the stats
+ * that aren't attribute modifiers (crit; damage, defense and the rest come from the item itself), the
+ * Piece Bonus / Ability / lore sections, the set, "How to get" and the skill requirement.
+ */
+function clientScript() {
+  const tips = {}
+  const sets = {}
+  const info = []
+  const extraStats = (stats = {}) => {
+    const out = {}
+    if (stats.critChance) out.critChance = stats.critChance
+    if (stats.critDamage) out.critDamage = stats.critDamage
+    return out
+  }
+  const perkSection = (item, header) => {
+    if (!item.perkName) return null
+    const trigger = item.perkTrigger ? ` §e§l${item.perkTrigger}` : ''
+    return [`§6${header}: ${item.perkName}${trigger}`, ...wrap('7', sentence(item.perkDesc ?? item.perkText ?? item.text))]
+  }
+  const loreSection = (item) => (item.lore && !item.perkName ? wrap('7', sentence(item.lore)) : null)
+  const add = (item, type, stats, sections, set) => {
+    const req = item.requirement
+    tips[ns(item.id)] = {
+      rarity: rarityOf(item),
+      type,
+      stats: extraStats(stats),
+      sections: sections.filter(Boolean),
+      ...(set ? { set } : {}),
+      how: wrap('8', `How to get: ${item.howToGet}`),
+      ...(req ? { req: [req.skill, req.level] } : {})
+    }
+    info.push({ id: ns(item.id), text: [`${item.name}.`, item.howToGet, req ? `Needs ${SKILL_NAME(req.skill)} ${req.level}.` : ''].filter(Boolean).join(' ') })
+  }
+  for (const piece of armour) add(piece, piece.slot.toUpperCase(), piece.stats, [perkSection(piece, 'Piece Bonus'), loreSection(piece)], piece.set)
+  for (const w of WEAPONS) add(w, 'SWORD', w.stats, [perkSection(w, 'Ability'), loreSection(w)])
+  for (const t of TOOLS) add(t, TOOL_TYPE[t.type] ?? t.kind ?? '', {}, [perkSection(t, 'Ability'), loreSection(t)])
+  for (const m of MATERIAL_ITEMS) add(m, '', {}, [])
   for (const set of SETS) {
-    for (const [slot, piece] of Object.entries(set.pieces)) {
-      const lines = [`&6${set.name} &7(set)`, ...STAT_LINES(piece.stats ?? {})]
-      if (piece.perkText) lines.push(`&e${piece.perkText}`)
-      lines.push(`&7Full set: &f${set.set.text}`)
-      if (set.synergy) lines.push(`&7With ${set.synergy.relic.split(':')[1].replace(/_/g, ' ')}: &f${set.synergy.text}`)
-      add(`${set.id}_${slot}`, piece.name, lines, set.howToGet, set.requirement)
+    sets[set.id] = {
+      name: set.name,
+      pieces: Object.keys(set.pieces).map((slot) => ns(`${set.id}_${slot}`)),
+      bonus: wrap('7', sentence(set.set.text)),
+      ...(set.synergy ? { relic: set.synergy.relic, synergy: wrap('7', `With the full set and this relic equipped: ${sentence(set.synergy.text)}`) } : {})
     }
   }
-  for (const p of PIECES) add(p.id, p.name, [...STAT_LINES(p.stats ?? {}), `&e${p.text}`, ...(p.source === 'loot' ? ['&5Loot only'] : [])], p.howToGet, p.requirement)
-  for (const w of WEAPONS) add(w.id, w.name, [...STAT_LINES(w.stats ?? {}), `&e${w.text}`, ...(w.source === 'loot' ? ['&5Loot only'] : [])], w.howToGet, w.requirement)
-  for (const t of TOOLS) add(t.id, t.name, [`&e${t.text}`], t.howToGet, t.requirement)
-  for (const m of MATERIAL_ITEMS) add(m.id, m.name, [], m.howToGet)
-  // The "how to get" text goes on the tooltip and on JEI's information page for the item. KubeJS 7 calls
-  // the JEI hook RecipeViewerEvents.addInformation; JEIEvents.information was the KubeJS 6 name.
-  const howTo = Object.fromEntries(info.map((i) => [i.id, i.text.replace(/^[^.]+\. ?/, '')]).filter(([, text]) => text))
+  // The "how to get" text is also JEI's information page for the item. KubeJS 7 calls the JEI hook
+  // RecipeViewerEvents.addInformation; JEIEvents.information was the KubeJS 6 name.
   return [
-    '// GENERATED by gear/build.mjs. Tooltips with the SkyBlock-style stats and how to get each item, and the',
-    '// same "how to get" text as a JEI information page.',
+    '// GENERATED by gear/build.mjs from gear/gear.mjs. Do not edit; edit gear.mjs.',
+    "// The gear's part of the SkyBlock-style tooltips (client_scripts/tooltips.js draws them): each item's rarity,",
+    '// the type on the last line, the stats that are not attribute modifiers (crit chance and damage; damage,',
+    '// defense and the rest come from the item itself), the Piece Bonus / Ability / lore sections, its set,',
+    '// "How to get" and the skill requirement tooltips.js falls back on. Plus the JEI information pages.',
     '',
-    `const GEAR_TOOLTIPS = ${js(Object.fromEntries(tooltips.map((t) => [t.id, t.lines])))}`,
-    `const GEAR_HOW_TO_GET = ${js(howTo)}`,
-    `const GEAR_INFO = ${js(Object.fromEntries(info.map((i) => [i.id, i.text])))}`,
+    `const GEAR_TIPS = ${jsText(tips)}`,
+    `const GEAR_SETS = ${jsText(sets)}`,
+    `const GEAR_INFO = ${jsText(Object.fromEntries(info.map((i) => [i.id, i.text])))}`,
+    'let GearTipCurios = null',
+    'try {',
+    "  GearTipCurios = Java.loadClass('top.theillusivec4.curios.api.CuriosApi')",
+    '} catch (e) {}',
     '',
-    'ItemEvents.modifyTooltips((event) => {',
-    '  Object.keys(GEAR_TOOLTIPS).forEach((id) => {',
-    '    event.modify(id, (tooltip) => {',
-    "      GEAR_TOOLTIPS[id].forEach((line) => tooltip.add(Text.of(line.replace(/&([0-9a-fk-or])/g, '\\u00a7$1'))))",
-    "      if (GEAR_HOW_TO_GET[id]) tooltip.add(Text.of('\\u00a78\\u00a7oHow to get: ' + GEAR_HOW_TO_GET[id]))",
-    '    })',
+    '/** How many of the pieces the player wears. */',
+    'function gearTipWorn(player, pieces) {',
+    '  let worn = 0',
+    "  ;['head', 'chest', 'legs', 'feet'].forEach((slot) => {",
+    '    if (pieces.indexOf(String(player.getItemBySlot(slot).id)) >= 0) worn++',
     '  })',
-    '})',
+    '  return worn',
+    '}',
+    '',
+    '/** Whether the player has a Relics item in a Curios slot (the set synergies). */',
+    'function gearTipHasRelic(player, relic) {',
+    '  if (GearTipCurios == null) return false',
+    '  try {',
+    '    let inventory = GearTipCurios.getCuriosInventory(player).orElse(null)',
+    '    if (inventory == null) return false',
+    '    let handler = inventory.getEquippedCurios()',
+    '    for (let i = 0; i < handler.getSlots(); i++) {',
+    '      if (String(handler.getStackInSlot(i).id) === relic) return true',
+    '    }',
+    '  } catch (e) {}',
+    '  return false',
+    '}',
+    '',
+    '/**',
+    " * The SkyBlock layout for one of the pack's items, for tooltips.js: rarity, type, extra stats, the sections",
+    ' * (Piece Bonus / Ability / lore, then the Full Set Bonus with the pieces worn), and the Shift details. Shift',
+    ' * adds the set bonus itself, the relic synergy and "How to get".',
+    ' */',
+    'function gearTipSpec(id, player, shift) {',
+    '  let tip = GEAR_TIPS[id]',
+    '  let sections = tip.sections.slice()',
+    '  let set = tip.set ? GEAR_SETS[tip.set] : null',
+    '  if (set != null) {',
+    '    let worn = player != null ? gearTipWorn(player, set.pieces) : -1',
+    "    let count = worn < 0 ? '' : (worn === set.pieces.length ? ' \\u00a7a(' : ' \\u00a78(') + worn + '/' + set.pieces.length + ')'",
+    "    let bonus = ['\\u00a76Full Set Bonus: ' + set.name + count]",
+    '    if (shift) set.bonus.forEach((line) => bonus.push(line))',
+    '    sections.push(bonus)',
+    '    if (shift && set.relic) {',
+    '      let equipped = player != null && gearTipHasRelic(player, set.relic)',
+    "      let header = Text.literal('\\u00a76Relic Synergy: ')",
+    "      header.append(Text.translatable('item.' + set.relic.replace(':', '.')).gold())",
+    "      header.append(Text.literal(equipped ? ' \\u00a7a(equipped)' : ' \\u00a78(not equipped)'))",
+    '      let synergy = [header]',
+    '      set.synergy.forEach((line) => synergy.push(line))',
+    '      sections.push(synergy)',
+    '    }',
+    '  }',
+    '  return { rarity: tip.rarity, type: tip.type, stats: tip.stats, sections: sections, details: tip.how, more: set != null, req: tip.req || null }',
+    '}',
     '',
     'const gearInformation = (event) => {',
     '  Object.keys(GEAR_INFO).forEach((id) => {',
@@ -306,7 +431,8 @@ function clientScript() {
 
 // ---------------------------------------------------------------- Project MMO gates
 
-// One file per item; Project MMO takes the file name as the item id and merges rules across namespaces.
+// One file per item. Project MMO reads a file under data/<ns>/pmmo/items/<name>.json as the item <ns>:<name>, so
+// each file names the real item with isTagFor (the data namespace here is lemursaucepacket_gear).
 function pmmoFilesById() {
   const dir = 'pack/kubejs/data/lemursaucepacket_gear/pmmo/items'
   rmSync(path.join(root, dir), { recursive: true, force: true })
@@ -321,7 +447,7 @@ function pmmoFilesById() {
     add(t.id, 'TOOL', t.requirement)
     add(t.id, 'USE', t.requirement)
   }
-  for (const [id, requirements] of Object.entries(rules)) out(`${dir}/${id}.json`, JSON.stringify({ requirements }, null, 2))
+  for (const [id, requirements] of Object.entries(rules)) out(`${dir}/${id}.json`, JSON.stringify({ isTagFor: [`${NAMESPACE}:${id}`], requirements }, null, 2))
   return Object.keys(rules).length
 }
 

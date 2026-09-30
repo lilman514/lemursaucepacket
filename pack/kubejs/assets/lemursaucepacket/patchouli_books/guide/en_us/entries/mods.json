@@ -2,15 +2,15 @@
   "name": "Mods in the pack",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:chest",
-  "sortnum": 10,
+  "sortnum": 13,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "161 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
+      "text": "164 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
     },
     {
       "type": "patchouli:text",
-      "title": "On the server and every client (119)",
+      "title": "On the server and every client (122)",
       "text": "$(li)$(l:https://modrinth.com/project/EsAfCjCV)AppleSkin$(/l)$(br)$(li)$(l:https://modrinth.com/project/lhGA9TYQ)Architectury API$(/l)$(br)$(li)$(l:https://modrinth.com/project/MBAkmtvl)Balm$(/l)$(br)$(li)$(l:https://modrinth.com/project/iHLDc0eo)Better Advanced Tooltips$(/l)$(br)$(li)$(l:https://modrinth.com/project/VsM5EDoI)Blueprint$(/l)$(br)$(li)$(l:https://modrinth.com/project/uy4Cnpcm)Bookshelf$(/l)$(br)$(li)$(l:https://modrinth.com/project/fALzjamp)Chunky$(/l)$(br)$(li)$(l:https://modrinth.com/project/9s6osm5g)Cloth Config API$(/l)$(br)$(li)$(l:https://modrinth.com/project/Wnxd13zP)Clumps$(/l)$(br)$(li)$(l"
     },
     {
@@ -55,15 +55,19 @@
     },
     {
       "type": "patchouli:text",
-      "text": "ture Layout Optimizer$(/l)$(br)$(li)$(l:https://modrinth.com/project/lWDHr9jE)Tectonic$(/l)$(br)$(li)$(l:https://modrinth.com/project/8oi3bsk5)Terralith$(/l)$(br)$(li)$(l:https://modrinth.com/project/DjLobEOy)Towns and Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/6xwxDTgf)Vanilla Backport$(/l)$(br)$(li)$(l:https://modrinth.com/project/jcYHXHwz)Vanilla Backport Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/lNDRiXkY)Variants&Ventures$(/l)$(br)$(li)$(l:https://modrinth.com/project/8DfbfASn)When Dungeons Arise$(/l)$(br)$(li)$(l:https://modrinth.com/project/rv1sovni)Woodworks$(/l)$(br)$(li)$(l:https:/"
+      "text": "ture Layout Optimizer$(/l)$(br)$(li)$(l:https://modrinth.com/project/lWDHr9jE)Tectonic$(/l)$(br)$(li)$(l:https://modrinth.com/project/8oi3bsk5)Terralith$(/l)$(br)$(li)$(l:https://modrinth.com/project/54eqfZSC)Towers of the Wild Modded$(/l)$(br)$(li)$(l:https://modrinth.com/project/DjLobEOy)Towns and Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/6xwxDTgf)Vanilla Backport$(/l)$(br)$(li)$(l:https://modrinth.com/project/jcYHXHwz)Vanilla Backport Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/lNDRiXkY)Variants&Ventures$(/l)$(br)$(li)$(l:https://modrinth.com/project/LOpKHB2A)Waystones$(/l)$(br)$(li)$(l:h"
     },
     {
       "type": "patchouli:text",
-      "text": "/modrinth.com/project/1bokaNcj)Xaero's Minimap$(/l)$(br)$(li)$(l:https://modrinth.com/project/NcUtCpym)Xaero's World Map$(/l)$(br)$(li)$(l:https://modrinth.com/project/1eAoo2KR)YetAnotherConfigLib (YACL)$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ua7DFN59)YUNG's API$(/l)$(br)$(li)$(l:https://modrinth.com/project/XNlO7sBv)YUNG's Better Desert Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/o1C1Dkj5)YUNG's Better Dungeons$(/l)$(br)$(li)$(l:https://modrinth.com/project/2BwBOmBQ)YUNG's Better End Island$(/l)$(br)$(li)$(l:https://modrinth.com/project/z9Ve58Ih)YUNG's Better Jungle Temples$(/l)$(br)$(li)$(l:h"
+      "text": "ttps://modrinth.com/project/BxhPGfcK)Waystones: Sable (Create Aeronautics Addon)$(/l)$(br)$(li)$(l:https://modrinth.com/project/8DfbfASn)When Dungeons Arise$(/l)$(br)$(li)$(l:https://modrinth.com/project/rv1sovni)Woodworks$(/l)$(br)$(li)$(l:https://modrinth.com/project/1bokaNcj)Xaero's Minimap$(/l)$(br)$(li)$(l:https://modrinth.com/project/NcUtCpym)Xaero's World Map$(/l)$(br)$(li)$(l:https://modrinth.com/project/1eAoo2KR)YetAnotherConfigLib (YACL)$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ua7DFN59)YUNG's API$(/l)$(br)$(li)$(l:https://modrinth.com/project/XNlO7sBv)YUNG's Better Desert Temples$(/l)$(br)$(li)$("
     },
     {
       "type": "patchouli:text",
-      "text": "ttps://modrinth.com/project/HjmxVlSr)YUNG's Better Mineshafts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Z2mXHnxP)YUNG's Better Nether Fortresses$(/l)$(br)$(li)$(l:https://modrinth.com/project/3dT9sgt4)YUNG's Better Ocean Monuments$(/l)$(br)$(li)$(l:https://modrinth.com/project/kidLKymU)YUNG's Better Strongholds$(/l)$(br)$(li)$(l:https://modrinth.com/project/t5FRdP87)YUNG's Better Witch Huts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ht4BfYp6)YUNG's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/ZYgyPyfq)YUNG's Extras$(/l)"
+      "text": "l:https://modrinth.com/project/o1C1Dkj5)YUNG's Better Dungeons$(/l)$(br)$(li)$(l:https://modrinth.com/project/2BwBOmBQ)YUNG's Better End Island$(/l)$(br)$(li)$(l:https://modrinth.com/project/z9Ve58Ih)YUNG's Better Jungle Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/HjmxVlSr)YUNG's Better Mineshafts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Z2mXHnxP)YUNG's Better Nether Fortresses$(/l)$(br)$(li)$(l:https://modrinth.com/project/3dT9sgt4)YUNG's Better Ocean Monuments$(/l)$(br)$(li)$(l:https://modrinth.com/project/kidLKymU)YUNG's Better Strongholds$(/l)$(br)$(li)$(l:https://modrinth.com/project/t5FRdP8"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "7)YUNG's Better Witch Huts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ht4BfYp6)YUNG's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/ZYgyPyfq)YUNG's Extras$(/l)"
     },
     {
       "type": "patchouli:text",

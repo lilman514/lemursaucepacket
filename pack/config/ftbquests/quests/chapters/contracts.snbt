@@ -1,0 +1,336 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "contracts"
+	group: "70BC9AA571D15575"
+	icon: {
+		id: "minecraft:writable_book"
+	}
+	id: "2D35B320696E0A9F"
+	images: [
+		{
+			height: 2.7574468085106383d
+			id: "3BDA63444C2D4695"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.378723404255319d
+			x: 3.55d
+			y: -2.1d
+		}
+	]
+	order_index: 28
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:writable_book"
+			}
+			id: "086572A7A4E6D0A9"
+			rewards: [
+				{
+					id: "24614319F163AF6F"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "6C17AF2688CA0AE7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1F6A18FDFB15215E"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5021F861265A47B3"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["086572A7A4E6D0A9"]
+			icon: {
+				id: "numismatics:bevel"
+			}
+			id: "2C1B7D364ACF0A52"
+			rewards: [
+				{
+					id: "5674D787AB7D197D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "1DDF2E98E94650A3"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3365E0F7AD1D8A2A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "03E6DDDF4931CD72"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_10"
+					criterion: ""
+					id: "1314E46E7AB05AAB"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 0.8d
+		}
+		{
+			dependencies: ["2C1B7D364ACF0A52"]
+			icon: {
+				id: "numismatics:sprocket"
+			}
+			id: "42BB5683DD477AD1"
+			rewards: [
+				{
+					id: "018BEBDF5A76AF7E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4E83E7AD16D784B4"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0429CF36BE00393D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_50"
+					criterion: ""
+					id: "6258A77BC42867AA"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 0.8d
+		}
+		{
+			dependencies: ["42BB5683DD477AD1"]
+			icon: {
+				id: "numismatics:cog"
+			}
+			id: "4507CCCDE3D5CD61"
+			rewards: [
+				{
+					id: "22F1390EA26E8C15"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "57716E55A6950D92"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "3CEE54F998821151"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_100"
+					criterion: ""
+					id: "29A0306842B5359C"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 0.8d
+		}
+		{
+			dependencies: ["4507CCCDE3D5CD61"]
+			icon: {
+				id: "numismatics:crown"
+			}
+			id: "71CC2967CF0C5E7E"
+			rewards: [
+				{
+					id: "243110E502CBC263"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6F18372D5052E197"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "0C6CC847427C6770"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "269E114D3A8CC6FA"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					id: "09A6527B1FAF4393"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_250"
+					criterion: ""
+					id: "49861AA67CF83406"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 0.8d
+		}
+		{
+			dependencies: ["71CC2967CF0C5E7E"]
+			icon: {
+				id: "numismatics:crown"
+			}
+			id: "2FAE318E17AE49CB"
+			rewards: [
+				{
+					id: "62D88217F1D400D6"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "7904BC821598BEAC"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "40A090A0DA9798EF"
+					item: {
+						count: 2
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "132E5FEA2C1FB761"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_500"
+					criterion: ""
+					id: "10E9A500D94DD936"
+					type: "advancement"
+				}
+			]
+			x: 11.5d
+			y: 0.8d
+		}
+		{
+			dependencies: ["2FAE318E17AE49CB"]
+			icon: {
+				id: "numismatics:sun"
+			}
+			id: "12CFB6C5115393AF"
+			rewards: [
+				{
+					id: "4811C34E54C5035C"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "01D7A10B826BF7AD"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "05A785D062705806"
+					item: {
+						count: 2
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "1285B3D20DC9619E"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "0034D86CE59926D6"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "2F1E294282591058"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					advancement: "brassworksmissions:missions_1000"
+					criterion: ""
+					id: "539591C2E540ABC3"
+					type: "advancement"
+				}
+			]
+			x: 13.8d
+			y: 0.8d
+		}
+	]
+}

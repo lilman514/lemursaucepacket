@@ -24,6 +24,7 @@ import { unzipSync } from 'fflate'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const ITEM_DIR = path.join(root, 'pack/kubejs/assets/lemursaucepacket/textures/item')
+const MODEL_DIR = path.join(root, 'pack/kubejs/assets/lemursaucepacket/models/item')
 const EFFECT_DIR = path.join(root, 'pack/kubejs/assets/relics/textures/mob_effect')
 const JAR =
   process.env.MINECRAFT_JAR ??
@@ -54,7 +55,8 @@ export const RAMPS = {
   crystal: ['#280a38', '#521970', '#882dad', '#be52de', '#e798f4', '#fff0ff'],
   sky: ['#0e2240', '#1d4a7d', '#3a82bf', '#72b9e6', '#b8e3f7', '#ffffff'],
   earth: ['#1f1008', '#40220f', '#6b3d1a', '#94602b', '#bd8a48', '#e7bd78'],
-  plume: ['#1c3350', '#3d6b99', '#78a9d6', '#b5d8f2', '#e3f3ff', '#ffffff']
+  plume: ['#1c3350', '#3d6b99', '#78a9d6', '#b5d8f2', '#e3f3ff', '#ffffff'],
+  soul: ['#0a1a2a', '#113a55', '#1a6b8c', '#35a8c4', '#79e0ea', '#d9fffb']
 }
 
 const W = 16
@@ -62,7 +64,11 @@ const H = 16
 
 // ---------------------------------------------------------------- silhouettes
 
+const pad2 = (n) => (n < 10 ? '0' + n : String(n))
+const COMPASS_FRAMES = Array.from({ length: 32 }, (_, i) => `compass_${pad2(i)}`)
+
 const VANILLA = [
+  ...COMPASS_FRAMES,
   'iron_helmet',
   'iron_chestplate',
   'iron_leggings',
@@ -640,6 +646,80 @@ const SPRITES = [
     pause: 206
   },
 
+  // ------------------------------------------------ hearts and graves (docs/lifesteal.md)
+  {
+    // One heart of maximum health: a cut crimson gem, lit from the top-left.
+    id: 'heart',
+    px: [
+      '................',
+      '.............S..',
+      '...OOO....OOO...',
+      '..OHWLO..OLWLO..',
+      '.OHWLLLOOLLLLDO.',
+      '.OWLLLLLLLLLLDO.',
+      '.OLLLLLLLLLLLDO.',
+      '.OLLLLLLLLLLDDO.',
+      '..OLLLLLLLLDDO..',
+      '...OLLLLLLDDO...',
+      '....OLLLLDDO....',
+      '.....OLLDDO.....',
+      '......OLDO......',
+      '.......OO.......',
+      '..S.............',
+      '................'
+    ],
+    pal: { O: 'crimson@0', D: 'crimson@2', L: 'crimson@3', W: 'crimson@4', H: 'crimson@5', S: 'crimson@5' },
+    pause: 140
+  },
+  {
+    // The Heart's sequenced-assembly stage: a brass cage, the crimson core only half grown.
+    id: 'incomplete_heart',
+    px: [
+      '................',
+      '................',
+      '...OOO....OOO...',
+      '..OHBBO..OBBBO..',
+      '.OBGGGBOOBGGGBO.',
+      '.OBGGGGGGGGGGBO.',
+      '.OBGGGGrRGGGGBO.',
+      '.OBGGGrRRrGGGBO.',
+      '..OBGrRRRRrGBO..',
+      '...OBrRRRRrBO...',
+      '....OBrRRrBO....',
+      '.....OBrrBO.....',
+      '......OBBO......',
+      '.......OO.......',
+      '................',
+      '................'
+    ],
+    pal: { O: 'brass@0', B: 'brass@3', H: 'brass@5', G: 'darksteel@2', R: 'crimson@4', r: 'crimson@2' },
+    pause: 230
+  },
+  {
+    // One grave: a corked vial of soul-blue wisp.
+    id: 'grave_essence',
+    px: [
+      '................',
+      '......OOOO......',
+      '......OkkO......',
+      '......OKKO...x..',
+      '.....OOGGOO.....',
+      '..x...OGGO......',
+      '.....OGGGGO.....',
+      '....OGSSSSGO....',
+      '...OGSSsSSSGO...',
+      '...OWSsSSSSGO...',
+      '...OWSSSSsSGO...',
+      '...OGSSSSSSGO...',
+      '....OGSSSSGO....',
+      '.....OOOOOO.....',
+      '................',
+      '................'
+    ],
+    pal: { O: 'glass@0', G: 'glass@3', W: 'glass@5', k: 'leather@4', K: 'leather@2', S: 'soul@3', s: 'soul@5', x: 'soul@4' },
+    pause: 180
+  },
+
   // ------------------------------------------------ Relics effect icons Relics 0.12.8 forgot
   {
     id: 'flight',
@@ -675,6 +755,73 @@ const SPRITES = [
     shimmer: false
   },
 ]
+
+// ---------------------------------------------------------------- compasses
+
+// The lifesteal compasses point with 32 needle frames, like vanilla's compass_00..31 (the "angle" item property,
+// registered for them by lsp_fixes). Each frame is vanilla's, recoloured by role: the casing and the face stay
+// where they are in every frame, the needle is whatever differs from the most common colour at that pixel. One
+// colour table for all frames, so the needle's shade never flickers as it turns.
+const COMPASSES = [
+  { id: 'lost_item_compass', casing: 'crystal', face: 'nethglow@1', needle: 'lamp', tail: 'steel' },
+  { id: 'seekers_compass', casing: 'brass', face: 'leather@1', needle: 'crimson', tail: 'steel' }
+]
+// Vanilla's greys (outline to highlight) onto a 6-step ramp, and its needle colours.
+const COMPASS_CASING_TONES = { '#181717': 0, '#353535': 1, '#4f4d4d': 1, '#5e5e5e': 2, '#828282': 3, '#a8a8a8': 4, '#d8d8d8': 4, '#ffffff': 5 }
+const COMPASS_FACE = '#2f2f2f'
+const COMPASS_NEEDLE_TONES = { '#ff1414': ['needle', 4], '#cb1a1a': ['needle', 3], '#be1515': ['needle', 3], '#646464': ['tail', 3], '#4f4d4d': ['tail', 2] }
+
+function compassFrames(vanilla, spec) {
+  const hexAt = (rgba, i) => (rgba[i * 4 + 3] < 128 ? null : '#' + [0, 1, 2].map((k) => rgba[i * 4 + k].toString(16).padStart(2, '0')).join(''))
+  const frames = COMPASS_FRAMES.map((name) => {
+    if (!vanilla[name]) throw new Error(`compass: vanilla ${name} missing from the jar`)
+    return vanilla[name]
+  })
+  // The most common colour of every pixel across the frames: the casing and the empty face.
+  const template = []
+  for (let i = 0; i < W * H; i++) {
+    const count = {}
+    for (const f of frames) {
+      const c = hexAt(f, i) ?? 'none'
+      count[c] = (count[c] ?? 0) + 1
+    }
+    template.push(Object.entries(count).sort((a, b) => b[1] - a[1])[0][0])
+  }
+  const [faceRamp, faceTone] = spec.face.split('@')
+  return frames.map((f) =>
+    template.map((t, i) => {
+      const c = hexAt(f, i)
+      if (c == null) return null
+      if (c === COMPASS_FACE) return { ramp: faceRamp, tone: Number(faceTone) }
+      // The needle's pivot keeps its colour in most frames, so a needle-only colour is needle even where static.
+      if (c !== t || (COMPASS_NEEDLE_TONES[c] && COMPASS_CASING_TONES[c] === undefined)) {
+        const role = COMPASS_NEEDLE_TONES[c]
+        if (role) return { ramp: spec[role[0]], tone: role[1] }
+        if (COMPASS_CASING_TONES[c] !== undefined) return { ramp: spec.casing, tone: COMPASS_CASING_TONES[c] }
+        throw new Error(`compass: unexpected needle colour ${c}`)
+      }
+      if (c === COMPASS_FACE) return { ramp: faceRamp, tone: Number(faceTone) }
+      if (COMPASS_CASING_TONES[c] === undefined) throw new Error(`compass: unexpected casing colour ${c}`)
+      return { ramp: spec.casing, tone: COMPASS_CASING_TONES[c] }
+    })
+  )
+}
+
+/** Frame textures and their item models; the plain texture is frame 16, as vanilla's compass uses compass_16. */
+async function buildCompasses(vanilla, firstFrames) {
+  mkdirSync(MODEL_DIR, { recursive: true })
+  for (const spec of COMPASSES) {
+    const frames = compassFrames(vanilla, spec)
+    for (const [i, cells] of frames.entries()) {
+      const name = `${spec.id}_${pad2(i)}`
+      await writeSprite(path.join(ITEM_DIR, `${name}.png`), [cells], 0)
+      writeFileSync(path.join(MODEL_DIR, `${name}.json`), JSON.stringify({ parent: 'minecraft:item/generated', textures: { layer0: `lemursaucepacket:item/${name}` } }, null, 2) + '\n')
+    }
+    await writeSprite(path.join(ITEM_DIR, `${spec.id}.png`), [frames[16]], 0)
+    firstFrames.push({ id: spec.id, rgba: toRgba(frames[16]) }, { id: `${spec.id}_04`, rgba: toRgba(frames[4]) })
+  }
+  console.log(`items: ${COMPASSES.length} compasses, ${COMPASS_FRAMES.length} needle frames each (+ frame models)`)
+}
 
 // ---------------------------------------------------------------- render
 
@@ -739,6 +886,7 @@ export async function buildItems({ preview } = {}) {
     firstFrames.push({ id: s.id, rgba: toRgba(cells) })
   }
   console.log(`items: ${SPRITES.filter((s) => s.kind !== 'effect').length} item sprites (16x16, Relics style), ${SPRITES.filter((s) => s.kind === 'effect').length} Relics effect icons`)
+  await buildCompasses(vanilla, firstFrames)
   if (preview) await writePreview(preview, firstFrames)
 }
 
@@ -760,7 +908,7 @@ async function writePreview(file, sprites) {
   console.log(`items: preview ${file}`)
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const i = process.argv.indexOf('--preview')
   await buildItems({ preview: i > 0 ? process.argv[i + 1] : undefined })
 }

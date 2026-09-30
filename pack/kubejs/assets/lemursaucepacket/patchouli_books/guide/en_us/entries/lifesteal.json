@@ -1,0 +1,107 @@
+{
+  "name": "Hearts, graves and elimination",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:paper",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every player has a stock of hearts. Dying costs one and drops it on the ground as an item. Anyone can pick it up and use it, including the person who killed you. Run out and you are eliminated: everything you ever placed and everything you own is erased. Graves are not free either: each one costs a Grave Essence."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your hearts",
+      "text": "Your hearts are the full hearts of your own health bar: 10 to start, plus one per ten levels of $(l:lemursaucepacket:skills)Hitpoints$(/l), plus any Hearts you have used, minus any you have lost. Armour, capes, relics and potions add health on top but never count as hearts.$(br2)$(bold)Starting hearts$() - 10$(br)$(bold)Hitpoints$() - +1 heart per 10 levels (up to +9 at level 99)$(br)$(bold)Most you can hold$() - 20, plus your Hitpoints hearts$(br)$(bold)Fewest$() - 0: you are eliminated$(br)$(bold)A death costs$() - 1 heart, dropped as a Heart item where you died$(br)$(bold)A Heart used$() - +1 heart"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#e0ac46)/hearts$() shows the count and where it comes from."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Dying",
+      "text": "When you die you lose one heart of maximum health and a $(bold)Heart$() drops where you fell. If a grave is placed (see below), the Heart is never inside it. It lies on the ground next to the grave, where anyone can take it.$(br2)Hearts never despawn. Fire, lava, cactus and explosions cannot destroy them. A Heart that would fall into the void floats where you died instead.$(br2)$(bold)Two deaths cost nothing:$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)You are new.$() For your first two hours of play, and for two hours after an elimination, you lose no hearts and drop no Heart. Hitting another player ends this early.$(br)$(li)$(bold)The same player killed you less than 30 minutes ago.$() Spawn-camping pays once.$(br2)You get a warning at three, two and one heart. At one heart your next death eliminates you."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Heart item",
+      "text": "Right-click a Heart to use it: +1 heart, up to the limit above. The item is used up. A Heart says who it came from.$(br2)Every Heart carries a serial number. A serial can only be used once, so a duplicated Heart is worthless: the copy crumbles when you try to use it.$(br2)Hearts are never anyone's property (see [What is yours](#what-is-yours)), so a Heart you took stays yours even if its previous owner is eliminated."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stealing hearts",
+      "text": "PvP is on. Kill a player, pick up the Heart they dropped, use it. Hearts move between players but are never created this way: one player's loss is another's gain. Kill the same player again within 30 minutes and nothing drops."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting hearts back",
+      "text": "$(li)Walk back and pick up your own Heart. If nobody took it, it is still there.$(br)$(li)Train Hitpoints. Every ten levels adds a heart, up to level 99.$(br)$(li)Make a new one. This is meant to be very hard and it can never be automated end to end.$(br2)$(bold)A new Heart$() is a Create sequenced assembly on a $(bold)Heart of the Sea$() (buried treasure only, one per treasure; treasure maps come from shipwrecks and ocean ruins). Over five stations:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "1. Deploy a $(bold)Compacted Diamond$() (4 diamonds, pressed). 2. Deploy a $(bold)Nether Star$() (kill the Wither). 3. Fill with $(bold)1,000 mB of Liquid Experience$() (Create Enchantment Industry). 4. Deploy a $(bold)Totem of Undying$() (raids). 5. Press.$(br2)The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Graves and Grave Essence",
+      "text": "When you die with a $(bold)Grave Essence$() in your inventory, hotbar, off-hand or directly inside a backpack you carry, a grave is placed where you fell with your items in it, and one Grave Essence is used up. Without one, your items drop on the ground like vanilla Minecraft.$(br2)Grave Essence is not craftable on day one:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Recipe:$() 1 soul sand, 1 bone block and 2 experience nuggets, mixed in a basin over a $(bold)blaze burner$(), make 2. That means a trip to the Nether and a heated mixer, roughly the Brass age.$(br)$(li)$(bold)Loot:$() a few turn up in dungeon chests (Dungeons Arise, YUNG's dungeons and strongholds) and ancient cities.$(br2)Keep a small stack on you. It stacks to 16. Your Heart never goes into the grave."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Elimination",
+      "text": "Lose your last heart and you are $(bold)eliminated$(). Nothing is erased yet. You stay on the death screen and have two choices:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Wait for a revive.$() Leave the server or stay on the death screen. A friend can bring you back: they hold a Heart and run $(#e0ac46)/revive <your name>$(). The Heart is used up and you respawn with one heart, and nothing is erased. This works while you are offline too.$(br)$(li)$(bold)Accept elimination.$() The respawn button is replaced by $(italic)Accept elimination$(). It warns you, shows what will be erased (how many blocks you placed, how many items are yours), asks you to type ERASE, and then asks you to hold a button for five seconds. Only then does it happen.$(br2)If you accept, this happens:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Every block you ever placed is removed$(), in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched. Blocks placed with a schematicannon or moved by contraptions and ships are not tracked and stay.$(br)$(li)$(bold)Every item that is yours is deleted$(), wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box, on the ground, in your ender chest, and in other players' inventories, online or not.$(br)$(li)$(bold)Containers you placed break.$() Anything inside that belongs to someone else drops on the floor.$(br)$(li)You respawn"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " at world spawn with 10 hearts, an empty inventory and two hours of newcomer protection. Your skills, quests and capes stay.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What is yours",
+      "text": "An item becomes yours the first time it enters your inventory. That is the whole rule. It stays yours forever, even if you give it away, sell it or drop it. So:$(br2)$(li)Things a machine made and left in a chest belong to nobody until someone picks them up.$(br)$(li)Anything you crafted, mined, looted or picked up is yours.$(br)$(li)A gift stays the giver's. If the giver is eliminated, the gift vanishes too.$(br)$(li)Ownership is written on the item, so items owned by different people do not stack together. Sorting an inventory merges the ones that match."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Some things are never owned: Hearts, coins, the guide book, the quest book and obituaries.$(br2)Hover an item with advanced tooltips on (F3+H) to see whose it is."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The compasses",
+      "text": "Two compasses find your own items.$(br2)$(bold)Lost Item Compass$() points at your items lying on the ground. Right-click it: a list of everything of yours that is on the floor, anywhere in the world, opens. Pick one and the needle points to it, at any distance in the same dimension. In another dimension the needle spins.$(br2)$(bold)Made on$() - Mechanical crafters$(br)$(bold)From$() - A compass, 3 ender pearls, 4 polished rose quartz, a brass sheet"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Seeker's Compass$() does the same and has a switch: $(italic)only things on the ground$() or $(italic)anything$(). With $(italic)anything$() it also points at containers and players that hold the item you picked. It never says which it is pointing at, or whether the item sits in a chest or in someone's pocket. Go and find out.$(br2)$(bold)Made on$() - Mechanical crafters$(br)$(bold)From$() - A Lost Item Compass, a sculk sensor, 2 comparators, a precision mechanism$(br2)The compass follows the item as it moves. Once someone picks the item up, a Lost Item Compass loses it; a Seeker's Compass keeps following."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Rules against farming",
+      "text": "$(li)Hearts are conserved. Deaths move them, the recipe is the only source, Hitpoints regrows at most nine, and elimination puts the loser's last Heart on the ground like any other.$(br)$(li)The same killer gets one Heart per victim per 30 minutes.$(br)$(li)New and freshly eliminated players cannot lose hearts for two hours.$(br)$(li)Duplicated Hearts do not work: serial numbers.$(br)$(li)The server is whitelisted. Alt accounts are the admins' problem, and every heart that changes hands is logged."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Commands",
+      "text": "$(#b9a98a)Command - What it does$()$(br)$(bold)$(#e0ac46)/hearts$()$() - Your hearts and where they come from$(br)$(bold)$(#e0ac46)/revive <player>$()$() - Bring an eliminated player back with the Heart in your hand$(br)$(bold)`/lsp hearts get\\$() - set\\ - add <player> [n]` - Admin: read or change a player's stock$(br)$(bold)$(#e0ac46)/lsp lifesteal protect <player> <hours>$()$() - Admin: give newcomer protection$(br)$(bold)`/lsp lifesteal eliminate\\$() - revive <player>` - Admin: force or undo elimination$(br)$(bold)$(#e0ac46)/lsp lifesteal log [lines]$()$() - Admin: recent heart events$(br)$(bold)$(#e0ac46)/lsp"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " erase preview <player>$()$() - Admin: what an erasure would remove$(br)$(bold)$(#e0ac46)/lsp archive list$() and $(#e0ac46)/lsp restore ...$()$() - Admin: put erased blocks or items back"
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "warehouse"
+	group: "6C6400F8A74B6D9F"
+	icon: {
+		id: "create:item_vault"
+	}
+	id: "63FEC861DDE163DC"
+	images: [
+		{
+			height: 2.9872340425531916d
+			id: "77A6E082E3D8F1C8"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.4297872340425535d
+			x: 3.6d
+			y: -2.2d
+		}
+	]
+	order_index: 13
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:barrel"
+			}
+			id: "083571FE4041D397"
+			rewards: [
+				{
+					id: "2F0BD6E5B182293A"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "7D7EB4F066C5052E"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "03DE63D349240576"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "0BF716117A4024A3"
+					item: {
+						count: 1
+						id: "minecraft:barrel"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.4d
+		}
+		{
+			dependencies: ["083571FE4041D397"]
+			icon: {
+				id: "create:item_vault"
+			}
+			id: "5748E0251ECE4EF4"
+			rewards: [
+				{
+					id: "02BC0773C7E1A2B7"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "21B0C3D100C06CDE"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "465AFF0599980D0F"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0A3AFDBA21B3BE9F"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "62EF21B5497043C1"
+					item: {
+						count: 1
+						id: "create:item_vault"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 1.4d
+		}
+		{
+			dependencies: ["5748E0251ECE4EF4"]
+			icon: {
+				id: "create:attribute_filter"
+			}
+			id: "46FC8D8AB00730C1"
+			rewards: [
+				{
+					id: "690A216DBE4A374F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4EC89450923B3905"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "179B655702EEE17D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "2B0A03C1A8E14771"
+					item: {
+						count: 1
+						id: "create:brass_funnel"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6CABEA650733C8FF"
+					item: {
+						count: 1
+						id: "create:attribute_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["5748E0251ECE4EF4"]
+			icon: {
+				id: "create:chain_conveyor"
+			}
+			id: "7AE34ECD5192B505"
+			rewards: [
+				{
+					id: "3221E2B16F8AD7A5"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "6AA98CF1C5805A1E"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "50C41595B7E6A76D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "169EAAC6A54B7E4E"
+					item: {
+						count: 1
+						id: "create:chain_conveyor"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7AE34ECD5192B505"]
+			icon: {
+				id: "create:package_frogport"
+			}
+			id: "666BF0DC38E7BB31"
+			rewards: [
+				{
+					id: "465E3CE01A89594E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7C594FF975E0FFB7"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "342A2A2E4FD93FA9"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create:frogport"
+					criterion: ""
+					id: "4958CB042AC4CE80"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["46FC8D8AB00730C1"]
+			icon: {
+				id: "create:stock_link"
+			}
+			id: "39FA34D58D4C309C"
+			rewards: [
+				{
+					id: "49782D6741407183"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "3A76539110426D69"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "27ED57118B6F287C"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "0FF99B1A96C970E5"
+					item: {
+						count: 1
+						id: "create:stock_link"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["39FA34D58D4C309C"]
+			icon: {
+				id: "create:stock_ticker"
+			}
+			id: "290545096FD736F4"
+			rewards: [
+				{
+					id: "689324457845C122"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2132A9BBC5110BE4"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3DA2BE60A43CF402"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "create:stock_ticker"
+					criterion: ""
+					id: "46F69F224D7DAA9D"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 2.15d
+		}
+		{
+			dependencies: ["290545096FD736F4", "666BF0DC38E7BB31"]
+			icon: {
+				id: "create:redstone_requester"
+			}
+			id: "74EF13B51AC559BA"
+			rewards: [
+				{
+					id: "0A54CD66F7E9BFEF"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6F7C7ECF4827FF6C"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "27F8A9D0B16147EE"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4B873D9539FCAE63"
+					item: {
+						count: 1
+						id: "create:redstone_requester"
+					}
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 1.75d
+		}
+		{
+			dependencies: ["083571FE4041D397"]
+			icon: {
+				id: "sophisticatedbackpacks:compacting_upgrade"
+			}
+			id: "02B4AD1A491CBA19"
+			rewards: [
+				{
+					id: "0D0FE9FAEB874D56"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5F2534AA4B192424"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "27F3BBE262C839B5"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "69DF8DDEF9F92704"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1323BF5F2D0F208C"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:compacting_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 3.4d
+		}
+		{
+			dependencies: ["02B4AD1A491CBA19"]
+			icon: {
+				id: "createbackpackupgrades:pressing_upgrade"
+			}
+			id: "1AB513AC5DD0460B"
+			rewards: [
+				{
+					id: "1AEA8989CD5A7DE4"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "17E49C825609308F"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "7A452710CBA42B66"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "344CB7AFA4CA612B"
+					item: {
+						count: 1
+						id: "createbackpackupgrades:pressing_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "36B960B767078546"
+					item: {
+						count: 1
+						id: "createbackpackupgrades:mixing_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["1AB513AC5DD0460B"]
+			icon: {
+				id: "sophisticatedbackpacks:advanced_magnet_upgrade"
+			}
+			id: "42B96A72FF683253"
+			rewards: [
+				{
+					id: "64D40981DCE98D61"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "325CE0DFF930FE93"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "33AE7C2403191350"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "42CC11D960328B2A"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:advanced_magnet_upgrade"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 3.7d
+		}
+		{
+			dependencies: ["74EF13B51AC559BA", "42B96A72FF683253"]
+			icon: {
+				id: "create:item_vault"
+			}
+			id: "063009C0F246FCC2"
+			rewards: [
+				{
+					id: "4D9C1DEBA2C2D2C9"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "6DB92DDBC87528E8"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "5AE091BBA46D30C2"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:tank_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "2184D3D546C5EB51"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:everlasting_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "08FFDDBF596BCE0F"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:stack_upgrade_tier_1"
+					}
+					type: "item"
+				}
+				{
+					id: "1F25EA854EB337C8"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					count: 32L
+					id: "55CE7A6BA6A7931F"
+					item: {
+						count: 1
+						id: "create:item_vault"
+					}
+					type: "item"
+				}
+			]
+			x: 13.8d
+			y: 2.5d
+		}
+	]
+}

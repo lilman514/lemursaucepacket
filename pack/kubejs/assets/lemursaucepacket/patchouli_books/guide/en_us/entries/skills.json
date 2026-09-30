@@ -2,7 +2,7 @@
   "name": "Skills",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:experience_bottle",
-  "sortnum": 5,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",
@@ -41,7 +41,7 @@
     {
       "type": "patchouli:text",
       "title": "Where the numbers come from",
-      "text": "The curve, perks and requirements are generated from $(#e0ac46)skills/build.mjs$() in the pack's repository, so this table is the same as the game's."
+      "text": "The curve, perks and requirements are generated from $(#e0ac46)skills/build.mjs$() in the pack's repository, so this table is the same as the game's.$(br2)$(bold)Enchanting$() is the fourteenth skill: the enchanting table trains it, and it decides how far enchantments can go. Its own page, $(l:lemursaucepacket:enchanting)Enchanting$(/l), has the caps, the unlock levels and the Hardness tomes pickaxes need for harder blocks."
     }
   ]
 }

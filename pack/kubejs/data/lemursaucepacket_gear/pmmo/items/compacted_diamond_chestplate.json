@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:compacted_diamond_chestplate"
+  ],
   "requirements": {
     "WEAR": {
       "defence": 45

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "minecraft:reinforced_deepslate",
+      "required": false
+    },
+    {
+      "id": "minecraft:budding_amethyst",
+      "required": false
+    }
+  ]
+}

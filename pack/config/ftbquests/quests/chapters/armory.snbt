@@ -23,7 +23,7 @@
 			y: 1.9d
 		}
 	]
-	order_index: 13
+	order_index: 25
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [
@@ -36,7 +36,7 @@
 				{
 					id: "63BEE0F89C58F371"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "7B56C1C6BC71C7CB"
@@ -45,6 +45,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "76D5DDB958752666"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -66,15 +71,20 @@
 				{
 					id: "33A933FF8A4FCE0B"
 					type: "xp"
-					xp: 200
+					xp: 150
 				}
 				{
 					id: "4D36EE7E2E4D8158"
 					item: {
-						count: 2
+						count: 3
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "0651094191436586"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -100,15 +110,20 @@
 				{
 					id: "1CFC499B932132A9"
 					type: "xp"
-					xp: 200
+					xp: 150
 				}
 				{
 					id: "34EBFD174F47DCCD"
 					item: {
-						count: 2
+						count: 3
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "01F4D179D4F50F01"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -134,15 +149,20 @@
 				{
 					id: "7FCE6A2ED82A221D"
 					type: "xp"
-					xp: 300
+					xp: 400
 				}
 				{
-					id: "35E3778C9AC8C5A3"
+					id: "0B2934C6137CE1C1"
 					item: {
-						count: 3
-						id: "numismatics:sprocket"
+						count: 2
+						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "15FB0DC65C5C1FDB"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -168,15 +188,20 @@
 				{
 					id: "51EDE1D25111F8F7"
 					type: "xp"
-					xp: 200
+					xp: 150
 				}
 				{
 					id: "35A1FD1C54DF33B2"
 					item: {
-						count: 2
+						count: 3
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "26FAA804B01A2EE6"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -202,15 +227,20 @@
 				{
 					id: "1340FF7034C8DCAA"
 					type: "xp"
-					xp: 300
+					xp: 400
 				}
 				{
 					id: "01D4D7138B30EA3D"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "7404A137F6DEA310"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -236,15 +266,20 @@
 				{
 					id: "0357FB7D96E5EA69"
 					type: "xp"
-					xp: 200
+					xp: 150
 				}
 				{
 					id: "0E22B2EA1D14A40E"
 					item: {
-						count: 2
+						count: 3
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "37729AB90D5B7422"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -275,10 +310,15 @@
 				{
 					id: "25709CADDD7872CF"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "6EBC85D987235314"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -304,15 +344,20 @@
 				{
 					id: "27BABAA5AA83C0BA"
 					type: "xp"
-					xp: 600
+					xp: 1000
 				}
 				{
-					id: "2B87E3961861BC9F"
+					id: "71BF48B229A49E07"
 					item: {
-						count: 2
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
+				}
+				{
+					id: "4558D5BB83B206DB"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -338,7 +383,7 @@
 				{
 					id: "2986E914BB7365C3"
 					type: "xp"
-					xp: 150
+					xp: 60
 				}
 				{
 					id: "7C68CC8702BBA5CF"
@@ -355,6 +400,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "418A31D4DAB7120E"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -380,23 +430,20 @@
 				{
 					id: "5EDDD766C2DB3FED"
 					type: "xp"
-					xp: 500
+					xp: 400
 				}
 				{
 					id: "285EE363E0CE1415"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
 				}
 				{
-					id: "153AB06F1C7EBE01"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
+					id: "500B4EACCDCD3CD3"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -446,23 +493,20 @@
 				{
 					id: "6153DED4A7A7EABF"
 					type: "xp"
-					xp: 500
+					xp: 400
 				}
 				{
 					id: "08199E574C5AC87C"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
 				}
 				{
-					id: "552090D661DC3E7E"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
+					id: "5F91A20D080CCFDE"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -512,23 +556,20 @@
 				{
 					id: "4D3554FEDF81E886"
 					type: "xp"
-					xp: 800
+					xp: 1000
 				}
 				{
-					id: "32CB495F94617AB3"
+					id: "20F6A6045A1435B8"
 					item: {
-						count: 2
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
 				}
 				{
-					id: "6604E36FCAE6DA1E"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
+					id: "588B915A1E14AC59"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -578,7 +619,7 @@
 				{
 					id: "6F7F8F92FA5F4E59"
 					type: "xp"
-					xp: 200
+					xp: 150
 				}
 				{
 					id: "7F9E34B7210F9A8E"
@@ -587,6 +628,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "52289471EF360EA9"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -613,23 +659,20 @@
 				{
 					id: "5BB5A7E4601FEF4A"
 					type: "xp"
-					xp: 800
+					xp: 1000
 				}
 				{
-					id: "229DDB67073639ED"
+					id: "34FE8E9EF2F3FBA6"
 					item: {
-						count: 2
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
 				}
 				{
-					id: "4B13962A3D3DC2F6"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
+					id: "4FB62A398306B12C"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -679,7 +722,7 @@
 				{
 					id: "6F5DF8EC4D8AB476"
 					type: "xp"
-					xp: 2000
+					xp: 1000
 				}
 				{
 					id: "658E0A981A6D082B"
@@ -688,6 +731,29 @@
 						id: "numismatics:crown"
 					}
 					type: "item"
+				}
+				{
+					id: "06801133B2EEC8F0"
+					item: {
+						count: 1
+						id: "numismatics:sun"
+					}
+					type: "item"
+				}
+				{
+					id: "5578D6D633FA81C6"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "43CFE0CB83D3D093"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "711BE6174F945C06"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 				{
 					command: "lsp cape flag {p} chapter:armory"
@@ -746,15 +812,20 @@
 				{
 					id: "5D0790C0EE970A23"
 					type: "xp"
-					xp: 600
+					xp: 1000
 				}
 				{
-					id: "0B91784870FFB173"
+					id: "394E020A9245E52F"
 					item: {
-						count: 2
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
+				}
+				{
+					id: "7823CB1F1B5A5C5B"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 			]
 			tasks: [

@@ -1,0 +1,520 @@
+{
+	empty_weight: 0.0f
+	hide_tooltip: false
+	icon: {
+		id: "create:precision_mechanism"
+	}
+	id: "6BEF5404D318C66E"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{
+			id: "01297B7EB329E309"
+			table_id: 3944519194703180695L
+			type: "random"
+			weight: 4.0f
+		}
+		{
+			id: "337C7CDAC205D629"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:unbreaking": 3
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "71322D678D65AB30"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:efficiency": 4
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "3E008E5EB29DA402"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:protection": 4
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "4705C940C79DFD36"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:sharpness": 4
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "689D1013BEAEB005"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:mending": 1
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "196CF6D496D52C0B"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:fortune": 3
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "74C20B1F5377D73F"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:silk_touch": 1
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "4F2F0394C5EDCBB9"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:looting": 3
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "52203C367702A025"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:feather_falling": 4
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "5F1247231BB4ED60"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:power": 4
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "6B8EFA6D97430EEE"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:depth_strider": 3
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "5023A52706C202D1"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:fire_aspect": 2
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "496C0E90F9666F5A"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:infinity": 1
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "04B4A4DA259C927A"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"minecraft:respiration": 3
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "0329707D06AA2CB0"
+			item: {
+				components: {
+					"minecraft:stored_enchantments": {
+						levels: {
+							"lemursaucepacket:telekinesis": 1
+						}
+					}
+				}
+				count: 1
+				id: "minecraft:enchanted_book"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "2CB3752BB29D83DB"
+			item: {
+				count: 4
+				id: "waystones:warp_scroll"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "3E1B587A703F40BB"
+			item: {
+				count: 4
+				id: "waystones:return_scroll"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "3D515FDEE81B8C38"
+			item: {
+				count: 2
+				id: "waystones:portal_scroll"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "606B01B915C5D704"
+			item: {
+				count: 8
+				id: "create:precision_mechanism"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "10B2B31B3CF66A19"
+			item: {
+				count: 8
+				id: "create:sturdy_sheet"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "333F99E1070CA198"
+			item: {
+				count: 16
+				id: "create:brass_casing"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "17F42904423DE512"
+			item: {
+				count: 1
+				id: "create:mechanical_arm"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "5103716BCA26D998"
+			item: {
+				count: 2
+				id: "create:crushing_wheel"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "66E571CAE7FF114D"
+			item: {
+				count: 6
+				id: "minecraft:diamond"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "79BBC38DF9F7F1ED"
+			item: {
+				count: 2
+				id: "minecraft:netherite_scrap"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "718536B1A89C9A2C"
+			item: {
+				count: 4
+				id: "minecraft:golden_apple"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "7C868CB6A09E0FCC"
+			item: {
+				count: 16
+				id: "minecraft:experience_bottle"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "25B136B8DFE9B713"
+			item: {
+				count: 1
+				id: "minecraft:totem_of_undying"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "5106CAB9CD0D22EE"
+			item: {
+				count: 1
+				id: "create_enchantment_industry:experience_bucket"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "2560A21F5190D6AB"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:stack_upgrade_tier_1"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "4D3698E02BE4E596"
+			item: {
+				count: 1
+				id: "createbackpackupgrades:pressing_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "755F36C9AAF5F111"
+			item: {
+				count: 1
+				id: "createbackpackupgrades:mixing_upgrade"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "64FF826C6FCFC7E8"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:advanced_magnet_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "43270F6A96CEADA7"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:advanced_pickup_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "6E2DFC36B731D14B"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:advanced_feeding_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "249587C0E4A90A14"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:tank_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "1DD8E5AB14D47255"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:anvil_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "34053C462B98DD98"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:xp_pump_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "49DE8C87CFB4763E"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:everlasting_upgrade"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "493DD9BE43863CFF"
+			item: {
+				count: 1
+				id: "lemursaucepacket:lumber_axe"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "20C05AAFC134B87B"
+			item: {
+				count: 1
+				id: "lemursaucepacket:prospectors_pickaxe"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "7EF67C6CF8768CDB"
+			item: {
+				count: 1
+				id: "lemursaucepacket:harvesters_scythe"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "2CE9A8848DED064B"
+			item: {
+				count: 1
+				id: "lemursaucepacket:brass_sabre"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+		{
+			id: "09E34DAC443C041C"
+			item: {
+				count: 1
+				id: "lemursaucepacket:anglers_cap"
+			}
+			type: "item"
+			weight: 1.0f
+		}
+	]
+	use_title: true
+}

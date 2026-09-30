@@ -1,0 +1,30 @@
+{
+  "_comment": "Hearts, graves and elimination (docs/lifesteal.md). Read by kubejs/server_scripts/lifesteal.js at server start; /reload re-reads it. The erasure itself is the lsp_fixes mod (config/lsp_fixes-common.toml).",
+  "enabled": true,
+  "startingHearts": 10,
+  "maxBonusHearts": 10,
+  "hitpointsHpPerLevel": 0.2,
+  "sameKillerCooldownMinutes": 30,
+  "newcomerProtectionHours": 2,
+  "protectionEndsOnAttack": true,
+  "heartPickupDelayTicks": 40,
+  "warnAtHearts": [3, 2, 1],
+  "broadcastHeartEvents": true,
+  "ownership": {
+    "enabled": true,
+    "scanEverySeconds": 5,
+    "ownerless": [
+      "lemursaucepacket:heart",
+      "lemursaucepacket:incomplete_heart",
+      "gravestone:obituary",
+      "patchouli:guide_book",
+      "ftbquests:book",
+      "numismatics:spur",
+      "numismatics:bevel",
+      "numismatics:sprocket",
+      "numismatics:cog",
+      "numismatics:crown",
+      "numismatics:sun"
+    ]
+  }
+}

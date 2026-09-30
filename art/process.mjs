@@ -23,6 +23,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import { buildItems } from './items.mjs'
+import { DESIGNS as CAPE_DESIGNS, renderCape } from './capes-px.mjs'
 import { BOARD, PANELS, PLAQUE, hubLayoutJson, writePauseLayout } from './hub.mjs'
 import { STYLE, board, checkbox, panel, plate, plateTile, pmmoAtlas, rowPlate, scroller, scrollerBackground, separator, sliderHandle, tab, textField } from './pixel-kit.mjs'
 
@@ -544,6 +545,13 @@ async function capes() {
   }
   let count = 0
   for (const [i, cape] of CAPES.entries()) {
+    // Static capes are woven cloth drawn at the native 64x32 (art/capes-px.mjs); only the animated legendary capes
+    // use the painted sheets.
+    if (!cape.animated && CAPE_DESIGNS[cape.id]) {
+      await sharp(renderCape(cape.id), { raw: { width: 64, height: 32, channels: 4 } }).png({ compressionLevel: 9 }).toFile(target(`${CAPE_TEXTURES}/${cape.id}.png`))
+      count++
+      continue
+    }
     const front = fronts[i]
     if (!front) {
       console.log(`capes: no art for ${cape.id}, skipped`)

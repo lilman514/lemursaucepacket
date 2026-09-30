@@ -14,8 +14,8 @@
 			image: "lemursaucepacket:textures/quests/crown_of_fire.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: 0.35d
-			y: -2.0d
+			x: 4.15d
+			y: 3.7d
 		}
 		{
 			height: 2.527659574468085d
@@ -28,8 +28,8 @@
 			text_shadow: true
 			text_v_align: "start"
 			width: 5.770212765957447d
-			x: 4.1d
-			y: -2.0d
+			x: 7.9d
+			y: 3.7d
 		}
 	]
 	order_index: 6
@@ -45,15 +45,28 @@
 				{
 					id: "58A7210FFD209637"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "16C11472ACF767EE"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "498B7005D92A3FC5"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "425A158A1C374F35"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -64,7 +77,7 @@
 				}
 			]
 			x: 0.0d
-			y: 1.45d
+			y: 2.9d
 		}
 		{
 			dependencies: ["29458506A5E19077"]
@@ -76,15 +89,28 @@
 				{
 					id: "06B75880DE63CD9F"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "2F16736E694A76C1"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "244F22DA0B08A7E8"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "318B17FD61E07DC1"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -99,7 +125,7 @@
 				}
 			]
 			x: 2.3d
-			y: 0.55d
+			y: 0.5d
 		}
 		{
 			dependencies: ["29458506A5E19077"]
@@ -111,7 +137,7 @@
 				{
 					id: "07C801A66F229B2C"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "7B84CABD3E346907"
@@ -120,6 +146,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "785D92C00D47F8AE"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -131,7 +162,89 @@
 				}
 			]
 			x: 2.3d
-			y: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["29458506A5E19077"]
+			icon: {
+				id: "friendsandfoes:wildfire_crown_fragment"
+			}
+			id: "63292C21DCEF25B1"
+			rewards: [
+				{
+					id: "3875852EBCACEE05"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5657B1BF7D71E912"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "42271111438E04BC"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "friendsandfoes:nether/find_citadel"
+					criterion: ""
+					id: "3F44F660DAB99D4E"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
+			dependencies: ["29458506A5E19077"]
+			icon: {
+				id: "minecraft:respawn_anchor"
+			}
+			id: "3ECBA42CB865A41B"
+			rewards: [
+				{
+					id: "393E892B2C443801"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "44F5BD27182DC5BD"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "274EA378B70B617B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "03EB550601BC5079"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:nether/charge_respawn_anchor"
+					criterion: ""
+					id: "1E4B43D0D9822D52"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 5.3d
 		}
 		{
 			icon: {
@@ -142,15 +255,28 @@
 				{
 					id: "556D056B05E86971"
 					type: "xp"
-					xp: 42
+					xp: 60
 				}
 				{
 					id: "467D5EC292FC3907"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "5201029F306843C5"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "32D767C6DE4843AA"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -162,7 +288,44 @@
 				}
 			]
 			x: 0.0d
-			y: 4.2d
+			y: 7.7d
+		}
+		{
+			dependencies: ["476FF9B28A244051"]
+			icon: {
+				id: "piglinproliferation:travelers_compass"
+			}
+			id: "0793E407D6345B0B"
+			rewards: [
+				{
+					id: "7AD7EC0C58ECB02D"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "611AF3E3F8BDF79D"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "32BAF6BD698AD314"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "piglinproliferation:nether/obtain_travelers_compass"
+					criterion: ""
+					id: "7F3ABDBC2174CFBE"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 8.5d
 		}
 		{
 			dependencies: ["476FF9B28A244051"]
@@ -174,7 +337,7 @@
 				{
 					id: "0BED7F79ADC926B5"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "07C86CF3F86E4334"
@@ -183,6 +346,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "16B9BAB9E3D6EB33"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -193,7 +361,7 @@
 				}
 			]
 			x: 2.3d
-			y: 4.2d
+			y: 6.9d
 		}
 		{
 			dependencies: ["4D3553C972D58E45"]
@@ -205,7 +373,7 @@
 				{
 					id: "3EDB8AE92C6AEC87"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "1D2C75A719637620"
@@ -214,6 +382,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "3C186EA61C96913E"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -228,7 +401,7 @@
 				}
 			]
 			x: 4.6d
-			y: 0.5d
+			y: 0.55d
 		}
 		{
 			dependencies: ["62EBB75D9A0BBFDF"]
@@ -240,7 +413,7 @@
 				{
 					id: "5B782CC21BC0AA5C"
 					type: "xp"
-					xp: 138
+					xp: 400
 				}
 				{
 					id: "7A794F33677A0E52"
@@ -249,6 +422,19 @@
 						id: "numismatics:cog"
 					}
 					type: "item"
+				}
+				{
+					id: "4D138FEC23F31BBC"
+					item: {
+						count: 1
+						id: "minecraft:netherite_upgrade_smithing_template"
+					}
+					type: "item"
+				}
+				{
+					id: "5C7A6057754CC933"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -262,10 +448,10 @@
 				}
 			]
 			x: 4.6d
-			y: 4.2d
+			y: 6.9d
 		}
 		{
-			dependencies: ["014760E2F2483D38"]
+			dependencies: ["014760E2F2483D38", "466572392C9CC5AE"]
 			icon: {
 				id: "minecraft:nether_star"
 			}
@@ -274,15 +460,28 @@
 				{
 					id: "3441A806632D5709"
 					type: "xp"
-					xp: 798
+					xp: 1000
 				}
 				{
-					id: "35511EC35495357E"
+					id: "052EA226DDD5FACC"
 					item: {
-						count: 4
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
+				}
+				{
+					id: "05931E88FB23D306"
+					item: {
+						count: 2
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "450F7C8D9850CB4C"
+					table_id: 1080448268447668683L
+					type: "random"
 				}
 				{
 					command: "lsp cape flag {p} chapter:crown_of_fire"
@@ -302,8 +501,8 @@
 					value: 1L
 				}
 			]
-			x: 4.6d
-			y: 2.35d
+			x: 6.9d
+			y: 1.3d
 		}
 	]
 }

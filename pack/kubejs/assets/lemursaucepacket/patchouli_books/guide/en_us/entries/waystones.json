@@ -1,0 +1,52 @@
+{
+  "name": "Waystones",
+  "category": "lemursaucepacket:wiki",
+  "icon": "waystones:waystone",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Waystones are standing stones you can warp between. Right-click one to activate it. From then on you can warp to it from any other waystone, or with a warp stone or a scroll."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where to find them",
+      "text": "$(li)$(bold)Villages.$() Towns and Towers villages have one in the square. Some vanilla villages have one too.$(br)$(li)$(bold)Towers and shrines.$() On top of the tall Towers of the Wild towers, on some of Structory's towers and outposts, and at Dungeons and Taverns shrines.$(br)$(li)$(bold)The wild.$() Now and then one stands alone, a few hundred blocks from the next at the closest. Its look follows the biome: sandy in deserts, mossy in jungles and swamps, blackstone in the Nether and on volcanoes, end stone in the End."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Waystones you've activated show on your minimap and world map, with their names. So do global waystones and sharestones. Ones you haven't found yet don't."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Taking one home",
+      "text": "$(li)$(bold)Found waystones can be taken.$() Mine one with a pickaxe and it drops as an item.$(br)$(li)With $(bold)Silk Touch$() it keeps its name, and everyone who activated it can still warp to it. Without, it becomes a fresh waystone of your own.$(br)$(li)$(bold)Restyle$() any waystone on a crafting table: the waystone plus 3 of a style's stone (stone bricks, mossy stone bricks, chiseled sandstone, deepslate, blackstone, end stone bricks, red nether bricks, purpur, prismarine or mud bricks).$(br)$(li)There are no claims. Anyone can take your waystone too, so keep it where you can watch it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Building one",
+      "text": "It's meant to be hard. Everything starts with $(bold)warp dust$(): an ender pearl and an amethyst shard in a basin, mixed over a blaze burner, make 4. The stones need mechanical crafters."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Item - Made on - From$()$(br)$(bold)Warp stone$() - Mechanical crafters - A precision mechanism, 4 warp dust, 4 amethyst shards$(br)$(bold)Waystone$() - Mechanical crafters - A warp stone, a precision mechanism, a brass casing, 2 sturdy sheets, an eye of ender, 4 of the style's stone$(br)$(bold)Sharestone$() - Mechanical crafters - A warp stone, a precision mechanism, 2 sturdy sheets, 2 dye, 3 stone bricks$(br)$(bold)Portstone$() - Mechanical crafters - A warp stone, 3 andesite casings, 2 dye, 3 stone bricks$(br)$(bold)Warp plate$() - Mechanical crafters - A dormant shard, a precision mechanism, 3 warp "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "dust, 4 stone bricks$(br)$(bold)Dormant shard$() - Basin and press - 2 warp dust, flint$(br)$(bold)Scrolls$() - Crafting table - Warp dust, brass nuggets and paper (warp scrolls add ink)$(br2)JEI (R on an item) shows every recipe."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Travelling",
+      "text": "$(#b9a98a)Use - Takes you to - Costs$()$(br)$(bold)A waystone$() - Any waystone you've activated - A few XP points: 1 per 100 blocks, 27 at most (27 to another dimension)$(br)$(bold)Warp stone (hold right-click)$() - Any waystone you've activated - The same XP. It lasts 128 jumps$(br)$(bold)Warp scroll$() - Any waystone you've activated - Nothing; the scroll is used up$(br)$(bold)Return scroll$() - Your nearest activated waystone - Nothing; used up$(br)$(bold)Bound scroll (a blank scroll used on a waystone)$() - That waystone, for whoever holds it - Nothing; used up$(br)$(bold)Portal scroll$() - Opens a portal to"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " a waystone that others can step through too - Nothing; used up$(br)$(bold)Sharestone$() - Any sharestone of the same colour - Like a waystone$(br)$(bold)Portstone$() - Any waystone you've activated. Nothing can warp to a portstone - Like a waystone$(br)$(bold)Warp plate$() - The plate it's paired with (pair two with an attuned shard) - Nothing$(br)$(bold)Twinbound feather$() - A friend whose feather you linked with yours - -$(br)$(bold)Epitaph$() - Carry one when you die, and you can warp back to where you fell, once - Nothing"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Global waystones (an admin sets them) show for everyone and cost nothing to warp to.$(br2)A warp takes you and any animal on your lead, not freight. Trains and airships still carry the goods."
+    }
+  ]
+}

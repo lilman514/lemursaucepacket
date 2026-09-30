@@ -14,7 +14,7 @@
 			image: "lemursaucepacket:textures/quests/blank.png"
 			rotation: 0.0d
 			width: 0.1d
-			x: 3.8d
+			x: 4.0d
 			y: -3.35d
 		}
 		{
@@ -23,8 +23,8 @@
 			image: "lemursaucepacket:textures/quests/backpack_workshop.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: 1.05d
-			y: -1.7d
+			x: 1.25d
+			y: -1.6d
 		}
 		{
 			height: 2.7574468085106383d
@@ -37,11 +37,11 @@
 			text_shadow: true
 			text_v_align: "start"
 			width: 5.948936170212766d
-			x: 4.85d
-			y: -1.7d
+			x: 5.05d
+			y: -1.6d
 		}
 	]
-	order_index: 8
+	order_index: 20
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [
@@ -54,15 +54,20 @@
 				{
 					id: "0E98F203B2112E9E"
 					type: "xp"
-					xp: 14
+					xp: 25
 				}
 				{
-					id: "0664A7B583EB8FE4"
+					id: "30B2921B71CAB332"
 					item: {
-						count: 4
-						id: "numismatics:spur"
+						count: 1
+						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "14DF7FD91F098BED"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -72,7 +77,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.45d
+			y: 2.65d
 		}
 		{
 			dependencies: ["77AE5D8ABD348621"]
@@ -84,7 +89,7 @@
 				{
 					id: "392A35817DF61F8D"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "7B85893130883BB1"
@@ -93,6 +98,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "68610853DD5A7108"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -106,7 +116,7 @@
 				}
 			]
 			x: 2.3d
-			y: 2.45d
+			y: 2.65d
 		}
 		{
 			dependencies: ["770F2006133B6115"]
@@ -118,7 +128,7 @@
 				{
 					id: "7C16377D02EF365E"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "1EC9DB2670BF867A"
@@ -127,6 +137,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "17543D850974CF24"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0FE8BB42AB80FA4D"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -140,7 +163,7 @@
 				}
 			]
 			x: 4.6d
-			y: 1.15d
+			y: 1.3d
 		}
 		{
 			dependencies: ["06B6B5C52AB737B3"]
@@ -152,7 +175,7 @@
 				{
 					id: "0A42F924E0C727F3"
 					type: "xp"
-					xp: 34
+					xp: 60
 				}
 				{
 					id: "499303D8465706CC"
@@ -170,6 +193,11 @@
 					}
 					type: "item"
 				}
+				{
+					id: "1909C0CDFAC0B043"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
 			]
 			tasks: [
 				{
@@ -182,7 +210,7 @@
 				}
 			]
 			x: 6.9d
-			y: 0.5d
+			y: 0.7d
 		}
 		{
 			dependencies: ["007E391695FCA435"]
@@ -194,7 +222,7 @@
 				{
 					id: "09BFB6A9630C30C7"
 					type: "xp"
-					xp: 58
+					xp: 150
 				}
 				{
 					id: "50D25F4373503CAA"
@@ -203,6 +231,11 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "52629D059865A357"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -216,7 +249,7 @@
 				}
 			]
 			x: 9.2d
-			y: 0.95d
+			y: 1.15d
 		}
 		{
 			dependencies: ["206401FD17FA8617"]
@@ -228,23 +261,20 @@
 				{
 					id: "7AF926BBD5065525"
 					type: "xp"
-					xp: 106
+					xp: 400
 				}
 				{
 					id: "2B59367B6D75BCE4"
 					item: {
-						count: 1
+						count: 2
 						id: "numismatics:cog"
 					}
 					type: "item"
 				}
 				{
-					id: "59C4EBBEF31E6680"
-					item: {
-						count: 2
-						id: "numismatics:sprocket"
-					}
-					type: "item"
+					id: "2B2286A864016532"
+					table_id: 7777527461190354542L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -258,7 +288,7 @@
 				}
 			]
 			x: 11.5d
-			y: 0.55d
+			y: 0.75d
 		}
 		{
 			dependencies: ["4751EE190720FC94"]
@@ -270,17 +300,40 @@
 				{
 					id: "4EE2B093AA8AC4D1"
 					type: "xp"
-					xp: 138
+					xp: 1000
 				}
 				{
-					id: "0A449A62438E9A62"
+					id: "4C67DBBFE698A73A"
 					item: {
-						count: 2
-						id: "numismatics:cog"
+						count: 1
+						id: "numismatics:crown"
 					}
 					type: "item"
 				}
+				{
+					id: "06FAD1C485B494E4"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:advanced_pickup_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "287FC1F163CF8AFC"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:stack_upgrade_tier_2"
+					}
+					type: "item"
+				}
+				{
+					id: "60A904AF2A0C93B4"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
 			]
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
 					id: "5400CC023D5DE0E3"
@@ -292,7 +345,7 @@
 				}
 			]
 			x: 13.8d
-			y: 0.55d
+			y: 0.75d
 		}
 		{
 			dependencies: ["770F2006133B6115"]
@@ -304,7 +357,7 @@
 				{
 					id: "448F396D3752C824"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "2D950448B256CA5B"
@@ -313,6 +366,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "6AA303F3289F72C4"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -327,7 +385,7 @@
 				}
 			]
 			x: 4.6d
-			y: 3.55d
+			y: 3.75d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -339,7 +397,7 @@
 				{
 					id: "6CF5016E34B93098"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "387648E5D8C53B64"
@@ -348,6 +406,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "7AA16589197E9815"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "10D46ACFF218B662"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -369,7 +440,7 @@
 				}
 			]
 			x: 6.9d
-			y: 2.1d
+			y: 2.3d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -381,7 +452,7 @@
 				{
 					id: "3FA32A6C3C95B1B1"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "62B3BB5470AD9651"
@@ -390,6 +461,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "177D9D165431308A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "2DE266EFEF8D670B"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -411,7 +495,7 @@
 				}
 			]
 			x: 6.9d
-			y: 5.35d
+			y: 5.55d
 		}
 		{
 			dependencies: ["36C5744F5C805AE7"]
@@ -423,7 +507,7 @@
 				{
 					id: "24DA289BCDE120B9"
 					type: "xp"
-					xp: 34
+					xp: 60
 				}
 				{
 					id: "2CB2855B6DD86607"
@@ -441,6 +525,11 @@
 					}
 					type: "item"
 				}
+				{
+					id: "60D576BF823FD1AE"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
 			]
 			tasks: [
 				{
@@ -453,7 +542,7 @@
 				}
 			]
 			x: 6.9d
-			y: 3.7d
+			y: 3.9d
 		}
 		{
 			dependencies: ["540CA46A64AD3156", "206401FD17FA8617"]
@@ -465,15 +554,20 @@
 				{
 					id: "44E1E8F6C0689439"
 					type: "xp"
-					xp: 74
+					xp: 150
 				}
 				{
-					id: "6BFBCC09055D13BA"
+					id: "2D1A635D5B8836EE"
 					item: {
-						count: 1
-						id: "numismatics:cog"
+						count: 3
+						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "7AE8EEE85CB1268F"
+					table_id: 3642704314676522423L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -487,7 +581,7 @@
 				}
 			]
 			x: 11.5d
-			y: 2.15d
+			y: 2.35d
 		}
 	]
 }

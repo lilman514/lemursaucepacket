@@ -1,0 +1,139 @@
+{
+	empty_weight: 0.0f
+	hide_tooltip: false
+	icon: {
+		id: "minecraft:bread"
+	}
+	id: "2C8C5F0D4AB1755F"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			id: "77F095948230D39E"
+			item: {
+				count: 6
+				id: "minecraft:iron_ingot"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "4D717FCA4181219E"
+			item: {
+				count: 8
+				id: "minecraft:copper_ingot"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "511FAE3447C0D5E3"
+			item: {
+				count: 8
+				id: "create:andesite_alloy"
+			}
+			type: "item"
+			weight: 5.0f
+		}
+		{
+			id: "389079BB923532D0"
+			item: {
+				count: 32
+				id: "minecraft:torch"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "35C7CDF64E8337EB"
+			item: {
+				count: 8
+				id: "minecraft:bread"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "54998D1EF4FF2869"
+			item: {
+				count: 16
+				id: "minecraft:coal"
+			}
+			type: "item"
+			weight: 4.0f
+		}
+		{
+			id: "50FEB85CA3A1F6BD"
+			item: {
+				count: 6
+				id: "minecraft:cooked_beef"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "78B419D352865CBD"
+			item: {
+				count: 16
+				id: "minecraft:arrow"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "3E9539DF641C9DC5"
+			item: {
+				count: 16
+				id: "minecraft:bone_meal"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "4BE7781EBC5886B4"
+			item: {
+				count: 3
+				id: "create:builders_tea"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "54C5EB2D16417F05"
+			item: {
+				count: 4
+				id: "minecraft:leather"
+			}
+			type: "item"
+			weight: 3.0f
+		}
+		{
+			id: "694DDCE21E21F026"
+			item: {
+				count: 8
+				id: "minecraft:string"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "73CC5DAFEA71ED99"
+			item: {
+				count: 4
+				id: "minecraft:lantern"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+		{
+			id: "0D70B731308076E4"
+			item: {
+				count: 4
+				id: "create:experience_nugget"
+			}
+			type: "item"
+			weight: 2.0f
+		}
+	]
+	use_title: true
+}

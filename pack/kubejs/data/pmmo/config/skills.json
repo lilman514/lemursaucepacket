@@ -72,6 +72,12 @@
       "iconSize": 64,
       "maxLevel": 99
     },
+    "enchanting": {
+      "color": 14724166,
+      "icon": "lemursaucepacket:textures/skills/enchanting.png",
+      "iconSize": 64,
+      "maxLevel": 99
+    },
     "agility": {
       "color": 7321576,
       "icon": "lemursaucepacket:textures/skills/agility.png",
@@ -107,7 +113,8 @@
       "skills": [
         "cooking",
         "smithing",
-        "crafting"
+        "crafting",
+        "enchanting"
       ]
     },
     "support": {

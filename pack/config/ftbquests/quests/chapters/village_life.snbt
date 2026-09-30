@@ -1,0 +1,494 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "village_life"
+	group: "05D7205A6D5637F0"
+	icon: {
+		id: "minecraft:bell"
+	}
+	id: "62061ACB481080FE"
+	images: [
+		{
+			height: 2.7574468085106383d
+			id: "6DB24E9612F2C4E6"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.251063829787234d
+			x: 2.6d
+			y: -2.1d
+		}
+	]
+	order_index: 18
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:emerald"
+			}
+			id: "11D71DE5261BB478"
+			rewards: [
+				{
+					id: "1794F622D0DE0050"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "03BE9CB06090271B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "512336E8263E9452"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/trade"
+					criterion: ""
+					id: "63100543D1C4DC47"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 2.1d
+		}
+		{
+			dependencies: ["11D71DE5261BB478"]
+			icon: {
+				id: "minecraft:oak_door"
+			}
+			id: "21A0CC253DD0308B"
+			rewards: [
+				{
+					id: "677563B0617AF70D"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5D3B9861685BAD09"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0C2C406847F6408D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7AAE45A3EA78E6B8"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "030880317F90EBA4"
+					structure: "#towns_and_towers:town"
+					type: "structure"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
+			dependencies: ["11D71DE5261BB478"]
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "41746E87B2384670"
+			rewards: [
+				{
+					id: "4641651ECC75504B"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "072F76958B354BD7"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "26660E1AFB441D5C"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3EBD5CDE9E0CD1AE"
+					item: {
+						count: 1
+						id: "minecraft:bell"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 0.5d
+		}
+		{
+			dependencies: ["41746E87B2384670"]
+			icon: {
+				id: "minecraft:carved_pumpkin"
+			}
+			id: "07510B667842E7BD"
+			rewards: [
+				{
+					id: "1A20D7F3926A15D4"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "3DD367B2F28D65E8"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5A72E6D02852772E"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4D7F8257B349F0E1"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/summon_iron_golem"
+					criterion: ""
+					id: "70E0F76D94E09C2D"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["07510B667842E7BD"]
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "6613015F3DD6B729"
+			rewards: [
+				{
+					id: "3C0984F8DE72AAEB"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "629171383926F9EF"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3622A055406221B2"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6EA6A7BC4EFE5531"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "33634A53079CC8AC"
+					type: "checkmark"
+				}
+			]
+			x: 6.9d
+			y: 0.7d
+		}
+		{
+			dependencies: ["11D71DE5261BB478"]
+			icon: {
+				id: "minecraft:emerald_block"
+			}
+			id: "533DA8C99EA63644"
+			rewards: [
+				{
+					id: "3ED91C1F1BAF3885"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "50A85CB5C88C8363"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "56462A52095CFB9E"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "07271464465CC822"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "6E653593C9A032A9"
+					item: {
+						count: 1
+						id: "minecraft:emerald_block"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["533DA8C99EA63644"]
+			icon: {
+				id: "minecraft:golden_apple"
+			}
+			id: "2B7D71803A7155D2"
+			rewards: [
+				{
+					id: "16E1FEC3551BEAD3"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "45A212C1C28CCD63"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "401477BB88F3CBE3"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/cure_zombie_villager"
+					criterion: ""
+					id: "4C8A68F1BF4EAC05"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["21A0CC253DD0308B"]
+			icon: {
+				id: "minecraft:cobblestone_wall"
+			}
+			id: "1ACDD26BF1A34020"
+			rewards: [
+				{
+					id: "6368DB6BCE108F41"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2281D253B87CBF9A"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "19EF31B6CFFFFBB0"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2674C30478E93AB2"
+					structure: "#terralith:fortified_villages"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["6613015F3DD6B729"]
+			icon: {
+				components: {
+					"minecraft:banner_patterns": [
+						{
+							color: "cyan"
+							pattern: "minecraft:rhombus"
+						}
+						{
+							color: "light_gray"
+							pattern: "minecraft:stripe_bottom"
+						}
+						{
+							color: "gray"
+							pattern: "minecraft:stripe_center"
+						}
+						{
+							color: "light_gray"
+							pattern: "minecraft:border"
+						}
+						{
+							color: "black"
+							pattern: "minecraft:stripe_middle"
+						}
+						{
+							color: "light_gray"
+							pattern: "minecraft:half_horizontal"
+						}
+						{
+							color: "light_gray"
+							pattern: "minecraft:circle"
+						}
+						{
+							color: "black"
+							pattern: "minecraft:border"
+						}
+					]
+					"minecraft:hide_additional_tooltip": { }
+					"minecraft:item_name": "{\"translate\":\"block.minecraft.ominous_banner\"}"
+				}
+				id: "minecraft:white_banner"
+			}
+			id: "1150C8B0F02787C0"
+			rewards: [
+				{
+					id: "074EA18026DB1733"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "7672D934A2A1B004"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "5EF67B283B1D8557"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "1549630F5CE3914D"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/voluntary_exile"
+					criterion: ""
+					id: "10F3C19DA33C4079"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 0.9d
+		}
+		{
+			dependencies: ["1150C8B0F02787C0", "2B7D71803A7155D2", "1ACDD26BF1A34020"]
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "4C3333A2BF4F5D7E"
+			rewards: [
+				{
+					id: "3E2181183EC3B55C"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "482E7C74AB22499E"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "12C17AC4EFCF9008"
+					item: {
+						count: 4
+						id: "minecraft:emerald_block"
+					}
+					type: "item"
+				}
+				{
+					id: "160CADBF656E66A1"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "1AB0288C3A5B1CDA"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "50DF782369180329"
+					type: "advancement"
+				}
+			]
+			x: 11.5d
+			y: 2.1d
+		}
+	]
+}

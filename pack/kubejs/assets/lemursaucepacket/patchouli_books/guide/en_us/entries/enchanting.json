@@ -1,0 +1,88 @@
+{
+  "name": "Enchanting",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:paper",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Enchanting is its own skill. The enchanting table trains it, and the skill decides how far every enchantment can go: most enchantments now reach level 10, one step at a time as your Enchanting level rises."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How it works",
+      "text": "$(li)$(bold)Training it:$() enchanting an item or a book at the table gives Enchanting XP (more for higher-level enchantments); so does using a book at the anvil.$(br)$(li)$(bold)Bigger tables:$() the third slot of the table scales with your level, from the usual 30 up to 150 at Enchanting 99. Higher levels of an enchantment only appear once the table can reach their cost, and they cost more XP.$(br)$(li)$(bold)Past vanilla max:$() the table rolls it, or two equal books or items combine at the anvil, as long as your Enchanting level allows the result. Chests, fishing and villagers only give vanilla levels.$(br)$("
+    },
+    {
+      "type": "patchouli:text",
+      "text": "li)$(bold)Above your level:$() an item enchanted past what you have unlocked does no damage, breaks no blocks and slows you while worn. Level up, and it works."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Caps and unlocks",
+      "text": "Allowed level = vanilla max + a share of the extra levels that grows with your Enchanting level, so every enchantment reaches its cap at 99."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Enchantment - Vanilla - Cap - Unlocks at Enchanting - Effect per level$()$(br)$(bold)Sharpness$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +0.5 damage per level above I$(br)$(bold)Smite$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +2.5 damage per level to undead$(br)$(bold)Bane Of Arthropods$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +2.5 damage per level to arthropods$(br)$(bold)Impaling$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +2.5 damage per level to sea creatures$(br)$(bold)Power$() - V - X - VI at 20, VII at "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "40, VIII at 60, IX at 80, X at 99 - +0.5 arrow damage per level$(br)$(bold)Density$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +0.5 mace damage per block fallen, per level$(br)$(bold)Breach$() - IV - VI - V at 50, VI at 99 - -15% armour effectiveness per level (armour is ignored at VI)$(br)$(bold)Wind Burst$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - stronger launch after each smash$(br)$(bold)Fire Aspect$() - II - X - III at 13, IV at 25, V at 38, VI at 50, VII at 62, VIII at 75, IX at 87, X at 99 - burns 4 s per level$(br)$(bold)Knockback$() - II "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "- X - III at 13, IV at 25, V at 38, VI at 50, VII at 62, VIII at 75, IX at 87, X at 99 - +1 knockback per level$(br)$(bold)Punch$() - II - X - III at 13, IV at 25, V at 38, VI at 50, VII at 62, VIII at 75, IX at 87, X at 99 - +1 arrow knockback per level$(br)$(bold)Sweeping Edge$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - sweep does level/(level+1) of the hit$(br)$(bold)Looting$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - more mob drops per level$(br)$(bold)Efficiency$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 9"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "9 - mining speed +level²+1$(br)$(bold)Unbreaking$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - tools last (level+1)x$(br)$(bold)Fortune$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - more ore per level (about 5.6x at X)$(br)$(bold)Luck Of The Sea$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - +1 fishing luck per level$(br)$(bold)Lure$() - III - V - IV at 50, V at 99 - fish bite 5 s sooner per level (VI would never bite)$(br)$(bold)Protection$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 6"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "6, IX at 83, X at 99 - +1 protection point per level (all protection together caps at 20 = 80%)$(br)$(bold)Fire Protection$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - +2 fire protection per level, shorter burns$(br)$(bold)Blast Protection$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - +2 blast protection per level$(br)$(bold)Projectile Protection$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - +2 projectile protection per level$(br)$(bold)Feather Falling$() - IV - VII - V at 33, VI at 66, VII at 99 - +3 fall protection per le"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "vel (80% at VII)$(br)$(bold)Thorns$() - III - VII - IV at 25, V at 50, VI at 75, VII at 99 - 15% per level to hurt attackers (always at VII)$(br)$(bold)Respiration$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - breath lasts (level+1)x$(br)$(bold)Soul Speed$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - faster on soul sand per level$(br)$(bold)Swift Sneak$() - III - V - IV at 50, V at 99 - +15% sneak speed per level (full speed at V)$(br)$(bold)Frost Walker$() - II - X - III at 13, IV at 25, V at 38, VI at 50, VII at 62, VIII at 75, IX"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " at 87, X at 99 - freezes a wider circle per level$(br)$(bold)Loyalty$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - returns faster per level$(br)$(bold)Riptide$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - launches further per level$(br)$(bold)Piercing$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - passes through one more target per level$(br)$(bold)Quick Charge$() - III - V - IV at 50, V at 99 - -0.25 s charge per level (instant at V)$(br)$(bold)Capacity$() - III - X - IV at 15, V at 29, VI at 43, VII a"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "t 57, VIII at 71, IX at 85, X at 99 - more backtank air per level$(br)$(bold)Potato Recovery$() - III - VII - IV at 25, V at 50, VI at 75, VII at 99 - +12.5% ammo recovery per level (always at VII)$(br)$(bold)Backstabbing$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - backstabs deal +20% per level$(br)$(bold)Enchantment Luck$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - +1 luck per level$(br)$(bold)Illagers Bane$() - V - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +2.5 damage per level to illagers$(br)$(bold)Power$() - V"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " - X - VI at 20, VII at 40, VIII at 60, IX at 80, X at 99 - +0.5 bolt damage per level$(br)$(bold)Piercing$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - arrows pass through one more target per level$(br)$(bold)Outreach$() - IV - X - V at 17, VI at 33, VII at 50, VIII at 66, IX at 83, X at 99 - +0.5 block reach per level$(br)$(bold)Traveler$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - higher steps and faster sprints per level$(br)$(bold)Purification$() - III - X - IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 - cleanses"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " poison and wither sooner per level$(br)$(bold)Discharge$() - III - VII - IV at 25, V at 50, VI at 75, VII at 99 - charges speed faster per level$(br)$(bold)Ensnaring$() - IV - V - V at 99 - +10% per level to root the target$(br2)Single-level enchantments (Mending, Infinity, Silk Touch, Aqua Affinity, Flame, Channeling, Multishot, the curses) are unchanged, and so are the ones whose effect stops scaling."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Telekinesis",
+      "text": "$(bold)Telekinesis$() (one level, on mining tools and weapons): Blocks you break and mobs you kill drop straight into your inventory (at your feet when it is full). It rolls at the enchanting table and turns up in loot and villager trades like any other enchantment."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Hardness: what your pickaxe can break",
+      "text": "Some blocks need more than a pickaxe tier. A $(bold)Hardness$() tome is applied to a pickaxe at the anvil, and each tier also needs a Mining level to work. The first tome is made at a crafting table (iron is behind it, and every Create machine needs iron); the rest need a Mechanical Crafter:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Tier - Mining - Breaks - Tome recipe$()$(br)$(bold)I$() - 10 - iron ore, zinc ore, lapis ore - andesite, copper ingot, book (crafting table)$(br)$(bold)II$() - 20 - gold ore, redstone ore - iron sheet, lapis lazuli, book (mechanical crafting)$(br)$(bold)III$() - 30 - diamond ore, emerald ore, obsidian, crying obsidian - golden sheet, redstone, book (mechanical crafting)$(br)$(bold)IV$() - 40 - ancient debris - diamond, precision mechanism, iron sheet, book (mechanical crafting)$(br)$(bold)V$() - 50 - reinforced deepslate, budding amethyst - sturdy sheet, diamond, book (mechanical crafting)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Create drills, saws and rollers break blocks up to tier II, deployers with a pickaxe too; obsidian, diamonds and beyond are yours to dig. Obsidian can still be cast in place with lava and water and ruined portals still work; what needs Hardness is obsidian as an item."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Found it before you can mine it?$() Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a chest, barrel, shulker box or ender chest, place them if they are blocks, or drop them; recipes, machines, hoppers, backpacks and every other container refuse them until your Mining level reaches the tier (the tooltip says which level). Emeralds are money and never gated, ingots aren't either: only what comes out of the ground is, the raw ore, dust, gem or block."
+    }
+  ]
+}

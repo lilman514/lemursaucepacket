@@ -43,3 +43,5 @@ Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weak
 ## Where the numbers come from
 
 The curve, perks and requirements are generated from `skills/build.mjs` in the pack's repository, so this table is the same as the game's.
+
+**Enchanting** is the fourteenth skill: the enchanting table trains it, and it decides how far enchantments can go. Its own page, [Enchanting](enchanting.md), has the caps, the unlock levels and the Hardness tomes pickaxes need for harder blocks.

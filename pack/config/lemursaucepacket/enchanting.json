@@ -1,0 +1,837 @@
+{
+  "maxSkillLevel": 99,
+  "tableBoost": 4,
+  "enchantXp": 250,
+  "enchantments": {
+    "minecraft:sharpness": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+0.5 damage per level above I",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:smite": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+2.5 damage per level to undead",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 8
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:bane_of_arthropods": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+2.5 damage per level to arthropods",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 8
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:impaling": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+2.5 damage per level to sea creatures",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 9
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:power": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+0.5 arrow damage per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:density": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+0.5 mace damage per block fallen, per level",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 8
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:breach": {
+      "vanilla": 4,
+      "cap": 6,
+      "effect": "-15% armour effectiveness per level (armour is ignored at VI)",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 9
+      },
+      "unlocks": [
+        50,
+        99
+      ]
+    },
+    "minecraft:wind_burst": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "stronger launch after each smash",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:fire_aspect": {
+      "vanilla": 2,
+      "cap": 10,
+      "effect": "burns 4 s per level",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 14
+      },
+      "unlocks": [
+        13,
+        25,
+        38,
+        50,
+        62,
+        75,
+        87,
+        99
+      ]
+    },
+    "minecraft:knockback": {
+      "vanilla": 2,
+      "cap": 10,
+      "effect": "+1 knockback per level",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 15
+      },
+      "unlocks": [
+        13,
+        25,
+        38,
+        50,
+        62,
+        75,
+        87,
+        99
+      ]
+    },
+    "minecraft:punch": {
+      "vanilla": 2,
+      "cap": 10,
+      "effect": "+1 arrow knockback per level",
+      "minCost": {
+        "base": 12,
+        "per_level_above_first": 14
+      },
+      "unlocks": [
+        13,
+        25,
+        38,
+        50,
+        62,
+        75,
+        87,
+        99
+      ]
+    },
+    "minecraft:sweeping_edge": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "sweep does level/(level+1) of the hit",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 14
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:looting": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "more mob drops per level",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:efficiency": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "mining speed +level²+1",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "minecraft:unbreaking": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "tools last (level+1)x",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 14
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:fortune": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "more ore per level (about 5.6x at X)",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:luck_of_the_sea": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "+1 fishing luck per level",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:lure": {
+      "vanilla": 3,
+      "cap": 5,
+      "effect": "fish bite 5 s sooner per level (VI would never bite)",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        50,
+        99
+      ]
+    },
+    "minecraft:protection": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "+1 protection point per level (all protection together caps at 20 = 80%)",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "minecraft:fire_protection": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "+2 fire protection per level, shorter burns",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 9
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "minecraft:blast_protection": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "+2 blast protection per level",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "minecraft:projectile_protection": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "+2 projectile protection per level",
+      "minCost": {
+        "base": 3,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "minecraft:feather_falling": {
+      "vanilla": 4,
+      "cap": 7,
+      "effect": "+3 fall protection per level (80% at VII)",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        33,
+        66,
+        99
+      ]
+    },
+    "minecraft:thorns": {
+      "vanilla": 3,
+      "cap": 7,
+      "effect": "15% per level to hurt attackers (always at VII)",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 20
+      },
+      "unlocks": [
+        25,
+        50,
+        75,
+        99
+      ]
+    },
+    "minecraft:respiration": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "breath lasts (level+1)x",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 12
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:soul_speed": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "faster on soul sand per level",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 12
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:swift_sneak": {
+      "vanilla": 3,
+      "cap": 5,
+      "effect": "+15% sneak speed per level (full speed at V)",
+      "minCost": {
+        "base": 25,
+        "per_level_above_first": 25
+      },
+      "unlocks": [
+        50,
+        99
+      ]
+    },
+    "minecraft:frost_walker": {
+      "vanilla": 2,
+      "cap": 10,
+      "effect": "freezes a wider circle per level",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 14
+      },
+      "unlocks": [
+        13,
+        25,
+        38,
+        50,
+        62,
+        75,
+        87,
+        99
+      ]
+    },
+    "minecraft:loyalty": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "returns faster per level",
+      "minCost": {
+        "base": 12,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:riptide": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "launches further per level",
+      "minCost": {
+        "base": 17,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "minecraft:piercing": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "passes through one more target per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "minecraft:quick_charge": {
+      "vanilla": 3,
+      "cap": 5,
+      "effect": "-0.25 s charge per level (instant at V)",
+      "minCost": {
+        "base": 12,
+        "per_level_above_first": 20
+      },
+      "unlocks": [
+        50,
+        99
+      ]
+    },
+    "create:capacity": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "more backtank air per level",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 13
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "create:potato_recovery": {
+      "vanilla": 3,
+      "cap": 7,
+      "effect": "+12.5% ammo recovery per level (always at VII)",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 15
+      },
+      "unlocks": [
+        25,
+        50,
+        75,
+        99
+      ]
+    },
+    "farmersdelight:backstabbing": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "backstabs deal +20% per level",
+      "minCost": {
+        "base": 15,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "create_ltab:enchantment_luck": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "+1 luck per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 15
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "nova_structures:illagers_bane": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+2.5 damage per level to illagers",
+      "minCost": {
+        "base": 5,
+        "per_level_above_first": 8
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "nova_structures:power": {
+      "vanilla": 5,
+      "cap": 10,
+      "effect": "+0.5 bolt damage per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        20,
+        40,
+        60,
+        80,
+        99
+      ]
+    },
+    "nova_structures:piercing": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "arrows pass through one more target per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "nova_structures:outreach": {
+      "vanilla": 4,
+      "cap": 10,
+      "effect": "+0.5 block reach per level",
+      "minCost": {
+        "base": 1,
+        "per_level_above_first": 11
+      },
+      "unlocks": [
+        17,
+        33,
+        50,
+        66,
+        83,
+        99
+      ]
+    },
+    "nova_structures:traveler": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "higher steps and faster sprints per level",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 12
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "dungeons_arise:purification": {
+      "vanilla": 3,
+      "cap": 10,
+      "effect": "cleanses poison and wither sooner per level",
+      "minCost": {
+        "base": 50,
+        "per_level_above_first": 10
+      },
+      "unlocks": [
+        15,
+        29,
+        43,
+        57,
+        71,
+        85,
+        99
+      ]
+    },
+    "dungeons_arise:discharge": {
+      "vanilla": 3,
+      "cap": 7,
+      "effect": "charges speed faster per level",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 20
+      },
+      "unlocks": [
+        25,
+        50,
+        75,
+        99
+      ]
+    },
+    "dungeons_arise:ensnaring": {
+      "vanilla": 4,
+      "cap": 5,
+      "effect": "+10% per level to root the target",
+      "minCost": {
+        "base": 10,
+        "per_level_above_first": 20
+      },
+      "unlocks": [
+        99
+      ]
+    }
+  },
+  "telekinesis": {
+    "id": "lemursaucepacket:telekinesis",
+    "name": "Telekinesis",
+    "description": "Blocks you break and mobs you kill drop straight into your inventory (at your feet when it is full)."
+  },
+  "hardness": {
+    "id": "lemursaucepacket:hardness",
+    "name": "Hardness",
+    "description": "Lets a pickaxe break harder blocks. Each tier needs a Mining level to work.",
+    "maxLevel": 5,
+    "unlock": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "machineMax": 2,
+    "tiers": {
+      "1": [
+        "#c:ores/iron",
+        "#c:ores/zinc",
+        "#c:ores/lapis"
+      ],
+      "2": [
+        "#c:ores/gold",
+        "#c:ores/redstone"
+      ],
+      "3": [
+        "#c:ores/diamond",
+        "#c:ores/emerald",
+        "minecraft:obsidian",
+        "minecraft:crying_obsidian"
+      ],
+      "4": [
+        "#c:ores/netherite_scrap"
+      ],
+      "5": [
+        "minecraft:reinforced_deepslate",
+        "minecraft:budding_amethyst"
+      ]
+    },
+    "materials": {
+      "1": [
+        "#c:raw_materials/iron",
+        "#c:raw_materials/zinc",
+        "#c:storage_blocks/raw_iron",
+        "#c:storage_blocks/raw_zinc",
+        "#c:ores/iron",
+        "#c:ores/zinc",
+        "#c:ores/lapis",
+        "minecraft:lapis_lazuli",
+        "minecraft:lapis_block"
+      ],
+      "2": [
+        "#c:raw_materials/gold",
+        "#c:storage_blocks/raw_gold",
+        "#c:ores/gold",
+        "#c:ores/redstone",
+        "minecraft:redstone",
+        "minecraft:redstone_block"
+      ],
+      "3": [
+        "minecraft:diamond",
+        "minecraft:diamond_block",
+        "#c:ores/diamond",
+        "minecraft:obsidian",
+        "minecraft:crying_obsidian"
+      ],
+      "4": [
+        "minecraft:ancient_debris",
+        "#c:ores/netherite_scrap"
+      ],
+      "5": [
+        "minecraft:reinforced_deepslate",
+        "minecraft:budding_amethyst"
+      ]
+    },
+    "tag": "lemursaucepacket:hardness/",
+    "useGate": {
+      "allowedMenus": [],
+      "inventoryMenus": [
+        "top.theillusivec4.curios.common.inventory.container.CuriosContainer"
+      ],
+      "containerItems": "lemursaucepacket:hardness/container_items"
+    }
+  },
+  "penalty": [
+    {
+      "effect": "minecraft:slowness",
+      "amplifier": 1
+    },
+    {
+      "effect": "minecraft:weakness",
+      "amplifier": 0
+    }
+  ]
+}

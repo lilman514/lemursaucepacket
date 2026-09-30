@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:prospectors_pickaxe"
+  ],
   "requirements": {
     "TOOL": {
       "mining": 30

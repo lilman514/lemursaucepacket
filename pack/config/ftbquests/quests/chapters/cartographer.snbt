@@ -1,0 +1,750 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cartographer"
+	group: "05D7205A6D5637F0"
+	icon: {
+		id: "minecraft:filled_map"
+	}
+	id: "16909E8386D20890"
+	images: [
+		{
+			height: 0.1d
+			id: "539E5DD066A53F9F"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: -0.6d
+			y: -5.05d
+		}
+		{
+			height: 2.9872340425531916d
+			id: "4F9F61A1C37B8E32"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.199999999999999d
+			x: -0.6d
+			y: -0.1d
+		}
+	]
+	order_index: 15
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "471A547849824405"
+			rewards: [
+				{
+					id: "5BAEFF739DBEFF48"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "7F205E91F8485F40"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "287231B29506E584"
+					item: {
+						count: 1
+						id: "minecraft:spyglass"
+					}
+					type: "item"
+				}
+				{
+					id: "18DEADB4CC223F5F"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "16839C0FC4C6002E"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["471A547849824405"]
+			icon: {
+				id: "minecraft:filled_map"
+			}
+			id: "40313B9C3E18B29F"
+			rewards: [
+				{
+					id: "7B4E5DC7B9AA3B0C"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "5EB18DB3351AFB34"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "365CC1182627D4C3"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5ED6B110B34563A7"
+					item: {
+						count: 1
+						id: "minecraft:filled_map"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 5.8d
+		}
+		{
+			dependencies: ["471A547849824405"]
+			icon: {
+				id: "lootr:lootr_chest"
+			}
+			id: "4C9E7DD09ADE9DB3"
+			rewards: [
+				{
+					id: "13EE3F85F33AB267"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "5A4F23F145B25119"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "377B4B1DF7B7068D"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:1chest"
+					criterion: ""
+					id: "42B5B77731DFC4E8"
+					type: "advancement"
+				}
+			]
+			x: 2.3d
+			y: 2.2d
+		}
+		{
+			dependencies: ["4C9E7DD09ADE9DB3"]
+			icon: {
+				id: "lootr:lootr_barrel"
+			}
+			id: "60EE714B5E000FF1"
+			rewards: [
+				{
+					id: "7B33C70D4127B1EB"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "1A45B141B29A473E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "1A63FCF939829B79"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "19CAE147C3277614"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:10loot"
+					criterion: ""
+					id: "6C5A7187CD379D5A"
+					type: "advancement"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["60EE714B5E000FF1"]
+			icon: {
+				id: "lootr:lootr_trapped_chest"
+			}
+			id: "64CFF5B9DB588DCA"
+			rewards: [
+				{
+					id: "08BE148A3DE03F6D"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "02E56D2AAE69085F"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0FB067016DDA7736"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:50loot"
+					criterion: ""
+					id: "57311AF74A5F0D5A"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["64CFF5B9DB588DCA"]
+			icon: {
+				id: "lootr:trophy"
+			}
+			id: "7059E30B38F68E04"
+			rewards: [
+				{
+					id: "1094596A20176FC4"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "5E59CEC18F57D668"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "64EFDF4B2F5B8AC4"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:100loot"
+					criterion: ""
+					id: "317DCD9B2C74BE52"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:stone_bricks"
+			}
+			id: "1730C1BDFD2D3A2A"
+			rewards: [
+				{
+					id: "210BD216EC8A1B7F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "5793D84198F5583A"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "689A6659DE0E2BE4"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3A13EC3336F8BD60"
+					structure: "dungeons_arise:keep_kayra"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:crossbow"
+			}
+			id: "3C801FD326BD0DF9"
+			rewards: [
+				{
+					id: "31828797BC6E4C0B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "2109BCD7DDDD56C9"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "758D46461C575D4D"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4C4D1D207C7AB75B"
+					structure: "dungeons_arise:bandit_towers"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:rail"
+			}
+			id: "10A651174AE9D532"
+			rewards: [
+				{
+					id: "36EC1CB9EF8E5E77"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "6A343097EB3B10F6"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "3C69705170571305"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "096D3C1B9DCDC34C"
+					structure: "dungeons_arise:mining_complex"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 5.3d
+		}
+		{
+			dependencies: ["1730C1BDFD2D3A2A"]
+			icon: {
+				id: "minecraft:sandstone"
+			}
+			id: "39755458087AB908"
+			rewards: [
+				{
+					id: "1AABB59F6B7D884D"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7C7C4A83125E2BEF"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6F84CCB192B6DFCC"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2C98EB5D0CBD5C3A"
+					structure: "dungeons_arise:shiraz_palace"
+					type: "structure"
+				}
+			]
+			x: 6.9d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3C801FD326BD0DF9"]
+			icon: {
+				id: "minecraft:skeleton_skull"
+			}
+			id: "08C430BAB9BD170F"
+			rewards: [
+				{
+					id: "410FECC444E27860"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "556E782C9E86B914"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "3DC946C4B51B68D1"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "2C615C74941743D1"
+					structure: "dungeons_arise:plague_asylum"
+					type: "structure"
+				}
+			]
+			x: 6.9d
+			y: 4.1d
+		}
+		{
+			dependencies: ["10A651174AE9D532"]
+			icon: {
+				id: "minecraft:phantom_membrane"
+			}
+			id: "2D0B9945E26F6B56"
+			rewards: [
+				{
+					id: "7531FED2B43D5FC7"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "54BA49CAB3809394"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "5629A4F940E51EE3"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "16E6B03EEB38B667"
+					structure: "dungeons_arise:heavenly_conqueror"
+					type: "structure"
+				}
+			]
+			x: 6.9d
+			y: 5.7d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:enchanting_table"
+			}
+			id: "6C33C59167DDCBE0"
+			rewards: [
+				{
+					id: "5F0137C692EAFB87"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0BC37BDBC86F7F3D"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "666EED4A53C7756C"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "6BBE423C8E5F131E"
+					structure: "structory_towers:wizard_tower"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 6.9d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:mossy_cobblestone"
+			}
+			id: "0604D33913119430"
+			rewards: [
+				{
+					id: "5D06E64F7BE9F521"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "117BC7937FDB1BA5"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "6C0BD680E121252A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "13E6F68BC90B219B"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "48951842D8978307"
+					structure: "totw_modded:regular"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 10.1d
+		}
+		{
+			dependencies: ["40313B9C3E18B29F"]
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "31CD41B8C9481234"
+			rewards: [
+				{
+					id: "27CAC1AE107B67E9"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "5A76855661CC470A"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "345BE293ED62E12A"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "10F0D3F6015B7896"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "55992513B5AEB59A"
+					structure: "nova_structures:shrine_combat_tier_1"
+					type: "structure"
+				}
+			]
+			x: 4.6d
+			y: 8.5d
+		}
+		{
+			dependencies: ["31CD41B8C9481234"]
+			icon: {
+				id: "minecraft:dark_oak_planks"
+			}
+			id: "63D3B4DA71A590BD"
+			rewards: [
+				{
+					id: "444710C217F88B64"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "6AFA876A5481E8E9"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "34EB00527791158A"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4794CF478EE5829F"
+					structure: "nova_structures:illager_manor"
+					type: "structure"
+				}
+			]
+			x: 6.9d
+			y: 7.3d
+		}
+		{
+			dependencies: ["0604D33913119430"]
+			icon: {
+				id: "minecraft:oak_sapling"
+			}
+			id: "78F4B76C3C615327"
+			rewards: [
+				{
+					id: "18022EA441826E26"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "70BD68286C01A798"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "0887E591C41DEECB"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "regions_unexplored:pioneer"
+					criterion: ""
+					id: "12488D9725E2D701"
+					type: "advancement"
+				}
+			]
+			x: 6.9d
+			y: 10.1d
+		}
+		{
+			dependencies: ["08C430BAB9BD170F", "2D0B9945E26F6B56", "39755458087AB908", "63D3B4DA71A590BD"]
+			icon: {
+				id: "minecraft:filled_map"
+			}
+			id: "34D2EB9666F0B4E7"
+			rewards: [
+				{
+					id: "7191DEC3E4E7836D"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "7F97C35283DEF393"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "1C07CBE36CE162ED"
+					item: {
+						count: 1
+						id: "waystones:waystone"
+					}
+					type: "item"
+				}
+				{
+					id: "1FBC9D45A3247D5E"
+					item: {
+						count: 1
+						id: "waystones:warp_stone"
+					}
+					type: "item"
+				}
+				{
+					id: "615DB6DA52C1FA2F"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "716E77F133905B9E"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					advancement: "minecraft:adventure/adventuring_time"
+					criterion: ""
+					id: "79AA4270FA0C3B5B"
+					type: "advancement"
+				}
+			]
+			x: 9.2d
+			y: 4.9d
+		}
+	]
+}

@@ -23,6 +23,7 @@ One per skill, at level 99. Each has a perk while worn.
 | Smithing Cape | Smithing 99. | +1 armour toughness |
 | Crafting Cape | Crafting 99. | the item in your hand mends one durability every ten seconds |
 | Agility Cape | Agility 99. | +10% speed |
+| Enchanting Cape | Enchanting 99. | +20% Enchanting XP |
 
 ## Quest capes
 

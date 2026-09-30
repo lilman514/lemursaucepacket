@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:compacted_netherite_helmet"
+  ],
   "requirements": {
     "WEAR": {
       "defence": 60

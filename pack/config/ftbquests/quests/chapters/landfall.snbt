@@ -45,7 +45,7 @@
 				{
 					id: "1D64D233025F1A65"
 					type: "xp"
-					xp: 54
+					xp: 25
 				}
 				{
 					id: "4833FBE1B9C7F0B9"
@@ -54,6 +54,27 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "5DDACCC5D84E4523"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "361CE477A1EB3A5F"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "61ECB6D7A7A118DD"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			shape: "gear"
@@ -77,7 +98,20 @@
 				{
 					id: "33FC272ED6395FF3"
 					type: "xp"
-					xp: 10
+					xp: 25
+				}
+				{
+					id: "2C8090049AED7A3C"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0DC8839C4E63EA73"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -99,7 +133,20 @@
 				{
 					id: "5ED36CF311374434"
 					type: "xp"
-					xp: 10
+					xp: 25
+				}
+				{
+					id: "5BB9EC6A3FB07065"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7F12EFC02984F307"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -125,15 +172,20 @@
 				{
 					id: "3D18BD4C43333FE7"
 					type: "xp"
-					xp: 14
+					xp: 25
 				}
 				{
-					id: "1FE1ACBE8478B09B"
+					id: "541E091385BD798B"
 					item: {
-						count: 4
-						id: "numismatics:spur"
+						count: 1
+						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "749F1ABA0BB7D515"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -157,15 +209,20 @@
 				{
 					id: "2414E321937317D1"
 					type: "xp"
-					xp: 14
+					xp: 25
 				}
 				{
-					id: "3E7335E1BC91547C"
+					id: "175EF82420B197A9"
 					item: {
-						count: 4
-						id: "numismatics:spur"
+						count: 1
+						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "2B0A7DBBA4020F65"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -189,7 +246,7 @@
 				{
 					id: "3A3A94F61C0B84E8"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "1EA72A901742813B"
@@ -198,6 +255,26 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "6B12D62B8C036B1B"
+					item: {
+						components: {
+							"minecraft:stored_enchantments": {
+								levels: {
+									"lemursaucepacket:hardness": 1
+								}
+							}
+						}
+						count: 1
+						id: "minecraft:enchanted_book"
+					}
+					type: "item"
+				}
+				{
+					id: "1D83928157120D2F"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -224,7 +301,7 @@
 				{
 					id: "60FC3EC933FB259A"
 					type: "xp"
-					xp: 18
+					xp: 25
 				}
 				{
 					id: "691D6143CEA54756"
@@ -233,6 +310,11 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "0AEB9D84A9088269"
+					table_id: 3210045145100678495L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -259,7 +341,15 @@
 				{
 					id: "447DB77E3ED0E2A2"
 					type: "xp"
-					xp: 18
+					xp: 60
+				}
+				{
+					id: "0BC5FC8F3383BE6E"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
 				}
 				{
 					id: "4D275B589F6D1C2D"
@@ -268,6 +358,19 @@
 						id: "numismatics:bevel"
 					}
 					type: "item"
+				}
+				{
+					id: "66460CA35ED7F227"
+					item: {
+						count: 2
+						id: "sophisticatedbackpacks:upgrade_base"
+					}
+					type: "item"
+				}
+				{
+					id: "36DC79979F9081D8"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -293,7 +396,7 @@
 				{
 					id: "0BB7ED4F58C54868"
 					type: "xp"
-					xp: 26
+					xp: 60
 				}
 				{
 					id: "18C2ADC120D4B77F"
@@ -302,6 +405,19 @@
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "215316B81707AADF"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "7C789FC068F497E9"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 			]
 			tasks: [
@@ -324,15 +440,52 @@
 				{
 					id: "01BA7F21846D924A"
 					type: "xp"
-					xp: 126
+					xp: 60
 				}
 				{
 					id: "047F3B85B71B0AAB"
 					item: {
-						count: 2
+						count: 1
 						id: "numismatics:sprocket"
 					}
 					type: "item"
+				}
+				{
+					id: "64F15F1F75215E60"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "6B0D7C63C3E87467"
+					item: {
+						count: 32
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+				{
+					id: "10114175E058C566"
+					item: {
+						count: 8
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					id: "49C4D6D552925163"
+					item: {
+						count: 16
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "73EFF61C134BFC9C"
+					table_id: 5365643345027758749L
+					type: "random"
 				}
 				{
 					command: "lsp cape flag {p} chapter:landfall"

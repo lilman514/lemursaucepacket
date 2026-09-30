@@ -1,8 +1,8 @@
 # Mods in the pack
 
-161 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+164 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (119)
+## On the server and every client (122)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -102,10 +102,13 @@
 - [Structure Layout Optimizer](https://modrinth.com/project/ayPU0OHc)
 - [Tectonic](https://modrinth.com/project/lWDHr9jE)
 - [Terralith](https://modrinth.com/project/8oi3bsk5)
+- [Towers of the Wild Modded](https://modrinth.com/project/54eqfZSC)
 - [Towns and Towers](https://modrinth.com/project/DjLobEOy)
 - [Vanilla Backport](https://modrinth.com/project/6xwxDTgf)
 - [Vanilla Backport Compat](https://modrinth.com/project/jcYHXHwz)
 - [Variants&Ventures](https://modrinth.com/project/lNDRiXkY)
+- [Waystones](https://modrinth.com/project/LOpKHB2A)
+- [Waystones: Sable (Create Aeronautics Addon)](https://modrinth.com/project/BxhPGfcK)
 - [When Dungeons Arise](https://modrinth.com/project/8DfbfASn)
 - [Woodworks](https://modrinth.com/project/rv1sovni)
 - [Xaero's Minimap](https://modrinth.com/project/1bokaNcj)

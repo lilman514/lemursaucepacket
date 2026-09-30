@@ -1,4 +1,7 @@
 {
+  "isTagFor": [
+    "lemursaucepacket:anglers_cap"
+  ],
   "requirements": {
     "WEAR": {
       "fishing": 25

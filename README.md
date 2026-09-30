@@ -42,6 +42,7 @@ It piggybacks on infrastructure that already exists instead of hosting everythin
 | `launcher/scripts/server.ts` | Installs or updates the dedicated server from the published pack (`npm run server`) |
 | `pack/` | The modpack, managed with packwiz (NeoForge 21.1.252, Minecraft 1.21.1) |
 | `pack/kubejs/` | Scripts and the pack's resource/data pack: skills, gear behaviour, the ESC menu, backpack recipes, ore-vein balance, fixes for broken mod recipes |
+| `mods-src/lemursaucepacket-fixes/` | **The pack's own small mod** (`lsp_fixes`) for fixes that need Java, currently the Project MMO skills panel's scrolling and overlap. `./gradlew copyToPack` puts its jar in `pack/mods/` |
 | `quests/book.mjs` | **The quest book**, as readable JavaScript. `quests/build.mjs` turns it into FTB Quests files |
 | `skills/build.mjs` | The RuneScape-style skills: curve, perks, level gates (Project MMO configs) |
 | `gear/gear.mjs` | **The pack's own gear**: sets, perks, weapons, tools, recipes, loot. `gear/build.mjs` writes the scripts, gates, "How to get" tooltips and JEI pages, and the wiki page |
@@ -152,9 +153,9 @@ Every item, mob, biome, structure and advancement id is checked against `quests/
 2. Start the server once.
 3. Copy the `kubejs/registry-dump.json` it writes to `quests/.registry.json`.
 
-`book.mjs` is the source of truth. Edits made in-game with FTB's editor are overwritten the next time you publish a changed book. Rewards are Numismatics coins, which feed the player economy.
+`book.mjs` is the source of truth. Edits made in-game with FTB's editor are overwritten the next time you publish a changed book. Every quest has a tier (1–5, `TIERS` at the top of `book.mjs`) that sets its XP, its Numismatics coins and the reward table it rolls on (`TABLES`, written to `reward_tables/`); finales add fixed prizes. The Skills chapter is generated from the skill list in `book.mjs`; its milestone quests carry custom tasks that only `pack/kubejs/server_scripts/quest_milestones.js` completes, from the ids the build writes to `pack/config/lemursaucepacket/milestones.json`.
 
-Quest positions are not written by hand. Each chapter is laid out left to right in unlock order, with no crossing lines. A chapter's `about` and `unlocks` text becomes an info card next to its crest. The card is placed where it's readable as soon as the chapter opens. To look at every chapter without starting Minecraft:
+Quest positions are not written by hand (the Skills and Relic Hunter chapters, laid out as grids, are the exception). Each chapter is laid out left to right in unlock order, with no crossing lines. A chapter's `about` and `unlocks` text becomes an info card next to its crest. The card is placed where it's readable as soon as the chapter opens. To look at every chapter without starting Minecraft:
 
 ```bash
 node quests/build.mjs --preview

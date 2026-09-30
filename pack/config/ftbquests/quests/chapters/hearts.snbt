@@ -1,0 +1,413 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hearts"
+	group: "7DAB9BE5981EE62A"
+	icon: {
+		id: "lemursaucepacket:heart"
+	}
+	id: "022BE23E3DBE1099"
+	images: [
+		{
+			height: 3.446808510638298d
+			id: "453135B25BEDB43B"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.353191489361702d
+			x: 2.65d
+			y: -2.4d
+		}
+	]
+	order_index: 26
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "gravestone:gravestone"
+			}
+			id: "0B7AC92A70AC3945"
+			rewards: [
+				{
+					id: "6BB408A549DD349C"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "528F210B0112433B"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "46F868503EFA0122"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4CE188EBE076F344"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 2.1d
+		}
+		{
+			dependencies: ["0B7AC92A70AC3945"]
+			icon: {
+				id: "lemursaucepacket:grave_essence"
+			}
+			id: "377C3F31EF6DA6DC"
+			rewards: [
+				{
+					id: "0747687CEFCB4B23"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "23E33594D587B73B"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "452E4B5EA5F4B0EA"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "0D41326ECD8E66C5"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "29870176A14C4C1E"
+					item: {
+						count: 1
+						id: "lemursaucepacket:grave_essence"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["377C3F31EF6DA6DC"]
+			icon: {
+				id: "lemursaucepacket:grave_essence"
+			}
+			id: "6F11CCE68303F7B7"
+			rewards: [
+				{
+					id: "3648C891C1440AC3"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "64651261669A471D"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "652DCC53C4472A6D"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					id: "4003013C8E0200CB"
+					item: {
+						count: 2
+						id: "lemursaucepacket:grave_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "21BE9C9801E9E222"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "5D3541ACB0A099D7"
+					item: {
+						count: 1
+						id: "lemursaucepacket:grave_essence"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 1.3d
+		}
+		{
+			dependencies: ["6F11CCE68303F7B7"]
+			icon: {
+				id: "lemursaucepacket:lost_item_compass"
+			}
+			id: "48ADAA3611CDE116"
+			rewards: [
+				{
+					id: "42395DA99E42212B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "50A70A73A28788F5"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "0E7A7D10376DEEFB"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4905A8A1E13D06AD"
+					item: {
+						count: 1
+						id: "lemursaucepacket:lost_item_compass"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["48ADAA3611CDE116"]
+			icon: {
+				id: "lemursaucepacket:seekers_compass"
+			}
+			id: "4967BBE9FD472FB4"
+			rewards: [
+				{
+					id: "534B4367A47849ED"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "74FFE7D8C384B03D"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "72EF2DA54A09DF53"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4BAC1009B6D4C1BF"
+					item: {
+						count: 1
+						id: "lemursaucepacket:seekers_compass"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["377C3F31EF6DA6DC"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "lemursaucepacket:heart"
+			}
+			id: "5F3D242C9ABE4D82"
+			rewards: [
+				{
+					id: "15958602516A7C42"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4ADF2C9D13BB23AF"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "7130DAC5F2E19E62"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "6CFF8CAACB00B434"
+					item: {
+						count: 1
+						id: "lemursaucepacket:heart"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 2.9d
+		}
+		{
+			dependencies: ["6F11CCE68303F7B7"]
+			icon: {
+				id: "minecraft:heart_of_the_sea"
+			}
+			id: "7A4552D518DDE81E"
+			rewards: [
+				{
+					id: "7DA7B42D3275F84A"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "4682F804F06DF5F5"
+					item: {
+						count: 3
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					id: "30A48D02FEA9A879"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "39463F99392F4683"
+					item: {
+						count: 1
+						id: "minecraft:heart_of_the_sea"
+					}
+					type: "item"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["7A4552D518DDE81E"]
+			icon: {
+				id: "lemursaucepacket:incomplete_heart"
+			}
+			id: "6292C01CDA587337"
+			rewards: [
+				{
+					id: "37B40B0D16DA0545"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "1E073CC89989D857"
+					item: {
+						count: 2
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "25219327B804C5FE"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4B42088B047964B7"
+					item: {
+						count: 1
+						id: "lemursaucepacket:incomplete_heart"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 2.1d
+		}
+		{
+			dependencies: ["6292C01CDA587337", "4967BBE9FD472FB4"]
+			icon: {
+				id: "lemursaucepacket:heart"
+			}
+			id: "7C0995415D1F40C1"
+			rewards: [
+				{
+					id: "4C0BA1BA975EAB99"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "0B51963F7413D65F"
+					item: {
+						count: 1
+						id: "numismatics:crown"
+					}
+					type: "item"
+				}
+				{
+					id: "5AB7E8E1FDD1C299"
+					item: {
+						count: 1
+						id: "lemursaucepacket:heart"
+					}
+					type: "item"
+				}
+				{
+					id: "4F4B54169625180F"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.75d
+			tasks: [
+				{
+					id: "48F1ECF8D90DC6D0"
+					item: {
+						count: 1
+						id: "lemursaucepacket:heart"
+					}
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 1.3d
+		}
+	]
+}
