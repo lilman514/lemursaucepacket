@@ -453,6 +453,18 @@ function pmmoFilesById() {
 
 // ---------------------------------------------------------------- FallingTree
 
+/**
+ * FallingTree fells a whole tree with any axe (or anything that can strip logs) unless the item is denied, and a
+ * denied item beats an allowed one. So the Lumber Axe stays the only tree-feller by denying every other axe in the
+ * pack, read from the registry dump (quests/.registry.json), with vanilla's six as the fallback.
+ */
+function otherAxes() {
+  const lumber = `${NAMESPACE}:lumber_axe`
+  const vanilla = ['wooden', 'stone', 'iron', 'golden', 'diamond', 'netherite'].map((m) => `minecraft:${m}_axe`)
+  const fromRegistry = existsSync(registryPath) ? JSON.parse(readFileSync(registryPath, 'utf8')).item.filter((id) => /_axe$/.test(id)) : []
+  return [...new Set([...vanilla, ...fromRegistry])].filter((id) => id !== lumber).sort()
+}
+
 function fallingTreeConfig() {
   return JSON.stringify(
     {
@@ -480,7 +492,7 @@ function fallingTreeConfig() {
       },
       tools: {
         allowed: [`${NAMESPACE}:lumber_axe`],
-        denied: [],
+        denied: otherAxes(),
         durabilityMode: 'PERCENTAGE',
         ignoreTools: false,
         damageMultiplicand: 0.25,

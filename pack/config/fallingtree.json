@@ -25,7 +25,14 @@
     "allowed": [
       "lemursaucepacket:lumber_axe"
     ],
-    "denied": [],
+    "denied": [
+      "minecraft:diamond_axe",
+      "minecraft:golden_axe",
+      "minecraft:iron_axe",
+      "minecraft:netherite_axe",
+      "minecraft:stone_axe",
+      "minecraft:wooden_axe"
+    ],
     "durabilityMode": "PERCENTAGE",
     "ignoreTools": false,
     "damageMultiplicand": 0.25,
