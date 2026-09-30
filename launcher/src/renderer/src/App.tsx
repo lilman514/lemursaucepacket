@@ -120,7 +120,7 @@ export function App(): ReactElement {
           ))}
         </nav>
         <button className="nav-account" onClick={() => setAccountOpen(true)} title={account ? account.name : 'Sign in'}>
-          <Avatar account={account} size={34} ring />
+          <Avatar account={account} size={30} ring />
         </button>
       </aside>
 

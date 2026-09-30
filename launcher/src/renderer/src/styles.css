@@ -26,6 +26,8 @@
   --radius: 4px;
   --radius-sm: 2px;
   --titlebar: 40px;
+  --titlebar-bg: #171412; /* keep in sync with BG in src/main/index.ts */
+  --content-max: 1600px; /* pages centre in a column this wide on big windows */
   --px: 3px; /* one game pixel */
   color-scheme: dark;
   font-family: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
@@ -119,10 +121,7 @@ code,
 
 /* A brass button drawn from the game's 200x20 sprite (border 4) at 3x. */
 .px-button,
-.btn,
-.play-btn-cancel,
-.icon-btn-lg,
-.segmented button.active {
+.btn {
   border: var(--px) solid transparent;
   border-width: calc(var(--px) * 4);
   border-image: url('./assets/pixel/button.png') 4 fill / calc(var(--px) * 4) stretch;
@@ -131,9 +130,7 @@ code,
   background: none;
 }
 
-.btn:hover:not(:disabled),
-.play-btn-cancel:hover:not(:disabled),
-.icon-btn-lg:hover:not(:disabled) {
+.btn:hover:not(:disabled) {
   border-image-source: url('./assets/pixel/button-hover.png');
 }
 
@@ -191,20 +188,20 @@ code,
   height: 100%;
 }
 
+/* One continuous iron surface (faint brushed grain, lit from the top), so only real buttons look like buttons. */
 .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 0 14px;
-  background: var(--bg-raised) url('./assets/pixel/plate.png') 0 0 / 96px 96px repeat;
-  image-rendering: pixelated;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 236, 200, 0.018) 0 1px, transparent 1px 4px),
+    linear-gradient(180deg, #25211d 0%, #1d1a17 40%, #161412 100%);
   border-right: var(--px) solid var(--line-strong);
-  box-shadow: inset calc(var(--px) * -1) 0 0 #553710;
+  box-shadow:
+    inset calc(var(--px) * -1) 0 0 #553710,
+    inset -14px 0 16px -14px rgba(0, 0, 0, 0.7);
   -webkit-app-region: drag;
-}
-
-.sidebar > * {
-  image-rendering: auto;
 }
 
 .sidebar-mark {
@@ -237,8 +234,10 @@ code,
   border: 0;
   border-radius: var(--radius);
   background: transparent;
-  color: var(--text-3);
+  color: var(--text-2);
   font-size: 11px;
+  font-weight: 500;
+  text-shadow: 0 1px 0 #000;
   transition:
     background 0.15s,
     color 0.15s;
@@ -247,12 +246,12 @@ code,
 .nav-btn img {
   width: 30px;
   height: 30px;
-  filter: saturate(0.4) brightness(0.8);
+  filter: saturate(0.55) brightness(0.9);
   transition: filter 0.15s;
 }
 
 .nav-btn:hover {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.3);
   color: var(--text);
 }
 
@@ -262,36 +261,42 @@ code,
 }
 
 .nav-btn.active {
-  background: rgba(0, 0, 0, 0.45);
-  box-shadow: inset 0 0 0 1px var(--line-strong);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px var(--line-strong);
   color: var(--accent-hi);
+  font-weight: 600;
 }
 
 .nav-account {
   margin-top: auto;
-  padding: 3px;
+  padding: 0;
   border: 0;
   border-radius: 50%;
   background: transparent;
   -webkit-app-region: no-drag;
 }
 
-.nav-account:hover {
-  background: rgba(0, 0, 0, 0.35);
+.nav-account:hover .avatar-ring::after {
+  filter: brightness(1.15) drop-shadow(0 0 5px rgba(224, 172, 70, 0.5));
 }
 
-/* The player's head inside the brass ring from the frame kit. */
+/* The player's head behind the brass porthole from the frame kit (its glass is cut out; Avatar sizes the ring). */
 .avatar-ring {
   position: relative;
   display: inline-grid;
   place-items: center;
+  flex: none;
 }
 
 .avatar-ring::after {
   content: '';
   position: absolute;
-  inset: -22%;
-  background: url('./assets/ui/ring.png') center / 100% 100% no-repeat;
+  inset: 0;
+  background: url('./assets/ui/ring.png') center / contain no-repeat;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6));
+  transition: filter 0.15s;
   pointer-events: none;
 }
 
@@ -316,6 +321,8 @@ code,
 }
 
 .titlebar {
+  position: relative;
+  z-index: 1;
   height: var(--titlebar);
   flex: none;
   display: flex;
@@ -324,6 +331,12 @@ code,
   padding: 0 24px;
   /* leave room for the native window buttons drawn over the top-right corner */
   padding-right: calc(100vw - env(titlebar-area-x, 0px) - env(titlebar-area-width, 100vw) + 16px);
+  /* Flat, in the colour the native window buttons paint behind themselves (BG in src/main/index.ts), so they
+     blend in; the edge line sits just below the 40px the buttons cover. */
+  background: var(--titlebar-bg);
+  box-shadow:
+    0 1px 0 #0c0a09,
+    0 2px 0 rgba(255, 236, 200, 0.035);
   -webkit-app-region: drag;
 }
 
@@ -345,10 +358,13 @@ code,
   -webkit-app-region: no-drag;
 }
 
+/* Even 24px margins: the scrollbar's gutter is always reserved (no layout shift when it appears) and makes up
+   the rest of the right-hand one, so content sits 24px below the titlebar, from the sidebar and from the edge. */
 .page {
   flex: 1;
   overflow-y: auto;
-  padding: 4px 24px 28px;
+  scrollbar-gutter: stable;
+  padding: 24px 12px 28px 24px;
   animation: fade-in 0.18s ease-out;
 }
 
@@ -457,12 +473,6 @@ code,
 
 .icon-btn:hover:not(:disabled) {
   background: rgba(0, 0, 0, 0.35);
-  color: var(--text);
-}
-
-.icon-btn-lg {
-  width: 54px;
-  height: 54px;
   color: var(--text);
 }
 
@@ -623,19 +633,26 @@ select.input {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  max-width: 1100px;
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 
-/* The hero: key art inside the hi-res brass frame (border only; the plate in the sheet is not used). */
+/* The hero: key art inside the hi-res brass frame (border only; the plate in the sheet is not used). It sits
+   wholly inside the page, and its height never depends on the play state (see .play-panel). Taller windows
+   give it more height (more of the art), with the play row kept at the bottom. */
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: min(46vh, 620px);
+  min-height: min(round(46vh, 1px), 620px); /* whole pixels keep the brass crisp */
   overflow: hidden;
-  padding: 22px 26px 20px;
+  padding: 18px 24px 20px;
   border: 52px solid transparent;
   border-image: url('./assets/ui/frame.png') 160 / 52px round;
-  margin: -12px -14px 0;
   background:
-    linear-gradient(90deg, rgba(20, 17, 13, 0.94) 0%, rgba(20, 17, 13, 0.8) 38%, rgba(20, 17, 13, 0.25) 72%, rgba(20, 17, 13, 0.1) 100%),
+    /* Dark behind the text on the left; the town and castle stay bright on the right. */
+    linear-gradient(90deg, rgba(17, 14, 11, 0.95) 0%, rgba(17, 14, 11, 0.9) 34%, rgba(17, 14, 11, 0.62) 50%, rgba(17, 14, 11, 0.18) 68%, rgba(17, 14, 11, 0) 86%),
     url('./assets/hero.jpg') 70% 55% / cover no-repeat,
     #191715;
   background-clip: padding-box;
@@ -653,7 +670,8 @@ select.input {
 .hero-body {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: min(48%, 560px);
+  margin-bottom: 20px;
 }
 
 .hero-kicker {
@@ -670,9 +688,11 @@ select.input {
 
 .hero-logo {
   display: block;
-  height: 72px;
+  height: clamp(72px, 7.5vh, 96px);
   width: auto;
   max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
 }
 
@@ -680,6 +700,7 @@ select.input {
   margin: 10px 0 0;
   color: var(--text-2);
   font-size: 15px;
+  line-height: 22px; /* whole pixels, so the play row below lands on the pixel grid */
   text-shadow: 0 1px 2px #000;
 }
 
@@ -718,37 +739,44 @@ select.input {
   background: var(--red);
 }
 
+/* Button, info plate and stop slot all have fixed sizes, so nothing moves between idle, preparing and running. */
 .play-panel {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-top: 26px;
+  gap: 14px;
+  margin-top: auto;
 }
 
-/* The big button: the hi-res brass plate, lit amber on hover. */
+/* The big button: the hi-res brass plate, lit amber on hover. One size for every state; only the label changes. */
+.play-btn,
+.play-stop {
+  flex: none;
+  height: 64px;
+  padding: 0;
+  border: 22px solid transparent;
+  border-image: url('./assets/ui/button.png') 88 fill / 22px stretch;
+  background: none;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
+  transition:
+    transform 0.12s,
+    filter 0.12s;
+}
+
 .play-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-width: 200px;
-  height: 64px;
-  padding: 0 22px;
-  border: 22px solid transparent;
-  border-image: url('./assets/ui/button.png') 88 fill / 22px stretch;
-  background: none;
+  width: 200px;
   color: var(--accent-hi);
   font-size: 19px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
   text-shadow: 0 2px 0 #000;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
-  transition:
-    transform 0.12s,
-    filter 0.12s;
 }
 
 .play-btn img {
@@ -756,105 +784,202 @@ select.input {
   height: 26px;
 }
 
-.play-btn:hover:not(:disabled) {
+.play-btn svg {
+  flex: none;
+}
+
+.play-btn:hover:not(:disabled),
+.play-stop:hover {
   border-image-source: url('./assets/ui/button-hover.png');
   color: #fff;
   transform: translateY(-1px);
   filter: drop-shadow(0 10px 22px rgba(224, 172, 70, 0.35));
 }
 
-.play-btn:active:not(:disabled) {
+.play-btn:active:not(:disabled),
+.play-stop:active {
   transform: translateY(0);
 }
 
-.play-btn:disabled {
-  opacity: 1;
-  color: var(--text-2);
-  filter: saturate(0.5) brightness(0.85);
+.play-btn-signin {
+  font-size: 15px;
+  letter-spacing: 0.03em;
 }
 
 .play-btn-cancel {
-  height: 54px;
   color: var(--text);
-  font-size: 16px;
-  filter: none;
 }
 
-.play-running {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+/* Running: the same plate, a little dimmed, with a green lamp. */
+.play-btn:disabled {
+  opacity: 1;
+  color: #d6f0b8;
+  filter: brightness(0.85) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
 }
 
+.play-lamp {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow:
+    0 0 0 3px rgba(143, 196, 74, 0.2),
+    0 0 10px rgba(143, 196, 74, 0.7);
+}
+
+/* Force-stop: a square plate of the same brass at the end of the row, in a slot kept free in every state. */
+.play-stop-slot {
+  flex: none;
+  width: 64px;
+  height: 64px;
+}
+
+.play-stop {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  color: #ff9d7c;
+}
+
+/* The readout beside the button: dark glass with a thin brass rim, so it reads over any part of the art. A fixed
+   height holds either the pack line or the whole progress block. */
 .play-info {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
+  max-width: 380px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 2px;
+  background: rgba(12, 10, 8, 0.74);
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px rgba(135, 89, 26, 0.65),
+    0 6px 16px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 2px #000;
+}
+
+.play-meta,
+.play-note {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .play-meta {
   color: var(--text-2);
-  font-size: 13px;
-  text-shadow: 0 1px 2px #000;
 }
 
 .play-note {
   margin-top: 4px;
   color: var(--accent-hi);
-  font-size: 13px;
   font-weight: 500;
-  text-shadow: 0 1px 2px #000;
-}
-
-.progress-block {
-  max-width: 560px;
 }
 
 .progress-label {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 7px;
-  font-weight: 500;
-  font-size: 13.5px;
-  text-shadow: 0 1px 2px #000;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
 }
 
-/* The progress bar is the recessed slider track from the game, filled with brass. */
+.progress-stage {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-count {
+  flex: none;
+  color: var(--text-2);
+  font-size: 12.5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* A recessed track: thin dark edge, brass rim (lit from below, as a recess is), dark inner edge, 14px well. */
 .progress {
-  position: relative;
-  height: 20px;
-  border: calc(var(--px) * 4) solid transparent;
-  border-image: url('./assets/pixel/slider.png') 4 fill / calc(var(--px) * 4) stretch;
-  image-rendering: pixelated;
+  height: 18px;
+  padding: 1px;
+  border: 1px solid;
+  border-color: #6f4a15 #a8782b #c4923a #845819;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #070605, #13110e 55%, #1d1915);
+  box-shadow:
+    0 0 0 1px #0d0b09,
+    inset 0 0 0 1px #0a0907,
+    inset 0 5px 5px -3px rgba(0, 0, 0, 0.9);
   overflow: hidden;
 }
 
 .progress-fill {
+  position: relative;
+  width: 0;
   height: 100%;
-  background: linear-gradient(180deg, #f8d982, #e0ac46 40%, #bd8a2e 70%, #87591a);
-  transition: width 0.25s ease-out;
+  overflow: hidden;
+  border-radius: 1px;
+  background: linear-gradient(180deg, #fbe6a2 0%, #eab957 30%, #c8902f 64%, #8e5c1b 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 225, 0.55),
+    inset -1px 0 0 rgba(90, 58, 16, 0.85);
+  transition: width 0.3s ease-out;
 }
 
-.progress-indeterminate .progress-fill {
-  width: 35%;
-  animation: slide 1.2s ease-in-out infinite;
+/* A slow glint along the brass while work is going on. */
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 250, 230, 0.4), transparent);
+  transform: translateX(-100%);
+  animation: progress-glint 2.4s ease-in-out infinite;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(-110%);
+@keyframes progress-glint {
+  60%,
+  100% {
+    transform: translateX(250%);
   }
+}
+
+/* No total yet: a soft-edged brass shuttle sliding back and forth. */
+.progress-indeterminate .progress-fill {
+  width: 32%;
+  transition: none;
+  animation: progress-shuttle 1.1s ease-in-out infinite alternate;
+  mask-image: linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+}
+
+.progress-indeterminate .progress-fill::after {
+  content: none;
+}
+
+@keyframes progress-shuttle {
   to {
-    transform: translateX(300%);
+    transform: translateX(212.5%); /* (100% - 32%) / 32%: from the left end to the right end */
   }
 }
 
 .progress-detail {
-  margin-top: 6px;
+  margin-top: 5px;
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-shadow: 0 1px 2px #000;
 }
 
 .home-grid {
@@ -962,7 +1087,8 @@ select.input {
 /* ---------------------------------------------------------------- mods */
 
 .mods {
-  max-width: 1000px;
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 
 .mods-toolbar {
@@ -991,27 +1117,47 @@ select.input {
   padding-left: 34px;
 }
 
+/* A recessed well (like the switch track) the height of the search field; the active segment is a small brass-rimmed
+   plate. Every segment has the same weight and padding, so switching never changes the control's width. */
 .segmented {
   display: inline-flex;
-  gap: 4px;
-  padding: 3px;
+  flex: none;
+  gap: 2px;
+  height: 36px;
+  padding: 4px;
   border-radius: 2px;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid var(--line);
+  background: var(--bg-input);
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px #553710;
 }
 
 .segmented button {
-  height: 30px;
+  height: 28px;
   padding: 0 12px;
   border: 0;
   border-radius: 2px;
   background: transparent;
   color: var(--text-2);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.segmented button:hover:not(:disabled):not(.active) {
+  background: rgba(255, 236, 200, 0.05);
+  color: var(--text);
 }
 
 .segmented button.active {
+  background: linear-gradient(180deg, #4a3a22, #2c2317);
+  box-shadow:
+    inset 0 0 0 1px #14110d,
+    inset 0 0 0 2px #a7742a,
+    inset 0 3px 0 rgba(248, 217, 130, 0.12);
   color: var(--accent-hi);
   text-shadow: 0 1px 0 #000;
 }
@@ -1020,12 +1166,13 @@ select.input {
   margin: 0 0 14px;
 }
 
+/* One column of rows; two side by side once each can be at least 600px wide. */
 .mod-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
   gap: 6px;
 }
 
@@ -1134,6 +1281,26 @@ select.input {
   flex-direction: column;
   gap: 16px;
   max-width: 860px;
+  margin-inline: auto;
+}
+
+/* Big windows: the cards flow into two columns across the full content width instead of one narrow strip. */
+@media (min-width: 1500px) {
+  .settings {
+    display: block;
+    max-width: var(--content-max);
+    columns: 2;
+    column-gap: 16px;
+  }
+
+  .settings > .card {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .settings .input-wide {
+    width: 240px;
+  }
 }
 
 .setting {

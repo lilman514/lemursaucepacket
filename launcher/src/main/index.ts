@@ -19,7 +19,8 @@ app.setPath('userData', devDataDir ? path.resolve(devDataDir) : path.join(app.ge
 if (process.platform === 'win32') app.setAppUserModelId(brand.appId)
 
 let mainWindow: BrowserWindow | null = null
-const BG = '#0f1115'
+// The renderer's titlebar colour (--titlebar-bg in styles.css): the native window buttons paint it behind themselves.
+const BG = '#171412'
 
 function send(channel: string, value: unknown): void {
   if (mainWindow && !mainWindow.isDestroyed()) mainWindow.webContents.send(channel, value)
@@ -44,7 +45,7 @@ function createWindow(): BrowserWindow {
     title: brand.name,
     backgroundColor: BG,
     titleBarStyle: 'hidden',
-    titleBarOverlay: process.platform === 'darwin' ? undefined : { color: BG, symbolColor: '#9aa3b2', height: 40 },
+    titleBarOverlay: process.platform === 'darwin' ? undefined : { color: BG, symbolColor: '#b9a98a', height: 40 },
     icon: isDev ? path.join(__dirname, '../../resources/icon.png') : undefined,
     webPreferences: {
       preload: path.join(__dirname, '../preload/index.js'),

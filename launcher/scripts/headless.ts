@@ -97,7 +97,7 @@ async function main(): Promise<void> {
     javaPath: game.java.javaw,
     account: { name, uuid: offlineUuid(name), accessToken: '0', userType: 'legacy' as const },
     memoryMB: Number(arg('memory', '4096')),
-    resolution: { width: 1280, height: 720, fullscreen: false },
+    resolution: { width: Number(arg('width', '1280')), height: Number(arg('height', '720')), fullscreen: false },
     // --join host:port connects straight to a server after loading (Quick Play).
     server: arg('join') ? { host: arg('join')!.split(':')[0], port: Number(arg('join')!.split(':')[1] ?? 25565) } : undefined,
     launcherName: 'smp-launcher-headless',

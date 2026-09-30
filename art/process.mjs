@@ -1,5 +1,6 @@
 // Turns the generated art in art/generated into the files the pack, launcher and server use.
 //   cd art && npm install && npm run process
+//   node process.mjs launcherKit      (only the named steps; see the list at the bottom)
 //
 // Sources (made with Higgsfield, GPT Image 2.5):
 //   keyart-a.png     title screen background
@@ -21,6 +22,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import { buildItems } from './items.mjs'
 import { BOARD, PANELS, PLAQUE, hubLayoutJson, writePauseLayout } from './hub.mjs'
 import { STYLE, board, checkbox, panel, plate, plateTile, pmmoAtlas, rowPlate, scroller, scrollerBackground, separator, sliderHandle, tab, textField } from './pixel-kit.mjs'
 
@@ -235,15 +237,26 @@ async function icons() {
   // Three hub buttons reuse quest emblems, so the menu and the quest book share symbols.
   await iconSheet('emblems.png', [['', '', '', 'capes'], ['', '', '', ''], ['backpack', '', '', 'map'], ['', 'account', 'quests', '']], [[HUB_ASSETS, 64, 0.02], [`${LAUNCHER_ASSETS}/icons`, 96, 0.02]])
   await iconSheet('skill-icons.png', SKILL_ICONS, [['pack/kubejs/assets/lemursaucepacket/textures/skills', 64, 0.02]])
+  // Skills added after the sheet was painted have a transparent master of their own.
+  for (const [file, name] of [['skill-enchanting.png', 'enchanting']]) {
+    await (await squareIcon(await cleanAlpha(source(file)), 64, 0.02)).toFile(target(`pack/kubejs/assets/lemursaucepacket/textures/skills/${name}.png`))
+  }
   console.log(`icons: ${HUB_ICONS.flat().length + 3} hub/launcher icons, ${SKILL_ICONS.flat().length} skill icons`)
 }
 
-/** Cuts one piece out of the hi-res UI kit sheet: the visible pixels inside `region`, with a little margin. */
+/**
+ * Cuts one piece out of the hi-res UI kit sheet: the visible pixels inside `region`, with a little margin. The region
+ * must hold the whole piece and none of its neighbours; a piece that touches the region's edge is cut off or has a
+ * neighbour's sliver in it, so that gets a warning.
+ */
 async function kitPiece(sheet, region, name, width) {
   const [left, top, right, bottom] = region
   const cut = await fromRaw(sheet).extract({ left, top, width: right - left, height: bottom - top }).raw().toBuffer({ resolveWithObject: true })
   const raw = { data: cut.data, info: { ...cut.info, channels: 4 } }
   const box = opaqueBounds(raw, 160)
+  if (!box.left || !box.top || box.left + box.width === raw.info.width || box.top + box.height === raw.info.height) {
+    console.warn(`  ${name}: the art touches the edge of its region [${region}]; the crop is cut off or catches a neighbour`)
+  }
   const margin = 6
   const cropped = await fromRaw(raw)
     .extract({ left: Math.max(0, box.left - margin), top: Math.max(0, box.top - margin), width: Math.min(raw.info.width - Math.max(0, box.left - margin), box.width + 2 * margin), height: Math.min(raw.info.height - Math.max(0, box.top - margin), box.height + 2 * margin) })
@@ -254,15 +267,110 @@ async function kitPiece(sheet, region, name, width) {
   console.log(`  ${name}.png ${info.width}x${info.height}`)
 }
 
-/** The launcher's hi-res frame kit (CSS border-image sources). */
+/**
+ * The account ring: only the round brass porthole, with its glass cut out so the player's head shows through.
+ * On the sheet the ring sits close to the frame's corner gear and the hover plate, so a box crop catches
+ * slivers of both. Instead this flood-fills the ring's own shape from the middle of `region`, measures where
+ * the brass band ends on the inside, and keeps only the annulus (with the band's thin dark inner edge).
+ */
+async function kitRing(sheet, region, name, size) {
+  const { data, info } = sheet
+  const W = info.width
+  const [x0, y0, x1, y1] = region
+  const at = (x, y) => (y * W + x) * 4
+  // The ring and its glass are one opaque blob: its bounds give the ring's centre and outer radii.
+  const blob = new Uint8Array(W * info.height)
+  const seed = ((y0 + y1) >> 1) * W + ((x0 + x1) >> 1)
+  const stack = [seed]
+  blob[seed] = 1
+  let [left, right, top, bottom] = [x1, x0, y1, y0]
+  while (stack.length) {
+    const p = stack.pop()
+    const x = p % W
+    const y = (p - x) / W
+    left = Math.min(left, x)
+    right = Math.max(right, x)
+    top = Math.min(top, y)
+    bottom = Math.max(bottom, y)
+    for (const [nx, ny] of [[x - 1, y], [x + 1, y], [x, y - 1], [x, y + 1]]) {
+      if (nx < x0 || nx >= x1 || ny < y0 || ny >= y1) continue
+      const q = ny * W + nx
+      if (!blob[q] && data[q * 4 + 3] >= 128) {
+        blob[q] = 1
+        stack.push(q)
+      }
+    }
+  }
+  const [cx, cy] = [(left + right + 1) / 2, (top + bottom + 1) / 2]
+  const [rx, ry] = [(right - left + 1) / 2, (bottom - top + 1) / 2]
+  // Walk rays inward until the colour stops being brass: that is the band's inner edge, as a fraction of the
+  // radius. Rays through a rivet stop early (its dark outline), so take a low percentile, not the median.
+  const brass = (x, y) => {
+    const i = at(Math.round(x), Math.round(y))
+    const [r, g, b] = [data[i], data[i + 1], data[i + 2]]
+    const max = Math.max(r, g, b)
+    return data[i + 3] >= 128 && 0.299 * r + 0.587 * g + 0.114 * b > 55 && (max - Math.min(r, g, b)) / max > 0.35 && r > b
+  }
+  const edges = []
+  for (let deg = 0; deg < 360; deg++) {
+    const [dx, dy] = [Math.cos((deg * Math.PI) / 180) * rx, Math.sin((deg * Math.PI) / 180) * ry]
+    let inBand = false
+    let gapFrom = null
+    for (let rho = 1; rho > 0.2; rho -= 0.002) {
+      if (brass(cx + dx * rho - 0.5, cy + dy * rho - 0.5)) {
+        inBand = true
+        gapFrom = null
+      } else if (inBand) {
+        gapFrom ??= rho
+        if (gapFrom - rho >= 0.03) {
+          edges.push(gapFrom)
+          break
+        }
+      }
+    }
+  }
+  edges.sort((a, b) => a - b)
+  // Keep about 5 sheet pixels of the dark line between brass and glass as the ring's inner edge.
+  const hole = edges[Math.floor(edges.length / 4)] - 5 / rx
+  // A square around the ring: alpha only inside the outer edge (with its anti-aliasing) and outside the hole.
+  const half = Math.ceil(Math.max(rx, ry)) + 6
+  const side = half * 2
+  const [ox, oy] = [Math.round(cx) - half, Math.round(cy) - half]
+  const out = Buffer.alloc(side * side * 4)
+  for (let y = 0; y < side; y++) {
+    for (let x = 0; x < side; x++) {
+      const [sx, sy] = [ox + x, oy + y]
+      if (sx < 0 || sy < 0 || sx >= W || sy >= info.height) continue
+      const rho = Math.hypot((sx + 0.5 - cx) / rx, (sy + 0.5 - cy) / ry)
+      if (rho > 1 + 3 / rx) continue
+      const i = at(sx, sy)
+      const alpha = Math.round(data[i + 3] * Math.min(1, Math.max(0, (rho - hole) * rx + 0.5)))
+      if (!alpha) continue
+      const o = (y * side + x) * 4
+      out[o] = data[i]
+      out[o + 1] = data[i + 1]
+      out[o + 2] = data[i + 2]
+      out[o + 3] = alpha
+    }
+  }
+  const file = target(`${LAUNCHER_ASSETS}/ui/${name}.png`)
+  await sharp(out, { raw: { width: side, height: side, channels: 4 } }).resize(size, size).png({ compressionLevel: 9 }).toFile(file)
+  const pct = (r) => ((r / half) * 100).toFixed(1)
+  console.log(`  ${name}.png ${size}x${size}: ring ${pct(rx)}% of the half-width, glass cut out inside ${pct(hole * rx)}%`)
+}
+
+/**
+ * The launcher's hi-res frame kit (CSS border-image sources). On ui-kit.png the frame spans y 95-1506 and the bottom
+ * row starts at y 1527: plaque x 33-762, button x 795-1167, hover button x 1206-1579, ring x 1620-2011.
+ */
 async function launcherKit() {
   const sheet = await cleanAlpha(source('ui-kit.png'))
   console.log('launcher kit:')
-  await kitPiece(sheet, [0, 0, 2048, 1490], 'frame', 1200)
-  await kitPiece(sheet, [0, 1490, 760, 2048], 'plaque', 720)
-  await kitPiece(sheet, [760, 1490, 1140, 2048], 'button', 400)
-  await kitPiece(sheet, [1140, 1490, 1520, 2048], 'button-hover', 400)
-  await kitPiece(sheet, [1520, 1440, 2048, 2048], 'ring', 400)
+  await kitPiece(sheet, [0, 0, 2048, 1516], 'frame', 1200)
+  await kitPiece(sheet, [0, 1516, 778, 2048], 'plaque', 720)
+  await kitPiece(sheet, [778, 1516, 1186, 2048], 'button', 400)
+  await kitPiece(sheet, [1186, 1516, 1600, 2048], 'button-hover', 400)
+  await kitRing(sheet, [1600, 1516, 2048, 2048], 'ring', 400)
 }
 
 function nineSlice(file, width, height, border) {
@@ -336,61 +444,13 @@ async function pixelKit() {
 }
 
 // Gear icon sheets (art/generated/gear-a.png, gear-b.png): pixel-art cells, cut to 32x32 item textures.
-const GEAR_SHEETS = {
-  'gear-a.png': [
-    ['prospector_helmet', 'prospector_chestplate', 'prospector_leggings', 'prospector_boots'],
-    ['aeronaut_helmet', 'aeronaut_chestplate', 'aeronaut_leggings', 'aeronaut_boots'],
-    ['duelist_helmet', 'duelist_chestplate', 'duelist_leggings', 'duelist_boots'],
-    ['compacted_diamond_helmet', 'compacted_diamond_chestplate', 'compacted_diamond_leggings', 'compacted_diamond_boots']
-  ],
-  'gear-b.png': [
-    ['compacted_netherite_helmet', 'compacted_netherite_chestplate', 'compacted_netherite_leggings', 'compacted_netherite_boots'],
-    ['anglers_cap', 'ember_crown', 'brass_sabre', 'sturdy_warhammer'],
-    ['stormcallers_sabre', 'lumber_axe', 'excavators_pickaxe', 'prospectors_pickaxe'],
-    ['harvesters_scythe', 'builders_wand', 'compacted_diamond', 'compacted_netherite']
-  ]
-}
-const ITEM_TEXTURES = 'pack/kubejs/assets/lemursaucepacket/textures/item'
-
 /**
- * Gear item icons: each sheet cell is trimmed, fitted into 30x30 and centred on a 32x32 canvas with nearest
- * sampling, so the model's pixel look survives as real pixels. Two bilinear passes first, so thin outlines don't
- * drop out; nearest for the last step.
+ * Item sprites (the pack's gear, materials, and the Relics effect icons Relics ships without): drawn in code as
+ * 16x16 pixel art in the Relics style by art/items.mjs, which replaced the earlier AI sheets (art/generated/gear-*.png
+ * stay only as the original references).
  */
-async function gearIcons() {
-  let count = 0
-  for (const [file, rows] of Object.entries(GEAR_SHEETS)) {
-    if (!existsSync(source(file))) {
-      console.log(`gear icons: ${file} missing, skipped`)
-      continue
-    }
-    const sheet = await cleanAlpha(source(file))
-    const cell = sheet.info.width / 4
-    for (const [row, names] of rows.entries()) {
-      for (const [col, name] of names.entries()) {
-        const cut = await fromRaw(sheet).extract({ left: col * cell, top: row * cell, width: cell, height: cell }).raw().toBuffer({ resolveWithObject: true })
-        const raw = { data: cut.data, info: { ...cut.info, channels: 4 } }
-        const box = opaqueBounds(raw, 80)
-        const side = Math.max(box.width, box.height)
-        const cropped = await fromRaw(raw)
-          .extract(box)
-          .resize(side, side, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-          .resize(120, 120, { kernel: 'lanczos3' })
-          .resize(30, 30, { kernel: 'nearest' })
-          .png()
-          .toBuffer()
-        const { data, info } = await sharp({ create: { width: 32, height: 32, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
-          .composite([{ input: cropped, left: 1, top: 1 }])
-          .raw()
-          .toBuffer({ resolveWithObject: true })
-        // Hard alpha: pixel art has no half-transparent edges.
-        for (let i = 3; i < data.length; i += 4) data[i] = data[i] >= 110 ? 255 : 0
-        await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } }).png({ compressionLevel: 9 }).toFile(target(`${ITEM_TEXTURES}/${name}.png`))
-        count++
-      }
-    }
-  }
-  console.log(`gear icons: ${count} item textures`)
+async function items() {
+  await buildItems()
 }
 
 // Armour as worn: vanilla layer textures tinted per material (see gear/gear.mjs MATERIALS). The vanilla
@@ -516,15 +576,8 @@ async function pauseMenu() {
   console.log('ESC menu: lemursaucepacket_pause.txt, config/lemursaucepacket/hub_layout.json')
 }
 
-await backgrounds()
-await logo()
-await emblems()
-await installerArt()
-await questPanel()
-await icons()
-await launcherKit()
-await pixelKit()
-await pauseMenu()
-await gearIcons()
-await armorLayers()
-await capes()
+// `node process.mjs` runs every step; naming steps runs only those, e.g. `node process.mjs launcherKit`.
+const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes }
+const only = process.argv.slice(2)
+for (const name of only) if (!(name in steps)) throw new Error(`Unknown step "${name}". Steps: ${Object.keys(steps).join(', ')}`)
+for (const [name, step] of Object.entries(steps)) if (!only.length || only.includes(name)) await step()

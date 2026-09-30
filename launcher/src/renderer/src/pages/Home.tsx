@@ -193,15 +193,25 @@ interface PlayPanelProps {
   note?: string
 }
 
+/**
+ * The play row: one main button that keeps its size in every state, a readout plate of fixed height, and a slot for
+ * the force-stop button that is kept free in every state, so nothing in the hero moves between idle and playing.
+ */
 function PlayPanel({ account, status, progress, onPlay, onSignIn, meta, note }: PlayPanelProps): ReactElement {
   const preparing = status.state === 'preparing'
   const running = status.state === 'running'
   const pct = progress?.total ? Math.min(100, Math.round(((progress.current ?? 0) / progress.total) * 100)) : null
+  const count =
+    progress?.unit === 'bytes' && progress.total
+      ? `${formatBytes(progress.current ?? 0)} / ${formatBytes(progress.total)}`
+      : progress?.unit === 'files' && progress.total
+        ? `${progress.current ?? 0} / ${progress.total}`
+        : ''
 
   let button: ReactElement
   if (!account) {
     button = (
-      <button className="play-btn" onClick={onSignIn}>
+      <button className="play-btn play-btn-signin" onClick={onSignIn}>
         Sign in to play
       </button>
     )
@@ -213,14 +223,9 @@ function PlayPanel({ account, status, progress, onPlay, onSignIn, meta, note }: 
     )
   } else if (running) {
     button = (
-      <div className="play-running">
-        <button className="play-btn" disabled>
-          Playing
-        </button>
-        <button className="icon-btn icon-btn-lg" title="Force-stop the game" onClick={() => void window.launcher.stopGame()}>
-          <StopIcon size={18} />
-        </button>
-      </div>
+      <button className="play-btn" disabled>
+        <span className="play-lamp" /> Playing
+      </button>
     )
   } else {
     button = (
@@ -234,28 +239,40 @@ function PlayPanel({ account, status, progress, onPlay, onSignIn, meta, note }: 
     <div className="play-panel">
       {button}
       <div className="play-info">
-        {preparing && progress ? (
-          <div className="progress-block">
+        {preparing ? (
+          <>
             <div className="progress-label">
-              <span>{progress.label}</span>
-              <span className="muted">
-                {progress.unit === 'bytes' && progress.total
-                  ? `${formatBytes(progress.current ?? 0)} / ${formatBytes(progress.total)}`
-                  : progress.unit === 'files' && progress.total
-                    ? `${progress.current ?? 0} / ${progress.total}`
-                    : ''}
-              </span>
+              <span className="progress-stage">{progress?.label ?? 'Getting ready…'}</span>
+              <span className="progress-count">{count}</span>
             </div>
-            <div className={`progress${pct === null ? ' progress-indeterminate' : ''}`}>
-              <div className="progress-fill" style={{ width: pct === null ? undefined : `${pct}%` }} />
+            {/* Keyed by stage, so a new stage starts from an empty bar instead of rewinding the last one. */}
+            <div
+              key={progress?.label}
+              className={`progress${pct === null ? ' progress-indeterminate' : ''}`}
+              role="progressbar"
+              aria-label={progress?.label ?? 'Getting ready'}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={pct ?? undefined}
+            >
+              <div className="progress-fill" style={pct === null ? undefined : { width: `${pct}%` }} />
             </div>
-            <div className="progress-detail muted small">{progress.detail ?? ' '}</div>
-          </div>
+            <div className="progress-detail">{progress?.detail || ' '}</div>
+          </>
         ) : (
           <>
-            <div className="play-meta">{running ? 'Minecraft is running. Have fun!' : meta}</div>
+            <div className="play-meta" title={running ? undefined : meta}>
+              {running ? 'Minecraft is running. Have fun!' : meta}
+            </div>
             {note && !running && <div className="play-note">{note}</div>}
           </>
+        )}
+      </div>
+      <div className="play-stop-slot">
+        {running && (
+          <button className="play-stop" title="Force-stop the game" aria-label="Force-stop the game" onClick={() => void window.launcher.stopGame()}>
+            <StopIcon size={20} />
+          </button>
         )}
       </div>
     </div>
