@@ -486,7 +486,9 @@ function fallingTreeConfig() {
         damageMultiplicand: 0.25,
         damageRounding: 'ROUND',
         speedMultiplicand: 0,
-        forceToolUsage: true
+        // true would let logs be broken ONLY with the allowed tools: no fists, no ordinary axes. The allowed list
+        // alone is what keeps whole-tree felling to the Lumber Axe.
+        forceToolUsage: false
       },
       player: { allowedTags: [] },
       enchantment: { registerEnchant: false, registerSpecificEnchant: false, hideEnchant: true, requireEnchantment: false }

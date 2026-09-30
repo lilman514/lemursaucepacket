@@ -31,7 +31,7 @@
     "damageMultiplicand": 0.25,
     "damageRounding": "ROUND",
     "speedMultiplicand": 0,
-    "forceToolUsage": true
+    "forceToolUsage": false
   },
   "player": {
     "allowedTags": []
