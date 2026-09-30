@@ -103,6 +103,8 @@ const lsSkillHearts = (player) => {
 const lsLives = (player) => LS.startingHearts + lsSkillHearts(player) + lsBalance(player)
 const lsMaxLives = (player) => LS.startingHearts + LS.maxBonusHearts + lsSkillHearts(player)
 const lsProtected = (player) => {
+  // 0 hours (the owner's choice): no protection at all, including windows already stored on players.
+  if (!(LS.newcomerProtectionHours > 0)) return false
   let data = lsData(player)
   if (data.getBoolean('lsp_protect_off')) return false
   let play = lsPlayTime(player)
@@ -110,6 +112,7 @@ const lsProtected = (player) => {
   return data.contains('lsp_protect_until') && play < data.getInt('lsp_protect_until')
 }
 const lsProtectionLeft = (player) => {
+  if (!(LS.newcomerProtectionHours > 0)) return 0
   let data = lsData(player)
   let play = lsPlayTime(player)
   let until = Math.max(LS.newcomerProtectionHours * LS_TICKS_PER_HOUR, data.contains('lsp_protect_until') ? data.getInt('lsp_protect_until') : 0)
@@ -318,7 +321,7 @@ PlayerEvents.respawned((event) => {
     let data = lsData(player)
     if (data.getBoolean('lsp_new_life')) {
       data.putBoolean('lsp_new_life', false)
-      lsTitle(player, 'A new life', `${lsLives(player)} hearts. ${LS.newcomerProtectionHours} hours of protection.`, 'gold')
+      lsTitle(player, 'A new life', `${lsLives(player)} hearts.` + (LS.newcomerProtectionHours > 0 ? ` ${LS.newcomerProtectionHours} hours of protection.` : ''), 'gold')
       player.tell(Text.gray('You start over. Your skills, quests and capes are still yours.'))
     } else if (data.getBoolean('lsp_warn_pending')) {
       data.putBoolean('lsp_warn_pending', false)
@@ -378,7 +381,7 @@ function lsNewLife(player, erased) {
   }
   lsApplyHealth(player)
   player.setHealth(player.getMaxHealth())
-  lsTitle(player, 'A new life', `${lsLives(player)} hearts. ${LS.newcomerProtectionHours} hours of protection.`, 'gold')
+  lsTitle(player, 'A new life', `${lsLives(player)} hearts.` + (LS.newcomerProtectionHours > 0 ? ` ${LS.newcomerProtectionHours} hours of protection.` : ''), 'gold')
   lsLog(player.server, `${player.username} starts life ${lsGen(player)}${erased ? ' (erased)' : ' (nothing erased: lsp_fixes not loaded)'}`)
 }
 

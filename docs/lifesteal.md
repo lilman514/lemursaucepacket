@@ -23,10 +23,7 @@ When you die you lose one heart of maximum health and a **Heart** drops where yo
 
 Hearts never despawn. Fire, lava, cactus and explosions cannot destroy them. A Heart that would fall into the void floats where you died instead.
 
-**Two deaths cost nothing:**
-
-- **You are new.** For your first two hours of play, and for two hours after an elimination, you lose no hearts and drop no Heart. Hitting another player ends this early.
-- **The same player killed you less than 30 minutes ago.** Spawn-camping pays once.
+**Every death counts**, whatever killed you, from your first minute on the server. The one exception: **the same player killed you less than 30 minutes ago.** Spawn-camping pays once.
 
 You get a warning at three, two and one heart. At one heart your next death eliminates you.
 
@@ -81,7 +78,7 @@ If you accept, this happens:
 - **Every block you ever placed is removed**, in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched. Blocks placed with a schematicannon or moved by contraptions and ships are not tracked and stay.
 - **Every item that is yours is deleted**, wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box, on the ground, in your ender chest, and in other players' inventories, online or not.
 - **Containers you placed break.** Anything inside that belongs to someone else drops on the floor.
-- You respawn at world spawn with 10 hearts, an empty inventory and two hours of newcomer protection. Your skills, quests and capes stay.
+- You respawn at world spawn with 10 hearts, an empty inventory. Your skills, quests and capes stay.
 
 Admins keep an archive of everything erased and can put it back if the erasure was a bug.
 
@@ -122,7 +119,6 @@ The compass follows the item as it moves. Once someone picks the item up, a Lost
 
 - Hearts are conserved. Deaths move them, the recipe is the only source, Hitpoints regrows at most nine, and elimination puts the loser's last Heart on the ground like any other.
 - The same killer gets one Heart per victim per 30 minutes.
-- New and freshly eliminated players cannot lose hearts for two hours.
 - Duplicated Hearts do not work: serial numbers.
 - The server is whitelisted. Alt accounts are the admins' problem, and every heart that changes hands is logged.
 
@@ -133,7 +129,7 @@ The compass follows the item as it moves. Once someone picks the item up, a Lost
 | `/hearts` | Your hearts and where they come from |
 | `/revive <player>` | Bring an eliminated player back with the Heart in your hand |
 | `/lsp hearts get\|set\|add <player> [n]` | Admin: read or change a player's stock |
-| `/lsp lifesteal protect <player> <hours>` | Admin: give newcomer protection |
+| `/lsp lifesteal protect <player> <hours>` | Admin: give newcomer protection (only when `newcomerProtectionHours` in lifesteal.json is above 0; it is 0) |
 | `/lsp lifesteal eliminate\|revive <player>` | Admin: force or undo elimination |
 | `/lsp lifesteal log [lines]` | Admin: recent heart events |
 | `/lsp erase preview <player>` | Admin: what an erasure would remove |

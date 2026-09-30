@@ -306,7 +306,7 @@ hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
 [[files]]
 file = "config/lemursaucepacket/lifesteal.json"
-hash = "d539d0d8ebf1ae693792eb239dbd47c92e67807bd8a3bd64a4a30b60a94dee72"
+hash = "9e8e91b9d710b71a2cf7e0105b927bfcdbd5a6073f36a73b155fbd31e360cb89"
 
 [[files]]
 file = "config/lemursaucepacket/milestones.json"
@@ -646,7 +646,7 @@ hash = "18d1bb9a8f1255d56a25a85e9b5837869709ac1fb5f7b049c32996c8c9fbbaa1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
-hash = "dbb06649d9b1ce4507c332becda4a69e488422a695b75cb790086f09f99f648a"
+hash = "950970b34da7242be865e2b95f37570b9948d5ad7b73fd5d6e1f597af42c832c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
@@ -2678,7 +2678,7 @@ hash = "35fd20a294a26e56e825aea5bce8a322bbdbfb386cd8e89208fc2bfc51f8f81b"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal.js"
-hash = "b2b09b9714b6a02950d48d5c84ca1214cb6a6e097689324a59edbbfa6daa834b"
+hash = "ec2c159882a0ab03d5d8d2cf5414e3663c7b7709f7f6f6484406fd556bde2d7a"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal_recipes.js"

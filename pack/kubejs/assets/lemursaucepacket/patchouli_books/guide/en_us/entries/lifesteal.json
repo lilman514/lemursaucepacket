@@ -20,11 +20,11 @@
     {
       "type": "patchouli:text",
       "title": "Dying",
-      "text": "When you die you lose one heart of maximum health and a $(bold)Heart$() drops where you fell. If a grave is placed (see below), the Heart is never inside it. It lies on the ground next to the grave, where anyone can take it.$(br2)Hearts never despawn. Fire, lava, cactus and explosions cannot destroy them. A Heart that would fall into the void floats where you died instead.$(br2)$(bold)Two deaths cost nothing:$()"
+      "text": "When you die you lose one heart of maximum health and a $(bold)Heart$() drops where you fell. If a grave is placed (see below), the Heart is never inside it. It lies on the ground next to the grave, where anyone can take it.$(br2)Hearts never despawn. Fire, lava, cactus and explosions cannot destroy them. A Heart that would fall into the void floats where you died instead.$(br2)$(bold)Every death counts$(), whatever killed you, from your first minute on the server. The one exception: $(bold)the same player killed you less than 30 minutes ago.$() Spawn-camping pays once."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)You are new.$() For your first two hours of play, and for two hours after an elimination, you lose no hearts and drop no Heart. Hitting another player ends this early.$(br)$(li)$(bold)The same player killed you less than 30 minutes ago.$() Spawn-camping pays once.$(br2)You get a warning at three, two and one heart. At one heart your next death eliminates you."
+      "text": "You get a warning at three, two and one heart. At one heart your next death eliminates you."
     },
     {
       "type": "patchouli:text",
@@ -69,7 +69,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": " at world spawn with 10 hearts, an empty inventory and two hours of newcomer protection. Your skills, quests and capes stay.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
+      "text": " at world spawn with 10 hearts, an empty inventory. Your skills, quests and capes stay.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
     },
     {
       "type": "patchouli:text",
@@ -92,16 +92,16 @@
     {
       "type": "patchouli:text",
       "title": "Rules against farming",
-      "text": "$(li)Hearts are conserved. Deaths move them, the recipe is the only source, Hitpoints regrows at most nine, and elimination puts the loser's last Heart on the ground like any other.$(br)$(li)The same killer gets one Heart per victim per 30 minutes.$(br)$(li)New and freshly eliminated players cannot lose hearts for two hours.$(br)$(li)Duplicated Hearts do not work: serial numbers.$(br)$(li)The server is whitelisted. Alt accounts are the admins' problem, and every heart that changes hands is logged."
+      "text": "$(li)Hearts are conserved. Deaths move them, the recipe is the only source, Hitpoints regrows at most nine, and elimination puts the loser's last Heart on the ground like any other.$(br)$(li)The same killer gets one Heart per victim per 30 minutes.$(br)$(li)Duplicated Hearts do not work: serial numbers.$(br)$(li)The server is whitelisted. Alt accounts are the admins' problem, and every heart that changes hands is logged."
     },
     {
       "type": "patchouli:text",
       "title": "Commands",
-      "text": "$(#b9a98a)Command - What it does$()$(br)$(bold)$(#e0ac46)/hearts$()$() - Your hearts and where they come from$(br)$(bold)$(#e0ac46)/revive <player>$()$() - Bring an eliminated player back with the Heart in your hand$(br)$(bold)`/lsp hearts get\\$() - set\\ - add <player> [n]` - Admin: read or change a player's stock$(br)$(bold)$(#e0ac46)/lsp lifesteal protect <player> <hours>$()$() - Admin: give newcomer protection$(br)$(bold)`/lsp lifesteal eliminate\\$() - revive <player>` - Admin: force or undo elimination$(br)$(bold)$(#e0ac46)/lsp lifesteal log [lines]$()$() - Admin: recent heart events$(br)$(bold)$(#e0ac46)/lsp"
+      "text": "$(#b9a98a)Command - What it does$()$(br)$(bold)$(#e0ac46)/hearts$()$() - Your hearts and where they come from$(br)$(bold)$(#e0ac46)/revive <player>$()$() - Bring an eliminated player back with the Heart in your hand$(br)$(bold)`/lsp hearts get\\$() - set\\ - add <player> [n]` - Admin: read or change a player's stock$(br)$(bold)$(#e0ac46)/lsp lifesteal protect <player> <hours>$()$() - Admin: give newcomer protection (only when $(#e0ac46)newcomerProtectionHours$() in lifesteal.json is above 0; it is 0)$(br)$(bold)`/lsp lifesteal eliminate\\$() - revive <player>` - Admin: force or undo elimination$(br)$(bold)$(#e0ac46)"
     },
     {
       "type": "patchouli:text",
-      "text": " erase preview <player>$()$() - Admin: what an erasure would remove$(br)$(bold)$(#e0ac46)/lsp archive list$() and $(#e0ac46)/lsp restore ...$()$() - Admin: put erased blocks or items back"
+      "text": "/lsp lifesteal log [lines]$()$() - Admin: recent heart events$(br)$(bold)$(#e0ac46)/lsp erase preview <player>$()$() - Admin: what an erasure would remove$(br)$(bold)$(#e0ac46)/lsp archive list$() and $(#e0ac46)/lsp restore ...$()$() - Admin: put erased blocks or items back"
     }
   ]
 }

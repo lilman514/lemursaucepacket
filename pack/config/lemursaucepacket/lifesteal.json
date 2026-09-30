@@ -5,7 +5,7 @@
   "maxBonusHearts": 10,
   "hitpointsHpPerLevel": 0.2,
   "sameKillerCooldownMinutes": 30,
-  "newcomerProtectionHours": 2,
+  "newcomerProtectionHours": 0,
   "protectionEndsOnAttack": true,
   "heartPickupDelayTicks": 40,
   "warnAtHearts": [3, 2, 1],
