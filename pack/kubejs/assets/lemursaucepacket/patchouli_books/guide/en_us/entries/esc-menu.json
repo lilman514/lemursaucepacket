@@ -24,7 +24,20 @@
     {
       "type": "patchouli:text",
       "title": "Game menu (middle)",
-      "text": "Every normal pause-menu button: Back to Game, Settings, Mods, Advancements, Statistics, Player Reporting, Give Feedback, Report Bugs, Disconnect. Buttons other mods add appear in the free slots or in the small tray under Disconnect."
+      "text": "Every normal pause-menu button: Back to Game, Settings, Mods, Advancements, Statistics, Player Reporting, Give Feedback, Report Bugs, Disconnect. Buttons other mods add appear in the free slots or in the small tray under Disconnect.$(br2)Bottom right: $(bold)HUD Layout$() (see below)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "HUD Layout",
+      "text": "Moves the parts of your screen that other mods draw. The game stays visible behind a light shade, with a brass box over each part:$(br2)$(li)the minimap$(br)$(li)Jade (the block and mob info at the top)$(br)$(li)the voice chat icon and the voice group heads$(br)$(li)Create's goggle info$(br)$(li)Project MMO's XP gains and skill list$(br)$(li)pinned quests$(br)$(li)status effects and boss bars"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shift to place one freely. Arrow keys nudge the box you clicked. Right-click a box, or click it and press $(bold)Reset$(), to put it back where its mod puts it; $(bold)Reset all$() does every box. $(bold)Save$() applies the new layout at once, $(bold)Cancel$() (or Esc) leaves everything as it was.$(br2)Pinned quests can only sit at an edge or a corner, so that box jumps to the nearest one when you let go. A box marked \"(off)\" belongs to something that's switched off in its mod; you can still move it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each position is saved in that mod's own settings, so your layout stays through pack updates. Also: $(#e0ac46)/hudlayout$(), or bind $(bold)Edit HUD layout$() under Controls > LemurSaucePacket."
     },
     {
       "type": "patchouli:text",

@@ -46,6 +46,12 @@ export const HUB_BUTTONS = {
   ]
 }
 
+// The HUD layout editor (the pack's companion mod, lsp_fixes): FancyMenu opens the screen class directly, so no
+// key has to be bound. (A legacy buttonaction without the splitter is read as one action id and does nothing.) It sits at the right end of the Game Menu panel's bottom row; the tray of small mod
+// buttons fills that row from the left.
+export const HUD_BUTTON_W = BUTTON.w + 20
+export const HUD_BUTTON = ['hud', 'HUD Layout', 'Move the minimap, Jade, voice icons, XP pop-ups and other HUD parts (/hudlayout)', 'opengui;net.lemursaucepacket.fixes.hud.HudLayoutScreen%btnaction_splitter_fm%', 'settings']
+
 // Minecraft's font: 5px glyphs plus 1px spacing for most capitals (I is 3+1), so a label can be centred by hand.
 const capsWidth = (s) => [...s].reduce((w, ch) => w + (ch === 'I' ? 4 : ch === ' ' ? 4 : 6), 0) - 1
 
@@ -58,9 +64,9 @@ const text = (id, source, x, y, width, color = '#F8D982') =>
   element('text_v2', id, { source_mode: 'direct', source, anchor_point: 'mid-centered', x, y: y - 3, width: width + 4, height: 16, text_border: 0, base_color: color, shadow: true, auto_line_wrapping: false, enable_scrolling: false })
 const title = (label, centerX, y) => text(`title_${label.toLowerCase().replace(/\W/g, '_')}`, label, centerX - Math.floor(capsWidth(label) / 2), y, capsWidth(label) + 2)
 
-function hubButton([id, label, description, buttonaction, icon], x, y) {
+function hubButton([id, label, description, buttonaction, icon], x, y, width = BUTTON.w) {
   return (
-    element('custom_button', id, { anchor_point: 'mid-centered', x, y, width: BUTTON.w, height: BUTTON.h, label, description, buttonaction }) +
+    element('custom_button', id, { anchor_point: 'mid-centered', x, y, width, height: BUTTON.h, label, description, buttonaction }) +
     image(`${id}_icon`, `${ASSET}/icons/${icon}.png`, x + 3, y + 3, 14, 14)
   )
 }
@@ -118,7 +124,10 @@ export async function pauseLayout(logoFile) {
     // Where the player is, under the adventure buttons.
     info(`X ${placeholder('player_x_coordinate')}  Z ${placeholder('player_z_coordinate')}`, 0),
     info(`Y ${placeholder('player_y_coordinate')}  ${placeholder('world_daytime_hour')}:${placeholder('world_daytime_minute')}`, 1),
-    info(replace(replace(placeholder('current_biome'), 'minecraft:', ''), '_', ' '), 2)
+    info(replace(replace(placeholder('current_biome'), 'minecraft:', ''), '_', ' '), 2),
+    // HUD Layout: right-aligned with the vanilla buttons, level with Capes. 20 px wider than the side buttons so
+    // the centred label clears the icon.
+    hubButton(HUD_BUTTON, VANILLA.x + VANILLA.fullWidth - HUD_BUTTON_W, 86, HUD_BUTTON_W)
   ].join('\n')
 }
 

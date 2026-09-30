@@ -17,3 +17,5 @@ The pack sets these defaults so nothing clashes. Change any of them in Settings 
 | Z | Zoom |
 
 The ESC menu's buttons press these keys for you, so the menu works even if you rebind them.
+
+**Edit HUD layout** (Controls > LemurSaucePacket) has no key by default. The ESC menu's HUD Layout button and `/hudlayout` open the same screen.

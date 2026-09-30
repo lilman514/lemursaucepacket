@@ -405,3 +405,28 @@ element {
   enable_scrolling = false
   stay_on_screen = true
 }
+
+element {
+  element_type = custom_button
+  instance_identifier = lsp_pause_hud_30
+  anchor_point = mid-centered
+  x = -2
+  y = 86
+  width = 104
+  height = 20
+  label = HUD Layout
+  description = Move the minimap, Jade, voice icons, XP pop-ups and other HUD parts (/hudlayout)
+  buttonaction = opengui;net.lemursaucepacket.fixes.hud.HudLayoutScreen%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+element {
+  element_type = image
+  instance_identifier = lsp_pause_hud_icon_31
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/icons/settings.png
+  anchor_point = mid-centered
+  x = 1
+  y = 89
+  width = 14
+  height = 14
+  stay_on_screen = true
+}

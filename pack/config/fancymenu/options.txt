@@ -132,7 +132,7 @@ B:debug_overlay_show_advanced_screen_category = 'true';
 
 ##[tutorial]
 
-B:show_welcome_screen = 'true';
+B:show_welcome_screen = 'false';
 
 
 ##[keyframe_editor]

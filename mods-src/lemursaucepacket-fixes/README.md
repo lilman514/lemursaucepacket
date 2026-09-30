@@ -15,6 +15,14 @@ The system is described for players in `docs/lifesteal.md`; the hearts themselve
 
 Compile-only dependencies from Modrinth's Maven (never bundled): GraveStone Mod, Sophisticated Backpacks + Core, Curios, Project MMO.
 
+## HUD layout editor (client)
+
+`net.lemursaucepacket.fixes.hud`. The ESC menu's *HUD Layout* button (FancyMenu `opengui;net.lemursaucepacket.fixes.hud.HudLayoutScreen`, written by `art/hub.mjs`), `/hudlayout` and the unbound *Edit HUD layout* key open `HudLayoutScreen`: one draggable box per HUD part over the live game. Save writes each part into its own mod's config (`HudElements`, one class per part; the table is in PACK_DESIGN.md, *HUD layout editor*). The mods are reached by reflection, so there is no compile dependency; a part whose mod is missing or renamed something is logged and left out.
+
+Our own `config/lsp_fixes-client.toml` holds the two vanilla parts this mod moves (status effects, boss bars: a translate around their NeoForge GUI layers) and a copy of the Project MMO positions, written back on join if a pack update replaced `pmmo-client.toml`.
+
+After updating Xaero's Minimap, Jade, Simple Voice Chat, Create, Project MMO or FTB Quests: open the editor and check the log for "HUD layout: leaving out"; the names each part uses are in `HudElements`.
+
 ## What it fixes (Project MMO)
 
 Project MMO 2.10.47, inventory skills panel:

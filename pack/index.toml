@@ -6,7 +6,7 @@ hash = "ca6ceb882bcc50e62253db61156068fe8fb3d0fa90a2d5968d0f32344486bb4d"
 
 [[files]]
 file = "config/fallingtree.json"
-hash = "bf4524677838188f2b4ee7470598d3494c22a91fa3fe6151953d1d98090c1460"
+hash = "7e27fab728620e04b80d73db32c8da73b77cddc734523d0979ebb8ce82f2fea4"
 
 [[files]]
 file = "config/fancymenu/assets/lemursaucepacket/icons/account.png"
@@ -122,7 +122,7 @@ hash = "89c7757dc3aacc26acb364469a56259ab50b81fb93ee2844d5a57a2b6d87be7a"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_pause.txt"
-hash = "49bc305af4c67536125b7a7255088ef0555ddb4dc02a44ec0b36b1f33a5001db"
+hash = "596897115dff682b4b0dce937e69622630fb329e00427b2d251d4fd7690d0d55"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_title.txt"
@@ -130,7 +130,7 @@ hash = "c9ce1ddbc779e4264f2bcee065fa9441228f1ae6d69906ffa34792f3780f3665"
 
 [[files]]
 file = "config/fancymenu/options.txt"
-hash = "f025f7ebadbc1ea831ad5f5d117d46b359dffdff3c46f782e1381354b0369c98"
+hash = "6df834ff0756d1d57f5ff20abcc8d5e716f7736fe38f83f390d5b4f539b407ab"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
@@ -622,7 +622,7 @@ hash = "9e970b93c877ab35230c4d95af818edbee2e1f7cc0bfa2ba109093c14cbbff09"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/esc-menu.json"
-hash = "a07b67a36a1af9eb51118f5136f1df429aeea0f754f4b282add2a9cd3a3a0d87"
+hash = "af8bd1267d581ca7f302746386864b57434dea4c11b6c7b9c9d9735996da3a2c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
@@ -638,7 +638,7 @@ hash = "ce2738d9828dea3fe23a10bb02dc037d4909371e28aa8f272ad817bea89e1969"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/keys.json"
-hash = "f6f5ead5cb0097b6de26def4fd8a3a5e9ff02c35e96f466ba7a75d6f20165623"
+hash = "8adff5998b68ff8ca5f07e71515a264435d7670eb11be7fac57de3db9c2c6b22"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/launcher.json"
@@ -3162,8 +3162,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.2.0.jar"
-hash = "0737772eeb615349d54525baa457021f13667c8d61ffcafa4adae085a06231a2"
+file = "mods/lsp_fixes-1.3.0.jar"
+hash = "6531fd113f438b345c56b9c34ffc88e5f0c987b2ee80b3f00283325048aa46b3"
 
 [[files]]
 file = "mods/macaws-furniture.pw.toml"
