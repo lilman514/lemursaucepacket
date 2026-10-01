@@ -250,7 +250,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Atmosphere: Subtle Effects, Particle Rain, Falling Leaves, Visuality, AmbientSounds.
 - Players: Wavey Capes, 3D Skin Layers, dynamic lights.
 - Interface: Legendary Tooltips, and a painted title and loading screen made with FancyMenu and Drippy.
-- Shaders: Complementary Reimagined with Iris, off by default and one toggle away in the launcher.
+- Shaders: Iris with three presets on the launcher's Settings page (Graphics): Lite (MakeUp Ultra Fast), Balanced (Complementary Reimagined) and Fancy (Complementary Unbound); Off by default. The presets live in publish/feed.json (feed `shaders`); picking one switches the optional Iris mod on and the launcher writes that pack into config/iris.properties once, so a pack chosen in game with Iris's menu (O) survives later launches. The pack no longer ships iris.properties.
 
 **Information:**
 - JEI with Create JEI Compat (paged sequenced-assembly recipes), JEI World Gen (ore heights), Just Enough Professions, Just Enough Breeding and JEED.

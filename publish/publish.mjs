@@ -79,7 +79,8 @@ copyFileSync(output, path.join(packsDir, 'latest.mrpack'))
 
 const data = readFileSync(output)
 const sha1 = createHash('sha1').update(data).digest('hex')
-const modCount = (readFileSync(path.join(packDir, 'index.toml'), 'utf8').match(/^metafile\s*=\s*true/gm) ?? []).length
+// Mods only: shader and resource packs are packwiz metafiles too.
+const modCount = [...readFileSync(path.join(packDir, 'index.toml'), 'utf8').matchAll(/^file\s*=\s*"mods\/[^"]+\.pw\.toml"/gm)].length
 
 // Optional mods marked `[option] default = false` in their .pw.toml start switched off in the launcher.
 // They're identified by Modrinth project id so a player's choice survives mod updates.
@@ -96,6 +97,7 @@ const previous = existsSync(path.join(siteDir, 'launcher.json')) ? JSON.parse(re
 const launcherJson = {
   schema: 1,
   ...feed,
+  ...(feed.shaders ? { shaders: shaderFeed(feed.shaders) } : {}),
   pack: { version, url: `packs/${fileName}`, sha1, size: data.length, minecraft, loader, loaderVersion, modCount },
   optionalDefaultOff,
   generatedAt: new Date().toISOString()
@@ -141,6 +143,23 @@ async function checkLocalJars(mrpackPath) {
     if (hash(packed) !== hash(onDisk)) throw new Error(`${f} in the exported pack (${packed.length} bytes) is not the one in pack/mods (${onDisk.length} bytes): run the publish again`)
   }
   console.log(`Checked ${jars.length} local jar(s) in the pack against pack/mods`)
+}
+
+/**
+ * The launcher's shader picker: feed.json names packwiz files, the launcher needs the Iris mod's Modrinth id (its
+ * optional-mod key) and each preset's zip name in shaderpacks/. A preset whose pack is missing stops the publish.
+ */
+function shaderFeed(shaders) {
+  const toml = (rel) => {
+    const file = path.join(packDir, rel)
+    if (!existsSync(file)) throw new Error(`feed.json shaders: ${rel} is not in the pack`)
+    return readFileSync(file, 'utf8')
+  }
+  const iris = /^mod-id\s*=\s*"([^"]+)"/m.exec(toml(`mods/${shaders.iris}.pw.toml`))?.[1]
+  if (!iris) throw new Error(`feed.json shaders: no Modrinth id in mods/${shaders.iris}.pw.toml`)
+  const presets = shaders.presets.map(({ shaderpack, ...p }) => ({ ...p, file: tomlString(toml(`shaderpacks/${shaderpack}.pw.toml`), 'filename') }))
+  if (!presets.some((p) => p.id === shaders.defaultPreset)) throw new Error(`feed.json shaders: defaultPreset ${shaders.defaultPreset} is not a preset`)
+  return { iris, defaultPreset: shaders.defaultPreset, presets }
 }
 
 /** Moves files that only mean something to the dedicated server into server-overrides (packwiz can only emit shared overrides). */

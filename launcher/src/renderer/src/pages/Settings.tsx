@@ -3,9 +3,11 @@ import type { AfterLaunch, FolderKind, InitialState, LauncherFeed, Settings, Toa
 import accountIcon from '../assets/icons/account.png'
 import filesIcon from '../assets/icons/files.png'
 import homeIcon from '../assets/icons/home.png'
+import mapIcon from '../assets/icons/map.png'
 import repairIcon from '../assets/icons/repair.png'
 import settingsIcon from '../assets/icons/settings.png'
 import skillsIcon from '../assets/icons/skills.png'
+import { effectiveShaderPreset, SHADERS_OFF } from '../../../shared/shaders'
 import { errorMessage, formatMemory } from '../format'
 
 /** A card heading with one of the pack's icons. */
@@ -24,6 +26,7 @@ interface Props {
   update: UpdateStatus
   busy: boolean
   onSave: (patch: Partial<Settings>) => Promise<void>
+  onSettings: (s: Settings) => void
   onRepair: () => void
   onToast: (t: ToastMessage) => void
 }
@@ -65,7 +68,7 @@ function useDraft<T>(value: T, save: (v: T) => void, delay = 450): [T, (v: T) =>
   ]
 }
 
-export function SettingsPage({ init, feed, settings, update, busy, onSave, onRepair, onToast }: Props): ReactElement {
+export function SettingsPage({ init, feed, settings, update, busy, onSave, onSettings, onRepair, onToast }: Props): ReactElement {
   const maxMemory = Math.min(32768, Math.max(4096, Math.floor((init.systemMemoryMB - 1536) / 512) * 512))
   const [memory, setMemory] = useDraft(settings.memoryMB, (v) => void onSave({ memoryMB: v }))
   const [width, setWidth] = useDraft(settings.width, (v) => void onSave({ width: v }))
@@ -77,6 +80,15 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
     window.launcher.openFolder(kind).catch((e) => onToast({ kind: 'error', text: errorMessage(e) }))
   }
   const recommended = feed?.recommendedMemoryMB
+  const shaders = feed?.shaders
+  const shaderPreset = effectiveShaderPreset(feed, settings)
+  const pickShaders = async (id: string): Promise<void> => {
+    try {
+      onSettings(await window.launcher.setShaderPreset(id))
+    } catch (e) {
+      onToast({ kind: 'error', text: errorMessage(e) })
+    }
+  }
   const lowMemory = recommended !== undefined && memory < recommended
 
   return (
@@ -113,6 +125,35 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onRep
           </div>
         </Row>
       </section>
+
+      {shaders && shaders.presets.length > 0 && (
+        <section className="card">
+          <Title icon={mapIcon}>Graphics</Title>
+          <Row
+            label="Shaders"
+            hint={
+              shaderPreset ? (
+                <>
+                  {shaderPreset.description} In game, <kbd>O</kbd> opens Iris to switch packs or tweak them and <kbd>K</kbd> turns shaders off and on.
+                </>
+              ) : (
+                'Off: plain Minecraft lighting, the fastest. Shaders make the game much heavier on the graphics card.'
+              )
+            }
+          >
+            <div className="segmented" role="radiogroup" aria-label="Shaders">
+              {[{ id: SHADERS_OFF, name: 'Off' }, ...shaders.presets].map((p) => {
+                const active = (shaderPreset?.id ?? SHADERS_OFF) === p.id
+                return (
+                  <button key={p.id} role="radio" aria-checked={active} className={active ? 'active' : ''} onClick={() => void pickShaders(p.id)}>
+                    {p.name}
+                  </button>
+                )
+              })}
+            </div>
+          </Row>
+        </section>
+      )}
 
       <section className="card">
         <Title icon={homeIcon}>Launcher</Title>

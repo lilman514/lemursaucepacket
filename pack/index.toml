@@ -289,10 +289,6 @@ file = "config/ftbquests/quests/reward_tables/settler_supplies.snbt"
 hash = "1349f6b22355c967ffd8a624b5fd1e6c0ea5ded23840cf3a507bfde0ff203fdf"
 
 [[files]]
-file = "config/iris.properties"
-hash = "b8cb849503ba21289ccefe2f9e222a1a55c45ea5d72dd8bad3b94d2234dd3dfd"
-
-[[files]]
 file = "config/lemursaucepacket/capes.json"
 hash = "02ee5d388e8821c92f189e170d2d758a7a11a37a523f6b5571de6103eb682b26"
 
@@ -630,7 +626,7 @@ hash = "a9bfc4e9ef4862489bb586229fb8c53aab2563cc08ecf5744148bf2c547b2457"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
-hash = "50f0cef64b389e79816b34d0e2bd3b5dd68ecf00a0d2ca4b453912657e83e8f1"
+hash = "315988798c4b575a9565c0cf04a66ba47d0e73b1f9c739242916341a6198402b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/gear.json"
@@ -646,7 +642,7 @@ hash = "8adff5998b68ff8ca5f07e71515a264435d7670eb11be7fac57de3db9c2c6b22"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/launcher.json"
-hash = "18d1bb9a8f1255d56a25a85e9b5837869709ac1fb5f7b049c32996c8c9fbbaa1"
+hash = "69f456e421ee69e434e8cb3288cf8a1c176ee4a66e15cc70546b6ecfff5fc7d8"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
@@ -3067,7 +3063,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris.pw.toml"
-hash = "e7e8bf3c56fcfa0a729e13403a312ca1dc534e1698e25968f263c831309e4e32"
+hash = "7454ead874aed648cb689627394dd51239e15c30b9d0e8fc987fb30b751a35aa"
 metafile = true
 
 [[files]]
@@ -3166,8 +3162,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.3.0.jar"
-hash = "83f3b6605527036a799ffcc9c568bcc243c1d56beb9d5048b6e817388eecd76a"
+file = "mods/lsp_fixes-1.3.1.jar"
+hash = "6b6ec435db8d7ed320d2e4129139423ef4d926681da23445e87d8fffe5eb78a8"
 
 [[files]]
 file = "mods/macaws-furniture.pw.toml"
@@ -3560,4 +3556,14 @@ hash = "be230f110cde6d648b59966e1f837e23290375f0d9f9e4fd14fb08eb2fa96695"
 [[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
 hash = "90e058f11a9ec6837efd65b54ce1cc7a3cbc55b664050572e2b91c9b9c5179e2"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-unbound.pw.toml"
+hash = "1a3d3663c44dc21e227c39c42ea9b5e3c4f3b2e3b5272ed55b45da9e247a46d7"
+metafile = true
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
+hash = "75c4e8668f661174ae0161fa3262c043b4ff74ba9bdd5b0b72404badb6db33dd"
 metafile = true

@@ -38,6 +38,8 @@ export interface LauncherFeed {
   strictMods?: boolean
   /** Optional mods (by Modrinth project id) that start switched off until a player turns them on. */
   optionalDefaultOff?: string[]
+  /** The shader picker: Iris is an optional mod; each preset is a shader pack Iris starts with. */
+  shaders?: ShaderFeed
   recommendedMemoryMB?: number
   /** Extra JVM args the admin wants every client to use. */
   jvmArgs?: string[]
@@ -45,6 +47,22 @@ export interface LauncherFeed {
   minLauncherVersion?: string
   links?: FeedLink[]
   news?: NewsItem[]
+}
+
+export interface ShaderPreset {
+  id: string
+  name: string
+  description: string
+  /** The zip in shaderpacks/. */
+  file: string
+}
+
+export interface ShaderFeed {
+  /** Modrinth project id of the optional Iris mod (its key in Settings.optionalChoices). */
+  iris: string
+  /** What turning Iris on gives a player who never picked a preset. */
+  defaultPreset: string
+  presets: ShaderPreset[]
 }
 
 export type AfterLaunch = 'minimize' | 'close' | 'keep'
@@ -61,6 +79,10 @@ export interface Settings {
   jvmArgs: string
   /** The player's on/off choices for optional mods, keyed by Modrinth project id (or file path). */
   optionalChoices: Record<string, boolean>
+  /** The shader preset picked in Settings (an id from the feed). Shaders are on when Iris is on. */
+  shaderPreset: string
+  /** The preset last written into the game's Iris config, so a pack picked in-game survives later launches. */
+  appliedShaderPreset: string
 }
 
 export interface AccountInfo {
@@ -170,6 +192,8 @@ export interface LauncherApi {
   getServerStatus(): Promise<ServerStatus>
   getMods(): Promise<ModEntry[]>
   setOptionalMod(key: string, enabled: boolean): Promise<Settings>
+  /** A shader preset id from the feed, or 'off'. */
+  setShaderPreset(id: string): Promise<Settings>
   updateSettings(patch: Partial<Settings>): Promise<Settings>
   login(): Promise<AccountInfo>
   cancelLogin(): Promise<void>

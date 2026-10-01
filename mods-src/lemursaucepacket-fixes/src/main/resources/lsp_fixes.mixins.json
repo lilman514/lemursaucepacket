@@ -9,7 +9,8 @@
     "ChunkMapAccessor",
     "RespawnGateMixin",
     "gravestone.DeathEventsMixin",
-    "pmmo.UseGateMixin"
+    "pmmo.UseGateMixin",
+    "createoreexcavation.KubeJSExcavationMixin"
   ],
   "client": [
     "pmmo.SkillHudMixin",

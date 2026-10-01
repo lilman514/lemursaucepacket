@@ -35,7 +35,7 @@ export function installMockLauncher(): void {
   let loginCancelled = false
 
   let account: AccountInfo | null = scenario.has('signedout') ? null : { name: 'Steve', uuid: '8667ba71b85a4004af54457a9734eed7', type: 'msa' }
-  let settings: Settings = { memoryMB: 6144, width: 1280, height: 720, fullscreen: false, afterLaunch: 'minimize', autoJoin: true, javaPath: '', jvmArgs: '', optionalChoices: {} }
+  let settings: Settings = { memoryMB: 6144, width: 1280, height: 720, fullscreen: false, afterLaunch: 'minimize', autoJoin: true, javaPath: '', jvmArgs: '', optionalChoices: {}, shaderPreset: '', appliedShaderPreset: '' }
   let cancelled = false
 
   const feed: LauncherFeed = {
@@ -45,6 +45,16 @@ export function installMockLauncher(): void {
     server: { name: 'LemurSaucePacket', address: 'play.example.com' },
     pack: { version: '1.0.1', url: 'packs/lemursaucepacket-1.0.1.mrpack', sha1: '0'.repeat(40), minecraft: '1.21.1', loader: 'neoforge', loaderVersion: '21.1.252', modCount: 13 },
     recommendedMemoryMB: 6144,
+    optionalDefaultOff: ['iris'],
+    shaders: {
+      iris: 'iris',
+      defaultPreset: 'balanced',
+      presets: [
+        { id: 'lite', name: 'Lite', file: 'MakeUp-UltraFast.zip', description: 'MakeUp Ultra Fast. Soft lighting, shadows and water for any PC that can run the pack.' },
+        { id: 'balanced', name: 'Balanced', file: 'ComplementaryReimagined.zip', description: 'Complementary Reimagined. Keeps the Minecraft look with good shadows, water and sky. Needs a decent graphics card.' },
+        { id: 'fancy', name: 'Fancy', file: 'ComplementaryUnbound.zip', description: 'Complementary Unbound. The most realistic lighting, clouds and reflections. For strong graphics cards.' }
+      ]
+    },
     links: [{ label: 'Discord', url: 'https://discord.gg/your-invite' }],
     news: [
       { title: 'Aeronautics is here', date: '2026-09-26', body: 'Create Aeronautics has been added to the pack. Build airships and fly them around spawn — the launcher already downloaded everything for you.' },
@@ -88,6 +98,11 @@ export function installMockLauncher(): void {
     },
     setOptionalMod: async (key, enabled) => {
       settings = { ...settings, optionalChoices: { ...settings.optionalChoices, [key]: enabled } }
+      return settings
+    },
+    setShaderPreset: async (id) => {
+      const on = id !== 'off'
+      settings = { ...settings, shaderPreset: on ? id : settings.shaderPreset, optionalChoices: { ...settings.optionalChoices, iris: on } }
       return settings
     },
     updateSettings: async (patch) => (settings = { ...settings, ...patch }),

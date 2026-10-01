@@ -15,4 +15,4 @@ version = "KduFYu4t"
 [option]
 optional = true
 default = false
-description = "Shaders (Complementary Reimagined). Much heavier on the GPU; some Create Aeronautics visuals glitch."
+description = "Shaders. Pick a look (Lite, Balanced or Fancy) under Settings > Graphics; turning this on alone gives Balanced. Heavier on the GPU; some Create Aeronautics visuals glitch."

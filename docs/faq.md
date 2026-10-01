@@ -8,7 +8,7 @@
 
 **Voice chat isn't working.** Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.
 
-**My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are optional and off by default.
+**My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on (launcher Settings, Graphics), try **Lite** or press **K** in game to switch them off for a moment.
 
 **How do I get home fast?** A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See [Waystones](waystones.md).
 **Where are my screenshots?** Launcher → Settings → Files & repair → Screenshots.

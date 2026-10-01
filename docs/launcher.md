@@ -14,6 +14,7 @@ The full list of mods with a link to each one's Modrinth page. Mods marked **Opt
 
 - **Memory:** how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.
 - **Window size / fullscreen.**
+- **Shaders** (Graphics): Off, **Lite** (MakeUp Ultra Fast, for any PC), **Balanced** (Complementary Reimagined, keeps the Minecraft look) or **Fancy** (Complementary Unbound, realistic light and clouds, for strong graphics cards). Off by default. The pick applies next time you press Play. In game, **O** opens Iris to switch packs or tweak them and **K** turns shaders off and on; a pack you pick there stays until you choose another preset here.
 - **Join the server automatically:** skips the title screen.
 - **When the game starts:** minimise, keep or close the launcher.
 - **Java executable / JVM arguments:** leave empty unless you know why.

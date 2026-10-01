@@ -152,7 +152,7 @@ export function App(): ReactElement {
           )}
           {page === 'mods' && <ModsPage settings={settings} onSettings={setSettings} onToast={pushToast} />}
           {page === 'settings' && (
-            <SettingsPage init={init} feed={feed ?? null} settings={settings} update={update} onSave={saveSettings} onRepair={() => void play(true)} busy={status.state !== 'idle' && status.state !== 'crashed'} onToast={pushToast} />
+            <SettingsPage init={init} feed={feed ?? null} settings={settings} update={update} onSave={saveSettings} onSettings={setSettings} onRepair={() => void play(true)} busy={status.state !== 'idle' && status.state !== 'crashed'} onToast={pushToast} />
           )}
         </div>
       </main>

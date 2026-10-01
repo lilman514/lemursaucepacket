@@ -43,7 +43,9 @@ export class SettingsStore {
       autoJoin: true,
       javaPath: '',
       jvmArgs: '',
-      optionalChoices: {}
+      optionalChoices: {},
+      shaderPreset: '',
+      appliedShaderPreset: ''
     }
   }
 
@@ -67,6 +69,9 @@ export class SettingsStore {
           .slice(0, 500)
       )
     }
+    const presetId = (v: unknown): string | undefined => (typeof v === 'string' && /^[a-z0-9_-]{0,40}$/.test(v) ? v : undefined)
+    out.shaderPreset = presetId(input.shaderPreset) ?? base.shaderPreset ?? ''
+    out.appliedShaderPreset = presetId(input.appliedShaderPreset) ?? base.appliedShaderPreset ?? ''
     return out
   }
 
