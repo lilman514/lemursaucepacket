@@ -133,6 +133,10 @@ file = "config/fancymenu/options.txt"
 hash = "6df834ff0756d1d57f5ff20abcc8d5e716f7736fe38f83f390d5b4f539b407ab"
 
 [[files]]
+file = "config/fml.toml"
+hash = "3bdb6dfda8f52cc86195409571af5891d2799c63b2da102c3dd5d7f2952f5bb7"
+
+[[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "7bc7ff622251fe9f4ea2936e1b28b4e72587e68dd2a80466a1b5aa707573de74"
 
