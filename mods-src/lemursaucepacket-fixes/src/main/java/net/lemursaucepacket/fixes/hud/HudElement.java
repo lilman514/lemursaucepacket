@@ -74,6 +74,11 @@ public abstract class HudElement {
 
     /** False when the part is switched off in its mod (the box is drawn dimmed). */
     public boolean shown() {
-        return true;
+        return HudVisibility.shown(id);
+    }
+
+    /** Saves visibility without touching position or game state. */
+    public void setShown(boolean shown) throws Exception {
+        HudVisibility.save(id, shown);
     }
 }

@@ -5,12 +5,14 @@
   "plugin": "net.lemursaucepacket.fixes.LspFixesMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CraftingResultMixin",
     "ChunkMapAccessor",
     "RespawnGateMixin",
     "gravestone.DeathEventsMixin",
     "pmmo.UseGateMixin"
   ],
   "client": [
+    "pmmo.SkillHudMixin",
     "pmmo.DetailScrollMixin",
     "pmmo.SkillsSidePanelMixin"
   ],

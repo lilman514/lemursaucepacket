@@ -14,6 +14,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
+import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.common.NeoForge;
@@ -38,6 +39,11 @@ public final class HudLayoutClient {
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, HudLayoutClient::onLayerPre);
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, HudLayoutClient::onLayerPost);
         NeoForge.EVENT_BUS.addListener(HudLayoutClient::onLoggingIn);
+        NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, HudLayoutClient::onGuiPre);
+    }
+
+    private static void onGuiPre(RenderGuiEvent.Pre event) {
+        if (Minecraft.getInstance().screen instanceof HudLayoutScreen) event.setCanceled(true);
     }
 
     private static void onRegisterKeys(RegisterKeyMappingsEvent event) {
@@ -67,7 +73,20 @@ public final class HudLayoutClient {
     // listener cancelled the layer (a cancelled Pre gets no Post, which would leave the pose pushed).
 
     private static void onLayerPre(RenderGuiLayerEvent.Pre event) {
+        if (Minecraft.getInstance().screen instanceof HudLayoutScreen) {
+            event.setCanceled(true);
+            return;
+        }
+        if (event.getName().toString().equals("create:goggle_info") && !HudConfig.GOGGLES_VISIBLE.get()) {
+            event.setCanceled(true);
+            return;
+        }
         if (event.getName().equals(VanillaGuiLayers.EFFECTS)) {
+            if (!HudConfig.EFFECTS_VISIBLE.get()) {
+                quietXaeroPushBoxes("POTION_EFFECTS_PUSH_BOX", "POTION_EFFECTS_SHIFT_PUSH_BOX");
+                event.setCanceled(true);
+                return;
+            }
             int cols = HudElements.VanillaEffects.columns();
             if (cols == 0) return;
             int sw = event.getGuiGraphics().guiWidth(), sh = event.getGuiGraphics().guiHeight();
@@ -81,6 +100,11 @@ public final class HudLayoutClient {
             event.getGuiGraphics().pose().translate(dx, dy, 0);
             effectsPushed = true;
         } else if (event.getName().equals(VanillaGuiLayers.BOSS_OVERLAY)) {
+            if (!HudConfig.BOSS_VISIBLE.get()) {
+                quietXaeroPushBoxes("BOSS_HEALTH_PUSH_BOX", "BOSS_HEALTH_SHIFT_PUSH_BOX");
+                event.setCanceled(true);
+                return;
+            }
             int sw = event.getGuiGraphics().guiWidth(), sh = event.getGuiGraphics().guiHeight();
             int room = sw / 2 - 91;
             int dx = Math.max(-room, Math.min(room, HudConfig.BOSS_BAR_X.get()));
@@ -148,7 +172,9 @@ public final class HudLayoutClient {
             boolean changed = restore("Client.GUI.Gain List Xoffset", HudConfig.PMMO_GAIN_X)
                     | restore("Client.GUI.Gain List Yoffset", HudConfig.PMMO_GAIN_Y)
                     | restore("Client.GUI.Skill List Xoffset", HudConfig.PMMO_SKILLS_X)
-                    | restore("Client.GUI.Skill List Yoffset", HudConfig.PMMO_SKILLS_Y);
+                    | restore("Client.GUI.Skill List Yoffset", HudConfig.PMMO_SKILLS_Y)
+                    | restoreVisibility("Client.GUI.Display Skill List", HudConfig.PMMO_SKILLS_VISIBLE)
+                    | restoreVisibility("Client.GUI.Display Gain List", HudConfig.PMMO_GAINS_VISIBLE);
             if (changed) {
                 Reflect.specOf("pmmo-client.toml").save();
                 HudElements.LOGGER.info("HUD layout: put your saved Project MMO positions back into pmmo-client.toml");
@@ -163,6 +189,15 @@ public final class HudLayoutClient {
         if (want < 0) return false;
         ModConfigSpec.ConfigValue<?> value = Reflect.configValue("pmmo-client.toml", path);
         if (Math.abs(((Number) value.get()).doubleValue() - want) < 1e-6) return false;
+        Reflect.set(value, want);
+        return true;
+    }
+
+    private static boolean restoreVisibility(String path, ModConfigSpec.IntValue remembered) throws Exception {
+        if (remembered.get() < 0) return false;
+        boolean want = remembered.get() == 1;
+        ModConfigSpec.ConfigValue<?> value = Reflect.configValue("pmmo-client.toml", path);
+        if (Boolean.valueOf(want).equals(value.get())) return false;
         Reflect.set(value, want);
         return true;
     }

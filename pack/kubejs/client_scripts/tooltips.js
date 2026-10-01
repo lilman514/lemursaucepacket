@@ -53,9 +53,12 @@ function sbtLoadPmmo() {
 }
 
 let sbtSideCache = null
-/** Project MMO's LogicalSide for this side, from Core (the enum class itself is off-limits to scripts). */
+/** Project MMO's LogicalSide for this side. Resolve the enum once so Rhino never has to choose between Core.get overloads. */
 function sbtSide(level) {
-  if (sbtSideCache == null) sbtSideCache = SBT_PMMO.core.get(level).getSide()
+  if (sbtSideCache == null) {
+    let side = Java.loadClass('net.neoforged.fml.LogicalSide')
+    sbtSideCache = side.CLIENT
+  }
   return sbtSideCache
 }
 
@@ -578,7 +581,10 @@ function sbtHardnessNote(tier, player) {
   if (hardness == null || hardness.unlock == null || hardness.unlock[tier] == null) return null
   let unlock = Number(hardness.unlock[tier])
   let blocks = []
-  if (hardness.tiers != null && hardness.tiers[String(tier)] != null) hardness.tiers[String(tier)].forEach((id) => blocks.push(sbtBlockName(id)))
+  if (hardness.tiers != null) {
+    let tierBlocks = typeof hardness.tiers.get === 'function' ? hardness.tiers.get(String(tier)) : hardness.tiers[String(tier)]
+    if (tierBlocks != null) tierBlocks.forEach((id) => blocks.push(sbtBlockName(id)))
+  }
   return ' §8(§' + sbtNeedCode(sbtSkillLevel('mining', player), unlock) + 'Mining ' + unlock + '§8' + (blocks.length > 0 ? ': ' + blocks.join(', ') : '') + ')'
 }
 

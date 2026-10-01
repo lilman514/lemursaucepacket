@@ -622,7 +622,7 @@ hash = "9e970b93c877ab35230c4d95af818edbee2e1f7cc0bfa2ba109093c14cbbff09"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/esc-menu.json"
-hash = "af8bd1267d581ca7f302746386864b57434dea4c11b6c7b9c9d9735996da3a2c"
+hash = "a9bfc4e9ef4862489bb586229fb8c53aab2563cc08ecf5744148bf2c547b2457"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
@@ -1862,7 +1862,7 @@ hash = "70a07c2944903328e42c5bd795e0f2f1586d87afa4a322c998d50224201b72f3"
 
 [[files]]
 file = "kubejs/client_scripts/tooltips.js"
-hash = "e802139b1c41d21256c019f022def7c51fa47a6ef03e8679b06e15563f7ecb90"
+hash = "c1a666389ca86ac1c64b3a928b9375b8ace4f549f0e8056b2d6597a8d0bb3eab"
 
 [[files]]
 file = "kubejs/client_scripts/waystones_client.js"
@@ -2678,7 +2678,7 @@ hash = "35fd20a294a26e56e825aea5bce8a322bbdbfb386cd8e89208fc2bfc51f8f81b"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal.js"
-hash = "ec2c159882a0ab03d5d8d2cf5414e3663c7b7709f7f6f6484406fd556bde2d7a"
+hash = "282acfe914d23774741927c16a79f637b7e09c1341da48e548a313ac541789b2"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal_recipes.js"
@@ -3163,7 +3163,7 @@ metafile = true
 
 [[files]]
 file = "mods/lsp_fixes-1.3.0.jar"
-hash = "6531fd113f438b345c56b9c34ffc88e5f0c987b2ee80b3f00283325048aa46b3"
+hash = "83f3b6605527036a799ffcc9c568bcc243c1d56beb9d5048b6e817388eecd76a"
 
 [[files]]
 file = "mods/macaws-furniture.pw.toml"

@@ -38,7 +38,7 @@ Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shi
 
 Pinned quests can only sit at an edge or a corner, so that box jumps to the nearest one when you let go. A box marked "(off)" belongs to something that's switched off in its mod; you can still move it.
 
-Each position is saved in that mod's own settings, so your layout stays through pack updates. Also: `/hudlayout`, or bind **Edit HUD layout** under Controls > LemurSaucePacket.
+The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** to stage visibility, then **Save**. **Cancel** discards both kinds of changes. Positions and visibility are saved in each mod's own settings, so your layout stays through pack updates. Also: `/hudlayout`, or bind **Edit HUD layout** under Controls > LemurSaucePacket.
 
 ## Player (right)
 

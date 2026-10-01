@@ -118,12 +118,7 @@ public final class HudElements {
 
         @Override
         public boolean shown() {
-            try {
-                Object session = getSession.invoke(module);
-                return session == null || (boolean) sessionActive.invoke(session);
-            } catch (Exception e) {
-                return true;
-            }
+            return super.shown();
         }
 
         @Override
@@ -575,6 +570,7 @@ public final class HudElements {
         }
 
         private Box boxFor(double x, double y, int sw, int sh) {
+            if (skills) return net.lemursaucepacket.fixes.pmmo.SkillHud.box(x, y, sw, sh);
             return new Box((int) (sw * x), (int) (sh * y), skills ? 110 : 100, skills ? 3 + 14 * 9 : 3 + 5 * 9);
         }
 

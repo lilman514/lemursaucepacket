@@ -534,6 +534,14 @@ EntityEvents.beforeHurt('minecraft:player', (event) => {
 })
 
 // ---- ownership: an item is yours from the first time it enters your inventory ----
+// Prepare crafting previews before vanilla compares components while stacking. The Java hook covers
+// the inventory grid and crafting table. Keep this policy here so /reload and ownerless tags still apply.
+if (LS_FIXES_LOADED) {
+  Java.loadClass('net.lemursaucepacket.fixes.lifesteal.CraftingOwnership').setStamper((stack, player) => {
+    if (LS.ownership.enabled && String(stack.id) !== LS_HEART) lsStamp(stack, player)
+  })
+}
+
 function lsStamp(stack, player) {
   if (stack == null || stack.isEmpty()) return false
   if (String(stack.id) === LS_HEART) {

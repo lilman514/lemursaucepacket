@@ -24,10 +24,20 @@ public final class HudConfig {
     public static final ModConfigSpec.DoubleValue PMMO_GAIN_Y;
     public static final ModConfigSpec.DoubleValue PMMO_SKILLS_X;
     public static final ModConfigSpec.DoubleValue PMMO_SKILLS_Y;
+    public static final ModConfigSpec.BooleanValue EFFECTS_VISIBLE;
+    public static final ModConfigSpec.BooleanValue BOSS_VISIBLE;
+    public static final ModConfigSpec.BooleanValue GOGGLES_VISIBLE;
+    public static final ModConfigSpec.IntValue PMMO_SKILLS_VISIBLE;
+    public static final ModConfigSpec.IntValue PMMO_GAINS_VISIBLE;
 
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
         b.comment("HUD layout (Esc > HUD Layout, /hudlayout). Positions in GUI pixels.").push("hud");
+        b.push("visibility");
+        EFFECTS_VISIBLE = b.define("effects", true);
+        BOSS_VISIBLE = b.define("bossBar", true);
+        GOGGLES_VISIBLE = b.define("createGoggles", true);
+        b.pop();
         b.comment("Vanilla parts this mod moves.").push("vanilla");
         EFFECTS_X = b.comment("Status effect icons, horizontal. 0 or more: left edge that many pixels from the left.",
                 "Negative: anchored right, -1 is vanilla's place, -11 is 10 pixels further left.").defineInRange("effectsX", -1, -10000, 10000);
@@ -41,6 +51,8 @@ public final class HudConfig {
         PMMO_GAIN_Y = b.defineInRange("pmmoGainListY", -1.0, -1.0, 1.0);
         PMMO_SKILLS_X = b.defineInRange("pmmoSkillListX", -1.0, -1.0, 1.0);
         PMMO_SKILLS_Y = b.defineInRange("pmmoSkillListY", -1.0, -1.0, 1.0);
+        PMMO_SKILLS_VISIBLE = b.comment("-1: use PMMO's setting, 0: hidden, 1: shown.").defineInRange("pmmoSkillsVisible", -1, -1, 1);
+        PMMO_GAINS_VISIBLE = b.defineInRange("pmmoGainsVisible", -1, -1, 1);
         b.pop();
         b.pop();
         SPEC = b.build();

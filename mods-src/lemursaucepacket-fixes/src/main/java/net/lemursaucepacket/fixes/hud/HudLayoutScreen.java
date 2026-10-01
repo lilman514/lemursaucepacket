@@ -13,7 +13,8 @@ import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
 
 /**
- * The HUD layout editor: the live game behind a light shade, one brass-framed box per movable HUD part.
+ * The HUD layout editor: the game view behind a light shade, with representative sample content in each
+ * movable HUD part. The live HUD is suppressed while this screen is open.
  * Drag to move (edges and centre lines snap; Shift places freely), right-click or Reset for the mod's default,
  * arrow keys nudge the selected box. Save writes every changed part into its own mod's settings.
  *
@@ -37,10 +38,13 @@ public final class HudLayoutScreen extends Screen {
         Box box;
         boolean moved;
         boolean reset;
+        final boolean initiallyShown;
+        boolean shown;
 
         Entry(HudElement element, Box box) {
             this.element = element;
             this.box = box;
+            this.initiallyShown = this.shown = element.shown();
         }
     }
 
@@ -54,6 +58,7 @@ public final class HudLayoutScreen extends Screen {
     private boolean guideX;
     private boolean guideY;
     private Button resetButton;
+    private Button visibilityButton;
 
     public HudLayoutScreen() {
         super(Component.literal("HUD Layout"));
@@ -64,11 +69,12 @@ public final class HudLayoutScreen extends Screen {
         if (width != builtW || height != builtH) build();
         int y = height - 22;
         int x = width / 2;
-        addRenderableWidget(Button.builder(Component.literal("Save"), b -> save()).bounds(x - 106, y, 68, 20)
-                .tooltip(Tooltip.create(Component.literal("Write the new places into each mod's settings"))).build());
-        resetButton = addRenderableWidget(Button.builder(Component.literal("Reset all"), b -> resetPressed()).bounds(x - 34, y, 68, 20).build());
-        addRenderableWidget(Button.builder(Component.literal("Cancel"), b -> onClose()).bounds(x + 38, y, 68, 20)
-                .tooltip(Tooltip.create(Component.literal("Leave everything where it was"))).build());
+        addRenderableWidget(Button.builder(Component.literal("Save"), b -> save()).bounds(x - 142, y, 68, 20)
+                .tooltip(Tooltip.create(Component.literal("Save positions and visibility"))).build());
+        resetButton = addRenderableWidget(Button.builder(Component.literal("Reset all"), b -> resetPressed()).bounds(x - 70, y, 68, 20).build());
+        visibilityButton = addRenderableWidget(Button.builder(Component.literal("Hide"), b -> toggleSelected()).bounds(x + 2, y, 68, 20).build());
+        addRenderableWidget(Button.builder(Component.literal("Cancel"), b -> onClose()).bounds(x + 74, y, 68, 20)
+                .tooltip(Tooltip.create(Component.literal("Discard positions and visibility changes"))).build());
         updateResetButton();
     }
 
@@ -113,7 +119,7 @@ public final class HudLayoutScreen extends Screen {
         if (entries.isEmpty()) {
             g.drawCenteredString(font, Component.literal("No movable HUD parts found (see the log)."), width / 2, height / 2 - 4, PARCHMENT);
         }
-        Component hint = Component.literal("Drag to move. Right-click: default. Shift: no snapping. Arrows: nudge.");
+        Component hint = Component.literal("Drag: move  |  H: show/hide  |  Right-click: reset");
         int hintW = font.width(hint);
         g.fill(width / 2 - hintW / 2 - 3, height - 36, width / 2 + hintW / 2 + 3, height - 25, IRON);
         g.drawCenteredString(font, hint, width / 2, height - 34, PARCHMENT);
@@ -121,15 +127,20 @@ public final class HudLayoutScreen extends Screen {
 
     private void drawBox(GuiGraphics g, Entry e, boolean hovered) {
         Box b = e.box;
-        boolean shown = e.element.shown();
+        boolean shown = e.shown;
         g.fill(b.x(), b.y(), b.right(), b.bottom(), shown ? IRON : IRON_OFF);
         int edge = e == selected || e == dragging ? BRASS_HI : hovered ? BRASS : shown ? BRASS_DARK : GREY;
         g.renderOutline(b.x(), b.y(), b.w(), b.h(), edge);
         if (e == selected) g.renderOutline(b.x() - 1, b.y() - 1, b.w() + 2, b.h() + 2, BRASS_DARK);
-        String label = e.element.name() + (shown ? "" : " (off)") + (e.moved || e.reset ? " *" : "");
+        String label = e.element.name() + (shown ? "" : " (hidden)") + (e.moved || e.reset || e.shown != e.initiallyShown ? " *" : "");
+        if (shown) {
+            HudPreview.render(g, e.element.id(), b);
+            g.renderOutline(b.x(), b.y(), b.w(), b.h(), edge);
+            if (e != selected && !hovered) return;
+        }
         int textW = font.width(label);
         int color = shown ? PARCHMENT : GREY;
-        if (textW + 4 <= b.w() && b.h() >= 11) {
+        if (!shown && textW + 4 <= b.w() && b.h() >= 11) {
             g.drawString(font, label, b.centerX() - textW / 2, b.centerY() - 4, color, true);
             return;
         }
@@ -149,14 +160,20 @@ public final class HudLayoutScreen extends Screen {
         if (hovered != null && !overWidget(mouseX, mouseY)) {
             List<Component> lines = new ArrayList<>();
             lines.add(Component.literal(hovered.element.name()).withStyle(ChatFormatting.GOLD));
-            lines.add(Component.literal("Saved in " + hovered.element.where()).withStyle(ChatFormatting.GRAY));
-            if (!hovered.element.shown()) lines.add(Component.literal("Switched off in its mod; it still moves.").withStyle(ChatFormatting.GRAY));
+            lines.add(Component.literal("Select, then " + (hovered.shown ? "Hide" : "Show") + " or press H.").withStyle(ChatFormatting.GRAY));
+            lines.add(Component.literal("Shift: move freely. Arrows: nudge.").withStyle(ChatFormatting.GRAY));
+            if (!hovered.shown) lines.add(Component.literal("Hidden after saving. You can still move and select it here.").withStyle(ChatFormatting.GRAY));
             g.renderComponentTooltip(font, lines, mouseX, mouseY);
         }
     }
 
     private void updateResetButton() {
         if (resetButton == null) return;
+        if (visibilityButton != null) {
+            visibilityButton.active = selected != null;
+            visibilityButton.setMessage(Component.literal(selected != null && !selected.shown ? "Show" : "Hide"));
+            visibilityButton.setTooltip(Tooltip.create(Component.literal(selected == null ? "Select a HUD element first" : "Show or hide " + selected.element.name() + " after saving (H)")));
+        }
         resetButton.setMessage(Component.literal(selected == null ? "Reset all" : "Reset"));
         resetButton.setTooltip(Tooltip.create(Component.literal(selected == null
                 ? "Put every part back where its mod puts it by default"
@@ -221,6 +238,10 @@ public final class HudLayoutScreen extends Screen {
     @Override
     public boolean keyPressed(int key, int scanCode, int modifiers) {
         if (selected != null && dragging == null) {
+            if (key == GLFW.GLFW_KEY_H) {
+                toggleSelected();
+                return true;
+            }
             int step = hasShiftDown() ? 10 : 1;
             int dx = key == GLFW.GLFW_KEY_LEFT ? -step : key == GLFW.GLFW_KEY_RIGHT ? step : 0;
             int dy = key == GLFW.GLFW_KEY_UP ? -step : key == GLFW.GLFW_KEY_DOWN ? step : 0;
@@ -282,6 +303,12 @@ public final class HudLayoutScreen extends Screen {
         else entries.forEach(this::toDefault);
     }
 
+    private void toggleSelected() {
+        if (selected == null) return;
+        selected.shown = !selected.shown;
+        updateResetButton();
+    }
+
     private Box keepOnScreen(Box b) {
         return b.at(clamp(b.x(), 0, width - b.w()), clamp(b.y(), 0, height - b.h()));
     }
@@ -296,10 +323,11 @@ public final class HudLayoutScreen extends Screen {
         List<String> failed = new ArrayList<>();
         int saved = 0;
         for (Entry e : entries) {
-            if (!e.moved && !e.reset) continue;
+            if (!e.moved && !e.reset && e.shown == e.initiallyShown) continue;
             try {
                 if (e.reset) e.element.reset();
-                else e.element.save(e.box, width, height);
+                else if (e.moved) e.element.save(e.box, width, height);
+                if (e.shown != e.initiallyShown) e.element.setShown(e.shown);
                 saved++;
                 HudElements.LOGGER.info("HUD layout: {} {} in {}", e.element.name(), e.reset ? "reset" : "moved to " + e.box.x() + "," + e.box.y(), e.element.where());
             } catch (Throwable t) {

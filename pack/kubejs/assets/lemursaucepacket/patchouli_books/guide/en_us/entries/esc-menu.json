@@ -37,7 +37,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Each position is saved in that mod's own settings, so your layout stays through pack updates. Also: $(#e0ac46)/hudlayout$(), or bind $(bold)Edit HUD layout$() under Controls > LemurSaucePacket."
+      "text": "The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press $(bold)H$() or use $(bold)Show/Hide$() to stage visibility, then $(bold)Save$(). $(bold)Cancel$() discards both kinds of changes. Positions and visibility are saved in each mod's own settings, so your layout stays through pack updates. Also: $(#e0ac46)/hudlayout$(), or bind $(bold)Edit HUD layout$() under Controls > LemurSaucePacket."
     },
     {
       "type": "patchouli:text",
