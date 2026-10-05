@@ -1,8 +1,8 @@
 # Mods in the pack
 
-164 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+174 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (122)
+## On the server and every client (130)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -67,7 +67,16 @@
 - [Lithostitched](https://modrinth.com/project/XaDC71GB)
 - [LootJS: KubeJS Addon](https://modrinth.com/project/fJFETWDN)
 - [Lootr](https://modrinth.com/project/EltpO5cN)
+- [Macaw's Bridges](https://modrinth.com/project/GURcjz8O)
+- [Macaw's Doors](https://modrinth.com/project/kNxa8z3e)
+- [Macaw's Fences and Walls](https://modrinth.com/project/GmwLse2I)
 - [Macaw's Furniture](https://modrinth.com/project/dtWC90iB)
+- [Macaw's Lights and Lamps](https://modrinth.com/project/w4an97C2)
+- [Macaw's Paths and Pavings](https://modrinth.com/project/VRLhWB91)
+- [Macaw's Roofs](https://modrinth.com/project/B8jaH3P1)
+- [Macaw's Stairs](https://modrinth.com/project/iP3wH1ha)
+- [Macaw's Trapdoors](https://modrinth.com/project/n2fvCDlM)
+- [Macaw's Windows](https://modrinth.com/project/C7I0BCni)
 - [Melody](https://modrinth.com/project/CVT4pFB2)
 - [ModernFix](https://modrinth.com/project/nmDcB62a)
 - [Moonlight Lib](https://modrinth.com/project/twkfQtEc)
@@ -94,7 +103,6 @@
 - [Sophisticated Backpacks](https://modrinth.com/project/TyCTlI4b)
 - [Sophisticated Backpacks Create Integration](https://modrinth.com/project/s85zLEDe)
 - [Sophisticated Core](https://modrinth.com/project/nmoqTijg)
-- [Sophisticated Inventory Interactions](https://modrinth.com/project/orgY0JIo)
 - [spark](https://modrinth.com/project/l6YH9Als)
 - [Sparse Structures](https://modrinth.com/project/qwvI41y9)
 - [Structory](https://modrinth.com/project/aKCwCJlY)
@@ -127,7 +135,7 @@
 - [YUNG's Bridges](https://modrinth.com/project/Ht4BfYp6)
 - [YUNG's Extras](https://modrinth.com/project/ZYgyPyfq)
 
-## Client only (42)
+## Client only (44)
 
 Visuals, sound, performance and interface. The ones marked optional in the launcher's Mods tab can be switched off.
 
@@ -152,6 +160,7 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 - [Fancy Entity Renderer](https://modrinth.com/project/RQ6INv2n)
 - [First-person Model](https://modrinth.com/project/H5XMjpHi)
 - [ImmediatelyFast](https://modrinth.com/project/5ZwdcRci)
+- [Inventory Profiles Next](https://modrinth.com/project/O7RBXm3n)
 - [Iris Shaders](https://modrinth.com/project/YL57xq9U)
 - [Ixeris](https://modrinth.com/project/p8RJPJIC)
 - [Just Enough Breeding (JEBr)](https://modrinth.com/project/9Pk89J3g)
@@ -159,6 +168,7 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 - [Just Zoom](https://modrinth.com/project/iAiqcykM)
 - [LambDynamicLights - Dynamic Lights](https://modrinth.com/project/yBW8D80W)
 - [Legendary Tooltips](https://modrinth.com/project/atHH8NyV)
+- [libIPN](https://modrinth.com/project/onSQdWhM)
 - [More Culling](https://modrinth.com/project/51shyZVL)
 - [Mouse Tweaks](https://modrinth.com/project/aC3cM3Vq)
 - [Not Enough Animations](https://modrinth.com/project/MPCX6s5C)

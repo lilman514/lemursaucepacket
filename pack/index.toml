@@ -5,6 +5,10 @@ file = "config/brassworksmissions-server.toml"
 hash = "ca6ceb882bcc50e62253db61156068fe8fb3d0fa90a2d5968d0f32344486bb4d"
 
 [[files]]
+file = "config/everycomp-hazardous.toml"
+hash = "360302d0841b1e9d367d7b6733284c675248b14bac9a2c8bccfc3d991e5ceab2"
+
+[[files]]
 file = "config/fallingtree.json"
 hash = "7e27fab728620e04b80d73db32c8da73b77cddc734523d0979ebb8ce82f2fea4"
 
@@ -287,6 +291,10 @@ hash = "a04d60e9e295c424f9a4f8b0676ddfda53295f7f3591c2962f3658b88bd742a0"
 [[files]]
 file = "config/ftbquests/quests/reward_tables/settler_supplies.snbt"
 hash = "1349f6b22355c967ffd8a624b5fd1e6c0ea5ded23840cf3a507bfde0ff203fdf"
+
+[[files]]
+file = "config/inventoryprofilesnext/inventoryprofiles.json"
+hash = "d4433544ec21a3c08397203c32052bbc4676f05ec9041c223c1ae0eeae841cd7"
 
 [[files]]
 file = "config/lemursaucepacket/capes.json"
@@ -638,11 +646,11 @@ hash = "ce2738d9828dea3fe23a10bb02dc037d4909371e28aa8f272ad817bea89e1969"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/keys.json"
-hash = "8adff5998b68ff8ca5f07e71515a264435d7670eb11be7fac57de3db9c2c6b22"
+hash = "5bc79007dd998b6d462659f31d24896b8f35ae3d48615fb8ef3d9d1dc32bf60b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/launcher.json"
-hash = "6ec26039ed81b3c18bd9517fc6a98138d5f28bef30647c21d5eda5442ec0bfd2"
+hash = "95a5bd764bf1a00e1951a83ad75a5db8ec863343571a838699dae7a483143991"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
@@ -650,7 +658,7 @@ hash = "950970b34da7242be865e2b95f37570b9948d5ad7b73fd5d6e1f597af42c832c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
-hash = "86a0380d13da541fd559c750e177b4a30f04a5a7a655d4c65bc4c4913d2605b9"
+hash = "68fc3d76ac4004197d1a50ef732ea87588b189e5eaf4a7c08486aabea05cfac8"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
@@ -1858,7 +1866,7 @@ hash = "487a0ce4d00d99de7ee9a4343da4d69ae497a3d59a3c57732d1561db1ea0b207"
 
 [[files]]
 file = "kubejs/client_scripts/keybinds.js"
-hash = "70a07c2944903328e42c5bd795e0f2f1586d87afa4a322c998d50224201b72f3"
+hash = "b86355ee5132895e3b0f9077b6a6a71d6a2d33401580f7e4617ba0885e0c1979"
 
 [[files]]
 file = "kubejs/client_scripts/tooltips.js"
@@ -3062,6 +3070,11 @@ hash = "1307631109d2e715e36a93469bd9f7fafaf6c0f408016cd96efc25bac495acb8"
 metafile = true
 
 [[files]]
+file = "mods/inventory-profiles-next.pw.toml"
+hash = "ab503e89461dff879ee793253e173625b6ab868f570a371323ef725e567cf5ea"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "db1c1e6382878b78e994dba1b9026935f8d1c5ca685c89d2437858e0a0dcab58"
 metafile = true
@@ -3142,6 +3155,11 @@ hash = "9ca14134538c66b6d8ef74107f6b15ba9487ec632d984427e84ad38aa47afa60"
 metafile = true
 
 [[files]]
+file = "mods/libipn.pw.toml"
+hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
+metafile = true
+
+[[files]]
 file = "mods/lithium.pw.toml"
 hash = "51e129832b04acd57da470fc41725bad5e101b6a6b1d4901fd8ea7a92b14e13d"
 metafile = true
@@ -3166,8 +3184,53 @@ file = "mods/lsp_fixes-1.3.1.jar"
 hash = "6b6ec435db8d7ed320d2e4129139423ef4d926681da23445e87d8fffe5eb78a8"
 
 [[files]]
+file = "mods/macaws-bridges.pw.toml"
+hash = "0c961c709297bcc89f2f07e1eb1049e4d21a331adb020f1786e5a9a0883e037c"
+metafile = true
+
+[[files]]
+file = "mods/macaws-doors.pw.toml"
+hash = "b00f8b696187f092a939b7bbbf2ad2f249665776465bac594e2d0f4f37d36dc4"
+metafile = true
+
+[[files]]
+file = "mods/macaws-fences-and-walls.pw.toml"
+hash = "ea28bcac23c070998d1f7df5dcbf248831c33f59067eaf2fd125adfa07c5722c"
+metafile = true
+
+[[files]]
 file = "mods/macaws-furniture.pw.toml"
 hash = "52019f01292cb860fa135485f941fff42f97910267bf122f2f797e31109bb93f"
+metafile = true
+
+[[files]]
+file = "mods/macaws-lights-and-lamps.pw.toml"
+hash = "87366a5d82152829103539d930ad9c0e8edbd5a917f65657db76f718f5296927"
+metafile = true
+
+[[files]]
+file = "mods/macaws-paths-and-pavings.pw.toml"
+hash = "e04b1ac906167721ae2696ec837be362e6d6da252e8bc5c0bac29974fbae0461"
+metafile = true
+
+[[files]]
+file = "mods/macaws-roofs.pw.toml"
+hash = "b5f1c37740051774214d8dd035df9bac68ddd4d8c71ed8949fdaabd5949829de"
+metafile = true
+
+[[files]]
+file = "mods/macaws-stairs.pw.toml"
+hash = "abae13cbccdb8789a929cc4d2f9fc38f93ef6bb9082a87f931fcef1b1695cbe6"
+metafile = true
+
+[[files]]
+file = "mods/macaws-trapdoors.pw.toml"
+hash = "4a1f84dbcd179fa481a4d0e5f45da24415158d373117348d4438eaceff4f5fcc"
+metafile = true
+
+[[files]]
+file = "mods/macaws-windows.pw.toml"
+hash = "450ed5663bf1d12ffddc78eda5aa56cb7808cbdac6db8102d18461361aaa555f"
 metafile = true
 
 [[files]]
@@ -3366,11 +3429,6 @@ hash = "5d4e493a74a7deb175d278274e6990f92d1a3910fae5d4866a1520bbca9acce2"
 metafile = true
 
 [[files]]
-file = "mods/sophisticated-inventory-interactions.pw.toml"
-hash = "77a67db95237817f5a3bbf8254769548d3b331ca8f1322cd443e4f41b0d03b17"
-metafile = true
-
-[[files]]
 file = "mods/spark.pw.toml"
 hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
@@ -3542,7 +3600,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "4502e5e46a36de35527e1488fca5342905d163584c732f122beb185b3c16ad24"
+hash = "53ef043614d1868995e9b9ea3aade6a9491180ecd78027d93af107f5f56e025d"
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"

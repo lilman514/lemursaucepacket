@@ -6,6 +6,7 @@ joinedFirstServer:true
 tutorialStep:none
 key_gui.xaero_new_waypoint:key.keyboard.j
 key_key.mute_microphone:key.keyboard.o
+key_iris.keybind.shaderPackSelection:key.keyboard.i
 key_key.voice_chat_group:key.keyboard.unknown
 key_key.shouldersurfing.swap_shoulder:key.keyboard.unknown
 key_key.shouldersurfing.free_look:key.keyboard.unknown

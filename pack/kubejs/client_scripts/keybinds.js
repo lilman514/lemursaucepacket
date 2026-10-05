@@ -4,9 +4,11 @@
 // version this moves a key only if it's still on the default that clashes (e.g. Project MMO's glossary on P,
 // which is also Social Interactions): anything a player rebound themselves is left alone.
 // The ESC menu's buttons press some of these keys (config/fancymenu/customization/lemursaucepacket_pause.txt).
-const KEYBIND_RULES_VERSION = 2
+const KEYBIND_RULES_VERSION = 3
 const KEYBIND_RULES = [
   // [keybind, only if currently on, move to]
+  // Iris (always installed since 1.2.6) opens its shader pack screen with O, which is the pack's mute key.
+  ['iris.keybind.shaderPackSelection', 'key.keyboard.o', 'key.keyboard.i'],
   // Project MMO's glossary crashes with Sodium in this pack (it registers a texture per biome off the render
   // thread), so it stays unbound; the inventory's skills panel is the skills screen.
   ['key.pmmo.openMenu', 'key.keyboard.p', 'key.keyboard.unknown'],
@@ -43,8 +45,10 @@ ClientEvents.loggedIn((event) => {
   let options = Client.options
   let moved = []
   options.keyMappings.forEach((mapping) => {
-    let rule = KEYBIND_RULES.find((r) => r[0] === String(mapping.getName()))
-    if (rule != null && String(mapping.saveString()) === rule[1]) {
+    // A keybind can have several rules (one per clashing default), so match the current key too.
+    let current = String(mapping.saveString())
+    let rule = KEYBIND_RULES.find((r) => r[0] === String(mapping.getName()) && r[1] === current)
+    if (rule != null) {
       mapping.setKey(InputConstants.getKey(rule[2]))
       moved.push(`${rule[0]} -> ${rule[2]}`)
     }

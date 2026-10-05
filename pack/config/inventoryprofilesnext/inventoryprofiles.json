@@ -1,0 +1,15 @@
+{
+  "ModSettings": {
+    "first_run": false,
+    "enable_profiles": false,
+    "enable_updates_check": false,
+    "always_move_all": true
+  },
+  "GuiSettings": {
+    "enable_profiles_ui": false
+  },
+  "AutoRefillSettings": {
+    "auto_refill_enable_indicator_icons": false,
+    "auto_refill_enable_horbar_indicator_icons": false
+  }
+}

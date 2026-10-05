@@ -21,7 +21,7 @@
     {
       "type": "patchouli:text",
       "title": "Settings",
-      "text": "$(li)$(bold)Memory:$() how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.$(br)$(li)$(bold)Window size / fullscreen.$()$(br)$(li)$(bold)Shaders$() (Graphics): Off, $(bold)Lite$() (MakeUp Ultra Fast, for any PC), $(bold)Balanced$() (Complementary Reimagined, keeps the Minecraft look) or $(bold)Fancy$() (Complementary Unbound, realistic light and clouds, for strong graphics cards). Off by default. Shaders are always installed, so you can also flip them in game: $(bold)K$() turns them on and off (Balanced unless you picked another pack) and $(bold)O$() opens Iris to pick a pack or tweak"
+      "text": "$(li)$(bold)Memory:$() how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.$(br)$(li)$(bold)Window size / fullscreen.$()$(br)$(li)$(bold)Shaders$() (Graphics): Off, $(bold)Lite$() (MakeUp Ultra Fast, for any PC), $(bold)Balanced$() (Complementary Reimagined, keeps the Minecraft look) or $(bold)Fancy$() (Complementary Unbound, realistic light and clouds, for strong graphics cards). Off by default. Shaders are always installed, so you can also flip them in game: $(bold)K$() turns them on and off (Balanced unless you picked another pack) and $(bold)I$() opens Iris to pick a pack or tweak"
     },
     {
       "type": "patchouli:text",

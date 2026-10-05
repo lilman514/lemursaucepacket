@@ -250,7 +250,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Atmosphere: Subtle Effects, Particle Rain, Falling Leaves, Visuality, AmbientSounds.
 - Players: Wavey Capes, 3D Skin Layers, dynamic lights.
 - Interface: Legendary Tooltips, and a painted title and loading screen made with FancyMenu and Drippy.
-- Shaders: Iris is always installed with shaders off, so K turns them on in game (Balanced by default) and O picks a pack. The launcher's Settings page (Graphics) offers presets: Lite (MakeUp Ultra Fast), Balanced (Complementary Reimagined) and Fancy (Complementary Unbound). Iris's config/iris.properties is the truth: the launcher writes it only on a first launch (off, default pack ready) and on the next Play after a pick in Settings, so K and O keep working; the presets live in publish/feed.json (feed `shaderPresets`). Iris costs nothing visible with shaders off (300-500 fps on a test scene of 100 turning cogwheels), apart from switching off Sodium Extra's sky and fog options. The pack does not ship iris.properties.
+- Shaders: Iris is always installed with shaders off, so K turns them on in game (Balanced by default) and I picks a pack (Iris's default O is the pack's mute key; client_scripts/keybinds.js moves it for older installs). The launcher's Settings page (Graphics) offers presets: Lite (MakeUp Ultra Fast), Balanced (Complementary Reimagined) and Fancy (Complementary Unbound). Iris's config/iris.properties is the truth: the launcher writes it only on a first launch (off, default pack ready) and on the next Play after a pick in Settings, so K and O keep working; the presets live in publish/feed.json (feed `shaderPresets`). Iris costs nothing visible with shaders off (300-500 fps on a test scene of 100 turning cogwheels), apart from switching off Sodium Extra's sky and fog options. The pack does not ship iris.properties.
 
 **Information:**
 - JEI with Create JEI Compat (paged sequenced-assembly recipes), JEI World Gen (ore heights), Just Enough Professions, Just Enough Breeding and JEED.
@@ -260,16 +260,32 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 
 **Building:**
 - Macaw's Furniture: chairs, tables, desks, counters, wardrobes.
+- Macaw's building set (1.2.7, for the RuneScape-style city and settlements, see structures/): Roofs (thatch, slate,
+  tile, wood and stone in five pitches), Windows (frames, shutters, arrow slits, gothic windows, parapets,
+  curtains), Doors (cottage, stable, barn, portcullis), Trapdoors, Fences and Walls, Lights and Lamps (lanterns,
+  chandeliers, street lamps), Paths and Pavings, Bridges, and Stairs and Balconies.
 - Woodworks: vanilla-style chests, bookshelves, ladders, beehives and boards in every wood, plus a sawmill.
 - Every Compat makes each wood in the pack available for:
-  - those two mods;
+  - Macaw's Furniture and Woodworks;
   - Create's windows;
   - Farmer's Delight's cabinets.
 
-  It adds about 1,700 blocks for Regions Unexplored's woods.
+  It adds about 1,700 blocks for Regions Unexplored's woods. The nine Macaw's building mods are on Every Compat's
+  module blacklist (config/everycomp-hazardous.toml): they would add about 2,300 more blocks, and the city only
+  uses vanilla woods. That file is the only switch that stops the blocks being registered (everycomp-entries.toml
+  only hides them from tabs and recipes). Never blacklist a module whose blocks are already in the world: they
+  vanish.
 
 **Quality of life:**
-- Sorting: Sophisticated Inventory Interactions adds sort, sort-mode, search and transfer-all buttons to chests, barrels, shulker boxes and your own inventory, matching the backpacks' controls.
+- Sorting: Inventory Profiles Next (client-side, works on any server) puts Sort / Sort in columns / Sort in rows
+  buttons on your inventory and every container, and Move All buttons (take all from the container, deposit all
+  into it; the hotbar stays unless you hold the include-hotbar key). Shipped config
+  (config/inventoryprofilesnext/inventoryprofiles.json): Move All moves everything (`always_move_all`; holding the
+  modifier moves only matching items), the profile system, its UI and the update check are off, and Auto Refill
+  stays on (refills an emptied hotbar stack, swaps tools before they break) without its marker on every slot.
+  Tested 2026-10-05 against a server with the Hardness use-gate: sort, take all and deposit all all land on the
+  server, gated materials included (chests are allowed). It replaced Sophisticated Inventory Interactions at the
+  owner's request (2026-10-05). Sophisticated Backpacks keep their own sort buttons.
 - Mouse Tweaks, Inventory Essentials, Searchables, Shulker Box Tooltip.
 - Just Zoom, Controlling, Chat Heads, and Controlify (controller support, off by default).
 

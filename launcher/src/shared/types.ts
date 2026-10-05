@@ -89,7 +89,7 @@ export interface Settings {
   optionalChoices: Record<string, boolean>
   /** The shader preset last picked in Settings (a feed id or 'off'; '' = never picked). */
   shaderPreset: string
-  /** The pick last written into the game's Iris config ('' = not yet). A pick is written once, so K and O in game
+  /** The pick last written into the game's Iris config ('' = not yet). A pick is written once, so K and I in game
    *  keep working; picking again in the launcher writes again. */
   appliedShaderPreset: string
 }

@@ -154,7 +154,7 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onSet
                   : shaderNow?.active === null
                     ? `Using ${shaderNow.pack}, picked in game. `
                     : 'Off: plain Minecraft lighting, the fastest; shaders are much heavier on the graphics card. '}
-                In game, <kbd>K</kbd> turns shaders {activeShader === SHADERS_OFF ? `on (${kPack})` : 'off'} and <kbd>O</kbd> opens Iris to pick a pack or tweak it.
+                In game, <kbd>K</kbd> turns shaders {activeShader === SHADERS_OFF ? `on (${kPack})` : 'off'} and <kbd>I</kbd> opens Iris to pick a pack or tweak it.
               </>
             }
           >

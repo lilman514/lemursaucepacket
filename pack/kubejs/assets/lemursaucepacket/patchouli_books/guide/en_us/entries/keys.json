@@ -6,11 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The pack sets these defaults so nothing clashes. Change any of them in Settings → Controls.$(br2)$(#b9a98a)Key - Does$()$(br)$(bold)E$() - Inventory (with the skills panel)$(br)$(bold)M$() - World map$(br)$(bold)H$() - Missions$(br)$(bold)B$() - Backpack$(br)$(bold);$() - Team$(br)$(bold)U$() - Waypoints$(br)$(bold)J$() - New waypoint$(br)$(bold)V$() - Voice chat settings$(br)$(bold)O$() - Mute microphone$(br)$(bold)Left Alt$() - Create's toolbelt$(br)$(bold)Z$() - Zoom$(br2)The ESC menu's buttons press these keys for you, so the menu works even if you rebind them."
+      "text": "The pack sets these defaults so nothing clashes. Change any of them in Settings → Controls.$(br2)$(#b9a98a)Key - Does$()$(br)$(bold)E$() - Inventory (with the skills panel)$(br)$(bold)M$() - World map$(br)$(bold)H$() - Missions$(br)$(bold)B$() - Backpack$(br)$(bold);$() - Team$(br)$(bold)U$() - Waypoints$(br)$(bold)J$() - New waypoint$(br)$(bold)V$() - Voice chat settings$(br)$(bold)O$() - Mute microphone$(br)$(bold)Left Alt$() - Create's toolbelt$(br)$(bold)Z$() - Zoom$(br)$(bold)K$() - Shaders on and off$(br)$(bold)I$() - Pick a shader pack (Iris)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Edit HUD layout$() (Controls > LemurSaucePacket) has no key by default. The ESC menu's HUD Layout button and $(#e0ac46)/hudlayout$() open the same screen."
+      "text": "$(bold)Sorting$() (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:$(br2)$(li)The buttons at the top right of each half sort it (plain, in columns, in rows).$(br)$(li)$(bold)Move All$() (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to see the keys that include the hotbar or move only the kinds of items the other side already has.$(br)$(li)Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The ESC menu's buttons press these keys for you, so the menu works even if you rebind them.$(br2)$(bold)Edit HUD layout$() (Controls > LemurSaucePacket) has no key by default. The ESC menu's HUD Layout button and $(#e0ac46)/hudlayout$() open the same screen."
     }
   ]
 }
