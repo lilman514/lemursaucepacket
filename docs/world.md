@@ -7,6 +7,23 @@
 - **Waystones, but no teleport commands.** Waystones stand in villages, on towers and at shrines. Activate one and you can warp back to it later, and you can take found ones home. See [Waystones](waystones.md). Everyday travel is by train, airship, horse and happy ghast, so the rail network still matters. Nether portals are linked properly (a portal always leads back where it came from).
 - **The launcher decides the mods.** Your own extras go in its Mods tab.
 
+## Lemurton, the spawn city
+
+A new world starts you in **Lemurton**, a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:
+
+- a plaza with a fountain and the **Lemurton waystone**, visible to everyone from the start;
+- a market of stalls;
+- shops and townhouses on the ring streets, and cottages by the walls;
+- four gates.
+
+Lemurton is a **safe zone**:
+
+- Nobody can break or place blocks there, pour lava or water, or start fires.
+- Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).
+- Doors, chests, waystones, shops and the townsfolk all work as usual.
+
+Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one.
+
 ## What's different from vanilla
 
 - **Create is the spine.** Every stage of progress runs through Create machines; other mods feed it (ore veins, crops, coins) or give it a reason to exist (structures, an economy, airships).

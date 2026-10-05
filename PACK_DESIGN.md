@@ -169,6 +169,41 @@ Waystones (with Balm) are in for fast travel, on the owner's terms: found in the
 - **Airships:** Waystones + Sable compat so a waystone on a ship teleports correctly.
 - Travel costs are the mod's defaults (XP points by distance, capped); `warpRequirements` is the knob if it ever feels too free.
 
+## The spawn city and the RuneScape layer (in progress, 1.2.8)
+
+The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and Hypixel SkyBlock. A fresh world at launch spawns everyone in a city, the tier-1 trading hub, with a waystone, shops, and NPCs giving RuneScape-style questlines. Some questlines unlock item types (OSRS-style gating). QOL items speed up tedious jobs. The owner chose a fresh world for launch and a safe-zone city.
+
+- **Buildings** (structures/, see structures/README.md) are generated in code from a house kit and baked in a scratch server. Styles:
+  - Lumbridge stone cottages and Draynor/Seers timber cottages under steep thatch.
+  - Varrock townhouses: dressed stone below, jettied timber frame above, slate, tile or shingle roofs.
+  - Shops with hanging signs, market stalls with striped canopies, a well, a fountain, round towers (crenellated or coned), and curtain wall.
+  - 48 templates: 14 cottages, 13 townhouses, 7 shops, 6 stalls, fixtures, castle pieces.
+- **Lemurton**, the city (structures/hub.mjs writes `config/lemursaucepacket/hub_plan.json`):
+  - Layout: walls at plus or minus 76, a 43-wide plaza (fountain, waystone, market, well, trees in planters, benches, a lamp ring), an inner ring street, a middle band of townhouses and shops, an outer ring road, cottages, four gates.
+  - About 90 buildings plus 52 wall and tower pieces.
+  - `lsp_fixes`' **HubBuilder** builds it the first time the server starts on a brand-new world (under a minute of game time). Existing worlds are marked skipped and never touched. `/lsp hub build here|near_spawn` builds one by hand.
+  - The build happens a little each tick, in steps:
+    1. A noise-only site search near world spawn. It needs flat, dry land and widens up to 1536 blocks.
+    2. Forceloading.
+    3. Flattening, with a blended ring.
+    4. Paving.
+    5. Templates.
+    6. Single blocks.
+    7. Commands (vanilla tree features).
+    8. A GLOBAL waystone (named through reflection on the Waystones classes), world spawn on the plaza with spawnRadius 0, and the safe zone.
+  - About a minute on the test PC.
+- **Safe zones** (`lsp_fixes` package `zone`; `/lsp zone list|here|add|addcolumn|remove|flag|bypass`):
+  - Boxes saved with the world, with flags build, pvp, mobs, explosions, fire, fluids and decor.
+  - Ops bypass in creative or after `/lsp zone bypass`.
+  - Fire spread has no event, so `FireZoneMixin` and `LightningZoneMixin` cover it.
+  - Hostile mobs are cancelled on spawn and swept every 5 s. Exempt: those tagged `lsp_zone_allowed`, named mobs, and anything from `easy_npc`.
+  - Tested 9/9 on 2026-10-05: break, place, bucket, zombie, tagged zombie, TNT, op in creative.
+- **Next (researched 2026-10-05):**
+  - NPCs: Easy NPC Core and Config UI 7.14 as preset files in `kubejs/data/lemursaucepacket/easy_npc/preset`, placed with `/easy_npc preset import data`.
+  - Quests: questlines in FTB Quests as `gamestage` steps that NPC dialog buttons set with `/tag @initiator add`. FTB stages, KubeJS stages, `/tag` and Easy NPC's PLAYER_TAG are all vanilla player tags here. `/ftbquests change_progress` refuses non-player sources.
+  - Quest-gated wearing and use: hidden Project MMO skills granted by `pmmo:levelreward`. Crafting: the crafting-result mixin.
+  - Shops: Numismatics creative vendors.
+
 ## Look and feel: one kit everywhere
 
 Everything a player looks at outside the world — the launcher, the loading screen, the title screen, the ESC menu, the options screens, the quest book, the skills screen — is built from one kit, so it reads as one designer's work:

@@ -15,6 +15,15 @@
     },
     {
       "type": "patchouli:text",
+      "title": "Lemurton, the spawn city",
+      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:$(br2)$(li)a plaza with a fountain and the $(bold)Lemurton waystone$(), visible to everyone from the start;$(br)$(li)a market of stalls;$(br)$(li)shops and townhouses on the ring streets, and cottages by the walls;$(br)$(li)four gates.$(br2)Lemurton is a $(bold)safe zone$():"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
+    },
+    {
+      "type": "patchouli:text",
       "title": "What's different from vanilla",
       "text": "$(li)$(bold)Create is the spine.$() Every stage of progress runs through Create machines; other mods feed it (ore veins, crops, coins) or give it a reason to exist (structures, an economy, airships).$(br)$(li)$(bold)Terrain:$() Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.$(br)$(li)$(bold)Structures:$() When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests are per player (Lootr), so nobody gets beaten to one.$(br)$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find"
     },

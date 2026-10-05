@@ -10,7 +10,9 @@
     "RespawnGateMixin",
     "gravestone.DeathEventsMixin",
     "pmmo.UseGateMixin",
-    "createoreexcavation.KubeJSExcavationMixin"
+    "createoreexcavation.KubeJSExcavationMixin",
+    "FireZoneMixin",
+    "LightningZoneMixin"
   ],
   "client": [
     "pmmo.SkillHudMixin",
