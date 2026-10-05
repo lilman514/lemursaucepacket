@@ -132,6 +132,7 @@ async function main(): Promise<void> {
     settings.update({ optionalChoices: { ...settings.get().optionalChoices, [String(key)]: Boolean(enabled) } })
   )
   handle('shaders:set', (id: string) => launcher.setShaderPreset(String(id ?? '')))
+  handle('shaders:state', () => launcher.getShaderState())
   handle('settings:update', (patch: Partial<Settings>) => settings.update(patch ?? {}))
   handle('account:login', () => launcher.login())
   handle('account:cancelLogin', () => launcher.cancelLogin())

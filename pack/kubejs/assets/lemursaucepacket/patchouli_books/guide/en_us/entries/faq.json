@@ -10,11 +10,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Voice chat isn't working.$() Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.$(br2)$(bold)My frames are low.$() Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on (launcher Settings, Graphics), try $(bold)Lite$() or press $(bold)K$() in game to switch them off for a moment."
+      "text": "$(bold)Voice chat isn't working.$() Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.$(br2)$(bold)My frames are low.$() Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on, press $(bold)K$() in game to switch them off, or pick $(bold)Lite$() under the launcher's Settings, Graphics."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)How do I get home fast?$() A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See $(l:lemursaucepacket:waystones)Waystones$(/l). $(bold)Where are my screenshots?$() Launcher → Settings → Files & repair → Screenshots.$(br2)$(bold)Can I add my own mods?$() Client-side ones (minimap tweaks, shaders): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server."
+      "text": "$(bold)How do I get home fast?$() A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See $(l:lemursaucepacket:waystones)Waystones$(/l). $(bold)Where are my screenshots?$() Launcher → Settings → Files & repair → Screenshots.$(br2)$(bold)Can I add my own mods?$() Client-side ones (minimap tweaks and the like): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server."
     },
     {
       "type": "patchouli:text",

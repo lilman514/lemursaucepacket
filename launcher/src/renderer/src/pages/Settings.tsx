@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactElement, type ReactNode } from 'react'
-import type { AfterLaunch, FolderKind, InitialState, LauncherFeed, Settings, ToastMessage, UpdateStatus } from '../../../shared/types'
+import type { AfterLaunch, FolderKind, InitialState, LauncherFeed, Settings, ShaderState, ToastMessage, UpdateStatus } from '../../../shared/types'
 import accountIcon from '../assets/icons/account.png'
 import filesIcon from '../assets/icons/files.png'
 import homeIcon from '../assets/icons/home.png'
@@ -7,7 +7,7 @@ import mapIcon from '../assets/icons/map.png'
 import repairIcon from '../assets/icons/repair.png'
 import settingsIcon from '../assets/icons/settings.png'
 import skillsIcon from '../assets/icons/skills.png'
-import { effectiveShaderPreset, SHADERS_OFF } from '../../../shared/shaders'
+import { defaultShaderPreset, shaderPreset, SHADERS_OFF } from '../../../shared/shaders'
 import { errorMessage, formatMemory } from '../format'
 
 /** A card heading with one of the pack's icons. */
@@ -80,8 +80,19 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onSet
     window.launcher.openFolder(kind).catch((e) => onToast({ kind: 'error', text: errorMessage(e) }))
   }
   const recommended = feed?.recommendedMemoryMB
-  const shaders = feed?.shaders
-  const shaderPreset = effectiveShaderPreset(feed, settings)
+  const shaders = feed?.shaderPresets
+  const [shaderNow, setShaderNow] = useState<ShaderState | null>(null)
+  useEffect(() => {
+    if (!shaders) return
+    let alive = true
+    window.launcher
+      .getShaderState()
+      .then((s) => alive && setShaderNow(s))
+      .catch(() => alive && setShaderNow(null))
+    return () => {
+      alive = false
+    }
+  }, [shaders, settings.shaderPreset, settings.appliedShaderPreset])
   const pickShaders = async (id: string): Promise<void> => {
     try {
       onSettings(await window.launcher.setShaderPreset(id))
@@ -89,6 +100,10 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onSet
       onToast({ kind: 'error', text: errorMessage(e) })
     }
   }
+  const activeShader = shaderNow?.active ?? SHADERS_OFF
+  const activePreset = shaderPreset(feed, activeShader)
+  // With shaders off, K turns on the pack Iris has selected (the default one until the player picks another).
+  const kPack = shaders?.presets.find((p) => p.file === shaderNow?.pack)?.name ?? (shaderNow?.pack || defaultShaderPreset(feed)?.name || 'the last pack')
   const lowMemory = recommended !== undefined && memory < recommended
 
   return (
@@ -132,18 +147,20 @@ export function SettingsPage({ init, feed, settings, update, busy, onSave, onSet
           <Row
             label="Shaders"
             hint={
-              shaderPreset ? (
-                <>
-                  {shaderPreset.description} In game, <kbd>O</kbd> opens Iris to switch packs or tweak them and <kbd>K</kbd> turns shaders off and on.
-                </>
-              ) : (
-                'Off: plain Minecraft lighting, the fastest. Shaders make the game much heavier on the graphics card.'
-              )
+              <>
+                {shaderNow?.pending && <span className="warn-text">Applies next time you press Play. </span>}
+                {activePreset
+                  ? `${activePreset.description} `
+                  : shaderNow?.active === null
+                    ? `Using ${shaderNow.pack}, picked in game. `
+                    : 'Off: plain Minecraft lighting, the fastest; shaders are much heavier on the graphics card. '}
+                In game, <kbd>K</kbd> turns shaders {activeShader === SHADERS_OFF ? `on (${kPack})` : 'off'} and <kbd>O</kbd> opens Iris to pick a pack or tweak it.
+              </>
             }
           >
             <div className="segmented" role="radiogroup" aria-label="Shaders">
               {[{ id: SHADERS_OFF, name: 'Off' }, ...shaders.presets].map((p) => {
-                const active = (shaderPreset?.id ?? SHADERS_OFF) === p.id
+                const active = activeShader === p.id
                 return (
                   <button key={p.id} role="radio" aria-checked={active} className={active ? 'active' : ''} onClick={() => void pickShaders(p.id)}>
                     {p.name}

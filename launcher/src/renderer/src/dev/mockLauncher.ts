@@ -45,9 +45,7 @@ export function installMockLauncher(): void {
     server: { name: 'LemurSaucePacket', address: 'play.example.com' },
     pack: { version: '1.0.1', url: 'packs/lemursaucepacket-1.0.1.mrpack', sha1: '0'.repeat(40), minecraft: '1.21.1', loader: 'neoforge', loaderVersion: '21.1.252', modCount: 13 },
     recommendedMemoryMB: 6144,
-    optionalDefaultOff: ['iris'],
-    shaders: {
-      iris: 'iris',
+    shaderPresets: {
       defaultPreset: 'balanced',
       presets: [
         { id: 'lite', name: 'Lite', file: 'MakeUp-UltraFast.zip', description: 'MakeUp Ultra Fast. Soft lighting, shadows and water for any PC that can run the pack.' },
@@ -101,10 +99,14 @@ export function installMockLauncher(): void {
       return settings
     },
     setShaderPreset: async (id) => {
-      const on = id !== 'off'
-      settings = { ...settings, shaderPreset: on ? id : settings.shaderPreset, optionalChoices: { ...settings.optionalChoices, iris: on } }
+      settings = { ...settings, shaderPreset: id, appliedShaderPreset: '' }
       return settings
     },
+    // The mock game has shaders off, with the default pack ready.
+    getShaderState: async () =>
+      settings.shaderPreset && settings.shaderPreset !== settings.appliedShaderPreset
+        ? { active: settings.shaderPreset, pack: null, pending: true }
+        : { active: 'off', pack: 'ComplementaryReimagined.zip', pending: false },
     updateSettings: async (patch) => (settings = { ...settings, ...patch }),
     login: async () => {
       // Mirrors the real device-code sign-in: a code appears, then the "browser" approves it.

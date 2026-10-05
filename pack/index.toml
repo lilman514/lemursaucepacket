@@ -626,7 +626,7 @@ hash = "a9bfc4e9ef4862489bb586229fb8c53aab2563cc08ecf5744148bf2c547b2457"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
-hash = "315988798c4b575a9565c0cf04a66ba47d0e73b1f9c739242916341a6198402b"
+hash = "defaee2ce0ee1f169e182936515c40fa27563f534b7de6576296aadc551b1994"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/gear.json"
@@ -642,7 +642,7 @@ hash = "8adff5998b68ff8ca5f07e71515a264435d7670eb11be7fac57de3db9c2c6b22"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/launcher.json"
-hash = "69f456e421ee69e434e8cb3288cf8a1c176ee4a66e15cc70546b6ecfff5fc7d8"
+hash = "6ec26039ed81b3c18bd9517fc6a98138d5f28bef30647c21d5eda5442ec0bfd2"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
@@ -1862,7 +1862,7 @@ hash = "70a07c2944903328e42c5bd795e0f2f1586d87afa4a322c998d50224201b72f3"
 
 [[files]]
 file = "kubejs/client_scripts/tooltips.js"
-hash = "c1a666389ca86ac1c64b3a928b9375b8ace4f549f0e8056b2d6597a8d0bb3eab"
+hash = "a2e2d768d509c53805668865a287df155c3e4da0437c06ff3724c474ac031ec7"
 
 [[files]]
 file = "kubejs/client_scripts/waystones_client.js"
@@ -3063,7 +3063,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris.pw.toml"
-hash = "7454ead874aed648cb689627394dd51239e15c30b9d0e8fc987fb30b751a35aa"
+hash = "db1c1e6382878b78e994dba1b9026935f8d1c5ca685c89d2437858e0a0dcab58"
 metafile = true
 
 [[files]]

@@ -22,6 +22,7 @@ const api: LauncherApi = {
   getMods: () => call('mods:list'),
   setOptionalMod: (path, enabled) => call('mods:setOptional', path, enabled),
   setShaderPreset: (id) => call('shaders:set', id),
+  getShaderState: () => call('shaders:state'),
   updateSettings: (patch) => call('settings:update', patch),
   login: () => call('account:login'),
   cancelLogin: () => call('account:cancelLogin'),

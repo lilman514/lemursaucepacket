@@ -7,14 +7,14 @@
 
 import { execFile } from 'node:child_process'
 import path from 'node:path'
-import type { ProgressInfo } from '../src/shared/types'
+import type { ProgressInfo, Settings } from '../src/shared/types'
 import { fetchFeed, obtainMrpack } from '../src/core/feed'
 import { readJson, writeJson } from '../src/core/fsutil'
 import { installGame } from '../src/core/game'
 import { setUserAgent } from '../src/core/http'
 import { buildLaunchArguments, launchMinecraft, offlineUuid } from '../src/core/launch'
 import { disabledOptionalPaths, parseMrpack, resolveGameTarget } from '../src/core/mrpack'
-import { writeIrisPreset } from '../src/core/shaders'
+import { applyShaderPreset, isShaderChoice } from '../src/core/shaders'
 import { syncPack, type PackState } from '../src/core/sync'
 
 function arg(name: string, fallback?: string): string | undefined {
@@ -72,28 +72,24 @@ async function main(): Promise<void> {
   log(`Pack "${pack.index.name}" ${pack.index.versionId}: ${pack.index.files.length} files, ${pack.overrides.size} overrides → ${target.loader} ${target.loaderVersion ?? ''} for ${target.minecraft}`)
 
   const previous = await readJson<PackState>(dirs.state)
-  // --shaders <preset|off>: what a player who picked that shader preset in Settings gets.
+  // --shaders <preset|off>: what a player who picks that in Settings gets on their next Play. Without it, the
+  // game keeps whatever Iris config it has (a first launch gets shaders off, the default pack ready for K).
   const shaderArg = arg('shaders')
-  const choices = shaderArg !== undefined && feed.shaders ? { [feed.shaders.iris]: shaderArg !== 'off' } : {}
   const sync = await syncPack({
     instanceDir: dirs.instance,
     pack,
     packSha1: feed.pack.sha1,
     previous,
-    // Same rule the launcher uses: optional mods follow the pack's defaults (plus --shaders).
-    disabledOptional: disabledOptionalPaths(pack.index, choices, new Set(feed.optionalDefaultOff ?? [])),
+    // Same rule the launcher uses: optional mods follow the pack's defaults (no player choices here).
+    disabledOptional: disabledOptionalPaths(pack.index, {}, new Set(feed.optionalDefaultOff ?? [])),
     strictMods: feed.strictMods ?? true,
     verify,
     onProgress,
     log
   })
   await writeJson(dirs.state, sync.state)
-  if (shaderArg !== undefined && shaderArg !== 'off') {
-    const preset = feed.shaders?.presets.find((s) => s.id === shaderArg)
-    if (!preset) throw new Error(`No shader preset ${shaderArg} in the feed`)
-    await writeIrisPreset(dirs.instance, preset)
-    log(`Shaders: ${preset.name} (${preset.file})`)
-  }
+  if (shaderArg !== undefined && !isShaderChoice(feed, shaderArg)) throw new Error(`No shader preset ${shaderArg} in the feed`)
+  await applyShaderPreset(dirs.instance, feed, { shaderPreset: shaderArg ?? '', appliedShaderPreset: '' } as Settings, log)
   log(`Sync done: ${sync.downloaded.length} downloaded, ${sync.removed.length} removed, ${sync.quarantined.length} quarantined`)
 
   const game = await installGame({ mcDir: dirs.mc, runtimeDir: dirs.runtime, cacheDir: dirs.cache, target, verify, onProgress, log })

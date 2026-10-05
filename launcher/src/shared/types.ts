@@ -38,8 +38,8 @@ export interface LauncherFeed {
   strictMods?: boolean
   /** Optional mods (by Modrinth project id) that start switched off until a player turns them on. */
   optionalDefaultOff?: string[]
-  /** The shader picker: Iris is an optional mod; each preset is a shader pack Iris starts with. */
-  shaders?: ShaderFeed
+  /** The shader picker. Iris is always installed with shaders off; each preset is a shader pack it can switch to. */
+  shaderPresets?: ShaderFeed
   recommendedMemoryMB?: number
   /** Extra JVM args the admin wants every client to use. */
   jvmArgs?: string[]
@@ -58,11 +58,19 @@ export interface ShaderPreset {
 }
 
 export interface ShaderFeed {
-  /** Modrinth project id of the optional Iris mod (its key in Settings.optionalChoices). */
-  iris: string
-  /** What turning Iris on gives a player who never picked a preset. */
+  /** The pack Iris has ready while shaders are off, so K in game turns this one on. */
   defaultPreset: string
   presets: ShaderPreset[]
+}
+
+/** What the game is set to use, from Iris's config (or the player's pick, until it is applied on Play). */
+export interface ShaderState {
+  /** A preset id, 'off', or null for a pack picked in game that isn't one of the presets. */
+  active: string | null
+  /** The shader pack file Iris has selected, if any. */
+  pack: string | null
+  /** The player picked this in the launcher; it is written into the game on the next Play. */
+  pending: boolean
 }
 
 export type AfterLaunch = 'minimize' | 'close' | 'keep'
@@ -79,9 +87,10 @@ export interface Settings {
   jvmArgs: string
   /** The player's on/off choices for optional mods, keyed by Modrinth project id (or file path). */
   optionalChoices: Record<string, boolean>
-  /** The shader preset picked in Settings (an id from the feed). Shaders are on when Iris is on. */
+  /** The shader preset last picked in Settings (a feed id or 'off'; '' = never picked). */
   shaderPreset: string
-  /** The preset last written into the game's Iris config, so a pack picked in-game survives later launches. */
+  /** The pick last written into the game's Iris config ('' = not yet). A pick is written once, so K and O in game
+   *  keep working; picking again in the launcher writes again. */
   appliedShaderPreset: string
 }
 
@@ -192,8 +201,9 @@ export interface LauncherApi {
   getServerStatus(): Promise<ServerStatus>
   getMods(): Promise<ModEntry[]>
   setOptionalMod(key: string, enabled: boolean): Promise<Settings>
-  /** A shader preset id from the feed, or 'off'. */
+  /** A shader preset id from the feed, or 'off'; written into the game on the next Play. */
   setShaderPreset(id: string): Promise<Settings>
+  getShaderState(): Promise<ShaderState>
   updateSettings(patch: Partial<Settings>): Promise<Settings>
   login(): Promise<AccountInfo>
   cancelLogin(): Promise<void>

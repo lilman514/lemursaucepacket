@@ -97,7 +97,7 @@ const previous = existsSync(path.join(siteDir, 'launcher.json')) ? JSON.parse(re
 const launcherJson = {
   schema: 1,
   ...feed,
-  ...(feed.shaders ? { shaders: shaderFeed(feed.shaders) } : {}),
+  ...(feed.shaderPresets ? { shaderPresets: shaderFeed(feed.shaderPresets) } : {}),
   pack: { version, url: `packs/${fileName}`, sha1, size: data.length, minecraft, loader, loaderVersion, modCount },
   optionalDefaultOff,
   generatedAt: new Date().toISOString()
@@ -146,20 +146,20 @@ async function checkLocalJars(mrpackPath) {
 }
 
 /**
- * The launcher's shader picker: feed.json names packwiz files, the launcher needs the Iris mod's Modrinth id (its
- * optional-mod key) and each preset's zip name in shaderpacks/. A preset whose pack is missing stops the publish.
+ * The launcher's shader picker: feed.json names each preset's shader pack by its packwiz file; the launcher needs
+ * the zip name in shaderpacks/. Iris itself is a normal client mod (always installed, shaders off by default), so
+ * an optional Iris, or a preset whose pack is missing, stops the publish.
  */
 function shaderFeed(shaders) {
   const toml = (rel) => {
     const file = path.join(packDir, rel)
-    if (!existsSync(file)) throw new Error(`feed.json shaders: ${rel} is not in the pack`)
+    if (!existsSync(file)) throw new Error(`feed.json shaderPresets: ${rel} is not in the pack`)
     return readFileSync(file, 'utf8')
   }
-  const iris = /^mod-id\s*=\s*"([^"]+)"/m.exec(toml(`mods/${shaders.iris}.pw.toml`))?.[1]
-  if (!iris) throw new Error(`feed.json shaders: no Modrinth id in mods/${shaders.iris}.pw.toml`)
+  if (/^\[option\]/m.test(toml('mods/iris.pw.toml'))) throw new Error('feed.json shaderPresets: Iris must not be optional (pack/mods/iris.pw.toml has an [option] block)')
   const presets = shaders.presets.map(({ shaderpack, ...p }) => ({ ...p, file: tomlString(toml(`shaderpacks/${shaderpack}.pw.toml`), 'filename') }))
-  if (!presets.some((p) => p.id === shaders.defaultPreset)) throw new Error(`feed.json shaders: defaultPreset ${shaders.defaultPreset} is not a preset`)
-  return { iris, defaultPreset: shaders.defaultPreset, presets }
+  if (!presets.some((p) => p.id === shaders.defaultPreset)) throw new Error(`feed.json shaderPresets: defaultPreset ${shaders.defaultPreset} is not a preset`)
+  return { defaultPreset: shaders.defaultPreset, presets }
 }
 
 /** Moves files that only mean something to the dedicated server into server-overrides (packwiz can only emit shared overrides). */

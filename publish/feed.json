@@ -8,9 +8,8 @@
   "strictMods": true,
   "recommendedMemoryMB": 6144,
   "minLauncherVersion": "0.1.0",
-  "shaders": {
-    "_comment": "The launcher picker (Settings > Graphics). iris and shaderpack name packwiz files (pack/mods/<iris>.pw.toml, pack/shaderpacks/<shaderpack>.pw.toml); publish.mjs turns them into the Modrinth id and the zip name.",
-    "iris": "iris",
+  "shaderPresets": {
+    "_comment": "The launcher shader picker (Settings > Graphics). Iris is always installed with shaders off by default; each preset names a shader pack by its packwiz file (pack/shaderpacks/<shaderpack>.pw.toml), which publish.mjs turns into the zip name. (Key renamed from \"shaders\" in launcher 0.1.6, so 0.1.5 hides its picker instead of misreading this.)",
     "defaultPreset": "balanced",
     "presets": [
       {

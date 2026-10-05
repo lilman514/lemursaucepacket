@@ -250,7 +250,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Atmosphere: Subtle Effects, Particle Rain, Falling Leaves, Visuality, AmbientSounds.
 - Players: Wavey Capes, 3D Skin Layers, dynamic lights.
 - Interface: Legendary Tooltips, and a painted title and loading screen made with FancyMenu and Drippy.
-- Shaders: Iris with three presets on the launcher's Settings page (Graphics): Lite (MakeUp Ultra Fast), Balanced (Complementary Reimagined) and Fancy (Complementary Unbound); Off by default. The presets live in publish/feed.json (feed `shaders`); picking one switches the optional Iris mod on and the launcher writes that pack into config/iris.properties once, so a pack chosen in game with Iris's menu (O) survives later launches. The pack no longer ships iris.properties.
+- Shaders: Iris is always installed with shaders off, so K turns them on in game (Balanced by default) and O picks a pack. The launcher's Settings page (Graphics) offers presets: Lite (MakeUp Ultra Fast), Balanced (Complementary Reimagined) and Fancy (Complementary Unbound). Iris's config/iris.properties is the truth: the launcher writes it only on a first launch (off, default pack ready) and on the next Play after a pick in Settings, so K and O keep working; the presets live in publish/feed.json (feed `shaderPresets`). Iris costs nothing visible with shaders off (300-500 fps on a test scene of 100 turning cogwheels), apart from switching off Sodium Extra's sky and fog options. The pack does not ship iris.properties.
 
 **Information:**
 - JEI with Create JEI Compat (paged sequenced-assembly recipes), JEI World Gen (ore heights), Just Enough Professions, Just Enough Breeding and JEED.
@@ -282,7 +282,7 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Server: Clumps, Packet Fixer, spark (profiling), Chunky (pre-generation).
 - Support: Crash Assistant, NetherPortalFix.
 
-Launcher toggles: 18 client mods are optional on the launcher's Mods page. Shaders, first-person model and controller support start off; everything else starts on.
+Launcher toggles: 17 client mods are optional on the launcher's Mods page. First-person model and controller support start off; everything else starts on.
 
 ## Deliberately left out
 

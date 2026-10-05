@@ -16,16 +16,16 @@
     {
       "type": "patchouli:text",
       "title": "Mods",
-      "text": "The full list of mods with a link to each one's Modrinth page. Mods marked $(bold)Optional$() are client-side extras you can switch off (shaders, first-person model, controller support…). Everything else is required by the server."
+      "text": "The full list of mods with a link to each one's Modrinth page. Mods marked $(bold)Optional$() are client-side extras you can switch off (first-person model, controller support…). Everything else is required by the server."
     },
     {
       "type": "patchouli:text",
       "title": "Settings",
-      "text": "$(li)$(bold)Memory:$() how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.$(br)$(li)$(bold)Window size / fullscreen.$()$(br)$(li)$(bold)Shaders$() (Graphics): Off, $(bold)Lite$() (MakeUp Ultra Fast, for any PC), $(bold)Balanced$() (Complementary Reimagined, keeps the Minecraft look) or $(bold)Fancy$() (Complementary Unbound, realistic light and clouds, for strong graphics cards). Off by default. The pick applies next time you press Play. In game, $(bold)O$() opens Iris to switch packs or tweak them and $(bold)K$() turns shaders off and on; a pack you pick there stays until you choose"
+      "text": "$(li)$(bold)Memory:$() how much RAM Minecraft gets. The server recommends 6 GB; more helps with shaders.$(br)$(li)$(bold)Window size / fullscreen.$()$(br)$(li)$(bold)Shaders$() (Graphics): Off, $(bold)Lite$() (MakeUp Ultra Fast, for any PC), $(bold)Balanced$() (Complementary Reimagined, keeps the Minecraft look) or $(bold)Fancy$() (Complementary Unbound, realistic light and clouds, for strong graphics cards). Off by default. Shaders are always installed, so you can also flip them in game: $(bold)K$() turns them on and off (Balanced unless you picked another pack) and $(bold)O$() opens Iris to pick a pack or tweak"
     },
     {
       "type": "patchouli:text",
-      "text": " another preset here.$(br)$(li)$(bold)Join the server automatically:$() skips the title screen.$(br)$(li)$(bold)When the game starts:$() minimise, keep or close the launcher.$(br)$(li)$(bold)Java executable / JVM arguments:$() leave empty unless you know why.$(br)$(li)$(bold)Files & repair:$() opens the game, screenshots and logs folders. $(italic)Repair & play$() re-checks every file and re-downloads anything damaged."
+      "text": " it. A pick here applies next time you press Play; whatever you choose in game stays until you pick here again.$(br)$(li)$(bold)Join the server automatically:$() skips the title screen.$(br)$(li)$(bold)When the game starts:$() minimise, keep or close the launcher.$(br)$(li)$(bold)Java executable / JVM arguments:$() leave empty unless you know why.$(br)$(li)$(bold)Files & repair:$() opens the game, screenshots and logs folders. $(italic)Repair & play$() re-checks every file and re-downloads anything damaged."
     },
     {
       "type": "patchouli:text",

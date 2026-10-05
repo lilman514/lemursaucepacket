@@ -53,12 +53,18 @@ function sbtLoadPmmo() {
 }
 
 let sbtSideCache = null
-/** Project MMO's LogicalSide for this side. Resolve the enum once so Rhino never has to choose between Core.get overloads. */
+// Project MMO's lookups have several overloads that KubeJS's argument conversion makes ambiguous for Rhino, so the
+// ones used here are called by their exact signatures.
+const SBT_REQ_MAP_ITEM = 'getRequirementMap(net.minecraft.world.item.ItemStack,net.minecraft.world.level.Level,harmonised.pmmo.api.enums.ReqType,net.neoforged.fml.LogicalSide)'
+const SBT_XP_MAP_ITEM = 'getXpAwardMap(net.minecraft.world.item.ItemStack,harmonised.pmmo.api.enums.EventType,net.neoforged.fml.LogicalSide,net.minecraft.world.entity.player.Player)'
+const SBT_XP_MAP_OBJECT = 'getXpAwardMap(harmonised.pmmo.api.enums.ObjectType,harmonised.pmmo.api.enums.EventType,net.minecraft.resources.ResourceLocation,net.neoforged.fml.LogicalSide,net.minecraft.world.entity.player.Player)'
+/**
+ * Project MMO's LogicalSide for this side, resolved once. LogicalSide itself can't be loaded (KubeJS's class filter
+ * blocks every net.neoforged.fml class), and Core.get has LogicalSide and Level overloads, so the Level one is
+ * called by its signature: Rhino never has to choose.
+ */
 function sbtSide(level) {
-  if (sbtSideCache == null) {
-    let side = Java.loadClass('net.neoforged.fml.LogicalSide')
-    sbtSideCache = side.CLIENT
-  }
+  if (sbtSideCache == null) sbtSideCache = SBT_PMMO.core['get(net.minecraft.world.level.Level)'](level).getSide()
   return sbtSideCache
 }
 
@@ -442,7 +448,7 @@ function sbtPmmo(stack, id, info, player) {
   try {
     let types = info.block ? SBT_REQ_TYPES.concat(SBT_REQ_BLOCK_TYPES) : SBT_REQ_TYPES
     types.forEach((type) => {
-      let it = SBT_PMMO.api.getRequirementMap(stack, level, SBT_PMMO.req[type], sbtSide(level)).entrySet().iterator()
+      let it = SBT_PMMO.api[SBT_REQ_MAP_ITEM](stack, level, SBT_PMMO.req[type], sbtSide(level)).entrySet().iterator()
       while (it.hasNext()) {
         let entry = it.next()
         let skill = String(entry.getKey())
@@ -490,7 +496,7 @@ function sbtPmmo(stack, id, info, player) {
     SBT_XP_EVENTS.forEach((xpEvent) => {
       if (xpEvent[2] && !info.block) return
       let type = SBT_PMMO.event[xpEvent[0]]
-      let map = xpEvent[2] ? SBT_PMMO.api.getXpAwardMap(SBT_PMMO.object.BLOCK, type, location, sbtSide(level), player) : SBT_PMMO.api.getXpAwardMap(stack, type, sbtSide(level), player)
+      let map = xpEvent[2] ? SBT_PMMO.api[SBT_XP_MAP_OBJECT](SBT_PMMO.object.BLOCK, type, location, sbtSide(level), player) : SBT_PMMO.api[SBT_XP_MAP_ITEM](stack, type, sbtSide(level), player)
       let line = null
       let it = map.entrySet().iterator()
       while (it.hasNext()) {

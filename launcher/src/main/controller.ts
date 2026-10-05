@@ -4,7 +4,7 @@ import { app, shell, type BrowserWindow } from 'electron'
 import { EventEmitter } from 'node:events'
 import { mkdir } from 'node:fs/promises'
 import path from 'node:path'
-import type { AccountInfo, AfterLaunch, GameStatus, LauncherFeed, LoginCode, ModEntry, PackSummary, ProgressInfo, ServerStatus, Settings, ToastMessage } from '../shared/types'
+import type { AccountInfo, AfterLaunch, GameStatus, LauncherFeed, LoginCode, ModEntry, PackSummary, ProgressInfo, ServerStatus, Settings, ShaderState, ToastMessage } from '../shared/types'
 import {
   AuthError,
   exchangeAuthCode,
@@ -23,7 +23,7 @@ import { CancelledError } from '../core/http'
 import { launchMinecraft, offlineUuid, type GameHandle, type LaunchAccount } from '../core/launch'
 import { lookupBySha1, type ModMeta } from '../core/modrinth'
 import { disabledOptionalPaths, fileKey, fileSide, parseMrpack, resolveGameTarget, type ParsedMrpack } from '../core/mrpack'
-import { SHADERS_OFF, applyShaderPreset, shaderPresetPatch } from '../core/shaders'
+import { applyShaderPreset, isShaderChoice, shaderState } from '../core/shaders'
 import { pingServer } from '../core/ping'
 import { serversDat } from '../core/serversDat'
 import { syncPack, type PackState } from '../core/sync'
@@ -149,12 +149,15 @@ export class Launcher extends EventEmitter<LauncherEvents> {
     return { host: server.address, port: server.port }
   }
 
-  /** The shader picker: a preset id, or SHADERS_OFF to switch Iris off. Applied on the next Play. */
+  /** The shader picker: a preset id or 'off', written into the game on the next Play (even if it was picked before). */
   async setShaderPreset(id: string): Promise<Settings> {
-    const shaders = this.feed?.shaders
-    if (!shaders) throw new UserError('This pack has no shader presets.')
-    if (id !== SHADERS_OFF && !shaders.presets.some((p) => p.id === id)) throw new UserError('Unknown shader preset.')
-    return this.settings.update(shaderPresetPatch(this.feed, this.settings.get(), id))
+    if (!this.feed?.shaderPresets) throw new UserError('This pack has no shader presets.')
+    if (!isShaderChoice(this.feed, id)) throw new UserError('Unknown shader preset.')
+    return this.settings.update({ shaderPreset: id, appliedShaderPreset: '' })
+  }
+
+  async getShaderState(): Promise<ShaderState> {
+    return shaderState(this.paths.instance, this.feed, this.settings.get())
   }
 
   async getMods(): Promise<ModEntry[]> {
