@@ -1,7 +1,7 @@
 // TEST ONLY (headless client; never shipped in the pack). Photographs the spawn city once the server has built
-// it: it waits until the plaza's waystone stands two blocks north of the player (spawn is (0, 1, -7) from the
-// centre, the waystone (0, 1, -9)), works out the city's centre, then flies a spectator camera through a list of
-// views and saves screenshots/hub_<view>.png.
+// it: it waits until the city's waystone stands where config/lemursaucepacket/hub_plan.json puts it relative to
+// world spawn (where a new player arrives), works out the city's centre from the same plan, then flies a
+// spectator camera through a list of views and saves screenshots/hub_<view>.png.
 
 const HP = {
   Screenshot: Java.loadClass('net.minecraft.client.Screenshot'),
@@ -9,17 +9,21 @@ const HP = {
   settle: 6,
   // [name, camera offset from the centre (x, y above ground, z), point looked at (x, y, z)]
   views: [
-    ['overview_south', [0, 95, 150], [0, 0, 0]],
-    ['overview_corner', [125, 85, 125], [0, 0, 0]],
-    ['plaza', [22, 16, 26], [0, 2, 0]],
-    ['market', [12, 9, 0], [0, 2, -13]],
-    ['avenue_south_gate', [0, 3, 74], [0, 4, 20]],
-    ['towers_outside', [100, 22, 96], [76, 8, 76]],
-    ['cottages', [30, 14, 84], [20, 3, 62]]
+    ['overview_south', [0, 110, 175], [0, 0, 0]],
+    ['overview_corner', [145, 100, 145], [0, 0, 0]],
+    ['market', [32, 22, 36], [0, 2, 0]],
+    ['market_street', [-1, 2, 14], [-6, 3, -2]],
+    ['cathedral', [-6, 5, -18], [-15, 14, -42]],
+    ['shops_east', [20, 4, 8], [34, 6, -10]],
+    ['fountain', [0, 9, 31], [0, 3, 44]],
+    ['avenue_south_gate', [0, 3, 84], [0, 4, 20]],
+    ['outskirts', [40, 18, 94], [28, 3, 70]],
+    ['towers_outside', [112, 24, 108], [86, 8, 86]]
   ]
 }
 
 let hpTicks = 0
+let hpPlan = null
 let hpCentre = null
 let hpStart = 0
 
@@ -40,16 +44,23 @@ ClientEvents.tick(() => {
   if (hpCentre == null) {
     if (hpTicks % 20 !== 0) return
     let p = Client.player.blockPosition()
+    if (hpPlan == null) {
+      // The pack ships the plan to clients too. Spawn and waystone are relative to the city's centre.
+      let plan = JsonIO.read('config/lemursaucepacket/hub_plan.json')
+      hpPlan = { spawn: [Number(plan.spawn[0]), Number(plan.spawn[1]), Number(plan.spawn[2])], waystone: [Number(plan.waystone.p[0]), Number(plan.waystone.p[1]), Number(plan.waystone.p[2])] }
+    }
+    let wdx = hpPlan.waystone[0] - hpPlan.spawn[0]
+    let wdz = hpPlan.waystone[2] - hpPlan.spawn[2]
     // Macaw's paving is a little under a full block, so the player's block can be the paving itself: look at
     // that height and the one above.
     let found = -1
     for (let dy = 0; dy <= 1; dy++) {
-      let id = String(Client.level.getBlockState(new HP.BlockPos(p.getX(), p.getY() + dy, p.getZ() - 2)).getBlock().getDescriptionId())
+      let id = String(Client.level.getBlockState(new HP.BlockPos(p.getX() + wdx, p.getY() + dy, p.getZ() + wdz)).getBlock().getDescriptionId())
       if (id.indexOf('waystone') >= 0 && found < 0) found = p.getY() + dy
     }
     if (hpTicks % 200 === 0) hpSay(`waiting for the city (at ${p.getX()} ${p.getY()} ${p.getZ()})`)
     if (found < 0) return
-    hpCentre = [p.getX(), found - 1, p.getZ() + 7]
+    hpCentre = [p.getX() - hpPlan.spawn[0], found - 1, p.getZ() - hpPlan.spawn[2]]
     // Give the server time to catch up (it falls behind while building) before the first teleport.
     hpStart = hpTicks + 400
     hpSay(`city centre ${hpCentre.join(' ')}`)

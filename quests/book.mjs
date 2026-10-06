@@ -470,7 +470,7 @@ export default {
           icon: 'minecraft:bell',
           tier: 1,
           auto: true,
-          desc: ['Mayor Thaddeus stands by the waystone, just north of the fountain.', '', 'Right-click him and ask for work.', '', tip('Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk.')],
+          desc: ['Mayor Thaddeus greets newcomers right where you arrived, at the south edge of the market.', '', 'Right-click him and ask for work.', '', tip('Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk.')],
           tasks: [{ stage: 'q_welcome_met', title: 'Ask the mayor for work', icon: 'minecraft:bell' }],
           reward: { coins: 16 }
         },
@@ -481,7 +481,7 @@ export default {
           icon: 'minecraft:bread',
           tier: 1,
           auto: true,
-          desc: ['Bessa the baker has a stall in the market on the north side of the plaza.', '', "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", '', tip('Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour).')],
+          desc: ['Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.', '', "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", '', tip('Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour).')],
           tasks: [{ stage: 'q_welcome_bread', title: 'Buy something from Bessa', icon: 'minecraft:bread' }]
         },
         {

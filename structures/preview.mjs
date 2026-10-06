@@ -27,12 +27,17 @@ if (!client) {
 const feed = arg('feed', 'http://localhost:8787/launcher.json')
 const join = arg('join', '127.0.0.1:25570')
 const instance = path.join(client, 'instance')
-const manifest = JSON.parse(readFileSync(path.join(here, 'raw', 'manifest.json'), 'utf8'))
-const shots = manifest.templates.length * 2
+// --raw: the raw folder the bake used (structures/raw, or structures/raw-import for other mods' buildings).
+const rawDir = path.resolve(arg('raw', path.join(here, 'raw')))
+// --views: which camera angles to take (a: front right, b: front left).
+const views = arg('views', 'ab')
+const manifest = JSON.parse(readFileSync(path.join(rawDir, 'manifest.json'), 'utf8'))
+const shots = manifest.templates.length * views.length
 const seconds = 12 + shots * 6 + 20
 
 mkdirSync(path.join(instance, 'kubejs', 'bake'), { recursive: true })
-copyFileSync(path.join(here, 'raw', 'manifest.json'), path.join(instance, 'kubejs', 'bake', 'manifest.json'))
+copyFileSync(path.join(rawDir, 'manifest.json'), path.join(instance, 'kubejs', 'bake', 'manifest.json'))
+writeFileSync(path.join(instance, 'kubejs', 'bake', 'preview.json'), JSON.stringify({ views }))
 // The bake decided where each building stands; photograph those spots.
 const serverDir = arg('server')
 if (!serverDir || !existsSync(path.join(serverDir, 'kubejs', 'bake', 'layout.json'))) {

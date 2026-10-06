@@ -73,6 +73,16 @@ function bkRunJobs() {
   return bkAt >= bkJobs.length
 }
 
+/** The way a template's front door faces (its door mark, from structures/import.mjs); our own buildings face south. */
+function bkFacing(t) {
+  let facing = 'south'
+  if (t.marks != null)
+    t.marks.forEach((m) => {
+      if (String(m.name) === 'door' && m.facing != null) facing = String(m.facing)
+    })
+  return facing
+}
+
 function bkQueue(jobs) {
   bkJobs = jobs
   bkAt = 0
@@ -97,7 +107,7 @@ function bkStart(server) {
     let z1 = BAKE.origin.z + row * L.cell
     server.runCommand(`forceload add ${BAKE.origin.x - BAKE.margin} ${z1} ${L.endX + BAKE.margin} ${z1 + L.cell - 1}`)
   }
-  JsonIO.write('kubejs/bake/layout.json', { showY: BAKE.showY, slots: L.slots.map((s) => ({ name: s.t.name, x: s.x, z: s.z, size: s.t.size, solid: s.t.solid })) })
+  JsonIO.write('kubejs/bake/layout.json', { showY: BAKE.showY, slots: L.slots.map((s) => ({ name: s.t.name, x: s.x, z: s.z, size: s.t.size, solid: s.t.solid, facing: bkFacing(s.t) })) })
   let jobs = bkWipeJobs(server, L)
   L.slots.forEach((s) => {
     let size = s.t.size

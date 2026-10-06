@@ -25,6 +25,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.RandomState;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor;
+import net.minecraft.world.level.levelgen.structure.templatesystem.JigsawReplacementProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import org.slf4j.Logger;
@@ -310,7 +312,10 @@ public final class HubBuilder {
             return;
         }
         BlockPos at = centre.offset(pl.x(), pl.y(), pl.z()).atY(baseY + pl.y());
-        StructurePlaceSettings settings = new StructurePlaceSettings().setRotation(pl.rotation()).setIgnoreEntities(false).setKnownShape(true);
+        // Other mods' village pieces: jigsaw blocks become their final state (as when a village is assembled, so no
+        // villagers or jigsaw blocks), and the structure blocks some leave in a corner are skipped.
+        StructurePlaceSettings settings = new StructurePlaceSettings().setRotation(pl.rotation()).setIgnoreEntities(false).setKnownShape(true)
+                .addProcessor(JigsawReplacementProcessor.INSTANCE).addProcessor(BlockIgnoreProcessor.STRUCTURE_BLOCK);
         t.get().placeInWorld(level, at, at, settings, random, Block.UPDATE_CLIENTS);
     }
 

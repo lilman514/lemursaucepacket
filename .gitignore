@@ -15,5 +15,9 @@ quests/.nested.jar
 quests/preview/
 # structures/build.mjs and bake.mjs outputs (the shipped, baked templates live in pack/kubejs/data/lemursaucepacket/structure)
 structures/raw/
+structures/raw-import/
+structures/raw-import2/
+# Other mods' jars, cached by structures/external.mjs
+structures/.external/
 structures/baked/
 structures/previews/

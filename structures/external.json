@@ -1,0 +1,4727 @@
+{
+ "generated": "node structures/external.mjs",
+ "sources": [
+  {
+   "slug": "lukis-grand-capitals",
+   "jar": "lukis-grand-capitals-1.1.3.jar",
+   "namespace": "revampedvillages",
+   "templates": 74
+  }
+ ],
+ "templates": [
+  {
+   "name": "lgc_plains_center_big_market",
+   "id": "revampedvillages:plains/center/big_market",
+   "kind": "external",
+   "size": [
+    28,
+    21,
+    34
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     20,
+     33
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      18,
+      1,
+      20
+     ],
+     "job": "crafting_table"
+    },
+    {
+     "name": "stall",
+     "pos": [
+      13,
+      1,
+      18
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      9,
+      1,
+      32
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      4,
+      1,
+      7
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      21,
+      1,
+      26
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      2,
+      2,
+      20
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      9
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      21,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      9,
+      1,
+      24
+     ]
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      14,
+      2,
+      19
+     ],
+     "state": "minecraft:air"
+    },
+    {
+     "pos": [
+      14,
+      1,
+      19
+     ],
+     "state": "minecraft:air"
+    }
+   ],
+   "waystone": {
+    "pos": [
+     7,
+     1,
+     19
+    ],
+    "facing": "south"
+   },
+   "jobs": [
+    "cartography_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "smithing_table",
+    "crafting_table",
+    "crafting_table",
+    "stonecutter",
+    "grindstone"
+   ]
+  },
+  {
+   "name": "lgc_plains_center_fountain",
+   "id": "revampedvillages:plains/center/fountain",
+   "kind": "external",
+   "size": [
+    18,
+    10,
+    18
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     17,
+     9,
+     17
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_center_medium_market",
+   "id": "revampedvillages:plains/center/medium_market",
+   "kind": "external",
+   "size": [
+    28,
+    15,
+    25
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     14,
+     24
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      20,
+      1,
+      12
+     ],
+     "job": "composter"
+    },
+    {
+     "name": "stall",
+     "pos": [
+      14,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      15,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      1,
+      1,
+      10
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      25,
+      2,
+      10
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      9,
+      1,
+      7
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      6,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      8
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      23
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "anvil",
+    "composter",
+    "barrel"
+   ]
+  },
+  {
+   "name": "lgc_plains_center_small_market",
+   "id": "revampedvillages:plains/center/small_market",
+   "kind": "external",
+   "size": [
+    20,
+    15,
+    23
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     19,
+     14,
+     22
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      15,
+      1,
+      13
+     ],
+     "job": "lectern"
+    },
+    {
+     "name": "stall",
+     "pos": [
+      7,
+      1,
+      11
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      8
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      9,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      11,
+      2,
+      20
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      1,
+      1,
+      15
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      13,
+      1,
+      13
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      2,
+      1,
+      9
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      14
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "loom",
+    "fletching_table",
+    "composter",
+    "lectern"
+   ]
+  },
+  {
+   "name": "lgc_plains_center_well",
+   "id": "revampedvillages:plains/center/well",
+   "kind": "external",
+   "size": [
+    11,
+    9,
+    11
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     10,
+     8,
+     10
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_church",
+   "id": "revampedvillages:plains/church",
+   "kind": "external",
+   "size": [
+    26,
+    48,
+    19
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     25,
+     47,
+     18
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      10,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      10,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      20,
+      2,
+      7
+     ],
+     "job": "lectern"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      3,
+      2,
+      7
+     ],
+     "state": "minecraft:cartography_table"
+    },
+    {
+     "pos": [
+      3,
+      2,
+      8
+     ],
+     "state": "minecraft:cartography_table"
+    },
+    {
+     "pos": [
+      3,
+      2,
+      9
+     ],
+     "state": "minecraft:cartography_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "cartography_table",
+    "cartography_table",
+    "cartography_table",
+    "lectern",
+    "brewing_stand"
+   ]
+  },
+  {
+   "name": "lgc_plains_decor_tree_1",
+   "id": "revampedvillages:plains/decor/tree_1",
+   "kind": "external",
+   "size": [
+    16,
+    15,
+    16
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     1
+    ],
+    "max": [
+     15,
+     13,
+     15
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_decor_tree_2",
+   "id": "revampedvillages:plains/decor/tree_2",
+   "kind": "external",
+   "size": [
+    3,
+    11,
+    3
+   ],
+   "solid": {
+    "min": [
+     0,
+     1,
+     0
+    ],
+    "max": [
+     2,
+     10,
+     2
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_accessory_farm_1",
+   "id": "revampedvillages:plains/house/accessory_farm_1",
+   "kind": "external",
+   "size": [
+    13,
+    20,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     11,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      6,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      6,
+      1,
+      -1
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "composter",
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_accessory_farm_2",
+   "id": "revampedvillages:plains/house/accessory_farm_2",
+   "kind": "external",
+   "size": [
+    11,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     10,
+     12,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      6,
+      1,
+      7
+     ],
+     "job": "composter"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_accessory_pen_1",
+   "id": "revampedvillages:plains/house/accessory_pen_1",
+   "kind": "external",
+   "size": [
+    11,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     10,
+     2,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_accessory_pen_2",
+   "id": "revampedvillages:plains/house/accessory_pen_2",
+   "kind": "external",
+   "size": [
+    16,
+    20,
+    14
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     15,
+     11,
+     13
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      2,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_accessory_pen_3",
+   "id": "revampedvillages:plains/house/accessory_pen_3",
+   "kind": "external",
+   "size": [
+    16,
+    20,
+    14
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     15,
+     2,
+     13
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      6,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      6,
+      1,
+      -1
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_accessory_tree",
+   "id": "revampedvillages:plains/house/accessory_tree",
+   "kind": "external",
+   "size": [
+    16,
+    20,
+    16
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     15,
+     14,
+     15
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      6,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      6,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      6,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_medium_house_1",
+   "id": "revampedvillages:plains/house/medium_house_1",
+   "kind": "external",
+   "size": [
+    15,
+    20,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     14,
+     13,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      11,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      11,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      2,
+      10
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_medium_house_2",
+   "id": "revampedvillages:plains/house/medium_house_2",
+   "kind": "external",
+   "size": [
+    13,
+    20,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     12,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      9,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_small_house_1",
+   "id": "revampedvillages:plains/house/small_house_1",
+   "kind": "external",
+   "size": [
+    7,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     8,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_small_house_2",
+   "id": "revampedvillages:plains/house/small_house_2",
+   "kind": "external",
+   "size": [
+    7,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     9,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      2,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_small_house_3",
+   "id": "revampedvillages:plains/house/small_house_3",
+   "kind": "external",
+   "size": [
+    7,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     9,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      2,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_small_house_4",
+   "id": "revampedvillages:plains/house/small_house_4",
+   "kind": "external",
+   "size": [
+    7,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     8,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_small_house_5",
+   "id": "revampedvillages:plains/house/small_house_5",
+   "kind": "external",
+   "size": [
+    13,
+    20,
+    11
+   ],
+   "solid": {
+    "min": [
+     1,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     14,
+     10
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_small_house_6",
+   "id": "revampedvillages:plains/house/small_house_6",
+   "kind": "external",
+   "size": [
+    9,
+    20,
+    11
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     8,
+     8,
+     10
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      3
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_small_house_7",
+   "id": "revampedvillages:plains/house/small_house_7",
+   "kind": "external",
+   "size": [
+    11,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     10,
+     9,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      2,
+      3
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_small_house_8",
+   "id": "revampedvillages:plains/house/small_house_8",
+   "kind": "external",
+   "size": [
+    10,
+    20,
+    9
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     9,
+     9,
+     8
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      2,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_house_stable_1",
+   "id": "revampedvillages:plains/house/stable_1",
+   "kind": "external",
+   "size": [
+    18,
+    20,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     17,
+     14,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      2,
+      9
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_house_stable_2",
+   "id": "revampedvillages:plains/house/stable_2",
+   "kind": "external",
+   "size": [
+    15,
+    20,
+    10
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     14,
+     11,
+     9
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      7,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      7,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_market_1",
+   "id": "revampedvillages:plains/market_1",
+   "kind": "external",
+   "size": [
+    8,
+    5,
+    7
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     3,
+     6
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      2
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_market_2",
+   "id": "revampedvillages:plains/market_2",
+   "kind": "external",
+   "size": [
+    8,
+    5,
+    7
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     3,
+     5
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      2,
+      1,
+      3
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_water_tower",
+   "id": "revampedvillages:plains/water_tower",
+   "kind": "external",
+   "size": [
+    8,
+    15,
+    7
+   ],
+   "solid": {
+    "min": [
+     1,
+     0,
+     1
+    ],
+    "max": [
+     7,
+     10,
+     6
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_well",
+   "id": "revampedvillages:plains/well",
+   "kind": "external",
+   "size": [
+    8,
+    5,
+    7
+   ],
+   "solid": {
+    "min": [
+     1,
+     0,
+     1
+    ],
+    "max": [
+     7,
+     3,
+     6
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_plains_worker_armorer",
+   "id": "revampedvillages:plains/worker/armorer",
+   "kind": "external",
+   "size": [
+    13,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     17,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      9,
+      2,
+      2
+     ],
+     "job": "blast_furnace"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      9,
+      2,
+      9
+     ],
+     "state": "minecraft:smithing_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "smithing_table",
+    "crafting_table",
+    "blast_furnace",
+    "blast_furnace"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_butcher_shop_1",
+   "id": "revampedvillages:plains/worker/butcher_shop_1",
+   "kind": "external",
+   "size": [
+    10,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     9,
+     15,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      2,
+      3
+     ],
+     "job": "smoker"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      5,
+      2,
+      3
+     ],
+     "state": "minecraft:smoker"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "smoker",
+    "smoker"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_butcher_shop_2",
+   "id": "revampedvillages:plains/worker/butcher_shop_2",
+   "kind": "external",
+   "size": [
+    9,
+    20,
+    16
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     8,
+     15,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      1,
+      7
+     ],
+     "job": "smoker"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      6,
+      1,
+      7
+     ],
+     "state": "minecraft:smoker"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "smoker",
+    "crafting_table",
+    "smoker"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_cartographer",
+   "id": "revampedvillages:plains/worker/cartographer",
+   "kind": "external",
+   "size": [
+    14,
+    40,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     13,
+     38,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      2,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      3,
+      2,
+      12
+     ],
+     "state": "minecraft:cartography_table"
+    },
+    {
+     "pos": [
+      9,
+      13,
+      8
+     ],
+     "state": "minecraft:crafting_table"
+    },
+    {
+     "pos": [
+      9,
+      23,
+      5
+     ],
+     "state": "minecraft:enchanting_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "cartography_table",
+    "crafting_table",
+    "cartography_table",
+    "crafting_table",
+    "crafting_table",
+    "enchanting_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_cleric",
+   "id": "revampedvillages:plains/worker/cleric",
+   "kind": "external",
+   "size": [
+    11,
+    34,
+    21
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     10,
+     32,
+     20
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      7,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      7,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      2,
+      1,
+      14
+     ],
+     "job": "enchanting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      2,
+      1,
+      15
+     ],
+     "state": "minecraft:enchanting_table"
+    },
+    {
+     "pos": [
+      7,
+      2,
+      3
+     ],
+     "state": "minecraft:brewing_stand[has_bottle_2=false,has_bottle_0=false,has_bottle_1=false]"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "enchanting_table",
+    "brewing_stand",
+    "brewing_stand",
+    "brewing_stand"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_fisherman",
+   "id": "revampedvillages:plains/worker/fisherman",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    14
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     11,
+     13
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      11,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      11,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      15,
+      1,
+      7
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      7,
+      4,
+      9
+     ],
+     "state": "minecraft:barrel"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "barrel",
+    "crafting_table",
+    "barrel",
+    "barrel"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_fletcher",
+   "id": "revampedvillages:plains/worker/fletcher",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    11
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     9,
+     10
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      7,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      7,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      6
+     ],
+     "job": "fletching_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "fletching_table"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_inn",
+   "id": "revampedvillages:plains/worker/inn",
+   "kind": "external",
+   "size": [
+    19,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     18,
+     17,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      12,
+      1,
+      8
+     ],
+     "job": "lectern"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "lectern"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_library_1",
+   "id": "revampedvillages:plains/worker/library_1",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     18,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      8,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      8,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      1,
+      5
+     ],
+     "job": "lectern"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "lectern",
+    "lectern"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_library_2",
+   "id": "revampedvillages:plains/worker/library_2",
+   "kind": "external",
+   "size": [
+    13,
+    20,
+    14
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     12,
+     13
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      6,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      6,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      1,
+      7
+     ],
+     "job": "lectern"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "lectern"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_mason",
+   "id": "revampedvillages:plains/worker/mason",
+   "kind": "external",
+   "size": [
+    26,
+    20,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     25,
+     16,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      19,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      19,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      3,
+      1,
+      9
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "stonecutter",
+    "stonecutter"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_shepherd",
+   "id": "revampedvillages:plains/worker/shepherd",
+   "kind": "external",
+   "size": [
+    21,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     19,
+     14,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      8,
+      1,
+      1
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      8,
+      1,
+      2
+     ],
+     "state": "minecraft:crafting_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "loom",
+    "loom"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_tannery",
+   "id": "revampedvillages:plains/worker/tannery",
+   "kind": "external",
+   "size": [
+    16,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     15,
+     11,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      1,
+      2
+     ],
+     "job": "composter"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      6,
+      1,
+      2
+     ],
+     "state": "minecraft:composter"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_toolsmith",
+   "id": "revampedvillages:plains/worker/toolsmith",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    14
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     15,
+     13
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      9,
+      2,
+      5
+     ],
+     "job": "smithing_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "smithing_table",
+    "crafting_table",
+    "anvil",
+    "anvil"
+   ]
+  },
+  {
+   "name": "lgc_plains_worker_weaponsmith",
+   "id": "revampedvillages:plains/worker/weaponsmith",
+   "kind": "external",
+   "size": [
+    16,
+    20,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     15,
+     19,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      8,
+      2,
+      8
+     ],
+     "job": "anvil"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "anvil",
+    "grindstone"
+   ]
+  },
+  {
+   "name": "lgc_taiga_accessory_farm",
+   "id": "revampedvillages:taiga/accessory/farm",
+   "kind": "external",
+   "size": [
+    17,
+    15,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     2,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      8,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      8,
+      1,
+      -1
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "composter",
+    "composter",
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_taiga_accessory_pen",
+   "id": "revampedvillages:taiga/accessory/pen",
+   "kind": "external",
+   "size": [
+    17,
+    15,
+    15
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     11,
+     14
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_center_bonfire",
+   "id": "revampedvillages:taiga/center/bonfire",
+   "kind": "external",
+   "size": [
+    28,
+    15,
+    25
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     5,
+     24
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_center_luki",
+   "id": "revampedvillages:taiga/center/luki",
+   "kind": "external",
+   "size": [
+    28,
+    48,
+    25
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     35,
+     24
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_center_market",
+   "id": "revampedvillages:taiga/center/market",
+   "kind": "external",
+   "size": [
+    28,
+    48,
+    25
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     36,
+     24
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      20,
+      1,
+      12
+     ],
+     "job": "composter"
+    },
+    {
+     "name": "stall",
+     "pos": [
+      14,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      15,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      1,
+      1,
+      10
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      26,
+      1,
+      9
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      9,
+      1,
+      7
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      24,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      6,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "stall",
+     "pos": [
+      18,
+      1,
+      8
+     ]
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      12,
+      2,
+      10
+     ],
+     "state": "minecraft:cartography_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "anvil",
+    "composter",
+    "barrel",
+    "cartography_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_center_statue",
+   "id": "revampedvillages:taiga/center/statue",
+   "kind": "external",
+   "size": [
+    28,
+    48,
+    25
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     27,
+     35,
+     24
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [
+    {
+     "pos": [
+      13,
+      2,
+      23
+     ],
+     "state": "minecraft:air"
+    },
+    {
+     "pos": [
+      13,
+      1,
+      23
+     ],
+     "state": "minecraft:air"
+    }
+   ],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_decor_market",
+   "id": "revampedvillages:taiga/decor/market",
+   "kind": "external",
+   "size": [
+    7,
+    10,
+    7
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     3,
+     6
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      2
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_decor_tree_1",
+   "id": "revampedvillages:taiga/decor/tree_1",
+   "kind": "external",
+   "size": [
+    3,
+    10,
+    3
+   ],
+   "solid": {
+    "min": [
+     0,
+     1,
+     0
+    ],
+    "max": [
+     2,
+     9,
+     2
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_decor_tree_2",
+   "id": "revampedvillages:taiga/decor/tree_2",
+   "kind": "external",
+   "size": [
+    6,
+    16,
+    5
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     5,
+     15,
+     4
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_decor_well",
+   "id": "revampedvillages:taiga/decor/well",
+   "kind": "external",
+   "size": [
+    7,
+    10,
+    7
+   ],
+   "solid": {
+    "min": [
+     1,
+     0,
+     1
+    ],
+    "max": [
+     5,
+     3,
+     5
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_1",
+   "id": "revampedvillages:taiga/house/house_1",
+   "kind": "external",
+   "size": [
+    7,
+    10,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     6,
+     9,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      2,
+      1,
+      6
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_2",
+   "id": "revampedvillages:taiga/house/house_2",
+   "kind": "external",
+   "size": [
+    13,
+    12,
+    12
+   ],
+   "solid": {
+    "min": [
+     0,
+     1,
+     0
+    ],
+    "max": [
+     12,
+     11,
+     11
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      2,
+      8
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_3",
+   "id": "revampedvillages:taiga/house/house_3",
+   "kind": "external",
+   "size": [
+    17,
+    12,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     11,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      13,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      13,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      2,
+      1
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_4",
+   "id": "revampedvillages:taiga/house/house_4",
+   "kind": "external",
+   "size": [
+    15,
+    35,
+    10
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     14,
+     31,
+     9
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      6
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_5",
+   "id": "revampedvillages:taiga/house/house_5",
+   "kind": "external",
+   "size": [
+    13,
+    35,
+    7
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     12,
+     29,
+     6
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      3,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      3,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      2,
+      4
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_house_house_6",
+   "id": "revampedvillages:taiga/house/house_6",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    11
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     16,
+     10
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      4,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      1
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": []
+  },
+  {
+   "name": "lgc_taiga_house_house_7",
+   "id": "revampedvillages:taiga/house/house_7",
+   "kind": "external",
+   "size": [
+    20,
+    40,
+    16
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     19,
+     39,
+     15
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "south",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      11,
+      1,
+      15
+     ],
+     "facing": "south"
+    },
+    {
+     "name": "front",
+     "pos": [
+      11,
+      1,
+      16
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      1,
+      11
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_armorer",
+   "id": "revampedvillages:taiga/worker/armorer",
+   "kind": "external",
+   "size": [
+    25,
+    30,
+    19
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     24,
+     21,
+     18
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      12,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      12,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      1,
+      7
+     ],
+     "job": "smithing_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      4,
+      1,
+      7
+     ],
+     "state": "minecraft:smithing_table"
+    },
+    {
+     "pos": [
+      19,
+      1,
+      10
+     ],
+     "state": "minecraft:smithing_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "smithing_table",
+    "smithing_table",
+    "blast_furnace",
+    "blast_furnace",
+    "blast_furnace"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_butcher",
+   "id": "revampedvillages:taiga/worker/butcher",
+   "kind": "external",
+   "size": [
+    12,
+    20,
+    13
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     11,
+     14,
+     12
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      5,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      5,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      4,
+      1,
+      8
+     ],
+     "job": "smoker"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      9,
+      2,
+      3
+     ],
+     "state": "minecraft:smoker"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "smoker",
+    "smoker"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_cartographer",
+   "id": "revampedvillages:taiga/worker/cartographer",
+   "kind": "external",
+   "size": [
+    17,
+    30,
+    16
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     24,
+     15
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      10,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      10,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      2,
+      6
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      5,
+      2,
+      9
+     ],
+     "state": "minecraft:enchanting_table"
+    },
+    {
+     "pos": [
+      6,
+      2,
+      9
+     ],
+     "state": "minecraft:crafting_table"
+    },
+    {
+     "pos": [
+      13,
+      3,
+      8
+     ],
+     "state": "minecraft:cartography_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "enchanting_table",
+    "crafting_table",
+    "cartography_table",
+    "cartography_table",
+    "cartography_table",
+    "cartography_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_church",
+   "id": "revampedvillages:taiga/worker/church",
+   "kind": "external",
+   "size": [
+    21,
+    40,
+    22
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     20,
+     35,
+     21
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      11,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      11,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      1,
+      14
+     ],
+     "job": "enchanting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      7,
+      1,
+      15
+     ],
+     "state": "minecraft:enchanting_table"
+    },
+    {
+     "pos": [
+      17,
+      2,
+      6
+     ],
+     "state": "minecraft:barrel[facing=west]"
+    },
+    {
+     "pos": [
+      14,
+      3,
+      17
+     ],
+     "state": "minecraft:cartography_table"
+    },
+    {
+     "pos": [
+      6,
+      5,
+      3
+     ],
+     "state": "minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "enchanting_table",
+    "brewing_stand",
+    "lectern",
+    "barrel",
+    "brewing_stand",
+    "cartography_table",
+    "brewing_stand"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_fisherman",
+   "id": "revampedvillages:taiga/worker/fisherman",
+   "kind": "external",
+   "size": [
+    24,
+    35,
+    23
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     23,
+     34,
+     22
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      11,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      11,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      10,
+      1,
+      8
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      11,
+      1,
+      14
+     ],
+     "state": "minecraft:barrel"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "barrel",
+    "crafting_table",
+    "barrel",
+    "barrel"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_fletcher",
+   "id": "revampedvillages:taiga/worker/fletcher",
+   "kind": "external",
+   "size": [
+    21,
+    25,
+    21
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     20,
+     14,
+     20
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      8,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      8,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      5,
+      1,
+      1
+     ],
+     "job": "composter"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      5,
+      1,
+      2
+     ],
+     "state": "minecraft:composter"
+    },
+    {
+     "pos": [
+      5,
+      1,
+      3
+     ],
+     "state": "minecraft:composter"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table",
+    "fletching_table",
+    "fletching_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "composter",
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_leatherworker",
+   "id": "revampedvillages:taiga/worker/leatherworker",
+   "kind": "external",
+   "size": [
+    20,
+    25,
+    18
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     19,
+     20,
+     17
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      9,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      9,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      2,
+      8
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "crafting_table"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_library",
+   "id": "revampedvillages:taiga/worker/library",
+   "kind": "external",
+   "size": [
+    20,
+    35,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     19,
+     32,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      1,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      1,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      6,
+      1,
+      2
+     ],
+     "job": "cartography_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      7,
+      1,
+      2
+     ],
+     "state": "minecraft:cartography_table"
+    },
+    {
+     "pos": [
+      15,
+      12,
+      12
+     ],
+     "state": "minecraft:barrel[facing=south]"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "cartography_table",
+    "crafting_table",
+    "crafting_table",
+    "crafting_table",
+    "lectern",
+    "lectern",
+    "lectern",
+    "barrel"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_mason",
+   "id": "revampedvillages:taiga/worker/mason",
+   "kind": "external",
+   "size": [
+    25,
+    30,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     24,
+     27,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "south",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      16,
+      1,
+      16
+     ],
+     "facing": "south"
+    },
+    {
+     "name": "front",
+     "pos": [
+      16,
+      1,
+      17
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      16,
+      1,
+      12
+     ],
+     "job": "door"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "crafting_table",
+    "stonecutter",
+    "stonecutter"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_shepherd",
+   "id": "revampedvillages:taiga/worker/shepherd",
+   "kind": "external",
+   "size": [
+    17,
+    20,
+    18
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     16,
+     15,
+     17
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      12,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      12,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      7,
+      2,
+      2
+     ],
+     "job": "crafting_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      6,
+      2,
+      2
+     ],
+     "state": "minecraft:crafting_table"
+    },
+    {
+     "pos": [
+      9,
+      2,
+      5
+     ],
+     "state": "minecraft:composter"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "loom",
+    "loom",
+    "crafting_table",
+    "crafting_table",
+    "composter"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_toolsmith",
+   "id": "revampedvillages:taiga/worker/toolsmith",
+   "kind": "external",
+   "size": [
+    21,
+    25,
+    17
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     20,
+     21,
+     16
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      10,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      10,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      12,
+      2,
+      7
+     ],
+     "job": "smithing_table"
+    }
+   ],
+   "swaps": [
+    {
+     "pos": [
+      13,
+      1,
+      7
+     ],
+     "state": "minecraft:smithing_table"
+    }
+   ],
+   "waystone": null,
+   "jobs": [
+    "smithing_table",
+    "grindstone"
+   ]
+  },
+  {
+   "name": "lgc_taiga_worker_weaponsmith",
+   "id": "revampedvillages:taiga/worker/weaponsmith",
+   "kind": "external",
+   "size": [
+    25,
+    25,
+    24
+   ],
+   "solid": {
+    "min": [
+     0,
+     0,
+     0
+    ],
+    "max": [
+     24,
+     21,
+     23
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    0
+   ],
+   "facing": "north",
+   "marks": [
+    {
+     "name": "door",
+     "pos": [
+      12,
+      1,
+      0
+     ],
+     "facing": "north"
+    },
+    {
+     "name": "front",
+     "pos": [
+      12,
+      1,
+      -1
+     ]
+    },
+    {
+     "name": "npc",
+     "pos": [
+      22,
+      1,
+      11
+     ],
+     "job": "smithing_table"
+    }
+   ],
+   "swaps": [],
+   "waystone": null,
+   "jobs": [
+    "smithing_table",
+    "smithing_table",
+    "smithing_table",
+    "smithing_table"
+   ]
+  }
+ ]
+}

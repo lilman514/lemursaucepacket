@@ -462,7 +462,7 @@
 	quest.3A55BEAD0546926A.title: "Stone Age"
 	quest.3A83D5B48D315F47.quest_desc: ["Reach &eFishing 75&r. Fishing gives better catches."]
 	quest.3A83D5B48D315F47.title: "&aFishing 75"
-	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus stands by the waystone, just north of the fountain.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
+	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus greets newcomers right where you arrived, at the south edge of the market.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
 	quest.3BB197E455CD7B4D.quest_subtitle: "By the waystone"
 	quest.3BB197E455CD7B4D.title: "&6Meet the Mayor"
 	quest.3BD270C52A42450F.quest_desc: ["Reach &eWoodcutting 99&r. Woodcutting gives faster chopping.", "", "&6The Woodcutting Cape is yours at 99.&r Open /capes to wear it."]
@@ -727,7 +727,7 @@
 	quest.63262AE8B48DF4D5.title: "Blaze Enchantry"
 	quest.63292C21DCEF25B1.quest_desc: ["Friends \\& Foes builds citadels in the Nether. The wildfire, a blaze queen, rules one."]
 	quest.63292C21DCEF25B1.title: "A Fortress? No, a Citadel"
-	quest.6377F5FE70E96283.quest_desc: ["Bessa the baker has a stall in the market on the north side of the plaza.", "", "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", "", "&7Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour)."]
+	quest.6377F5FE70E96283.quest_desc: ["Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.", "", "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", "", "&7Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour)."]
 	quest.6377F5FE70E96283.title: "Market Day"
 	quest.63D3B4DA71A590BD.title: "Illager Manor"
 	quest.63FACB40AF50B90A.quest_desc: ["Reach &eHitpoints 50&r. Hitpoints gives a heart every ten levels."]

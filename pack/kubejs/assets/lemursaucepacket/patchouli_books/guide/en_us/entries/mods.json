@@ -6,11 +6,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "176 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
+      "text": "177 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
     },
     {
       "type": "patchouli:text",
-      "title": "On the server and every client (132)",
+      "title": "On the server and every client (133)",
       "text": "$(li)$(l:https://modrinth.com/project/EsAfCjCV)AppleSkin$(/l)$(br)$(li)$(l:https://modrinth.com/project/lhGA9TYQ)Architectury API$(/l)$(br)$(li)$(l:https://modrinth.com/project/MBAkmtvl)Balm$(/l)$(br)$(li)$(l:https://modrinth.com/project/iHLDc0eo)Better Advanced Tooltips$(/l)$(br)$(li)$(l:https://modrinth.com/project/VsM5EDoI)Blueprint$(/l)$(br)$(li)$(l:https://modrinth.com/project/uy4Cnpcm)Bookshelf$(/l)$(br)$(li)$(l:https://modrinth.com/project/fALzjamp)Chunky$(/l)$(br)$(li)$(l:https://modrinth.com/project/9s6osm5g)Cloth Config API$(/l)$(br)$(li)$(l:https://modrinth.com/project/Wnxd13zP)Clumps$(/l)$(br)$(li)$(l"
     },
     {
@@ -39,39 +39,39 @@
     },
     {
       "type": "patchouli:text",
-      "text": "ate$(/l)$(br)$(li)$(l:https://modrinth.com/project/gvQqBUqZ)Lithium$(/l)$(br)$(li)$(l:https://modrinth.com/project/XaDC71GB)Lithostitched$(/l)$(br)$(li)$(l:https://modrinth.com/project/fJFETWDN)LootJS: KubeJS Addon$(/l)$(br)$(li)$(l:https://modrinth.com/project/EltpO5cN)Lootr$(/l)$(br)$(li)$(l:https://modrinth.com/project/GURcjz8O)Macaw's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/kNxa8z3e)Macaw's Doors$(/l)$(br)$(li)$(l:https://modrinth.com/project/GmwLse2I)Macaw's Fences and Walls$(/l)$(br)$(li)$(l:https://modrinth.com/project/dtWC90iB)Macaw's Furniture$(/l)$(br)$(li)$(l:https://modrinth.com/project"
+      "text": "ate$(/l)$(br)$(li)$(l:https://modrinth.com/project/gvQqBUqZ)Lithium$(/l)$(br)$(li)$(l:https://modrinth.com/project/XaDC71GB)Lithostitched$(/l)$(br)$(li)$(l:https://modrinth.com/project/fJFETWDN)LootJS: KubeJS Addon$(/l)$(br)$(li)$(l:https://modrinth.com/project/EltpO5cN)Lootr$(/l)$(br)$(li)$(l:https://modrinth.com/project/8Lw09aLb)Luki's Grand Capitals$(/l)$(br)$(li)$(l:https://modrinth.com/project/GURcjz8O)Macaw's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/kNxa8z3e)Macaw's Doors$(/l)$(br)$(li)$(l:https://modrinth.com/project/GmwLse2I)Macaw's Fences and Walls$(/l)$(br)$(li)$(l:https://modrinth.com/pro"
     },
     {
       "type": "patchouli:text",
-      "text": "/w4an97C2)Macaw's Lights and Lamps$(/l)$(br)$(li)$(l:https://modrinth.com/project/VRLhWB91)Macaw's Paths and Pavings$(/l)$(br)$(li)$(l:https://modrinth.com/project/B8jaH3P1)Macaw's Roofs$(/l)$(br)$(li)$(l:https://modrinth.com/project/iP3wH1ha)Macaw's Stairs$(/l)$(br)$(li)$(l:https://modrinth.com/project/n2fvCDlM)Macaw's Trapdoors$(/l)$(br)$(li)$(l:https://modrinth.com/project/C7I0BCni)Macaw's Windows$(/l)$(br)$(li)$(l:https://modrinth.com/project/CVT4pFB2)Melody$(/l)$(br)$(li)$(l:https://modrinth.com/project/nmDcB62a)ModernFix$(/l)$(br)$(li)$(l:https://modrinth.com/project/twkfQtEc)Moonlight Lib$(/l)$(br)$(li)$(l"
+      "text": "ject/dtWC90iB)Macaw's Furniture$(/l)$(br)$(li)$(l:https://modrinth.com/project/w4an97C2)Macaw's Lights and Lamps$(/l)$(br)$(li)$(l:https://modrinth.com/project/VRLhWB91)Macaw's Paths and Pavings$(/l)$(br)$(li)$(l:https://modrinth.com/project/B8jaH3P1)Macaw's Roofs$(/l)$(br)$(li)$(l:https://modrinth.com/project/iP3wH1ha)Macaw's Stairs$(/l)$(br)$(li)$(l:https://modrinth.com/project/n2fvCDlM)Macaw's Trapdoors$(/l)$(br)$(li)$(l:https://modrinth.com/project/C7I0BCni)Macaw's Windows$(/l)$(br)$(li)$(l:https://modrinth.com/project/CVT4pFB2)Melody$(/l)$(br)$(li)$(l:https://modrinth.com/project/nmDcB62a)ModernFix$(/l)$(br)"
     },
     {
       "type": "patchouli:text",
-      "text": ":https://modrinth.com/project/F8BQNPWX)Naturalist$(/l)$(br)$(li)$(l:https://modrinth.com/project/nPZr02ET)NetherPortalFix$(/l)$(br)$(li)$(l:https://modrinth.com/project/LPjGiSO4)Nullscape$(/l)$(br)$(li)$(l:https://modrinth.com/project/c7m1mi73)Packet Fixer$(/l)$(br)$(li)$(l:https://modrinth.com/project/nU0bVIaL)Patchouli$(/l)$(br)$(li)$(l:https://modrinth.com/project/iRE67WIn)Piglin Proliferation$(/l)$(br)$(li)$(l:https://modrinth.com/project/i6fiqm5y)Platform$(/l)$(br)$(li)$(l:https://modrinth.com/project/aaRl8GiW)Prickle$(/l)$(br)$(li)$(l:https://modrinth.com/project/KFQYC1Uy)Project MMO$(/l)$(br)$(li)$(l:https"
+      "text": "$(li)$(l:https://modrinth.com/project/twkfQtEc)Moonlight Lib$(/l)$(br)$(li)$(l:https://modrinth.com/project/F8BQNPWX)Naturalist$(/l)$(br)$(li)$(l:https://modrinth.com/project/nPZr02ET)NetherPortalFix$(/l)$(br)$(li)$(l:https://modrinth.com/project/LPjGiSO4)Nullscape$(/l)$(br)$(li)$(l:https://modrinth.com/project/c7m1mi73)Packet Fixer$(/l)$(br)$(li)$(l:https://modrinth.com/project/nU0bVIaL)Patchouli$(/l)$(br)$(li)$(l:https://modrinth.com/project/iRE67WIn)Piglin Proliferation$(/l)$(br)$(li)$(l:https://modrinth.com/project/i6fiqm5y)Platform$(/l)$(br)$(li)$(l:https://modrinth.com/project/aaRl8GiW)Prickle$(/l)$(br)$(li"
     },
     {
       "type": "patchouli:text",
-      "text": "://modrinth.com/project/QAGBst4M)Puzzles Lib$(/l)$(br)$(li)$(l:https://modrinth.com/project/Tkikq67H)Regions Unexplored$(/l)$(br)$(li)$(l:https://modrinth.com/project/OCJRPujW)Relics$(/l)$(br)$(li)$(l:https://modrinth.com/project/M1953qlQ)Resourceful Config$(/l)$(br)$(li)$(l:https://modrinth.com/project/G1hIVOrD)Resourceful Lib$(/l)$(br)$(li)$(l:https://modrinth.com/project/sk9knFPE)Rhino$(/l)$(br)$(li)$(l:https://modrinth.com/project/T9PomCSv)Sable$(/l)$(br)$(li)$(l:https://modrinth.com/project/EGcZ28rZ)Sable Assembly Fix$(/l)$(br)$(li)$(l:https://modrinth.com/project/RH2KUdKJ)ShatterLib | OctoLib$(/l)$(br)$(li)"
+      "text": ")$(l:https://modrinth.com/project/KFQYC1Uy)Project MMO$(/l)$(br)$(li)$(l:https://modrinth.com/project/QAGBst4M)Puzzles Lib$(/l)$(br)$(li)$(l:https://modrinth.com/project/Tkikq67H)Regions Unexplored$(/l)$(br)$(li)$(l:https://modrinth.com/project/OCJRPujW)Relics$(/l)$(br)$(li)$(l:https://modrinth.com/project/M1953qlQ)Resourceful Config$(/l)$(br)$(li)$(l:https://modrinth.com/project/G1hIVOrD)Resourceful Lib$(/l)$(br)$(li)$(l:https://modrinth.com/project/sk9knFPE)Rhino$(/l)$(br)$(li)$(l:https://modrinth.com/project/T9PomCSv)Sable$(/l)$(br)$(li)$(l:https://modrinth.com/project/EGcZ28rZ)Sable Assembly Fix$(/l)$(br)$(li"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l:https://modrinth.com/project/2M01OLQq)Shulker Box Tooltip$(/l)$(br)$(li)$(l:https://modrinth.com/project/9eGKb6K1)Simple Voice Chat$(/l)$(br)$(li)$(l:https://modrinth.com/project/TyCTlI4b)Sophisticated Backpacks$(/l)$(br)$(li)$(l:https://modrinth.com/project/s85zLEDe)Sophisticated Backpacks Create Integration$(/l)$(br)$(li)$(l:https://modrinth.com/project/nmoqTijg)Sophisticated Core$(/l)$(br)$(li)$(l:https://modrinth.com/project/l6YH9Als)spark$(/l)$(br)$(li)$(l:https://modrinth.com/project/qwvI41y9)Sparse Structures$(/l)$(br)$(li)$(l:https://modrinth.com/project/aKCwCJlY)Structory$(/l)$(br)$(li)$(l:https://mo"
+      "text": ")$(l:https://modrinth.com/project/RH2KUdKJ)ShatterLib | OctoLib$(/l)$(br)$(li)$(l:https://modrinth.com/project/2M01OLQq)Shulker Box Tooltip$(/l)$(br)$(li)$(l:https://modrinth.com/project/9eGKb6K1)Simple Voice Chat$(/l)$(br)$(li)$(l:https://modrinth.com/project/TyCTlI4b)Sophisticated Backpacks$(/l)$(br)$(li)$(l:https://modrinth.com/project/s85zLEDe)Sophisticated Backpacks Create Integration$(/l)$(br)$(li)$(l:https://modrinth.com/project/nmoqTijg)Sophisticated Core$(/l)$(br)$(li)$(l:https://modrinth.com/project/l6YH9Als)spark$(/l)$(br)$(li)$(l:https://modrinth.com/project/qwvI41y9)Sparse Structures$(/l)$(br)$(li)$("
     },
     {
       "type": "patchouli:text",
-      "text": "drinth.com/project/j3FONRYr)Structory: Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/ayPU0OHc)Structure Layout Optimizer$(/l)$(br)$(li)$(l:https://modrinth.com/project/lWDHr9jE)Tectonic$(/l)$(br)$(li)$(l:https://modrinth.com/project/8oi3bsk5)Terralith$(/l)$(br)$(li)$(l:https://modrinth.com/project/54eqfZSC)Towers of the Wild Modded$(/l)$(br)$(li)$(l:https://modrinth.com/project/DjLobEOy)Towns and Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/6xwxDTgf)Vanilla Backport$(/l)$(br)$(li)$(l:https://modrinth.com/project/jcYHXHwz)Vanilla Backport Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/lNDRi"
+      "text": "l:https://modrinth.com/project/aKCwCJlY)Structory$(/l)$(br)$(li)$(l:https://modrinth.com/project/j3FONRYr)Structory: Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/ayPU0OHc)Structure Layout Optimizer$(/l)$(br)$(li)$(l:https://modrinth.com/project/lWDHr9jE)Tectonic$(/l)$(br)$(li)$(l:https://modrinth.com/project/8oi3bsk5)Terralith$(/l)$(br)$(li)$(l:https://modrinth.com/project/54eqfZSC)Towers of the Wild Modded$(/l)$(br)$(li)$(l:https://modrinth.com/project/DjLobEOy)Towns and Towers$(/l)$(br)$(li)$(l:https://modrinth.com/project/6xwxDTgf)Vanilla Backport$(/l)$(br)$(li)$(l:https://modrinth.com/project/jcYHXHw"
     },
     {
       "type": "patchouli:text",
-      "text": "XkY)Variants&Ventures$(/l)$(br)$(li)$(l:https://modrinth.com/project/LOpKHB2A)Waystones$(/l)$(br)$(li)$(l:https://modrinth.com/project/BxhPGfcK)Waystones: Sable (Create Aeronautics Addon)$(/l)$(br)$(li)$(l:https://modrinth.com/project/8DfbfASn)When Dungeons Arise$(/l)$(br)$(li)$(l:https://modrinth.com/project/rv1sovni)Woodworks$(/l)$(br)$(li)$(l:https://modrinth.com/project/1bokaNcj)Xaero's Minimap$(/l)$(br)$(li)$(l:https://modrinth.com/project/NcUtCpym)Xaero's World Map$(/l)$(br)$(li)$(l:https://modrinth.com/project/1eAoo2KR)YetAnotherConfigLib (YACL)$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ua7DFN59)YUNG'"
+      "text": "z)Vanilla Backport Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/lNDRiXkY)Variants&Ventures$(/l)$(br)$(li)$(l:https://modrinth.com/project/LOpKHB2A)Waystones$(/l)$(br)$(li)$(l:https://modrinth.com/project/BxhPGfcK)Waystones: Sable (Create Aeronautics Addon)$(/l)$(br)$(li)$(l:https://modrinth.com/project/8DfbfASn)When Dungeons Arise$(/l)$(br)$(li)$(l:https://modrinth.com/project/rv1sovni)Woodworks$(/l)$(br)$(li)$(l:https://modrinth.com/project/1bokaNcj)Xaero's Minimap$(/l)$(br)$(li)$(l:https://modrinth.com/project/NcUtCpym)Xaero's World Map$(/l)$(br)$(li)$(l:https://modrinth.com/project/1eAoo2KR)YetAnother"
     },
     {
       "type": "patchouli:text",
-      "text": "s API$(/l)$(br)$(li)$(l:https://modrinth.com/project/XNlO7sBv)YUNG's Better Desert Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/o1C1Dkj5)YUNG's Better Dungeons$(/l)$(br)$(li)$(l:https://modrinth.com/project/2BwBOmBQ)YUNG's Better End Island$(/l)$(br)$(li)$(l:https://modrinth.com/project/z9Ve58Ih)YUNG's Better Jungle Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/HjmxVlSr)YUNG's Better Mineshafts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Z2mXHnxP)YUNG's Better Nether Fortresses$(/l)$(br)$(li)$(l:https://modrinth.com/project/3dT9sgt4)YUNG's Better Ocean Monuments$(/l)$(br)$(li)$(l:https://mod"
+      "text": "ConfigLib (YACL)$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ua7DFN59)YUNG's API$(/l)$(br)$(li)$(l:https://modrinth.com/project/XNlO7sBv)YUNG's Better Desert Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/o1C1Dkj5)YUNG's Better Dungeons$(/l)$(br)$(li)$(l:https://modrinth.com/project/2BwBOmBQ)YUNG's Better End Island$(/l)$(br)$(li)$(l:https://modrinth.com/project/z9Ve58Ih)YUNG's Better Jungle Temples$(/l)$(br)$(li)$(l:https://modrinth.com/project/HjmxVlSr)YUNG's Better Mineshafts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Z2mXHnxP)YUNG's Better Nether Fortresses$(/l)$(br)$(li)$(l:https://modrinth.co"
     },
     {
       "type": "patchouli:text",
-      "text": "rinth.com/project/kidLKymU)YUNG's Better Strongholds$(/l)$(br)$(li)$(l:https://modrinth.com/project/t5FRdP87)YUNG's Better Witch Huts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ht4BfYp6)YUNG's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/ZYgyPyfq)YUNG's Extras$(/l)"
+      "text": "m/project/3dT9sgt4)YUNG's Better Ocean Monuments$(/l)$(br)$(li)$(l:https://modrinth.com/project/kidLKymU)YUNG's Better Strongholds$(/l)$(br)$(li)$(l:https://modrinth.com/project/t5FRdP87)YUNG's Better Witch Huts$(/l)$(br)$(li)$(l:https://modrinth.com/project/Ht4BfYp6)YUNG's Bridges$(/l)$(br)$(li)$(l:https://modrinth.com/project/ZYgyPyfq)YUNG's Extras$(/l)"
     },
     {
       "type": "patchouli:text",

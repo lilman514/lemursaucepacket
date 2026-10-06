@@ -1,8 +1,8 @@
 {
- "version": 1,
+ "version": 2,
  "name": "Lemurton",
  "flatten": {
-  "radius": 84,
+  "radius": 94,
   "blend": 20
  },
  "search": {
@@ -12,10 +12,10 @@
  "paving": [
   {
    "box": [
-    -75,
-    -75,
-    75,
-    75
+    -85,
+    -85,
+    85,
+    85
    ],
    "y": 0,
    "mix": [
@@ -31,25 +31,29 @@
   },
   {
    "box": [
-    -21,
-    -21,
-    21,
-    21
+    -24,
+    -24,
+    24,
+    24
    ],
    "y": 0,
    "mix": [
+    [
+     3,
+     "mcwpaths:stone_flagstone"
+    ],
     [
      1,
-     "mcwpaths:stone_flagstone"
+     "mcwpaths:andesite_flagstone"
     ]
    ]
   },
   {
    "box": [
-    -26,
-    -26,
-    26,
-    -22
+    -29,
+    -29,
+    29,
+    -25
    ],
    "y": 0,
    "mix": [
@@ -69,10 +73,10 @@
   },
   {
    "box": [
-    -26,
-    -26,
-    -22,
-    26
+    -29,
+    -29,
+    -25,
+    29
    ],
    "y": 0,
    "mix": [
@@ -92,10 +96,10 @@
   },
   {
    "box": [
-    -26,
-    22,
-    26,
-    26
+    -29,
+    25,
+    29,
+    29
    ],
    "y": 0,
    "mix": [
@@ -115,10 +119,10 @@
   },
   {
    "box": [
-    22,
-    -26,
-    26,
-    26
+    25,
+    -29,
+    29,
+    29
    ],
    "y": 0,
    "mix": [
@@ -138,10 +142,10 @@
   },
   {
    "box": [
-    -56,
-    -56,
-    56,
-    -52
+    -63,
+    -63,
+    63,
+    -59
    ],
    "y": 0,
    "mix": [
@@ -161,10 +165,10 @@
   },
   {
    "box": [
-    -56,
-    -56,
-    -52,
-    56
+    -63,
+    -63,
+    -59,
+    63
    ],
    "y": 0,
    "mix": [
@@ -184,10 +188,10 @@
   },
   {
    "box": [
-    -56,
-    52,
-    56,
-    56
+    -63,
+    59,
+    63,
+    63
    ],
    "y": 0,
    "mix": [
@@ -207,10 +211,10 @@
   },
   {
    "box": [
-    52,
-    -56,
-    56,
-    56
+    59,
+    -63,
+    63,
+    63
    ],
    "y": 0,
    "mix": [
@@ -231,9 +235,9 @@
   {
    "box": [
     -3,
-    -76,
+    -86,
     3,
-    76
+    86
    ],
    "y": 0,
    "mix": [
@@ -253,9 +257,9 @@
   },
   {
    "box": [
-    -76,
+    -86,
     -3,
-    76,
+    86,
     3
    ],
    "y": 0,
@@ -276,923 +280,863 @@
   },
   {
    "box": [
-    -20,
-    -20,
-    20,
-    -6
+    -13,
+    31,
+    12,
+    56
    ],
    "y": 0,
    "mix": [
     [
      6,
-     "mcwpaths:brick_flagstone"
+     "mcwpaths:stone_running_bond"
     ],
     [
      3,
-     "mcwpaths:brick_running_bond"
+     "mcwpaths:andesite_running_bond"
     ],
     [
      1,
-     "mcwpaths:mud_brick_flagstone"
-    ]
-   ]
-  },
-  {
-   "box": [
-    -21,
-    -21,
-    21,
-    -21
-   ],
-   "y": 0,
-   "mix": [
-    [
-     1,
-     "minecraft:polished_andesite"
-    ]
-   ]
-  },
-  {
-   "box": [
-    -21,
-    21,
-    21,
-    21
-   ],
-   "y": 0,
-   "mix": [
-    [
-     1,
-     "minecraft:polished_andesite"
-    ]
-   ]
-  },
-  {
-   "box": [
-    -21,
-    -21,
-    -21,
-    21
-   ],
-   "y": 0,
-   "mix": [
-    [
-     1,
-     "minecraft:polished_andesite"
-    ]
-   ]
-  },
-  {
-   "box": [
-    21,
-    -21,
-    21,
-    21
-   ],
-   "y": 0,
-   "mix": [
-    [
-     1,
-     "minecraft:polished_andesite"
+     "mcwpaths:mossy_stone_running_bond"
     ]
    ]
   }
  ],
  "placements": [
   {
-   "t": "lemursaucepacket:plaza_fountain",
-   "p": [
-    -5,
-    -1,
-    -5
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:notice_board",
-   "p": [
-    7,
-    1,
-    -5
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_baker",
-   "p": [
-    -12,
-    1,
-    -6
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_fruit",
-   "p": [
-    -4,
-    1,
-    -6
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_gems",
-   "p": [
-    10,
-    1,
-    -6
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_spice",
-   "p": [
-    18,
-    1,
-    -6
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_fish",
-   "p": [
-    -17,
-    1,
-    -20
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_cloth",
-   "p": [
-    -10,
-    1,
-    -20
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_flowers",
-   "p": [
-    4,
-    1,
-    -20
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_butcher",
-   "p": [
-    12,
-    1,
-    -20
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:town_well",
+   "t": "revampedvillages:plains/center/big_market",
    "p": [
     -14,
-    -4,
-    9
+    0,
+    -17
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_smithy",
+   "t": "revampedvillages:plains/well",
    "p": [
-    -51,
-    -2,
-    -38
+    -24,
+    0,
+    8
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_tailor",
-   "p": [
-    -41,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:shop_apothecary",
-   "p": [
-    -31,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:shop_fishing",
-   "p": [
-    -21,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:varrock_general_store",
-   "p": [
-    5,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:shop_jeweller",
-   "p": [
-    15,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:shop_builder",
+   "t": "revampedvillages:plains/well",
    "p": [
     25,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    38,
-    -2,
-    -38
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    -38,
-    -2,
-    -43
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
-   "p": [
-    -38,
-    -2,
-    -18
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_01",
-   "p": [
-    -38,
-    -2,
+    0,
     -8
    ],
-   "r": "ccw90"
+   "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/center/fountain",
    "p": [
-    -38,
-    -2,
-    13
+    -9,
+    0,
+    35
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
+   "t": "revampedvillages:taiga/worker/church",
    "p": [
-    -38,
-    -2,
-    23
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_01",
-   "p": [
-    -38,
-    -2,
-    33
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_02",
-   "p": [
-    -38,
-    -2,
-    45
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_10",
-   "p": [
-    -41,
-    -2,
-    -40
+    -5,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/church",
    "p": [
-    -18,
-    -2,
-    -40
+    14,
+    0,
+    31
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/worker/cleric",
+   "p": [
+    -46,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "revampedvillages:plains/worker/fisherman",
    "p": [
-    -6,
-    -2,
-    -40
+    -27,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "revampedvillages:plains/worker/weaponsmith",
    "p": [
-    15,
-    -2,
-    -40
+    18,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_04",
+   "t": "revampedvillages:plains/worker/tannery",
    "p": [
-    30,
-    -2,
-    -40
+    35,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_05",
+   "t": "revampedvillages:plains/worker/library_1",
    "p": [
-    40,
-    -2,
-    -40
+    58,
+    0,
+    -31
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/worker/armorer",
    "p": [
-    50,
-    -2,
-    -40
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_05",
-   "p": [
-    -40,
-    -2,
-    -26
+    -31,
+    0,
+    -57
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_06",
+   "t": "revampedvillages:plains/worker/toolsmith",
    "p": [
-    -40,
-    -2,
-    -16
+    -31,
+    0,
+    -30
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "revampedvillages:plains/worker/butcher_shop_2",
    "p": [
-    -40,
-    -2,
-    5
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_04",
-   "p": [
-    -40,
-    -2,
-    17
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_05",
-   "p": [
-    -40,
-    -2,
-    29
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    -40,
-    -2,
-    42
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    -17,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
-   "p": [
-    -7,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    13,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
-   "p": [
-    23,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_01",
-   "p": [
-    33,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_02",
-   "p": [
-    45,
-    -2,
-    38
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    38,
-    -2,
-    -26
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
-   "p": [
-    38,
-    -2,
+    -31,
+    0,
     -13
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/worker/mason",
    "p": [
-    38,
-    -2,
-    5
+    -31,
+    0,
+    -1
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse_tall",
+   "t": "revampedvillages:plains/worker/inn",
    "p": [
-    38,
-    -2,
-    15
+    -31,
+    0,
+    32
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_01",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    38,
-    -2,
-    39
+    -31,
+    0,
+    52
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/worker/library_2",
    "p": [
-    -26,
-    -2,
-    40
+    -58,
+    0,
+    31
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "revampedvillages:plains/worker/cartographer",
+   "p": [
+    -30,
+    0,
+    31
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
     -16,
-    -2,
-    40
+    0,
+    31
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:townhouse_05",
-   "p": [
-    5,
-    -2,
-    40
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_06",
-   "p": [
-    15,
-    -2,
-    40
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_10",
+   "t": "revampedvillages:plains/house/small_house_5",
    "p": [
     39,
-    -2,
-    40
+    0,
+    31
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:townhouse_10",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    40,
-    -2,
+    52,
+    0,
+    31
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/worker/butcher_shop_1",
+   "p": [
+    31,
+    0,
+    -49
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/medium_house_1",
+   "p": [
+    31,
+    0,
     -16
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/house/medium_house_2",
    "p": [
-    40,
-    -2,
-    -6
+    31,
+    0,
+    -3
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "revampedvillages:plains/worker/fletcher",
    "p": [
-    40,
-    -2,
-    13
+    31,
+    0,
+    20
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    40,
-    -2,
-    25
+    31,
+    0,
+    29
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_06",
+   "t": "revampedvillages:plains/house/small_house_2",
    "p": [
-    -70,
-    -2,
-    -66
+    31,
+    0,
+    56
    ],
-   "r": "none"
+   "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_07",
-   "p": [
-    -54,
-    -2,
-    -68
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_08",
-   "p": [
-    -38,
-    -2,
-    -66
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_09",
-   "p": [
-    -24,
-    -2,
-    -66
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "revampedvillages:plains/house/small_house_2",
    "p": [
     5,
-    -2,
-    -66
+    0,
+    -57
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    17,
-    -2,
-    -66
+    13,
+    0,
+    -57
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage_long",
+   "t": "revampedvillages:plains/house/small_house_4",
    "p": [
-    31,
-    -2,
-    -66
+    21,
+    0,
+    -57
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:draynor_cottage",
+   "t": "revampedvillages:plains/house/small_house_5",
    "p": [
-    47,
-    -2,
-    -66
+    43,
+    0,
+    -57
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    61,
-    -2,
-    -66
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:draynor_cottage",
-   "p": [
-    -66,
-    -2,
-    -45
+    -57,
+    0,
+    -52
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:seers_cottage",
+   "t": "revampedvillages:plains/house/small_house_2",
    "p": [
-    -66,
-    -2,
-    -28
+    -57,
+    0,
+    -24
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_01",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    -66,
-    -2,
-    -14
+    -57,
+    0,
+    -13
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage_long",
+   "t": "revampedvillages:plains/house/small_house_4",
    "p": [
-    -66,
-    -2,
+    -57,
+    0,
+    -5
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_1",
+   "p": [
+    -57,
+    0,
+    11
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_2",
+   "p": [
+    -57,
+    0,
+    19
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    -57,
+    0,
+    27
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_4",
+   "p": [
+    -57,
+    0,
+    51
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_2",
+   "p": [
+    -24,
+    0,
+    57
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    -13,
+    0,
+    57
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/medium_house_1",
+   "p": [
+    54,
+    0,
+    57
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    57,
+    0,
+    -30
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    57,
+    0,
+    -19
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    57,
+    0,
+    7
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_5",
+   "p": [
+    57,
+    0,
     17
    ],
-   "r": "ccw90"
+   "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:draynor_cottage",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    -66,
-    -2,
-    31
+    42,
+    0,
+    5
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:seers_cottage",
+   "t": "revampedvillages:taiga/house/house_5",
    "p": [
-    -66,
-    -2,
-    45
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:cottage_01",
-   "p": [
-    -66,
-    -2,
-    59
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:cottage_04",
-   "p": [
-    -45,
-    -2,
-    66
+    -63,
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_05",
+   "t": "revampedvillages:taiga/house/house_4",
    "p": [
-    -31,
-    -2,
-    66
+    71,
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_06",
+   "t": "revampedvillages:taiga/house/house_7",
    "p": [
-    -15,
-    -2,
-    66
+    77,
+    0,
+    80
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_05",
+   "t": "revampedvillages:plains/house/small_house_7",
+   "p": [
+    -52,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    -42,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_1",
+   "p": [
+    -32,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_6",
+   "p": [
+    -20,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_1",
+   "p": [
+    -10,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
    "p": [
     15,
-    -2,
-    66
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_06",
+   "t": "revampedvillages:plains/house/small_house_7",
    "p": [
-    31,
-    -2,
-    66
+    29,
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_07",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    47,
-    -2,
-    68
+    39,
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_08",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    61,
-    -2,
-    66
+    49,
+    0,
+    -65
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_07",
+   "t": "revampedvillages:plains/house/small_house_6",
    "p": [
-    68,
-    -2,
-    -55
+    80,
+    0,
+    -65
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_1",
+   "p": [
+    -65,
+    0,
+    -80
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_08",
+   "t": "revampedvillages:taiga/house/house_6",
    "p": [
-    66,
-    -2,
-    -39
+    -65,
+    0,
+    -64
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_09",
+   "t": "revampedvillages:plains/house/small_house_8",
    "p": [
-    66,
-    -2,
-    -25
+    -65,
+    0,
+    -46
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_08",
+   "t": "revampedvillages:taiga/house/house_2",
    "p": [
-    66,
-    -2,
+    -65,
+    0,
+    -33
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    -65,
+    0,
+    -19
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_1",
+   "p": [
+    -65,
+    0,
     5
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_09",
+   "t": "revampedvillages:plains/house/small_house_6",
    "p": [
-    66,
-    -2,
-    19
+    -65,
+    0,
+    15
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "revampedvillages:plains/house/stable_2",
    "p": [
-    66,
-    -2,
-    35
+    -65,
+    0,
+    27
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "revampedvillages:taiga/house/house_1",
    "p": [
-    66,
-    -2,
-    47
+    -65,
+    0,
+    48
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:castle_tower_round",
+   "t": "revampedvillages:plains/house/small_house_8",
    "p": [
-    -80,
-    -3,
-    -81
+    -65,
+    0,
+    60
    ],
-   "r": "none"
+   "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:castle_tower_round",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    72,
-    -3,
-    -81
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -80,
-    -3,
+    -65,
+    0,
     71
    ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    -80,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_6",
+   "p": [
+    -64,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    -46,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_2",
+   "p": [
+    -33,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    -19,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/stable_2",
+   "p": [
+    5,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_1",
+   "p": [
+    23,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    35,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    46,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    65,
+    0,
+    -54
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_7",
+   "p": [
+    65,
+    0,
+    -40
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_6",
+   "p": [
+    65,
+    0,
+    -21
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    65,
+    0,
+    -7
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_8",
+   "p": [
+    65,
+    0,
+    13
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_2",
+   "p": [
+    65,
+    0,
+    28
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    65,
+    0,
+    44
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_7",
+   "p": [
+    65,
+    0,
+    58
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:castle_tower_round",
+   "p": [
+    -90,
+    -3,
+    -91
+   ],
    "r": "none"
   },
   {
    "t": "lemursaucepacket:castle_tower_round",
    "p": [
-    72,
+    82,
     -3,
-    71
+    -91
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:castle_tower_round",
+   "p": [
+    -90,
+    -3,
+    81
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:castle_tower_round",
+   "p": [
+    82,
+    -3,
+    81
    ],
    "r": "none"
   },
@@ -1201,7 +1145,7 @@
    "p": [
     -13,
     -3,
-    -81
+    -91
    ],
    "r": "none"
   },
@@ -1210,14 +1154,14 @@
    "p": [
     -13,
     -3,
-    71
+    81
    ],
    "r": "none"
   },
   {
    "t": "lemursaucepacket:castle_tower_round",
    "p": [
-    -80,
+    -90,
     -3,
     -14
    ],
@@ -1226,7 +1170,7 @@
   {
    "t": "lemursaucepacket:castle_tower_round",
    "p": [
-    72,
+    82,
     -3,
     -14
    ],
@@ -1237,7 +1181,7 @@
    "p": [
     5,
     -3,
-    -81
+    -91
    ],
    "r": "none"
   },
@@ -1246,14 +1190,14 @@
    "p": [
     5,
     -3,
-    71
+    81
    ],
    "r": "none"
   },
   {
    "t": "lemursaucepacket:castle_tower_round",
    "p": [
-    -80,
+    -90,
     -3,
     4
    ],
@@ -1262,7 +1206,7 @@
   {
    "t": "lemursaucepacket:castle_tower_round",
    "p": [
-    72,
+    82,
     -3,
     4
    ],
@@ -1273,7 +1217,7 @@
    "p": [
     -24,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1282,7 +1226,7 @@
    "p": [
     -35,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1291,7 +1235,7 @@
    "p": [
     -46,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1300,7 +1244,7 @@
    "p": [
     -57,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1309,7 +1253,16 @@
    "p": [
     -68,
     -3,
-    -76
+    -86
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    -79,
+    -3,
+    -86
    ],
    "r": "none"
   },
@@ -1318,7 +1271,7 @@
    "p": [
     14,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1327,7 +1280,7 @@
    "p": [
     25,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1336,7 +1289,7 @@
    "p": [
     36,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1345,7 +1298,7 @@
    "p": [
     47,
     -3,
-    -76
+    -86
    ],
    "r": "none"
   },
@@ -1354,7 +1307,16 @@
    "p": [
     58,
     -3,
-    -76
+    -86
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    69,
+    -3,
+    -86
    ],
    "r": "none"
   },
@@ -1363,7 +1325,7 @@
    "p": [
     -14,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1372,7 +1334,7 @@
    "p": [
     -25,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1381,7 +1343,7 @@
    "p": [
     -36,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1390,7 +1352,7 @@
    "p": [
     -47,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1399,7 +1361,16 @@
    "p": [
     -58,
     -3,
-    76
+    86
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    -69,
+    -3,
+    86
    ],
    "r": "cw180"
   },
@@ -1408,7 +1379,7 @@
    "p": [
     24,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1417,7 +1388,7 @@
    "p": [
     35,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1426,7 +1397,7 @@
    "p": [
     46,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1435,7 +1406,7 @@
    "p": [
     57,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
@@ -1444,14 +1415,23 @@
    "p": [
     68,
     -3,
-    76
+    86
    ],
    "r": "cw180"
   },
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    79,
+    -3,
+    86
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    86,
     -3,
     -24
    ],
@@ -1460,7 +1440,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     -35
    ],
@@ -1469,7 +1449,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     -46
    ],
@@ -1478,7 +1458,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     -57
    ],
@@ -1487,7 +1467,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     -68
    ],
@@ -1496,7 +1476,16 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
+    -3,
+    -79
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    86,
     -3,
     14
    ],
@@ -1505,7 +1494,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     25
    ],
@@ -1514,7 +1503,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     36
    ],
@@ -1523,7 +1512,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     47
    ],
@@ -1532,7 +1521,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    76,
+    86,
     -3,
     58
    ],
@@ -1541,7 +1530,16 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    86,
+    -3,
+    69
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    -86,
     -3,
     -14
    ],
@@ -1550,7 +1548,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     -25
    ],
@@ -1559,7 +1557,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     -36
    ],
@@ -1568,7 +1566,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     -47
    ],
@@ -1577,7 +1575,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     -58
    ],
@@ -1586,7 +1584,16 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
+    -3,
+    -69
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    -86,
     -3,
     24
    ],
@@ -1595,7 +1602,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     35
    ],
@@ -1604,7 +1611,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     46
    ],
@@ -1613,7 +1620,7 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     57
    ],
@@ -1622,9 +1629,18 @@
   {
    "t": "lemursaucepacket:castle_wall",
    "p": [
-    -76,
+    -86,
     -3,
     68
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:castle_wall",
+   "p": [
+    -86,
+    -3,
+    79
    ],
    "r": "ccw90"
   }
@@ -1632,1345 +1648,961 @@
  "blocks": [
   {
    "p": [
-    -21,
-    1,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -21,
+    0,
     2,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -21,
-    3,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    1,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    2,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    3,
-    -21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -21,
-    1,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -21,
-    2,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -21,
-    3,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    1,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    2,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    21,
-    3,
-    21
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    -2
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    -1
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    0
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    1
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
     2
    ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    -4
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    -3
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    3
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    4
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -4,
-    0,
-    6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -3,
-    0,
-    -6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -3,
-    0,
-    6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -2,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -2,
-    0,
-    7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -1,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    -1,
-    0,
-    7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
+   "s": "minecraft:air"
   },
   {
    "p": [
     0,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    0,
-    0,
-    7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
     1,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    1,
-    0,
-    7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    2,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    2,
-    0,
-    7
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    3,
-    0,
-    -6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    3,
-    0,
-    6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    4,
-    0,
-    6
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    -4
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    -3
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    3
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    4
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    -2
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    -1
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    0
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    1
-   ],
-   "s": "mcwpaths:andesite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
     2
    ],
-   "s": "mcwpaths:andesite_flagstone"
+   "s": "minecraft:air"
   },
   {
    "p": [
-    -8,
+    -23,
     0,
-    -2
+    -23
    ],
-   "s": "mcwpaths:diorite_flagstone"
+   "s": "minecraft:stone_bricks"
   },
   {
    "p": [
-    -8,
-    0,
-    -1
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -8,
-    0,
-    0
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -8,
-    0,
-    1
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -8,
-    0,
-    2
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    -4
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    -3
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    3
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -7,
-    0,
-    4
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    -5
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -6,
-    0,
-    5
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -5,
-    0,
-    6
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -4,
-    0,
-    7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -3,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -3,
-    0,
-    7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -2,
-    0,
-    -8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -2,
-    0,
-    8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -1,
-    0,
-    -8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -1,
-    0,
-    8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    0,
-    0,
-    -8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    0,
-    0,
-    8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
+    -23,
     1,
-    0,
-    -8
+    -23
    ],
-   "s": "mcwpaths:diorite_flagstone"
+   "s": "minecraft:stone_brick_slab[type=bottom]"
   },
   {
    "p": [
+    -23,
+    0,
+    -22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -23,
     1,
-    0,
-    8
+    -22
    ],
-   "s": "mcwpaths:diorite_flagstone"
+   "s": "minecraft:stone_brick_slab[type=bottom]"
   },
   {
    "p": [
-    2,
+    -23,
     0,
-    -8
+    -21
    ],
-   "s": "mcwpaths:diorite_flagstone"
+   "s": "minecraft:stone_bricks"
   },
   {
    "p": [
-    2,
-    0,
-    8
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    3,
-    0,
-    -7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    3,
-    0,
-    7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    4,
-    0,
-    7
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    5,
-    0,
-    6
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    -5
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    6,
-    0,
-    5
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    -3
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    3
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    7,
-    0,
-    4
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    8,
-    0,
-    -2
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    8,
-    0,
-    -1
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    8,
-    0,
-    0
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    8,
-    0,
-    1
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    8,
-    0,
-    2
-   ],
-   "s": "mcwpaths:diorite_flagstone"
-  },
-  {
-   "p": [
-    -6,
+    -23,
     1,
-    11
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    -23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -22,
+    1,
+    -23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    -22
+   ],
+   "s": "minecraft:grass_block"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    -21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -22,
+    1,
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    -23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    -23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    -22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    -22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    -21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    -23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    -23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    -22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    -22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    -21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    22,
+    0,
+    -23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    22,
+    1,
+    -23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    22,
+    0,
+    -22
+   ],
+   "s": "minecraft:grass_block"
+  },
+  {
+   "p": [
+    22,
+    0,
+    -21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    22,
+    1,
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    -23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    -23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    -22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    -22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    -21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    -21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -23,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -23,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -23,
+    0,
+    22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -23,
+    1,
+    22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -23,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -23,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -22,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    22
+   ],
+   "s": "minecraft:grass_block"
+  },
+  {
+   "p": [
+    -22,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -22,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -21,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    -21,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    21,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    21,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    22,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    22,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    22,
+    0,
+    22
+   ],
+   "s": "minecraft:grass_block"
+  },
+  {
+   "p": [
+    22,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    22,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    21
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    21
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    22
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    22
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    23,
+    0,
+    23
+   ],
+   "s": "minecraft:stone_bricks"
+  },
+  {
+   "p": [
+    23,
+    1,
+    23
+   ],
+   "s": "minecraft:stone_brick_slab[type=bottom]"
+  },
+  {
+   "p": [
+    -8,
+    1,
+    20
    ],
    "s": "minecraft:spruce_stairs[facing=south]"
+  },
+  {
+   "p": [
+    -7,
+    1,
+    20
+   ],
+   "s": "minecraft:spruce_stairs[facing=south]"
+  },
+  {
+   "p": [
+    6,
+    1,
+    20
+   ],
+   "s": "minecraft:spruce_stairs[facing=south]"
+  },
+  {
+   "p": [
+    7,
+    1,
+    20
+   ],
+   "s": "minecraft:spruce_stairs[facing=south]"
+  },
+  {
+   "p": [
+    -8,
+    1,
+    -21
+   ],
+   "s": "minecraft:spruce_stairs[facing=north]"
+  },
+  {
+   "p": [
+    -7,
+    1,
+    -21
+   ],
+   "s": "minecraft:spruce_stairs[facing=north]"
+  },
+  {
+   "p": [
+    6,
+    1,
+    -21
+   ],
+   "s": "minecraft:spruce_stairs[facing=north]"
+  },
+  {
+   "p": [
+    7,
+    1,
+    -21
+   ],
+   "s": "minecraft:spruce_stairs[facing=north]"
   },
   {
    "p": [
     -5,
     1,
-    11
+    -24
    ],
-   "s": "minecraft:spruce_stairs[facing=south]"
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -5,
+    2,
+    -24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -5,
+    3,
+    -24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
     5,
     1,
-    11
+    -24
    ],
-   "s": "minecraft:spruce_stairs[facing=south]"
+   "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    6,
-    1,
-    11
+    5,
+    2,
+    -24
    ],
-   "s": "minecraft:spruce_stairs[facing=south]"
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    5,
+    3,
+    -24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -5,
+    1,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -5,
+    2,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -5,
+    3,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    5,
+    1,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    5,
+    2,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    5,
+    3,
+    24
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    1,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    2,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    3,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    1,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    2,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -24,
+    3,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    1,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    2,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    3,
+    -5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    1,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    2,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    24,
+    3,
+    5
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -12,
+    1,
+    -46
+   ],
+   "s": "minecraft:enchanting_table"
+  },
+  {
+   "p": [
+    -22,
+    2,
+    -37
+   ],
+   "s": "minecraft:barrel[facing=east]"
+  },
+  {
+   "p": [
+    -19,
+    3,
+    -48
+   ],
+   "s": "minecraft:cartography_table"
   },
   {
    "p": [
     -11,
-    1,
-    4
-   ],
-   "s": "minecraft:spruce_stairs[facing=west]"
-  },
-  {
-   "p": [
-    -11,
-    1,
-    5
-   ],
-   "s": "minecraft:spruce_stairs[facing=west]"
-  },
-  {
-   "p": [
-    11,
-    1,
-    4
-   ],
-   "s": "minecraft:spruce_stairs[facing=east]"
-  },
-  {
-   "p": [
-    11,
-    1,
-    5
-   ],
-   "s": "minecraft:spruce_stairs[facing=east]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    8
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    8
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    9
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    9
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    10
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    10
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    14,
-    0,
-    8
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    14,
-    1,
-    8
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    14,
-    0,
-    9
-   ],
-   "s": "minecraft:grass_block"
-  },
-  {
-   "p": [
-    14,
-    0,
-    10
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    14,
-    1,
-    10
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    8
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    8
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    9
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    9
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    10
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    10
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    15
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    15
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    16
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    16
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    13,
-    0,
-    17
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    13,
-    1,
-    17
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    14,
-    0,
-    15
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    14,
-    1,
-    15
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    14,
-    0,
-    16
-   ],
-   "s": "minecraft:grass_block"
-  },
-  {
-   "p": [
-    14,
-    0,
-    17
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    14,
-    1,
-    17
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    15
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    15
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    16
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    16
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    15,
-    0,
-    17
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    15,
-    1,
-    17
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -18,
-    0,
-    5
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -18,
-    1,
-    5
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -18,
-    0,
-    6
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -18,
-    1,
-    6
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -18,
-    0,
-    7
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -18,
-    1,
-    7
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -17,
-    0,
-    5
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -17,
-    1,
-    5
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -17,
-    0,
-    6
-   ],
-   "s": "minecraft:grass_block"
-  },
-  {
-   "p": [
-    -17,
-    0,
-    7
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -17,
-    1,
-    7
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -16,
-    0,
-    5
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -16,
-    1,
-    5
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -16,
-    0,
-    6
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -16,
-    1,
-    6
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    -16,
-    0,
-    7
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    -16,
-    1,
-    7
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
     5,
-    0,
-    16
+    -34
    ],
-   "s": "minecraft:stone_bricks"
+   "s": "minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]"
   },
   {
    "p": [
-    5,
-    1,
-    16
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    5,
-    0,
-    17
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    5,
-    1,
-    17
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    5,
-    0,
-    18
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    5,
-    1,
-    18
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    6,
-    0,
-    16
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    6,
-    1,
-    16
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    6,
-    0,
-    17
-   ],
-   "s": "minecraft:grass_block"
-  },
-  {
-   "p": [
-    6,
-    0,
-    18
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    6,
-    1,
-    18
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    7,
-    0,
-    16
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    7,
-    1,
-    16
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    7,
-    0,
-    17
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    7,
-    1,
-    17
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    7,
-    0,
-    18
-   ],
-   "s": "minecraft:stone_bricks"
-  },
-  {
-   "p": [
-    7,
-    1,
-    18
-   ],
-   "s": "minecraft:stone_brick_slab[type=bottom]"
-  },
-  {
-   "p": [
-    9,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    9,
+    17,
     2,
-    4
+    38
    ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
+   "s": "minecraft:cartography_table"
   },
   {
    "p": [
-    9,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    1,
-    9
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
+    17,
     2,
-    9
+    39
    ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
+   "s": "minecraft:cartography_table"
   },
   {
    "p": [
-    4,
-    3,
-    9
+    17,
+    2,
+    40
    ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
+   "s": "minecraft:cartography_table"
+  },
+  {
+   "p": [
+    -48,
+    1,
+    -46
+   ],
+   "s": "minecraft:enchanting_table"
+  },
+  {
+   "p": [
+    -53,
+    2,
+    -34
+   ],
+   "s": "minecraft:brewing_stand[has_bottle_2=false,has_bottle_0=false,has_bottle_1=false]"
+  },
+  {
+   "p": [
+    -34,
+    4,
+    -40
+   ],
+   "s": "minecraft:barrel"
+  },
+  {
+   "p": [
+    29,
+    1,
+    -33
+   ],
+   "s": "minecraft:composter"
+  },
+  {
+   "p": [
+    -40,
+    2,
+    -48
+   ],
+   "s": "minecraft:smithing_table"
+  },
+  {
+   "p": [
+    -38,
+    1,
+    -7
+   ],
+   "s": "minecraft:smoker"
+  },
+  {
+   "p": [
+    -27,
+    2,
+    43
+   ],
+   "s": "minecraft:cartography_table"
+  },
+  {
+   "p": [
+    -21,
+    13,
+    39
+   ],
+   "s": "minecraft:crafting_table"
+  },
+  {
+   "p": [
+    -21,
+    23,
+    36
+   ],
+   "s": "minecraft:enchanting_table"
+  },
+  {
+   "p": [
+    34,
+    2,
+    -54
+   ],
+   "s": "minecraft:smoker"
   },
   {
    "p": [
     -4,
     1,
-    9
+    -33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -2978,7 +2610,7 @@
    "p": [
     -4,
     2,
-    9
+    -33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -2986,37 +2618,13 @@
    "p": [
     -4,
     3,
-    9
+    -33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    -9,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -9,
-    2,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -9,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -9,
+    -33,
     1,
     -4
    ],
@@ -3024,7 +2632,7 @@
   },
   {
    "p": [
-    -9,
+    -33,
     2,
     -4
    ],
@@ -3032,7 +2640,7 @@
   },
   {
    "p": [
-    -9,
+    -33,
     3,
     -4
    ],
@@ -3042,7 +2650,7 @@
    "p": [
     4,
     1,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3050,7 +2658,7 @@
    "p": [
     4,
     2,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3058,7 +2666,7 @@
    "p": [
     4,
     3,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3066,7 +2674,7 @@
    "p": [
     -4,
     1,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3074,7 +2682,7 @@
    "p": [
     -4,
     2,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3082,13 +2690,61 @@
    "p": [
     -4,
     3,
-    -25
+    33
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    -25,
+    -4,
+    1,
+    -43
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -4,
+    2,
+    -43
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -4,
+    3,
+    -43
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -43,
+    1,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -43,
+    2,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -43,
+    3,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    43,
     1,
     4
    ],
@@ -3096,7 +2752,7 @@
   },
   {
    "p": [
-    -25,
+    43,
     2,
     4
    ],
@@ -3104,33 +2760,9 @@
   },
   {
    "p": [
-    -25,
+    43,
     3,
     4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -25,
-    1,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -25,
-    2,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -25,
-    3,
-    -4
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3138,7 +2770,7 @@
    "p": [
     4,
     1,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3146,7 +2778,7 @@
    "p": [
     4,
     2,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3154,7 +2786,7 @@
    "p": [
     4,
     3,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3162,7 +2794,7 @@
    "p": [
     -4,
     1,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3170,7 +2802,7 @@
    "p": [
     -4,
     2,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3178,13 +2810,13 @@
    "p": [
     -4,
     3,
-    25
+    -53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    25,
+    -53,
     1,
     4
    ],
@@ -3192,7 +2824,7 @@
   },
   {
    "p": [
-    25,
+    -53,
     2,
     4
    ],
@@ -3200,7 +2832,7 @@
   },
   {
    "p": [
-    25,
+    -53,
     3,
     4
    ],
@@ -3208,7 +2840,7 @@
   },
   {
    "p": [
-    25,
+    -53,
     1,
     -4
    ],
@@ -3216,7 +2848,7 @@
   },
   {
    "p": [
-    25,
+    -53,
     2,
     -4
    ],
@@ -3224,103 +2856,7 @@
   },
   {
    "p": [
-    25,
-    3,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    1,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    2,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    3,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    1,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    2,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    3,
-    -35
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
-    2,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
-    1,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
-    2,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -35,
+    -53,
     3,
     -4
    ],
@@ -3330,7 +2866,7 @@
    "p": [
     4,
     1,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3338,7 +2874,7 @@
    "p": [
     4,
     2,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3346,7 +2882,7 @@
    "p": [
     4,
     3,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3354,7 +2890,7 @@
    "p": [
     -4,
     1,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3362,7 +2898,7 @@
    "p": [
     -4,
     2,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3370,13 +2906,13 @@
    "p": [
     -4,
     3,
-    35
+    53
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    35,
+    53,
     1,
     4
    ],
@@ -3384,7 +2920,7 @@
   },
   {
    "p": [
-    35,
+    53,
     2,
     4
    ],
@@ -3392,7 +2928,7 @@
   },
   {
    "p": [
-    35,
+    53,
     3,
     4
    ],
@@ -3400,7 +2936,7 @@
   },
   {
    "p": [
-    35,
+    53,
     1,
     -4
    ],
@@ -3408,7 +2944,7 @@
   },
   {
    "p": [
-    35,
+    53,
     2,
     -4
    ],
@@ -3416,103 +2952,7 @@
   },
   {
    "p": [
-    35,
-    3,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    1,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    2,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    3,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    1,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    2,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    3,
-    -45
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
-    2,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
-    1,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
-    2,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -45,
+    53,
     3,
     -4
    ],
@@ -3522,7 +2962,7 @@
    "p": [
     4,
     1,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3530,7 +2970,7 @@
    "p": [
     4,
     2,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3538,7 +2978,7 @@
    "p": [
     4,
     3,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3546,7 +2986,7 @@
    "p": [
     -4,
     1,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3554,7 +2994,7 @@
    "p": [
     -4,
     2,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3562,13 +3002,13 @@
    "p": [
     -4,
     3,
-    45
+    -63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    45,
+    -63,
     1,
     4
    ],
@@ -3576,7 +3016,7 @@
   },
   {
    "p": [
-    45,
+    -63,
     2,
     4
    ],
@@ -3584,7 +3024,7 @@
   },
   {
    "p": [
-    45,
+    -63,
     3,
     4
    ],
@@ -3592,7 +3032,7 @@
   },
   {
    "p": [
-    45,
+    -63,
     1,
     -4
    ],
@@ -3600,7 +3040,7 @@
   },
   {
    "p": [
-    45,
+    -63,
     2,
     -4
    ],
@@ -3608,103 +3048,7 @@
   },
   {
    "p": [
-    45,
-    3,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    1,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    2,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    3,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    1,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    2,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    3,
-    -55
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
-    2,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
-    1,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
-    2,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -55,
+    -63,
     3,
     -4
    ],
@@ -3714,7 +3058,7 @@
    "p": [
     4,
     1,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3722,7 +3066,7 @@
    "p": [
     4,
     2,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3730,7 +3074,7 @@
    "p": [
     4,
     3,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3738,7 +3082,7 @@
    "p": [
     -4,
     1,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3746,7 +3090,7 @@
    "p": [
     -4,
     2,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3754,13 +3098,13 @@
    "p": [
     -4,
     3,
-    55
+    63
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    55,
+    63,
     1,
     4
    ],
@@ -3768,7 +3112,7 @@
   },
   {
    "p": [
-    55,
+    63,
     2,
     4
    ],
@@ -3776,7 +3120,7 @@
   },
   {
    "p": [
-    55,
+    63,
     3,
     4
    ],
@@ -3784,7 +3128,7 @@
   },
   {
    "p": [
-    55,
+    63,
     1,
     -4
    ],
@@ -3792,7 +3136,7 @@
   },
   {
    "p": [
-    55,
+    63,
     2,
     -4
    ],
@@ -3800,103 +3144,7 @@
   },
   {
    "p": [
-    55,
-    3,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    1,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    2,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    4,
-    3,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    1,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    2,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -4,
-    3,
-    -65
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
-    1,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
-    2,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
-    3,
-    4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
-    1,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
-    2,
-    -4
-   ],
-   "s": "mcwlights:classic_street_lamp[lit=true]"
-  },
-  {
-   "p": [
-    -65,
+    63,
     3,
     -4
    ],
@@ -3906,7 +3154,7 @@
    "p": [
     4,
     1,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3914,7 +3162,7 @@
    "p": [
     4,
     2,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3922,7 +3170,7 @@
    "p": [
     4,
     3,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3930,7 +3178,7 @@
    "p": [
     -4,
     1,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3938,7 +3186,7 @@
    "p": [
     -4,
     2,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
@@ -3946,13 +3194,13 @@
    "p": [
     -4,
     3,
-    65
+    -73
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
   },
   {
    "p": [
-    65,
+    -73,
     1,
     4
    ],
@@ -3960,7 +3208,7 @@
   },
   {
    "p": [
-    65,
+    -73,
     2,
     4
    ],
@@ -3968,7 +3216,7 @@
   },
   {
    "p": [
-    65,
+    -73,
     3,
     4
    ],
@@ -3976,7 +3224,7 @@
   },
   {
    "p": [
-    65,
+    -73,
     1,
     -4
    ],
@@ -3984,7 +3232,7 @@
   },
   {
    "p": [
-    65,
+    -73,
     2,
     -4
    ],
@@ -3992,7 +3240,79 @@
   },
   {
    "p": [
-    65,
+    -73,
+    3,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    4,
+    1,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    4,
+    2,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    4,
+    3,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -4,
+    1,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -4,
+    2,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    -4,
+    3,
+    73
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
+    1,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
+    2,
+    -4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
     3,
     -4
    ],
@@ -4000,61 +3320,78 @@
   }
  ],
  "commands": [
-  "place feature minecraft:oak ~14 ~1 ~9",
-  "place feature minecraft:oak ~14 ~1 ~16",
-  "place feature minecraft:oak ~-17 ~1 ~6",
-  "place feature minecraft:oak ~6 ~1 ~17",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_baker.npc.snbt ~-14.5 ~1 ~-7.5 30228968-2576-4a11-abb6-5ac98831bdf9",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fruit_seller.npc.snbt ~-6.5 ~1 ~-7.5 5fa18d16-5c3f-4312-a37f-52c7fd984db4",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_gem_trader.npc.snbt ~7.5 ~1 ~-7.5 4de2bd9c-c34d-46dc-aaee-ebfb07e05a53",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_spice_merchant.npc.snbt ~15.5 ~1 ~-7.5 139521a2-2068-4034-a2a1-f94aa2f4c399",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fishmonger.npc.snbt ~-13.5 ~1 ~-17.5 b01e733e-b697-4b4a-ae7e-99eb44bb16d3",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_tailor.npc.snbt ~-5.5 ~1 ~-17.5 22c88b9d-1f3d-4b7b-a348-51de1eb7ec21",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_flower_seller.npc.snbt ~7.5 ~1 ~-17.5 bdbff5ca-8e2d-4526-ab85-80cde9e5e870",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_butcher.npc.snbt ~15.5 ~1 ~-17.5 b5509cdd-f94f-4656-a539-ec4a44276327",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt ~-46.5 ~1 ~-34.5 31337c54-7e12-4940-ad12-1c06b777c2ba",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt ~-36.5 ~1 ~-34.5 ad08cb73-b79d-429a-a13d-d37bfdac3fe6",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt ~-26.5 ~1 ~-34.5 52a446c1-c07b-4e8a-a886-5c533fb3ba91",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_fishing.npc.snbt ~-16.5 ~1 ~-34.5 de445497-7542-4dfc-acc7-ed405e1ecc72",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_varrock_general_store.npc.snbt ~9.5 ~1 ~-34.5 d47294a5-947a-489b-a309-ab7c931e521f",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt ~19.5 ~1 ~-34.5 ef341f64-6939-44c1-abe5-391d8d646042",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_builder.npc.snbt ~29.5 ~1 ~-34.5 a7cee743-b93b-4548-ae77-b9aa4736cc99",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~-71.5 e90070e0-f29d-4b9f-ab7a-5a83b9869715",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~-71.5 ad77fdc6-02b7-4269-a94d-dd509e1a4097",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~72.5 472e007a-3372-4e40-a3a7-7823ec959948",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~72.5 b41f557d-5e19-4d13-a70f-a87d9c767f38",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-71.5 ~1 ~-1.5 c6ee6daf-a894-4d51-a185-6980aa1eb311",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-71.5 ~1 ~2.5 b285ca34-9f7d-4986-a70b-d35e3f311650",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~72.5 ~1 ~-1.5 0b0230e1-2faa-4075-a4d0-d3969d1de4d0",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~72.5 ~1 ~2.5 887701ac-0174-4a9b-ab20-26df3997d4e6",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_mayor.npc.snbt ~3.5 ~1 ~-7.5 e94a1b3c-bd3b-4b68-a392-e3d3b31630d6",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-8.5 ~1 ~4.5 7f4086d0-971c-4e1d-ae5a-98ddad2218ad",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~9.5 ~1 ~-1.5 df79e006-2c6a-42e8-ab54-7617009193e0",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-3.5 ~1 ~13.5 53c12b94-cc1e-4b1d-a9a8-ada727140124",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~12.5 ~1 ~12.5 72fca1da-81a9-4e26-a32b-4ffcdff11d62",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-14.5 ~1 ~-1.5 863d8cbb-ce04-4b2c-a8b3-60a0285ed2ba"
+  "place feature minecraft:oak ~-22 ~1 ~-22",
+  "place feature minecraft:oak ~22 ~1 ~-22",
+  "place feature minecraft:oak ~-22 ~1 ~22",
+  "place feature minecraft:oak ~22 ~1 ~22",
+  "place feature minecraft:oak ~-79 ~1 ~-38",
+  "place feature minecraft:oak ~-80 ~1 ~-29",
+  "place feature minecraft:fancy_oak ~-79 ~1 ~12",
+  "place feature minecraft:birch ~-79 ~1 ~35",
+  "place feature minecraft:oak ~-59 ~1 ~-80",
+  "place feature minecraft:fancy_oak ~-45 ~1 ~-79",
+  "place feature minecraft:fancy_oak ~-38 ~1 ~78",
+  "place feature minecraft:oak ~18 ~1 ~-78",
+  "place feature minecraft:oak ~35 ~1 ~77",
+  "place feature minecraft:oak ~42 ~1 ~-78",
+  "place feature minecraft:oak ~46 ~1 ~77",
+  "place feature minecraft:fancy_oak ~54 ~1 ~78",
+  "place feature minecraft:oak ~62 ~1 ~-80",
+  "place feature minecraft:oak ~78 ~1 ~-13",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_baker.npc.snbt ~-9.5 ~1 ~-9.5 5ecd818f-58b8-4561-a9be-b3ca602cb911",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fruit_seller.npc.snbt ~4.5 ~1 ~-7.5 a85602d2-d8ed-471e-ac5d-ac3c479f80ef",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_gem_trader.npc.snbt ~7.5 ~1 ~0.5 8da59074-eb4c-4a49-abf0-3bd967862667",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_spice_merchant.npc.snbt ~7.5 ~1 ~9.5 5d1e7b99-5d15-4095-a214-b1f083781c73",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fishmonger.npc.snbt ~-4.5 ~1 ~15.5 22f975be-255b-4fea-a19e-ed56e8469fd7",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_tailor.npc.snbt ~-4.5 ~1 ~7.5 767ceb46-aaca-4c9a-a28a-fbbb51bd5666",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_flower_seller.npc.snbt ~-0.5 ~1 ~1.5 547275a4-829f-49a8-acb9-fd27dc57455b",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_butcher.npc.snbt ~-11.5 ~2 ~3.5 f357d4a8-7c01-493f-a973-367398129d01",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt ~-47.5 ~1 ~-44.5 7d026c89-9edb-4953-a913-45b8e1d71ea5",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_fishing.npc.snbt ~-41.5 ~1 ~-37.5 68898716-0e95-489d-ac0c-589039c359d6",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt ~10.5 ~2 ~-38.5 e3370a3c-750d-4d64-ad58-6b9ae89881e2",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt ~28.5 ~1 ~-32.5 c5e0c41d-29de-4ffb-a280-3cd1dc929448",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt ~55.5 ~1 ~-35.5 a60c43d9-4f0d-44d3-acee-afab2766f044",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_builder.npc.snbt ~-39.5 ~1 ~2.5 2686e6bb-2cdf-4f58-a8a1-786af2571f9c",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_varrock_general_store.npc.snbt ~-38.5 ~1 ~44.5 ea1b9a42-49e6-4239-a206-be04d0b56349",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~-81.5 92b86225-443c-40f4-a593-f0b0ad808564",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~-81.5 970a55b2-3847-4778-a27d-7d0fb63f4ef8",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~82.5 286d9497-0759-44ce-a3dd-81eab482cd7c",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~82.5 fd801e76-d551-4f35-a4dc-0b0335f10d10",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-81.5 ~1 ~-1.5 c23d7541-4a22-4a2a-adc2-0794bf09842c",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-81.5 ~1 ~2.5 3cbf54cf-daf5-4974-af94-6435ced5a03b",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~82.5 ~1 ~-1.5 5c0e725a-85dc-4552-a690-1e2c498c3d54",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~82.5 ~1 ~2.5 fcad7e53-3795-4b63-a978-8a4d61885b5b",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_mayor.npc.snbt ~-4.5 ~1 ~17.5 efb5d08b-8627-42de-af59-63a3fb3f64ca",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-9.5 ~1 ~23.5 99420333-30ae-4d7e-ad70-1d892342af0d",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~12.5 ~1 ~23.5 5fd10d28-9374-4a42-aee3-21ce8eeb8316",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-22.5 ~1 ~-7.5 6882db28-0064-4b8a-a453-bf8250119546",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~23.5 ~1 ~9.5 0556983f-918d-4fa0-a7f8-1b74cdd207a5",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~3.5 ~1 ~-22.5 285efed2-e6eb-4748-ab0a-a34d7865d9ee"
  ],
  "waystone": {
   "p": [
-   0,
+   -7,
    1,
-   -9
+   2
   ],
   "name": "Lemurton",
   "facing": "south"
  },
  "spawn": [
-  0,
+  -7,
   1,
-  -7
+  18
  ],
  "zone": {
   "name": "hub",
   "box": [
-   -88,
-   -88,
-   88,
-   88
+   -98,
+   -98,
+   98,
+   98
   ]
- }
+ },
+ "credits": [
+  "lukis-grand-capitals-1.1.3.jar"
+ ]
 }

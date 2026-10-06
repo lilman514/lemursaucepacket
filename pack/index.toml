@@ -270,7 +270,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "cf7e26736ab29cdcf91850c8a5fb90561ff002862b7e2607735de5efde0b2c68"
+hash = "84f9a6c599061e039b2f89864323c93edc874512783e68476be99d21e64dc021"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -318,7 +318,7 @@ hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
 [[files]]
 file = "config/lemursaucepacket/hub_plan.json"
-hash = "9b80593fa3479959cf979f2dc25aeba5555a105d00d325ed0b403fd0d25243f0"
+hash = "94821b75e13a9a46444231dd1481bfdffc5e3df97e3251de1c6d63cf9ef803d7"
 
 [[files]]
 file = "config/lemursaucepacket/lifesteal.json"
@@ -666,7 +666,7 @@ hash = "950970b34da7242be865e2b95f37570b9948d5ad7b73fd5d6e1f597af42c832c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
-hash = "5d0fdb165550c90a0d6a6de7af279b126dc64e07fdaea71c1052af54b7f96688"
+hash = "59c6aa4e6ba8b369c8a5320b8d02c254d02bc1bf469e233941e262dba05a6784"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
@@ -686,7 +686,7 @@ hash = "129cbf3f9aab7a05e64beac772eafd6cb20f656b5d420753426d3da3ea37cea9"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "c2a7bc5965ce2db5317ac4e37de2c0155d905ee59c343d7aaf727db0fbe8f767"
+hash = "99173de4c9eaeef93adac0bf30b2e50a64bde03d16caf7cefd02a2f68034029d"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/agility_cape.png"
@@ -1930,7 +1930,7 @@ hash = "d15f309743721d69c7cddfb9524f087e37f4774062fce892eec209a05c7dc07a"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_mayor.npc.snbt"
-hash = "dd51b5bc18c9d0d4eb8a2a6f61e59dc6c5312ef2f15bde033b4273543555a50f"
+hash = "460f4e36dec644bc3fb19c363b64f0d5915aa97b7c17eccb4779603dcb8766c1"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_baker.npc.snbt"
@@ -1990,7 +1990,7 @@ hash = "a5358baee050448db9825d9156acba94f0fa141cabb9aeeb666d138b716db242"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_townsfolk.npc.snbt"
-hash = "2c2616ac91054c3b14a614c4627396d3448a7b20c954fa48a460a49a753bf030"
+hash = "c7f5fdbfcd75b12a7ff3adf4e12bb19fe174fe994e49caff2c0f307695fe3fdc"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_varrock_general_store.npc.snbt"
@@ -2305,204 +2305,12 @@ file = "kubejs/data/lemursaucepacket/pmmo/items/xp_zinc_ingot.json"
 hash = "5faa50a6fdc41b05d0289364c31ceb693a7b77d721ada9b35c685ac10ab10a51"
 
 [[files]]
-file = "kubejs/data/lemursaucepacket/structure/castle_tower_cone.nbt"
-hash = "89276e7d27c3748e5ab81887748aab4e92d79a01522697e3b1470bb2cfd556c8"
-
-[[files]]
 file = "kubejs/data/lemursaucepacket/structure/castle_tower_round.nbt"
 hash = "afbd8a3cc78b111179fad5e559cdd8df5dac4fc865a7a5eb0f968ffac8fceb57"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/structure/castle_wall.nbt"
 hash = "74d8aef128dd167a0cf8bb862263acf0e96a77820194087327d3b57c8855a167"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_01.nbt"
-hash = "b0ae3b1e3a1e9d5eea7264b90b6742ce56dd68be55b924eaf6ec2ed2a5ca7aa1"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_02.nbt"
-hash = "cb662328f688cce17b7e3e3833dd2804235166a3e39bc56a2d90d69725524607"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_03.nbt"
-hash = "c5c1f18d3843867a935071cab24a6b36c6585402da90767b1780f4d429a9449f"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_04.nbt"
-hash = "b6b7ae9fd3b339f8470607d8e7672bddb1bfd1a271e26c8cc7cb5cfa1a0df185"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_05.nbt"
-hash = "237670cd20d6e8823725834b18eb9075c6e51187c738df4ea806fda38382d20a"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_06.nbt"
-hash = "98deb63910b57ee9413c13f767448d3e42f369886c56387b932ae641a7f525bb"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_07.nbt"
-hash = "a01ecd9bbb4bda503a6fbb97a072dee0ccb702ecd1c8c6fd6e563c47300aeb8d"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_08.nbt"
-hash = "d697c050f2fe92e30b0258617d398b0dc0a2600a176800b0616f5131d179d091"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_09.nbt"
-hash = "f521f04fd848e5465bdb42c22e0c47d0a6a5f2ef6bc0d6faf019c5d38aee4e70"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/cottage_10.nbt"
-hash = "8fc1505bbe56667ba68c0650fad8c470d2a840ef02d96fba4e74e589e12bdb6d"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/draynor_cottage.nbt"
-hash = "ee98347b158fe102f1ad80aa18e2ea5cf09d7f0a1b9c855e41ef743644a7312d"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/falador_tower.nbt"
-hash = "71ea8fb3ca384e60e775c036d8ec272aec120f0482ec791396b0d851ee98de5c"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/lumbridge_cottage.nbt"
-hash = "ab73192aadf2dbcd1d599c35d26055e90b2c430578a9a76854dc888fc6e3b8ac"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/lumbridge_cottage_long.nbt"
-hash = "fe685eb0207e86f74bc3dcb1a86730a758983b5d1ed5bd94ed6e7e2f54391df2"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_baker.nbt"
-hash = "122adf2f275771fb22796be17106fea75cec828d7a2a0033ef5c75bfd4cc8abe"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_butcher.nbt"
-hash = "d0668bd324892172706539d768e247855c99ec9daf37e9b12ded973cb1d091fd"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_cloth.nbt"
-hash = "ed490b40421cd0c9e8c1dbdc8a12331fd36b9f1ce6130b6987301032ab66ed23"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_fish.nbt"
-hash = "aa589a291fb09601ee0d9b200910481434ac60b8309b3bf65695c4d925d56d67"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_flowers.nbt"
-hash = "b696a449f1795c083b6d78c4b62e60227fce68d6685827558dce5c990b431677"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_fruit.nbt"
-hash = "820dd5dbc37057f97298a4617a0862e3c1a6c255a359493a04d9408d90c1527b"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_gems.nbt"
-hash = "af2b197dfd5b7b9512e21b48f89b1cc673c04e8dd19477f93bda4b96f31cb863"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/market_stall_spice.nbt"
-hash = "0191995003bc06a87e44f23901b4bf8c3814eae3af9b5db3448996c5ccc8d2ed"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/notice_board.nbt"
-hash = "3da2d5a5f42a52ab5437876f27076a76a2c123b3a5a3f851174e875541dc395f"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/plaza_fountain.nbt"
-hash = "c7506422bcc090ddab9a1e7ba5bab76a88f35b1430455659df69af7c8f0a2b2d"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/seers_cottage.nbt"
-hash = "c367f1ff2ac1107f435472f762ac2f1a77a2e4f9658203780608177378449427"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_apothecary.nbt"
-hash = "f312176d2663ed7df5fbfd58391621f572af4f72a4c424c48f2dc6baec71392f"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_builder.nbt"
-hash = "a5669a9faac64bb25c02d5b7c59394336cc6e439b938a79f0ff99f110d42664f"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_fishing.nbt"
-hash = "04aaf4c689b2a24d1afba4cd514e67c9bafb87343e4d0b3e9fc8a09442bbbe3a"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_jeweller.nbt"
-hash = "21e984a1c5f1ed733031549f128b9509dc3e3bb9efad548420babe1645613c15"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_smithy.nbt"
-hash = "f13afeffac23e141580b5561cac8cb656649d6e38217db453290ea8ff96ace12"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/shop_tailor.nbt"
-hash = "c53213c93427981981118a644d2a6e40b150a1a696dd0c4d4b262eb27e6e06bc"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/street_lamp.nbt"
-hash = "f708282d55069c782086df47b187943db931aee866a92eff678c87b6917c52b3"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/street_lamp_double.nbt"
-hash = "9a55d10a44d5acb343c9e03a2710ab2fb4dec954079a17bf6a40084ed34c728b"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/town_well.nbt"
-hash = "bb54d75efc8a1c812d5376c9b3b7c91fec9e3b14a20bbe755bb07a472227e3ec"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_01.nbt"
-hash = "86fee59b963779d2041193e65a5754c4750d79be991978917a2b25963e0b236c"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_02.nbt"
-hash = "3e597c43d67ac5f1d3ce7c1e005f3b74d0eeeb6f16978787e4f9697d8608b9ca"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_03.nbt"
-hash = "3cb4184f6a7cf9b2dbbe2cf8977fd3283a15c049b5290ab2186c50523e574782"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_04.nbt"
-hash = "68e12ef73525fddaed2dcf5a2a34bd52478dc27513c4e83dace7b842b71f7e1b"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_05.nbt"
-hash = "ee8e5c75a23fa8f96ab1d4574ff5fd4e52af3630a33aaa07aa51c9f05a76b704"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_06.nbt"
-hash = "5100ec49e37252d50496f57019a4b471e6df6342171a16ba18292052bb2832f6"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_07.nbt"
-hash = "45a46f5c63600a15000c41bedac808fcb1b0987956dd40601797a9aff5bd4fe1"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_08.nbt"
-hash = "12acbe2fba90101faacc02c5285a147ec40ac85fce83edef7bf1c6463014b5da"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_09.nbt"
-hash = "c1aef5fbfcad9b70f4eb805f7b807cad4a7649b0594a323c2acea6c086290130"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/townhouse_10.nbt"
-hash = "f0b920e46d440ad14012909d7b400cccb7f8170f760571a8a14bf52fa3cf585f"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/varrock_general_store.nbt"
-hash = "dd50e0b746459d13e70fe87db79d32e27eddf2a35e143629f3309ef135d8238d"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/varrock_townhouse.nbt"
-hash = "d4bf63fbe39a40efacfb433a4c3db6ebad371140e2bfea1c6ae602beff4396bd"
-
-[[files]]
-file = "kubejs/data/lemursaucepacket/structure/varrock_townhouse_tall.nbt"
-hash = "a11fb019d65354c3b0714c19b8295df53b8db47fe6a451a615897382981d960c"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/tags/block/hardness/1.json"
@@ -3470,8 +3278,13 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.4.0.jar"
-hash = "d8a1baec6576c1cb11647d41d7d92771a002a5affadb4286beab7aa54bb17fcb"
+file = "mods/lsp_fixes-1.4.1.jar"
+hash = "0bf9a1c6f844fe8de53a45b0ec62a61a8243128eb5d0a8c2e715db869b150064"
+
+[[files]]
+file = "mods/lukis-grand-capitals.pw.toml"
+hash = "2fe01d8046db2246c6df01eedd1fbc7837c08cc6d3b2a9017107ade989e86a28"
+metafile = true
 
 [[files]]
 file = "mods/macaws-bridges.pw.toml"

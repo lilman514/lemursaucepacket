@@ -130,7 +130,7 @@ Well done, @initiator. Lemurton is your home now."
           Priority:20,
           Texts:[
             {
-              Text:"Go and see Bessa the baker in the market, north of the fountain, and buy yourself a loaf. Here is a little purse from the city to cover it."
+              Text:"Go and see Bessa the Baker: her stall is on the far side of the market, past the great tree. Buy yourself a loaf. Here is a little purse from the city to cover it."
             }
           ],
           Conditions:[
@@ -204,7 +204,7 @@ No fighting and no building inside the walls; everything else is yours to explor
           Priority:-1,
           Texts:[
             {
-              Text:"Lemurton is the first city of the realm. The waystone by the fountain links the roads you discover; the market and the shops on the ring streets buy and sell for coin; the guards keep the peace.
+              Text:"Lemurton is the first city of the realm. The waystone under the great tree links the roads you discover; the market and the shops on the ring streets buy and sell for coin; the guards keep the peace.
 
 Nobody can build or fight inside the walls, so it is the safest place in the land."
             }

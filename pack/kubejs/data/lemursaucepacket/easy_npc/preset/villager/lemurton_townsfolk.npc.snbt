@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Plaza ambience.",
+    description:"Market square ambience.",
     entityTypeId:"easy_npc:villager",
     name:"Townsfolk",
     variantType:"PLAINS_NONE",

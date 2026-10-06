@@ -75,7 +75,7 @@ export const NPCS = {
         conditions: [tag('q_welcome_met'), tag('q_welcome_bread')],
         buttons: [button('Glad to help', [cmd('tag @initiator add q_welcome_done'), open('done')])]
       }),
-      dialog('market', 'The market', 'Go and see Bessa the baker in the market, north of the fountain, and buy yourself a loaf. Here is a little purse from the city to cover it.', { priority: 20, conditions: [tag('q_welcome_met')], buttons: [goodbye] }),
+      dialog('market', 'The market', 'Go and see Bessa the Baker: her stall is on the far side of the market, past the great tree. Buy yourself a loaf. Here is a little purse from the city to cover it.', { priority: 20, conditions: [tag('q_welcome_met')], buttons: [goodbye] }),
       dialog('default', 'Welcome', 'Welcome to Lemurton, @initiator! I am Thaddeus, mayor of this fine city.\n\nNo fighting and no building inside the walls; everything else is yours to explore.', {
         priority: 10,
         buttons: [
@@ -85,7 +85,7 @@ export const NPCS = {
           goodbye
         ]
       }),
-      dialog('about', 'About Lemurton', 'Lemurton is the first city of the realm. The waystone by the fountain links the roads you discover; the market and the shops on the ring streets buy and sell for coin; the guards keep the peace.\n\nNobody can build or fight inside the walls, so it is the safest place in the land.', { buttons: [button('Any work for a newcomer?', [cmd('tag @initiator add q_welcome_met'), open('market')]), goodbye] })
+      dialog('about', 'About Lemurton', 'Lemurton is the first city of the realm. The waystone under the great tree links the roads you discover; the market and the shops on the ring streets buy and sell for coin; the guards keep the peace.\n\nNobody can build or fight inside the walls, so it is the safest place in the land.', { buttons: [button('Any work for a newcomer?', [cmd('tag @initiator add q_welcome_met'), open('market')]), goodbye] })
     ]
   },
 
@@ -111,27 +111,22 @@ export const NPCS = {
 
   // Guards and townsfolk.
   guard: { model: 'humanoid', variant: 'KNIGHT_01', name: 'City Guard', color: '#9DB4CC', description: 'Gate guard.', equipment: { mainhand: 'minecraft:iron_sword', offhand: 'minecraft:shield', head: 'minecraft:iron_helmet', chest: 'minecraft:iron_chestplate', legs: 'minecraft:iron_leggings', feet: 'minecraft:iron_boots' }, dialogs: [dialog('default', 'Halt', 'Welcome to Lemurton, @initiator. Keep the peace inside the walls: no fighting, no digging, no building.\n\nThe mayor is by the fountain if you need work.', { priority: 10, buttons: [goodbye] })] },
-  townsfolk: { model: 'villager', variant: 'PLAINS_NONE', name: 'Townsfolk', color: '#CFCFCF', description: 'Plaza ambience.', wander: true, dialogs: [dialog('default', 'Chatter', 'Lovely day, isn\'t it? They say the old towers to the north hide treasure, if you can climb them.', { priority: 10, buttons: [goodbye] })] }
+  townsfolk: { model: 'villager', variant: 'PLAINS_NONE', name: 'Townsfolk', color: '#CFCFCF', description: 'Market square ambience.', wander: true, dialogs: [dialog('default', 'Chatter', 'Lovely day, isn\'t it? They say the old towers to the north hide treasure, if you can climb them.', { priority: 10, buttons: [goodbye] })] }
 }
 
 /** The preset id `/easy_npc preset import data` takes for an NPC (npcs/build.mjs writes the files). */
 export const presetId = (id, model) => `lemursaucepacket:easy_npc/preset/${model}/lemurton_${id}.npc.snbt`
 
-/** Template name (shops) or stall role -> NPC id. */
+/** Building (its template, see structures/external.json) -> its shopkeeper. */
 export const AT_BUILDING = {
-  shop_smithy: 'shop_smithy',
-  shop_tailor: 'shop_tailor',
-  shop_apothecary: 'shop_apothecary',
-  shop_fishing: 'shop_fishing',
-  shop_builder: 'shop_builder',
-  shop_jeweller: 'shop_jeweller',
-  varrock_general_store: 'varrock_general_store',
-  fruit_seller: 'fruit_seller',
-  baker: 'baker',
-  gem_trader: 'gem_trader',
-  tailor: 'tailor',
-  fishmonger: 'fishmonger',
-  spice_merchant: 'spice_merchant',
-  flower_seller: 'flower_seller',
-  butcher: 'butcher'
+  lgc_plains_worker_weaponsmith: 'shop_smithy',
+  lgc_plains_worker_tannery: 'shop_tailor',
+  lgc_plains_worker_cleric: 'shop_apothecary',
+  lgc_plains_worker_fisherman: 'shop_fishing',
+  lgc_plains_worker_mason: 'shop_builder',
+  lgc_plains_worker_library_1: 'shop_jeweller',
+  lgc_plains_worker_inn: 'varrock_general_store'
 }
+
+/** The market square's traders, placed round its stalls in this order. */
+export const MARKET_TRADERS = ['baker', 'fruit_seller', 'gem_trader', 'spice_merchant', 'fishmonger', 'tailor', 'flower_seller', 'butcher']

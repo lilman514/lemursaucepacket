@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Bakes the raw templates from structures/build.mjs in a scratch server and copies the results into the pack.
 //
-//   node structures/bake.mjs --server <scratch server dir> [--feed URL] [--keep N] [--port P]
+//   node structures/bake.mjs --server <scratch server dir> [--feed URL] [--keep N] [--port P] [--raw <dir>]
 //   node structures/bake.mjs --server <scratch server dir> --collect   (copy out what the last bake saved)
 //
 // The scratch server is one made with `npm run server -- --dir <dir> --feed <local feed> --offline` (never the
@@ -33,7 +33,8 @@ const feed = arg('feed', 'http://localhost:8787/launcher.json')
 const keep = Number(arg('keep', '240'))
 const port = arg('port', '25570')
 
-const rawDir = path.join(here, 'raw')
+// --raw: another folder of raw templates and manifest, e.g. other mods' buildings from structures/import.mjs.
+const rawDir = path.resolve(arg('raw', path.join(here, 'raw')))
 const manifest = JSON.parse(readFileSync(path.join(rawDir, 'manifest.json'), 'utf8'))
 
 // The world folder is whatever server.properties says (the scratch server may be on a test world).

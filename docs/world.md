@@ -11,11 +11,13 @@
 
 A new world starts you in **Lemurton**, a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:
 
-- a plaza with a fountain and the **Lemurton waystone**, visible to everyone from the start;
-- a market of stalls;
-- shops and townhouses on the ring streets, and cottages by the walls;
+- a market square round a great tree, with the **Lemurton waystone** (visible to everyone from the start) where you arrive;
+- a cathedral, a church and a fountain square;
+- shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;
 - four gates, with guards;
 - its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets.
+
+The buildings are from [Luki's Grand Capitals](https://modrinth.com/mod/lukis-grand-capitals) by Luki, which is in the pack (it also turns the world's villages into grand capitals of the same style).
 
 ### Townsfolk, trade and quests
 

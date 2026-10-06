@@ -24,6 +24,15 @@ let pvShots = null
 function pvPlan() {
   // Where bake.js put each building (copied over by preview.mjs).
   let layout = JsonIO.read('kubejs/bake/layout.json')
+  // preview.mjs --views picks which of PV.views to take.
+  let cfg = null
+  try {
+    cfg = JsonIO.read('kubejs/bake/preview.json')
+  } catch (e) {
+    cfg = null
+  }
+  let wanted = cfg != null && cfg.views != null ? String(cfg.views) : 'ab'
+  let views = PV.views.filter((v) => wanted.indexOf(v.id) >= 0)
   let shots = []
   layout.slots.forEach((t) => {
     let x = t.x
@@ -40,8 +49,10 @@ function pvPlan() {
     let ty = PV.showY + lo[1] + h * 0.45
     let tz = t.z + (lo[2] + hi[2] + 1) / 2
     let d = Math.max(w * 1.25, dp * 1.25, h * 1.05) + 3
-    PV.views.forEach((v) => {
-      let a = (v.azimuth * Math.PI) / 180
+    // Azimuth 0 looks at the south face; turn to face the door.
+    let base = { south: 0, west: -90, north: 180, east: 90 }[t.facing == null ? 'south' : String(t.facing)] || 0
+    views.forEach((v) => {
+      let a = ((v.azimuth + base) * Math.PI) / 180
       let dx = d * Math.sin(a)
       let dz = d * Math.cos(a)
       let cy = ty + d * v.elevation

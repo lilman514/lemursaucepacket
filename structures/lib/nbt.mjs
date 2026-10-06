@@ -76,10 +76,21 @@ class Writer {
         return this.raw(b)
       }
       case 'string': return this.str(value)
+      case 'byteArray': {
+        this.i32(value.length)
+        this.raw(Buffer.from(value.map((x) => x & 0xff)))
+        return
+      }
       case 'intArray': {
         this.i32(value.length)
         for (const x of value) this.i32(x)
         return
+      }
+      case 'longArray': {
+        this.i32(value.length)
+        const b = Buffer.alloc(8 * value.length)
+        value.forEach((x, i) => b.writeBigInt64BE(BigInt(x), 8 * i))
+        return this.raw(b)
       }
       case 'list': {
         const { type: inner, items } = value
@@ -126,7 +137,7 @@ export const encodeGzip = (root) => gzipSync(encode(root))
 const NAMES = Object.fromEntries(Object.entries(TAG).map(([k, v]) => [v, k]))
 
 /** Decodes NBT bytes (gzipped or not) into plain JS: compounds → objects, lists → arrays, longs → BigInt. */
-export function decode(bytes) {
+function readNbt(bytes, typed) {
   let buf = Buffer.from(bytes)
   if (buf[0] === 0x1f && buf[1] === 0x8b) buf = gunzipSync(buf)
   let at = 0
@@ -148,8 +159,14 @@ export function decode(bytes) {
     at += len
     return s
   }
+  // typed: every value comes back tagged (byte(1), list('int', [...]), compound({...})) so encode() can write it again.
+  const wrap = (type, v) => (typed ? tagged(type, v) : v)
   const read = (type) => {
-    switch (NAMES[type]) {
+    const name = NAMES[type]
+    return wrap(name, readValue(type, name))
+  }
+  const readValue = (type, name) => {
+    switch (name) {
       case 'byte': return u8()
       case 'short': return i16()
       case 'int': return i32()
@@ -180,7 +197,7 @@ export function decode(bytes) {
         const n = i32()
         const out = []
         for (let i = 0; i < n; i++) out.push(read(inner))
-        return out
+        return typed ? { type: NAMES[inner], items: out } : out
       }
       case 'compound': {
         const out = {}
@@ -215,3 +232,9 @@ export function decode(bytes) {
   str()
   return read(rootType)
 }
+
+/** A structure file (or any NBT) as plain JS values: numbers, strings, arrays, objects. */
+export const decode = (bytes) => readNbt(bytes, false)
+
+/** The same, but every value keeps its tag type, so encode(decodeTyped(bytes)) writes the same data back. */
+export const decodeTyped = (bytes) => readNbt(bytes, true)

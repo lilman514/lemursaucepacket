@@ -16,7 +16,15 @@
     {
       "type": "patchouli:text",
       "title": "Lemurton, the spawn city",
-      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:$(br2)$(li)a plaza with a fountain and the $(bold)Lemurton waystone$(), visible to everyone from the start;$(br)$(li)a market of stalls;$(br)$(li)shops and townhouses on the ring streets, and cottages by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
+      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start) where you arrive;$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack (it also turns the world's villages into grand capitals of the same style)."
     },
     {
       "type": "patchouli:text",

@@ -1,47 +1,58 @@
 #!/usr/bin/env node
 // Lays out the spawn city and writes pack/config/lemursaucepacket/hub_plan.json for lsp_fixes' HubBuilder.
-// Run after structures/build.mjs (it reads the templates' sizes and marks from structures/raw/manifest.json).
+// The buildings are Luki's Grand Capitals' (catalogued in structures/external.json by structures/external.mjs; the
+// mod is in the pack and the game places them from its jar). The walls, towers and street lamps are ours (from
+// structures/raw/manifest.json, written by structures/build.mjs).
 //
-// City coordinates: x east, z south, origin at the plaza's centre; y 0 is the street surface (each building's
-// ground floor stands on it). Every building is placed by the spot just outside its door ("front"), facing a
-// street; the rotation maths below is Minecraft's own (StructureTemplate.transform with the pivot at 0).
+// City coordinates: x east, z south, origin at the market's centre; y 0 is the street surface. Every building is
+// placed by the spot just outside its door ("front"), facing a street. The rotation maths below is Minecraft's own
+// (StructureTemplate.transform with the pivot at 0).
 //
-// The plan, from the middle out: a paved plaza (fountain, waystone, notice board, a market quarter, the well),
-// an inner ring street, a band of townhouses and shops (fronts on the inner ring, the outer ring and the
-// avenues), an outer ring road, cottages with gardens, and the walls with round towers and four gates.
+// From the middle out: the market square (Luki's big market: stalls round a great tree, the waystone and world
+// spawn), a paved ring with wells, the inner ring street with the shops, the cathedral and the church looking
+// onto the market, a band of houses with the fountain square on the south avenue, the outer ring road, cottages,
+// farms, stables and wizard towers, and the walls with round towers and four gates.
 
-import { readFileSync, writeFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
+import { readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { AT_BUILDING, MARKET_TRADERS, NPCS, presetId } from '../npcs/npcs.mjs'
 import { rng } from './lib/parts.mjs'
-import { createHash } from 'node:crypto'
-import { AT_BUILDING, NPCS, presetId } from '../npcs/npcs.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
 const manifest = JSON.parse(readFileSync(path.join(here, 'raw', 'manifest.json'), 'utf8'))
-const T = Object.fromEntries(manifest.templates.map((t) => [t.name, t]))
+const external = JSON.parse(readFileSync(path.join(here, 'external.json'), 'utf8'))
+const T = Object.fromEntries([...manifest.templates, ...external.templates].map((t) => [t.name, t]))
 const NS = 'lemursaucepacket'
 
 export const CITY = {
   name: 'Lemurton',
-  half: 76, // the walls stand at +-76
-  plaza: 21, // the plaza is +-21
+  half: 86, // the walls stand at +-86
   avenue: 3, // avenues are 7 wide (+-3)
   street: 2, // ring streets are 5 wide (+-2 around their centre line)
-  inner: 24, // inner ring street centre line
-  outer: 54 // outer ring road centre line
+  inner: 27, // inner ring street centre line, round the market square
+  outer: 61 // outer ring road centre line
 }
 
 // ---------------------------------------------------------------- rotation
 
 const TURN = { none: ([x, z]) => [x, z], cw90: ([x, z]) => [-z, x], cw180: ([x, z]) => [-x, -z], ccw90: ([x, z]) => [z, -x] }
-/** The rotation that turns a template's front (south) to face `dir`. */
-const FACING = { south: 'none', west: 'cw90', north: 'cw180', east: 'ccw90' }
+const DIRS = ['north', 'east', 'south', 'west']
+const ROTS = ['none', 'cw90', 'cw180', 'ccw90']
+/** The rotation that turns a template's front (ours face south; other mods' say which way) to face `dir`. */
+const rotFor = (t, dir) => ROTS[(DIRS.indexOf(dir) - DIRS.indexOf(t.facing ?? 'south') + 4) % 4]
+/** A block state turned with its building (horizontal facing and axis). */
+function turnState(s, rot) {
+  const k = ROTS.indexOf(rot)
+  if (!k) return s
+  return s.replace(/facing=(north|east|south|west)/, (_, f) => `facing=${DIRS[(DIRS.indexOf(f) + k) % 4]}`).replace(/axis=(x|z)/, (_, a) => `axis=${k % 2 ? (a === 'x' ? 'z' : 'x') : a}`)
+}
 
 function tpl(name) {
   const t = T[name]
-  if (!t) throw new Error(`no template ${name} (run structures/build.mjs)`)
+  if (!t) throw new Error(`no template ${name} (run structures/build.mjs and structures/external.mjs)`)
   return t
 }
 
@@ -53,7 +64,7 @@ function frontOf(t) {
 }
 
 /** Width of the building's frontage, as seen from the street. */
-const frontWidth = (t) => t.solid.max[0] - t.solid.min[0] + 1
+const frontWidth = (t) => (['north', 'south'].includes(t.facing ?? 'south') ? t.solid.max[0] - t.solid.min[0] : t.solid.max[2] - t.solid.min[2]) + 1
 
 // ---------------------------------------------------------------- the plan being built
 
@@ -61,16 +72,15 @@ const placements = []
 const footprints = []
 const paving = []
 const blocks = []
+const commands = []
 const rows = []
 const usedOnce = new Set()
+const npcSpots = []
+let waystone = null
+let spawn = null
 
-/** Where a template's solid blocks would stand if its front spot were at (fx, fz), facing `faces`. */
-function boxFor(name, faces, fx, fz) {
-  const t = tpl(name)
-  const rot = FACING[faces]
-  const [ox, oz] = TURN[rot](frontOf(t))
-  const px = fx - ox
-  const pz = fz - oz
+/** Where a template's solid blocks would stand with its origin at (px, pz), turned by `rot`. */
+function boxAt(t, rot, px, pz) {
   const c = [
     [t.solid.min[0], t.solid.min[2]],
     [t.solid.max[0], t.solid.max[2]]
@@ -81,23 +91,49 @@ function boxFor(name, faces, fx, fz) {
   return { px, pz, rot, x1: Math.min(c[0][0], c[1][0]), z1: Math.min(c[0][1], c[1][1]), x2: Math.max(c[0][0], c[1][0]), z2: Math.max(c[0][1], c[1][1]) }
 }
 
-/** Places `name` so its front spot is at (fx, fz), facing `faces`. */
-function place(name, faces, fx, fz, { y = 0, tag = name } = {}) {
+/** Where a template's solid blocks would stand if its front spot were at (fx, fz), facing `faces`. */
+function boxFor(name, faces, fx, fz) {
   const t = tpl(name)
-  const b = boxFor(name, faces, fx, fz)
+  const rot = rotFor(t, faces)
+  const [ox, oz] = TURN[rot](frontOf(t))
+  return boxAt(t, rot, fx - ox, fz - oz)
+}
+
+/** Records a placement: the template, its footprint, stand-in blocks, its shopkeeper and its waystone. */
+function put(name, b, { y = 0, tag = name } = {}) {
+  const t = tpl(name)
   const py = y + t.offset[1]
-  placements.push({ t: `${NS}:${name}`, p: [b.px, py, b.pz], r: b.rot })
+  const at = (pos) => {
+    const [rx, rz] = TURN[b.rot]([pos[0], pos[2]])
+    return [b.px + rx, py + pos[1], b.pz + rz]
+  }
+  placements.push({ t: t.id ?? `${NS}:${name}`, p: [b.px, py, b.pz], r: b.rot })
   footprints.push({ x1: b.x1, z1: b.z1, x2: b.x2, z2: b.z2, tag })
+  // Blocks from mods the pack doesn't have load as air; put the vanilla stand-in there.
+  for (const s of t.swaps ?? []) blocks.push({ p: at(s.pos), s: turnState(s.state, b.rot) })
   for (const m of t.marks ?? []) {
     if (m.name !== 'npc') continue
     const who = AT_BUILDING[name] ?? AT_BUILDING[m.role]
     if (!who) continue
-    const [rx, rz] = TURN[b.rot]([m.pos[0], m.pos[2]])
-    npcSpots.push({ who, x: b.px + rx, y: py + m.pos[1], z: b.pz + rz })
+    const [x, ny, z] = at(m.pos)
+    npcSpots.push({ who, x, y: ny, z })
   }
-  return b
+  if (t.waystone) {
+    const k = ROTS.indexOf(b.rot)
+    waystone = { p: at(t.waystone.pos), facing: DIRS[(DIRS.indexOf(t.waystone.facing) + k) % 4] }
+  }
+  return { ...b, py, at, t }
 }
-const npcSpots = []
+
+/** Places `name` so its front spot is at (fx, fz), facing `faces`. */
+const place = (name, faces, fx, fz, opts) => put(name, boxFor(name, faces, fx, fz), opts)
+
+/** Places `name` turned by `rot` with the middle of its solid blocks at (cx, cz). */
+function placeCentred(name, rot, cx, cz, opts) {
+  const t = tpl(name)
+  const [ox, oz] = TURN[rot]([(t.solid.min[0] + t.solid.max[0] + 1) / 2, (t.solid.min[2] + t.solid.max[2] + 1) / 2])
+  return put(name, boxAt(t, rot, cx - Math.floor(ox), cz - Math.floor(oz)), opts)
+}
 
 const SOFT = new Set(['wall', 'tower', 'lamp', 'bench', 'planter'])
 /** True if the box overlaps any building already placed (walls, towers and lamps don't count). */
@@ -111,13 +147,13 @@ function pave(x1, z1, x2, z2, mix, y = 0) {
  * A row of buildings along a street edge: `along` is the axis the row runs on, `at` the fixed coordinate of
  * the front spots (the first block outside the street), from..to the span, `faces` the way the fronts look.
  * Greedy: at each spot it takes the next design that fits the span, stays inside `bounds` and doesn't overlap
- * anything placed; otherwise it moves on a block.
+ * anything placed; otherwise it moves on a block. Names in `once` are used at most once in the whole city.
  */
 function row({ names, along, at, from, to, faces, gap = 1, r, bounds, once }) {
   const before = placements.length
   const dir = from <= to ? 1 : -1
   let pos = from
-  // Shops (`once`) are tried first; ordinary rows start at a random design so streets don't repeat.
+  // Rows with landmarks or shops (`once`) try them first; others start at a random design so streets don't repeat.
   let i = r && !once ? r.int(0, names.length - 1) : 0
   const inside = (b) => !bounds || (b.x1 >= bounds.x1 && b.x2 <= bounds.x2 && b.z1 >= bounds.z1 && b.z2 <= bounds.z2)
   while (dir > 0 ? pos <= to : pos >= to) {
@@ -139,7 +175,7 @@ function row({ names, along, at, from, to, faces, gap = 1, r, bounds, once }) {
       placed = true
     }
     if (!placed) pos += dir
-    else if (r && r.chance(0.12)) pos += dir * 3 // now and then a gap for a garden or an alley
+    else if (r && r.chance(0.1)) pos += dir * 3 // now and then a gap for a garden or an alley
   }
   rows.push(`${String(placements.length - before).padStart(2)} x ${names[0]}... along ${along} at ${at}, ${from}..${to}, facing ${faces}`)
 }
@@ -149,23 +185,59 @@ function lamp(x, z) {
   footprints.push({ x1: x, z1: z, x2: x, z2: z, tag: 'lamp' })
 }
 
+/** A planter with an oak in it (a vanilla tree feature, so each grows its own shape). */
+function planter(x, z) {
+  const box = { x1: x - 1, z1: z - 1, x2: x + 1, z2: z + 1 }
+  if (clashes(box)) return
+  for (let i = -1; i <= 1; i++)
+    for (let k = -1; k <= 1; k++) {
+      const edge = i !== 0 || k !== 0
+      blocks.push({ p: [x + i, 0, z + k], s: edge ? 'minecraft:stone_bricks' : 'minecraft:grass_block' })
+      if (edge) blocks.push({ p: [x + i, 1, z + k], s: 'minecraft:stone_brick_slab[type=bottom]' })
+    }
+  footprints.push({ ...box, tag: 'planter' })
+  commands.push(`place feature minecraft:oak ~${x} ~1 ~${z}`)
+}
+
+/** A bench of two stairs, its back to `faces` (people sit looking the other way). */
+function bench(x, z, faces) {
+  const along = faces === 'north' || faces === 'south' ? [1, 0] : [0, 1]
+  const cells = [
+    [x, z],
+    [x + along[0], z + along[1]]
+  ]
+  if (cells.some(([a, b]) => clashes({ x1: a, z1: b, x2: a, z2: b }))) return
+  for (const [a, b] of cells) {
+    blocks.push({ p: [a, 1, b], s: `minecraft:spruce_stairs[facing=${faces}]` })
+    footprints.push({ x1: a, z1: b, x2: a, z2: b, tag: 'bench' })
+  }
+}
+
 // Street surfaces: full blocks only. Macaw's "*_paving" blocks are thin overlays meant to sit on top of a block;
 // at street level they read as holes. Its *_running_bond, *_flagstone, *_crystal_floor and *_windmill_weave are cubes.
 const STREET = [[6, 'minecraft:cobblestone'], [2, 'minecraft:mossy_cobblestone'], [2, 'mcwpaths:andesite_flagstone']]
 const AVENUE = [[6, 'mcwpaths:stone_running_bond'], [3, 'mcwpaths:andesite_running_bond'], [1, 'mcwpaths:mossy_stone_running_bond']]
-const PLAZA = [[1, 'mcwpaths:stone_flagstone']]
-const MARKET = [[6, 'mcwpaths:brick_flagstone'], [3, 'mcwpaths:brick_running_bond'], [1, 'mcwpaths:mud_brick_flagstone']]
+const PLAZA = [[3, 'mcwpaths:stone_flagstone'], [1, 'mcwpaths:andesite_flagstone']]
 const GARDEN = [[8, 'minecraft:grass_block'], [1, 'minecraft:coarse_dirt']]
+
+// The buildings.
+const HOUSES = Object.keys(T).filter((n) => /^lgc_plains_house_(small|medium)_house/.test(n))
+const WORKERS = ['lgc_plains_worker_armorer', 'lgc_plains_worker_toolsmith', 'lgc_plains_worker_fletcher', 'lgc_plains_worker_library_2', 'lgc_plains_worker_butcher_shop_1', 'lgc_plains_worker_butcher_shop_2', 'lgc_plains_worker_shepherd', 'lgc_plains_worker_cartographer']
+const SHOPS = Object.keys(AT_BUILDING).filter((n) => T[n] && !MARKET_TRADERS.includes(AT_BUILDING[n]))
+const OUTSKIRTS = ['lgc_plains_house_small_house_1', 'lgc_plains_house_small_house_6', 'lgc_plains_house_stable_2', 'lgc_taiga_house_house_1', 'lgc_plains_house_small_house_8', 'lgc_taiga_house_house_2', 'lgc_plains_house_accessory_farm_2', 'lgc_plains_house_small_house_7', 'lgc_taiga_house_house_6', 'lgc_plains_house_small_house_3']
+const TOWERS = ['lgc_taiga_house_house_5', 'lgc_taiga_house_house_4', 'lgc_taiga_house_house_7']
 
 // ---------------------------------------------------------------- the city
 
 function build() {
   const r = rng('lemurton')
-  const { half: H, plaza: P, avenue: A, street: S, inner, outer } = CITY
+  const { half: H, avenue: A, street: S, inner, outer } = CITY
+  const lo = inner + S + 1 // first block outside the inner ring street
+  const hi = outer - S - 1 // last block inside the outer ring road
 
   // Ground: grass inside the walls, then the streets on top.
   pave(-H + 1, -H + 1, H - 1, H - 1, GARDEN)
-  pave(-P, -P, P, P, PLAZA)
+  pave(-inner + S + 1, -inner + S + 1, inner - S - 1, inner - S - 1, PLAZA)
   for (const ring of [inner, outer])
     for (const sg of [-1, 1]) {
       pave(-ring - S, sg * ring - S, ring + S, sg * ring + S, STREET)
@@ -174,69 +246,88 @@ function build() {
   pave(-A, -H, A, H, AVENUE)
   pave(-H, -A, H, A, AVENUE)
 
-  // The plaza: the fountain in the middle (radius 5), the waystone (the builder sets it up) and spawn on the
-  // avenue north of it, the notice board beside them, a market across the north half (two rows of stalls facing
-  // over a lane, z -15..-11),
-  // the well in the south-west, lamps on the corners.
-  place('plaza_fountain', 'south', 0, 6)
-  place('notice_board', 'south', 8, -3)
-  pave(-P + 1, -P + 1, P - 1, -6, MARKET)
-  // Eight stalls, each once, in two rows facing over the lane (fronts at z -11 looking north, -15 looking south).
-  for (const [name, x, z, faces] of [
-    ['market_stall_baker', -15, -11, 'north'],
-    ['market_stall_fruit', -7, -11, 'north'],
-    ['market_stall_gems', 7, -11, 'north'],
-    ['market_stall_spice', 15, -11, 'north'],
-    ['market_stall_fish', -15, -15, 'south'],
-    ['market_stall_cloth', -7, -15, 'south'],
-    ['market_stall_flowers', 7, -15, 'south'],
-    ['market_stall_butcher', 15, -15, 'south']
-  ]) {
-    if (clashes(boxFor(name, faces, x, z))) throw new Error(`${name} doesn't fit at ${x},${z}`)
-    place(name, faces, x, z)
-  }
-  place('town_well', 'south', -12, 16)
-  for (const [x, z] of [[-P, -P], [P, -P], [-P, P], [P, P]]) lamp(x, z)
-  dressPlaza()
+  // The market square: Luki's big market in the middle, its waystone the city's, world spawn beside it.
+  const market = placeCentred('lgc_plains_center_big_market', 'none', 0, 0, { tag: 'market' })
+  // Its traders, round the square in a fixed order.
+  const stalls = market.t.marks
+    .filter((m) => m.name === 'stall')
+    .map((m) => market.at(m.pos))
+    .sort((a, b) => Math.atan2(a[2], a[0]) - Math.atan2(b[2], b[0]))
+  // World spawn: on the paving just south of the market, in line with the waystone. Not beside the waystone: the
+  // great tree's canopy covers it, and with no open sky above, new players would spawn on top of the tree.
+  spawn = [waystone.p[0], 1, market.z2 + 2]
+  if (stalls.length < MARKET_TRADERS.length) throw new Error(`the market has ${stalls.length} stalls for ${MARKET_TRADERS.length} traders`)
+  MARKET_TRADERS.forEach((who, i) => {
+    const [x, y, z] = stalls[Math.floor((i * stalls.length) / MARKET_TRADERS.length)]
+    npcSpots.push({ who, x, y, z })
+  })
+  // Two wells in the paved ring, benches facing the market, planters and lamps on the corners.
+  const ringIn = inner - S - 1
+  placeCentred('lgc_plains_well', 'none', -20, 12, { tag: 'well' })
+  placeCentred('lgc_plains_well', 'cw180', 20, -12, { tag: 'well' })
+  for (const [x, z] of [[-ringIn + 2, -ringIn + 2], [ringIn - 2, -ringIn + 2], [-ringIn + 2, ringIn - 2], [ringIn - 2, ringIn - 2]]) planter(x, z)
+  for (const [x, z, faces] of [[-8, 20, 'south'], [6, 20, 'south'], [-8, -21, 'north'], [6, -21, 'north']]) bench(x, z, faces)
+  for (const [x, z] of [[-A - 2, -ringIn], [A + 2, -ringIn], [-A - 2, ringIn], [A + 2, ringIn], [-ringIn, -A - 2], [-ringIn, A + 2], [ringIn, -A - 2], [ringIn, A + 2]]) lamp(x, z)
 
-  // Middle band (between the rings): townhouses and shops.
-  const town = Object.keys(T).filter((n) => /^(townhouse_|varrock_townhouse)/.test(n))
-  const shops = Object.keys(T).filter((n) => /^shop_/.test(n)).concat(['varrock_general_store'])
-  const lo = inner + S + 1 // first block outside the inner ring street
-  const hi = outer - S - 1 // last block inside the outer ring road
+  // The fountain square on the south avenue, half way to the outer ring.
+  const fz = Math.round((lo + hi) / 2)
+  pave(-13, fz - 13, 12, fz + 12, AVENUE)
+  placeCentred('lgc_plains_center_fountain', 'none', 0, fz, { tag: 'fountain' })
+
+  // Landmarks looking onto the market: the cathedral on the north side, the church on the south.
+  place('lgc_taiga_worker_church', 'south', -16, -lo, { tag: 'cathedral' })
+  place('lgc_plains_church', 'north', 24, lo, { tag: 'church' })
+
+  // The inner ring: every shop once (each has its shopkeeper), then the other trades, then houses.
   const mid = { x1: -hi, z1: -hi, x2: hi, z2: hi }
+  const once = new Set([...SHOPS, ...WORKERS])
+  const innerNames = [...SHOPS, ...WORKERS, ...HOUSES]
   for (const sg of [-1, 1]) {
-    // Fronts on the inner ring, looking at the plaza: each shop once (they have their own shopkeeper), then townhouses.
-    const once = new Set(shops)
-    row({ names: [...shops, ...town], along: 'x', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
-    row({ names: [...shops.slice().reverse(), ...town], along: 'x', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
-    row({ names: [...shops, ...town], along: 'z', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
-    row({ names: [...shops, ...town], along: 'z', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
-    // Fronts on the outer ring, from inside.
-    row({ names: town, along: 'x', at: sg * hi, from: -hi, to: -A - 2, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
-    row({ names: town, along: 'x', at: sg * hi, from: A + 2, to: hi, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
-    row({ names: town, along: 'z', at: sg * hi, from: -hi, to: -A - 2, faces: sg > 0 ? 'east' : 'west', r, bounds: mid })
-    row({ names: town, along: 'z', at: sg * hi, from: A + 2, to: hi, faces: sg > 0 ? 'east' : 'west', r, bounds: mid })
+    row({ names: innerNames, along: 'x', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
+    row({ names: innerNames, along: 'x', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
+    row({ names: innerNames, along: 'z', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
+    row({ names: innerNames, along: 'z', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
   }
+  // The outer side of the band, looking onto the outer ring road, and the avenues: houses.
   for (const sg of [-1, 1]) {
-    // Fronts on the avenues, inside the middle band.
-    row({ names: town, along: 'z', at: A + 1, from: sg * lo, to: sg * hi, faces: 'west', r, bounds: mid })
-    row({ names: town, along: 'z', at: -A - 1, from: sg * lo, to: sg * hi, faces: 'east', r, bounds: mid })
-    row({ names: town, along: 'x', at: A + 1, from: sg * lo, to: sg * hi, faces: 'north', r, bounds: mid })
-    row({ names: town, along: 'x', at: -A - 1, from: sg * lo, to: sg * hi, faces: 'south', r, bounds: mid })
+    row({ names: HOUSES, along: 'x', at: sg * hi, from: -hi, to: -A - 2, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
+    row({ names: HOUSES, along: 'x', at: sg * hi, from: A + 2, to: hi, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
+    row({ names: HOUSES, along: 'z', at: sg * hi, from: -hi, to: -A - 2, faces: sg > 0 ? 'east' : 'west', r, bounds: mid })
+    row({ names: HOUSES, along: 'z', at: sg * hi, from: A + 2, to: hi, faces: sg > 0 ? 'east' : 'west', r, bounds: mid })
+    row({ names: HOUSES, along: 'z', at: A + 1, from: sg * lo, to: sg * hi, faces: 'west', r, bounds: mid })
+    row({ names: HOUSES, along: 'z', at: -A - 1, from: sg * lo, to: sg * hi, faces: 'east', r, bounds: mid })
+    row({ names: HOUSES, along: 'x', at: A + 1, from: sg * lo, to: sg * hi, faces: 'north', r, bounds: mid })
+    row({ names: HOUSES, along: 'x', at: -A - 1, from: sg * lo, to: sg * hi, faces: 'south', r, bounds: mid })
   }
 
-  // Outer band (outer ring road to the walls): cottages with gardens between.
-  const cottages = Object.keys(T).filter((n) => /cottage/.test(n))
+  // Outskirts (outer ring road to the walls): a wizard tower by three of the corners, then cottages, farms and
+  // stables with gardens between.
   const out1 = outer + S + 1
   const wallIn = H - 6
   const ob = { x1: -wallIn, z1: -wallIn, x2: wallIn, z2: wallIn }
+  TOWERS.forEach((name, i) => {
+    const [sx, sz] = [[-1, -1], [1, -1], [1, 1]][i]
+    place(name, sz > 0 ? 'north' : 'south', sx * (wallIn - 14), sz * out1, { tag: 'tower_house' })
+  })
   for (const sg of [-1, 1]) {
-    row({ names: cottages, along: 'x', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
-    row({ names: cottages, along: 'x', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
-    row({ names: cottages, along: 'z', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
-    row({ names: cottages, along: 'z', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
+    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
+    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
+    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
+    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
   }
+
+  // Trees in the outskirts' gardens, wherever there's room for a crown (not on the roads).
+  const TREES = ['minecraft:oak', 'minecraft:fancy_oak', 'minecraft:birch', 'minecraft:oak']
+  for (let x = -wallIn + 2; x <= wallIn - 2; x += 7)
+    for (let z = -wallIn + 2; z <= wallIn - 2; z += 7) {
+      const band = Math.max(Math.abs(x), Math.abs(z))
+      if (band < out1 + 1 || Math.min(Math.abs(x), Math.abs(z)) <= A + 3) continue
+      const tx = x + r.int(-2, 2)
+      const tz = z + r.int(-2, 2)
+      if (clashes({ x1: tx - 3, z1: tz - 3, x2: tx + 3, z2: tz + 3 }) || !r.chance(0.7)) continue
+      commands.push(`place feature ${TREES[r.int(0, TREES.length - 1)]} ~${tx} ~1 ~${tz}`)
+      footprints.push({ x1: tx - 1, z1: tz - 1, x2: tx + 1, z2: tz + 1, tag: 'planter' })
+    }
 
   // Walls: towers on the corners and either side of each gate, curtain wall between.
   const towerAt = (x, z) => place('castle_tower_round', 'south', x, z + 5, { tag: 'tower' })
@@ -262,71 +353,10 @@ function build() {
     }
 
   // Street lamps along the avenues, where there's room.
-  for (let d = P + 4; d < H - 6; d += 10)
+  for (let d = inner + 6; d < H - 6; d += 10)
     for (const sg of [-1, 1])
       for (const [x, z] of [[A + 1, sg * d], [-A - 1, sg * d], [sg * d, A + 1], [sg * d, -A - 1]]) if (!clashes({ x1: x, z1: z, x2: x, z2: z })) lamp(x, z)
 }
-
-/** Cells in the ring between two distances from the plaza's centre. */
-function ringCells(r0, r1) {
-  const out = []
-  const R = Math.ceil(r1)
-  for (let x = -R; x <= R; x++)
-    for (let z = -R; z <= R; z++) {
-      const d = Math.hypot(x, z)
-      if (d >= r0 && d < r1) out.push([x, z])
-    }
-  return out
-}
-
-/** The plaza's finish: a stone ring round the fountain, a dressed border, benches, planted trees and a lamp ring. */
-function dressPlaza() {
-  const P = CITY.plaza
-  const A = CITY.avenue
-  const free = (x, z) => !clashes({ x1: x, z1: z, x2: x, z2: z })
-  // Two bands round the fountain, stopping at the market (north of z -6) except along the avenue.
-  const open = (x, z) => (z > -6 || Math.abs(x) <= A) && free(x, z)
-  for (const [x, z] of ringCells(6.5, 7.6)) if (open(x, z)) blocks.push({ p: [x, 0, z], s: 'mcwpaths:andesite_flagstone' })
-  for (const [x, z] of ringCells(7.6, 8.4)) if (open(x, z)) blocks.push({ p: [x, 0, z], s: 'mcwpaths:diorite_flagstone' })
-  // A dressed border round the plaza's edge.
-  pave(-P, -P, P, -P, [[1, 'minecraft:polished_andesite']])
-  pave(-P, P, P, P, [[1, 'minecraft:polished_andesite']])
-  pave(-P, -P, -P, P, [[1, 'minecraft:polished_andesite']])
-  pave(P, -P, P, P, [[1, 'minecraft:polished_andesite']])
-  // Benches facing the fountain (two stairs each, backs away from it).
-  for (const [x, z, faces] of [[-6, 11, 'south'], [5, 11, 'south'], [-11, 4, 'west'], [11, 4, 'east']]) {
-    const along = faces === 'south' ? [1, 0] : [0, 1]
-    const cells = [[x, z], [x + along[0], z + along[1]]]
-    if (!cells.every(([a, b]) => free(a, b))) continue
-    for (const [a, b] of cells) {
-      blocks.push({ p: [a, 1, b], s: `minecraft:spruce_stairs[facing=${faces}]` })
-      footprints.push({ x1: a, z1: b, x2: a, z2: b, tag: 'bench' })
-    }
-  }
-  // Planters with an oak in each (a vanilla tree feature, so each grows its own shape).
-  const commands = []
-  for (const [x, z] of [[14, 9], [14, 16], [-17, 6], [6, 17]]) {
-    const box = { x1: x - 1, z1: z - 1, x2: x + 1, z2: z + 1 }
-    if (clashes(box)) continue
-    for (let i = -1; i <= 1; i++)
-      for (let k = -1; k <= 1; k++) {
-        const edge = i !== 0 || k !== 0
-        blocks.push({ p: [x + i, 0, z + k], s: edge ? 'minecraft:stone_bricks' : 'minecraft:grass_block' })
-        if (edge) blocks.push({ p: [x + i, 1, z + k], s: 'minecraft:stone_brick_slab[type=bottom]' })
-      }
-    footprints.push({ ...box, tag: 'planter' })
-    commands.push(`place feature minecraft:oak ~${x} ~1 ~${z}`)
-  }
-  plazaCommands.push(...commands)
-  // A ring of lamps round the fountain, where it's clear.
-  for (let k = 0; k < 8; k++) {
-    const a = (k / 8) * 2 * Math.PI + Math.PI / 8
-    const x = Math.round(Math.cos(a) * 10)
-    const z = Math.round(Math.sin(a) * 10)
-    if (z > -6 && free(x, z)) lamp(x, z)
-  }
-}
-const plazaCommands = []
 
 /** Buildings (not walls, towers or lamps) must not overlap each other. */
 function overlaps() {
@@ -341,7 +371,7 @@ function overlaps() {
   return out
 }
 
-/** Guards inside each gate, the mayor by the waystone, townsfolk about the plaza. */
+/** Guards inside each gate, the mayor by the waystone, townsfolk about the square. */
 function people() {
   const H = CITY.half
   for (const [gx, gz] of [[0, -1], [0, 1], [-1, 0], [1, 0]]) {
@@ -352,8 +382,10 @@ function people() {
       npcSpots.push({ who: 'guard', x, y: 1, z })
     }
   }
-  npcSpots.push({ who: 'mayor', x: 3, y: 1, z: -8 })
-  for (const [x, z] of [[-9, 4], [9, -2], [-4, 13], [12, 12], [-15, -2]]) if (!clashes({ x1: x, z1: z, x2: x, z2: z })) npcSpots.push({ who: 'townsfolk', x, y: 1, z })
+  // The mayor greets newcomers where they arrive.
+  npcSpots.push({ who: 'mayor', x: spawn[0] + 2, y: 1, z: spawn[2] - 1 })
+  const ringIn = CITY.inner - CITY.street - 1
+  for (const [x, z] of [[-10, ringIn - 1], [12, ringIn - 1], [-ringIn + 1, -8], [ringIn - 1, 9], [3, -ringIn + 1]]) if (!clashes({ x1: x, z1: z, x2: x, z2: z })) npcSpots.push({ who: 'townsfolk', x, y: 1, z })
 }
 
 /** A stable UUID per NPC spot (re-importing the plan updates the same NPCs instead of adding more). */
@@ -363,28 +395,36 @@ function uuidFor(key) {
 }
 
 build()
+if (!waystone) throw new Error('no waystone in the city')
 people()
 for (const n of npcSpots) {
   const def = NPCS[n.who]
   if (!def) throw new Error(`no NPC ${n.who}`)
-  plazaCommands.push(`easy_npc preset import data ${presetId(n.who, def.model)} ~${n.x + 0.5} ~${n.y} ~${n.z + 0.5} ${uuidFor(`${n.who}@${n.x},${n.z}`)}`)
+  commands.push(`easy_npc preset import data ${presetId(n.who, def.model)} ~${n.x + 0.5} ~${n.y} ~${n.z + 0.5} ${uuidFor(`${n.who}@${n.x},${n.z}`)}`)
 }
 const problems = overlaps()
 const plan = {
-  version: 1,
+  version: 2,
   name: CITY.name,
   flatten: { radius: CITY.half + 8, blend: 20 },
   search: { radius: 320, step: 32 },
   paving,
   placements,
   blocks,
-  commands: plazaCommands,
-  waystone: { p: [0, 1, -9], name: CITY.name, facing: 'south' },
-  spawn: [0, 1, -7],
-  zone: { name: 'hub', box: [-CITY.half - 12, -CITY.half - 12, CITY.half + 12, CITY.half + 12] }
+  commands,
+  waystone: { p: waystone.p, name: CITY.name, facing: waystone.facing },
+  spawn,
+  zone: { name: 'hub', box: [-CITY.half - 12, -CITY.half - 12, CITY.half + 12, CITY.half + 12] },
+  credits: external.sources.map((s) => s.jar)
 }
 const out = path.join(root, 'pack', 'config', 'lemursaucepacket', 'hub_plan.json')
 writeFileSync(out, JSON.stringify(plan, null, 1) + '\n')
+// Ship only the templates of ours the city uses (bake.mjs copies every baked building into the pack).
+const used = new Set(placements.filter((p) => p.t.startsWith(`${NS}:`)).map((p) => p.t.slice(NS.length + 1)))
+const packStructures = path.join(root, 'pack', 'kubejs', 'data', NS, 'structure')
+const unused = readdirSync(packStructures).filter((f) => f.endsWith('.nbt') && !used.has(f.slice(0, -4)))
+for (const f of unused) rmSync(path.join(packStructures, f))
+if (unused.length) console.log(`Removed ${unused.length} templates the city doesn't use from the pack (keeping ${[...used].join(', ')})`)
 for (const line of rows) console.log('  row ' + line)
 console.log(`${npcSpots.length} NPCs: ${Object.entries(npcSpots.reduce((a, n) => ((a[n.who] = (a[n.who] ?? 0) + 1), a), {})).map(([k, v]) => `${k} ${v}`).join(', ')}`)
 const buildings = footprints.filter((f) => !SOFT.has(f.tag)).length

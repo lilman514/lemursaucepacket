@@ -1,8 +1,8 @@
 # Mods in the pack
 
-176 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+177 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (132)
+## On the server and every client (133)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -69,6 +69,7 @@
 - [Lithostitched](https://modrinth.com/project/XaDC71GB)
 - [LootJS: KubeJS Addon](https://modrinth.com/project/fJFETWDN)
 - [Lootr](https://modrinth.com/project/EltpO5cN)
+- [Luki's Grand Capitals](https://modrinth.com/project/8Lw09aLb)
 - [Macaw's Bridges](https://modrinth.com/project/GURcjz8O)
 - [Macaw's Doors](https://modrinth.com/project/kNxa8z3e)
 - [Macaw's Fences and Walls](https://modrinth.com/project/GmwLse2I)
