@@ -85,10 +85,10 @@ const gearIds = [
 const later = await import('./later-ids.mjs')
 const known = {
   // Numismatics left the pack in 1.5.0 (Gold Coins replaced it); the registry dump still lists its items.
-  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS, ...later.ECONOMY_ITEMS].filter((id) => !id.startsWith('numismatics:'))),
+  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS, ...later.ECONOMY_ITEMS, ...later.ICEANDFIRE_ITEMS].filter((id) => !id.startsWith('numismatics:'))),
   entity: new Set(index.entity),
   biome: new Set([...index.biome, ...index.biomeTag, ...later.REGIONS_UNEXPLORED_BIOMES]),
-  structure: new Set([...index.structure, ...index.structureTag]),
+  structure: new Set([...index.structure, ...index.structureTag, ...later.ICEANDFIRE_STRUCTURES]),
   advancement: new Set(index.advancement),
   dimension: new Set(index.dimension ?? ['minecraft:overworld', 'minecraft:the_nether', 'minecraft:the_end']),
   // Blocks are checked as their items; block tags come from the list in later-ids.mjs.
@@ -517,6 +517,8 @@ book.chapters.forEach((chapter, order) => {
       dependencies: deps.get(q.key).map((k) => questIds.get(k)).filter(Boolean),
       hide_dependency_lines: q.hideLines ? true : undefined,
       hide_until_deps_complete: q.hidden ? true : undefined,
+      // RuneScape style: a quest nobody has given you yet stays out of the book until its start task is done.
+      invisible: q.invisible ? true : undefined,
       icon,
       id,
       min_required_dependencies: q.minDeps,

@@ -3,6 +3,15 @@
   "color": "#C9C9C9",
   "talks": [
     {
+      "dialog": "sword_ask",
+      "when": [
+        "q_sword_started"
+      ],
+      "unless": [
+        "q_sword_brann"
+      ]
+    },
+    {
       "dialog": "default",
       "intro": true
     }
@@ -81,5 +90,28 @@
       }
     ],
     "onBuy": []
-  }
+  },
+  "quests": [
+    {
+      "title": "The Knight's Sword",
+      "steps": [
+        {
+          "stage": "q_sword_started",
+          "text": "Hear Squire Asrol's woes"
+        },
+        {
+          "stage": "q_sword_brann",
+          "text": "Ask Brann the Smith for a new sword"
+        },
+        {
+          "stage": "q_sword_forged",
+          "text": "Bring Brann a brass ingot, a precision mechanism and two iron ingots"
+        },
+        {
+          "stage": "q_sword_done",
+          "text": "Give the sword to Squire Asrol"
+        }
+      ]
+    }
+  ]
 }

@@ -9,6 +9,10 @@
 	chapter.0E4B734290B837FE.title: "Brass Age"
 	chapter.16909E8386D20890.chapter_subtitle: ["Maps, waypoints, dungeons and towers."]
 	chapter.16909E8386D20890.title: "Cartographer"
+	chapter.175772C5C18C88D1.chapter_subtitle: ["Main quest · Novice · 1 quest point"]
+	chapter.175772C5C18C88D1.title: "Cook's Assistant"
+	chapter.1DAA2EF48DF6A016.chapter_subtitle: ["Main quest · Experienced · 2 quest points"]
+	chapter.1DAA2EF48DF6A016.title: "Dragon Slayer I"
 	chapter.2C2A22A66EC818AF.chapter_subtitle: ["New faces, old foes."]
 	chapter.2C2A22A66EC818AF.title: "Bestiary"
 	chapter.2D35B320696E0A9F.chapter_subtitle: ["Brassworks Missions: six jobs a week, paid in coin pouches."]
@@ -51,6 +55,8 @@
 	chapter.63FEC861DDE163DC.title: "The Warehouse"
 	chapter.724775AA8236458B.chapter_subtitle: ["The Enchanting skill, Hardness tomes and levels past the vanilla max."]
 	chapter.724775AA8236458B.title: "The Enchanter"
+	chapter.7467C6A904BEEE10.chapter_subtitle: ["Main quest · Intermediate · 1 quest point"]
+	chapter.7467C6A904BEEE10.title: "The Knight's Sword"
 	chapter.78EE8FA17C687CCA.chapter_subtitle: ["Fourteen skills, five milestones each, and the total-level ladder."]
 	chapter.78EE8FA17C687CCA.title: "Skills"
 	chapter.7B86A63090539256.chapter_subtitle: ["The Nether, properly."]
@@ -61,14 +67,17 @@
 	chapter.7DF2979C619D19C1.title: "The Foundry"
 	chapter_group.05D7205A6D5637F0.title: "Expeditions"
 	chapter_group.071A8EAF90A2B719.title: "The Ages"
+	chapter_group.1F2E0B7F304AB615.title: "Main Quests"
 	chapter_group.5B879695BB0E0EB7.title: "Lemurton"
 	chapter_group.6C6400F8A74B6D9F.title: "Industry"
 	chapter_group.70BC9AA571D15575.title: "Mastery"
 	chapter_group.7DAB9BE5981EE62A.title: "Field Guides"
 	file.0000000000000001.title: "LemurSaucePacket"
+	image.0127D551BC5CCFD9.title: " \\n&6&lCook's Assistant\\n&r&7Main quest · Novice · 1 quest point\\n \\n&r&fLemurton's Cook is in a panic: the mayor's feast\\n&r&fis tonight and there is nothing for the cake.\\n \\n&r&eUnlocks:\\n&r&fthe Cook's thanks, Cooking XP, and the\\n&r&ffirst step towards the Champions' Guild.\\n "
 	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Find the capital, meet the mayor and find your way around.\\n \\n&r&fLemurton is the realm's first city, a short walk from\\n&r&fwhere you wake up, and a safe zone: no fighting,\\n&r&fdigging or building inside the walls. Its people trade\\n&r&fand hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
 	image.0A5D205330DDDF01.title: " \\n&6&lThe Enchanter\\n&r&7The Enchanting skill, Hardness tomes\\n&r&7and levels past the vanilla max.\\n \\n&r&fEnchanting is a skill here. The table trains it, and the skill\\n&r&fdecides how far an enchantment can go: Sharpness X at\\n&r&f99. Hardness tomes let your pickaxe break harder ores.\\n \\n&r&eUnlocks:\\n&r&fenchantments up to level X, Telekinesis, and the Hardness\\n&r&ftomes for iron, gold, diamonds, obsidian and ancient debris.\\n "
 	image.0F421FB4917EAF3E.title: " \\n&6&lRailway Company\\n&r&7Long trains, long journeys and a network that runs itself.\\n \\n&r&fIron Roads got you a line. This chapter makes\\n&r&fit a railway: signals, timetables, whistles, a\\n&r&ftrack factory and a train six carriages long.\\n \\n&r&eUnlocks:\\n&r&ffreight and passenger lines across the\\n&r&fwhole map, and the Grand Central prize.\\n "
+	image.0F5DA6A8095784F5.title: " \\n&6&lThe Knight's Sword\\n&r&7Main quest · Intermediate · 1 quest point\\n \\n&r&fSir Vyvin's squire has lost his master's\\n&r&fsword, and Sir Vyvin is back tomorrow.\\n \\n&r&eUnlocks:\\n&r&fSmithing XP, coins, and the squire's undying gratitude.\\n "
 	image.10E4665E289211DE.title: " \\n&6&lBeyond the Dragon\\n&r&7The outer End: cities, ships, castles and the void.\\n \\n&r&fThe dragon is only the door. Out past the gateways\\n&r&fare end cities, Nullscape's strange biomes and the\\n&r&fcastles Dungeons and Taverns left in the dark.\\n \\n&r&eUnlocks:\\n&r&fshulker boxes, dragon breath, the levitation\\n&r&ftrick, and a second dragon fight on your terms.\\n "
 	image.12E3C18622AFD831.title: " \\n&6&lBestiary\\n&r&7New faces, old foes.\\n \\n&r&fThe world has new creatures and\\n&r&ftougher bosses. Track down each one.\\n \\n&r&eRewards:\\n&r&fa crate for every first encounter,\\n&r&fand tips on what each creature does.\\n "
 	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
@@ -83,6 +92,7 @@
 	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fa crate for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
 	image.3BDA63444C2D4695.title: " \\n&6&lContracts\\n&r&7Brassworks Missions: six jobs a week, paid in coin pouches.\\n \\n&r&fPress H for the mission board. Missions are Create jobs:\\n&r&fpress this, mix that, deliver the other. Each pays Coin\\n&r&fPouches on its own (right-click one: 100 coins; rerolls\\n&r&fcost pouches); these quests pay again for keeping at it.\\n \\n&r&eRewards:\\n&r&fa crate at 10, 50, 100, 250 and 500 missions,\\n&r&fand the Legendary Fixer prize at 1000.\\n "
 	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
+	image.3E9C644EFAAE5DA3.title: " \\n&6&lDragon Slayer I\\n&r&7Main quest · Experienced · 2 quest points\\n \\n&r&fThe Champions' Guild sends its proven\\n&r&fadventurers after Elvarg, the dragon of Crandor.\\n \\n&r&eUnlocks:\\n&r&fthe right to wear dragonscale and dragonsteel\\n&r&farmour, Attack and Defence XP, and a fortune.\\n "
 	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
 	image.453135B25BEDB43B.title: " \\n&6&lHearts \\& Graves\\n&r&7Every death costs a heart. Run out\\n&r&7and everything you built goes with you.\\n \\n&r&fYou start with ten hearts and lose one every time you\\n&r&fdie, dropped where you fell for anyone to take. Graves\\n&r&fcost Grave Essence, compasses find what you dropped,\\n&r&fand a new Heart is the hardest thing in the pack to make.\\n \\n&r&eUnlocks:\\n&r&fgraves that keep your items, compasses for what\\n&r&fyou lost, a spare Heart for a friend, and the\\n&r&frecipe that makes hearts from a Heart of the Sea.\\n "
 	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, settle a base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fyour first backpack, a bed in a village,\\n&r&fand the wrench that starts Create.\\n "
@@ -115,6 +125,8 @@
 	quest.0390E0DEB91A43F2.title: "Parcels"
 	quest.041B7F870C5C6510.quest_desc: ["Bottle the purple cloud. Lingering potions need it."]
 	quest.041B7F870C5C6510.title: "Dragon's Breath"
+	quest.043F5AD0FE7E848A.quest_desc: ["Oziach keeps the armoury on the ring street. He came closer to killing Elvarg than anyone."]
+	quest.043F5AD0FE7E848A.title: "Oziach"
 	quest.0444095009517E71.quest_desc: ["Reach &eAgility 50&r. Agility gives speed and less fall damage.", "", "&eUnlocked on the way:&r", "• 30: the elytra", "• 40: the Aeronaut's set"]
 	quest.0444095009517E71.title: "&bAgility 50"
 	quest.046A889E2F3F50C9.quest_desc: ["A blaze forger merges and strips enchantments the way an anvil does, but never gets too expensive."]
@@ -171,6 +183,8 @@
 	quest.08CB68987F5A93F5.title: "&cStrength 75"
 	quest.0913243E056A9EB7.quest_desc: ["Reach &eAgility 75&r. Agility gives speed and less fall damage."]
 	quest.0913243E056A9EB7.title: "&bAgility 75"
+	quest.0939B7CAC0EB0921.quest_desc: ["Lucan the Jeweller bought a scrap of the map from a sailor. He wants 10,000 coins for it."]
+	quest.0939B7CAC0EB0921.title: "Map Part: Lucan"
 	quest.0940D6B1B450D563.quest_desc: ["Four scrap, four gold, one ingot. Four ingots is a serious pile."]
 	quest.0940D6B1B450D563.title: "Netherite Ingots"
 	quest.095F6A23CA1BB31E.quest_desc: ["Fly a ship you built from one of your bases to another without touching the ground.", "", "&eChapter prize:&r the Aeronaut's Jacket, a warp stone, the Skyward Cape and a roll on the Legend's Hoard."]
@@ -258,6 +272,9 @@
 	quest.14CCBBB982256773.title: "Full Steam"
 	quest.154575B8B0B42CBE.quest_desc: ["A skillet cooks on the go: stand near heat and hold food in your other hand."]
 	quest.154575B8B0B42CBE.title: "Portable Cooking"
+	quest.169ABAA65ECC4F3E.quest_desc: ["Squire Asrol, at the armourer's on the ring street, dropped Sir Vyvin's sword down a well. Only a smith taught by the dwarves could forge another."]
+	quest.169ABAA65ECC4F3E.quest_subtitle: "Started by Squire Asrol"
+	quest.169ABAA65ECC4F3E.title: "&6The Knight's Sword"
 	quest.16EAAB5FF0BF63C9.quest_desc: ["A portable storage interface unloads a passing contraption. Your quarry empties itself every lap."]
 	quest.16EAAB5FF0BF63C9.title: "Drive-by Exchange"
 	quest.171CC58A88C06C2C.quest_desc: ["Reach &eEnchanting 10&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
@@ -291,6 +308,8 @@
 	quest.1C82F5FAFD7A4EFA.title: "&6Cooking 50"
 	quest.1C8C064C0C2008FC.quest_desc: ["Run a line from your base to another player's, with a station at each end.", "", "&cNote:&r trains can cross Nether portals, but riding through one is still buggy. Send freight across unmanned.", "", "&eChapter prize:&r railway casing for the next carriage, a warp stone and the Iron Roads Cape."]
 	quest.1C8C064C0C2008FC.title: "Connect Two Towns"
+	quest.1D0D33F4A4AD24C5.quest_desc: ["Wizard Traiborn, in his tower by the wall, keeps a piece in a box that only opens to a spell.", "", "The spell needs a ghast tear, a blaze rod and an amethyst shard."]
+	quest.1D0D33F4A4AD24C5.title: "Map Part: The Wizard"
 	quest.1D813B0744C534CF.quest_desc: ["Mushrooms on rich soil grow into colonies. Shear a full one."]
 	quest.1D813B0744C534CF.title: "Fungus Among Us"
 	quest.1E136B8C0850A837.title: "Conveyor"
@@ -379,24 +398,31 @@
 	quest.2C116A8515CA8574.quest_desc: ["Found in ocean, beach and river chests."]
 	quest.2C116A8515CA8574.title: "Cut Glass Boot"
 	quest.2C1B7D364ACF0A52.title: "Budding Contractor"
-	quest.2C6D5FD29C664761.quest_desc: ["Tell the mayor how you got on."]
+	quest.2C6D5FD29C664761.quest_desc: ["Tell the mayor how you got on.", "", "&7Lemurton's people have troubles of their own: the Cook, Sir Vyvin's squire, the Champions' Guild. Their quests appear in your book once they give them to you."]
 	quest.2C6D5FD29C664761.title: "Report Back"
 	quest.2CD0388FFD593882.quest_desc: ["The Dragonslayer Cape is yours when it falls."]
 	quest.2CD0388FFD593882.title: "&5The Dragon"
 	quest.2CEEFD1A5DD9339E.quest_desc: ["A castle full of Create machinery. Explore it carefully."]
 	quest.2CEEFD1A5DD9339E.title: "The King's Castle"
+	quest.2CFE482090B033FF.quest_desc: ["Bring Oziach all three pieces and he puts them together: a map whose needle points to Crandor."]
+	quest.2CFE482090B033FF.title: "The Map to Crandor"
 	quest.2D07A9F53C740CFC.quest_desc: ["Link a grid of mechanical crafters for recipes too big for a crafting table: gear, waystones and Hardness tomes."]
 	quest.2D07A9F53C740CFC.title: "Mechanical Crafting"
 	quest.2D0B9945E26F6B56.quest_desc: ["The Heavenly Conqueror is a ship in the clouds. An airship or a very tall tower gets you there."]
 	quest.2D0B9945E26F6B56.title: "Ghost Riders in the Sky"
 	quest.2D371AC3E7BCEC75.quest_desc: ["Some meals are big enough to place down and share."]
 	quest.2D371AC3E7BCEC75.title: "A Glorious Feast"
+	quest.2DC3A790A559DD34.quest_desc: ["Give Brann the makings and he forges a sword Sir Vyvin will never tell from his own."]
+	quest.2DC3A790A559DD34.title: "Sir Vyvin's Sword"
 	quest.2DCBA603428C116C.quest_desc: ["A mechanical grindstone strips an enchanted item and drains the enchantment into liquid experience."]
 	quest.2DCBA603428C116C.title: "Gone with the Foil"
 	quest.2E3C640C0E9BCEDF.quest_desc: ["Reach &eRanged 25&r. Ranged gives +0.3% ranged crit chance per level."]
 	quest.2E3C640C0E9BCEDF.title: "&cRanged 25"
 	quest.2EE8DBD9ED51E927.quest_desc: ["Signals split the line into blocks; track observers tell redstone when a train passes."]
 	quest.2EE8DBD9ED51E927.title: "Traffic Control"
+	quest.2EF09854B0FC5403.quest_desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay Elvarg, the dragon of Crandor.", "", "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."]
+	quest.2EF09854B0FC5403.quest_subtitle: "Started by the Champions' Guild"
+	quest.2EF09854B0FC5403.title: "&6Dragon Slayer I"
 	quest.2F6270CB2985EC5F.quest_desc: ["Copper and zinc in a heated basin give brass."]
 	quest.2F6270CB2985EC5F.title: "Brass"
 	quest.2FAE318E17AE49CB.title: "Mission Virtuoso"
@@ -460,6 +486,8 @@
 	quest.39FD1FA2F1B75A78.title: "Aeronaut's Set"
 	quest.3A35D7C2F436EB92.title: "Brass Casing"
 	quest.3A55BEAD0546926A.title: "Stone Age"
+	quest.3A69AE942A765080.quest_desc: ["Elvarg's breath cooks people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and her fire does a fifth of the harm."]
+	quest.3A69AE942A765080.title: "An Anti-dragon Shield"
 	quest.3A83D5B48D315F47.quest_desc: ["Reach &eFishing 75&r. Fishing gives better catches."]
 	quest.3A83D5B48D315F47.title: "&aFishing 75"
 	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus greets newcomers at the south edge of the market, in the middle of the city.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
@@ -476,6 +504,8 @@
 	quest.3C870C551F93DB89.title: "Sturdy Warhammer"
 	quest.3C8F458AEC7035CD.quest_desc: ["Crystallise levitite blend the other way and it comes out pearlescent."]
 	quest.3C8F458AEC7035CD.title: "Now Available in Pink"
+	quest.3D6B7C71416026B4.quest_desc: ["Brann needs a brass ingot, a precision mechanism and two iron ingots.", "", "&7Brass comes from a mixer (copper and zinc, heated); the precision mechanism from a sequenced assembly line."]
+	quest.3D6B7C71416026B4.title: "The Makings"
 	quest.3DEE9A11DAD5A1B7.quest_desc: ["Reach &eAttack 25&r. Attack gives each level adds melee and bow damage.", "", "&eUnlocked on the way:&r", "• 15: iron swords and the crossbow", "• 20: the potato cannon", "• 25: the Brass Sabre"]
 	quest.3DEE9A11DAD5A1B7.title: "&cAttack 25"
 	quest.3EA0112185B2B663.quest_desc: ["Terralith's mage towers change with the season they were built in."]
@@ -541,6 +571,8 @@
 	quest.4787851D06C5AD77.title: "Sculk"
 	quest.479B0A9CB73D5AF9.quest_desc: ["Reach &eSmithing 25&r. Smithing gives XP from ingots and gear."]
 	quest.479B0A9CB73D5AF9.title: "&6Smithing 25"
+	quest.47AEF3DD86EEE0B5.quest_desc: ["Brann learned his craft in the dwarven halls. Ask him at the smithy on the ring street."]
+	quest.47AEF3DD86EEE0B5.title: "Brann the Smith"
 	quest.4804708C84965F94.quest_desc: ["Railways Navigator adds a route planner and station clocks, like a real rail network."]
 	quest.4804708C84965F94.title: "Timetables"
 	quest.48057ACA9CE3D95A.title: "Departure Board"
@@ -554,6 +586,8 @@
 	quest.4947E85286FBECA2.title: "&aFarming 25"
 	quest.4967BBE9FD472FB4.quest_desc: ["The Lost Item Compass, a sculk sensor, two comparators and a precision mechanism. Its switch adds &eanything&r: it also points at chests and players holding your item, without saying which."]
 	quest.4967BBE9FD472FB4.title: "Seeker's Compass"
+	quest.49F46141DFEDD2C6.quest_desc: ["The Champions' Guild gives its piece to those who prove their arm against the dead."]
+	quest.49F46141DFEDD2C6.title: "Map Part: The Guild's Trial"
 	quest.49FBDD60BE536D27.quest_desc: ["An experience hatch stores your own levels as liquid, and gives them back."]
 	quest.49FBDD60BE536D27.title: "Spirit-Taking"
 	quest.4B5D23369245AFFD.quest_desc: ["Let a shulker hit you and levitate 50 blocks up."]
@@ -620,6 +654,9 @@
 	quest.53022893A269221D.quest_desc: ["Four obsidian, two diamonds and a book. Obsidian and diamonds are Mining 30 materials, to mine and to craft with (chest finds included), so the first table of your own waits for Hardness III. Until then, enchant at one you find: mage towers, wizard towers and village libraries have them.", "", "&7Each enchant pays Enchanting XP. The third slot scales with the skill: 30 levels at 1, 150 at 99."]
 	quest.53022893A269221D.title: "The First Table"
 	quest.533DA8C99EA63644.title: "Emerald Standard"
+	quest.53ADD91292E0E70C.quest_desc: ["You saved the mayor's feast.", "", "&eRewards:&r 1 quest point, 3,000 Cooking XP, coins."]
+	quest.53ADD91292E0E70C.quest_subtitle: "Cook's Assistant"
+	quest.53ADD91292E0E70C.title: "&aQuest complete!"
 	quest.53CEE449BE9A4679.quest_desc: ["Levitite floats on its own. Ships built with it need less balloon."]
 	quest.53CEE449BE9A4679.title: "Levitite"
 	quest.53E321CFDE3A9385.quest_desc: ["Found in Nether chests."]
@@ -709,8 +746,14 @@
 	quest.6023EB023769D255.title: "&cRanged 99"
 	quest.609C15735B7DD942.quest_desc: ["Ancient debris needs &eHardness IV&r on your pickaxe and Mining 40, to mine and to smelt. Bastion chests carry netherite scrap, which has no gate."]
 	quest.609C15735B7DD942.title: "Netherite"
+	quest.60C14FFAEB799C74.quest_desc: ["You slew Elvarg, the dragon of Crandor.", "", "&eRewards:&r 2 quest points, the right to wear dragonscale and dragonsteel armour, 20,000 Attack and Defence XP, a fortune in coins."]
+	quest.60C14FFAEB799C74.quest_subtitle: "Dragon Slayer I"
+	quest.60C14FFAEB799C74.title: "&aQuest complete!"
 	quest.60EE714B5E000FF1.title: "Delightful Decade"
 	quest.61128D7E284F0E6D.title: "Feeding and Restock"
+	quest.61539FC8E2B8A68C.quest_desc: ["The Cook, in the butcher's shop on the ring street, needs a bucket of milk, an egg and a pot of fine flour for the mayor's cake.", "", "&7Quests like this one only appear in your book once someone gives them to you. Talk to everyone."]
+	quest.61539FC8E2B8A68C.quest_subtitle: "Started by the Cook"
+	quest.61539FC8E2B8A68C.title: "&6Cook's Assistant"
 	quest.6157DAB0F1B7355A.quest_desc: ["Reach &eAttack 10&r. Attack gives each level adds melee and bow damage.", "", "&eUnlocked on the way:&r", "• 5: stone swords", "• 10: golden swords", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.6157DAB0F1B7355A.title: "&cAttack 10"
 	quest.6225212C6A5DC11C.quest_desc: ["Found in village and pillager chests."]
@@ -822,6 +865,8 @@
 	quest.6ED31CFF32B4DC2F.title: "Stack Upgrade II"
 	quest.6F11CCE68303F7B7.quest_desc: ["Keep a small stack on you. It counts in your inventory, hotbar, off-hand or a backpack you carry, and one is used per death."]
 	quest.6F11CCE68303F7B7.title: "Three in the Pocket"
+	quest.6F362A6C985F8F78.quest_desc: ["Follow the map to Crandor. Elvarg rises when you reach her isle: a fire dragon in her prime.", "", "Everyone on this step who is nearby when she falls gets her head.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends."]
+	quest.6F362A6C985F8F78.title: "&cElvarg"
 	quest.6F46C1816C7EA4AC.title: "Emerald Peaks"
 	quest.6F86C5A7CA35337C.quest_desc: ["At Enchanting 20 the raised enchantments allow level VI. Combine two Sharpness V books at an anvil, or roll it at the table."]
 	quest.6F86C5A7CA35337C.title: "Past the Limit"
@@ -860,6 +905,9 @@
 	quest.7535D89CEF267AFC.title: "&aThe Brass Age"
 	quest.757A2973CCB44D1B.quest_desc: ["Reach &eSmithing 50&r. Smithing gives XP from ingots and gear."]
 	quest.757A2973CCB44D1B.title: "&6Smithing 50"
+	quest.757CBF5DBDB08000.quest_desc: ["Sir Vyvin will never know.", "", "&eRewards:&r 1 quest point, 8,000 Smithing XP, coins."]
+	quest.757CBF5DBDB08000.quest_subtitle: "The Knight's Sword"
+	quest.757CBF5DBDB08000.title: "&aQuest complete!"
 	quest.7589B78C135663B5.title: "Aviator"
 	quest.763B2E40973AE7F7.quest_desc: ["Brass casings, andesite alloy and a lantern. The lamp alone gives Night Vision underground; the full set gives Haste and a chance of double ore drops.", "&7Needs Mining 35. With the Clot of Time relic: Haste II."]
 	quest.763B2E40973AE7F7.title: "Prospector's Set"
@@ -906,6 +954,8 @@
 	quest.7E0EAA890E15C2ED.title: "&6Find Lemurton"
 	quest.7E2F07E0DFBB02E0.quest_desc: ["Iron sheets, andesite alloy and a mechanical saw in the mechanical crafter. Chop one log and the whole tree comes down.", "&7Needs Woodcutting 30."]
 	quest.7E2F07E0DFBB02E0.title: "Lumber Axe"
+	quest.7E5CF71802CB596E.quest_desc: ["A bucket of milk, an egg, and a pot of flour: grind wheat in a Create millstone.", "", "Take them to the Cook."]
+	quest.7E5CF71802CB596E.title: "The Ingredients"
 	quest.7E6AE4EBA6DB21F9.quest_desc: ["Reach &eDefence 99&r. Defence gives +0.02 armour per level.", "", "&6The Defence Cape is yours at 99.&r Open /capes to wear it."]
 	quest.7E6AE4EBA6DB21F9.title: "&cDefence 99"
 	quest.7ED5141FF9D485A0.quest_desc: ["A blaze burner in the head: ores come out already smelted.", "&7Needs Mining 30."]
@@ -920,9 +970,13 @@
 	reward_table.36BDBF4F01FE3397.title: "Relic Cache"
 	reward_table.4A769831A3D17A9D.title: "Engineer's Crate"
 	reward_table.6BEF5404D318C66E.title: "Master's Cache"
+	task.001B653AFE21341D.title: "Offer to help the Cook"
+	task.005B02B98D7242DE.title: "Slay Elvarg"
 	task.0262E8B8D100926B.title: "Total level 250"
 	task.028A827B62B8932F.title: "Got it"
+	task.02A48E9759D0C17D.title: "Give the sword to Squire Asrol"
 	task.045C049531AE2E11.title: "I built my legacy"
+	task.0528FB0EF90324F3.title: "Ask Brann for a new sword"
 	task.05487329B4EB197A.title: "Crafting level 25"
 	task.076BEAA70434E897.title: "Add an enchantment to an enchanting template"
 	task.08DF0297AFE991AB.title: "A set and its relic, together"
@@ -936,6 +990,7 @@
 	task.0F82105158D6AB10.title: "A book of Mending"
 	task.0F859D5EAA3757A9.title: "Agility level 99"
 	task.0FC05B182BB9DDF1.title: "Smithing level 10"
+	task.1065B441AEA70305.title: "Bring Elvarg's head to Oziach"
 	task.10E9A500D94DD936.title: "Complete 500 missions"
 	task.10F3C19DA33C4079.title: "Kill a raid captain"
 	task.11D0A8B5370E498A.title: "A book of Sharpness X"
@@ -957,11 +1012,13 @@
 	task.17820BE4E53E8696.title: "Mining level 25"
 	task.17DC0AE191486D0F.title: "Hitpoints level 50"
 	task.180ACC907BA571E0.title: "Crafting level 75"
+	task.1872ACB78C41AD40.title: "Give the Cook the ingredients"
 	task.19F1E8A4C741BEC4.title: "Collect straw with a knife"
 	task.1ACEE0E64612E30D.title: "Connect two docking connectors"
 	task.1BDC11890252376A.title: "Assemble a train"
 	task.1C86C98ED75BC71A.title: "Run a boiler at maximum power"
 	task.1D4DC35F70270980.title: "I made some friends"
+	task.1D65A53F79368A47.title: "Hear about Elvarg from Oziach"
 	task.1DFB1C52587D0BDB.title: "Give a driver a schedule"
 	task.1E0B70D49B437B09.title: "Total level 750"
 	task.1E4B43D0D9822D52.title: "Charge a respawn anchor"
@@ -975,9 +1032,12 @@
 	task.225B6BF1A1D6F9F5.title: "Enchanting level 10"
 	task.228A7F3F36CA07D6.title: "Defence level 99"
 	task.22C3280D7A0095C0.title: "Understood"
+	task.24052E9904429209.title: "Have Oziach make the map"
 	task.25D933E538A4AB77.title: "Mining level 10"
+	task.2663517334BA68A6.title: "Buy the piece from Lucan"
 	task.26EFBBD08509408D.title: "Levitate 50 blocks from shulker attacks"
 	task.2722328AA1DEEA98.title: "Agility level 10"
+	task.2747C65D080CD38E.title: "Hear the squire out"
 	task.27AA4EFE917C3F6D.title: "Enchant an item at the table"
 	task.27FBC230B98AD878.title: "Ten relics found"
 	task.2847206169ED51F0.title: "Hitpoints level 75"
@@ -1040,6 +1100,7 @@
 	task.49861AA67CF83406.title: "Complete 250 missions"
 	task.49B7178CC5C1FDDE.title: "Travel 5000 blocks by train"
 	task.4A57C0A5F180A3C2.title: "Fishing level 99"
+	task.4A63548DC9F2B37D.title: "Bring Traiborn what his spell needs"
 	task.4A9DA782299AD918.title: "I have a plan"
 	task.4B1C7BE52A2C4FD7.title: "Attack level 99"
 	task.4BF994C58320B80F.title: "Talk to the mayor"
@@ -1072,6 +1133,7 @@
 	task.5AA84AC0A08EDE22.title: "Cooking level 10"
 	task.5ADF2065DF1F0B7F.title: "Crafting level 50"
 	task.5B10F1885CA6BDDA.title: "Walk into Lemurton"
+	task.5B222F8979DDFACE.title: "Ask the Champions' Guild for a challenge"
 	task.5C6124F5661AEC47.title: "Farming level 25"
 	task.5DA5ABCE9BDF96CA.title: "Fishing level 10"
 	task.5DBCC4E41198A4F5.title: "Give an arm 10 or more outputs"
@@ -1090,6 +1152,7 @@
 	task.63810048009B9EF3.title: "Strength level 99"
 	task.6393242D91DCD278.title: "I have read this"
 	task.642CE076999EF7BC.title: "Smithing level 50"
+	task.65647094B0214404.title: "Get the shield from the mayor"
 	task.656C588320372138.title: "Crystallise pearlescent levitite"
 	task.65A1DB4BB67F997B.title: "Smithing level 75"
 	task.65A4A2EFDE395408.title: "Sell something to a vendor"
@@ -1115,6 +1178,7 @@
 	task.70E0F76D94E09C2D.title: "Summon an iron golem"
 	task.7124A165DC2210D6.title: "Sound a whistle while driving"
 	task.71CFE3171FB9021C.title: "Buy something from a vendor"
+	task.7234D60F2A31C516.title: "Have Brann forge the sword"
 	task.74065C410FE5BDEE.title: "Use a hand crank until exhausted"
 	task.747BDA36F8642A2D.title: "Woodcutting level 99"
 	task.7481F2571690158A.title: "Enchant an item with a blaze enchanter"

@@ -1,0 +1,362 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Old dragon slayer: Dragon Slayer I.",
+    entityTypeId:"easy_npc:villager",
+    name:"Oziach",
+    variantType:"SNOW_ARMORER",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:villager",
+    VariantType:"SNOW_ARMORER",
+    CustomName:'{"text":"Oziach","color":"#C04A3A"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"ds_done",
+          Name:"Dragon Slayer",
+          Priority:60,
+          Texts:[
+            {
+              Text:"You did it. You actually did it. You've earned the right to wear dragon armour, @initiator: no one will say otherwise while I live."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_done_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_head",
+          Name:"Her head?",
+          Priority:50,
+          Texts:[
+            {
+              Text:"You've the look of someone who's been to Crandor. Well? Did you bring me her head?"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_elvarg"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_head_0",
+              Name:"Here it is",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer head @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds_head_1",
+              Name:"Not yet",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_map",
+          Name:"Crandor",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Follow that map to Crandor. Kill Elvarg and bring me her head. Hold your shield up when she breathes."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_map"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_map_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_pieces",
+          Name:"The map",
+          Priority:30,
+          Texts:[
+            {
+              Text:"Got the three pieces of the map yet? Lucan the Jeweller has one, Wizard Traiborn another, and the Guild gives the third to those who pass its trial."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_oziach"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_pieces_0",
+              Name:"Here they are",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer map @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds_pieces_1",
+              Name:"Where are they again?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ds_where"
+                }
+              ]
+            },
+            {
+              Label:"ds_pieces_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_intro",
+          Name:"Elvarg",
+          Priority:20,
+          Texts:[
+            {
+              Text:"So the Guild sent you. You want to slay Elvarg? Many have tried. She lives on Crandor, an isle no captain will sail to any more, and the only map to it was torn in three.
+
+Find the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will cook you in your armour without one."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_intro_0",
+              Name:"I'll do it",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_ds_oziach"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ds_where"
+                }
+              ]
+            },
+            {
+              Label:"ds_intro_1",
+              Name:"Maybe later",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_where",
+          Name:"The pieces",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"One piece is with Lucan the Jeweller: he bought it off a sailor and he'll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions' Guild's: pass its trial (your quest book says how) and it's yours."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_where_0",
+              Name:"I'm on it",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_pieces_missing",
+          Name:"Three pieces",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"That's not all three. I need every piece, or the map is useless."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_pieces_missing_0",
+              Name:"I'll find the rest",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_map_made",
+          Name:"The map",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"There. Crandor. The needle on that will lead you to her isle. Kill Elvarg and bring me her head."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_map_made_0",
+              Name:"I will",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_no_head",
+          Name:"No head",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Where's her head? Bring me proof, or don't come back."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_no_head_0",
+              Name:"I'll get it",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"Oziach",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Aye? What do you want? Unless you're buying, I've work to do."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    VillagerData:{
+      level:1,
+      profession:"minecraft:armorer",
+      type:"minecraft:snow"
+    },
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.oziach"
+    ]
+  }
+}

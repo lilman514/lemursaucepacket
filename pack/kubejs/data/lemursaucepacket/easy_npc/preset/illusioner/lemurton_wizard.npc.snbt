@@ -1,0 +1,200 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Absent-minded wizard: a map piece for Dragon Slayer I.",
+    entityTypeId:"easy_npc:illusioner",
+    name:"Wizard Traiborn",
+    variantType:"ILLUSIONER",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:illusioner",
+    VariantType:"ILLUSIONER",
+    CustomName:'{"text":"Wizard Traiborn","color":"#7A8CF0"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"ds_piece_after",
+          Name:"Good luck",
+          Priority:21,
+          Texts:[
+            {
+              Text:"Good luck with the dragon! Remember: fire beats ice, ice beats fire, and neither beats running away."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_piece2"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_after_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece",
+          Name:"The box",
+          Priority:20,
+          Texts:[
+            {
+              Text:"A map of Crandor? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.
+
+Bring me a ghast tear, a blaze rod and an amethyst shard and I'll open it for you."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_oziach"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_0",
+              Name:"Here they are",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer piece2 @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds_piece_1",
+              Name:"I'll get them",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece_missing",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"No, no, the spell needs all three: a ghast tear, a blaze rod and an amethyst shard."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_missing_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece_given",
+          Name:"Open!",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Hocus... pocus! There. One piece of map, as promised. Mind the dragon."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_given_0",
+              Name:"Thank you, wizard",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"Hmm?",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Hmm? Oh, a visitor! Mind the... no, it's gone. What can I do for you?"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.wizard"
+    ]
+  }
+}

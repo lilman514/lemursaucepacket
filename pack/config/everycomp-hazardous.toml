@@ -3,6 +3,8 @@
 # blocks, and the city only uses vanilla woods. This is the only switch that stops the blocks being registered at
 # all (everycomp-entries.toml only hides them). Never blacklist a module after its blocks have been in the world,
 # or those blocks vanish. Shipped to server and clients alike: both sides must register the same blocks.
+# Ice and Fire's dreadwood is left out too (1.6.0, before any were placed): the dread lands are switched off, so no one
+# could get the wood.
 [woodtype]
 	#Exclude WoodType from all of Modules
 	#    EXAMPLE: blacklist = [
@@ -11,12 +13,12 @@
 	#        "biomesoplenty:redwood"		COMMENT: exclude redwood from Wood Mod for any module
 	#    ]
 	#
-	blacklist = []
+	blacklist = ["iceandfire:.*"]
 
 [leavestype]
 	#Exclude LeavesType from all of Modules
 	#	The example is same as WoodType's
-	blacklist = []
+	blacklist = ["iceandfire:.*"]
 
 [block]
 	#Exclude a specific WoodType/LeavesType block

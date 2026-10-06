@@ -15,6 +15,8 @@
 // Rewards: every quest pays its tier's XP and Gold Coins (they feed the server economy) and rolls once
 // on the tier's reward table; finales and milestones add fixed prizes players can see coming.
 
+import { QUEST_ITEMS } from '../npcs/quests.mjs'
+
 const tip = (text) => `&7${text}`
 
 /** A Gold Coins stack as an icon: the pile grows with the amount, like the item in game. */
@@ -445,6 +447,7 @@ export default {
   tables: TABLES,
   groups: [
     { key: 'lemurton', title: 'Lemurton' },
+    { key: 'main_quests', title: 'Main Quests' },
     { key: 'ages', title: 'The Ages' },
     { key: 'industry', title: 'Industry' },
     { key: 'expeditions', title: 'Expeditions' },
@@ -505,9 +508,253 @@ export default {
           icon: 'minecraft:writable_book',
           tier: 1,
           auto: true,
-          desc: ['Tell the mayor how you got on.'],
+          desc: ['Tell the mayor how you got on.', '', tip("Lemurton's people have troubles of their own: the Cook, Sir Vyvin's squire, the Champions' Guild. Their quests appear in your book once they give them to you.")],
           tasks: [{ stage: 'q_welcome_done', title: 'Talk to the mayor', icon: 'minecraft:bell' }],
           reward: { coins: 240, items: [{ item: 'minecraft:bread', count: 4 }] }
+        }
+      ]
+    },
+
+    // ================================================================= MAIN QUESTS
+    // RuneScape-style quests, given by Lemurton's people (npcs/npcs.mjs, steps in npcs/quests.mjs). Each chapter's first
+    // quest is invisible until its start stage is set, so a quest only appears in the book once someone has given it to
+    // you; the steps after it show one at a time (hidden until the step before is done). Rewards hand themselves over.
+    {
+      key: 'cooks_assistant',
+      group: 'main_quests',
+      title: "Cook's Assistant",
+      subtitle: 'Main quest · Novice · 1 quest point',
+      about: "Lemurton's Cook is in a panic: the mayor's feast is tonight and there is nothing for the cake.",
+      unlocks: 'the Cook\'s thanks, Cooking XP, and the first step towards the Champions\' Guild.',
+      icon: 'minecraft:cake',
+      quests: [
+        {
+          key: 'start',
+          title: "&6Cook's Assistant",
+          subtitle: 'Started by the Cook',
+          shape: 'gear',
+          size: 1.5,
+          invisible: true,
+          icon: 'minecraft:cake',
+          tier: 1,
+          auto: true,
+          desc: ['The Cook, in the butcher\'s shop on the ring street, needs a bucket of milk, an egg and a pot of fine flour for the mayor\'s cake.', '', tip('Quests like this one only appear in your book once someone gives them to you. Talk to everyone.')],
+          tasks: [{ stage: 'q_cook_started', title: 'Offer to help the Cook', icon: 'minecraft:cake' }]
+        },
+        {
+          key: 'ingredients',
+          title: 'The Ingredients',
+          after: ['start'],
+          hidden: true,
+          optional: true,
+          tier: 1,
+          desc: ['A bucket of milk, an egg, and a pot of flour: grind wheat in a Create millstone.', '', 'Take them to the Cook.'],
+          tasks: [{ item: 'minecraft:milk_bucket' }, { item: 'minecraft:egg' }, { item: 'create:wheat_flour' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: "Cook's Assistant",
+          after: ['start'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.3,
+          icon: 'minecraft:cake',
+          tier: 2,
+          auto: true,
+          desc: ["You saved the mayor's feast.", '', '&eRewards:&r 1 quest point, 3,000 Cooking XP, coins.'],
+          tasks: [{ stage: 'q_cook_done', title: 'Give the Cook the ingredients', icon: 'minecraft:cake' }],
+          reward: { coins: 500, commands: ['pmmo admin {p} add cooking xp 3000'] }
+        }
+      ]
+    },
+    {
+      key: 'knights_sword',
+      group: 'main_quests',
+      title: "The Knight's Sword",
+      subtitle: 'Main quest · Intermediate · 1 quest point',
+      about: "Sir Vyvin's squire has lost his master's sword, and Sir Vyvin is back tomorrow.",
+      unlocks: 'Smithing XP, coins, and the squire\'s undying gratitude.',
+      icon: 'minecraft:iron_sword',
+      quests: [
+        {
+          key: 'start',
+          title: "&6The Knight's Sword",
+          subtitle: 'Started by Squire Asrol',
+          shape: 'gear',
+          size: 1.5,
+          invisible: true,
+          icon: 'minecraft:iron_sword',
+          tier: 1,
+          auto: true,
+          desc: ['Squire Asrol, at the armourer\'s on the ring street, dropped Sir Vyvin\'s sword down a well. Only a smith taught by the dwarves could forge another.'],
+          tasks: [{ stage: 'q_sword_started', title: 'Hear the squire out', icon: 'minecraft:iron_sword' }]
+        },
+        {
+          key: 'brann',
+          title: 'Brann the Smith',
+          after: ['start'],
+          hidden: true,
+          tier: 1,
+          auto: true,
+          icon: 'minecraft:anvil',
+          desc: ['Brann learned his craft in the dwarven halls. Ask him at the smithy on the ring street.'],
+          tasks: [{ stage: 'q_sword_brann', title: 'Ask Brann for a new sword', icon: 'minecraft:anvil' }]
+        },
+        {
+          key: 'makings',
+          title: 'The Makings',
+          after: ['brann'],
+          hidden: true,
+          optional: true,
+          tier: 2,
+          desc: ['Brann needs a brass ingot, a precision mechanism and two iron ingots.', '', tip('Brass comes from a mixer (copper and zinc, heated); the precision mechanism from a sequenced assembly line.')],
+          tasks: [{ item: 'create:brass_ingot' }, { item: 'create:precision_mechanism' }, { item: 'minecraft:iron_ingot', count: 2 }]
+        },
+        {
+          key: 'forged',
+          title: "Sir Vyvin's Sword",
+          after: ['brann'],
+          hidden: true,
+          tier: 1,
+          auto: true,
+          icon: 'minecraft:iron_sword',
+          desc: ['Give Brann the makings and he forges a sword Sir Vyvin will never tell from his own.'],
+          tasks: [{ stage: 'q_sword_forged', title: 'Have Brann forge the sword', icon: 'minecraft:iron_sword' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: "The Knight's Sword",
+          after: ['forged'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.3,
+          icon: 'minecraft:iron_sword',
+          tier: 3,
+          auto: true,
+          desc: ['Sir Vyvin will never know.', '', '&eRewards:&r 1 quest point, 8,000 Smithing XP, coins.'],
+          tasks: [{ stage: 'q_sword_done', title: 'Give the sword to Squire Asrol', icon: 'minecraft:iron_sword' }],
+          reward: { coins: 1500, commands: ['pmmo admin {p} add smithing xp 8000'] }
+        }
+      ]
+    },
+    {
+      key: 'dragon_slayer',
+      group: 'main_quests',
+      title: 'Dragon Slayer I',
+      subtitle: 'Main quest · Experienced · 2 quest points',
+      about: "The Champions' Guild sends its proven adventurers after Elvarg, the dragon of Crandor.",
+      unlocks: 'the right to wear dragonscale and dragonsteel armour, Attack and Defence XP, and a fortune.',
+      icon: 'iceandfire:dragon_skull_fire',
+      quests: [
+        {
+          key: 'start',
+          title: '&6Dragon Slayer I',
+          subtitle: "Started by the Champions' Guild",
+          shape: 'gear',
+          size: 1.6,
+          invisible: true,
+          icon: 'iceandfire:dragon_skull_fire',
+          tier: 2,
+          auto: true,
+          desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay Elvarg, the dragon of Crandor.", '', "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."],
+          tasks: [{ stage: 'q_ds_started', title: "Ask the Champions' Guild for a challenge", icon: 'iceandfire:dragon_skull_fire' }]
+        },
+        {
+          key: 'oziach',
+          title: 'Oziach',
+          after: ['start'],
+          hidden: true,
+          tier: 1,
+          auto: true,
+          icon: 'minecraft:iron_chestplate',
+          desc: ['Oziach keeps the armoury on the ring street. He came closer to killing Elvarg than anyone.'],
+          tasks: [{ stage: 'q_ds_oziach', title: 'Hear about Elvarg from Oziach', icon: 'minecraft:iron_chestplate' }]
+        },
+        {
+          key: 'shield',
+          title: 'An Anti-dragon Shield',
+          after: ['oziach'],
+          hidden: true,
+          tier: 1,
+          auto: true,
+          icon: 'minecraft:shield',
+          desc: ["Elvarg's breath cooks people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and her fire does a fifth of the harm."],
+          tasks: [{ stage: 'q_ds_shield', title: 'Get the shield from the mayor', icon: 'minecraft:shield' }]
+        },
+        {
+          key: 'piece1',
+          title: 'Map Part: Lucan',
+          after: ['oziach'],
+          hidden: true,
+          tier: 2,
+          auto: true,
+          icon: 'minecraft:paper',
+          desc: ['Lucan the Jeweller bought a scrap of the map from a sailor. He wants 10,000 coins for it.'],
+          tasks: [{ stage: 'q_ds_piece1', title: 'Buy the piece from Lucan', icon: 'minecraft:paper' }]
+        },
+        {
+          key: 'piece2',
+          title: 'Map Part: The Wizard',
+          after: ['oziach'],
+          hidden: true,
+          tier: 2,
+          auto: true,
+          icon: 'minecraft:paper',
+          desc: ['Wizard Traiborn, in his tower by the wall, keeps a piece in a box that only opens to a spell.', '', 'The spell needs a ghast tear, a blaze rod and an amethyst shard.'],
+          tasks: [{ stage: 'q_ds_piece2', title: 'Bring Traiborn what his spell needs', icon: 'minecraft:paper' }]
+        },
+        {
+          key: 'piece3',
+          title: "Map Part: The Guild's Trial",
+          after: ['oziach'],
+          hidden: true,
+          tier: 3,
+          auto: true,
+          icon: 'minecraft:paper',
+          desc: ["The Champions' Guild gives its piece to those who prove their arm against the dead."],
+          tasks: [{ kill: 'minecraft:zombie', count: 20 }, { kill: 'minecraft:skeleton', count: 10 }],
+          reward: { items: [QUEST_ITEMS.map_piece_3] }
+        },
+        {
+          key: 'map',
+          title: 'The Map to Crandor',
+          after: ['oziach'],
+          hidden: true,
+          tier: 2,
+          auto: true,
+          icon: 'minecraft:compass',
+          desc: ['Bring Oziach all three pieces and he puts them together: a map whose needle points to Crandor.'],
+          tasks: [{ stage: 'q_ds_map', title: 'Have Oziach make the map', icon: 'minecraft:compass' }]
+        },
+        {
+          key: 'elvarg',
+          title: '&cElvarg',
+          after: ['map'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.4,
+          tier: 4,
+          auto: true,
+          icon: 'iceandfire:dragon_skull_fire',
+          desc: ['Follow the map to Crandor. Elvarg rises when you reach her isle: a fire dragon in her prime.', '', 'Everyone on this step who is nearby when she falls gets her head.', '', tip('Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends.')],
+          tasks: [{ stage: 'q_ds_elvarg', title: 'Slay Elvarg', icon: 'iceandfire:dragon_skull_fire' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: 'Dragon Slayer I',
+          after: ['elvarg'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.6,
+          icon: 'iceandfire:dragon_skull_fire',
+          tier: 5,
+          auto: true,
+          desc: ['You slew Elvarg, the dragon of Crandor.', '', '&eRewards:&r 2 quest points, the right to wear dragonscale and dragonsteel armour, 20,000 Attack and Defence XP, a fortune in coins.'],
+          tasks: [{ stage: 'q_ds_done', title: "Bring Elvarg's head to Oziach", icon: 'iceandfire:dragon_skull_fire' }],
+          reward: { coins: 25000, commands: ['pmmo admin {p} add attack xp 20000', 'pmmo admin {p} add defence xp 20000'] }
         }
       ]
     },

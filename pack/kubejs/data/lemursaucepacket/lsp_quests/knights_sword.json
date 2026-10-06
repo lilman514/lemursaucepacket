@@ -1,0 +1,73 @@
+{
+  "title": "The Knight's Sword",
+  "stages": [
+    "q_sword_started",
+    "q_sword_brann",
+    "q_sword_forged",
+    "q_sword_done"
+  ],
+  "steps": {
+    "forge": {
+      "needs": [
+        "q_sword_brann"
+      ],
+      "lacks": [
+        "q_sword_forged"
+      ],
+      "take": [
+        {
+          "id": "create:brass_ingot",
+          "count": 1
+        },
+        {
+          "id": "create:precision_mechanism",
+          "count": 1
+        },
+        {
+          "id": "minecraft:iron_ingot",
+          "count": 2
+        }
+      ],
+      "give": [
+        {
+          "id": "minecraft:iron_sword",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Sir Vyvin's Sword\",\"color\":\"aqua\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"Forged by Brann the Smith,\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"for the squire to give back.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "vyvin_sword"
+            }
+          }
+        }
+      ],
+      "stage": "q_sword_forged",
+      "message": "Brann forges a fine blade: Sir Vyvin's Sword.",
+      "ok": "sword_forged",
+      "missing": "sword_missing"
+    },
+    "return_sword": {
+      "needs": [
+        "q_sword_forged"
+      ],
+      "lacks": [
+        "q_sword_done"
+      ],
+      "take": [
+        {
+          "id": "minecraft:iron_sword",
+          "count": 1,
+          "quest": "vyvin_sword"
+        }
+      ],
+      "stage": "q_sword_done",
+      "message": "You give the squire Sir Vyvin's sword.",
+      "ok": "thanks",
+      "missing": "no_sword",
+      "done": "done"
+    }
+  }
+}

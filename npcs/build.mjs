@@ -3,6 +3,7 @@
 //   pack/kubejs/data/lemursaucepacket/easy_npc/preset/<model>/lemurton_<id>.npc.snbt   Easy NPC presets
 //   pack/kubejs/data/lemursaucepacket/lsp_npcs/<id>.json                               shops, talks, quests (lsp_fixes)
 //   pack/kubejs/data/lemursaucepacket/lsp_economy/values.json                          what vendors pay (npcs/values.mjs)
+//   pack/kubejs/data/lemursaucepacket/lsp_quests/<quest>.json                          quest steps (npcs/quests.mjs)
 // structures/hub.mjs imports the presets in game with `easy_npc preset import data <preset> <pos> <uuid>`.
 // Run `node npcs/build.mjs`; publish.mjs does too.
 
@@ -11,6 +12,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { NPCS, QUESTS } from './npcs.mjs'
 import { ECONOMY } from './values.mjs'
+import { QUEST_STEPS } from './quests.mjs'
 import { byte, json, snbt } from './snbt.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
@@ -19,6 +21,7 @@ const dataDir = path.join(root, 'pack', 'kubejs', 'data', 'lemursaucepacket')
 const outDir = path.join(dataDir, 'easy_npc', 'preset')
 const npcDir = path.join(dataDir, 'lsp_npcs')
 const economyDir = path.join(dataDir, 'lsp_economy')
+const questDir = path.join(dataDir, 'lsp_quests')
 const blocks = JSON.parse(readFileSync(path.join(root, 'structures', '.blocks.json'), 'utf8'))
 const items = new Set(JSON.parse(readFileSync(path.join(root, 'quests', '.registry.json'), 'utf8')).item)
 // Items registered after the registry dump (structures/.blocks.json covers block items).
@@ -123,6 +126,23 @@ for (const [id, n] of Object.entries(NPCS)) {
   writeFileSync(path.join(npcDir, `${id}.json`), JSON.stringify(economy(id, n), null, 2) + '\n')
   count++
 }
+// Quest steps: every item they take or give must exist, and every dialog they open must be one of the NPCs'.
+const dialogLabels = new Set(Object.values(NPCS).flatMap((n) => n.dialogs.map((d) => d.label)))
+rmSync(questDir, { recursive: true, force: true })
+mkdirSync(questDir, { recursive: true })
+let steps = 0
+for (const [id, q] of Object.entries(QUEST_STEPS)) {
+  for (const [key, st] of Object.entries(q.steps)) {
+    const where = `quest ${id} step ${key}`
+    for (const t of st.take ?? []) if (!known(t.id) && !t.id.startsWith('iceandfire:')) throw new Error(`${where}: unknown item ${t.id}`)
+    for (const g of st.give ?? []) if (!known(g.id)) throw new Error(`${where}: unknown item ${g.id}`)
+    for (const d of [st.ok, st.missing, st.done]) if (d && !dialogLabels.has(d)) throw new Error(`${where}: no NPC has a dialog '${d}'`)
+    for (const stage of [...(st.needs ?? []), ...(st.lacks ?? []), st.stage].filter(Boolean)) if (!q.stages.includes(stage) && !/^q_welcome_/.test(stage)) throw new Error(`${where}: stage ${stage} isn't one of the quest's`)
+    steps++
+  }
+  writeFileSync(path.join(questDir, `${id}.json`), JSON.stringify(q, null, 2) + '\n')
+}
+
 mkdirSync(economyDir, { recursive: true })
 writeFileSync(path.join(economyDir, 'values.json'), JSON.stringify(ECONOMY, null, 2) + '\n')
-console.log(`${count} NPC presets -> ${path.relative(root, outDir)}; shops and talks -> ${path.relative(root, npcDir)}; ${Object.keys(ECONOMY.values).length} base values -> ${path.relative(root, economyDir)}`)
+console.log(`${count} NPC presets -> ${path.relative(root, outDir)}; shops and talks -> ${path.relative(root, npcDir)}; ${Object.keys(ECONOMY.values).length} base values -> ${path.relative(root, economyDir)}; ${Object.keys(QUEST_STEPS).length} quests (${steps} steps) -> ${path.relative(root, questDir)}`)

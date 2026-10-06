@@ -15,6 +15,8 @@
 // a stack. Every vendor buys anything at its value (npcs/values.mjs prices raw materials, recipes the rest), never
 // more than half of what a vendor charges for it.
 
+import { DRAGON_SLAYER_NEEDS, stepCmd } from './quests.mjs'
+
 // ---------------------------------------------------------------- dialog building blocks
 
 export const cmd = (c) => ({ Type: 'COMMAND', Cmd: c.startsWith('/') ? c : `/${c}` })
@@ -52,6 +54,35 @@ export const QUESTS = {
       { stage: 'q_welcome_bread', text: 'Buy something from Bessa the Baker' },
       { stage: 'q_welcome_done', text: 'Report back to the mayor' }
     ]
+  },
+  cooks_assistant: {
+    title: "Cook's Assistant",
+    steps: [
+      { stage: 'q_cook_started', text: 'Offer to help the Cook' },
+      { stage: 'q_cook_done', text: 'Bring the Cook milk, an egg and flour' }
+    ]
+  },
+  knights_sword: {
+    title: "The Knight's Sword",
+    steps: [
+      { stage: 'q_sword_started', text: "Hear Squire Asrol's woes" },
+      { stage: 'q_sword_brann', text: 'Ask Brann the Smith for a new sword' },
+      { stage: 'q_sword_forged', text: 'Bring Brann a brass ingot, a precision mechanism and two iron ingots' },
+      { stage: 'q_sword_done', text: 'Give the sword to Squire Asrol' }
+    ]
+  },
+  dragon_slayer: {
+    title: 'Dragon Slayer I',
+    steps: [
+      { stage: 'q_ds_started', text: "Ask the Champions' Guild for a challenge" },
+      { stage: 'q_ds_oziach', text: 'Hear about Elvarg from Oziach' },
+      { stage: 'q_ds_shield', text: 'Get an anti-dragon shield from the mayor' },
+      { stage: 'q_ds_piece1', text: 'Buy a map piece from Lucan the Jeweller' },
+      { stage: 'q_ds_piece2', text: "Bring Wizard Traiborn what his spell needs" },
+      { stage: 'q_ds_map', text: 'Have Oziach put the map together' },
+      { stage: 'q_ds_elvarg', text: 'Slay Elvarg on Crandor' },
+      { stage: 'q_ds_done', text: "Bring Elvarg's head to Oziach" }
+    ]
   }
 }
 
@@ -65,6 +96,13 @@ export const NPCS = {
     color: '#E0AC46',
     description: "Lemurton's mayor: greets newcomers and starts the city's first questline.",
     dialogs: [
+      dialog('ds_after', 'Welcome home', 'Lemurton is glad to have you, @initiator. And proud: not many walk out to face a dragon.', { priority: 46, conditions: [tag('q_ds_shield')], buttons: [button('Tell me about the city again', [open('about')]), goodbye] }),
+      dialog('ds_shield', 'An anti-dragon shield', 'An anti-dragon shield? So you mean to face Elvarg... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive.', {
+        priority: 45,
+        conditions: [tag('q_ds_oziach')],
+        buttons: [button('Thank you, mayor', [stepCmd('dragon_slayer', 'shield')])]
+      }),
+      dialog('ds_shield_given', 'Good luck', 'Hold it up when she breathes. Lemurton will be waiting for news.', { buttons: [goodbye] }),
       dialog('done', 'Welcome home', 'Lemurton is glad to have you, @initiator.\n\nYour quest book will tell you when someone else here needs a hand, and the waystone will always bring you back.', { priority: 40, conditions: [tag('q_welcome_done')], buttons: [button('Tell me about the city again', [open('about')]), goodbye] }),
       dialog('report', 'A loaf from Bessa', 'You found Bessa at the market, I see. Every coin spent in that square keeps this city fed.\n\nWell done, @initiator. Lemurton is your home now.', {
         priority: 30,
@@ -136,8 +174,26 @@ export const NPCS = {
 
   // Shops on the ring streets, keyed by template name.
   shop_smithy: {
-    model: 'villager', variant: 'PLAINS_WEAPONSMITH', name: 'Brann the Smith', color: '#C9C9C9', description: 'Smithy.',
-    dialogs: shopDialogs("Steel for honest folk. What'll it be?", 'I learned my craft in the dwarven halls under the mountain. Keep your blade oiled and it will keep you alive.'),
+    model: 'villager', variant: 'PLAINS_WEAPONSMITH', name: 'Brann the Smith', color: '#C9C9C9', description: "Smithy; forges the sword for The Knight's Sword.",
+    dialogs: [
+      ...shopDialogs("Steel for honest folk. What'll it be?", 'I learned my craft in the dwarven halls under the mountain. Keep your blade oiled and it will keep you alive.'),
+      dialog('sword_after', 'Brann', "Steel for honest folk. What'll it be? The squire still owes me a drink, by the way.", { priority: 40, conditions: [tag('q_sword_done')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
+      dialog('sword_take', 'The sword', 'Go on, take that sword to the squire before he cries himself to sleep.', { priority: 33, conditions: [tag('q_sword_forged')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
+      dialog('sword_wait', 'The makings', 'Got the makings? A brass ingot, a precision mechanism and two iron ingots. Brass from your mixer, the mechanism from a deployer line: you know how.', {
+        priority: 32,
+        conditions: [tag('q_sword_brann')],
+        buttons: [button('Here they are', [stepCmd('knights_sword', 'forge')]), button("Let's trade", [shopScreen()]), goodbye]
+      }),
+      dialog('sword_ask', "Sir Vyvin's sword", "The squire's lost Sir Vyvin's sword, eh? Ha! I can forge another that he'll never tell apart, if you bring me the makings: a brass ingot, a precision mechanism and two iron ingots.", {
+        priority: 31,
+        conditions: [tag('q_sword_started')],
+        buttons: [button("I'll get them", [cmd('tag @initiator add q_sword_brann'), open('sword_wait')]), button("Let's trade", [shopScreen()]), goodbye]
+      }),
+      dialog('sword_forged', 'Forged', 'There: as fine a blade as any dwarf ever made. Take it to the squire.', { buttons: [button('Thank you, Brann', [close()])] }),
+      dialog('sword_missing', 'Not enough', "That's not everything. A brass ingot, a precision mechanism and two iron ingots, no less.", { buttons: [button("I'll be back", [close()])] })
+    ],
+    talks: [{ dialog: 'sword_ask', when: ['q_sword_started'], unless: ['q_sword_brann'] }],
+    quests: ['knights_sword'],
     goods: [...['sword', 'pickaxe', 'axe', 'shovel'].map((t) => good(`minecraft:stone_${t}`, 1, 30)), good('minecraft:iron_sword', 1, 150), good('minecraft:iron_pickaxe', 1, 180), good('minecraft:iron_axe', 1, 180), good('minecraft:shield', 1, 80), good('minecraft:bow', 1, 80), good('minecraft:arrow', 16, 40)]
   },
   shop_tailor: {
@@ -161,14 +217,118 @@ export const NPCS = {
     goods: [good('minecraft:cobblestone', 64, 40), good('minecraft:stone_bricks', 16, 40), good('minecraft:smooth_stone', 16, 40), good('minecraft:bricks', 16, 80), good('minecraft:terracotta', 16, 60), good('minecraft:oak_log', 16, 60), good('minecraft:oak_planks', 32, 40), good('minecraft:spruce_planks', 32, 40), good('minecraft:glass', 16, 60), good('minecraft:lantern', 4, 80)]
   },
   shop_jeweller: {
-    model: 'villager', variant: 'PLAINS_LIBRARIAN', name: 'Lucan the Jeweller', color: '#E0C35A', description: 'Jeweller.',
-    dialogs: shopDialogs('Precious things, bought and sold.', 'Gold, diamonds, the rare stones of the deep: I pay what they are worth, and not a coin less.'),
+    model: 'villager', variant: 'PLAINS_LIBRARIAN', name: 'Lucan the Jeweller', color: '#E0C35A', description: 'Jeweller; sells a map piece for Dragon Slayer I.',
+    dialogs: [
+      ...shopDialogs('Precious things, bought and sold.', 'Gold, diamonds, the rare stones of the deep: I pay what they are worth, and not a coin less.'),
+      dialog('ds_after', 'Precious things', 'Precious things, bought and sold. Still hunting that dragon?', { priority: 21, conditions: [tag('q_ds_piece1')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
+      dialog('ds_piece', 'A map piece', "A map piece? Oziach sent you, I'll wager. A sailor sold me this scrap years ago, swore it showed the way to Crandor. It's yours for 10,000 coins.", {
+        priority: 20,
+        conditions: [tag('q_ds_oziach')],
+        buttons: [button('Buy it (10,000 coins)', [stepCmd('dragon_slayer', 'piece1')]), button("Let's trade", [shopScreen()]), button('Too rich for me', [close()])]
+      }),
+      dialog('ds_piece_sold', 'Sold', "A pleasure doing business. Mind you don't lose it!", { buttons: [goodbye] }),
+      dialog('ds_piece_poor', 'Not enough', 'Ten thousand coins, friend, not a coin less. Come back when your purse is heavier.', { buttons: [goodbye] })
+    ],
+    talks: [{ dialog: 'ds_piece', when: ['q_ds_oziach'], unless: ['q_ds_piece1'] }],
+    quests: ['dragon_slayer'],
     goods: [good('minecraft:gold_nugget', 9, 120), good('minecraft:gold_ingot', 1, 120), good('minecraft:golden_apple', 1, 600), good('minecraft:clock', 1, 300), good('minecraft:compass', 1, 150), good('minecraft:name_tag', 1, 400)]
   },
   varrock_general_store: {
     model: 'villager', variant: 'PLAINS_NITWIT', name: 'Pip the Shopkeeper', color: '#8FBF60', description: 'General store.',
     dialogs: shopDialogs('Welcome to the general store! A bit of everything.', 'Torches, buckets, seeds, string: whatever you forgot to bring, I have it.'),
     goods: [good('minecraft:torch', 8, 20), good('minecraft:bread', 2, 30), good('minecraft:wheat_seeds', 8, 20), good('minecraft:oak_sapling', 4, 40), good('minecraft:shears', 1, 60), good('minecraft:map', 1, 120), good('minecraft:bucket', 1, 100), good('minecraft:bowl', 4, 10), good('minecraft:stick', 16, 20), good('minecraft:crafting_table', 1, 20), good('minecraft:chest', 1, 40), good('minecraft:white_bed', 1, 80), good('minecraft:flint_and_steel', 1, 60), good('minecraft:ladder', 8, 30), good('minecraft:coal', 8, 60)]
+  },
+
+  // The main quests' people (npcs/quests.mjs has their steps). Each stands at a worker building's npc mark.
+  cook: {
+    model: 'villager', variant: 'TAIGA_BUTCHER', name: 'Cook', color: '#F2D27A', description: "Lemurton's cook: Cook's Assistant.",
+    dialogs: [
+      dialog('done', 'The feast', "The mayor's cake was the talk of the feast, @initiator! I couldn't have done it without you.", { priority: 30, conditions: [tag('q_cook_done')], buttons: [goodbye] }),
+      dialog('started', 'My ingredients', 'Have you got them? A bucket of milk, an egg and a pot of fine flour.\n\nFlour comes from wheat ground in a millstone, if you have one going.', {
+        priority: 20,
+        conditions: [tag('q_cook_started')],
+        buttons: [button('Here you go', [stepCmd('cooks_assistant', 'deliver')]), button('Where do I get flour?', [open('flour')]), button('Not yet', [close()])]
+      }),
+      dialog('flour', 'Flour', "Grind wheat in a Create millstone: put the wheat in the top and turn it. One wheat, one pot of flour. There's a mill's worth of wheat in the fields outside the walls.", { buttons: [button('Right, thanks', [close()])] }),
+      dialog('default', "What am I to do?", "What am I to do? The mayor's feast is tonight and I haven't a thing for the cake!", { priority: 10, buttons: [button("What's wrong?", [open('ask')]), goodbye] }),
+      dialog('ask', 'A cake', "I need a bucket of milk, an egg and a pot of fine flour, and there's no time to fetch them myself. Would you get them for me?", {
+        buttons: [button("Yes, I'll help", [cmd('tag @initiator add q_cook_started'), open('started')]), button("Sorry, I'm busy", [close()])]
+      }),
+      dialog('missing', 'Not everything', "That's not all of it! I need the milk, the egg and the flour. Your chat says what's still missing.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('thanks', 'Saved', "You've saved the feast! Here: the city's thanks, and an old bucket back for you.", { buttons: [button('Glad to help', [close()])] })
+    ]
+  },
+  squire: {
+    model: 'humanoid', variant: 'KNIGHT_02', name: 'Squire Asrol', color: '#A8C8E8', description: "Sir Vyvin's squire: The Knight's Sword.",
+    dialogs: [
+      dialog('done', 'Saved', "Sir Vyvin never noticed a thing, @initiator. I owe you everything!", { priority: 40, conditions: [tag('q_sword_done')], buttons: [goodbye] }),
+      dialog('forged', 'The sword!', "Is that... Sir Vyvin's sword? Brann did it! May I have it?", {
+        priority: 30,
+        conditions: [tag('q_sword_forged')],
+        buttons: [button('Here you go', [stepCmd('knights_sword', 'return_sword')]), button('In a moment', [close()])]
+      }),
+      dialog('started', 'Any luck?', 'Have you been to Brann? His smithy is on the ring street. He learned his craft from the dwarves under the mountain: if anyone can forge a sword like Sir Vyvin\'s, he can.', { priority: 20, conditions: [tag('q_sword_started')], buttons: [goodbye] }),
+      dialog('default', 'Oh woe', "Oh woe is me! I've lost Sir Vyvin's sword, and he's back tomorrow!", { priority: 10, buttons: [button('What happened?', [open('ask')]), goodbye] }),
+      dialog('ask', 'The sword', 'I was polishing it by the well, and it slipped... it\'s gone. The only smith who could make another is Brann at the smithy. Would you ask him for me?', {
+        buttons: [button("I'll ask Brann", [cmd('tag @initiator add q_sword_started'), open('started')]), button('Not my problem', [close()])]
+      }),
+      dialog('no_sword', 'Where is it?', "You haven't got it with you! Bring me the sword Brann made.", { buttons: [button("I'll fetch it", [close()])] }),
+      dialog('thanks', 'Thank you', "It's perfect! Sir Vyvin will never know. Please, take this for your trouble.", { buttons: [button('Good luck, squire', [close()])] })
+    ]
+  },
+  guildmaster: {
+    model: 'humanoid', variant: 'KNIGHT_01', name: 'Guildmaster Greaves', color: '#E8A33C', description: "Head of the Champions' Guild: starts Dragon Slayer I.",
+    equipment: { head: 'minecraft:golden_helmet', chest: 'minecraft:golden_chestplate', mainhand: 'minecraft:diamond_sword' },
+    dialogs: [
+      dialog('ds_done', 'Champion', 'Elvarg is slain! The whole realm will hear of it. The Champions\' Guild salutes you, @initiator.', { priority: 30, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
+      dialog('ds_go', 'Oziach', 'Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about Elvarg than any man living.', { priority: 20, conditions: [tag('q_ds_started')], buttons: [goodbye] }),
+      dialog('default', "The Champions' Guild", "Welcome to the Champions' Guild. Only the realm's finest adventurers drink here.", { priority: 10, buttons: [button('I want to be a champion', [open('ask')]), goodbye] }),
+      dialog('ask', 'Prove yourself', 'Then prove yourself. Help the people of Lemurton first: the mayor\'s newcomers, the castle cook, Sir Vyvin\'s squire. Come back when they speak well of you.', {
+        buttons: [button('They do. Give me a real challenge', [cmd('tag @initiator add q_ds_started'), open('ds_start')], DRAGON_SLAYER_NEEDS.map(tag)), button("I'll come back", [close()])]
+      }),
+      dialog('ds_start', 'Elvarg', 'Very well. There is a dragon, Elvarg, on the isle of Crandor. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done.', { buttons: [button("I'll find Oziach", [close()])] })
+    ]
+  },
+  oziach: {
+    model: 'villager', variant: 'SNOW_ARMORER', name: 'Oziach', color: '#C04A3A', description: 'Old dragon slayer: Dragon Slayer I.',
+    dialogs: [
+      dialog('ds_done', 'Dragon Slayer', "You did it. You actually did it. You've earned the right to wear dragon armour, @initiator: no one will say otherwise while I live.", { priority: 60, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
+      dialog('ds_head', 'Her head?', "You've the look of someone who's been to Crandor. Well? Did you bring me her head?", {
+        priority: 50,
+        conditions: [tag('q_ds_elvarg')],
+        buttons: [button('Here it is', [stepCmd('dragon_slayer', 'head')]), button('Not yet', [close()])]
+      }),
+      dialog('ds_map', 'Crandor', 'Follow that map to Crandor. Kill Elvarg and bring me her head. Hold your shield up when she breathes.', { priority: 40, conditions: [tag('q_ds_map')], buttons: [goodbye] }),
+      dialog('ds_pieces', 'The map', 'Got the three pieces of the map yet? Lucan the Jeweller has one, Wizard Traiborn another, and the Guild gives the third to those who pass its trial.', {
+        priority: 30,
+        conditions: [tag('q_ds_oziach')],
+        buttons: [button('Here they are', [stepCmd('dragon_slayer', 'map')]), button('Where are they again?', [open('ds_where')]), goodbye]
+      }),
+      dialog('ds_intro', 'Elvarg', "So the Guild sent you. You want to slay Elvarg? Many have tried. She lives on Crandor, an isle no captain will sail to any more, and the only map to it was torn in three.\n\nFind the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will cook you in your armour without one.", {
+        priority: 20,
+        conditions: [tag('q_ds_started')],
+        buttons: [button("I'll do it", [cmd('tag @initiator add q_ds_oziach'), open('ds_where')]), button('Maybe later', [close()])]
+      }),
+      dialog('ds_where', 'The pieces', 'One piece is with Lucan the Jeweller: he bought it off a sailor and he\'ll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions\' Guild\'s: pass its trial (your quest book says how) and it\'s yours.', { buttons: [button("I'm on it", [close()])] }),
+      dialog('ds_pieces_missing', 'Three pieces', "That's not all three. I need every piece, or the map is useless.", { buttons: [button("I'll find the rest", [close()])] }),
+      dialog('ds_map_made', 'The map', 'There. Crandor. The needle on that will lead you to her isle. Kill Elvarg and bring me her head.', { buttons: [button('I will', [close()])] }),
+      dialog('ds_no_head', 'No head', "Where's her head? Bring me proof, or don't come back.", { buttons: [button("I'll get it", [close()])] }),
+      dialog('default', 'Oziach', 'Aye? What do you want? Unless you\'re buying, I\'ve work to do.', { priority: 10, buttons: [goodbye] })
+    ]
+  },
+  wizard: {
+    model: 'illusioner', variant: 'ILLUSIONER', name: 'Wizard Traiborn', color: '#7A8CF0', description: 'Absent-minded wizard: a map piece for Dragon Slayer I.',
+    dialogs: [
+      dialog('ds_piece_after', 'Good luck', 'Good luck with the dragon! Remember: fire beats ice, ice beats fire, and neither beats running away.', { priority: 21, conditions: [tag('q_ds_piece2')], buttons: [goodbye] }),
+      dialog('ds_piece', 'The box', "A map of Crandor? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.\n\nBring me a ghast tear, a blaze rod and an amethyst shard and I'll open it for you.", {
+        priority: 20,
+        conditions: [tag('q_ds_oziach')],
+        buttons: [button('Here they are', [stepCmd('dragon_slayer', 'piece2')]), button("I'll get them", [close()])]
+      }),
+      dialog('ds_piece_missing', 'Not yet', 'No, no, the spell needs all three: a ghast tear, a blaze rod and an amethyst shard.', { buttons: [button("I'll be back", [close()])] }),
+      dialog('ds_piece_given', 'Open!', 'Hocus... pocus! There. One piece of map, as promised. Mind the dragon.', { buttons: [button('Thank you, wizard', [close()])] }),
+      dialog('default', 'Hmm?', 'Hmm? Oh, a visitor! Mind the... no, it\'s gone. What can I do for you?', { priority: 10, buttons: [goodbye] })
+    ]
   },
 
   // Guards and townsfolk.
@@ -187,7 +347,13 @@ export const AT_BUILDING = {
   lgc_plains_worker_fisherman: 'shop_fishing',
   lgc_plains_worker_mason: 'shop_builder',
   lgc_plains_worker_library_1: 'shop_jeweller',
-  lgc_plains_worker_inn: 'varrock_general_store'
+  lgc_plains_worker_inn: 'varrock_general_store',
+  // The main quests' people (npcs/quests.mjs).
+  lgc_plains_worker_butcher_shop_1: 'cook',
+  lgc_plains_worker_armorer: 'squire',
+  lgc_plains_worker_toolsmith: 'oziach',
+  lgc_plains_worker_library_2: 'guildmaster',
+  lgc_taiga_house_house_5: 'wizard'
 }
 
 /** The market square's traders, placed round its stalls in this order. */

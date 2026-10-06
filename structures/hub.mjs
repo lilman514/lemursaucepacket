@@ -224,9 +224,11 @@ const GARDEN = [[8, 'minecraft:grass_block'], [1, 'minecraft:coarse_dirt']]
 // The buildings.
 const HOUSES = Object.keys(T).filter((n) => /^lgc_plains_house_(small|medium)_house/.test(n))
 const WORKERS = ['lgc_plains_worker_armorer', 'lgc_plains_worker_toolsmith', 'lgc_plains_worker_fletcher', 'lgc_plains_worker_library_2', 'lgc_plains_worker_butcher_shop_1', 'lgc_plains_worker_butcher_shop_2', 'lgc_plains_worker_shepherd', 'lgc_plains_worker_cartographer']
-const SHOPS = Object.keys(AT_BUILDING).filter((n) => T[n] && !MARKET_TRADERS.includes(AT_BUILDING[n]))
 const OUTSKIRTS = ['lgc_plains_house_small_house_1', 'lgc_plains_house_small_house_6', 'lgc_plains_house_stable_2', 'lgc_taiga_house_house_1', 'lgc_plains_house_small_house_8', 'lgc_taiga_house_house_2', 'lgc_plains_house_accessory_farm_2', 'lgc_plains_house_small_house_7', 'lgc_taiga_house_house_6', 'lgc_plains_house_small_house_3']
 const TOWERS = ['lgc_taiga_house_house_5', 'lgc_taiga_house_house_4', 'lgc_taiga_house_house_7']
+// Buildings with a shopkeeper, placed once each on the inner ring (worker buildings and towers that host a quest NPC are
+// placed with the rest of their kind).
+const SHOPS = Object.keys(AT_BUILDING).filter((n) => T[n] && !MARKET_TRADERS.includes(AT_BUILDING[n]) && !WORKERS.includes(n) && !TOWERS.includes(n))
 
 // ---------------------------------------------------------------- the city
 

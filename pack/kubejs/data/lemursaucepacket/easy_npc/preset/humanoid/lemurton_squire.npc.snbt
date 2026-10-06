@@ -1,0 +1,270 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Sir Vyvin's squire: The Knight's Sword.",
+    entityTypeId:"easy_npc:humanoid",
+    name:"Squire Asrol",
+    variantType:"KNIGHT_02",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:humanoid",
+    VariantType:"KNIGHT_02",
+    CustomName:'{"text":"Squire Asrol","color":"#A8C8E8"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"done",
+          Name:"Saved",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Sir Vyvin never noticed a thing, @initiator. I owe you everything!"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"done_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"forged",
+          Name:"The sword!",
+          Priority:30,
+          Texts:[
+            {
+              Text:"Is that... Sir Vyvin's sword? Brann did it! May I have it?"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_forged"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"forged_0",
+              Name:"Here you go",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator knights_sword return_sword @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"forged_1",
+              Name:"In a moment",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"started",
+          Name:"Any luck?",
+          Priority:20,
+          Texts:[
+            {
+              Text:"Have you been to Brann? His smithy is on the ring street. He learned his craft from the dwarves under the mountain: if anyone can forge a sword like Sir Vyvin's, he can."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"started_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"Oh woe",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Oh woe is me! I've lost Sir Vyvin's sword, and he's back tomorrow!"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"What happened?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ask"
+                }
+              ]
+            },
+            {
+              Label:"default_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ask",
+          Name:"The sword",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"I was polishing it by the well, and it slipped... it's gone. The only smith who could make another is Brann at the smithy. Would you ask him for me?"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ask_0",
+              Name:"I'll ask Brann",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_sword_started"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"started"
+                }
+              ]
+            },
+            {
+              Label:"ask_1",
+              Name:"Not my problem",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"no_sword",
+          Name:"Where is it?",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"You haven't got it with you! Bring me the sword Brann made."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"no_sword_0",
+              Name:"I'll fetch it",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"thanks",
+          Name:"Thank you",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"It's perfect! Sir Vyvin will never know. Please, take this for your trouble."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"thanks_0",
+              Name:"Good luck, squire",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.squire"
+    ]
+  }
+}

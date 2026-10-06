@@ -1,0 +1,281 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Lemurton's cook: Cook's Assistant.",
+    entityTypeId:"easy_npc:villager",
+    name:"Cook",
+    variantType:"TAIGA_BUTCHER",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:villager",
+    VariantType:"TAIGA_BUTCHER",
+    CustomName:'{"text":"Cook","color":"#F2D27A"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"done",
+          Name:"The feast",
+          Priority:30,
+          Texts:[
+            {
+              Text:"The mayor's cake was the talk of the feast, @initiator! I couldn't have done it without you."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_cook_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"done_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"started",
+          Name:"My ingredients",
+          Priority:20,
+          Texts:[
+            {
+              Text:"Have you got them? A bucket of milk, an egg and a pot of fine flour.
+
+Flour comes from wheat ground in a millstone, if you have one going."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_cook_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"started_0",
+              Name:"Here you go",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator cooks_assistant deliver @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"started_1",
+              Name:"Where do I get flour?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"flour"
+                }
+              ]
+            },
+            {
+              Label:"started_2",
+              Name:"Not yet",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"flour",
+          Name:"Flour",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Grind wheat in a Create millstone: put the wheat in the top and turn it. One wheat, one pot of flour. There's a mill's worth of wheat in the fields outside the walls."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"flour_0",
+              Name:"Right, thanks",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"What am I to do?",
+          Priority:10,
+          Texts:[
+            {
+              Text:"What am I to do? The mayor's feast is tonight and I haven't a thing for the cake!"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"What's wrong?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ask"
+                }
+              ]
+            },
+            {
+              Label:"default_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ask",
+          Name:"A cake",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"I need a bucket of milk, an egg and a pot of fine flour, and there's no time to fetch them myself. Would you get them for me?"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ask_0",
+              Name:"Yes, I'll help",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_cook_started"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"started"
+                }
+              ]
+            },
+            {
+              Label:"ask_1",
+              Name:"Sorry, I'm busy",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"missing",
+          Name:"Not everything",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"That's not all of it! I need the milk, the egg and the flour. Your chat says what's still missing."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"missing_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"thanks",
+          Name:"Saved",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"You've saved the feast! Here: the city's thanks, and an old bucket back for you."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"thanks_0",
+              Name:"Glad to help",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    VillagerData:{
+      level:1,
+      profession:"minecraft:butcher",
+      type:"minecraft:taiga"
+    },
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.cook"
+    ]
+  }
+}

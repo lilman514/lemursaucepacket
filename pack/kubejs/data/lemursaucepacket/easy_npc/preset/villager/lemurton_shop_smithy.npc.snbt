@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Smithy.",
+    description:"Smithy; forges the sword for The Knight's Sword.",
     entityTypeId:"easy_npc:villager",
     name:"Brann the Smith",
     variantType:"PLAINS_WEAPONSMITH",
@@ -111,6 +111,220 @@
             {
               Label:"about_1",
               Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_after",
+          Name:"Brann",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Steel for honest folk. What'll it be? The squire still owes me a drink, by the way."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_after_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"sword_after_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_take",
+          Name:"The sword",
+          Priority:33,
+          Texts:[
+            {
+              Text:"Go on, take that sword to the squire before he cries himself to sleep."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_forged"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_take_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"sword_take_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_wait",
+          Name:"The makings",
+          Priority:32,
+          Texts:[
+            {
+              Text:"Got the makings? A brass ingot, a precision mechanism and two iron ingots. Brass from your mixer, the mechanism from a deployer line: you know how."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_brann"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_wait_0",
+              Name:"Here they are",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator knights_sword forge @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"sword_wait_1",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"sword_wait_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_ask",
+          Name:"Sir Vyvin's sword",
+          Priority:31,
+          Texts:[
+            {
+              Text:"The squire's lost Sir Vyvin's sword, eh? Ha! I can forge another that he'll never tell apart, if you bring me the makings: a brass ingot, a precision mechanism and two iron ingots."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_sword_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_ask_0",
+              Name:"I'll get them",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_sword_brann"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"sword_wait"
+                }
+              ]
+            },
+            {
+              Label:"sword_ask_1",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"sword_ask_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_forged",
+          Name:"Forged",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"There: as fine a blade as any dwarf ever made. Take it to the squire."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_forged_0",
+              Name:"Thank you, Brann",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"sword_missing",
+          Name:"Not enough",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"That's not everything. A brass ingot, a precision mechanism and two iron ingots, no less."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"sword_missing_0",
+              Name:"I'll be back",
               Actions:[
                 {
                   Type:"CLOSE_DIALOG"

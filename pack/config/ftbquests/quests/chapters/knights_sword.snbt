@@ -1,0 +1,287 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "knights_sword"
+	group: "1F2E0B7F304AB615"
+	icon: {
+		id: "minecraft:iron_sword"
+	}
+	id: "7467C6A904BEEE10"
+	images: [
+		{
+			height: 2.297872340425532d
+			id: "0F5DA6A8095784F5"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.842553191489362d
+			x: 2.2d
+			y: -1.9d
+		}
+	]
+	order_index: 2
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "169ABAA65ECC4F3E"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "104385A577ACA533"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "7DD0CD581DA43F3A"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "1AE548E1A62AD3FA"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:iron_sword"
+					}
+					id: "2747C65D080CD38E"
+					stage: "q_sword_started"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 1.3d
+		}
+		{
+			dependencies: ["169ABAA65ECC4F3E"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:anvil"
+			}
+			id: "47AEF3DD86EEE0B5"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "5BC721D25BBCF069"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "71ADD86F3EEDAEA9"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "04FB393173094EE0"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:anvil"
+					}
+					id: "0528FB0EF90324F3"
+					stage: "q_sword_brann"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 1.3d
+		}
+		{
+			dependencies: ["47AEF3DD86EEE0B5"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "create:brass_ingot"
+			}
+			id: "3D6B7C71416026B4"
+			optional: true
+			rewards: [
+				{
+					id: "5565EA8B8C59FF5F"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "591C32A09DCEAFBC"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "50CB0ACFC9FD6ECD"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "61358689963AE783"
+					item: {
+						count: 1
+						id: "create:brass_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1F13DFAF6FF1A051"
+					item: {
+						count: 1
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "236389654BB8EF4F"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["47AEF3DD86EEE0B5"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "2DC3A790A559DD34"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "32E97EA5FB0A98A0"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "4659FAF585F3C5C3"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "6AE962821EB36EAA"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:iron_sword"
+					}
+					id: "7234D60F2A31C516"
+					stage: "q_sword_forged"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["2DC3A790A559DD34"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "757CBF5DBDB08000"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "7F06CA1A537BA5D8"
+					type: "xp"
+					xp: 150
+				}
+				{
+					auto: "enabled"
+					id: "3648FEBB3E2C1863"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1980
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "07A74A4B8706FE92"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add smithing xp 8000"
+					elevate_perms: true
+					id: "198F774ACAD37116"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:iron_sword"
+					}
+					id: "02A48E9759D0C17D"
+					stage: "q_sword_done"
+					type: "gamestage"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Cook's Assistant",
+  "stages": [
+    "q_cook_started",
+    "q_cook_done"
+  ],
+  "steps": {
+    "deliver": {
+      "needs": [
+        "q_cook_started"
+      ],
+      "lacks": [
+        "q_cook_done"
+      ],
+      "take": [
+        {
+          "id": "minecraft:milk_bucket",
+          "count": 1
+        },
+        {
+          "id": "minecraft:egg",
+          "count": 1
+        },
+        {
+          "id": "create:wheat_flour",
+          "count": 1
+        }
+      ],
+      "commands": [
+        "give {player} minecraft:bucket"
+      ],
+      "stage": "q_cook_done",
+      "message": "You hand over the milk, the egg and the flour.",
+      "ok": "thanks",
+      "missing": "missing",
+      "done": "done"
+    }
+  }
+}

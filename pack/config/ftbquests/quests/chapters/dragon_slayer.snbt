@@ -1,0 +1,486 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dragon_slayer"
+	group: "1F2E0B7F304AB615"
+	icon: {
+		id: "iceandfire:dragon_skull_fire"
+	}
+	id: "1DAA2EF48DF6A016"
+	images: [
+		{
+			height: 2.527659574468085d
+			id: "3E9C644EFAAE5DA3"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.561702127659575d
+			x: 0.1d
+			y: 0.5d
+		}
+	]
+	order_index: 3
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "iceandfire:dragon_skull_fire"
+			}
+			id: "2EF09854B0FC5403"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "73D65F85BBCACA2F"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "2F9448B563E6DAE1"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "496EDAD58C5B2AA7"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "iceandfire:dragon_skull_fire"
+					}
+					id: "5B222F8979DDFACE"
+					stage: "q_ds_started"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 3.7d
+		}
+		{
+			dependencies: ["2EF09854B0FC5403"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:iron_chestplate"
+			}
+			id: "043F5AD0FE7E848A"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "06D9D79FF730552D"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "64D187A3A5140665"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "5572B98887CE6B97"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:iron_chestplate"
+					}
+					id: "1D65A53F79368A47"
+					stage: "q_ds_oziach"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
+		}
+		{
+			dependencies: ["043F5AD0FE7E848A"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:shield"
+			}
+			id: "3A69AE942A765080"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "357C299EE3875920"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "123CEBACC75C8907"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "04F98EC97E0EE3FD"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:shield"
+					}
+					id: "65647094B0214404"
+					stage: "q_ds_shield"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["043F5AD0FE7E848A"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:paper"
+			}
+			id: "0939B7CAC0EB0921"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "334570A18D2DB8C8"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "32AD40A671BDF44D"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "0C5BF7043C96C6F5"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:paper"
+					}
+					id: "2663517334BA68A6"
+					stage: "q_ds_piece1"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["043F5AD0FE7E848A"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:paper"
+			}
+			id: "1D0D33F4A4AD24C5"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "4C9DD526A920B8B9"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "047A2F97BEA8F79F"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "31987335360A571D"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:paper"
+					}
+					id: "4A63548DC9F2B37D"
+					stage: "q_ds_piece2"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 5.3d
+		}
+		{
+			dependencies: ["043F5AD0FE7E848A"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:paper"
+			}
+			id: "49F46141DFEDD2C6"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "17695A322C69EF19"
+					type: "xp"
+					xp: 150
+				}
+				{
+					auto: "enabled"
+					id: "42C6C7A6AF05028E"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "62C8295413AA3FFF"
+					item: {
+						components: {
+							"minecraft:custom_data": {
+								lsp_quest: "map_piece_3"
+							}
+							"minecraft:custom_name": "{\"text\":\"Map Part (3 of 3)\",\"color\":\"yellow\",\"italic\":false}"
+							"minecraft:lore": ["{\"text\":\"The Champions' Guild gives it\",\"color\":\"gray\",\"italic\":false}", "{\"text\":\"to those who pass its trial.\",\"color\":\"gray\",\"italic\":false}"]
+						}
+						count: 1
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "576B68D081013CAF"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					id: "06AE886C38BD1DE6"
+					type: "kill"
+					value: 20L
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "017D7EAF7481BE96"
+					type: "kill"
+					value: 10L
+				}
+			]
+			x: 4.6d
+			y: 6.9d
+		}
+		{
+			dependencies: ["043F5AD0FE7E848A"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "2CFE482090B033FF"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "06EE09BE40409B46"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "5E32D0E70394CFBD"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "30CCC285B1572F8B"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:compass"
+					}
+					id: "24052E9904429209"
+					stage: "q_ds_map"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["2CFE482090B033FF"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "iceandfire:dragon_skull_fire"
+			}
+			id: "6F362A6C985F8F78"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "3D6D33FAD02FF98A"
+					type: "xp"
+					xp: 400
+				}
+				{
+					auto: "enabled"
+					id: "41016AEC9E8DA564"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "78852F3FF30E93E1"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.4d
+			tasks: [
+				{
+					icon: {
+						id: "iceandfire:dragon_skull_fire"
+					}
+					id: "005B02B98D7242DE"
+					stage: "q_ds_elvarg"
+					type: "gamestage"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["6F362A6C985F8F78"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "iceandfire:dragon_skull_fire"
+			}
+			id: "60C14FFAEB799C74"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "231CCB9340CA59FD"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "7B0949756F0654C0"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 30120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "640341FE7CC1ED44"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add attack xp 20000"
+					elevate_perms: true
+					id: "2C5830DF40FF20D2"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add defence xp 20000"
+					elevate_perms: true
+					id: "30460ED2D33B9A88"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "iceandfire:dragon_skull_fire"
+					}
+					id: "1065B441AEA70305"
+					stage: "q_ds_done"
+					type: "gamestage"
+				}
+			]
+			x: 9.2d
+			y: 2.1d
+		}
+	]
+}

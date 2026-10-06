@@ -21,6 +21,12 @@ export const LIFESTEAL_ITEMS = ['heart', 'incomplete_heart', 'grave_essence', 'l
 // The economy's items (lsp_fixes 1.6.0, mods-src/lemursaucepacket-fixes: economy/EconomyContent).
 export const ECONOMY_ITEMS = ['lsp_fixes:gold_coins', 'lsp_fixes:coin_pouch']
 
+// Ice and Fire CE 2.0 (added in pack 1.6.0): the items the main quests show (iceandfire-2.0.jar, assets/iceandfire/models/item).
+export const ICEANDFIRE_ITEMS = ['dragon_skull_fire', 'dragon_skull_ice', 'dragon_skull_lightning', 'dragonbone', 'fire_dragon_blood', 'dragonscales_red'].map((id) => `iceandfire:${id}`)
+
+// Its structures (data/iceandfire/worldgen/structure): Crandor is the nearest fire dragon roost (tag lemursaucepacket:crandor).
+export const ICEANDFIRE_STRUCTURES = ['fire_dragon_roost', 'ice_dragon_roost', 'lightning_dragon_roost', 'fire_dragon_cave', 'ice_dragon_cave', 'lightning_dragon_cave'].map((id) => `iceandfire:${id}`)
+
 // Block tags a quest may observe (FTB Quests observation task). The registry dump has no block tags.
 export const BLOCK_TAGS = ['#waystones:waystones', '#waystones:sharestones', '#waystones:portstones']
 

@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Jeweller.",
+    description:"Jeweller; sells a map piece for Dragon Slayer I.",
     entityTypeId:"easy_npc:villager",
     name:"Lucan the Jeweller",
     variantType:"PLAINS_LIBRARIAN",
@@ -110,6 +110,132 @@
             },
             {
               Label:"about_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_after",
+          Name:"Precious things",
+          Priority:21,
+          Texts:[
+            {
+              Text:"Precious things, bought and sold. Still hunting that dragon?"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_piece1"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_after_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"ds_after_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece",
+          Name:"A map piece",
+          Priority:20,
+          Texts:[
+            {
+              Text:"A map piece? Oziach sent you, I'll wager. A sailor sold me this scrap years ago, swore it showed the way to Crandor. It's yours for 10,000 coins."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_oziach"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_0",
+              Name:"Buy it (10,000 coins)",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer piece1 @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds_piece_1",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"ds_piece_2",
+              Name:"Too rich for me",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece_sold",
+          Name:"Sold",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"A pleasure doing business. Mind you don't lose it!"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_sold_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_piece_poor",
+          Name:"Not enough",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Ten thousand coins, friend, not a coin less. Come back when your purse is heavier."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_piece_poor_0",
               Name:"Goodbye",
               Actions:[
                 {

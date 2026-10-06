@@ -48,6 +48,92 @@
       Type:"STANDARD",
       DialogDataSet:[
         {
+          Label:"ds_after",
+          Name:"Welcome home",
+          Priority:46,
+          Texts:[
+            {
+              Text:"Lemurton is glad to have you, @initiator. And proud: not many walk out to face a dragon."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_shield"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_after_0",
+              Name:"Tell me about the city again",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"about"
+                }
+              ]
+            },
+            {
+              Label:"ds_after_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_shield",
+          Name:"An anti-dragon shield",
+          Priority:45,
+          Texts:[
+            {
+              Text:"An anti-dragon shield? So you mean to face Elvarg... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_oziach"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_shield_0",
+              Name:"Thank you, mayor",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer shield @npc-uuid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_shield_given",
+          Name:"Good luck",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Hold it up when she breathes. Lemurton will be waiting for news."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_shield_given_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
           Label:"done",
           Name:"Welcome home",
           Priority:40,

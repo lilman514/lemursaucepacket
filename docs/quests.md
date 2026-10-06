@@ -1,6 +1,6 @@
 # Quests
 
-The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip.
+The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it except dragon armour, which waits on Dragon Slayer I as the rune platebody does in RuneScape. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip.
 
 ![The quest book](images/quest-book.png)
 
@@ -8,7 +8,27 @@ The quest book (ESC → Quests) is a road map, not a gate: nothing is locked beh
 
 ## Chapters
 
-Twenty-nine chapters in five groups. The Ages are the main line; the rest are questlines you dip into whenever they fit what you are doing.
+Thirty-three chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing.
+
+## Main quests
+
+RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under **Main Quests**) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so.
+
+| Quest | Given by | What it takes | Rewards |
+|---|---|---|---|
+| Cook's Assistant (novice) | The Cook, in the butcher's shop on the ring street | A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) | 1 quest point, Cooking XP, coins |
+| The Knight's Sword (intermediate) | Squire Asrol, at the armourer's | Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots | 1 quest point, Smithing XP, coins |
+| Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | See below | 2 quest points, the right to wear dragon armour, Attack and Defence XP, 25,000 coins and more |
+
+**Dragon Slayer I**, as in RuneScape: Oziach, who keeps the armoury on the ring street, tells you how to reach Elvarg on the isle of Crandor.
+
+1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath.
+2. Find the three pieces of the map: **Lucan the Jeweller** sells one for 10,000 coins, **Wizard Traiborn** (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the **Champions' Guild** gives the third for its trial (20 zombies and 10 skeletons).
+3. Oziach puts them together: the **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton).
+4. Go there. **Elvarg**, a fire dragon in her prime, rises when you arrive. Everyone with the map who is nearby when she falls gets her head.
+5. Bring **Elvarg's Head** to Oziach.
+
+Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
 
 **The Ages** — one chapter per stage of progress:
 

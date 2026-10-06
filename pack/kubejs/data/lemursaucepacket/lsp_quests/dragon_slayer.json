@@ -1,0 +1,164 @@
+{
+  "title": "Dragon Slayer I",
+  "stages": [
+    "q_ds_started",
+    "q_ds_oziach",
+    "q_ds_shield",
+    "q_ds_piece1",
+    "q_ds_piece2",
+    "q_ds_map",
+    "q_ds_elvarg",
+    "q_ds_done"
+  ],
+  "steps": {
+    "shield": {
+      "needs": [
+        "q_ds_oziach"
+      ],
+      "lacks": [
+        "q_ds_shield"
+      ],
+      "give": [
+        {
+          "id": "minecraft:shield",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Anti-dragon Shield\",\"color\":\"gold\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"Lemurton has kept it since\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"the old dragon wars.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "antidragon_shield"
+            }
+          }
+        }
+      ],
+      "stage": "q_ds_shield",
+      "message": "The mayor gives you an Anti-dragon Shield.",
+      "ok": "ds_shield_given"
+    },
+    "piece1": {
+      "needs": [
+        "q_ds_oziach"
+      ],
+      "lacks": [
+        "q_ds_piece1"
+      ],
+      "coins": 10000,
+      "give": [
+        {
+          "id": "minecraft:paper",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Map Part (1 of 3)\",\"color\":\"yellow\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"A torn scrap of an old sea chart.\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"Lucan the Jeweller sold it to you.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "map_piece_1"
+            }
+          }
+        }
+      ],
+      "stage": "q_ds_piece1",
+      "message": "You buy a scrap of old map from Lucan.",
+      "ok": "ds_piece_sold",
+      "missing": "ds_piece_poor"
+    },
+    "piece2": {
+      "needs": [
+        "q_ds_oziach"
+      ],
+      "lacks": [
+        "q_ds_piece2"
+      ],
+      "take": [
+        {
+          "id": "minecraft:ghast_tear",
+          "count": 1
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "count": 1
+        },
+        {
+          "id": "minecraft:amethyst_shard",
+          "count": 1
+        }
+      ],
+      "give": [
+        {
+          "id": "minecraft:paper",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Map Part (2 of 3)\",\"color\":\"yellow\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"Wizard Traiborn kept it in a\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"box only a spell could open.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "map_piece_2"
+            }
+          }
+        }
+      ],
+      "stage": "q_ds_piece2",
+      "message": "Traiborn opens his box and hands you a piece of map.",
+      "ok": "ds_piece_given",
+      "missing": "ds_piece_missing"
+    },
+    "map": {
+      "needs": [
+        "q_ds_oziach"
+      ],
+      "lacks": [
+        "q_ds_map"
+      ],
+      "take": [
+        {
+          "id": "minecraft:paper",
+          "count": 1,
+          "quest": "map_piece_1"
+        },
+        {
+          "id": "minecraft:paper",
+          "count": 1,
+          "quest": "map_piece_2"
+        },
+        {
+          "id": "minecraft:paper",
+          "count": 1,
+          "quest": "map_piece_3"
+        }
+      ],
+      "special": [
+        "crandor_map"
+      ],
+      "stage": "q_ds_map",
+      "message": "Oziach puts the three pieces together: a Map to Crandor.",
+      "ok": "ds_map_made",
+      "missing": "ds_pieces_missing"
+    },
+    "head": {
+      "needs": [
+        "q_ds_elvarg"
+      ],
+      "lacks": [
+        "q_ds_done"
+      ],
+      "take": [
+        {
+          "id": "iceandfire:dragon_skull_fire",
+          "count": 1,
+          "quest": "elvarg_head"
+        }
+      ],
+      "stage": "q_ds_done",
+      "message": "You give Oziach Elvarg's head.",
+      "ok": "ds_done",
+      "missing": "ds_no_head"
+    }
+  }
+}

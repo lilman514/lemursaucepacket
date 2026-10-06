@@ -3,6 +3,15 @@
   "color": "#E0C35A",
   "talks": [
     {
+      "dialog": "ds_piece",
+      "when": [
+        "q_ds_oziach"
+      ],
+      "unless": [
+        "q_ds_piece1"
+      ]
+    },
+    {
       "dialog": "default",
       "intro": true
     }
@@ -53,5 +62,44 @@
       }
     ],
     "onBuy": []
-  }
+  },
+  "quests": [
+    {
+      "title": "Dragon Slayer I",
+      "steps": [
+        {
+          "stage": "q_ds_started",
+          "text": "Ask the Champions' Guild for a challenge"
+        },
+        {
+          "stage": "q_ds_oziach",
+          "text": "Hear about Elvarg from Oziach"
+        },
+        {
+          "stage": "q_ds_shield",
+          "text": "Get an anti-dragon shield from the mayor"
+        },
+        {
+          "stage": "q_ds_piece1",
+          "text": "Buy a map piece from Lucan the Jeweller"
+        },
+        {
+          "stage": "q_ds_piece2",
+          "text": "Bring Wizard Traiborn what his spell needs"
+        },
+        {
+          "stage": "q_ds_map",
+          "text": "Have Oziach put the map together"
+        },
+        {
+          "stage": "q_ds_elvarg",
+          "text": "Slay Elvarg on Crandor"
+        },
+        {
+          "stage": "q_ds_done",
+          "text": "Bring Elvarg's head to Oziach"
+        }
+      ]
+    }
+  ]
 }

@@ -6,7 +6,7 @@ hash = "fc45b3d07ca26c8be851f8bb2271ce358e409f39762cbfe164c2a30faae58547"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
-hash = "360302d0841b1e9d367d7b6733284c675248b14bac9a2c8bccfc3d991e5ceab2"
+hash = "6b9d8bfb4daeac2df1362a852e58737caf8c4186dbcdcff774c96c335f88e0cd"
 
 [[files]]
 file = "config/fallingtree.json"
@@ -142,99 +142,111 @@ hash = "3bdb6dfda8f52cc86195409571af5891d2799c63b2da102c3dd5d7f2952f5bb7"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "872136da65bd1e74e6d262d187beca144e8a507fd75e79c527ed338624e16c53"
+hash = "a7dd01fff1f0cb71bcf1571ac7863579286761651b36cc1d56f744de3cef3293"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/arcane_works.snbt"
-hash = "24ac8e399b1f37d66cf10fb055bdaef5da4462ec6b3f426f7b12bd2fb9ddd5b5"
+hash = "7ec09de9ab2ed4e9779d253d05c7d64856217146d4fa3082e12e1dd4d212b650"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/armory.snbt"
-hash = "d47ee8ebe3595912facf636259b1c2e04102c4cef054a9121af0abe4203cf21b"
+hash = "f4366ab80f4e6a82ee4f02f471412f2382272740a103d0d4b3ce35555aa05cc0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/atlas.snbt"
-hash = "b99d0618a42c150832abc57556b1457bd58b5cf40042eb6f7424e401047e2137"
+hash = "382c1fc55da190b7d56004209a76cbdec6540336f36376abcd31c8345b271578"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/backpack_workshop.snbt"
-hash = "4f9b3dfb600aaa44e7b52f4aeafa98e551a034571c572e7e2c2186b5cacde78c"
+hash = "e6ea4da790c501a02e622a83b0e28d88136fa9d36198aff474b8d88061b7437a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/banners.snbt"
-hash = "f7c064750105a44083cdcb45dca738e741e2a61c5a06bae8322602194de94ee3"
+hash = "e2264b95a0b7edf5fee75ded88516e6171df4e82785e107ee0b23f46e8a5a34d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/bestiary.snbt"
-hash = "0b93a4824a04fefee1d61a653da6f18c1ebf510df99dafa32e215baadb05093b"
+hash = "54306ceb324870eabecc4170b73ea5c7db451af8e09647c417114fd2a337d1ac"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/beyond.snbt"
-hash = "dc95f65d83be0eca4fb29e53be15392f6d8838692fedd0d662b3c95f201fba80"
+hash = "a0dd40beff7f4dd91107b998dda86cdfed922c26e66543951584727184e5a774"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/brass_age.snbt"
-hash = "4c0e36dd448f316c03d9ed68054c1d46b6b7c4a72325839f7acb8d260c76bf16"
+hash = "3cc219207b118cc7f3e19a183792e0a2b06b0054fa03a4ea2cff44cb97f5910a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/cartographer.snbt"
-hash = "0807e6aa7b115697bfd57ef0fb4e1c3abb69fe2768a23ca3ee6d959df52f7b7e"
+hash = "ef4fe0bc029cd0873450b13067ab0b1ed4b29ece9d216781022f27e426ebeb38"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/commerce.snbt"
-hash = "437be5e091f24dbea6467374c9dca70147c1fc9b3612ac8c5b2068e4fd39ec71"
+hash = "4a6d4461189b49792e24fae1dd53365b73aeb3b77611e45cb2de9c8f7150e717"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/contracts.snbt"
-hash = "8cc305d3179489da2246ba8f350960777650bdd77550d4537a7c7307ebe98934"
+hash = "aab46d626b71ca6a70e73e8df5527218f0b1c3cabfa1302f803b2ec8323eb39d"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/cooks_assistant.snbt"
+hash = "f9ff60788e7837498fb3cd8c2e605971b8a61987e59a69bca888aa9f39bf736f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/crown_of_fire.snbt"
-hash = "a534fc1a0c54577461845d15dcde66a9e4dde824ee4c12a03dd4d6bd133f8e51"
+hash = "575a95da0c60c24fb32f21706ab812e8905f89fc5b80e3c6eb4f86635d42f45e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deep_dark.snbt"
-hash = "c566acc4b4dada60e72d7c453350e29f189875ad0a7490061fc4995d3535c701"
+hash = "8b8da7fa7c137791e663a49f259a4733a4fe4910b906fb7cfaa7026fcbf169d6"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/dragon_slayer.snbt"
+hash = "f1041c7a55ee8a1d90a76faf04463d52ffa798b34ff1afcd5629076cd94264d6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/enchanter.snbt"
-hash = "e69741b501e0939787b92a0a0fc00527d27e429d45f4c283ca6f90ab50525086"
+hash = "4d10f1450c127bd562e94ad8d2ce32a957ef36c103dabf12851afcb3470c1703"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/factory_floor.snbt"
-hash = "73c4e19e7675872e8fb335f848343be008118caa70cc420f0c755789c323044a"
+hash = "f75433176dccaf65eb531586b2e8e9ab439664ae01733816376516f6b80f44b0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/first_rotation.snbt"
-hash = "2d7dadf5c7cb777849171f95d29902ced0e5345a5a7478bd9f4dffe0dd59b0bb"
+hash = "31c390958039811103bea0a2d9ad014565bcbb29b24eec214082608f40e9f167"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/foundry.snbt"
-hash = "7659ff242b2eca1e3895c0a956ba01ab287a1cdd8e7b4346515ced5f48b0ff20"
+hash = "e5496232982ace25ab543b3a1cad31e0cab2a8eaee1fae441ee5028386b8b153"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/hearts.snbt"
-hash = "d421ec67eca53a62476a08a99f6259071c8d301965a4fd7f5464a1c72e005dc7"
+hash = "d879b61fd797985c60957d74c07e19d6be97036912b40a616a4dac864383864e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homestead.snbt"
-hash = "a9520dea30507ee1942e605f2d20ec4bcbd96848dd8d41ed08313f1b7ad86fb7"
+hash = "a33de97ab3f99c9b2e569453a20bfe804aa158c70455d1d07258461b31e25a82"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/iron_roads.snbt"
-hash = "cde1e2522ef7ebab0ab3a787e54555d93f1993954c8d3060249259b08aabdda2"
+hash = "7175019bfddfb8ec67d149a8018f9e324cf2b6f17bc94312394921cc7aaf6709"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kitchen.snbt"
-hash = "ca713012d0694af989eab00408d479f8bd54404fac1d7b92d82979a7779cc38c"
+hash = "022ccd4fd24138c5c445506ca71ea5e6a7fe942b3cba1c07aa0dd0f33d3f6c23"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/knights_sword.snbt"
+hash = "787b67356a81a518c324b9b8eb4d4d083db38617aba39dd8b0882a3d1edce29d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landfall.snbt"
-hash = "f224b49870f62d5eae8816e08f128131b7d84eac62ec071e4e63b5e4f905ef43"
+hash = "7750f2bf744683815665e422c77c02c9365844a4a512725a2c739fead4c3775a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/legacy.snbt"
-hash = "4b8efc487051cf0074b89e90de99322cc377768fc425f2017c705c4e7da7af17"
+hash = "c3cb030d4535f28917220bb70f6eeff48dfa59964090f1721db7e89255158ab6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/lemurton_welcome.snbt"
@@ -242,27 +254,27 @@ hash = "beeec026fe4a7275fed10ed6a063729b08ce94ec4cfb50c14b4f3d7f204850ec"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/railway.snbt"
-hash = "37947711f9a5ffb3eec50ef946e8740479ec1ca93e902cc631cdce93ca255968"
+hash = "33716236215a0dcfce271111348d34580fac6d74f367444a2cd9ce6be4432071"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/relic_hunter.snbt"
-hash = "73aeec4a36c1d66d11953354a3b54dba74356a374afd104acfd6209b674c3db8"
+hash = "1fa0879f1ad28cd81a810d8e1e0632133f1cdb32dd0462d081948ee18f0b27c1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skills.snbt"
-hash = "cbe4c0dfec0153a7e999a69479e561b3c4111b0346b664e6bff4d656e5ff37d8"
+hash = "041f518341d95f0583998a81d1f2233d0ca1ea565a7d61dd9fd5aeeb9734aa47"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
-hash = "12bdfe1ccaa0faa3fbcc4b4d6c3e0bbaa9380f1566eb2934d53b6af7bf69a6d2"
+hash = "5c2cc88b209a3ac279b4aeb231a7bc5912fca52b19fb3e69ac17e8afe7ab577f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_life.snbt"
-hash = "38557110dce5112b0556923e4abe581be5c913938908f751afd83d9e849e79d6"
+hash = "b9f5295860e35d45a1646620bf3cd7f02715faacb90f2db9097c3a69fd0451c2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/warehouse.snbt"
-hash = "7c1c9c1d8e2917fd4ca94b3a701b448529bd56927918b6526263475678f7a04f"
+hash = "6aee02fce17e59f082398ba537baac8846f0030e3cf4fefb0ccfcd804a45ae4e"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -270,7 +282,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "cdccf95cc244cbbb162960229f43aa012eca0b0ae0979aa7ee66193ad955f5b4"
+hash = "ef6178a92ab1c4d68dbc7cf51c25220cbcbed317b2facb9e0d86839647e2094a"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -297,6 +309,10 @@ file = "config/ftbquests/quests/reward_tables/settler_supplies.snbt"
 hash = "1349f6b22355c967ffd8a624b5fd1e6c0ea5ded23840cf3a507bfde0ff203fdf"
 
 [[files]]
+file = "config/iceandfire/iaf-common.json"
+hash = "c49e4ae78cb8b4009b98f73d6f72a32f30146756b6295b1fe4c429840d718110"
+
+[[files]]
 file = "config/inventoryprofilesnext/inventoryprofiles.json"
 hash = "d4433544ec21a3c08397203c32052bbc4676f05ec9041c223c1ae0eeae841cd7"
 
@@ -318,7 +334,7 @@ hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
 [[files]]
 file = "config/lemursaucepacket/hub_plan.json"
-hash = "1774e9f3faa187eb3414ba69cfe04a2df88dcbcf2abcaeb9ce9dfdec3ab7ecf1"
+hash = "95942d9ba3a8e2c957810f844652545724a0a16519a83affe5bca653a5d16877"
 
 [[files]]
 file = "config/lemursaucepacket/lifesteal.json"
@@ -670,11 +686,11 @@ hash = "33574724f647078a549d94ca16f308eb0fc50523e3a248e6479b2c643238a18e"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
-hash = "59a95b4966b9372f0cb77b97459c7b3de383b7dc570e28966bd2808104257c9f"
+hash = "48599e782c872f7ffb9a58ba1814116b491f36a88a2a30adea31306916961a7c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
-hash = "5c249d85ae3da8f23ed1059543568eb8aa0a10ba84e7ffa2b327e9321c795266"
+hash = "a56207e2686be3e31e2a5bded558bd4616d34075e73afa29f597628a4b822dd1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
@@ -690,7 +706,7 @@ hash = "89b7d27658a2fbf0809fbe1bb0338f023be3d7e5c768a8948ff95ec80a6b17d1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "a9a1e2d6d9a1301876be8e34b4b6df620441c7d2cf9de8745bf406fd2cc5422f"
+hash = "7b54ba50c75ec0762bff5c40b42c21ed0921dec6d368078eb8ccbbc8a5ce75f7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/agility_cape.png"
@@ -1877,6 +1893,10 @@ file = "kubejs/client_scripts/jei_hidden.js"
 hash = "eb3b5b32c08ac6bfb120363195301de215cc8476bc3c53d0fad886b2bad5b578"
 
 [[files]]
+file = "kubejs/client_scripts/jei_hidden_iceandfire.js"
+hash = "c9fb27b9bd194ca45f28954c902222552fab8738d2ce47d1666e9cc0fc64d526"
+
+[[files]]
 file = "kubejs/client_scripts/jei_sources.js"
 hash = "487a0ce4d00d99de7ee9a4343da4d69ae497a3d59a3c57732d1561db1ea0b207"
 
@@ -1933,12 +1953,96 @@ file = "kubejs/data/farmersdelight/enchantment/backstabbing.json"
 hash = "9a63d2a1661ded09a9311ac8221426fa93cd5d2cd4acf56bd80ca25aa932e317"
 
 [[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/amphithere.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/cockatrice.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/deathworm.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/hippocampus.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/hippogryph.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/sea_serpent.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/stymphalian_bird.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/troll.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/entity_gen/wandering_cyclops.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/ore_gen/sapphire.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/ore_gen/silver.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/cyclops_cave.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/gorgon_temple.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/graveyard.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/hydra_cave.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/mausoleum.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/pixie_village.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/siren_island.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_guard.npc.snbt"
 hash = "f076d5e9dbf7e5ce1cdf1f0814c8db9161ad67796d5cdd459cd45651e0c04a50"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_guildmaster.npc.snbt"
+hash = "ba1f1c3343f906a56c43738f5135cc0a151c85e0db0fe4f57a0f446e7c784dbf"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_mayor.npc.snbt"
-hash = "596758f0501c57ade80fdd2ce701de21af910543d1b044f5a75cc44c4a704175"
+hash = "2da5a51c360260d911d45959e1a8a8925030b9f55520580c94559e0766961df5"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_squire.npc.snbt"
+hash = "f9d7508236aad33d71e42604c31b2a95150aa56f08a011f0347a83b4d6a6572a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/illusioner/lemurton_wizard.npc.snbt"
+hash = "a2c16d33be1679fa7b53bb7123faf2ac9123ab5243d474e7cb690755346fb54a"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_baker.npc.snbt"
@@ -1947,6 +2051,10 @@ hash = "9d0455e15dfccd92dc55c33bb54a56bae245342adff18e2f3b880de5f62c8f25"
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_butcher.npc.snbt"
 hash = "876eed0ef36c001e5f6d8593f14bc2c2b31734f1f0014c70ccaa131ec21af22f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_cook.npc.snbt"
+hash = "70d950c3fd34383ccc024f757c90ecd3bf94194beeca8983734a7d52acc325d4"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_fishmonger.npc.snbt"
@@ -1965,6 +2073,10 @@ file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_gem_trade
 hash = "98b4b833e45d7ae529ee596b41c5791f3a6e1565ac4356a77a729e04ff73654f"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_oziach.npc.snbt"
+hash = "3c9164d3aa7ad71c55e439a72d7bc9863244a3d844e42ec22a542ac22c674888"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt"
 hash = "21d576ceeefc2309f2a0095e91feb6a0acdcbe44303b458223bb47df8eb4a49e"
 
@@ -1978,11 +2090,11 @@ hash = "6bf36b1c405bd6796e6fa0994edae81e9308393c9a9854f454389a24c318e51b"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt"
-hash = "c0adb383c2d6583e4b681f1e734de44660946be77d33b7c1fddf53839fd79eb2"
+hash = "8643c401693551fc7dfe1c3df1ab96b63f18dcebcc194d235cfa45134e9336af"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt"
-hash = "20c675c08558db5ea0549eb6f091acd2ae199576d1f17dff4fc4f04439f371b3"
+hash = "b527bcafbb7e4a542bf163d24e50f2c0527f8d41260c2a3f6bce194661521515"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt"
@@ -2025,6 +2137,10 @@ file = "kubejs/data/lemursaucepacket/lsp_npcs/butcher.json"
 hash = "d1ea9b51cbd085bdb6ebf71704349a25b8844b776298aad9df3626516f04e4db"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/cook.json"
+hash = "23940626b7301075f6792a6adc22954ff4a54c5093de3ad3a616d98bf2b4dc40"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/fishmonger.json"
 hash = "ebcf657d63ab53d3e2a7208155bb304efdea2c53e358a7dee8a8837d6e69c80b"
 
@@ -2045,8 +2161,16 @@ file = "kubejs/data/lemursaucepacket/lsp_npcs/guard.json"
 hash = "c18b2832a6c76c0a737b218d260bee477c83152dd8715e9b8c92344f1d52dcd9"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/guildmaster.json"
+hash = "05c1796fb5ba026fffa722576a66cd86188a7154e137e8326d666b5d0bfd9a0b"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/mayor.json"
 hash = "229da833afc54d0b9108add389fb34844d14c4ecbf4b680bf7cf09d2857e834f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/oziach.json"
+hash = "a569a7ed3194744976c2cc4fd077c7e6ac19aa61787f2beabe5fa1dc309ec29d"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_apothecary.json"
@@ -2062,11 +2186,11 @@ hash = "ba2ace900d2318f6a13b81cef3bcd9eb368a3da63ac6e82fd737b711739a2790"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_jeweller.json"
-hash = "e6d4edd077d73630d836c9988f480bb5fc94323dc0aa5cdc84257265774ce708"
+hash = "abd1ee68048caf620205a6e95d52711147538b769c5ad72f4907c3ec85a29a4c"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_smithy.json"
-hash = "b0ecb86e9f74848e81f6c0a11717fb44492b86e891d7a4eda84d3c2399708ca6"
+hash = "baab3974b4f37adb739410b0ae29df104e731ac7170f3edd7df2a7da3ac36fdf"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_tailor.json"
@@ -2075,6 +2199,10 @@ hash = "38afd27f53cc14f7e8945d6cd0810bebb9f74ed67d0ca481fa71333b0b05cd00"
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/spice_merchant.json"
 hash = "72c76a827e534f544163f60b79a3ad97fba44930c8eaa7714d23dabb2ae8ab76"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/squire.json"
+hash = "798194bd974ae19fa9de152dc4a508584ec666315af8631b61a54e3a47dc556c"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/tailor.json"
@@ -2087,6 +2215,22 @@ hash = "27b8f1f354f3936cba944bec5c7550d960cc84e5c9fc860b64b5b486570f0adb"
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/varrock_general_store.json"
 hash = "7c94818e6e11af60892c15fde685456a3b8eaa02f37a89a085c7624908ac4353"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/wizard.json"
+hash = "70b2bbc16ec0c5e9275f26597489385730607e06f089463a6038740eea2774dd"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_quests/cooks_assistant.json"
+hash = "07a5d0ca52beaf996618bc78ca15ff9b04db6112d132f35dd1501285b418656f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_quests/dragon_slayer.json"
+hash = "bd4b104a59612dee717d3c094fc76cd408d9c5a56bb2cd11facccaa5842bcdd8"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_quests/knights_sword.json"
+hash = "7e6833b6306543f4fad0b15edd06c393983a4954526deb0836c9a047d4785e93"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/patchouli_books/guide/book.json"
@@ -2429,6 +2573,10 @@ file = "kubejs/data/lemursaucepacket/tags/block/hardness/gated.json"
 hash = "cc76963fb11f07cb52133aeb6b2df747441b4124df05f4cb7437e43e2072ab18"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/tags/item/dragonslayer_armor.json"
+hash = "1015ff9a12b01ccc422135ac27ef57bc2bfbe28ed1b16aaf57a359a7bdd2db58"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/tags/item/enchantable/hardness.json"
 hash = "6cccfdd33836a6c962d43f7b9cac47dc8d320b17b000a651fd49bd2c827b03d9"
 
@@ -2471,6 +2619,10 @@ hash = "963f58189373bf2895b361d220e5bc94dafcd55387961e1c70b6cc2e574fc206"
 [[files]]
 file = "kubejs/data/lemursaucepacket/tags/worldgen/structure/bastions.json"
 hash = "f859fabb90cdf814ad9159c1acfe350e431654907facb73779bf793db0f497d0"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/tags/worldgen/structure/crandor.json"
+hash = "232080936ba61664b0f84e18162921e833b22fca4fe832c4bb74eecd52f6ea06"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/tags/worldgen/structure/fortresses.json"
@@ -3240,6 +3392,11 @@ hash = "6b235aa1d0c43ab4fa7eacca3eb3c62530fa6ae1b44bc56aecc25c636a8ffc5b"
 metafile = true
 
 [[files]]
+file = "mods/iceandfire-ce.pw.toml"
+hash = "7531680147d1c3d57ef70aabfcb0c17c8bb4e0f89a0948326244f123b9467ee4"
+metafile = true
+
+[[files]]
 file = "mods/iceberg.pw.toml"
 hash = "a2fbecad69fcbff54919864ea8b95e54d140a1a2c637d73307fb366e76066fe6"
 metafile = true
@@ -3292,6 +3449,11 @@ metafile = true
 [[files]]
 file = "mods/jei.pw.toml"
 hash = "c9397d739e667b9cafa27e1c260ddc35faba4400f949ff49d8e15bd6faeb8d48"
+metafile = true
+
+[[files]]
+file = "mods/jupiter.pw.toml"
+hash = "3f44721c554a06b9e922c6102bed6402fed57d6d340de0299ee4237544724c48"
 metafile = true
 
 [[files]]
@@ -3370,8 +3532,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.6.1.jar"
-hash = "cfb6fa8c266c6760b926076faa60ba1c57096c7d64d84262ea8934cc95705541"
+file = "mods/lsp_fixes-1.7.0.jar"
+hash = "ffb017affb9234c369e73a05343a73f72654d70054a4e8d85c5901410aef8a48"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"
@@ -3666,6 +3828,11 @@ metafile = true
 [[files]]
 file = "mods/towns-and-towers.pw.toml"
 hash = "a9afe82b3d1b4975dd9f8b3272898450aeb29365678b3779059977301f88c101"
+metafile = true
+
+[[files]]
+file = "mods/uranus.pw.toml"
+hash = "c16ee91eeb20999c83deedbf93ce3787bb9bfefad56abd242d90a94dc0534ca0"
 metafile = true
 
 [[files]]

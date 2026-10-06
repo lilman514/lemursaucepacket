@@ -1,8 +1,8 @@
 # Mods in the pack
 
-176 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+179 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (132)
+## On the server and every client (135)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -52,12 +52,14 @@
 - [Geckolib](https://modrinth.com/project/8BmcQJ2H)
 - [GraveStone Mod](https://modrinth.com/project/RYtXKJPr)
 - [Guard Villagers](https://modrinth.com/project/H1sntfo8)
+- [IceAndFire Community Edition](https://modrinth.com/project/VpmCsizY)
 - [Iceberg](https://modrinth.com/project/5faXoLqX)
 - [Illager Invasion](https://modrinth.com/project/jSV9w0J5)
 - [Inventory Essentials](https://modrinth.com/project/Boon8xwi)
 - [Jade 🔍](https://modrinth.com/project/nvQzSEkH)
 - [Jade Addons (Neo/Forge)](https://modrinth.com/project/xuDOzCLy)
 - [JEI / REI / EMI WorldGen](https://modrinth.com/project/YYrsrQ6q)
+- [Jupiter](https://modrinth.com/project/XbiLGMMU)
 - [Just Enough Items (JEI)](https://modrinth.com/project/u6dRKJwZ)
 - [Just Enough Professions (JEP)](https://modrinth.com/project/kB56GtWA)
 - [Konkrete](https://modrinth.com/project/J81TRJWm)
@@ -114,6 +116,7 @@
 - [Terralith](https://modrinth.com/project/8oi3bsk5)
 - [Towers of the Wild Modded](https://modrinth.com/project/54eqfZSC)
 - [Towns and Towers](https://modrinth.com/project/DjLobEOy)
+- [Uranus](https://modrinth.com/project/3Acxy864)
 - [Vanilla Backport](https://modrinth.com/project/6xwxDTgf)
 - [Vanilla Backport Compat](https://modrinth.com/project/jcYHXHwz)
 - [Variants&Ventures](https://modrinth.com/project/lNDRiXkY)
