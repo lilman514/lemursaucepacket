@@ -16,11 +16,20 @@
     {
       "type": "patchouli:text",
       "title": "Lemurton, the spawn city",
-      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:$(br2)$(li)a plaza with a fountain and the $(bold)Lemurton waystone$(), visible to everyone from the start;$(br)$(li)a market of stalls;$(br)$(li)shops and townhouses on the ring streets, and cottages by the walls;$(br)$(li)four gates.$(br2)Lemurton is a $(bold)safe zone$():"
+      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:$(br2)$(li)a plaza with a fountain and the $(bold)Lemurton waystone$(), visible to everyone from the start;$(br)$(li)a market of stalls;$(br)$(li)shops and townhouses on the ring streets, and cottages by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
+      "title": "Townsfolk, trade and quests",
+      "text": "Right-click anyone in Lemurton to talk to them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Market traders and shopkeepers$() sell for Numismatics coins. The market has fruit, bread and cakes, fish, meat, seeds and spices, flowers and saplings, and wool. The shops on the ring streets have tools and weapons, leather armour, building blocks, fishing gear, brewing supplies and a general store. Most also buy what you bring them, such as wheat, wool, leather, fish, gems and gold. Trades refill every hour.$(br)$(li)$(bold)Mayor Thaddeus$() gives the first quest, $(italic)Welcome to Lemurton$() (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market"
+    },
+    {
+      "type": "patchouli:text",
+      "text": ", then report back. The rewards hand themselves over as you go. More questlines start in Lemurton as the city grows.$(br)$(li)The townsfolk can't be hurt or pushed around.$(br2)Lemurton is a $(bold)safe zone$():$(br2)$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
     },
     {
       "type": "patchouli:text",

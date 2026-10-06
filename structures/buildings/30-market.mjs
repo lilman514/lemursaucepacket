@@ -1,8 +1,14 @@
 // Ardougne-style market stalls: four posts, a sloping striped awning, a counter of barrels and crates with the
 // goods on show, and a spot behind it for the stall's merchant (an NPC). Front (customers) is south.
 
-import { log, stairs, state } from '../lib/blocks.mjs'
+import { log, propsOf, stairs, state } from '../lib/blocks.mjs'
 import { rng } from '../lib/parts.mjs'
+
+/** A block on show: upright if it can be (barrels), else turned to the customers (smokers, pots). 'id' or 'id[props]'. */
+const shown = (g) => {
+  const facings = propsOf(g.split('[')[0]).facing ?? []
+  return state(g, facings.includes('up') ? { facing: 'up' } : facings.includes('south') ? { facing: 'south' } : {})
+}
 
 /**
  * A stall w wide (x) and 3 deep. The awning slopes down to the front with a one-block lip all round, in two
@@ -42,7 +48,7 @@ function stall(name, { seed, w = 5, colour = 'red', goods, back = ['minecraft:ba
       // Counter between the front posts with the goods on it; stock along the back.
       for (let x = x0 + 1; x <= x1 - 1; x++) {
         c.set(x, 1, 2, x === x0 + 1 || x === x1 - 1 ? state('minecraft:barrel', { facing: 'south' }) : state(`mcwfurnitures:${wood}_counter`, { facing: 'south' }))
-        c.set(x, 2, 2, state(goods[(x - x0 - 1) % goods.length]))
+        c.set(x, 2, 2, shown(goods[(x - x0 - 1) % goods.length]))
       }
       for (let x = x0 + 1; x <= x1 - 1; x++) {
         const id = back[(x + 1) % back.length]
@@ -63,5 +69,7 @@ export const buildings = [
   stall('market_stall_gems', { seed: 'gems', colour: 'purple', goods: ['minecraft:amethyst_block', 'minecraft:purple_stained_glass', 'minecraft:amethyst_block'], role: 'gem_trader' }),
   stall('market_stall_cloth', { seed: 'cloth', colour: 'blue', w: 6, goods: ['minecraft:white_wool', 'minecraft:red_wool', 'minecraft:blue_wool', 'minecraft:yellow_wool'], role: 'tailor' }),
   stall('market_stall_fish', { seed: 'fish', colour: 'cyan', w: 4, goods: ['minecraft:dried_kelp_block', 'minecraft:barrel', 'minecraft:dried_kelp_block'], role: 'fishmonger', back: ['minecraft:barrel', 'minecraft:barrel'] }),
-  stall('market_stall_spice', { seed: 'spice', colour: 'orange', goods: ['minecraft:decorated_pot', 'minecraft:flower_pot', 'minecraft:decorated_pot'], role: 'spice_merchant' })
+  stall('market_stall_spice', { seed: 'spice', colour: 'orange', goods: ['minecraft:decorated_pot', 'minecraft:flower_pot', 'minecraft:decorated_pot'], role: 'spice_merchant' }),
+  stall('market_stall_flowers', { seed: 'flowers', colour: 'pink', goods: ['minecraft:potted_flowering_azalea_bush', 'minecraft:moss_block', 'minecraft:potted_red_tulip'], role: 'flower_seller' }),
+  stall('market_stall_butcher', { seed: 'butcher', colour: 'brown', goods: ['minecraft:smoker[lit=true]', 'minecraft:barrel', 'minecraft:smoker[lit=true]'], role: 'butcher' })
 ]

@@ -1,0 +1,176 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lemurton_welcome"
+	group: "5B879695BB0E0EB7"
+	icon: {
+		id: "waystones:waystone"
+	}
+	id: "514FCA55A49A33A2"
+	images: [
+		{
+			height: 2.527659574468085d
+			id: "03025A03888D22DC"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.531914893617021d
+			x: 2.5d
+			y: -2.0d
+		}
+	]
+	order_index: 0
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "3BB197E455CD7B4D"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "47714D9B04E00A16"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "358F1F741BCC7731"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "58EE4E2974F0C111"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "420ADF62DA20E268"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:bell"
+					}
+					id: "15CA6D553AAF710B"
+					stage: "q_welcome_met"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3BB197E455CD7B4D"]
+			icon: {
+				id: "minecraft:bread"
+			}
+			id: "6377F5FE70E96283"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "2DFAD37D576601AD"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "16D61F99BE955DEF"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "0702A1D83C78C618"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:bread"
+					}
+					id: "5E8A51DCB3BC70EB"
+					stage: "q_welcome_bread"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 0.75d
+		}
+		{
+			dependencies: ["6377F5FE70E96283"]
+			icon: {
+				id: "minecraft:writable_book"
+			}
+			id: "2C6D5FD29C664761"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "2B7911DAF5E8A5CB"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "70CFFA1687470124"
+					item: {
+						count: 2
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "14EDAC9361F2311B"
+					item: {
+						count: 4
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "4BFAE8C6A07B0FED"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:bell"
+					}
+					id: "4BF994C58320B80F"
+					stage: "q_welcome_done"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 0.75d
+		}
+	]
+}

@@ -14,6 +14,8 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { rng } from './lib/parts.mjs'
+import { createHash } from 'node:crypto'
+import { AT_BUILDING, NPCS, presetId } from '../npcs/npcs.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
@@ -60,6 +62,7 @@ const footprints = []
 const paving = []
 const blocks = []
 const rows = []
+const usedOnce = new Set()
 
 /** Where a template's solid blocks would stand if its front spot were at (fx, fz), facing `faces`. */
 function boxFor(name, faces, fx, fz) {
@@ -82,10 +85,19 @@ function boxFor(name, faces, fx, fz) {
 function place(name, faces, fx, fz, { y = 0, tag = name } = {}) {
   const t = tpl(name)
   const b = boxFor(name, faces, fx, fz)
-  placements.push({ t: `${NS}:${name}`, p: [b.px, y + t.offset[1], b.pz], r: b.rot })
+  const py = y + t.offset[1]
+  placements.push({ t: `${NS}:${name}`, p: [b.px, py, b.pz], r: b.rot })
   footprints.push({ x1: b.x1, z1: b.z1, x2: b.x2, z2: b.z2, tag })
+  for (const m of t.marks ?? []) {
+    if (m.name !== 'npc') continue
+    const who = AT_BUILDING[name] ?? AT_BUILDING[m.role]
+    if (!who) continue
+    const [rx, rz] = TURN[b.rot]([m.pos[0], m.pos[2]])
+    npcSpots.push({ who, x: b.px + rx, y: py + m.pos[1], z: b.pz + rz })
+  }
   return b
 }
+const npcSpots = []
 
 const SOFT = new Set(['wall', 'tower', 'lamp', 'bench', 'planter'])
 /** True if the box overlaps any building already placed (walls, towers and lamps don't count). */
@@ -101,16 +113,18 @@ function pave(x1, z1, x2, z2, mix, y = 0) {
  * Greedy: at each spot it takes the next design that fits the span, stays inside `bounds` and doesn't overlap
  * anything placed; otherwise it moves on a block.
  */
-function row({ names, along, at, from, to, faces, gap = 1, r, bounds }) {
+function row({ names, along, at, from, to, faces, gap = 1, r, bounds, once }) {
   const before = placements.length
   const dir = from <= to ? 1 : -1
   let pos = from
-  let i = r ? r.int(0, names.length - 1) : 0
+  // Shops (`once`) are tried first; ordinary rows start at a random design so streets don't repeat.
+  let i = r && !once ? r.int(0, names.length - 1) : 0
   const inside = (b) => !bounds || (b.x1 >= bounds.x1 && b.x2 <= bounds.x2 && b.z1 >= bounds.z1 && b.z2 <= bounds.z2)
   while (dir > 0 ? pos <= to : pos >= to) {
     let placed = false
     for (let k = 0; k < names.length && !placed; k++) {
       const name = names[(i + k) % names.length]
+      if (once && once.has(name) && usedOnce.has(name)) continue
       const w = frontWidth(tpl(name))
       const end = pos + dir * (w - 1)
       if (dir > 0 ? end > to : end < to) continue
@@ -119,6 +133,7 @@ function row({ names, along, at, from, to, faces, gap = 1, r, bounds }) {
       const box = boxFor(name, faces, fx, fz)
       if (clashes(box) || !inside(box)) continue
       place(name, faces, fx, fz)
+      if (once && once.has(name)) usedOnce.add(name)
       pos = end + dir * (gap + 1)
       i = (i + k + 1) % names.length
       placed = true
@@ -166,10 +181,19 @@ function build() {
   place('plaza_fountain', 'south', 0, 6)
   place('notice_board', 'south', 8, -3)
   pave(-P + 1, -P + 1, P - 1, -6, MARKET)
-  const stalls = ['market_stall_fruit', 'market_stall_baker', 'market_stall_gems', 'market_stall_cloth', 'market_stall_fish', 'market_stall_spice']
-  for (const [from, to] of [[-P + 2, -A - 2], [A + 2, P - 2]]) {
-    row({ names: stalls, along: 'x', at: -11, from, to, faces: 'north', gap: 1, r })
-    row({ names: stalls.slice(3).concat(stalls.slice(0, 3)), along: 'x', at: -15, from, to, faces: 'south', gap: 1, r })
+  // Eight stalls, each once, in two rows facing over the lane (fronts at z -11 looking north, -15 looking south).
+  for (const [name, x, z, faces] of [
+    ['market_stall_baker', -15, -11, 'north'],
+    ['market_stall_fruit', -7, -11, 'north'],
+    ['market_stall_gems', 7, -11, 'north'],
+    ['market_stall_spice', 15, -11, 'north'],
+    ['market_stall_fish', -15, -15, 'south'],
+    ['market_stall_cloth', -7, -15, 'south'],
+    ['market_stall_flowers', 7, -15, 'south'],
+    ['market_stall_butcher', 15, -15, 'south']
+  ]) {
+    if (clashes(boxFor(name, faces, x, z))) throw new Error(`${name} doesn't fit at ${x},${z}`)
+    place(name, faces, x, z)
   }
   place('town_well', 'south', -12, 16)
   for (const [x, z] of [[-P, -P], [P, -P], [-P, P], [P, P]]) lamp(x, z)
@@ -182,11 +206,12 @@ function build() {
   const hi = outer - S - 1 // last block inside the outer ring road
   const mid = { x1: -hi, z1: -hi, x2: hi, z2: hi }
   for (const sg of [-1, 1]) {
-    // Fronts on the inner ring, looking at the plaza: shops on the north and south sides.
-    row({ names: shops, along: 'x', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'north' : 'south', r, bounds: mid })
-    row({ names: shops.slice().reverse(), along: 'x', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'north' : 'south', r, bounds: mid })
-    row({ names: town, along: 'z', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'west' : 'east', r, bounds: mid })
-    row({ names: town, along: 'z', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'west' : 'east', r, bounds: mid })
+    // Fronts on the inner ring, looking at the plaza: each shop once (they have their own shopkeeper), then townhouses.
+    const once = new Set(shops)
+    row({ names: [...shops, ...town], along: 'x', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
+    row({ names: [...shops.slice().reverse(), ...town], along: 'x', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'north' : 'south', r, bounds: mid, once })
+    row({ names: [...shops, ...town], along: 'z', at: sg * lo, from: -hi, to: -A - 2, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
+    row({ names: [...shops, ...town], along: 'z', at: sg * lo, from: A + 2, to: hi, faces: sg > 0 ? 'west' : 'east', r, bounds: mid, once })
     // Fronts on the outer ring, from inside.
     row({ names: town, along: 'x', at: sg * hi, from: -hi, to: -A - 2, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
     row({ names: town, along: 'x', at: sg * hi, from: A + 2, to: hi, faces: sg > 0 ? 'south' : 'north', r, bounds: mid })
@@ -316,7 +341,34 @@ function overlaps() {
   return out
 }
 
+/** Guards inside each gate, the mayor by the waystone, townsfolk about the plaza. */
+function people() {
+  const H = CITY.half
+  for (const [gx, gz] of [[0, -1], [0, 1], [-1, 0], [1, 0]]) {
+    const inward = H - 4
+    for (const side of [-2, 2]) {
+      const x = gx === 0 ? side : gx * inward
+      const z = gz === 0 ? side : gz * inward
+      npcSpots.push({ who: 'guard', x, y: 1, z })
+    }
+  }
+  npcSpots.push({ who: 'mayor', x: 3, y: 1, z: -8 })
+  for (const [x, z] of [[-9, 4], [9, -2], [-4, 13], [12, 12], [-15, -2]]) if (!clashes({ x1: x, z1: z, x2: x, z2: z })) npcSpots.push({ who: 'townsfolk', x, y: 1, z })
+}
+
+/** A stable UUID per NPC spot (re-importing the plan updates the same NPCs instead of adding more). */
+function uuidFor(key) {
+  const h = createHash('sha1').update(`lemurton:${key}`).digest('hex')
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-4${h.slice(13, 16)}-a${h.slice(17, 20)}-${h.slice(20, 32)}`
+}
+
 build()
+people()
+for (const n of npcSpots) {
+  const def = NPCS[n.who]
+  if (!def) throw new Error(`no NPC ${n.who}`)
+  plazaCommands.push(`easy_npc preset import data ${presetId(n.who, def.model)} ~${n.x + 0.5} ~${n.y} ~${n.z + 0.5} ${uuidFor(`${n.who}@${n.x},${n.z}`)}`)
+}
 const problems = overlaps()
 const plan = {
   version: 1,
@@ -334,6 +386,7 @@ const plan = {
 const out = path.join(root, 'pack', 'config', 'lemursaucepacket', 'hub_plan.json')
 writeFileSync(out, JSON.stringify(plan, null, 1) + '\n')
 for (const line of rows) console.log('  row ' + line)
+console.log(`${npcSpots.length} NPCs: ${Object.entries(npcSpots.reduce((a, n) => ((a[n.who] = (a[n.who] ?? 0) + 1), a), {})).map(([k, v]) => `${k} ${v}`).join(', ')}`)
 const buildings = footprints.filter((f) => !SOFT.has(f.tag)).length
 console.log(`${placements.length} placements (${buildings} buildings), ${paving.length} paving areas, ${blocks.length} blocks -> ${path.relative(root, out)}`)
 if (problems.length) {

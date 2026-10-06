@@ -35,6 +35,8 @@
 	chapter.4B0B7C46188E3D93.title: "Relic Hunter"
 	chapter.4BB94A94C87CDCB1.chapter_subtitle: ["Outposts, forts and ruined factories. Salvage what you can."]
 	chapter.4BB94A94C87CDCB1.title: "Banners of the Overworld"
+	chapter.514FCA55A49A33A2.chapter_subtitle: ["Meet the mayor and find your way around the city."]
+	chapter.514FCA55A49A33A2.title: "Welcome to Lemurton"
 	chapter.51E82E0954F782A5.chapter_subtitle: ["Farmer's Delight from first knife to Master Chef."]
 	chapter.51E82E0954F782A5.title: "Grand Kitchen"
 	chapter.55ED1DC4BC96FEB5.chapter_subtitle: ["Find your feet in a world that has been reworked."]
@@ -59,10 +61,12 @@
 	chapter.7DF2979C619D19C1.title: "The Foundry"
 	chapter_group.05D7205A6D5637F0.title: "Expeditions"
 	chapter_group.071A8EAF90A2B719.title: "The Ages"
+	chapter_group.5B879695BB0E0EB7.title: "Lemurton"
 	chapter_group.6C6400F8A74B6D9F.title: "Industry"
 	chapter_group.70BC9AA571D15575.title: "Mastery"
 	chapter_group.7DAB9BE5981EE62A.title: "Field Guides"
 	file.0000000000000001.title: "LemurSaucePacket"
+	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Meet the mayor and find your way around the city.\\n \\n&r&fLemurton is the realm's first city and a safe zone: no\\n&r&ffighting, digging or building inside the walls. Its people\\n&r&ftrade and hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
 	image.0A5D205330DDDF01.title: " \\n&6&lThe Enchanter\\n&r&7The Enchanting skill, Hardness tomes\\n&r&7and levels past the vanilla max.\\n \\n&r&fEnchanting is a skill here. The table trains it, and the skill\\n&r&fdecides how far an enchantment can go: Sharpness X at\\n&r&f99. Hardness tomes let your pickaxe break harder ores.\\n \\n&r&eUnlocks:\\n&r&fenchantments up to level X, Telekinesis, and the Hardness\\n&r&ftomes for iron, gold, diamonds, obsidian and ancient debris.\\n "
 	image.0F421FB4917EAF3E.title: " \\n&6&lRailway Company\\n&r&7Long trains, long journeys and a network that runs itself.\\n \\n&r&fIron Roads got you a line. This chapter makes\\n&r&fit a railway: signals, timetables, whistles, a\\n&r&ftrack factory and a train six carriages long.\\n \\n&r&eUnlocks:\\n&r&ffreight and passenger lines across the\\n&r&fwhole map, and the Grand Central prize.\\n "
 	image.10E4665E289211DE.title: " \\n&6&lBeyond the Dragon\\n&r&7The outer End: cities, ships, castles and the void.\\n \\n&r&fThe dragon is only the door. Out past the gateways\\n&r&fare end cities, Nullscape's strange biomes and the\\n&r&fcastles Dungeons and Taverns left in the dark.\\n \\n&r&eUnlocks:\\n&r&fshulker boxes, dragon breath, the levitation\\n&r&ftrick, and a second dragon fight on your terms.\\n "
@@ -375,6 +379,8 @@
 	quest.2C116A8515CA8574.quest_desc: ["Found in ocean, beach and river chests."]
 	quest.2C116A8515CA8574.title: "Cut Glass Boot"
 	quest.2C1B7D364ACF0A52.title: "Budding Contractor"
+	quest.2C6D5FD29C664761.quest_desc: ["Tell the mayor how you got on."]
+	quest.2C6D5FD29C664761.title: "Report Back"
 	quest.2CD0388FFD593882.quest_desc: ["The Dragonslayer Cape is yours when it falls."]
 	quest.2CD0388FFD593882.title: "&5The Dragon"
 	quest.2CEEFD1A5DD9339E.quest_desc: ["A castle full of Create machinery. Explore it carefully."]
@@ -456,6 +462,9 @@
 	quest.3A55BEAD0546926A.title: "Stone Age"
 	quest.3A83D5B48D315F47.quest_desc: ["Reach &eFishing 75&r. Fishing gives better catches."]
 	quest.3A83D5B48D315F47.title: "&aFishing 75"
+	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus stands by the waystone, just north of the fountain.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
+	quest.3BB197E455CD7B4D.quest_subtitle: "By the waystone"
+	quest.3BB197E455CD7B4D.title: "&6Meet the Mayor"
 	quest.3BD270C52A42450F.quest_desc: ["Reach &eWoodcutting 99&r. Woodcutting gives faster chopping.", "", "&6The Woodcutting Cape is yours at 99.&r Open /capes to wear it."]
 	quest.3BD270C52A42450F.title: "&aWoodcutting 99"
 	quest.3C106E95B4AD258E.quest_desc: ["Reach &eDefence 50&r. Defence gives +0.02 armour per level.", "", "&eUnlocked on the way:&r", "• 30: diamond armour", "• 40: the Ember Crown", "• 45: the Compacted Diamond set", "• 50: netherite armour and diving gear"]
@@ -718,6 +727,8 @@
 	quest.63262AE8B48DF4D5.title: "Blaze Enchantry"
 	quest.63292C21DCEF25B1.quest_desc: ["Friends \\& Foes builds citadels in the Nether. The wildfire, a blaze queen, rules one."]
 	quest.63292C21DCEF25B1.title: "A Fortress? No, a Citadel"
+	quest.6377F5FE70E96283.quest_desc: ["Bessa the baker has a stall in the market on the north side of the plaza.", "", "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", "", "&7Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour)."]
+	quest.6377F5FE70E96283.title: "Market Day"
 	quest.63D3B4DA71A590BD.title: "Illager Manor"
 	quest.63FACB40AF50B90A.quest_desc: ["Reach &eHitpoints 50&r. Hitpoints gives a heart every ten levels."]
 	quest.63FACB40AF50B90A.title: "&cHitpoints 50"
@@ -930,6 +941,7 @@
 	task.131C978427B18D57.title: "Agility level 25"
 	task.14BABADC4BF07ACA.title: "Woodcutting level 50"
 	task.14F9B740ED2FE099.title: "Use a blaze enchanter 1000 times"
+	task.15CA6D553AAF710B.title: "Ask the mayor for work"
 	task.16065580B9B7F7F3.title: "I found my first relic"
 	task.16839C0FC4C6002E.title: "I set a waypoint at my base"
 	task.16CAF1C4D3AC1DAB.title: "Enchanting level 50"
@@ -1025,6 +1037,7 @@
 	task.4A57C0A5F180A3C2.title: "Fishing level 99"
 	task.4A9DA782299AD918.title: "I have a plan"
 	task.4B1C7BE52A2C4FD7.title: "Attack level 99"
+	task.4BF994C58320B80F.title: "Talk to the mayor"
 	task.4C8A68F1BF4EAC05.title: "Cure a zombie villager"
 	task.4CE188EBE076F344.title: "I know what a death costs"
 	task.4DA97E840D2B2C7F.title: "A waystone stands at my base"
@@ -1057,6 +1070,7 @@
 	task.5DA5ABCE9BDF96CA.title: "Fishing level 10"
 	task.5DBCC4E41198A4F5.title: "Give an arm 10 or more outputs"
 	task.5E411D3AEF058378.title: "Run crushing wheels at maximum speed"
+	task.5E8A51DCB3BC70EB.title: "Buy something from Bessa"
 	task.5FB7737EB47E5781.title: "Eat a nourishing meal"
 	task.603C8C4165B0931C.title: "Ranged level 50"
 	task.608E61D21E606CFC.title: "A book of Telekinesis"

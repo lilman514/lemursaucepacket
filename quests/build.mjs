@@ -192,6 +192,12 @@ function taskData(task, id, where) {
     return { ...base, observe_type: isTag ? 1 : 0, timer: L(task.ticks ?? 20), to_observe: task.observe, type: 'observation' }
   }
   if (task.checkmark) return { ...base, type: 'checkmark' }
+  // A game stage, which in this pack is a vanilla player tag (FTB Library's default stage provider): NPC dialog
+  // buttons add them (/tag @initiator add <stage>), so talking to the right townsperson completes the task.
+  if (task.stage) {
+    if (!/^[a-z0-9_]+$/.test(task.stage)) problems.push(`${where}: stage "${task.stage}" must be lower case, digits and _`)
+    return { ...base, stage: task.stage, type: 'gamestage' }
+  }
   throw new Error(`${where}: unknown task ${JSON.stringify(task)}`)
 }
 
@@ -232,6 +238,8 @@ function rewardData(quest, key, where) {
   for (const [i, command] of (reward.commands ?? []).entries()) {
     out.push({ id: hexId(`${key}/command/${i}`), type: 'command', command, elevate_perms: true, silent: true })
   }
+  // NPC questlines hand rewards over as you talk (the pack's default is claim-by-hand in the book).
+  if (quest.auto) for (const r of out) r.auto = 'enabled'
   return out
 }
 

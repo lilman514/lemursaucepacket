@@ -1,0 +1,258 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Lemurton's mayor: greets newcomers and starts the city's first questline.",
+    entityTypeId:"easy_npc:humanoid",
+    name:"Mayor Thaddeus",
+    variantType:"PROFESSOR_01",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:humanoid",
+    VariantType:"PROFESSOR_01",
+    CustomName:'{"text":"Mayor Thaddeus","color":"#E0AC46"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"done",
+          Name:"Welcome home",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Lemurton is glad to have you, @initiator.
+
+Your quest book will tell you when someone else here needs a hand, and the waystone will always bring you back."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_welcome_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"done_0",
+              Name:"Tell me about the city again",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"about"
+                }
+              ]
+            },
+            {
+              Label:"done_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"report",
+          Name:"A loaf from Bessa",
+          Priority:30,
+          Texts:[
+            {
+              Text:"You found Bessa at the market, I see. Every coin spent in that square keeps this city fed.
+
+Well done, @initiator. Lemurton is your home now."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_welcome_met"
+            },
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_welcome_bread"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"report_0",
+              Name:"Glad to help",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_welcome_done"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"done"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"market",
+          Name:"The market",
+          Priority:20,
+          Texts:[
+            {
+              Text:"Go and see Bessa the baker in the market, north of the fountain, and buy yourself a loaf. Here is a little purse from the city to cover it."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_welcome_met"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"market_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"Welcome",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Welcome to Lemurton, @initiator! I am Thaddeus, mayor of this fine city.
+
+No fighting and no building inside the walls; everything else is yours to explore."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"What is this place?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"about"
+                }
+              ]
+            },
+            {
+              Label:"default_1",
+              Name:"Any work for a newcomer?",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_welcome_met"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"market"
+                }
+              ]
+            },
+            {
+              Label:"default_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"about",
+          Name:"About Lemurton",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Lemurton is the first city of the realm. The waystone by the fountain links the roads you discover; the market and the shops on the ring streets buy and sell for coin; the guards keep the peace.
+
+Nobody can build or fight inside the walls, so it is the safest place in the land."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"about_0",
+              Name:"Any work for a newcomer?",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_welcome_met"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"market"
+                }
+              ]
+            },
+            {
+              Label:"about_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc"
+    ]
+  }
+}

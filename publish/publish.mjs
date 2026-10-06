@@ -51,6 +51,8 @@ console.log(`Publishing ${name} ${version} (Minecraft ${minecraft}, ${loader} ${
 if (existsSync(path.join(root, 'quests', 'book.mjs'))) {
   execFileSync(process.execPath, [path.join(root, 'quests', 'build.mjs')], { stdio: 'inherit' })
 }
+// The Lemurton townsfolk: Easy NPC presets from npcs/npcs.mjs (structures/hub.mjs places them).
+execFileSync(process.execPath, [path.join(root, 'npcs', 'build.mjs')], { stdio: 'inherit' })
 // Likewise the RuneScape-style skills (Project MMO config) come from skills/build.mjs.
 if (existsSync(path.join(root, 'skills', 'build.mjs'))) {
   execFileSync(process.execPath, [path.join(root, 'skills', 'build.mjs')], { stdio: 'inherit' })

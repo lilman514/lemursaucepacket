@@ -169,7 +169,7 @@ Waystones (with Balm) are in for fast travel, on the owner's terms: found in the
 - **Airships:** Waystones + Sable compat so a waystone on a ship teleports correctly.
 - Travel costs are the mod's defaults (XP points by distance, capped); `warpRequirements` is the knob if it ever feels too free.
 
-## The spawn city and the RuneScape layer (in progress, 1.2.8)
+## The spawn city and the RuneScape layer (in progress, 1.2.8 to 1.2.9)
 
 The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and Hypixel SkyBlock. A fresh world at launch spawns everyone in a city, the tier-1 trading hub, with a waystone, shops, and NPCs giving RuneScape-style questlines. Some questlines unlock item types (OSRS-style gating). QOL items speed up tedious jobs. The owner chose a fresh world for launch and a safe-zone city.
 
@@ -177,7 +177,7 @@ The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and
   - Lumbridge stone cottages and Draynor/Seers timber cottages under steep thatch.
   - Varrock townhouses: dressed stone below, jettied timber frame above, slate, tile or shingle roofs.
   - Shops with hanging signs, market stalls with striped canopies, a well, a fountain, round towers (crenellated or coned), and curtain wall.
-  - 48 templates: 14 cottages, 13 townhouses, 7 shops, 6 stalls, fixtures, castle pieces.
+  - 50 templates: 14 cottages, 13 townhouses, 7 shops, 8 stalls, fixtures, castle pieces.
 - **Lemurton**, the city (structures/hub.mjs writes `config/lemursaucepacket/hub_plan.json`):
   - Layout: walls at plus or minus 76, a 43-wide plaza (fountain, waystone, market, well, trees in planters, benches, a lamp ring), an inner ring street, a middle band of townhouses and shops, an outer ring road, cottages, four gates.
   - About 90 buildings plus 52 wall and tower pieces.
@@ -198,11 +198,19 @@ The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and
   - Fire spread has no event, so `FireZoneMixin` and `LightningZoneMixin` cover it.
   - Hostile mobs are cancelled on spawn and swept every 5 s. Exempt: those tagged `lsp_zone_allowed`, named mobs, and anything from `easy_npc`.
   - Tested 9/9 on 2026-10-05: break, place, bucket, zombie, tagged zombie, TNT, op in creative.
-- **Next (researched 2026-10-05):**
-  - NPCs: Easy NPC Core and Config UI 7.14 as preset files in `kubejs/data/lemursaucepacket/easy_npc/preset`, placed with `/easy_npc preset import data`.
-  - Quests: questlines in FTB Quests as `gamestage` steps that NPC dialog buttons set with `/tag @initiator add`. FTB stages, KubeJS stages, `/tag` and Easy NPC's PLAYER_TAG are all vanilla player tags here. `/ftbquests change_progress` refuses non-player sources.
+- **People and quests (1.2.9):**
+  - NPCs are Easy NPC Core and Config UI 7.14 presets. `npcs/build.mjs` writes them from `npcs/npcs.mjs` into `kubejs/data/lemursaucepacket/easy_npc/preset/<model>/`, checking every item against the registry dump.
+  - hub.mjs puts one at every `npc` mark (8 stalls, 7 shops), plus the mayor by the waystone, 8 gate guards and 5 townsfolk: 29 in all. They are placed by `/easy_npc preset import data <preset> <pos> <uuid>` commands in the plan, with fixed UUIDs (sha1 of the spot).
+  - Every NPC is invulnerable, can't be pushed or knocked back, looks at nearby players, and is tagged `lsp_zone_allowed` and `lemurton_npc`.
+  - Shops use Easy NPC's BASIC trading (the vanilla merchant screen): at most two stacks to pay, one to get, refilled hourly. Prices are written in spurs and `price()` picks the coins.
+  - Questlines are FTB Quests chapters in a Lemurton group (quests/book.mjs). Each step is a `gamestage` task on a vanilla player tag that an NPC sets: a dialog button runs `/tag @initiator add <stage>`, or an action event does (Bessa's ON_TRADE). Dialogs choose themselves from the same tags (PLAYER_TAG conditions, highest priority first), so the mayor's lines follow the quest. NPC quests set `auto` on their rewards (the pack's default is manual claiming).
+  - The first chapter, Welcome to Lemurton: meet the mayor, buy from Bessa at the market, report back. Tested end to end on 2026-10-05: dialog and trade screens, auto-paid rewards.
+  - Gotcha: a dialog or trade screen forced open (`/easy_npc dialog open`) before the player's client has the NPC entity disconnects that player (an NPE in Easy NPC's DialogScreen), so only open them for players standing next to the NPC.
+- **Next:**
+  - More questlines (easy and hard, short and long) in the same pattern.
   - Quest-gated wearing and use: hidden Project MMO skills granted by `pmmo:levelreward`. Crafting: the crafting-result mixin.
-  - Shops: Numismatics creative vendors.
+  - Card payments: NPC trades take coins as items from the purse, not the bank; Numismatics creative vendors could take bank cards.
+  - Settlements in worldgen (jigsaw structures from the same templates); special buildings (bank, inn, church, guild hall, castle keep); custom NPC skins.
 
 ## Look and feel: one kit everywhere
 

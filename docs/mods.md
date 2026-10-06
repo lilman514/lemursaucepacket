@@ -1,8 +1,8 @@
 # Mods in the pack
 
-174 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+176 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (130)
+## On the server and every client (132)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -37,6 +37,8 @@
 - [Curios API](https://modrinth.com/project/vvuO3ImH)
 - [DragonLib](https://modrinth.com/project/sbIsGaOV)
 - [Dungeons and Taverns](https://modrinth.com/project/tpehi7ww)
+- [Easy NPC: Config UI](https://modrinth.com/project/uTGjf7vA)
+- [Easy NPC: Core](https://modrinth.com/project/Epm6R3P2)
 - [Enchantment Descriptions](https://modrinth.com/project/UVtY3ZAC)
 - [Every Compat (Wood Good)](https://modrinth.com/project/eiktJyw1)
 - [FallingTree](https://modrinth.com/project/Fb4jn8m6)

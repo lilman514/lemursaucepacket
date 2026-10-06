@@ -441,6 +441,7 @@ export default {
   tiers: TIERS,
   tables: TABLES,
   groups: [
+    { key: 'lemurton', title: 'Lemurton' },
     { key: 'ages', title: 'The Ages' },
     { key: 'industry', title: 'Industry' },
     { key: 'expeditions', title: 'Expeditions' },
@@ -448,6 +449,55 @@ export default {
     { key: 'mastery', title: 'Mastery' }
   ],
   chapters: [
+    // ================================================================= LEMURTON
+    // The spawn city's questlines, given by its people (npcs/npcs.mjs). Steps are game stages (player tags) that
+    // NPC dialog buttons set; rewards hand themselves over (auto) as you talk.
+    {
+      key: 'lemurton_welcome',
+      group: 'lemurton',
+      title: 'Welcome to Lemurton',
+      subtitle: 'Meet the mayor and find your way around the city.',
+      about: "Lemurton is the realm's first city and a safe zone: no fighting, digging or building inside the walls. Its people trade and hand out quests: right-click one to talk.",
+      unlocks: 'a purse of coins, a loaf of bread, and the run of the city.',
+      icon: 'waystones:waystone',
+      quests: [
+        {
+          key: 'meet_mayor',
+          title: '&6Meet the Mayor',
+          subtitle: 'By the waystone',
+          shape: 'gear',
+          size: 1.5,
+          icon: 'minecraft:bell',
+          tier: 1,
+          auto: true,
+          desc: ['Mayor Thaddeus stands by the waystone, just north of the fountain.', '', 'Right-click him and ask for work.', '', tip('Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk.')],
+          tasks: [{ stage: 'q_welcome_met', title: 'Ask the mayor for work', icon: 'minecraft:bell' }],
+          reward: { coins: 16 }
+        },
+        {
+          key: 'market_day',
+          title: 'Market Day',
+          after: ['meet_mayor'],
+          icon: 'minecraft:bread',
+          tier: 1,
+          auto: true,
+          desc: ['Bessa the baker has a stall in the market on the north side of the plaza.', '', "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", '', tip('Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour).')],
+          tasks: [{ stage: 'q_welcome_bread', title: 'Buy something from Bessa', icon: 'minecraft:bread' }]
+        },
+        {
+          key: 'report_back',
+          title: 'Report Back',
+          after: ['market_day'],
+          icon: 'minecraft:writable_book',
+          tier: 1,
+          auto: true,
+          desc: ['Tell the mayor how you got on.'],
+          tasks: [{ stage: 'q_welcome_done', title: 'Talk to the mayor', icon: 'minecraft:bell' }],
+          reward: { coins: 24, items: [{ item: 'minecraft:bread', count: 4 }] }
+        }
+      ]
+    },
+
     // ================================================================= THE AGES
     {
       key: 'landfall',

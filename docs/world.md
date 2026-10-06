@@ -14,7 +14,16 @@ A new world starts you in **Lemurton**, a walled town in the style of RuneScape'
 - a plaza with a fountain and the **Lemurton waystone**, visible to everyone from the start;
 - a market of stalls;
 - shops and townhouses on the ring streets, and cottages by the walls;
-- four gates.
+- four gates, with guards;
+- its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets.
+
+### Townsfolk, trade and quests
+
+Right-click anyone in Lemurton to talk to them.
+
+- **Market traders and shopkeepers** sell for Numismatics coins. The market has fruit, bread and cakes, fish, meat, seeds and spices, flowers and saplings, and wool. The shops on the ring streets have tools and weapons, leather armour, building blocks, fishing gear, brewing supplies and a general store. Most also buy what you bring them, such as wheat, wool, leather, fish, gems and gold. Trades refill every hour.
+- **Mayor Thaddeus** gives the first quest, *Welcome to Lemurton* (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market, then report back. The rewards hand themselves over as you go. More questlines start in Lemurton as the city grows.
+- The townsfolk can't be hurt or pushed around.
 
 Lemurton is a **safe zone**:
 

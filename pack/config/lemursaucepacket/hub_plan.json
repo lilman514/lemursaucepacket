@@ -378,45 +378,36 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:market_stall_gems",
+   "t": "lemursaucepacket:market_stall_baker",
    "p": [
-    -13,
+    -12,
     1,
     -6
    ],
    "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_fish",
-   "p": [
-    -6,
-    1,
-    -6
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_cloth",
-   "p": [
-    -18,
-    1,
-    -20
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:market_stall_fish",
-   "p": [
-    -9,
-    1,
-    -20
-   ],
-   "r": "none"
   },
   {
    "t": "lemursaucepacket:market_stall_fruit",
    "p": [
-    11,
+    -4,
+    1,
+    -6
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:market_stall_gems",
+   "p": [
+    10,
+    1,
+    -6
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:market_stall_spice",
+   "p": [
+    18,
     1,
     -6
    ],
@@ -425,14 +416,32 @@
   {
    "t": "lemursaucepacket:market_stall_fish",
    "p": [
-    6,
+    -17,
     1,
     -20
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:market_stall_spice",
+   "t": "lemursaucepacket:market_stall_cloth",
+   "p": [
+    -10,
+    1,
+    -20
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:market_stall_flowers",
+   "p": [
+    4,
+    1,
+    -20
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:market_stall_butcher",
    "p": [
     12,
     1,
@@ -450,7 +459,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_jeweller",
+   "t": "lemursaucepacket:shop_smithy",
    "p": [
     -51,
     -2,
@@ -459,7 +468,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:varrock_general_store",
+   "t": "lemursaucepacket:shop_tailor",
    "p": [
     -41,
     -2,
@@ -468,7 +477,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_smithy",
+   "t": "lemursaucepacket:shop_apothecary",
    "p": [
     -31,
     -2,
@@ -477,7 +486,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_tailor",
+   "t": "lemursaucepacket:shop_fishing",
    "p": [
     -21,
     -2,
@@ -486,7 +495,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_jeweller",
+   "t": "lemursaucepacket:varrock_general_store",
    "p": [
     5,
     -2,
@@ -495,7 +504,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_builder",
+   "t": "lemursaucepacket:shop_jeweller",
    "p": [
     15,
     -2,
@@ -504,7 +513,7 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_fishing",
+   "t": "lemursaucepacket:shop_builder",
    "p": [
     25,
     -2,
@@ -513,16 +522,16 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:shop_apothecary",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
-    35,
+    38,
     -2,
     -38
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:townhouse_09",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
     -38,
     -2,
@@ -531,63 +540,72 @@
    "r": "ccw90"
   },
   {
+   "t": "lemursaucepacket:varrock_townhouse_tall",
+   "p": [
+    -38,
+    -2,
+    -18
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:townhouse_01",
+   "p": [
+    -38,
+    -2,
+    -8
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:varrock_townhouse",
+   "p": [
+    -38,
+    -2,
+    13
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:varrock_townhouse_tall",
+   "p": [
+    -38,
+    -2,
+    23
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:townhouse_01",
+   "p": [
+    -38,
+    -2,
+    33
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:townhouse_02",
+   "p": [
+    -38,
+    -2,
+    45
+   ],
+   "r": "ccw90"
+  },
+  {
    "t": "lemursaucepacket:townhouse_10",
    "p": [
-    -38,
+    -41,
     -2,
-    -16
+    -40
    ],
-   "r": "ccw90"
+   "r": "cw180"
   },
   {
    "t": "lemursaucepacket:varrock_townhouse",
    "p": [
-    -38,
-    -2,
-    -6
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_02",
-   "p": [
-    -38,
-    -2,
-    15
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_03",
-   "p": [
-    -38,
-    -2,
-    25
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_04",
-   "p": [
-    -38,
-    -2,
-    37
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_05",
-   "p": [
-    -38,
-    -2,
-    47
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:varrock_townhouse",
-   "p": [
-    -43,
+    -18,
     -2,
     -40
    ],
@@ -596,16 +614,7 @@
   {
    "t": "lemursaucepacket:townhouse_02",
    "p": [
-    -15,
-    -2,
-    -40
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:townhouse_05",
-   "p": [
-    -5,
+    -6,
     -2,
     -40
    ],
@@ -623,7 +632,7 @@
   {
    "t": "lemursaucepacket:townhouse_04",
    "p": [
-    27,
+    30,
     -2,
     -40
    ],
@@ -632,23 +641,23 @@
   {
    "t": "lemursaucepacket:townhouse_05",
    "p": [
-    37,
+    40,
     -2,
     -40
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_06",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
-    49,
+    50,
     -2,
     -40
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_10",
+   "t": "lemursaucepacket:townhouse_05",
    "p": [
     -40,
     -2,
@@ -657,16 +666,16 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "lemursaucepacket:townhouse_06",
    "p": [
     -40,
     -2,
-    -14
+    -16
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_04",
+   "t": "lemursaucepacket:townhouse_02",
    "p": [
     -40,
     -2,
@@ -675,20 +684,20 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_05",
+   "t": "lemursaucepacket:townhouse_04",
    "p": [
     -40,
     -2,
-    20
+    17
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_06",
+   "t": "lemursaucepacket:townhouse_05",
    "p": [
     -40,
     -2,
-    30
+    29
    ],
    "r": "cw90"
   },
@@ -702,25 +711,25 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_general_store",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
-    -18,
+    -17,
     -2,
     38
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:shop_smithy",
+   "t": "lemursaucepacket:varrock_townhouse_tall",
    "p": [
-    -8,
+    -7,
     -2,
     38
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:shop_smithy",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
     13,
     -2,
@@ -729,7 +738,7 @@
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:varrock_general_store",
+   "t": "lemursaucepacket:varrock_townhouse_tall",
    "p": [
     23,
     -2,
@@ -738,7 +747,7 @@
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:shop_jeweller",
+   "t": "lemursaucepacket:townhouse_01",
    "p": [
     33,
     -2,
@@ -747,16 +756,16 @@
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:shop_builder",
+   "t": "lemursaucepacket:townhouse_02",
    "p": [
-    46,
+    45,
     -2,
     38
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:townhouse_10",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
     38,
     -2,
@@ -765,25 +774,25 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:varrock_townhouse",
+   "t": "lemursaucepacket:varrock_townhouse_tall",
    "p": [
     38,
     -2,
-    -14
+    -13
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_08",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
-    40,
+    38,
     -2,
     5
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_09",
+   "t": "lemursaucepacket:varrock_townhouse_tall",
    "p": [
     38,
     -2,
@@ -792,7 +801,7 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_10",
+   "t": "lemursaucepacket:townhouse_01",
    "p": [
     38,
     -2,
@@ -801,7 +810,7 @@
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_02",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
     -26,
     -2,
@@ -810,9 +819,9 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:townhouse_05",
+   "t": "lemursaucepacket:townhouse_02",
    "p": [
-    -14,
+    -16,
     -2,
     40
    ],
@@ -864,45 +873,54 @@
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:townhouse_04",
+   "t": "lemursaucepacket:varrock_townhouse",
    "p": [
     40,
     -2,
-    24
+    13
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_02",
+   "t": "lemursaucepacket:townhouse_02",
+   "p": [
+    40,
+    -2,
+    25
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:cottage_06",
    "p": [
     -70,
+    -2,
+    -66
+   ],
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:cottage_07",
+   "p": [
+    -54,
     -2,
     -68
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_03",
+   "t": "lemursaucepacket:cottage_08",
    "p": [
-    -56,
+    -38,
     -2,
     -66
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_04",
+   "t": "lemursaucepacket:cottage_09",
    "p": [
-    -42,
-    -2,
-    -66
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_05",
-   "p": [
-    -28,
+    -24,
     -2,
     -66
    ],
@@ -910,15 +928,6 @@
   },
   {
    "t": "lemursaucepacket:cottage_10",
-   "p": [
-    -14,
-    -2,
-    -66
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_05",
    "p": [
     5,
     -2,
@@ -927,70 +936,79 @@
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_06",
+   "t": "lemursaucepacket:lumbridge_cottage",
    "p": [
-    19,
+    17,
     -2,
     -66
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_07",
+   "t": "lemursaucepacket:lumbridge_cottage_long",
    "p": [
-    35,
-    -2,
-    -68
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:cottage_08",
-   "p": [
-    51,
+    31,
     -2,
     -66
    ],
    "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_07",
+   "t": "lemursaucepacket:draynor_cottage",
    "p": [
-    -68,
+    47,
     -2,
-    -43
+    -66
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_08",
+   "t": "lemursaucepacket:cottage_10",
    "p": [
-    -66,
+    61,
     -2,
-    -29
+    -66
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:cottage_09",
-   "p": [
-    -66,
-    -2,
-    -13
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:cottage_08",
+   "t": "lemursaucepacket:draynor_cottage",
    "p": [
     -66,
     -2,
-    15
+    -45
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_09",
+   "t": "lemursaucepacket:seers_cottage",
+   "p": [
+    -66,
+    -2,
+    -28
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:cottage_01",
+   "p": [
+    -66,
+    -2,
+    -14
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:lumbridge_cottage_long",
+   "p": [
+    -66,
+    -2,
+    17
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "lemursaucepacket:draynor_cottage",
    "p": [
     -66,
     -2,
@@ -999,63 +1017,36 @@
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "lemursaucepacket:seers_cottage",
    "p": [
     -66,
     -2,
-    43
+    45
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage",
+   "t": "lemursaucepacket:cottage_01",
    "p": [
     -66,
     -2,
-    57
+    59
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:cottage_10",
+   "t": "lemursaucepacket:cottage_04",
    "p": [
-    -66,
-    -2,
-    69
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:cottage_10",
-   "p": [
-    -47,
+    -45,
     -2,
     66
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage",
+   "t": "lemursaucepacket:cottage_05",
    "p": [
-    -33,
-    -2,
-    66
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:lumbridge_cottage_long",
-   "p": [
-    -17,
-    -2,
-    66
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:cottage_10",
-   "p": [
-    -5,
+    -31,
     -2,
     66
    ],
@@ -1064,7 +1055,25 @@
   {
    "t": "lemursaucepacket:cottage_06",
    "p": [
-    17,
+    -15,
+    -2,
+    66
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:cottage_05",
+   "p": [
+    15,
+    -2,
+    66
+   ],
+   "r": "cw180"
+  },
+  {
+   "t": "lemursaucepacket:cottage_06",
+   "p": [
+    31,
     -2,
     66
    ],
@@ -1073,7 +1082,7 @@
   {
    "t": "lemursaucepacket:cottage_07",
    "p": [
-    33,
+    47,
     -2,
     68
    ],
@@ -1082,72 +1091,72 @@
   {
    "t": "lemursaucepacket:cottage_08",
    "p": [
-    47,
+    61,
     -2,
     66
    ],
    "r": "cw180"
   },
   {
-   "t": "lemursaucepacket:cottage_09",
+   "t": "lemursaucepacket:cottage_07",
    "p": [
-    63,
-    -2,
-    66
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:cottage_10",
-   "p": [
-    66,
+    68,
     -2,
     -55
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage",
+   "t": "lemursaucepacket:cottage_08",
    "p": [
     66,
     -2,
-    -43
+    -39
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:lumbridge_cottage_long",
+   "t": "lemursaucepacket:cottage_09",
    "p": [
     66,
     -2,
-    -29
+    -25
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_02",
+   "t": "lemursaucepacket:cottage_08",
    "p": [
-    68,
+    66,
     -2,
     5
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_03",
+   "t": "lemursaucepacket:cottage_09",
    "p": [
     66,
     -2,
-    22
+    19
    ],
    "r": "cw90"
   },
   {
-   "t": "lemursaucepacket:cottage_04",
+   "t": "lemursaucepacket:cottage_10",
    "p": [
     66,
     -2,
-    36
+    35
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "lemursaucepacket:cottage_10",
+   "p": [
+    66,
+    -2,
+    47
    ],
    "r": "cw90"
   },
@@ -3994,7 +4003,36 @@
   "place feature minecraft:oak ~14 ~1 ~9",
   "place feature minecraft:oak ~14 ~1 ~16",
   "place feature minecraft:oak ~-17 ~1 ~6",
-  "place feature minecraft:oak ~6 ~1 ~17"
+  "place feature minecraft:oak ~6 ~1 ~17",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_baker.npc.snbt ~-14.5 ~1 ~-7.5 30228968-2576-4a11-abb6-5ac98831bdf9",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fruit_seller.npc.snbt ~-6.5 ~1 ~-7.5 5fa18d16-5c3f-4312-a37f-52c7fd984db4",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_gem_trader.npc.snbt ~7.5 ~1 ~-7.5 4de2bd9c-c34d-46dc-aaee-ebfb07e05a53",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_spice_merchant.npc.snbt ~15.5 ~1 ~-7.5 139521a2-2068-4034-a2a1-f94aa2f4c399",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fishmonger.npc.snbt ~-13.5 ~1 ~-17.5 b01e733e-b697-4b4a-ae7e-99eb44bb16d3",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_tailor.npc.snbt ~-5.5 ~1 ~-17.5 22c88b9d-1f3d-4b7b-a348-51de1eb7ec21",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_flower_seller.npc.snbt ~7.5 ~1 ~-17.5 bdbff5ca-8e2d-4526-ab85-80cde9e5e870",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_butcher.npc.snbt ~15.5 ~1 ~-17.5 b5509cdd-f94f-4656-a539-ec4a44276327",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt ~-46.5 ~1 ~-34.5 31337c54-7e12-4940-ad12-1c06b777c2ba",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt ~-36.5 ~1 ~-34.5 ad08cb73-b79d-429a-a13d-d37bfdac3fe6",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt ~-26.5 ~1 ~-34.5 52a446c1-c07b-4e8a-a886-5c533fb3ba91",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_fishing.npc.snbt ~-16.5 ~1 ~-34.5 de445497-7542-4dfc-acc7-ed405e1ecc72",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_varrock_general_store.npc.snbt ~9.5 ~1 ~-34.5 d47294a5-947a-489b-a309-ab7c931e521f",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt ~19.5 ~1 ~-34.5 ef341f64-6939-44c1-abe5-391d8d646042",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_builder.npc.snbt ~29.5 ~1 ~-34.5 a7cee743-b93b-4548-ae77-b9aa4736cc99",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~-71.5 e90070e0-f29d-4b9f-ab7a-5a83b9869715",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~-71.5 ad77fdc6-02b7-4269-a94d-dd509e1a4097",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~72.5 472e007a-3372-4e40-a3a7-7823ec959948",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~72.5 b41f557d-5e19-4d13-a70f-a87d9c767f38",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-71.5 ~1 ~-1.5 c6ee6daf-a894-4d51-a185-6980aa1eb311",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-71.5 ~1 ~2.5 b285ca34-9f7d-4986-a70b-d35e3f311650",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~72.5 ~1 ~-1.5 0b0230e1-2faa-4075-a4d0-d3969d1de4d0",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~72.5 ~1 ~2.5 887701ac-0174-4a9b-ab20-26df3997d4e6",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_mayor.npc.snbt ~3.5 ~1 ~-7.5 e94a1b3c-bd3b-4b68-a392-e3d3b31630d6",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-8.5 ~1 ~4.5 7f4086d0-971c-4e1d-ae5a-98ddad2218ad",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~9.5 ~1 ~-1.5 df79e006-2c6a-42e8-ab54-7617009193e0",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-3.5 ~1 ~13.5 53c12b94-cc1e-4b1d-a9a8-ada727140124",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~12.5 ~1 ~12.5 72fca1da-81a9-4e26-a32b-4ffcdff11d62",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-14.5 ~1 ~-1.5 863d8cbb-ce04-4b2c-a8b3-60a0285ed2ba"
  ],
  "waystone": {
   "p": [

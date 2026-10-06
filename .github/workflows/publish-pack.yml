@@ -1,4 +1,4 @@
-# Push a change under pack/, quests/, skills/, gear/, capes/, enchanting/, docs/ or publish/ and this rebuilds launcher.json + the .mrpack and deploys
+# Push a change under pack/, quests/, npcs/, skills/, gear/, capes/, enchanting/, docs/ or publish/ and this rebuilds launcher.json + the .mrpack and deploys
 # them to GitHub Pages. Players get the update the next time they press Play.
 # One-time setup: repo Settings → Pages → Source: "GitHub Actions".
 name: Publish pack
@@ -6,7 +6,7 @@ name: Publish pack
 on:
   push:
     branches: [main]
-    paths: ['pack/**', 'publish/**', 'quests/**', 'skills/**', 'gear/**', 'capes/**', 'enchanting/**', 'docs/**']
+    paths: ['pack/**', 'publish/**', 'quests/**', 'npcs/**', 'skills/**', 'gear/**', 'capes/**', 'enchanting/**', 'docs/**']
   workflow_dispatch:
 
 permissions:
