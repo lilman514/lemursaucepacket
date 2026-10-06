@@ -142,10 +142,17 @@ public final class EconomyClient {
     private static void onTooltipComponents(net.neoforged.neoforge.client.event.RenderTooltipEvent.GatherComponents event) {
         ItemStack stack = event.getItemStack();
         if (!stack.has(EconomyContent.DISPLAY.get())) return;
+        // Other tooltip mods may slip elements in between, so cut after our own last line rather than at a count.
         var lore = stack.get(net.minecraft.core.component.DataComponents.LORE);
-        int keep = 1 + (lore == null ? 0 : lore.lines().size());
+        String last = lore == null || lore.lines().isEmpty() ? stack.getHoverName().getString() : lore.lines().get(lore.lines().size() - 1).getString();
         var elements = event.getTooltipElements();
-        while (elements.size() > keep) elements.remove(elements.size() - 1);
+        int cut = -1;
+        for (int i = 0; i < elements.size(); i++) {
+            var text = elements.get(i).left();
+            if (text.isPresent() && text.get().getString().equals(last)) cut = i;
+        }
+        if (cut < 0) return;
+        while (elements.size() > cut + 1) elements.remove(elements.size() - 1);
     }
 
     // ---------------------------------------------------------------- the amount box

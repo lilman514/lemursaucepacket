@@ -3370,8 +3370,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.6.0.jar"
-hash = "caf9fdf9d1ee51ad1bda8eafafcafdf53189be5e5dfc2658190ec0470a0eb68c"
+file = "mods/lsp_fixes-1.6.1.jar"
+hash = "cfb6fa8c266c6760b926076faa60ba1c57096c7d64d84262ea8934cc95705541"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"
