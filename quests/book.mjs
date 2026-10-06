@@ -5,17 +5,20 @@
 //
 // Quest fields: key (stable id, never rename once players have progress), title, subtitle, desc
 // (array of lines; "" = blank line; & colour codes), after (quest keys in the same chapter), tier (1-5, see
-// TIERS), tasks, reward (extras on top of the tier: { xp, coins (in spurs: 1 bevel = 8, 1 cog = 64), items,
+// TIERS), tasks, reward (extras on top of the tier: { xp, coins (Gold Coins), items,
 // tables, rolls, commands }), icon, shape, size, pos ([x, y] to place by hand), minDeps (how many of `after`
 // must be done), hideLines, hidden (invisible until `after` is done), milestone (Skills chapter only).
 // Task kinds: { item, count, components, match } { kill, count } { structure } { biome } { dimension }
 // { advancement } { observe: block id or '#block_tag', ticks } (look at one) { checkmark, title }
 // { custom, title } (only a server script completes it). Any task can carry an `icon`.
 //
-// Rewards: every quest pays its tier's XP and Numismatics coins (they feed the player economy) and rolls once
+// Rewards: every quest pays its tier's XP and Gold Coins (they feed the server economy) and rolls once
 // on the tier's reward table; finales and milestones add fixed prizes players can see coming.
 
 const tip = (text) => `&7${text}`
+
+/** A Gold Coins stack as an icon: the pile grows with the amount, like the item in game. */
+const coinsIcon = (amount) => ({ id: 'lsp_fixes:gold_coins', components: { 'lsp_fixes:coin_amount': amount } })
 
 // The raid captain's banner (vanilla Raid.getLeaderBannerInstance): a white banner with components.
 const OMINOUS_BANNER = {
@@ -55,11 +58,11 @@ const skillIcon = (skill) => textureIcon(`skills/${skill}`)
 // food, the hard ones gear, relics, warp items and enchanted books.
 
 export const TIERS = {
-  1: { name: 'Settler', xp: 25, coins: 8, table: 'settler_supplies' },
-  2: { name: 'Engineer', xp: 60, coins: 24, table: 'engineers_crate' },
-  3: { name: 'Artisan', xp: 150, coins: 48, table: 'artisans_crate' },
-  4: { name: 'Master', xp: 400, coins: 128, table: 'masters_cache' },
-  5: { name: 'Legend', xp: 1000, coins: 512, table: 'legends_hoard' }
+  1: { name: 'Settler', xp: 25, coins: 80, table: 'settler_supplies' },
+  2: { name: 'Engineer', xp: 60, coins: 240, table: 'engineers_crate' },
+  3: { name: 'Artisan', xp: 150, coins: 480, table: 'artisans_crate' },
+  4: { name: 'Master', xp: 400, coins: 1280, table: 'masters_cache' },
+  5: { name: 'Legend', xp: 1000, coins: 5120, table: 'legends_hoard' }
 }
 
 /** The twenty real relics (data/relics/tags/item/relic.json in Relics 0.12.8). */
@@ -362,10 +365,10 @@ const SKILL_PRIZES = {
 const TOTAL_MILESTONES = [
   { total: 100, tier: 2, title: 'Total 100', desc: 'A hundred levels across every skill.' },
   { total: 250, tier: 3, title: 'Total 250', desc: 'Two hundred and fifty levels in all.' },
-  { total: 500, tier: 4, title: 'Total 500', desc: 'Half way to the top. Five hundred levels.', items: [{ item: 'numismatics:crown' }] },
-  { total: 750, tier: 4, title: 'Total 750', desc: 'Seven hundred and fifty levels.', tables: ['relic_cache'], items: [{ item: 'numismatics:crown' }] },
-  { total: 1000, tier: 5, title: 'Total 1000', desc: 'A thousand levels. Very few will get here.', items: [{ item: 'numismatics:sun' }] },
-  { total: 1386, tier: 5, title: '&6Maxed', desc: 'Every one of the fourteen skills at 99. The animated Maxed Cape unlocks the moment you get there (/capes).', items: [{ item: 'numismatics:sun', count: 2 }], tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
+  { total: 500, tier: 4, title: 'Total 500', desc: 'Half way to the top. Five hundred levels.', coins: 5000 },
+  { total: 750, tier: 4, title: 'Total 750', desc: 'Seven hundred and fifty levels.', tables: ['relic_cache'], coins: 5000 },
+  { total: 1000, tier: 5, title: 'Total 1000', desc: 'A thousand levels. Very few will get here.', coins: 40000 },
+  { total: 1386, tier: 5, title: '&6Maxed', desc: 'Every one of the fourteen skills at 99. The animated Maxed Cape unlocks the moment you get there (/capes).', coins: 80000, tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
 ]
 
 function skillsChapter() {
@@ -387,7 +390,7 @@ function skillsChapter() {
         if (level === 99) desc.push('', `&6The ${skill.name} Cape is yours at 99.&r Open /capes to wear it.`)
         const reward = { items: [...(SKILL_PRIZES[skill.id]?.[level] ?? [])] }
         if (level === 99) {
-          reward.items.push({ item: 'numismatics:sun' })
+          reward.coins = 40000
           reward.tables = ['relic_cache', 'legends_hoard']
           reward.xp = 2000
         }
@@ -424,7 +427,7 @@ function skillsChapter() {
       pos: [Math.round((3.15 + i * 2.2) * 20) / 20, totalY],
       desc: [m.desc, '', tip('Your total level is every skill added together, 14 to 1386.')],
       tasks: [{ custom: true, title: `Total level ${m.total}`, icon: textureIcon('skills/total_level') }],
-      reward: { items: m.items, tables: m.tables }
+      reward: { items: m.items, tables: m.tables, coins: m.coins }
     })
   })
   return quests
@@ -483,7 +486,7 @@ export default {
           auto: true,
           desc: ['Mayor Thaddeus greets newcomers at the south edge of the market, in the middle of the city.', '', 'Right-click him and ask for work.', '', tip('Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk.')],
           tasks: [{ stage: 'q_welcome_met', title: 'Ask the mayor for work', icon: 'minecraft:bell' }],
-          reward: { coins: 16 }
+          reward: { coins: 160 }
         },
         {
           key: 'market_day',
@@ -492,7 +495,7 @@ export default {
           icon: 'minecraft:bread',
           tier: 1,
           auto: true,
-          desc: ['Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.', '', "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", '', tip('Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour).')],
+          desc: ['Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.', '', "Right-click her: she has a word for you first. Then right-click her again (or press &eLet's trade&r) for her shop, and buy something. The coins from the last quest are enough.", '', tip('Every trader and shopkeeper sells their own goods for Gold Coins and buys anything you bring: with their shop open, click it in your inventory.')],
           tasks: [{ stage: 'q_welcome_bread', title: 'Buy something from Bessa', icon: 'minecraft:bread' }]
         },
         {
@@ -504,7 +507,7 @@ export default {
           auto: true,
           desc: ['Tell the mayor how you got on.'],
           tasks: [{ stage: 'q_welcome_done', title: 'Talk to the mayor', icon: 'minecraft:bell' }],
-          reward: { coins: 24, items: [{ item: 'minecraft:bread', count: 4 }] }
+          reward: { coins: 240, items: [{ item: 'minecraft:bread', count: 4 }] }
         }
       ]
     },
@@ -1636,15 +1639,12 @@ export default {
         },
         {
           key: 'bank',
-          title: 'Bank',
+          title: 'Millionaire',
           after: ['enchanting'],
-          tier: 3,
-          desc: ['Blaze bankers and bank terminals turn Numismatics coins into accounts. Every shop on the server can be paid by card.'],
-          tasks: [
-            { item: 'numismatics:bank_terminal' },
-            { item: 'numismatics:blaze_banker' }
-          ],
-          icon: 'numismatics:blaze_banker'
+          tier: 5,
+          desc: ['Hold a million Gold Coins at once. Vendors buy anything you make, so a factory that sells its output fills a purse fast.'],
+          tasks: [{ stage: 'econ_purse_1m', title: 'Hold 1,000,000 coins', icon: coinsIcon(10000) }],
+          icon: coinsIcon(10000)
         },
         {
           key: 'legacy',
@@ -1653,10 +1653,10 @@ export default {
           shape: 'gear',
           size: 2,
           tier: 5,
-          desc: ['Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.', '', "&eChapter prize:&r a sun coin, a relic and two rolls on the Legend's Hoard."],
+          desc: ['Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.', '', "&eChapter prize:&r 40,000 coins, a relic and two rolls on the Legend's Hoard."],
           tasks: [{ checkmark: true, title: 'I built my legacy' }],
           icon: 'minecraft:beacon',
-          reward: { items: [{ item: 'numismatics:sun' }], tables: ['relic_cache', 'legends_hoard'] }
+          reward: { coins: 40000, tables: ['relic_cache', 'legends_hoard'] }
         }
       ]
     },
@@ -2906,10 +2906,10 @@ export default {
           shape: 'gear',
           size: 1.75,
           tier: 5,
-          desc: ['Four end crystals on the portal frame bring the dragon back. Fight it on your own terms.', '', "&eChapter prize:&r a crown coin, an end stone waystone, a relic and two rolls on the Legend's Hoard."],
+          desc: ['Four end crystals on the portal frame bring the dragon back. Fight it on your own terms.', '', "&eChapter prize:&r 5,000 coins, an end stone waystone, a relic and two rolls on the Legend's Hoard."],
           tasks: [{ advancement: 'minecraft:end/respawn_dragon', title: 'Respawn the ender dragon' }],
           icon: 'minecraft:dragon_head',
-          reward: { items: [{ item: 'numismatics:crown' }, { item: 'waystones:end_stone_waystone' }], tables: ['relic_cache', 'legends_hoard'] }
+          reward: { coins: 5000, items: [{ item: 'waystones:end_stone_waystone' }], tables: ['relic_cache', 'legends_hoard'] }
         }
       ]
     },
@@ -3118,10 +3118,10 @@ export default {
           size: 1.75,
           tier: 5,
           pos: [4.2, 12.2],
-          desc: ['Fifteen of the twenty.', '', "&eChapter prize:&r two relics from the cache, a sun coin and two rolls on the Legend's Hoard."],
+          desc: ['Fifteen of the twenty.', '', "&eChapter prize:&r two relics from the cache, 40,000 coins and two rolls on the Legend's Hoard."],
           tasks: [{ checkmark: true, title: 'Fifteen relics found' }],
           icon: 'relics:ring_of_the_seven_deadly_sins',
-          reward: { items: [{ item: 'numismatics:sun' }], tables: ['relic_cache', 'relic_cache', 'legends_hoard'] }
+          reward: { coins: 40000, tables: ['relic_cache', 'relic_cache', 'legends_hoard'] }
         }
       ]
     },
@@ -3487,66 +3487,91 @@ export default {
       key: 'commerce',
       group: 'guides',
       title: 'Coin & Commerce',
-      subtitle: 'The server economy runs on Numismatics.',
-      about: 'Quest rewards include Numismatics coins. Trade them with other players or open a shop of your own.',
-      unlocks: "pay-to-use machines, player shops that sell while you're offline, and bank accounts.",
-      icon: 'numismatics:cog',
+      subtitle: 'Gold Coins, vendors and trading.',
+      about: 'Every quest pays Gold Coins. The vendors in the towns sell their own goods for them and buy anything you bring; other players trade with you through the trade window.',
+      unlocks: "a purse that grows with your factory, and the coins to buy what you can't make yet.",
+      icon: coinsIcon(1000),
       quests: [
         {
           key: 'coins',
           title: 'Coinage',
           tier: 1,
           desc: [
-            'Quest rewards come with Numismatics coins:',
-            '&espur&r 1 · &ebevel&r 8 · &esprocket&r 16 · &ecog&r 64 · &ecrown&r 512 · &esun&r 4096',
-            'Use them to trade with other players.'
+            'Gold Coins are the one currency. However many you have, they are one stack: the slot shows &e2.3k&r and the tooltip the exact amount.',
+            '',
+            '• Right-click a coin stack in your inventory to take half, or &eShift + right-click&r to take an exact amount.',
+            '• Coins you pick up join the stack you already carry.',
+            '• Mission rewards come as &eCoin Pouches&r: right-click one to open it.',
+            '',
+            tip('/purse tells you how many coins you carry.')
           ],
-          tasks: [{ item: 'numismatics:bevel' }],
-          icon: 'numismatics:cog'
+          tasks: [{ item: 'lsp_fixes:gold_coins' }],
+          icon: coinsIcon(25)
         },
         {
-          key: 'depositor',
-          title: 'Depositor',
+          key: 'first_sale',
+          title: 'Sold!',
+          after: ['coins'],
+          tier: 1,
+          desc: [
+            'Every vendor buys everything. Open any shop (right-click a trader in a town) and click something in your inventory to sell it; shift-click sells every stack of it.',
+            '',
+            'The tooltip shows what a thing fetches, and /worth tells you for what you hold. Sold the wrong thing? The hopper slot buys it back.'
+          ],
+          tasks: [{ stage: 'econ_sold', title: 'Sell something to a vendor', icon: 'minecraft:hopper' }],
+          icon: 'minecraft:hopper'
+        },
+        {
+          key: 'first_buy',
+          title: 'Shopping',
+          after: ['coins'],
+          tier: 1,
+          desc: ['Each vendor sells their own line: the baker bread and pies, the smith tools and weapons, the mason building blocks. Click a good to buy one lot, shift-click for a stack.'],
+          tasks: [{ stage: 'econ_bought', title: 'Buy something from a vendor', icon: 'minecraft:bread' }],
+          icon: 'minecraft:bread'
+        },
+        {
+          key: 'trade',
+          title: 'Fair Trade',
           after: ['coins'],
           tier: 2,
-          desc: ['A depositor takes coins before it sends a redstone pulse: pay-to-use doors, farms and rides.'],
-          tasks: [{ item: 'numismatics:andesite_depositor' }]
-        },
-        {
-          key: 'shop',
-          title: 'Open a Shop',
-          after: ['depositor'],
-          tier: 3,
-          desc: ['Put a vendor in front of your storage, set a price, and sell to anyone who walks by, even while you are offline.'],
-          tasks: [{ checkmark: true, title: 'My shop is open' }],
-          icon: 'minecraft:emerald'
+          desc: [
+            '&e/trade <player>&r, or sneak and right-click them with an empty hand. When they ask you back, the trade window opens.',
+            '',
+            'Click things in your inventory to put them up, the gold button to add coins, then accept. Any change restarts a short deal timer, so nothing can be swapped at the last second.'
+          ],
+          tasks: [{ stage: 'econ_traded', title: 'Trade with another player', icon: 'minecraft:lime_terracotta' }],
+          icon: 'minecraft:lime_terracotta'
         },
         {
           key: 'table_cloth',
           title: 'Open for Business',
           after: ['coins'],
           tier: 2,
-          desc: ["Create's table cloths sell too: lay one out, put items up and name a price."],
+          desc: ["Create's table cloths sell while you're away: lay one out, put items up and name a price in any item you like."],
           tasks: [{ advancement: 'create:table_cloth_shop', title: 'Sell items on a table cloth' }],
           icon: 'create:white_table_cloth'
         },
         {
-          key: 'bank_terminal',
-          title: 'Bank Account',
-          after: ['coins'],
-          tier: 2,
-          tasks: [{ item: 'numismatics:bank_terminal' }]
+          key: 'purse_10k',
+          title: 'Deep Pockets',
+          after: ['first_sale', 'first_buy'],
+          tier: 3,
+          desc: ['Hold 10,000 coins at once.'],
+          tasks: [{ stage: 'econ_purse_10k', title: 'Hold 10,000 coins', icon: coinsIcon(1000) }],
+          icon: coinsIcon(1000)
         },
         {
           key: 'crown',
-          title: '&aA Crown',
-          after: ['shop', 'bank_terminal'],
+          title: '&aA Fortune',
+          after: ['purse_10k', 'trade'],
           shape: 'gear',
           size: 1.5,
           tier: 4,
-          desc: ['Hold a crown coin: 512 spurs in one piece. Quests pay them, shops earn them.', '', "&eChapter prize:&r a crown, a blaze banker and a roll on the Master's Cache."],
-          tasks: [{ item: 'numismatics:crown' }],
-          reward: { items: [{ item: 'numismatics:crown' }, { item: 'numismatics:blaze_banker' }] }
+          desc: ['Hold 100,000 coins at once. Quests pay them, vendors buy anything, and a factory never sleeps.', '', "&eChapter prize:&r 10,000 coins and a roll on the Master's Cache."],
+          tasks: [{ stage: 'econ_purse_100k', title: 'Hold 100,000 coins', icon: coinsIcon(10000) }],
+          icon: coinsIcon(10000),
+          reward: { coins: 10000 }
         }
       ]
     },
@@ -3712,14 +3737,14 @@ export default {
           shape: 'gear',
           size: 1.75,
           tier: 5,
-          desc: ['Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.', tip('Needs Defence 60.'), '', "&eChapter prize:&r the Armory Cape, a sun coin, a relic and two rolls on the Legend's Hoard."],
+          desc: ['Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.', tip('Needs Defence 60.'), '', "&eChapter prize:&r the Armory Cape, 40,000 coins, a relic and two rolls on the Legend's Hoard."],
           tasks: [
             { item: 'lemursaucepacket:compacted_netherite_helmet' },
             { item: 'lemursaucepacket:compacted_netherite_chestplate' },
             { item: 'lemursaucepacket:compacted_netherite_leggings' },
             { item: 'lemursaucepacket:compacted_netherite_boots' }
           ],
-          reward: { commands: ['lsp cape flag {p} chapter:armory'], items: [{ item: 'numismatics:sun' }], tables: ['relic_cache', 'legends_hoard'] }
+          reward: { commands: ['lsp cape flag {p} chapter:armory'], coins: 40000, tables: ['relic_cache', 'legends_hoard'] }
         },
         {
           key: 'ember_crown',
@@ -3836,7 +3861,7 @@ export default {
       subtitle: 'Fourteen skills, five milestones each, and the total-level ladder.',
       about: 'Every skill pays out at 10, 25, 50, 75 and 99. The server checks your Project MMO levels every few seconds and completes the milestones for you; the rewards wait here to be claimed. Level 99 comes with a skill cape and a sun coin.',
       unlocksLabel: 'Rewards',
-      unlocks: 'crates that grow with the level, a prize built for the skill at 50 and 75, and a sun, a relic and the Legend\'s Hoard at 99.',
+      unlocks: 'crates that grow with the level, a prize built for the skill at 50 and 75, and 40,000 coins, a relic and the Legend\'s Hoard at 99.',
       icon: textureIcon('skills/total_level'),
       quests: skillsChapter()
     },
@@ -3844,8 +3869,8 @@ export default {
       key: 'contracts',
       group: 'mastery',
       title: 'Contracts',
-      subtitle: 'Brassworks Missions: six jobs a week, paid in coins.',
-      about: 'Press H for the mission board. Missions are Create jobs: press this, mix that, deliver the other. Each pays coins on its own; these quests pay again for keeping at it.',
+      subtitle: 'Brassworks Missions: six jobs a week, paid in coin pouches.',
+      about: 'Press H for the mission board. Missions are Create jobs: press this, mix that, deliver the other. Each pays Coin Pouches on its own (right-click one: 100 coins; rerolls cost pouches); these quests pay again for keeping at it.',
       unlocksLabel: 'Rewards',
       unlocks: 'a crate at 10, 50, 100, 250 and 500 missions, and the Legendary Fixer prize at 1000.',
       icon: 'minecraft:writable_book',
@@ -3864,7 +3889,7 @@ export default {
           after: ['board'],
           tier: 2,
           tasks: [{ advancement: 'brassworksmissions:missions_10', title: 'Complete 10 missions' }],
-          icon: 'numismatics:bevel'
+          icon: coinsIcon(100)
         },
         {
           key: 'missions_50',
@@ -3872,7 +3897,7 @@ export default {
           after: ['missions_10'],
           tier: 3,
           tasks: [{ advancement: 'brassworksmissions:missions_50', title: 'Complete 50 missions' }],
-          icon: 'numismatics:sprocket'
+          icon: coinsIcon(250)
         },
         {
           key: 'missions_100',
@@ -3880,7 +3905,7 @@ export default {
           after: ['missions_50'],
           tier: 4,
           tasks: [{ advancement: 'brassworksmissions:missions_100', title: 'Complete 100 missions' }],
-          icon: 'numismatics:cog'
+          icon: coinsIcon(1000)
         },
         {
           key: 'missions_250',
@@ -3888,8 +3913,8 @@ export default {
           after: ['missions_100'],
           tier: 4,
           tasks: [{ advancement: 'brassworksmissions:missions_250', title: 'Complete 250 missions' }],
-          icon: 'numismatics:crown',
-          reward: { items: [{ item: 'numismatics:crown' }], tables: ['relic_cache'] }
+          icon: coinsIcon(10000),
+          reward: { coins: 5000, tables: ['relic_cache'] }
         },
         {
           key: 'missions_500',
@@ -3897,8 +3922,8 @@ export default {
           after: ['missions_250'],
           tier: 5,
           tasks: [{ advancement: 'brassworksmissions:missions_500', title: 'Complete 500 missions' }],
-          icon: 'numismatics:crown',
-          reward: { items: [{ item: 'numismatics:crown', count: 2 }] }
+          icon: coinsIcon(10000),
+          reward: { coins: 10000 }
         },
         {
           key: 'missions_1000',
@@ -3907,10 +3932,10 @@ export default {
           shape: 'gear',
           size: 1.6,
           tier: 5,
-          desc: ['A thousand missions. Years of contracts.', '', "&eChapter prize:&r two sun coins, a relic and two rolls on the Legend's Hoard."],
+          desc: ['A thousand missions. Years of contracts.', '', "&eChapter prize:&r 80,000 coins, a relic and two rolls on the Legend's Hoard."],
           tasks: [{ advancement: 'brassworksmissions:missions_1000', title: 'Complete 1000 missions' }],
-          icon: 'numismatics:sun',
-          reward: { items: [{ item: 'numismatics:sun', count: 2 }], tables: ['relic_cache', 'legends_hoard'] }
+          icon: coinsIcon(10000),
+          reward: { coins: 80000, tables: ['relic_cache', 'legends_hoard'] }
         }
       ]
     }

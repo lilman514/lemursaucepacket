@@ -62,7 +62,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -102,7 +103,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -116,163 +118,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    TradingData:{
-      TradingDataSet:{
-        Type:"BASIC",
-        MaxUses:999,
-        ResetsEveryMin:60,
-        RewardedXP:0,
-        LastReset:0L
-      }
-    },
-    Offers:{
-      Recipes:[
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:2
-          },
-          sell:{
-            id:"minecraft:torch",
-            count:8
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:3
-          },
-          sell:{
-            id:"minecraft:bread",
-            count:2
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:2
-          },
-          sell:{
-            id:"minecraft:wheat_seeds",
-            count:8
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:oak_sapling",
-            count:4
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          buyB:{
-            id:"numismatics:spur",
-            count:2
-          },
-          sell:{
-            id:"minecraft:shears",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          buyB:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:map",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:wheat",
-            count:16
-          },
-          sell:{
-            id:"numismatics:spur",
-            count:4
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:potato",
-            count:16
-          },
-          sell:{
-            id:"numismatics:spur",
-            count:4
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
         }
       ]
     },
@@ -296,7 +141,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.varrock_general_store"
     ]
   }
 }

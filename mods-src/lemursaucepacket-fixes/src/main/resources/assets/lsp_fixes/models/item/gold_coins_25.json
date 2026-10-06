@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lsp_fixes:item/gold_coins_25"
+  }
+}

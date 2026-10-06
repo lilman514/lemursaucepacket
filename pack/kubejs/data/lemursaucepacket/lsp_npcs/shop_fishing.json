@@ -1,0 +1,64 @@
+{
+  "name": "Hamish of the Docks",
+  "color": "#4F86C6",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:fishing_rod",
+          "count": 1
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:bucket",
+          "count": 1
+        },
+        "price": 100
+      },
+      {
+        "item": {
+          "id": "minecraft:water_bucket",
+          "count": 1
+        },
+        "price": 110
+      },
+      {
+        "item": {
+          "id": "minecraft:oak_boat",
+          "count": 1
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:lily_pad",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:string",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:lantern",
+          "count": 1
+        },
+        "price": 30
+      }
+    ],
+    "onBuy": []
+  }
+}

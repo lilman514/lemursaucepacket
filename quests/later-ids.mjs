@@ -18,6 +18,9 @@ export const WAYSTONES_ITEMS = [
 // The hearts system's own items (pack/kubejs/startup_scripts/lifesteal.js registers them; docs/lifesteal.md).
 export const LIFESTEAL_ITEMS = ['heart', 'incomplete_heart', 'grave_essence', 'lost_item_compass', 'seekers_compass'].map((id) => `lemursaucepacket:${id}`)
 
+// The economy's items (lsp_fixes 1.6.0, mods-src/lemursaucepacket-fixes: economy/EconomyContent).
+export const ECONOMY_ITEMS = ['lsp_fixes:gold_coins', 'lsp_fixes:coin_pouch']
+
 // Block tags a quest may observe (FTB Quests observation task). The registry dump has no block tags.
 export const BLOCK_TAGS = ['#waystones:waystones', '#waystones:sharestones', '#waystones:portstones']
 

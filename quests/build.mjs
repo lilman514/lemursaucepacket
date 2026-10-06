@@ -84,7 +84,8 @@ const gearIds = [
 // Mods added after the dump (Waystones, Regions Unexplored): ids read from their jars.
 const later = await import('./later-ids.mjs')
 const known = {
-  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS]),
+  // Numismatics left the pack in 1.5.0 (Gold Coins replaced it); the registry dump still lists its items.
+  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS, ...later.ECONOMY_ITEMS].filter((id) => !id.startsWith('numismatics:'))),
   entity: new Set(index.entity),
   biome: new Set([...index.biome, ...index.biomeTag, ...later.REGIONS_UNEXPLORED_BIOMES]),
   structure: new Set([...index.structure, ...index.structureTag]),
@@ -124,24 +125,9 @@ function iconData(icon, where) {
 
 // ---------------------------------------------------------------- coins
 
-const COINS = [
-  ['sun', 4096],
-  ['crown', 512],
-  ['cog', 64],
-  ['sprocket', 16],
-  ['bevel', 8],
-  ['spur', 1]
-]
-/** Numismatics coin items adding up to `value` spurs. */
-function coinItems(value) {
-  const out = []
-  let left = value
-  for (const [coin, worth] of COINS) {
-    const n = Math.floor(left / worth)
-    if (n > 0) out.push({ item: `numismatics:${coin}`, count: n })
-    left -= n * worth
-  }
-  return out
+/** A reward of `value` Gold Coins: one stack (lsp_fixes keeps the amount in a component, with no stack cap). */
+function coinStack(value) {
+  return { components: { 'lsp_fixes:coin_amount': value }, count: 1, id: 'lsp_fixes:gold_coins' }
 }
 
 // ---------------------------------------------------------------- build
@@ -228,7 +214,7 @@ function rewardData(quest, key, where) {
   const coins = (tier?.coins ?? 0) + (reward.coins ?? 0)
   const out = []
   if (xp > 0) out.push({ id: hexId(`${key}/xp`), type: 'xp', xp })
-  for (const c of coinItems(coins)) out.push({ id: hexId(`${key}/coin/${c.item}`), item: { count: c.count, id: c.item }, type: 'item' })
+  if (coins > 0) out.push({ id: hexId(`${key}/coins`), item: coinStack(coins), type: 'item' })
   for (const [i, it] of (reward.items ?? []).entries()) {
     out.push({ id: hexId(`${key}/item/${i}`), item: stackData(it, where), type: 'item' })
   }

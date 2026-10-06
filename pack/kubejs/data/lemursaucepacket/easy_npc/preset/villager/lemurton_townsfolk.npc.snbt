@@ -90,7 +90,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.townsfolk"
     ]
   }
 }

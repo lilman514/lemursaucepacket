@@ -1,0 +1,57 @@
+{
+  "name": "Gil the Fishmonger",
+  "color": "#5EC4C4",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:cooked_cod",
+          "count": 4
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:cooked_salmon",
+          "count": 4
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:cod",
+          "count": 4
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:salmon",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:ink_sac",
+          "count": 2
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:kelp",
+          "count": 8
+        },
+        "price": 20
+      }
+    ],
+    "onBuy": []
+  }
+}

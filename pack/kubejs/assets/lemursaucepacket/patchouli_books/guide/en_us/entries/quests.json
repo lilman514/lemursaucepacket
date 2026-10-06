@@ -2,7 +2,7 @@
   "name": "Quests",
   "category": "lemursaucepacket:wiki",
   "icon": "ftbquests:book",
-  "sortnum": 5,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",
@@ -55,11 +55,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Backpack Workshop$() - Backpack tiers by Create age, upgrades, stack upgrades - The netherite backpack$(br)$(bold)Homestead$() - Farmer's Delight basics, new crops, rich soil, breeding - The happy ghast$(br)$(bold)Bestiary$() - The new mobs and bosses, one quest each - - (a collection)$(br)$(bold)Atlas$() - Terralith biomes and rebuilt structures - - (a collection)$(br)$(bold)Coin & Commerce$() - Numismatics coins, depositors, shops, banking - A crown coin$(br)$(bold)The Armory$() - The pack's own gear: tools, weapons, armour sets - The Compacted Nether"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Backpack Workshop$() - Backpack tiers by Create age, upgrades, stack upgrades - The netherite backpack$(br)$(bold)Homestead$() - Farmer's Delight basics, new crops, rich soil, breeding - The happy ghast$(br)$(bold)Bestiary$() - The new mobs and bosses, one quest each - - (a collection)$(br)$(bold)Atlas$() - Terralith biomes and rebuilt structures - - (a collection)$(br)$(bold)Coin & Commerce$() - Gold Coins, selling and buying at vendors, trading, table-cloth shops - 10,000 coins$(br)$(bold)The Armory$() - The pack's own gear: tools, weapons, armour set"
     },
     {
       "type": "patchouli:text",
-      "text": "ite set$(br)$(bold)Hearts & Graves$() - The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart - A new Heart made from a Heart of the Sea$(br2)$(bold)Mastery$() - the long game: Skills (below) and Contracts (Brassworks Missions milestones from 10 to 1000 missions).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
+      "text": "s - The Compacted Netherite set$(br)$(bold)Hearts & Graves$() - The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart - A new Heart made from a Heart of the Sea$(br2)$(bold)Mastery$() - the long game: Skills (below) and Contracts (Brassworks Missions milestones from 10 to 1000 missions).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
     },
     {
       "type": "patchouli:text",
@@ -68,15 +68,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Tier - XP - Coins - Crate - What the crate holds$()$(br)$(bold)1 Settler$() - 25 - 8 - Settler's Supplies - Ingots, alloy, torches, food, coal, arrows, tea$(br)$(bold)2 Engineer$() - 60 - 24 - Engineer's Crate - Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases$(br)$(bold)3 Artisan$() - 150 - 48 - Artisan's Crate - Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts$(br)$(bold)4 Master$() - 400 - 128 - Master's Cache - Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades$(br)$(bold)5 Legend$() "
+      "text": "$(#b9a98a)Tier - XP - Coins - Crate - What the crate holds$()$(br)$(bold)1 Settler$() - 25 - 80 - Settler's Supplies - Ingots, alloy, torches, food, coal, arrows, tea$(br)$(bold)2 Engineer$() - 60 - 240 - Engineer's Crate - Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases$(br)$(bold)3 Artisan$() - 150 - 480 - Artisan's Crate - Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts$(br)$(bold)4 Master$() - 400 - 1,280 - Master's Cache - Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades$(br)$(bold)5 Legen"
     },
     {
       "type": "patchouli:text",
-      "text": "- 1000 - 512 - Legend's Hoard - Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending$(br2)Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, sun coins, capes), so the last quest of a line is always worth reaching."
+      "text": "d$() - 1000 - 5,120 - Legend's Hoard - Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending$(br2)Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, coins, capes), so the last quest of a line is always worth reaching."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)XP is vanilla experience, for enchanting; it does not train skills.$(br)$(li)Coins are Numismatics: spur 1, bevel 8, sprocket 16, cog 64, crown 512, sun 4096. Trade them or bank them.$(br)$(li)Team progress is shared: if you are in a team, everyone gets the quest and can claim its rewards."
+      "text": "$(li)XP is vanilla experience, for enchanting; it does not train skills.$(br)$(li)Coins are Gold Coins, one stack however many you have. Spend them at the vendors or trade them; see $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)Team progress is shared: if you are in a team, everyone gets the quest and can claim its rewards."
     },
     {
       "type": "patchouli:text",
@@ -85,7 +85,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "The rewards climb with the level: a Settler crate at 10, a Legend's Hoard at 99. Level 50 and 75 add a prize made for the skill (the Excavator's Pickaxe for Mining, the Stormcaller's Sabre for Attack, an elytra for Agility, a relic for Cooking). Level 99 pays a sun coin, a relic and two rolls on the Legend's Hoard, and the skill's cape unlocks by itself ($(#e0ac46)/capes$()). Maxed is two suns and the Maxed Cape."
+      "text": "The rewards climb with the level: a Settler crate at 10, a Legend's Hoard at 99. Level 50 and 75 add a prize made for the skill (the Excavator's Pickaxe for Mining, the Stormcaller's Sabre for Attack, an elytra for Agility, a relic for Cooking). Level 99 pays 40,000 coins, a relic and two rolls on the Legend's Hoard, and the skill's cape unlocks by itself ($(#e0ac46)/capes$()). Maxed is 80,000 coins and the Maxed Cape."
     }
   ]
 }

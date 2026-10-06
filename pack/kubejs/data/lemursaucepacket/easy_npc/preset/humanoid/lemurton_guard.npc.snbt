@@ -105,7 +105,8 @@ The mayor is by the fountain if you need work."
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.guard"
     ]
   }
 }

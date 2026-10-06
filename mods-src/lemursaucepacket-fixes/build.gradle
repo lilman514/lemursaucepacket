@@ -77,6 +77,11 @@ dependencies {
     compileOnly "maven.modrinth:TyCTlI4b:${sophisticatedbackpacks_modrinth_version}"
     compileOnly "maven.modrinth:nmoqTijg:${sophisticatedcore_modrinth_version}"
     compileOnly "maven.modrinth:vvuO3ImH:${curios_modrinth_version}"
+    // Economy: saved mission rewards from the Numismatics days load as Coin Pouches. Compile-only; applies only with the mod.
+    compileOnly "maven.modrinth:uUhZpyjI:${brassworks_modrinth_version}"
+    // The shop and trade screens tell these to keep their click automation away (annotations only).
+    compileOnly "maven.modrinth:O7RBXm3n:${ipn_modrinth_version}"
+    compileOnly "maven.modrinth:aC3cM3Vq:${mousetweaks_modrinth_version}"
 }
 
 // Expands ${...} properties in src/main/templates (neoforge.mods.toml).

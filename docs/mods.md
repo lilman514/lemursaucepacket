@@ -1,8 +1,8 @@
 # Mods in the pack
 
-177 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+176 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (133)
+## On the server and every client (132)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -28,7 +28,6 @@
 - [Create: Dragons Plus](https://modrinth.com/project/dzb1a5WV)
 - [Create: Enchantment Industry](https://modrinth.com/project/JWGBpFUP)
 - [Create: Let The Adventure Begin](https://modrinth.com/project/fUa6OtBG)
-- [Create: Numismatics](https://modrinth.com/project/Jdbbtt0i)
 - [Create: Rustic Structures](https://modrinth.com/project/lmbZMkEZ)
 - [Create: Structures Arise](https://modrinth.com/project/9enMEvoc)
 - [CreativeCore](https://modrinth.com/project/OsZiaDHq)

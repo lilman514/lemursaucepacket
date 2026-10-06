@@ -2,7 +2,7 @@
   "name": "Skills",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:experience_bottle",
-  "sortnum": 6,
+  "sortnum": 7,
   "pages": [
     {
       "type": "patchouli:text",

@@ -11,7 +11,7 @@
 	chapter.16909E8386D20890.title: "Cartographer"
 	chapter.2C2A22A66EC818AF.chapter_subtitle: ["New faces, old foes."]
 	chapter.2C2A22A66EC818AF.title: "Bestiary"
-	chapter.2D35B320696E0A9F.chapter_subtitle: ["Brassworks Missions: six jobs a week, paid in coins."]
+	chapter.2D35B320696E0A9F.chapter_subtitle: ["Brassworks Missions: six jobs a week, paid in coin pouches."]
 	chapter.2D35B320696E0A9F.title: "Contracts"
 	chapter.2FED25899EA206C8.chapter_subtitle: ["The pack's own gear: tools that save time, weapons with real stats, armour sets with bonuses."]
 	chapter.2FED25899EA206C8.title: "The Armory"
@@ -19,7 +19,7 @@
 	chapter.32CB66168B93AD10.title: "Homestead"
 	chapter.34063B311996CA32.chapter_subtitle: ["Create Aeronautics: balloons, propellers and airships."]
 	chapter.34063B311996CA32.title: "Skyward"
-	chapter.3AD6951FB6CD0EF9.chapter_subtitle: ["The server economy runs on Numismatics."]
+	chapter.3AD6951FB6CD0EF9.chapter_subtitle: ["Gold Coins, vendors and trading."]
 	chapter.3AD6951FB6CD0EF9.title: "Coin \\& Commerce"
 	chapter.415B5EBB83A4F72E.chapter_subtitle: ["The End, and what you leave behind."]
 	chapter.415B5EBB83A4F72E.title: "Legacy"
@@ -72,8 +72,8 @@
 	image.10E4665E289211DE.title: " \\n&6&lBeyond the Dragon\\n&r&7The outer End: cities, ships, castles and the void.\\n \\n&r&fThe dragon is only the door. Out past the gateways\\n&r&fare end cities, Nullscape's strange biomes and the\\n&r&fcastles Dungeons and Taverns left in the dark.\\n \\n&r&eUnlocks:\\n&r&fshulker boxes, dragon breath, the levitation\\n&r&ftrick, and a second dragon fight on your terms.\\n "
 	image.12E3C18622AFD831.title: " \\n&6&lBestiary\\n&r&7New faces, old foes.\\n \\n&r&fThe world has new creatures and\\n&r&ftougher bosses. Track down each one.\\n \\n&r&eRewards:\\n&r&fa crate for every first encounter,\\n&r&fand tips on what each creature does.\\n "
 	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
-	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7The server economy runs on Numismatics.\\n \\n&r&fQuest rewards include Numismatics coins. Trade them\\n&r&fwith other players or open a shop of your own.\\n \\n&r&eUnlocks:\\n&r&fpay-to-use machines, player shops that\\n&r&fsell while you're offline, and bank accounts.\\n "
-	image.1B208C463904DB4D.title: " \\n&6&lSkills\\n&r&7Fourteen skills, five milestones\\n&r&7each, and the total-level ladder.\\n \\n&r&fEvery skill pays out at 10, 25, 50, 75 and 99. The server\\n&r&fchecks your Project MMO levels every few seconds and\\n&r&fcompletes the milestones for you; the rewards wait here to\\n&r&fbe claimed. Level 99 comes with a skill cape and a sun coin.\\n \\n&r&eRewards:\\n&r&fcrates that grow with the level, a prize\\n&r&fbuilt for the skill at 50 and 75, and a sun,\\n&r&fa relic and the Legend's Hoard at 99.\\n "
+	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7Gold Coins, vendors and trading.\\n \\n&r&fEvery quest pays Gold Coins. The vendors in the towns\\n&r&fsell their own goods for them and buy anything you bring;\\n&r&fother players trade with you through the trade window.\\n \\n&r&eUnlocks:\\n&r&fa purse that grows with your factory, and\\n&r&fthe coins to buy what you can't make yet.\\n "
+	image.1B208C463904DB4D.title: " \\n&6&lSkills\\n&r&7Fourteen skills, five milestones\\n&r&7each, and the total-level ladder.\\n \\n&r&fEvery skill pays out at 10, 25, 50, 75 and 99. The server\\n&r&fchecks your Project MMO levels every few seconds and\\n&r&fcompletes the milestones for you; the rewards wait here to\\n&r&fbe claimed. Level 99 comes with a skill cape and a sun coin.\\n \\n&r&eRewards:\\n&r&fcrates that grow with the level, a prize\\n&r&fbuilt for the skill at 50 and 75, and 40,000\\n&r&fcoins, a relic and the Legend's Hoard at 99.\\n "
 	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery, and a\\n&r&fphysics assembler turns the build into a ship.\\n \\n&r&eUnlocks:\\n&r&fflying bases, travel over any terrain, and\\n&r&fdocking, naming and navigating your own fleet.\\n "
 	image.2106E24A0F482020.title: " \\n&6&lFactory Floor\\n&r&7Automate everything: farms,\\n&r&7processing, assembly and stock.\\n \\n&r&fA factory takes raw materials in one end and\\n&r&fputs finished goods in a vault at the other. Build\\n&r&fone line at a time and let Create keep score.\\n \\n&r&eUnlocks:\\n&r&fhands-free farms, ore processing, sequenced assembly\\n&r&fand a stock system that orders its own ingredients.\\n "
 	image.219EF655FEFAE9B1.title: " \\n&6&lThe Armory\\n&r&7The pack's own gear: tools that save time, weapons\\n&r&7with real stats, armour sets with bonuses.\\n \\n&r&fEverything here is made with Create and gated\\n&r&fby skills. Tooltips show the stats and how to\\n&r&fget each piece; JEI (R on an item) has the\\n&r&frecipe and an info page with the same text.\\n \\n&r&eUnlocks:\\n&r&fa tree-felling axe, a 3x3 pickaxe, an auto-smelting\\n&r&fpickaxe, a scythe, a wand, and five armour sets.\\n "
@@ -81,7 +81,7 @@
 	image.314F29A3CC992CB6.title: " \\n&6&lBackpack Workshop\\n&r&7Fair backpacks: every tier is\\n&r&7built from its age's Create parts.\\n \\n&r&fBackpacks here follow your Create progress:\\n&r&feach tier needs parts from the matching age.\\n \\n&r&eUnlocks:\\n&r&fmore room on the move, plus pickup,\\n&r&fmagnet, feeding and restock upgrades.\\n "
 	image.33EE0F3A753CAC91.title: " \\n&6&lThe Foundry\\n&r&7Nether industry: lava, crushing\\n&r&7wheels, sturdy sheets and netherite.\\n \\n&r&fHeavy industry lives where the heat is. Tap infinite\\n&r&flava, crush at full speed, refine obsidian into sturdy\\n&r&fsheets and press netherite into something harder.\\n \\n&r&eUnlocks:\\n&r&finfinite fuel, doubled ores, industrial iron, and the\\n&r&fCompacted Netherite that ends the armour race.\\n "
 	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fa crate for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
-	image.3BDA63444C2D4695.title: " \\n&6&lContracts\\n&r&7Brassworks Missions: six jobs a week, paid in coins.\\n \\n&r&fPress H for the mission board. Missions are Create jobs:\\n&r&fpress this, mix that, deliver the other. Each pays coins\\n&r&fon its own; these quests pay again for keeping at it.\\n \\n&r&eRewards:\\n&r&fa crate at 10, 50, 100, 250 and 500 missions,\\n&r&fand the Legendary Fixer prize at 1000.\\n "
+	image.3BDA63444C2D4695.title: " \\n&6&lContracts\\n&r&7Brassworks Missions: six jobs a week, paid in coin pouches.\\n \\n&r&fPress H for the mission board. Missions are Create jobs:\\n&r&fpress this, mix that, deliver the other. Each pays Coin\\n&r&fPouches on its own (right-click one: 100 coins; rerolls\\n&r&fcost pouches); these quests pay again for keeping at it.\\n \\n&r&eRewards:\\n&r&fa crate at 10, 50, 100, 250 and 500 missions,\\n&r&fand the Legendary Fixer prize at 1000.\\n "
 	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
 	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
 	image.453135B25BEDB43B.title: " \\n&6&lHearts \\& Graves\\n&r&7Every death costs a heart. Run out\\n&r&7and everything you built goes with you.\\n \\n&r&fYou start with ten hearts and lose one every time you\\n&r&fdie, dropped where you fell for anyone to take. Graves\\n&r&fcost Grave Essence, compasses find what you dropped,\\n&r&fand a new Heart is the hardest thing in the pack to make.\\n \\n&r&eUnlocks:\\n&r&fgraves that keep your items, compasses for what\\n&r&fyou lost, a spare Heart for a friend, and the\\n&r&frecipe that makes hearts from a Heart of the Sea.\\n "
@@ -98,7 +98,7 @@
 	image.7866688CE01BD9F9.title: " \\n&6&lDeep Dark\\n&r&7Sculk, the ancient city and the thing that guards it.\\n \\n&r&fBelow the deepslate lies the deep dark.\\n&r&fSneak past the sensors, loot the city,\\n&r&fand decide whether to wake the Warden.\\n \\n&r&eUnlocks:\\n&r&fswift sneak, echo shards, the silence trim,\\n&r&fand the Warden kill nobody will believe.\\n "
 	quest.007E391695FCA435.quest_desc: ["Iron sheets and andesite casing."]
 	quest.007E391695FCA435.title: "Iron Backpack"
-	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.", "", "&eChapter prize:&r a sun coin, a relic and two rolls on the Legend's Hoard."]
+	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.", "", "&eChapter prize:&r 40,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.010023C1444D0FF4.title: "&6Legacy"
 	quest.014760E2F2483D38.title: "Bone Collector"
 	quest.01C3F051E3FA4FDC.quest_desc: ["Reach &eMining 99&r. Mining gives faster mining.", "", "&6The Mining Cape is yours at 99.&r Open /capes to wear it."]
@@ -123,7 +123,7 @@
 	quest.048F8CB749BA0A23.title: "Hardness IV"
 	quest.04C7712E7888DC6B.quest_desc: ["No recipe: Nether fortress and bastion chests. Fire Resistance while worn, and +1 damage.", "&7Needs Defence 40."]
 	quest.04C7712E7888DC6B.title: "Ember Crown"
-	quest.0531338213957CA2.quest_desc: ["Quest rewards come with Numismatics coins:", "&espur&r 1 · &ebevel&r 8 · &esprocket&r 16 · &ecog&r 64 · &ecrown&r 512 · &esun&r 4096", "Use them to trade with other players."]
+	quest.0531338213957CA2.quest_desc: ["Gold Coins are the one currency. However many you have, they are one stack: the slot shows &e2.3k&r and the tooltip the exact amount.", "", "• Right-click a coin stack in your inventory to take half, or &eShift + right-click&r to take an exact amount.", "• Coins you pick up join the stack you already carry.", "• Mission rewards come as &eCoin Pouches&r: right-click one to open it.", "", "&7/purse tells you how many coins you carry."]
 	quest.0531338213957CA2.title: "Coinage"
 	quest.0551A72C76DF01A7.quest_desc: ["Islands floating high above the clouds. Easier to reach by airship."]
 	quest.0551A72C76DF01A7.title: "Skylands"
@@ -205,7 +205,7 @@
 	quest.0CC49483DCF7A41B.title: "Outpost"
 	quest.0CCD3E4E30252510.quest_desc: ["An illager who throws ice. Look for it in the cold."]
 	quest.0CCD3E4E30252510.title: "The Iceologer"
-	quest.0CFC00143EBFBB0B.quest_desc: ["Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.", "&7Needs Defence 60.", "", "&eChapter prize:&r the Armory Cape, a sun coin, a relic and two rolls on the Legend's Hoard."]
+	quest.0CFC00143EBFBB0B.quest_desc: ["Four netherite ingots compacted under a heated press, then smithed over compacted diamond. +4 hearts and Bulwark. The last armour you will need.", "&7Needs Defence 60.", "", "&eChapter prize:&r the Armory Cape, 40,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.0CFC00143EBFBB0B.title: "&aCompacted Netherite Set"
 	quest.0DD06477687A64EC.quest_desc: ["Set a cooking pot over a fire or stove. Hearty meals keep you fed far longer than bread."]
 	quest.0DD06477687A64EC.title: "Cooking Pot"
@@ -244,9 +244,9 @@
 	quest.121B7682E75B11E7.title: "Kitchen Knife"
 	quest.127F5773383C1521.quest_desc: ["A hundred levels across every skill.", "", "&7Your total level is every skill added together, 14 to 1386."]
 	quest.127F5773383C1521.title: "&eTotal 100"
-	quest.12CFB6C5115393AF.quest_desc: ["A thousand missions. Years of contracts.", "", "&eChapter prize:&r two sun coins, a relic and two rolls on the Legend's Hoard."]
+	quest.12CFB6C5115393AF.quest_desc: ["A thousand missions. Years of contracts.", "", "&eChapter prize:&r 80,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.12CFB6C5115393AF.title: "&6Legendary Fixer"
-	quest.134108F44C8B19E2.quest_desc: ["Create's table cloths sell too: lay one out, put items up and name a price."]
+	quest.134108F44C8B19E2.quest_desc: ["Create's table cloths sell while you're away: lay one out, put items up and name a price in any item you like."]
 	quest.134108F44C8B19E2.title: "Open for Business"
 	quest.1397DBEE966B3334.quest_desc: ["Seal an envelope structure airtight and fill it with hot air from a burner."]
 	quest.1397DBEE966B3334.title: "Head in the Clouds"
@@ -368,7 +368,7 @@
 	quest.2A80E44450656EBB.quest_desc: ["Industrial iron blocks: the foundry's floor, and the base of the heaviest machines."]
 	quest.2A80E44450656EBB.title: "Industrial Iron"
 	quest.2B59BEE4CAA41223.title: "The Invoker"
-	quest.2B62654758D9FB7B.quest_desc: ["Four end crystals on the portal frame bring the dragon back. Fight it on your own terms.", "", "&eChapter prize:&r a crown coin, an end stone waystone, a relic and two rolls on the Legend's Hoard."]
+	quest.2B62654758D9FB7B.quest_desc: ["Four end crystals on the portal frame bring the dragon back. Fight it on your own terms.", "", "&eChapter prize:&r 5,000 coins, an end stone waystone, a relic and two rolls on the Legend's Hoard."]
 	quest.2B62654758D9FB7B.title: "&aThe End... Again"
 	quest.2B73FAE43A855D25.quest_desc: ["Reach &eSmithing 10&r. Smithing gives XP from ingots and gear.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.2B73FAE43A855D25.title: "&6Smithing 10"
@@ -437,12 +437,12 @@
 	quest.36C5744F5C805AE7.title: "Upgrade Base"
 	quest.36CFDC0FABF55773.quest_desc: ["A schedule tells a train where to go and when. Give it to a conductor: any seated mob, or a blaze burner."]
 	quest.36CFDC0FABF55773.title: "On Schedule"
+	quest.36EAA461B4686D69.quest_desc: ["Every vendor buys everything. Open any shop (right-click a trader in a town) and click something in your inventory to sell it; shift-click sells every stack of it.", "", "The tooltip shows what a thing fetches, and /worth tells you for what you hold. Sold the wrong thing? The hopper slot buys it back."]
+	quest.36EAA461B4686D69.title: "Sold!"
 	quest.37265A91E2BF35CA.quest_desc: ["Somewhere a train station was abandoned mid-schedule. Salvage its parts."]
 	quest.37265A91E2BF35CA.title: "The Lost Station"
 	quest.373FC2254A526ABB.quest_desc: ["Golden sheets and redstone. Diamonds, emeralds and obsidian, at Mining 30. Obsidian means sturdy sheets, ender chests and enchanting tables of your own."]
 	quest.373FC2254A526ABB.title: "Hardness III"
-	quest.374C66390D54AB5C.quest_desc: ["A depositor takes coins before it sends a redstone pulse: pay-to-use doors, farms and rides."]
-	quest.374C66390D54AB5C.title: "Depositor"
 	quest.377C3F31EF6DA6DC.quest_desc: ["Soul sand, a bone block and two experience nuggets, mixed over a blaze burner: two Grave Essence. A few also lie in dungeon and ancient city chests."]
 	quest.377C3F31EF6DA6DC.title: "Grave Essence"
 	quest.3793ECB6905AEA11.quest_desc: ["Reach &eCooking 25&r. Cooking gives XP from every meal."]
@@ -480,7 +480,6 @@
 	quest.3DEE9A11DAD5A1B7.title: "&cAttack 25"
 	quest.3EA0112185B2B663.quest_desc: ["Terralith's mage towers change with the season they were built in."]
 	quest.3EA0112185B2B663.title: "Mage Tower"
-	quest.3EC86527F7D75D14.title: "Bank Account"
 	quest.3ECBA42CB865A41B.quest_desc: ["Crying obsidian and glowstone: a bed for the Nether. Charge it before you need it."]
 	quest.3ECBA42CB865A41B.title: "Respawn Anchor"
 	quest.3FD8D8BCEB833FB9.title: "Cutting Board"
@@ -559,11 +558,11 @@
 	quest.49FBDD60BE536D27.title: "Spirit-Taking"
 	quest.4B5D23369245AFFD.quest_desc: ["Let a shulker hit you and levitate 50 blocks up."]
 	quest.4B5D23369245AFFD.title: "Great View From Up Here"
-	quest.4B9540012C8F2474.quest_desc: ["Blaze bankers and bank terminals turn Numismatics coins into accounts. Every shop on the server can be paid by card."]
-	quest.4B9540012C8F2474.title: "Bank"
+	quest.4B9540012C8F2474.quest_desc: ["Hold a million Gold Coins at once. Vendors buy anything you make, so a factory that sells its output fills a purse fast."]
+	quest.4B9540012C8F2474.title: "Millionaire"
 	quest.4BBD3DCF6DC7D2CD.quest_desc: ["A large cogwheel driving a small one doubles the speed and halves the strength. Do it once and Create tells you."]
 	quest.4BBD3DCF6DC7D2CD.title: "Shifting Gears"
-	quest.4BFF60896108B40E.quest_desc: ["Fifteen of the twenty.", "", "&eChapter prize:&r two relics from the cache, a sun coin and two rolls on the Legend's Hoard."]
+	quest.4BFF60896108B40E.quest_desc: ["Fifteen of the twenty.", "", "&eChapter prize:&r two relics from the cache, 40,000 coins and two rolls on the Legend's Hoard."]
 	quest.4BFF60896108B40E.title: "&aRelic Master"
 	quest.4C3333A2BF4F5D7E.quest_desc: ["Bring the raid to a village you have made strong, and win. The Hero cape is yours, and so are the discounts.", "", "&eChapter prize:&r four emerald blocks, a relic and a roll on the Legend's Hoard."]
 	quest.4C3333A2BF4F5D7E.title: "&aHero of the Village"
@@ -727,7 +726,7 @@
 	quest.63262AE8B48DF4D5.title: "Blaze Enchantry"
 	quest.63292C21DCEF25B1.quest_desc: ["Friends \\& Foes builds citadels in the Nether. The wildfire, a blaze queen, rules one."]
 	quest.63292C21DCEF25B1.title: "A Fortress? No, a Citadel"
-	quest.6377F5FE70E96283.quest_desc: ["Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.", "", "Buy something from her: right-click her, then &eLet's trade&r. The coins from the last quest are enough.", "", "&7Market traders and shopkeepers sell for Numismatics coins, and some buy what you bring them (a few times an hour)."]
+	quest.6377F5FE70E96283.quest_desc: ["Bessa the Baker has a stall on the far side of the market, past the great tree from the waystone.", "", "Right-click her: she has a word for you first. Then right-click her again (or press &eLet's trade&r) for her shop, and buy something. The coins from the last quest are enough.", "", "&7Every trader and shopkeeper sells their own goods for Gold Coins and buys anything you bring: with their shop open, click it in your inventory."]
 	quest.6377F5FE70E96283.title: "Market Day"
 	quest.63D3B4DA71A590BD.title: "Illager Manor"
 	quest.63FACB40AF50B90A.quest_desc: ["Reach &eHitpoints 50&r. Hitpoints gives a heart every ten levels."]
@@ -766,6 +765,8 @@
 	quest.66D20F7255B1692F.quest_desc: ["Obsidian, crushed to powder and refined into sturdy sheets. Hardness III on the pickaxe first."]
 	quest.66D20F7255B1692F.title: "The Sturdiest Rocks"
 	quest.66DF651D226A3355.title: "Survive the Night"
+	quest.66F560542CE6E861.quest_desc: ["&e/trade <player>&r, or sneak and right-click them with an empty hand. When they ask you back, the trade window opens.", "", "Click things in your inventory to put them up, the gold button to add coins, then accept. Any change restarts a short deal timer, so nothing can be swapped at the last second."]
+	quest.66F560542CE6E861.title: "Fair Trade"
 	quest.672B8B2ACFEC0D47.title: "Sheet Metal"
 	quest.67D26D8597BBF139.quest_desc: ["Every factory is the same shape: an &einput&r (farm, drill, vein), &emachines&r on belts, and &estorage&r at the end.", "Sketch yours before you build. Create pays for each stage below."]
 	quest.67D26D8597BBF139.title: "Plan the Floor"
@@ -783,8 +784,8 @@
 	quest.696E2ECE05FA8FF3.title: "Bulk Processing"
 	quest.69A9E29EEC4B2ED5.quest_desc: ["A pair of crushing wheels doubles ore output and eats almost anything."]
 	quest.69A9E29EEC4B2ED5.title: "Crushing Wheels"
-	quest.69CFB9CD9595CE4F.quest_desc: ["Hold a crown coin: 512 spurs in one piece. Quests pay them, shops earn them.", "", "&eChapter prize:&r a crown, a blaze banker and a roll on the Master's Cache."]
-	quest.69CFB9CD9595CE4F.title: "&aA Crown"
+	quest.69CFB9CD9595CE4F.quest_desc: ["Hold 100,000 coins at once. Quests pay them, vendors buy anything, and a factory never sleeps.", "", "&eChapter prize:&r 10,000 coins and a roll on the Master's Cache."]
+	quest.69CFB9CD9595CE4F.title: "&aA Fortune"
 	quest.69EC1B773C2F1898.quest_desc: ["With goggles on you can read speed and stress off any machine. Every network has a stress budget; add more wheels when it runs out.", "", "&7Cyber Goggles (optional, in the launcher's Mods tab) show exact numbers."]
 	quest.69EC1B773C2F1898.title: "Engineer's Goggles"
 	quest.69F536FA355762E0.quest_desc: ["Reach &eCrafting 10&r. Crafting gives XP from everything you craft.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
@@ -842,6 +843,8 @@
 	quest.71B1DE7023B2719A.quest_desc: ["Creepers now match their biome, and each variant has its own trick."]
 	quest.71B1DE7023B2719A.title: "Creepers of Every Kind"
 	quest.71CC2967CF0C5E7E.title: "Master of Contracts"
+	quest.71D0EF53A0EDEF0A.quest_desc: ["Hold 10,000 coins at once."]
+	quest.71D0EF53A0EDEF0A.title: "Deep Pockets"
 	quest.71FEB518791AB733.quest_desc: ["Found in End and stronghold chests."]
 	quest.71FEB518791AB733.title: "Kinetic Belt"
 	quest.737EFC7F3D6819BC.quest_desc: ["Deep under the world lie ore veins that never run dry. A vein finder points at the nearest one; a drilling machine on top mines it forever.", "", "&7No diamond, emerald or netherite veins: those you still dig for."]
@@ -874,6 +877,8 @@
 	quest.78F4B76C3C615327.title: "Pioneer"
 	quest.792978E03502FA34.title: "Abandoned Quarry"
 	quest.79ABE8B917DF9C5F.title: "First Things First"
+	quest.79B73BE18CC90C95.quest_desc: ["Each vendor sells their own line: the baker bread and pies, the smith tools and weapons, the mason building blocks. Click a good to buy one lot, shift-click for a stack."]
+	quest.79B73BE18CC90C95.title: "Shopping"
 	quest.79C2647D374D0278.quest_desc: ["Reach &eHitpoints 75&r. Hitpoints gives a heart every ten levels."]
 	quest.79C2647D374D0278.title: "&cHitpoints 75"
 	quest.7A4552D518DDE81E.quest_desc: ["Buried treasure only, one per chest; treasure maps come from shipwrecks and ocean ruins. Every new Heart starts with one."]
@@ -896,8 +901,6 @@
 	quest.7C8DB04E9ED0F3FA.title: "The Far End"
 	quest.7CFFEB1D8A44B9F1.quest_desc: ["Reach &eFishing 25&r. Fishing gives better catches.", "", "&eUnlocked on the way:&r", "• 25: the Angler's Cap"]
 	quest.7CFFEB1D8A44B9F1.title: "&aFishing 25"
-	quest.7D1807BCBA3F00E3.quest_desc: ["Put a vendor in front of your storage, set a price, and sell to anyone who walks by, even while you are offline."]
-	quest.7D1807BCBA3F00E3.title: "Open a Shop"
 	quest.7E0EAA890E15C2ED.quest_desc: ["Lemurton, the capital, is a few minutes from where you woke up: you got a &6Compass to Lemurton&r, and a line in chat says how far and which way.", "", "Walk in through any of its four gates.", "", "&7Every town you find has a name; it shows on screen as you walk in."]
 	quest.7E0EAA890E15C2ED.quest_subtitle: "The capital"
 	quest.7E0EAA890E15C2ED.title: "&6Find Lemurton"
@@ -1008,7 +1011,6 @@
 	task.3DE024B0530A24C0.title: "Five relics found"
 	task.3EBCF5580B297448.title: "Kill a mauler"
 	task.3F44F660DAB99D4E.title: "Enter a Nether citadel"
-	task.3F6E8488F223F214.title: "My shop is open"
 	task.3F8193F3B57EBE21.title: "Total level 500"
 	task.3F9E229FA83BCD41.title: "Cooking level 50"
 	task.3FAC20D5D82FFB77.title: "A book of Sharpness VIII"
@@ -1083,17 +1085,20 @@
 	task.6230418B9675D00B.title: "Hitpoints level 10"
 	task.6258A77BC42867AA.title: "Complete 50 missions"
 	task.62B595F971E27726.title: "Defence level 25"
+	task.630F32752B34BEAB.title: "Trade with another player"
 	task.63100543D1C4DC47.title: "Trade with a villager"
 	task.63810048009B9EF3.title: "Strength level 99"
 	task.6393242D91DCD278.title: "I have read this"
 	task.642CE076999EF7BC.title: "Smithing level 50"
 	task.656C588320372138.title: "Crystallise pearlescent levitite"
 	task.65A1DB4BB67F997B.title: "Smithing level 75"
+	task.65A4A2EFDE395408.title: "Sell something to a vendor"
 	task.65AD7D88AC69FB69.title: "Forecast an arrival on a display board"
 	task.665E1FAB32E40F49.title: "Enter an end gateway"
 	task.66B7B361C4CA44DA.title: "Ranged level 99"
 	task.66E7BFB36BCBD166.title: "Defence level 50"
 	task.681D2FB4E0CCA481.title: "Mining level 99"
+	task.6901C474B82E9ED1.title: "Hold 100,000 coins"
 	task.690B6C71D0AB6018.title: "Total level 1000"
 	task.6965B4E3CDB16836.title: "Kill a mob near a sculk catalyst"
 	task.6A19741A26D7FA8A.title: "Connect a large cogwheel to a small one"
@@ -1104,10 +1109,12 @@
 	task.6DB60A38B1A91D20.title: "Shear a mature mushroom colony"
 	task.6E7D1F7BB53A2A51.title: "Farming level 10"
 	task.6EB0DCA9A6611806.title: "Sleep in a bed"
+	task.6F3AAB6C8E1C7914.title: "Hold 10,000 coins"
 	task.7022C49B919B2773.title: "Hitpoints level 99"
 	task.70500545F6FED95E.title: "Respawn the ender dragon"
 	task.70E0F76D94E09C2D.title: "Summon an iron golem"
 	task.7124A165DC2210D6.title: "Sound a whistle while driving"
+	task.71CFE3171FB9021C.title: "Buy something from a vendor"
 	task.74065C410FE5BDEE.title: "Use a hand crank until exhausted"
 	task.747BDA36F8642A2D.title: "Woodcutting level 99"
 	task.7481F2571690158A.title: "Enchant an item with a blaze enchanter"
@@ -1120,6 +1127,7 @@
 	task.7B1B3E1355FCB50D.title: "Trigger an automatic package request"
 	task.7B457DEFB8B20436.title: "Strength level 10"
 	task.7BE5A9F21443C4C4.title: "Plant rice in water"
+	task.7C84C0BC1E19716F.title: "Hold 1,000,000 coins"
 	task.7CF415573FABFB55.title: "Ranged level 10"
 	task.7E7A97DB6FA8897C.title: "Enchanting level 25"
 	task.7EB6DB176D497641.title: "Craft with mechanical crafters"

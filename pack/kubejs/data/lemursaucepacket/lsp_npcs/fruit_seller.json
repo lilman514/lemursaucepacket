@@ -1,0 +1,78 @@
+{
+  "name": "Old Wren",
+  "color": "#7FCB5A",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:apple",
+          "count": 1
+        },
+        "price": 8
+      },
+      {
+        "item": {
+          "id": "minecraft:melon_slice",
+          "count": 8
+        },
+        "price": 12
+      },
+      {
+        "item": {
+          "id": "minecraft:sweet_berries",
+          "count": 8
+        },
+        "price": 15
+      },
+      {
+        "item": {
+          "id": "minecraft:glow_berries",
+          "count": 4
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:carrot",
+          "count": 4
+        },
+        "price": 12
+      },
+      {
+        "item": {
+          "id": "minecraft:potato",
+          "count": 4
+        },
+        "price": 12
+      },
+      {
+        "item": {
+          "id": "minecraft:beetroot",
+          "count": 4
+        },
+        "price": 12
+      },
+      {
+        "item": {
+          "id": "minecraft:pumpkin",
+          "count": 1
+        },
+        "price": 15
+      },
+      {
+        "item": {
+          "id": "minecraft:melon",
+          "count": 1
+        },
+        "price": 25
+      }
+    ],
+    "onBuy": []
+  }
+}

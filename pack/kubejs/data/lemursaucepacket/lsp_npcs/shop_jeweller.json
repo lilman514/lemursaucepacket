@@ -1,0 +1,57 @@
+{
+  "name": "Lucan the Jeweller",
+  "color": "#E0C35A",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:gold_nugget",
+          "count": 9
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:gold_ingot",
+          "count": 1
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:golden_apple",
+          "count": 1
+        },
+        "price": 600
+      },
+      {
+        "item": {
+          "id": "minecraft:clock",
+          "count": 1
+        },
+        "price": 300
+      },
+      {
+        "item": {
+          "id": "minecraft:compass",
+          "count": 1
+        },
+        "price": 150
+      },
+      {
+        "item": {
+          "id": "minecraft:name_tag",
+          "count": 1
+        },
+        "price": 400
+      }
+    ],
+    "onBuy": []
+  }
+}

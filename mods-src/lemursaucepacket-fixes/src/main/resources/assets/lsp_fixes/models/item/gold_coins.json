@@ -1,0 +1,62 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lsp_fixes:item/gold_coins_1"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.1
+      },
+      "model": "lsp_fixes:item/gold_coins_2"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.2
+      },
+      "model": "lsp_fixes:item/gold_coins_3"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.3
+      },
+      "model": "lsp_fixes:item/gold_coins_4"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.4
+      },
+      "model": "lsp_fixes:item/gold_coins_5"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.5
+      },
+      "model": "lsp_fixes:item/gold_coins_25"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.6
+      },
+      "model": "lsp_fixes:item/gold_coins_100"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.7
+      },
+      "model": "lsp_fixes:item/gold_coins_250"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.8
+      },
+      "model": "lsp_fixes:item/gold_coins_1000"
+    },
+    {
+      "predicate": {
+        "lsp_fixes:pile": 0.9
+      },
+      "model": "lsp_fixes:item/gold_coins_10000"
+    }
+  ]
+}

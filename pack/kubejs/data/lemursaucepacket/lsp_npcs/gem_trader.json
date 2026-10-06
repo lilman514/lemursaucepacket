@@ -1,0 +1,57 @@
+{
+  "name": "Imran the Gem Trader",
+  "color": "#B774E0",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:amethyst_shard",
+          "count": 4
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:lapis_lazuli",
+          "count": 8
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:quartz",
+          "count": 8
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:emerald",
+          "count": 1
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:glowstone_dust",
+          "count": 8
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:prismarine_crystals",
+          "count": 4
+        },
+        "price": 60
+      }
+    ],
+    "onBuy": []
+  }
+}

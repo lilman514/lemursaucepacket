@@ -11,6 +11,7 @@
     "gravestone.DeathEventsMixin",
     "pmmo.UseGateMixin",
     "createoreexcavation.KubeJSExcavationMixin",
+    "brassworksmissions.ActiveMissionMixin",
     "FireZoneMixin",
     "LightningZoneMixin"
   ],

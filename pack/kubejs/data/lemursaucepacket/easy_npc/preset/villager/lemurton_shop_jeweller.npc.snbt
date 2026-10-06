@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Jeweller: buys precious things.",
+    description:"Jeweller.",
     entityTypeId:"easy_npc:villager",
     name:"Lucan the Jeweller",
     variantType:"PLAINS_LIBRARIAN",
@@ -62,7 +62,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -93,7 +94,7 @@
           Priority:-1,
           Texts:[
             {
-              Text:"Gold, diamonds, the rare stones of the deep: I pay more than anyone in the realm."
+              Text:"Gold, diamonds, the rare stones of the deep: I pay what they are worth, and not a coin less."
             }
           ],
           Buttons:[
@@ -102,7 +103,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -116,74 +118,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    TradingData:{
-      TradingDataSet:{
-        Type:"BASIC",
-        MaxUses:999,
-        ResetsEveryMin:60,
-        RewardedXP:0,
-        LastReset:0L
-      }
-    },
-    Offers:{
-      Recipes:[
-        {
-          buy:{
-            id:"minecraft:gold_ingot",
-            count:4
-          },
-          sell:{
-            id:"numismatics:sprocket",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:diamond",
-            count:1
-          },
-          sell:{
-            id:"numismatics:cog",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          buyB:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:gold_nugget",
-            count:9
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
         }
       ]
     },
@@ -207,7 +141,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.shop_jeweller"
     ]
   }
 }

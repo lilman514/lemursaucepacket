@@ -16,9 +16,9 @@ Why the pack is built the way it is. The README covers how to run it.
 
 ## Progression: the quest book
 
-FTB Quests, built from `quests/book.mjs`: 29 chapters and about 435 quests. Quests never lock content; they're a road map that pays out in XP, Numismatics coins and loot. Every quest has a **tier** (1 Settler, 2 Engineer, 3 Artisan, 4 Master, 5 Legend) that sets its XP (25 to 1,000), its coins (8 to 512) and one roll on the tier's reward table (`reward_tables/*.snbt`: ingots and torches at tier 1, cogs and casings at 2, brass and precision mechanisms at 3, enchanted books, relics and gear tools at 4, loot-only gear, waystones and netherite at 5), so a hard quest pays like one. Chapter finales add a fixed prize (a gear piece, a relic roll, a warp stone, a cape flag) so the whole line is worth finishing. Objectives are the mods' real advancements wherever one exists, not checkmarks. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
+FTB Quests, built from `quests/book.mjs`: 29 chapters and about 435 quests. Quests never lock content; they're a road map that pays out in XP, Gold Coins and loot. Every quest has a **tier** (1 Settler, 2 Engineer, 3 Artisan, 4 Master, 5 Legend) that sets its XP (25 to 1,000), its coins (80 to 5,120) and one roll on the tier's reward table (`reward_tables/*.snbt`: ingots and torches at tier 1, cogs and casings at 2, brass and precision mechanisms at 3, enchanted books, relics and gear tools at 4, loot-only gear, waystones and netherite at 5), so a hard quest pays like one. Chapter finales add a fixed prize (a gear piece, a relic roll, a warp stone, a cape flag) so the whole line is worth finishing. Objectives are the mods' real advancements wherever one exists, not checkmarks. Progression mode is *flexible*: a biome visited early still counts later, so no one has to repeat exploration.
 
-Beyond the Ages below: **Industry** (Factory Floor, Railway Company, The Foundry, The Enchanter, Arcane Works, The Warehouse, Grand Kitchen), **Expeditions** (Cartographer, Deep Dark, Beyond the Dragon, Village Life, Relic Hunter with all 20 relics and collector quests), **Field Guides** (Backpack Workshop, Homestead, Bestiary, Atlas, Commerce, Armory, Hearts & Graves) and **Mastery**: a *Skills* chapter with every skill's 10/25/50/75/99 milestones and a total-level ladder up to Maxed, plus *Contracts* for Brassworks missions. Milestones are custom tasks completed by `server_scripts/quest_milestones.js` (every 10 s, and after login) from Project MMO levels, with per-skill prizes at 50 and 75 and a relic, a sun coin and Hoard rolls at 99.
+Beyond the Ages below: **Industry** (Factory Floor, Railway Company, The Foundry, The Enchanter, Arcane Works, The Warehouse, Grand Kitchen), **Expeditions** (Cartographer, Deep Dark, Beyond the Dragon, Village Life, Relic Hunter with all 20 relics and collector quests), **Field Guides** (Backpack Workshop, Homestead, Bestiary, Atlas, Commerce, Armory, Hearts & Graves) and **Mastery**: a *Skills* chapter with every skill's 10/25/50/75/99 milestones and a total-level ladder up to Maxed, plus *Contracts* for Brassworks missions. Milestones are custom tasks completed by `server_scripts/quest_milestones.js` (every 10 s, and after login) from Project MMO levels, with per-skill prizes at 50 and 75 and a relic, 40,000 coins and Hoard rolls at 99.
 
 **The Ages** (the main line)
 
@@ -82,7 +82,7 @@ The server owner asked for a full RPG layer in the style of RuneScape, combat st
 
 Every 10 levels sets off fireworks and lists what the new level unlocks. Crits are rolled in `kubejs/server_scripts/skills.js`, which also switches off Project MMO's "builtin/default" datapack. That datapack would add requirements for Project MMO's own skills.
 
-**Missions.** Create: Brassworks Missions gives each player six random missions a week, many of them Create jobs such as pressing, mixing or crushing. Each pays 5–12 bevels (40–96 coins), so a week's missions are worth roughly 250–575 coins.
+**Missions.** Create: Brassworks Missions gives each player six random missions a week, many of them Create jobs such as pressing, mixing or crushing. Each pays 5–12 Coin Pouches (`rewardItem = lsp_fixes:coin_pouch`; a pouch opens into 100 coins and rerolls cost pouches), so a week's missions are worth roughly 3,000–7,000 coins. Missions assigned in the Numismatics days saved bevels: the `brassworksmissions.ActiveMissionMixin` loads those as the same number of pouches, because an empty reward stack made Brassworks disconnect the player on join.
 
 **Dungeons.** When Dungeons Arise adds 30+ large dungeons. Its loot includes three enchantments of its own. Lootr gives every player their own copy of each loot chest, so nobody gets beaten to one.
 
@@ -209,14 +209,13 @@ The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and
   - NPCs are Easy NPC Core and Config UI 7.14 presets. `npcs/build.mjs` writes them from `npcs/npcs.mjs` into `kubejs/data/lemursaucepacket/easy_npc/preset/<model>/`, checking every item against the registry dump.
   - hub.mjs puts one at every `npc` mark (8 stalls, 7 shops), plus the mayor by the waystone, 8 gate guards and 5 townsfolk: 29 in all. They are placed by `/easy_npc preset import data <preset> <pos> <uuid>` commands in the plan, with fixed UUIDs (sha1 of the spot).
   - Every NPC is invulnerable, can't be pushed or knocked back, looks at nearby players, and is tagged `lsp_zone_allowed` and `lemurton_npc`.
-  - Shops use Easy NPC's BASIC trading (the vanilla merchant screen): at most two stacks to pay, one to get, refilled hourly. Prices are written in spurs and `price()` picks the coins.
-  - Questlines are FTB Quests chapters in a Lemurton group (quests/book.mjs). Each step is a `gamestage` task on a vanilla player tag that an NPC sets: a dialog button runs `/tag @initiator add <stage>`, or an action event does (Bessa's ON_TRADE). Dialogs choose themselves from the same tags (PLAYER_TAG conditions, highest priority first), so the mayor's lines follow the quest. NPC quests set `auto` on their rewards (the pack's default is manual claiming).
+  - Shops (1.5.0) are the lsp_fixes economy's, not Easy NPC trading: see **Economy** below.
+  - Questlines are FTB Quests chapters in a Lemurton group (quests/book.mjs). Each step is a `gamestage` task on a vanilla player tag that an NPC sets: a dialog button runs `/tag @initiator add <stage>`, or a shop purchase does (Bessa's `onBuy`). Dialogs choose themselves from the same tags (PLAYER_TAG conditions, highest priority first), so the mayor's lines follow the quest. NPC quests set `auto` on their rewards (the pack's default is manual claiming).
   - The first chapter, Welcome to Lemurton: meet the mayor, buy from Bessa at the market, report back. Tested end to end on 2026-10-05: dialog and trade screens, auto-paid rewards.
   - Gotcha: a dialog or trade screen forced open (`/easy_npc dialog open`) before the player's client has the NPC entity disconnects that player (an NPE in Easy NPC's DialogScreen), so only open them for players standing next to the NPC.
 - **Next:**
   - More questlines (easy and hard, short and long) in the same pattern.
   - Quest-gated wearing and use: hidden Project MMO skills granted by `pmmo:levelreward`. Crafting: the crafting-result mixin.
-  - Card payments: NPC trades take coins as items from the purse, not the bank; Numismatics creative vendors could take bank cards.
   - Settlements in worldgen (jigsaw structures from the same templates); special buildings (bank, inn, church, guild hall, castle keep); custom NPC skins.
 
 ## Look and feel: one kit everywhere
@@ -261,7 +260,17 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - No land-claim mod, by the owner's decision; graves and the rules in the Landfall chapter are the safety net.
 - Gravestone keeps your items where you died.
 
-**Economy:** quest rewards are Numismatics coins (spur 1, bevel 8, sprocket 16, cog 64, crown 512, sun 4096), not items. Coins buy things from other players' shops, so progress feeds trade instead of skipping it.
+**Economy (1.5.0, lsp_fixes package `economy`; players' guide docs/economy.md).** One currency, Gold Coins, replacing Numismatics (removed in 1.5.0; quest rewards went to Gold Coins at 10 per spur, a crown to 5,000 and a sun to 40,000).
+- **The coin** (`lsp_fixes:gold_coins`): one item, max stack 1, its amount in the `lsp_fixes:coin_amount` long component, so there's no cap. A count above one means amount × count (Coins.value). The purse is every coin stack in the inventory; a player tick folds them into one stack, and coins walked over merge into it (ItemEntityPickupEvent), so a full inventory still picks coins up. In containers, carried coins clicked on coins merge; right-click puts one down or takes half (Item.overrideStackedOnOther/OtherStackedOnMe); shift + right-click opens an amount box (client screen, payload CoinInput) that puts an exact amount in the cursor.
+- **The client** draws the amount where vanilla draws a count (IItemDecorator): `2.3k`, `45k`, `1.2M`, rounded down, three-quarter size beyond two characters, in RuneScape's stack colours (yellow, white from 100k, green from 10M). The icon is a pile that grows with the amount like RuneScape's (ten sprites from `art/coins.mjs`, the `lsp_fixes:pile` item property). The tooltip has the exact amount.
+- **Coin Pouch** (`lsp_fixes:coin_pouch`, stacks to 64): what Brassworks pays (it hands out one item by count, which a no-cap coin can't be). Right-click opens the stack into 100 coins each.
+- **Values** (ItemValues): `data/*/lsp_economy/*.json` (ours: `npcs/values.mjs`) prices raw materials by id, tag or regex; every recipe in the server's RecipeManager (crafting, smelting, Create's machines: about 11,000) prices what it makes as the cheapest input cost (min over recipes, a fixpoint, so crafting never prints money; container remainders subtracted; inputs that are only tools cost nothing); what nothing prices gets a rarity default (0.5, 8, 32, 128); and no vendor buys back anything it sells for more than `vendorShare` (half) of its price. 9,196 items priced in about 160 ms at start and on /reload. A stack's worth is value × count, less wear, plus 8 × anvil cost × level per enchantment. The table goes to every client on join and reload (payload Values), so the shop's tooltips use the same numbers. Never bought: coins, pouches, Hearts, backpacks (contents live elsewhere), spawn eggs, Easy NPC items, full containers.
+- **Vendors** (`data/*/lsp_npcs/<who>.json`, written by `npcs/build.mjs`; an Easy NPC is one when tagged `lsp_npc.<who>`): PlayerInteractEvent.EntityInteract on such an NPC is cancelled and decided in Java. A waiting *talk* plays first, alone: the greeting on a first meeting (`intro`), or a dialog whose stage tags line up (`when`/`unless`), each once per player (the `npc_memory` attachment, kept through death). Otherwise a vendor opens their shop and anyone else says their usual line (`/easy_npc dialog open`). The dialogs' "Let's trade" runs `/lsp shop open @npc-uuid @initiator`.
+- **The shop** is a custom chest-style menu (MenuType `lsp_fixes:shop`, vanilla ContainerScreen) whose client half ignores clicks, so nothing flickers into the cursor while the server decides. Goods sit in a bordered 7-wide grid (a lot per click, a stack per shift-click; the price rides on a display-only `shop_cost` component that the client turns into Hypixel-style "Cost / Click to buy!" lines at the bottom of the tooltip). Clicking an item in your own inventory sells it, shift-click sells every stack like it, and a sale of 1,000+ coins or of anything enchanted, named or rare needs a second click within 4 s. The bottom row: purse, Talk to <name>, buyback (the last five sales, LIFO, at what was paid), Quests (the vendor's quest lines from `npcs.mjs` QUESTS, done steps struck through and the current one highlighted: the shop doubles as the quest journal) and Close. Purchases can run `onBuy` commands.
+- **Trading** (Trades): `/trade <player>` or sneak + right-click with an empty hand; asking back opens a 6-row window for both (your 4×4 offer left, theirs right, coins via the amount box, held in escrow while on offer). Any change resets both acceptances and starts a 3 s deal timer. Completion checks free slots, then swaps; closing, logging out, dying (LivingDeathEvent, highest priority, before the grave takes the inventory), changing dimension or walking 64 blocks apart cancels and returns everything. Every trade and sale is logged on `lsp_fixes/economy`.
+- **Stages for the quest book:** `econ_sold`, `econ_bought`, `econ_traded`, `econ_purse_1k|10k|100k|1m` (the Coin & Commerce chapter, and Millionaire in Legacy).
+- **Commands:** `/purse`, `/worth`, `/trade`; ops: `/lsp coins give|take|set|balance`, `/lsp values get|top`, `/lsp npc list|talk|forget`, `/lsp shop open`.
+- Gone with Numismatics: offline player shops (vendors and depositors) and bank cards. Create's table cloths still sell while you're away, priced in any item.
 
 ## Mods by role
 
@@ -272,7 +281,6 @@ Not skinned, on purpose: inventories and machine GUIs (Create's own look is part
 - Create Enchantment Industry
 - Create Deco, Copycats+, Create: Connected
 - Railways Navigator
-- Numismatics
 - Farmer's Delight with Slice & Dice and Central Kitchen
 - Create Ore Excavation
 - Sophisticated Backpacks' Create integration, and Create Backpack Upgrades (pressing and mixing upgrades)
@@ -372,7 +380,7 @@ Remove an entry when the mod fixes it upstream.
 - When Sable 2.0.5 assembles blocks into a ship, it copies each block entity onto the ship, then removes the original block.
 - Block entities that don't implement Minecraft's `Clearable` keep their contents, so the removed original drops them too.
 - Tested in this pack, that duplicated items on weighted ejectors, mechanical arms and andesite, brass and copper table cloths.
-- Backpacks, Numismatics vendors, vaults, toolboxes, copycats and the other storage blocks tested were already safe.
+- Backpacks, vaults, toolboxes, copycats and the other storage blocks tested were already safe (so were Numismatics vendors, while the pack had them).
 - The mod clears every such block entity first. It crashes at startup, rather than failing silently, if a Sable update moves the code it patches.
 - Sable's own `sable:silent_assembly_removal` block tag is the fallback if the mod ever lags behind Sable.
 

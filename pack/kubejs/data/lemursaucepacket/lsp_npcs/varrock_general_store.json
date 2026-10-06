@@ -1,0 +1,120 @@
+{
+  "name": "Pip the Shopkeeper",
+  "color": "#8FBF60",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:torch",
+          "count": 8
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:bread",
+          "count": 2
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:wheat_seeds",
+          "count": 8
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:oak_sapling",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:shears",
+          "count": 1
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:map",
+          "count": 1
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:bucket",
+          "count": 1
+        },
+        "price": 100
+      },
+      {
+        "item": {
+          "id": "minecraft:bowl",
+          "count": 4
+        },
+        "price": 10
+      },
+      {
+        "item": {
+          "id": "minecraft:stick",
+          "count": 16
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:crafting_table",
+          "count": 1
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:chest",
+          "count": 1
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:white_bed",
+          "count": 1
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:flint_and_steel",
+          "count": 1
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:ladder",
+          "count": 8
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:coal",
+          "count": 8
+        },
+        "price": 60
+      }
+    ],
+    "onBuy": []
+  }
+}

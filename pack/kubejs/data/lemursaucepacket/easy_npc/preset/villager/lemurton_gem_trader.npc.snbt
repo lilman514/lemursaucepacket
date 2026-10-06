@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Buys gems.",
+    description:"Gems and crystals.",
     entityTypeId:"easy_npc:villager",
     name:"Imran the Gem Trader",
     variantType:"DESERT_CLERIC",
@@ -53,7 +53,7 @@
           Priority:10,
           Texts:[
             {
-              Text:"Gems, friend? I buy the good ones."
+              Text:"Gems, friend? The finest stones of the deep, and I buy anything you bring."
             }
           ],
           Buttons:[
@@ -62,7 +62,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -93,7 +94,7 @@
           Priority:-1,
           Texts:[
             {
-              Text:"Amethyst from the deep geodes, lapis, emeralds from the far villages: bring them and I pay in honest coin."
+              Text:"Amethyst from the deep geodes, lapis, emeralds from the far villages: I have travelled the whole realm for them."
             }
           ],
           Buttons:[
@@ -102,7 +103,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -116,87 +118,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    TradingData:{
-      TradingDataSet:{
-        Type:"BASIC",
-        MaxUses:999,
-        ResetsEveryMin:60,
-        RewardedXP:0,
-        LastReset:0L
-      }
-    },
-    Offers:{
-      Recipes:[
-        {
-          buy:{
-            id:"minecraft:amethyst_shard",
-            count:16
-          },
-          sell:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:lapis_lazuli",
-            count:16
-          },
-          sell:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:emerald",
-            count:4
-          },
-          sell:{
-            id:"numismatics:sprocket",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:amethyst_shard",
-            count:4
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
         }
       ]
     },
@@ -220,7 +141,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.gem_trader"
     ]
   }
 }

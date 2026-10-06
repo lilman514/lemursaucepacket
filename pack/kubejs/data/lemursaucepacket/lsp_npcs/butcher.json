@@ -1,0 +1,50 @@
+{
+  "name": "Ragnar the Butcher",
+  "color": "#B05A3C",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:cooked_porkchop",
+          "count": 4
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:cooked_beef",
+          "count": 4
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:cooked_mutton",
+          "count": 4
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:cooked_chicken",
+          "count": 4
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:rabbit_stew",
+          "count": 1
+        },
+        "price": 50
+      }
+    ],
+    "onBuy": []
+  }
+}

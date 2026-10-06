@@ -1,0 +1,71 @@
+{
+  "name": "Saffi the Spice Merchant",
+  "color": "#E08A3C",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "farmersdelight:cabbage_seeds",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "farmersdelight:tomato_seeds",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "farmersdelight:onion",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "farmersdelight:rice",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:sugar",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:cocoa_beans",
+          "count": 4
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:pumpkin_seeds",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:melon_seeds",
+          "count": 4
+        },
+        "price": 20
+      }
+    ],
+    "onBuy": []
+  }
+}

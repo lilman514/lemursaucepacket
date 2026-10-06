@@ -37,7 +37,7 @@
 
 ["Mission Rewards"]
 	#Registry name of the item awarded by missions.
-	rewardItem = "numismatics:bevel"
+	rewardItem = "lsp_fixes:coin_pouch"
 
 ["Mission Management"]
 	#Automatically reload missions.json after file changes.

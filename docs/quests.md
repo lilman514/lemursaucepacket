@@ -53,7 +53,7 @@ Twenty-nine chapters in five groups. The Ages are the main line; the rest are qu
 | Homestead | Farmer's Delight basics, new crops, rich soil, breeding | The happy ghast |
 | Bestiary | The new mobs and bosses, one quest each | — (a collection) |
 | Atlas | Terralith biomes and rebuilt structures | — (a collection) |
-| Coin & Commerce | Numismatics coins, depositors, shops, banking | A crown coin |
+| Coin & Commerce | Gold Coins, selling and buying at vendors, trading, table-cloth shops | 10,000 coins |
 | The Armory | The pack's own gear: tools, weapons, armour sets | The Compacted Netherite set |
 | Hearts & Graves | The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart | A new Heart made from a Heart of the Sea |
 
@@ -67,20 +67,20 @@ Every quest has a tier. The tier sets its XP, its coins and the crate it rolls o
 
 | Tier | XP | Coins | Crate | What the crate holds |
 |---|---|---|---|---|
-| 1 Settler | 25 | 8 | Settler's Supplies | Ingots, alloy, torches, food, coal, arrows, tea |
-| 2 Engineer | 60 | 24 | Engineer's Crate | Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases |
-| 3 Artisan | 150 | 48 | Artisan's Crate | Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts |
-| 4 Master | 400 | 128 | Master's Cache | Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades |
-| 5 Legend | 1000 | 512 | Legend's Hoard | Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending |
+| 1 Settler | 25 | 80 | Settler's Supplies | Ingots, alloy, torches, food, coal, arrows, tea |
+| 2 Engineer | 60 | 240 | Engineer's Crate | Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases |
+| 3 Artisan | 150 | 480 | Artisan's Crate | Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts |
+| 4 Master | 400 | 1,280 | Master's Cache | Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades |
+| 5 Legend | 1000 | 5,120 | Legend's Hoard | Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending |
 
-Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, sun coins, capes), so the last quest of a line is always worth reaching.
+Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, coins, capes), so the last quest of a line is always worth reaching.
 
 - XP is vanilla experience, for enchanting; it does not train skills.
-- Coins are Numismatics: spur 1, bevel 8, sprocket 16, cog 64, crown 512, sun 4096. Trade them or bank them.
+- Coins are Gold Coins, one stack however many you have. Spend them at the vendors or trade them; see [Coins, vendors and trading](economy.md).
 - Team progress is shared: if you are in a team, everyone gets the quest and can claim its rewards.
 
 ## The Skills chapter
 
 Every Project MMO skill has a milestone quest at 10, 25, 50, 75 and 99, and the total-level ladder runs 100, 250, 500, 750, 1000 and Maxed (1386, every skill at 99). You cannot tick these: the server reads your levels every few seconds, and shortly after you log in, and completes the ones you have reached. A chat line tells you, with a link to the book, and the reward waits there to be claimed.
 
-The rewards climb with the level: a Settler crate at 10, a Legend's Hoard at 99. Level 50 and 75 add a prize made for the skill (the Excavator's Pickaxe for Mining, the Stormcaller's Sabre for Attack, an elytra for Agility, a relic for Cooking). Level 99 pays a sun coin, a relic and two rolls on the Legend's Hoard, and the skill's cape unlocks by itself (`/capes`). Maxed is two suns and the Maxed Cape.
+The rewards climb with the level: a Settler crate at 10, a Legend's Hoard at 99. Level 50 and 75 add a prize made for the skill (the Excavator's Pickaxe for Mining, the Stormcaller's Sabre for Attack, an elytra for Agility, a relic for Cooking). Level 99 pays 40,000 coins, a relic and two rolls on the Legend's Hoard, and the skill's cape unlocks by itself (`/capes`). Maxed is 80,000 coins and the Maxed Cape.

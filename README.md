@@ -153,7 +153,7 @@ Every item, mob, biome, structure and advancement id is checked against `quests/
 2. Start the server once.
 3. Copy the `kubejs/registry-dump.json` it writes to `quests/.registry.json`.
 
-`book.mjs` is the source of truth. Edits made in-game with FTB's editor are overwritten the next time you publish a changed book. Every quest has a tier (1–5, `TIERS` at the top of `book.mjs`) that sets its XP, its Numismatics coins and the reward table it rolls on (`TABLES`, written to `reward_tables/`); finales add fixed prizes. The Skills chapter is generated from the skill list in `book.mjs`; its milestone quests carry custom tasks that only `pack/kubejs/server_scripts/quest_milestones.js` completes, from the ids the build writes to `pack/config/lemursaucepacket/milestones.json`.
+`book.mjs` is the source of truth. Edits made in-game with FTB's editor are overwritten the next time you publish a changed book. Every quest has a tier (1–5, `TIERS` at the top of `book.mjs`) that sets its XP, its Gold Coins and the reward table it rolls on (`TABLES`, written to `reward_tables/`); finales add fixed prizes. The Skills chapter is generated from the skill list in `book.mjs`; its milestone quests carry custom tasks that only `pack/kubejs/server_scripts/quest_milestones.js` completes, from the ids the build writes to `pack/config/lemursaucepacket/milestones.json`.
 
 Quest positions are not written by hand (the Skills and Relic Hunter chapters, laid out as grids, are the exception). Each chapter is laid out left to right in unlock order, with no crossing lines. A chapter's `about` and `unlocks` text becomes an info card next to its crest. The card is placed where it's readable as soon as the chapter opens. To look at every chapter without starting Minecraft:
 

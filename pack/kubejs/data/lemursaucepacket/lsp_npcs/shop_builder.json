@@ -1,0 +1,85 @@
+{
+  "name": "Gerta the Mason",
+  "color": "#A88A6A",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:cobblestone",
+          "count": 64
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:stone_bricks",
+          "count": 16
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:smooth_stone",
+          "count": 16
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:bricks",
+          "count": 16
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:terracotta",
+          "count": 16
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:oak_log",
+          "count": 16
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:oak_planks",
+          "count": 32
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:spruce_planks",
+          "count": 32
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:glass",
+          "count": 16
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:lantern",
+          "count": 4
+        },
+        "price": 80
+      }
+    ],
+    "onBuy": []
+  }
+}

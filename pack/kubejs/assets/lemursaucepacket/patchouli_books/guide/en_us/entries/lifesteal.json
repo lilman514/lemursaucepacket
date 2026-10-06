@@ -2,7 +2,7 @@
   "name": "Hearts, graves and elimination",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:paper",
-  "sortnum": 10,
+  "sortnum": 11,
   "pages": [
     {
       "type": "patchouli:text",

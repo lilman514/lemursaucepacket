@@ -62,7 +62,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -102,7 +103,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -116,104 +118,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    TradingData:{
-      TradingDataSet:{
-        Type:"BASIC",
-        MaxUses:999,
-        ResetsEveryMin:60,
-        RewardedXP:0,
-        LastReset:0L
-      }
-    },
-    Offers:{
-      Recipes:[
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:stone_sword",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:stone_pickaxe",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:stone_axe",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:sprocket",
-            count:1
-          },
-          sell:{
-            id:"minecraft:shield",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:sprocket",
-            count:3
-          },
-          sell:{
-            id:"minecraft:iron_sword",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
         }
       ]
     },
@@ -237,7 +141,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.shop_smithy"
     ]
   }
 }

@@ -1,0 +1,93 @@
+{
+  "name": "Sister Agnes",
+  "color": "#D86AA0",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:potion",
+          "count": 1,
+          "components": {
+            "minecraft:potion_contents": {
+              "potion": "minecraft:healing"
+            }
+          }
+        },
+        "price": 150
+      },
+      {
+        "item": {
+          "id": "minecraft:potion",
+          "count": 1,
+          "components": {
+            "minecraft:potion_contents": {
+              "potion": "minecraft:swiftness"
+            }
+          }
+        },
+        "price": 150
+      },
+      {
+        "item": {
+          "id": "minecraft:potion",
+          "count": 1,
+          "components": {
+            "minecraft:potion_contents": {
+              "potion": "minecraft:night_vision"
+            }
+          }
+        },
+        "price": 150
+      },
+      {
+        "item": {
+          "id": "minecraft:glass_bottle",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:honey_bottle",
+          "count": 2
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:golden_carrot",
+          "count": 2
+        },
+        "price": 160
+      },
+      {
+        "item": {
+          "id": "minecraft:glistering_melon_slice",
+          "count": 1
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:nether_wart",
+          "count": 4
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:brewing_stand",
+          "count": 1
+        },
+        "price": 200
+      }
+    ],
+    "onBuy": []
+  }
+}

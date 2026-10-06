@@ -1,0 +1,78 @@
+{
+  "name": "Maud the Weaver",
+  "color": "#6EA5E0",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:white_wool",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:red_wool",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "minecraft:yellow_wool",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "minecraft:green_wool",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "minecraft:blue_wool",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "minecraft:black_wool",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "minecraft:string",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:white_carpet",
+          "count": 8
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:white_banner",
+          "count": 1
+        },
+        "price": 60
+      }
+    ],
+    "onBuy": []
+  }
+}

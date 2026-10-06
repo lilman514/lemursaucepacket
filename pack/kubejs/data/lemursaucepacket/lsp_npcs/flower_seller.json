@@ -1,0 +1,92 @@
+{
+  "name": "Posy the Flower Seller",
+  "color": "#E07AB0",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:poppy",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:dandelion",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:cornflower",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:oxeye_daisy",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:allium",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:blue_orchid",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:azure_bluet",
+          "count": 4
+        },
+        "price": 20
+      },
+      {
+        "item": {
+          "id": "minecraft:birch_sapling",
+          "count": 2
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:cherry_sapling",
+          "count": 1
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:bone_meal",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:flower_pot",
+          "count": 1
+        },
+        "price": 20
+      }
+    ],
+    "onBuy": []
+  }
+}

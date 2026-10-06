@@ -19,12 +19,8 @@
       "gravestone:obituary",
       "patchouli:guide_book",
       "ftbquests:book",
-      "numismatics:spur",
-      "numismatics:bevel",
-      "numismatics:sprocket",
-      "numismatics:cog",
-      "numismatics:crown",
-      "numismatics:sun"
+      "lsp_fixes:gold_coins",
+      "lsp_fixes:coin_pouch"
     ]
   }
 }

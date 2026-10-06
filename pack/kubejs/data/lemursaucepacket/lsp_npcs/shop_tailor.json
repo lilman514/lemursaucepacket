@@ -1,0 +1,64 @@
+{
+  "name": "Odo the Tailor",
+  "color": "#B48C64",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:leather_helmet",
+          "count": 1
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:leather_chestplate",
+          "count": 1
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:leather_leggings",
+          "count": 1
+        },
+        "price": 100
+      },
+      {
+        "item": {
+          "id": "minecraft:leather_boots",
+          "count": 1
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:leather",
+          "count": 2
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:saddle",
+          "count": 1
+        },
+        "price": 300
+      },
+      {
+        "item": {
+          "id": "minecraft:lead",
+          "count": 1
+        },
+        "price": 60
+      }
+    ],
+    "onBuy": []
+  }
+}

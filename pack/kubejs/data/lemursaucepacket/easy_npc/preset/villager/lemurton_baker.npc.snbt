@@ -41,12 +41,6 @@
           {
             Type:"OPEN_DEFAULT_DIALOG"
           }
-        ],
-        ON_TRADE:[
-          {
-            Type:"COMMAND",
-            Cmd:"/tag @initiator add q_welcome_bread"
-          }
         ]
       }
     },
@@ -68,7 +62,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -108,7 +103,8 @@
               Name:"Let's trade",
               Actions:[
                 {
-                  Type:"OPEN_TRADING_SCREEN"
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
                 }
               ]
             },
@@ -122,108 +118,39 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    TradingData:{
-      TradingDataSet:{
-        Type:"BASIC",
-        MaxUses:999,
-        ResetsEveryMin:60,
-        RewardedXP:0,
-        LastReset:0L
-      }
-    },
-    Offers:{
-      Recipes:[
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:bread",
-            count:4
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
         },
         {
-          buy:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:cookie",
-            count:8
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:spur",
-            count:6
-          },
-          sell:{
-            id:"minecraft:pumpkin_pie",
-            count:2
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          buyB:{
-            id:"numismatics:spur",
-            count:4
-          },
-          sell:{
-            id:"minecraft:cake",
-            count:1
-          },
-          maxUses:999,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
-        },
-        {
-          buy:{
-            id:"minecraft:wheat",
-            count:32
-          },
-          sell:{
-            id:"numismatics:bevel",
-            count:1
-          },
-          maxUses:8,
-          uses:0,
-          rewardExp:0b,
-          xp:0,
-          priceMultiplier:0.0f,
-          specialPrice:0,
-          demand:0
+          Label:"quest_market",
+          Name:"The mayor sent you",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"You must be the newcomer the mayor sent! Every loaf on this stall came out of my oven this morning.
+
+Pick whatever you like, @initiator."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"quest_market_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"quest_market_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -247,7 +174,8 @@
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.baker"
     ]
   }
 }

@@ -4,7 +4,10 @@
 	filename: "commerce"
 	group: "7DAB9BE5981EE62A"
 	icon: {
-		id: "numismatics:cog"
+		components: {
+			"lsp_fixes:coin_amount": 1000
+		}
+		id: "lsp_fixes:gold_coins"
 	}
 	id: "3AD6951FB6CD0EF9"
 	images: [
@@ -14,11 +17,11 @@
 			image: "lemursaucepacket:textures/quests/commerce.png"
 			rotation: 0.0d
 			width: 2.0d
-			x: 0.35d
-			y: -2.0d
+			x: 4.15d
+			y: -1.0d
 		}
 		{
-			height: 2.527659574468085d
+			height: 2.7574468085106383d
 			id: "19441437222BDB59"
 			image: "lemursaucepacket:textures/quests/panel.png"
 			rotation: 0.0d
@@ -27,9 +30,9 @@
 			text_on_image: true
 			text_shadow: true
 			text_v_align: "start"
-			width: 6.765957446808511d
-			x: 4.5d
-			y: -2.0d
+			width: 7.480851063829787d
+			x: 8.6d
+			y: -1.0d
 		}
 	]
 	order_index: 25
@@ -38,7 +41,10 @@
 	quests: [
 		{
 			icon: {
-				id: "numismatics:cog"
+				components: {
+					"lsp_fixes:coin_amount": 25
+				}
+				id: "lsp_fixes:gold_coins"
 			}
 			id: "0531338213957CA2"
 			rewards: [
@@ -48,10 +54,13 @@
 					xp: 25
 				}
 				{
-					id: "0B0C65850ABDFE21"
+					id: "04DA8365A2CAD12D"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -66,95 +75,139 @@
 					id: "5BF8740DBEC54F06"
 					item: {
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
 			]
 			x: 0.0d
-			y: 2.1d
+			y: 2.9d
 		}
 		{
 			dependencies: ["0531338213957CA2"]
 			icon: {
-				id: "numismatics:andesite_depositor"
+				id: "minecraft:hopper"
 			}
-			id: "374C66390D54AB5C"
+			id: "36EAA461B4686D69"
 			rewards: [
 				{
-					id: "6AF37DB813E13669"
+					id: "4386D39B041C224F"
 					type: "xp"
-					xp: 60
+					xp: 25
 				}
 				{
-					id: "07642DA7343AC95A"
+					id: "0B57B3CC21C00857"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:sprocket"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
 				{
-					id: "1036081E515BF226"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
-					}
-					type: "item"
-				}
-				{
-					id: "0B6C207855A7C650"
-					table_id: 5365643345027758749L
+					id: "09942140BEFC1473"
+					table_id: 3210045145100678495L
 					type: "random"
 				}
 			]
 			tasks: [
 				{
-					id: "19C3A9695DA67277"
-					item: {
-						count: 1
-						id: "numismatics:andesite_depositor"
+					icon: {
+						id: "minecraft:hopper"
 					}
-					type: "item"
+					id: "65A4A2EFDE395408"
+					stage: "econ_sold"
+					type: "gamestage"
 				}
 			]
 			x: 2.3d
 			y: 0.5d
 		}
 		{
-			dependencies: ["374C66390D54AB5C"]
+			dependencies: ["0531338213957CA2"]
 			icon: {
-				id: "minecraft:emerald"
+				id: "minecraft:bread"
 			}
-			id: "7D1807BCBA3F00E3"
+			id: "79B73BE18CC90C95"
 			rewards: [
 				{
-					id: "3DE19ADCCA1AF6C5"
+					id: "7761556BD5E0C1D0"
 					type: "xp"
-					xp: 150
+					xp: 25
 				}
 				{
-					id: "4B3E99048DEC22CB"
+					id: "471D2B11BFA5AAD7"
 					item: {
-						count: 3
-						id: "numismatics:sprocket"
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
 				{
-					id: "638A52DD3E0D774D"
-					table_id: 3642704314676522423L
+					id: "3890F743BD48FC7C"
+					table_id: 3210045145100678495L
 					type: "random"
 				}
 			]
 			tasks: [
 				{
-					id: "3F6E8488F223F214"
-					type: "checkmark"
+					icon: {
+						id: "minecraft:bread"
+					}
+					id: "71CFE3171FB9021C"
+					stage: "econ_bought"
+					type: "gamestage"
 				}
 			]
-			x: 4.6d
-			y: 1.3d
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["0531338213957CA2"]
+			icon: {
+				id: "minecraft:lime_terracotta"
+			}
+			id: "66F560542CE6E861"
+			rewards: [
+				{
+					id: "20E3BBAD0ED40C5F"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "4C1BF0009C27CBB9"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "623013D5A2A73F41"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:lime_terracotta"
+					}
+					id: "630F32752B34BEAB"
+					stage: "econ_traded"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 3.7d
 		}
 		{
 			dependencies: ["0531338213957CA2"]
@@ -169,18 +222,13 @@
 					xp: 60
 				}
 				{
-					id: "1A37342D71A459E9"
+					id: "3CB96EFDC6EBDBD2"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "0D11FB5214B90B5E"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -199,59 +247,63 @@
 				}
 			]
 			x: 2.3d
-			y: 2.1d
+			y: 5.3d
 		}
 		{
-			dependencies: ["0531338213957CA2"]
+			dependencies: ["36EAA461B4686D69", "79B73BE18CC90C95"]
 			icon: {
-				id: "numismatics:bank_terminal"
+				components: {
+					"lsp_fixes:coin_amount": 1000
+				}
+				id: "lsp_fixes:gold_coins"
 			}
-			id: "3EC86527F7D75D14"
+			id: "71D0EF53A0EDEF0A"
 			rewards: [
 				{
-					id: "32219D205DC67A20"
+					id: "22DA8AF98C09EF1F"
 					type: "xp"
-					xp: 60
+					xp: 150
 				}
 				{
-					id: "5D472DC1B09B8BA4"
+					id: "74EC78D332D42BF0"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
 						count: 1
-						id: "numismatics:sprocket"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
 				{
-					id: "14F7F8308D65D6C5"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
-					}
-					type: "item"
-				}
-				{
-					id: "10A7C981782885C1"
-					table_id: 5365643345027758749L
+					id: "55FA1FD678B146FD"
+					table_id: 3642704314676522423L
 					type: "random"
 				}
 			]
 			tasks: [
 				{
-					id: "127EF8517186BAEF"
-					item: {
-						count: 1
-						id: "numismatics:bank_terminal"
+					icon: {
+						components: {
+							"lsp_fixes:coin_amount": 1000
+						}
+						id: "lsp_fixes:gold_coins"
 					}
-					type: "item"
+					id: "6F3AAB6C8E1C7914"
+					stage: "econ_purse_10k"
+					type: "gamestage"
 				}
 			]
-			x: 2.3d
-			y: 3.7d
+			x: 4.6d
+			y: 1.7d
 		}
 		{
-			dependencies: ["7D1807BCBA3F00E3", "3EC86527F7D75D14"]
+			dependencies: ["71D0EF53A0EDEF0A", "66F560542CE6E861"]
 			icon: {
-				id: "numismatics:crown"
+				components: {
+					"lsp_fixes:coin_amount": 10000
+				}
+				id: "lsp_fixes:gold_coins"
 			}
 			id: "69CFB9CD9595CE4F"
 			rewards: [
@@ -261,26 +313,13 @@
 					xp: 400
 				}
 				{
-					id: "2080529D6901C8C4"
+					id: "78D0678487550097"
 					item: {
-						count: 2
-						id: "numismatics:cog"
-					}
-					type: "item"
-				}
-				{
-					id: "076B0A1514A2CCDC"
-					item: {
+						components: {
+							"lsp_fixes:coin_amount": 11280
+						}
 						count: 1
-						id: "numismatics:crown"
-					}
-					type: "item"
-				}
-				{
-					id: "7CBCB8BA113206F3"
-					item: {
-						count: 1
-						id: "numismatics:blaze_banker"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -294,16 +333,19 @@
 			size: 1.5d
 			tasks: [
 				{
-					id: "6901C474B82E9ED1"
-					item: {
-						count: 1
-						id: "numismatics:crown"
+					icon: {
+						components: {
+							"lsp_fixes:coin_amount": 10000
+						}
+						id: "lsp_fixes:gold_coins"
 					}
-					type: "item"
+					id: "6901C474B82E9ED1"
+					stage: "econ_purse_100k"
+					type: "gamestage"
 				}
 			]
 			x: 6.9d
-			y: 2.1d
+			y: 2.45d
 		}
 	]
 }

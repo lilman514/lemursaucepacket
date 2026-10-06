@@ -1,0 +1,105 @@
+{
+  "name": "Bessa the Baker",
+  "color": "#E8B76A",
+  "talks": [
+    {
+      "dialog": "quest_market",
+      "when": [
+        "q_welcome_met"
+      ],
+      "unless": [
+        "q_welcome_bread"
+      ]
+    },
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:bread",
+          "count": 4
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:cookie",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "minecraft:pumpkin_pie",
+          "count": 2
+        },
+        "price": 60
+      },
+      {
+        "item": {
+          "id": "minecraft:cake",
+          "count": 1
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "farmersdelight:apple_pie_slice",
+          "count": 2
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "farmersdelight:sweet_berry_cookie",
+          "count": 8
+        },
+        "price": 40
+      },
+      {
+        "item": {
+          "id": "farmersdelight:honey_cookie",
+          "count": 8
+        },
+        "price": 50
+      },
+      {
+        "item": {
+          "id": "farmersdelight:chocolate_pie_slice",
+          "count": 2
+        },
+        "price": 60
+      }
+    ],
+    "onBuy": [
+      "execute as {player} if entity @s[tag=q_welcome_met] run tag @s add q_welcome_bread"
+    ]
+  },
+  "quests": [
+    {
+      "title": "Welcome to Lemurton",
+      "steps": [
+        {
+          "stage": "q_lemurton_found",
+          "text": "Find Lemurton"
+        },
+        {
+          "stage": "q_welcome_met",
+          "text": "Ask Mayor Thaddeus for work"
+        },
+        {
+          "stage": "q_welcome_bread",
+          "text": "Buy something from Bessa the Baker"
+        },
+        {
+          "stage": "q_welcome_done",
+          "text": "Report back to the mayor"
+        }
+      ]
+    }
+  ]
+}

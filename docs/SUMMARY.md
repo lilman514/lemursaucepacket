@@ -5,6 +5,7 @@
 * [The launcher](launcher.md)
 * [The world and its rules](world.md)
 * [Waystones](waystones.md)
+* [Coins, vendors and trading](economy.md)
 * [The ESC menu](esc-menu.md)
 * [Quests](quests.md)
 * [Skills](skills.md)

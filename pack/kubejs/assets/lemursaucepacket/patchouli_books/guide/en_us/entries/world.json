@@ -42,33 +42,37 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Market traders and shopkeepers$() sell for Numismatics coins. The market has fruit, bread and cakes, fish, meat, seeds and spices, flowers and saplings, and wool. The shops on the ring streets have tools and weapons, leather armour, building blocks, fishing gear, brewing supplies and a general store. Most also buy what you bring them, such as wheat, wool, leather, fish, gems and gold. Trades refill every hour.$(br)$(li)$(bold)Mayor Thaddeus$() gives the first quest, $(italic)Welcome to Lemurton$() (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market"
+      "text": "$(li)$(bold)Market traders and shopkeepers$() sell their own goods for Gold Coins, and every one of them buys anything you bring. The first right-click is their greeting; right-click again for the shop. The market has fruit and vegetables, bread and pies, gems, fish, seeds and spices, flowers and saplings, wool and meat. The shops on the ring streets have tools and weapons, leather armour and saddles, building blocks, fishing gear, potions and brewing supplies, gold and trinkets, and a general store. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Mayor Thaddeus$() gives the firs"
     },
     {
       "type": "patchouli:text",
-      "text": ", then report back. The rewards hand themselves over as you go. More questlines start in Lemurton as the city grows.$(br)$(li)The townsfolk can't be hurt or pushed around.$(br2)Lemurton is a $(bold)safe zone$():$(br2)$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
+      "text": "t quest, $(italic)Welcome to Lemurton$() (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market, then report back. The rewards hand themselves over as you go, and Bessa's shop shows where you are in it. More questlines start in Lemurton as the city grows.$(br)$(li)The townsfolk can't be hurt or pushed around.$(br2)Lemurton is a $(bold)safe zone$():"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
     },
     {
       "type": "patchouli:text",
       "title": "What's different from vanilla",
-      "text": "$(li)$(bold)Create is the spine.$() Every stage of progress runs through Create machines; other mods feed it (ore veins, crops, coins) or give it a reason to exist (structures, an economy, airships).$(br)$(li)$(bold)Terrain:$() Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.$(br)$(li)$(bold)Structures:$() When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests are per player (Lootr), so nobody gets beaten to one.$(br)$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find"
+      "text": "$(li)$(bold)Create is the spine.$() Every stage of progress runs through Create machines; other mods feed it (ore veins, crops) or give it a reason to exist (structures, an economy, airships).$(br)$(li)$(bold)Terrain:$() Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.$(br)$(li)$(bold)Structures:$() When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests are per player (Lootr), so nobody gets beaten to one.$(br)$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find with a"
     },
     {
       "type": "patchouli:text",
-      "text": " with a prospector and drill with Create machines.$(br)$(li)$(bold)Economy:$() Numismatics coins pay for quests and missions and buy from other players' vendors.$(br)$(li)$(bold)Skills:$() RuneScape-style levels gate weapons, tools and armour and make you stronger. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Hard blocks need Hardness:$() a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted from andesite, copper and a book), gold and redstone Hardness II (or a Mechanical Drill on a contraption, which breaks up to tier II), diamonds and obsidian H"
+      "text": " prospector and drill with Create machines.$(br)$(li)$(bold)Economy:$() Gold Coins, one stack however many you have. Quests and missions pay them, vendors buy anything for them and sell their own goods, and $(#e0ac46)/trade$() swaps items and coins with other players. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Skills:$() RuneScape-style levels gate weapons, tools and armour and make you stronger. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Hard blocks need Hardness:$() a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pi"
     },
     {
       "type": "patchouli:text",
-      "text": "ardness III, ancient debris IV, with Mining levels to match. Found some before you can mine it? You can keep it in a chest or drop it, but recipes, machines and other containers refuse it until your Mining level is there. Early obsidian for a table or a portal comes from ruined-portal and bastion chests, or from casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for"
+      "text": "ckaxe (crafted from andesite, copper and a book), gold and redstone Hardness II (or a Mechanical Drill on a contraption, which breaks up to tier II), diamonds and obsidian Hardness III, ancient debris IV, with Mining levels to match. Found some before you can mine it? You can keep it in a chest or drop it, but recipes, machines and other containers refuse it until your Mining level is there. Early obsidian for a table or a portal comes from ruined-portal and bastion chests, or from casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's mini"
     },
     {
       "type": "patchouli:text",
-      "text": " its settings; $(bold)O$() mutes your microphone."
+      "text": "map and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for its settings; $(bold)O$() mutes your microphone."
     },
     {
       "type": "patchouli:text",
       "title": "Weekly missions",
-      "text": "Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or $(bold)H$()). They pay coins and quest XP."
+      "text": "Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or $(bold)H$()). They pay Coin Pouches (right-click one: 100 coins; rerolls cost pouches) and quest XP."
     }
   ]
 }

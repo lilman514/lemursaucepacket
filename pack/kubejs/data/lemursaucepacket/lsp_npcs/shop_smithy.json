@@ -1,0 +1,85 @@
+{
+  "name": "Brann the Smith",
+  "color": "#C9C9C9",
+  "talks": [
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:stone_sword",
+          "count": 1
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:stone_pickaxe",
+          "count": 1
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:stone_axe",
+          "count": 1
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:stone_shovel",
+          "count": 1
+        },
+        "price": 30
+      },
+      {
+        "item": {
+          "id": "minecraft:iron_sword",
+          "count": 1
+        },
+        "price": 150
+      },
+      {
+        "item": {
+          "id": "minecraft:iron_pickaxe",
+          "count": 1
+        },
+        "price": 180
+      },
+      {
+        "item": {
+          "id": "minecraft:iron_axe",
+          "count": 1
+        },
+        "price": 180
+      },
+      {
+        "item": {
+          "id": "minecraft:shield",
+          "count": 1
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:bow",
+          "count": 1
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:arrow",
+          "count": 16
+        },
+        "price": 40
+      }
+    ],
+    "onBuy": []
+  }
+}

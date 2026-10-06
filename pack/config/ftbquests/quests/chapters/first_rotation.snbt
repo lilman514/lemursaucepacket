@@ -57,10 +57,13 @@
 					xp: 25
 				}
 				{
-					id: "595C493FAA3BA24D"
+					id: "6435978249D77CD0"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -97,10 +100,13 @@
 					xp: 25
 				}
 				{
-					id: "23264D31294CE533"
+					id: "200E035845341EE9"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -155,10 +161,13 @@
 					xp: 25
 				}
 				{
-					id: "4B0B8B8D7E82933B"
+					id: "0CF7A2D501C6656E"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -192,10 +201,13 @@
 					xp: 25
 				}
 				{
-					id: "5AB3AE084984B569"
+					id: "73EA4D4B26F5A36D"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -229,10 +241,13 @@
 					xp: 25
 				}
 				{
-					id: "3CF7D2CB57292FD0"
+					id: "3DBCA2B0FB5A686F"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -268,18 +283,13 @@
 					xp: 60
 				}
 				{
-					id: "4603857C09C499BF"
+					id: "2DAA1E50B30FFFF6"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "4E8BA141CADEE98A"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -315,18 +325,13 @@
 					xp: 60
 				}
 				{
-					id: "406F50C5869AB92C"
+					id: "2EEB3012E06D9D0D"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "78B25C8D56CC3EA8"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -362,18 +367,13 @@
 					xp: 60
 				}
 				{
-					id: "6A7929646D68428B"
+					id: "12467D77F20A10C4"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "600D6DC7B1E8BAC1"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -419,10 +419,13 @@
 					xp: 25
 				}
 				{
-					id: "61FE57E64A95209F"
+					id: "3BA37D1963492C86"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
 						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -458,18 +461,13 @@
 					xp: 60
 				}
 				{
-					id: "3D33A5F492E42546"
+					id: "57FC9BD659CE24DA"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "7952189C4B7550C2"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -505,18 +503,13 @@
 					xp: 60
 				}
 				{
-					id: "1C9FAA708D0AC6E8"
+					id: "4708045BD8E75C57"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "11DF6534EB7B7AA2"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -552,18 +545,13 @@
 					xp: 60
 				}
 				{
-					id: "6BC89838FAD057A2"
+					id: "2A88CC39D0494D39"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "1D8880363AEF30FC"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -609,18 +597,13 @@
 					xp: 60
 				}
 				{
-					id: "06C845C0723D621A"
+					id: "490F01C51C352C26"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "199E53860B6E88BC"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -656,10 +639,13 @@
 					xp: 150
 				}
 				{
-					id: "605618613A33E2E4"
+					id: "18167D86D27C62FD"
 					item: {
-						count: 3
-						id: "numismatics:sprocket"
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -711,18 +697,13 @@
 					xp: 60
 				}
 				{
-					id: "079FEF23433951D7"
+					id: "103DD0C948FE7D69"
 					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
 						count: 1
-						id: "numismatics:sprocket"
-					}
-					type: "item"
-				}
-				{
-					id: "696E26E12E6F12F7"
-					item: {
-						count: 1
-						id: "numismatics:bevel"
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -759,10 +740,13 @@
 					xp: 150
 				}
 				{
-					id: "68CEBA82AB52B365"
+					id: "3169E04247A2C05B"
 					item: {
-						count: 3
-						id: "numismatics:sprocket"
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}
@@ -798,10 +782,13 @@
 					xp: 150
 				}
 				{
-					id: "75F07D5DBC826BA3"
+					id: "17BAE77475D6AF60"
 					item: {
-						count: 3
-						id: "numismatics:sprocket"
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
 					}
 					type: "item"
 				}

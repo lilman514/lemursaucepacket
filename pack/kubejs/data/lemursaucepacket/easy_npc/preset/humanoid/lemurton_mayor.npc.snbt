@@ -252,7 +252,8 @@ Nobody can build or fight inside the walls, so it is the safest place in the lan
     },
     Tags:[
       "lsp_zone_allowed",
-      "lemurton_npc"
+      "lemurton_npc",
+      "lsp_npc.mayor"
     ]
   }
 }
