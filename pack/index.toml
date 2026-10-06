@@ -238,7 +238,7 @@ hash = "7bb6fbb4533138cb5dc5156422474489f31f7a1a4fc2ff0c63982d21d56121d4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/lemurton_welcome.snbt"
-hash = "396879c9c979ca296c5ae0029b9b6149de10854f3376541fda29f22549c3a6e3"
+hash = "29255d30afbf1778b7645eba0690cd8e1dfac2ce5c661548d0388559722a7f2e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/railway.snbt"
@@ -270,7 +270,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "84f9a6c599061e039b2f89864323c93edc874512783e68476be99d21e64dc021"
+hash = "b277ff6eb2e2c3f45eed504dee2004875327ceb46d7001c7e67ca2f4502559a4"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -318,7 +318,7 @@ hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
 [[files]]
 file = "config/lemursaucepacket/hub_plan.json"
-hash = "94821b75e13a9a46444231dd1481bfdffc5e3df97e3251de1c6d63cf9ef803d7"
+hash = "c9c1d4211500e2cc10272f228f647159000cc1cb2ff65000df91f4863883557b"
 
 [[files]]
 file = "config/lemursaucepacket/lifesteal.json"
@@ -686,7 +686,7 @@ hash = "129cbf3f9aab7a05e64beac772eafd6cb20f656b5d420753426d3da3ea37cea9"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "99173de4c9eaeef93adac0bf30b2e50a64bde03d16caf7cefd02a2f68034029d"
+hash = "1a99f30fd39f668b959cb2756fee1159f7f3be312ddcb9abd836114b671eb550"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/agility_cape.png"
@@ -3278,8 +3278,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.4.1.jar"
-hash = "0bf9a1c6f844fe8de53a45b0ec62a61a8243128eb5d0a8c2e715db869b150064"
+file = "mods/lsp_fixes-1.5.0.jar"
+hash = "ef1a41527b02e9ee59f7623bc20c362dc8a33870581a651198de11880e684560"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"

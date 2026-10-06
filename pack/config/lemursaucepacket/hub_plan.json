@@ -6,8 +6,9 @@
   "blend": 20
  },
  "search": {
-  "radius": 320,
-  "step": 32
+  "minDistance": 400,
+  "radius": 700,
+  "step": 96
  },
  "paving": [
   {
@@ -3377,7 +3378,7 @@
   "name": "Lemurton",
   "facing": "south"
  },
- "spawn": [
+ "arrival": [
   -7,
   1,
   18

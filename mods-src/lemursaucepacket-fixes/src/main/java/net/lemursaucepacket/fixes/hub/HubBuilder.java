@@ -16,7 +16,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,10 +32,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Builds the spawn city from {@link HubPlan}, a little each server tick: picks a dry, flat site near world
- * spawn (from the noise, so nothing is generated for the search), loads the chunks, flattens the ground with a
- * blended edge, paves the streets, places every building, sets up the waystone, moves world spawn to the plaza
- * and makes the city a safe zone.
+ * Builds the capital from {@link HubPlan}, a little each server tick: picks a dry, flat site a short way from world
+ * spawn (out of sight, a few minutes' walk), clear of the towns the world will generate (from the noise and the
+ * structure sets, so nothing is generated for the search), loads the chunks, flattens the ground with a blended edge,
+ * paves the streets, places every building, sets up the waystone and the lodestone the travellers' compass points
+ * at, and makes the city a safe zone.
  */
 public final class HubBuilder {
     static final Logger LOGGER = LoggerFactory.getLogger("lsp_fixes/hub");
@@ -126,8 +126,13 @@ public final class HubBuilder {
     private double bestScore = Double.MAX_VALUE;
     private BlockPos bestSite;
     private int bestGround;
-    /** A site this good (flat, dry, near spawn) ends the search early. */
+    /** Towns the world will generate around spawn (worked out once, when the search starts). */
+    private List<Settlements.Site> towns = List.of();
+    /** A site this good (flat, dry, near spawn) ends the search early: after the ring, or at once if excellent. */
     private static final double GOOD_ENOUGH = 20;
+    private static final double EXCELLENT = 8;
+    /** Worse than this after the first ring (coast, island, mountains): look further out. Otherwise stay near. */
+    private static final double WIDEN_ABOVE = 35;
     private static final int MAX_SEARCH = 1536;
 
     /**
@@ -143,15 +148,20 @@ public final class HubBuilder {
         BlockPos spawn = requested != null ? requested : level.getSharedSpawnPos();
         if (searchRadius < 0) {
             searchRadius = requested != null ? 0 : plan.searchRadius();
-            ring(spawn, 0, searchRadius, requested != null ? 1 : Math.max(32, plan.searchStep() * 2));
+            if (requested == null) {
+                towns = Settlements.near(level, spawn.getX(), spawn.getZ(), MAX_SEARCH + 1000);
+                LOGGER.info("{} towns planned within {} blocks of spawn ({} capitals)", towns.size(), MAX_SEARCH + 1000, towns.stream().filter(Settlements.Site::capital).count());
+            }
+            // Not at spawn: from minDistance out (out of sight), the nearest good site first.
+            ring(spawn, requested != null ? 0 : plan.minDistance(), searchRadius, requested != null ? 1 : Math.max(32, plan.searchStep()));
         }
-        if (candidateAt < candidates.size()) {
+        if (candidateAt < candidates.size() && bestScore > EXCELLENT) {
             int[] c = candidates.get(candidateAt++);
             score(gen, rs, sea, spawn, c[0], c[1]);
             return;
         }
         // Ring done: stop if good enough (or nowhere left to look), else look further out.
-        if (bestScore > GOOD_ENOUGH && requested == null && searchRadius < MAX_SEARCH) {
+        if (bestScore > (searchRadius <= plan.searchRadius() ? WIDEN_ABOVE : GOOD_ENOUGH) && requested == null && searchRadius < MAX_SEARCH) {
             int inner = searchRadius;
             searchRadius = Math.min(MAX_SEARCH, searchRadius * 2);
             LOGGER.info("No good site within {} blocks of spawn (best score {}); looking out to {}", inner, String.format("%.0f", bestScore), searchRadius);
@@ -203,13 +213,28 @@ public final class HubBuilder {
         double var = heights.stream().mapToDouble(h -> (h - mean) * (h - mean)).average().orElse(0);
         int median = heights.get(heights.size() / 2);
         double wet = water / (double) samples;
-        double score = Math.sqrt(var) + wet * 200 + (wet > 0.12 ? 500 : 0) + Math.hypot(cx - spawn.getX(), cz - spawn.getZ()) / 64.0
-                + (median < sea + 2 ? 60 : 0) + Math.max(0, median - sea - 30);
+        double away = Math.max(0, Math.hypot(cx - spawn.getX(), cz - spawn.getZ()) - plan.minDistance());
+        double score = Math.sqrt(var) + wet * 200 + (wet > 0.12 ? 500 : 0) + away / 64.0
+                + (median < sea + 2 ? 60 : 0) + Math.max(0, median - sea - 30) + townPenalty(cx, cz);
         if (score < bestScore) {
             bestScore = score;
             bestSite = new BlockPos(cx, median, cz);
             bestGround = Math.max(median, sea + 2);
         }
+    }
+
+    /**
+     * Keeps the city off other towns (a town under the walls would be cut in half by the flattening) and well apart
+     * from the other grand capitals (Lemurton is one of them, in the plains style).
+     */
+    private double townPenalty(int cx, int cz) {
+        double p = 0;
+        for (Settlements.Site t : towns) {
+            double d = t.distance(cx, cz);
+            if (d < Settlements.keepAway(t) + plan.flatRadius()) p += 1000;
+            else if (t.capital() && d < 700) p += 60 * (700 - d) / 700;
+        }
+        return p;
     }
 
     private boolean loaded() {
@@ -347,23 +372,21 @@ public final class HubBuilder {
         HubPlan.Waystone w = plan.waystone();
         BlockPos ws = new BlockPos(centre.getX() + w.x(), baseY + w.y(), centre.getZ() + w.z());
         placeWaystone(ws, w.name(), w.facing());
-        int[] sp = plan.spawn();
-        BlockPos spawn = new BlockPos(centre.getX() + sp[0], baseY + sp[1], centre.getZ() + sp[2]);
-        level.setDefaultSpawnPos(spawn, 0.0F);
-        server.getGameRules().getRule(GameRules.RULE_SPAWN_RADIUS).set(0, server);
+        // The travellers' compass points at a lodestone under the waystone (out of sight; the city is a safe zone).
+        level.setBlock(HubModule.lodestone(plan, centre), Blocks.LODESTONE.defaultBlockState(), Block.UPDATE_ALL);
         HubPlan.Zone z = plan.zone();
         SafeZones.get(server).put(new SafeZones.Zone(z.name(), level.dimension().location().toString(), centre.getX() + Math.min(z.x1(), z.x2()), level.getMinBuildHeight(),
                 centre.getZ() + Math.min(z.z1(), z.z2()), centre.getX() + Math.max(z.x1(), z.x2()), level.getMaxBuildHeight() - 1, centre.getZ() + Math.max(z.z1(), z.z2()), EnumSet.allOf(SafeZones.Flag.class)));
         release();
         HubState.get(server).set(HubState.Status.BUILT, centre, plan.version());
         long secs = (System.currentTimeMillis() - started) / 1000;
-        LOGGER.info("{} is built at {} in {} s ({} buildings). World spawn is its plaza.", plan.name(), centre.toShortString(), secs, plan.placements().size());
-        for (ServerPlayer player : server.getPlayerList().getPlayers()) {
-            player.sendSystemMessage(Component.literal("§6" + plan.name() + " §7is ready. Welcome!"));
-            player.teleportTo(level, spawn.getX() + 0.5, spawn.getY(), spawn.getZ() + 0.5, player.getYRot(), player.getXRot());
-        }
+        BlockPos spawn = level.getSharedSpawnPos();
+        LOGGER.info("{} is built at {} in {} s ({} buildings), {} blocks from world spawn.", plan.name(), centre.toShortString(), secs, plan.placements().size(),
+                (int) Math.hypot(centre.getX() - spawn.getX(), centre.getZ() - spawn.getZ()));
+        for (ServerPlayer player : server.getPlayerList().getPlayers()) HubModule.welcome(player, plan, centre);
         phase = Phase.DONE;
     }
+
 
     private void release() {
         for (long[] c : forced) level.setChunkForced((int) c[0], (int) c[1], false);

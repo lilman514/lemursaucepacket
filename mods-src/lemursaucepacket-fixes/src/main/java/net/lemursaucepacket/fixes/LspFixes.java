@@ -2,6 +2,7 @@ package net.lemursaucepacket.fixes;
 
 import net.lemursaucepacket.fixes.lifesteal.LifestealModule;
 import net.lemursaucepacket.fixes.hub.HubModule;
+import net.lemursaucepacket.fixes.towns.TownModule;
 import net.lemursaucepacket.fixes.zone.SafeZoneModule;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -25,6 +26,7 @@ public final class LspFixes {
         LifestealModule.init(modBus, container);
         SafeZoneModule.init();
         HubModule.init();
+        TownModule.init();
         if (FMLEnvironment.dist.isClient()) net.lemursaucepacket.fixes.hud.HudLayoutClient.init(modBus, container);
     }
 }

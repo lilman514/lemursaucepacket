@@ -1,6 +1,6 @@
-# structures/: the buildings and the spawn city
+# structures/: the buildings and the capital
 
-The spawn city (Lemurton) is a plan that lsp_fixes' `HubBuilder` builds on a brand-new world (docs/world.md). Its
+The capital (Lemurton) is a plan that lsp_fixes' `HubBuilder` builds on a brand-new world (docs/world.md). Its
 buildings are [Luki's Grand Capitals](https://modrinth.com/mod/lukis-grand-capitals)' (by Luki, all rights
 reserved), placed from the mod's jar, which the pack installs; this folder only catalogues them. The walls and towers
 are ours: drawn in code, baked in a scratch server, and shipped as structure templates in

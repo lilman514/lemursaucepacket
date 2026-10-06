@@ -253,8 +253,8 @@ function build() {
     .filter((m) => m.name === 'stall')
     .map((m) => market.at(m.pos))
     .sort((a, b) => Math.atan2(a[2], a[0]) - Math.atan2(b[2], b[0]))
-  // World spawn: on the paving just south of the market, in line with the waystone. Not beside the waystone: the
-  // great tree's canopy covers it, and with no open sky above, new players would spawn on top of the tree.
+  // Where travellers come in (the compass and /lsp hub goto lead there): the paving just south of the market, in
+  // line with the waystone, under open sky (the great tree's canopy covers the waystone itself).
   spawn = [waystone.p[0], 1, market.z2 + 2]
   if (stalls.length < MARKET_TRADERS.length) throw new Error(`the market has ${stalls.length} stalls for ${MARKET_TRADERS.length} traders`)
   MARKET_TRADERS.forEach((who, i) => {
@@ -407,13 +407,14 @@ const plan = {
   version: 2,
   name: CITY.name,
   flatten: { radius: CITY.half + 8, blend: 20 },
-  search: { radius: 320, step: 32 },
+  // Not at world spawn: out of sight (players see 160 blocks at most), a few minutes' walk.
+  search: { minDistance: 400, radius: 700, step: 96 },
   paving,
   placements,
   blocks,
   commands,
   waystone: { p: waystone.p, name: CITY.name, facing: waystone.facing },
-  spawn,
+  arrival: spawn,
   zone: { name: 'hub', box: [-CITY.half - 12, -CITY.half - 12, CITY.half + 12, CITY.half + 12] },
   credits: external.sources.map((s) => s.jar)
 }

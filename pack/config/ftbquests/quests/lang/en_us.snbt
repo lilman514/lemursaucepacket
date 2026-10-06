@@ -35,7 +35,7 @@
 	chapter.4B0B7C46188E3D93.title: "Relic Hunter"
 	chapter.4BB94A94C87CDCB1.chapter_subtitle: ["Outposts, forts and ruined factories. Salvage what you can."]
 	chapter.4BB94A94C87CDCB1.title: "Banners of the Overworld"
-	chapter.514FCA55A49A33A2.chapter_subtitle: ["Meet the mayor and find your way around the city."]
+	chapter.514FCA55A49A33A2.chapter_subtitle: ["Find the capital, meet the mayor and find your way around."]
 	chapter.514FCA55A49A33A2.title: "Welcome to Lemurton"
 	chapter.51E82E0954F782A5.chapter_subtitle: ["Farmer's Delight from first knife to Master Chef."]
 	chapter.51E82E0954F782A5.title: "Grand Kitchen"
@@ -66,7 +66,7 @@
 	chapter_group.70BC9AA571D15575.title: "Mastery"
 	chapter_group.7DAB9BE5981EE62A.title: "Field Guides"
 	file.0000000000000001.title: "LemurSaucePacket"
-	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Meet the mayor and find your way around the city.\\n \\n&r&fLemurton is the realm's first city and a safe zone: no\\n&r&ffighting, digging or building inside the walls. Its people\\n&r&ftrade and hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
+	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Find the capital, meet the mayor and find your way around.\\n \\n&r&fLemurton is the realm's first city, a short walk from\\n&r&fwhere you wake up, and a safe zone: no fighting,\\n&r&fdigging or building inside the walls. Its people trade\\n&r&fand hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
 	image.0A5D205330DDDF01.title: " \\n&6&lThe Enchanter\\n&r&7The Enchanting skill, Hardness tomes\\n&r&7and levels past the vanilla max.\\n \\n&r&fEnchanting is a skill here. The table trains it, and the skill\\n&r&fdecides how far an enchantment can go: Sharpness X at\\n&r&f99. Hardness tomes let your pickaxe break harder ores.\\n \\n&r&eUnlocks:\\n&r&fenchantments up to level X, Telekinesis, and the Hardness\\n&r&ftomes for iron, gold, diamonds, obsidian and ancient debris.\\n "
 	image.0F421FB4917EAF3E.title: " \\n&6&lRailway Company\\n&r&7Long trains, long journeys and a network that runs itself.\\n \\n&r&fIron Roads got you a line. This chapter makes\\n&r&fit a railway: signals, timetables, whistles, a\\n&r&ftrack factory and a train six carriages long.\\n \\n&r&eUnlocks:\\n&r&ffreight and passenger lines across the\\n&r&fwhole map, and the Grand Central prize.\\n "
 	image.10E4665E289211DE.title: " \\n&6&lBeyond the Dragon\\n&r&7The outer End: cities, ships, castles and the void.\\n \\n&r&fThe dragon is only the door. Out past the gateways\\n&r&fare end cities, Nullscape's strange biomes and the\\n&r&fcastles Dungeons and Taverns left in the dark.\\n \\n&r&eUnlocks:\\n&r&fshulker boxes, dragon breath, the levitation\\n&r&ftrick, and a second dragon fight on your terms.\\n "
@@ -462,8 +462,8 @@
 	quest.3A55BEAD0546926A.title: "Stone Age"
 	quest.3A83D5B48D315F47.quest_desc: ["Reach &eFishing 75&r. Fishing gives better catches."]
 	quest.3A83D5B48D315F47.title: "&aFishing 75"
-	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus greets newcomers right where you arrived, at the south edge of the market.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
-	quest.3BB197E455CD7B4D.quest_subtitle: "By the waystone"
+	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus greets newcomers at the south edge of the market, in the middle of the city.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
+	quest.3BB197E455CD7B4D.quest_subtitle: "By the market"
 	quest.3BB197E455CD7B4D.title: "&6Meet the Mayor"
 	quest.3BD270C52A42450F.quest_desc: ["Reach &eWoodcutting 99&r. Woodcutting gives faster chopping.", "", "&6The Woodcutting Cape is yours at 99.&r Open /capes to wear it."]
 	quest.3BD270C52A42450F.title: "&aWoodcutting 99"
@@ -898,6 +898,9 @@
 	quest.7CFFEB1D8A44B9F1.title: "&aFishing 25"
 	quest.7D1807BCBA3F00E3.quest_desc: ["Put a vendor in front of your storage, set a price, and sell to anyone who walks by, even while you are offline."]
 	quest.7D1807BCBA3F00E3.title: "Open a Shop"
+	quest.7E0EAA890E15C2ED.quest_desc: ["Lemurton, the capital, is a few minutes from where you woke up: you got a &6Compass to Lemurton&r, and a line in chat says how far and which way.", "", "Walk in through any of its four gates.", "", "&7Every town you find has a name; it shows on screen as you walk in."]
+	quest.7E0EAA890E15C2ED.quest_subtitle: "The capital"
+	quest.7E0EAA890E15C2ED.title: "&6Find Lemurton"
 	quest.7E2F07E0DFBB02E0.quest_desc: ["Iron sheets, andesite alloy and a mechanical saw in the mechanical crafter. Chop one log and the whole tree comes down.", "&7Needs Woodcutting 30."]
 	quest.7E2F07E0DFBB02E0.title: "Lumber Axe"
 	quest.7E6AE4EBA6DB21F9.quest_desc: ["Reach &eDefence 99&r. Defence gives +0.02 armour per level.", "", "&6The Defence Cape is yours at 99.&r Open /capes to wear it."]
@@ -1066,6 +1069,7 @@
 	task.5A88981357C5EF90.title: "Farming level 99"
 	task.5AA84AC0A08EDE22.title: "Cooking level 10"
 	task.5ADF2065DF1F0B7F.title: "Crafting level 50"
+	task.5B10F1885CA6BDDA.title: "Walk into Lemurton"
 	task.5C6124F5661AEC47.title: "Farming level 25"
 	task.5DA5ABCE9BDF96CA.title: "Fishing level 10"
 	task.5DBCC4E41198A4F5.title: "Give an arm 10 or more outputs"

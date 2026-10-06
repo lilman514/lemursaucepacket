@@ -1,7 +1,7 @@
 // TEST ONLY (headless client; never shipped in the pack). Photographs the spawn city once the server has built
-// it: it waits until the city's waystone stands where config/lemursaucepacket/hub_plan.json puts it relative to
-// world spawn (where a new player arrives), works out the city's centre from the same plan, then flies a
-// spectator camera through a list of views and saves screenshots/hub_<view>.png.
+// it: it asks to be taken there (/lsp hub goto, every 10 s until the city exists), waits until the waystone stands
+// where config/lemursaucepacket/hub_plan.json puts it relative to the arrival point, works out the city's centre
+// from the same plan, then flies a spectator camera through a list of views and saves screenshots/hub_<view>.png.
 
 const HP = {
   Screenshot: Java.loadClass('net.minecraft.client.Screenshot'),
@@ -47,10 +47,11 @@ ClientEvents.tick(() => {
     if (hpPlan == null) {
       // The pack ships the plan to clients too. Spawn and waystone are relative to the city's centre.
       let plan = JsonIO.read('config/lemursaucepacket/hub_plan.json')
-      hpPlan = { spawn: [Number(plan.spawn[0]), Number(plan.spawn[1]), Number(plan.spawn[2])], waystone: [Number(plan.waystone.p[0]), Number(plan.waystone.p[1]), Number(plan.waystone.p[2])] }
+      hpPlan = { arrival: [Number(plan.arrival[0]), Number(plan.arrival[1]), Number(plan.arrival[2])], waystone: [Number(plan.waystone.p[0]), Number(plan.waystone.p[1]), Number(plan.waystone.p[2])] }
     }
-    let wdx = hpPlan.waystone[0] - hpPlan.spawn[0]
-    let wdz = hpPlan.waystone[2] - hpPlan.spawn[2]
+    if (hpTicks % 200 === 20) Client.player.connection.sendCommand('lsp hub goto')
+    let wdx = hpPlan.waystone[0] - hpPlan.arrival[0]
+    let wdz = hpPlan.waystone[2] - hpPlan.arrival[2]
     // Macaw's paving is a little under a full block, so the player's block can be the paving itself: look at
     // that height and the one above.
     let found = -1
@@ -60,7 +61,7 @@ ClientEvents.tick(() => {
     }
     if (hpTicks % 200 === 0) hpSay(`waiting for the city (at ${p.getX()} ${p.getY()} ${p.getZ()})`)
     if (found < 0) return
-    hpCentre = [p.getX() - hpPlan.spawn[0], found - 1, p.getZ() - hpPlan.spawn[2]]
+    hpCentre = [p.getX() - hpPlan.arrival[0], found - 1, p.getZ() - hpPlan.arrival[2]]
     // Give the server time to catch up (it falls behind while building) before the first teleport.
     hpStart = hpTicks + 400
     hpSay(`city centre ${hpCentre.join(' ')}`)

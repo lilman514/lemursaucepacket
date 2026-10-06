@@ -9,7 +9,7 @@
 	id: "514FCA55A49A33A2"
 	images: [
 		{
-			height: 2.527659574468085d
+			height: 2.7574468085106383d
 			id: "03025A03888D22DC"
 			image: "lemursaucepacket:textures/quests/panel.png"
 			rotation: 0.0d
@@ -18,9 +18,9 @@
 			text_on_image: true
 			text_shadow: true
 			text_v_align: "start"
-			width: 7.531914893617021d
+			width: 7.5574468085106385d
 			x: 2.5d
-			y: -2.0d
+			y: -2.1d
 		}
 	]
 	order_index: 0
@@ -28,6 +28,50 @@
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "7E0EAA890E15C2ED"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "5CA00919BC0A27A5"
+					type: "xp"
+					xp: 25
+				}
+				{
+					auto: "enabled"
+					id: "439237BCF5AD7EEB"
+					item: {
+						count: 1
+						id: "numismatics:bevel"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "48780B218A9ED6CF"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:compass"
+					}
+					id: "5B10F1885CA6BDDA"
+					stage: "q_lemurton_found"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7E0EAA890E15C2ED"]
 			icon: {
 				id: "minecraft:bell"
 			}
@@ -64,8 +108,6 @@
 					type: "random"
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					icon: {
@@ -76,7 +118,7 @@
 					type: "gamestage"
 				}
 			]
-			x: 0.0d
+			x: 2.3d
 			y: 0.75d
 		}
 		{
@@ -118,7 +160,7 @@
 					type: "gamestage"
 				}
 			]
-			x: 2.3d
+			x: 4.6d
 			y: 0.75d
 		}
 		{
@@ -169,7 +211,7 @@
 					type: "gamestage"
 				}
 			]
-			x: 4.6d
+			x: 6.9d
 			y: 0.75d
 		}
 	]

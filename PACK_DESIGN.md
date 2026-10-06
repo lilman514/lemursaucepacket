@@ -169,7 +169,7 @@ Waystones (with Balm) are in for fast travel, on the owner's terms: found in the
 - **Airships:** Waystones + Sable compat so a waystone on a ship teleports correctly.
 - Travel costs are the mod's defaults (XP points by distance, capped); `warpRequirements` is the knob if it ever feels too free.
 
-## The spawn city and the RuneScape layer (in progress, 1.2.8 to 1.3.0)
+## The capital and the RuneScape layer (in progress, 1.2.8 to 1.4.0)
 
 The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and Hypixel SkyBlock. A fresh world at launch spawns everyone in a city, the tier-1 trading hub, with a waystone, shops, and NPCs giving RuneScape-style questlines. Some questlines unlock item types (OSRS-style gating). QOL items speed up tedious jobs. The owner chose a fresh world for launch and a safe-zone city.
 
@@ -181,18 +181,21 @@ The owner's direction (2026-10-05): a mashup of Create, Old School RuneScape and
   - Ours: the curtain wall and round towers (structures/buildings/50-castle.mjs). Our own house kit (structures/lib, structures/buildings) stays in the repo, but hub.mjs ships only the templates the city uses.
 - **Lemurton**, the city (structures/hub.mjs writes `config/lemursaucepacket/hub_plan.json`):
   - Layout: walls at plus or minus 86. In the middle, Luki's big market (stalls round a great tree, with the waystone) is the town square, with a paved ring, wells, benches and planters. Round it: the inner ring street, with the seven shops, the cathedral (Luki's taiga church) and the church looking onto the market. Then a band of houses with the fountain square on the south avenue, the outer ring road, cottages, farms, stables and three wizard towers, and four gates.
-  - World spawn is on the open paving just south of the market. The waystone itself is under the great tree's canopy, and with no open sky above, new players would spawn on top of the tree.
+  - Since 1.4.0 (owner's request, 2026-10-06) the capital isn't at world spawn: it's built 400 to 700 blocks away, out of sight (the server view distance is 160 blocks) but a few minutes' walk. New players get a lodestone compass to it (`lsp_capital_compass` tag, once; the lodestone sits under the waystone) and a chat line with distance and direction; `/lsp hub goto|compass [players]` for ops. Walking in sets `q_lemurton_found`, the welcome questline's first step.
+  - The arrival point (the plan's `arrival`, where the compass and goto lead) is on the open paving just south of the market. Never under the great tree's canopy: with no open sky above, the respawn logic puts players on top of it.
   - About 90 buildings plus the wall and tower pieces; 61 to 118 s to build on the test PC.
   - `lsp_fixes`' **HubBuilder** builds it the first time the server starts on a brand-new world (one to two minutes). Existing worlds are marked skipped and never touched. `/lsp hub build here|near_spawn` builds one by hand.
   - The build happens a little each tick, in steps:
-    1. A noise-only site search near world spawn. It needs flat, dry land and widens up to 1536 blocks.
+    1. A noise-only site search in a ring 400 to 700 blocks from world spawn (nearest good site first). It needs flat, dry land clear of the towns the world will generate (worked out from the seed by `Settlements`), and keeps away from other grand capitals. Only if nothing decent turns up does it widen, up to 1536 blocks.
     2. Forceloading.
     3. Flattening, with a blended ring.
     4. Paving.
     5. Templates.
     6. Single blocks.
     7. Commands (vanilla tree features).
-    8. A GLOBAL waystone (named through reflection on the Waystones classes), world spawn south of the market with spawnRadius 0, and the safe zone.
+    8. A GLOBAL waystone (named through reflection on the Waystones classes), the compass lodestone, the safe zone, and compasses for anyone online.
+  - Before the build, on a brand-new world, world spawn moves if a town would generate on it (to the nearest dry spot clear of every planned town).
+- **Towns and their names** (`lsp_fixes` package `towns`, 1.4.0): walking into a town shows its name as a title (and logs it). Grand capitals (the vanilla village structures, Luki's) and other mods' villages (`#minecraft:village`) get a name the first time anyone enters, kept in `lsp_towns` saved data, unique, from word lists by style (plains English, taiga and snowy Norse, desert like Al Kharid, savanna, swamp, jungle, alpine, eastern). Capitals stay at least 1,100 blocks apart: Luki's village set is spacing 50 / separation 35 chunks and Sparse Structures doubles every set. `/lsp towns list|goto <n>` for ops.
 - **Safe zones** (`lsp_fixes` package `zone`; `/lsp zone list|here|add|addcolumn|remove|flag|bypass`):
   - Boxes saved with the world, with flags build, pvp, mobs, explosions, fire, fluids and decor.
   - Ops bypass in creative or after `/lsp zone bypass`.

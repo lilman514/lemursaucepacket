@@ -15,11 +15,13 @@ import net.minecraft.world.level.block.Rotation;
 import net.neoforged.fml.loading.FMLPaths;
 
 /**
- * The spawn city, as written by structures/hub.mjs to config/lemursaucepacket/hub_plan.json. Every position
- * is relative to the city's centre (the plaza) and its ground level (y 0 = the street surface).
+ * The capital, as written by structures/hub.mjs to config/lemursaucepacket/hub_plan.json. Every position is
+ * relative to the city's centre (the market) and its ground level (y 0 = the street surface). It is built between
+ * {@code minDistance} and {@code searchRadius} blocks from world spawn (further if no good site turns up there);
+ * {@code arrival} is where travellers come in (the compass and /lsp hub goto lead there).
  */
-public record HubPlan(int version, String name, int flatRadius, int blend, int searchRadius, int searchStep, List<Paving> paving,
-                      List<Placement> placements, List<Single> blocks, List<String> commands, Waystone waystone, int[] spawn, Zone zone) {
+public record HubPlan(int version, String name, int flatRadius, int blend, int minDistance, int searchRadius, int searchStep, List<Paving> paving,
+                      List<Placement> placements, List<Single> blocks, List<String> commands, Waystone waystone, int[] arrival, Zone zone) {
 
     /** A rectangle of street surface at height y, from a weighted mix of block states. */
     public record Paving(int x1, int z1, int x2, int z2, int y, List<String> states, List<Integer> weights) {
@@ -100,8 +102,8 @@ public record HubPlan(int version, String name, int flatRadius, int blend, int s
         JsonObject z = j.getAsJsonObject("zone");
         int[] zb = ints(z.get("box"));
         return new HubPlan(j.get("version").getAsInt(), j.get("name").getAsString(), flat.get("radius").getAsInt(), flat.get("blend").getAsInt(),
-                search.get("radius").getAsInt(), search.get("step").getAsInt(), paving, placements, blocks, commands,
+                search.has("minDistance") ? search.get("minDistance").getAsInt() : 0, search.get("radius").getAsInt(), search.get("step").getAsInt(), paving, placements, blocks, commands,
                 new Waystone(wp[0], wp[1], wp[2], w.get("name").getAsString(), w.has("facing") ? w.get("facing").getAsString() : "south"),
-                ints(j.get("spawn")), new Zone(z.get("name").getAsString(), zb[0], zb[1], zb[2], zb[3]));
+                ints(j.get(j.has("arrival") ? "arrival" : "spawn")), new Zone(z.get("name").getAsString(), zb[0], zb[1], zb[2], zb[3]));
     }
 }

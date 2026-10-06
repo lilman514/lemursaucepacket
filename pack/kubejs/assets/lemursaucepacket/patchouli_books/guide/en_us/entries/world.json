@@ -15,16 +15,21 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Lemurton, the spawn city",
-      "text": "A new world starts you in $(bold)Lemurton$(), a walled town in the style of RuneScape's Varrock and Lumbridge, built by the server the first time it starts. It has:"
+      "title": "Lemurton, the capital",
+      "text": "$(bold)Lemurton$() is a walled city in the style of RuneScape's Varrock and Lumbridge, built by the server the first time a new world starts. It isn't where you wake up: it stands a few minutes' walk away (400 to 700 blocks from spawn, out of sight), and your first login hands you a $(bold)Compass to Lemurton$(), with a line in chat saying how far and which way. Finding it is the first quest. It has:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start) where you arrive;$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus by the waystone, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
+      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start);$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus at the south edge of the market, a trader at every market stall, a keeper in every shop, and townsfolk about the streets.$(br2)The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack."
     },
     {
       "type": "patchouli:text",
-      "text": "The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack (it also turns the world's villages into grand capitals of the same style)."
+      "title": "Other towns",
+      "text": "The world has more cities: Luki's Grand Capitals turns its villages into $(bold)grand capitals$() in five styles (plains, desert, savanna, snowy and taiga), at least 1,100 blocks apart, so two of the same kind are never near each other. There are smaller villages too (Towns and Towers). Every town has a name of its own, which shows on screen as you walk in (Lemurton's too), and the names suit the land: a plains town might be Ashford or Kingsbury, a snowy one Frostheim, a desert one Al Kharzan. No two towns share a name."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "World spawn is never inside a town: if a new world would start you in one, the server moves spawn to clear land nearby."
     },
     {
       "type": "patchouli:text",
