@@ -20,7 +20,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start);$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)four gates, with guards;$(br)$(li)its people: Mayor Thaddeus at the south edge of the market, a trader at every market stall, a keeper in every shop, and townsfolk about the streets.$(br2)The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack."
+      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start);$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)a curtain wall with round towers (some crenellated, some under conical roofs) and a walkway you can climb up to and walk round, and four gatehouses with guards;$(br)$(li)its people: Mayor Thaddeus at the south edge of the market, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack."
     },
     {
       "type": "patchouli:text",
@@ -34,7 +38,7 @@
     {
       "type": "patchouli:text",
       "title": "Townsfolk, trade and quests",
-      "text": "Right-click anyone in Lemurton to talk to them."
+      "text": "Right-click anyone in Lemurton to talk to them: every townsperson has their name over their head, with a yellow $(bold)CLICK$() under it."
     },
     {
       "type": "patchouli:text",

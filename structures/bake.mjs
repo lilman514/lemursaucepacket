@@ -12,7 +12,7 @@
 // photograph the showroom.
 
 import { spawn } from 'node:child_process'
-import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs'
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { decode } from './lib/nbt.mjs'
@@ -36,6 +36,8 @@ const port = arg('port', '25570')
 // --raw: another folder of raw templates and manifest, e.g. other mods' buildings from structures/import.mjs.
 const rawDir = path.resolve(arg('raw', path.join(here, 'raw')))
 const manifest = JSON.parse(readFileSync(path.join(rawDir, 'manifest.json'), 'utf8'))
+// --only <regex>: bake just these templates (the rest of the pack's baked templates stay as they are).
+if (arg('only')) manifest.templates = manifest.templates.filter((t) => new RegExp(arg('only')).test(t.name))
 
 // The world folder is whatever server.properties says (the scratch server may be on a test world).
 const levelName = (() => {
@@ -57,7 +59,7 @@ rmSync(rawTarget, { recursive: true, force: true })
 mkdirSync(rawTarget, { recursive: true })
 for (const t of manifest.templates) copyFileSync(path.join(rawDir, `${t.name}.nbt`), path.join(rawTarget, `${t.name}.nbt`))
 mkdirSync(path.join(server, 'kubejs', 'bake'), { recursive: true })
-copyFileSync(path.join(rawDir, 'manifest.json'), path.join(server, 'kubejs', 'bake', 'manifest.json'))
+writeFileSync(path.join(server, 'kubejs', 'bake', 'manifest.json'), JSON.stringify({ templates: manifest.templates }, null, 1))
 copyFileSync(path.join(here, 'bake', 'bake.js'), path.join(server, 'kubejs', 'server_scripts', 'zz_bake.js'))
 rmSync(generated, { recursive: true, force: true })
 console.log(`Copied ${manifest.templates.length} raw templates into ${server}`)

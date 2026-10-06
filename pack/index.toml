@@ -318,7 +318,7 @@ hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
 [[files]]
 file = "config/lemursaucepacket/hub_plan.json"
-hash = "c9c1d4211500e2cc10272f228f647159000cc1cb2ff65000df91f4863883557b"
+hash = "1774e9f3faa187eb3414ba69cfe04a2df88dcbcf2abcaeb9ce9dfdec3ab7ecf1"
 
 [[files]]
 file = "config/lemursaucepacket/lifesteal.json"
@@ -686,7 +686,7 @@ hash = "129cbf3f9aab7a05e64beac772eafd6cb20f656b5d420753426d3da3ea37cea9"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "1a99f30fd39f668b959cb2756fee1159f7f3be312ddcb9abd836114b671eb550"
+hash = "8adce925755d6ccd2ec4ee90fdeb27674c51f33ebb6faa830d282a2d59d553d9"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/agility_cape.png"
@@ -1869,6 +1869,10 @@ file = "kubejs/client_scripts/gear_client.js"
 hash = "c0d00d4a047228a5749f1f5eec4935efa6222a5086584f75bde0d70089d7721f"
 
 [[files]]
+file = "kubejs/client_scripts/jei_hidden.js"
+hash = "eb3b5b32c08ac6bfb120363195301de215cc8476bc3c53d0fad886b2bad5b578"
+
+[[files]]
 file = "kubejs/client_scripts/jei_sources.js"
 hash = "487a0ce4d00d99de7ee9a4343da4d69ae497a3d59a3c57732d1561db1ea0b207"
 
@@ -2305,12 +2309,20 @@ file = "kubejs/data/lemursaucepacket/pmmo/items/xp_zinc_ingot.json"
 hash = "5faa50a6fdc41b05d0289364c31ceb693a7b77d721ada9b35c685ac10ab10a51"
 
 [[files]]
-file = "kubejs/data/lemursaucepacket/structure/castle_tower_round.nbt"
-hash = "afbd8a3cc78b111179fad5e559cdd8df5dac4fc865a7a5eb0f968ffac8fceb57"
+file = "kubejs/data/lemursaucepacket/structure/lemurton_wall_east.nbt"
+hash = "459f173dedc278e83d4369eac887df775adbb986b7ec710af4387e6c9a6fe004"
 
 [[files]]
-file = "kubejs/data/lemursaucepacket/structure/castle_wall.nbt"
-hash = "74d8aef128dd167a0cf8bb862263acf0e96a77820194087327d3b57c8855a167"
+file = "kubejs/data/lemursaucepacket/structure/lemurton_wall_north.nbt"
+hash = "9a6d3634db90859cf013602d562f54aa55c4e5706781006419f66cb81bcca7d2"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/structure/lemurton_wall_south.nbt"
+hash = "3910c622fccdfe118f9e69d29ddb2555d7a9148063e92258ff0cba47d168abd4"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/structure/lemurton_wall_west.nbt"
+hash = "fff7bd2e7cffa7cb376f962282bb2e5753eaa568110c33be0f859a779950f9ae"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/tags/block/hardness/1.json"
@@ -3278,8 +3290,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.5.0.jar"
-hash = "ef1a41527b02e9ee59f7623bc20c362dc8a33870581a651198de11880e684560"
+file = "mods/lsp_fixes-1.5.1.jar"
+hash = "fa1836ceb01145557fe1c1584ca2e9c6bff51d83a39175dfb21f0e2b0ef6c7dc"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"

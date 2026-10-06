@@ -2,7 +2,7 @@
  "version": 2,
  "name": "Lemurton",
  "flatten": {
-  "radius": 94,
+  "radius": 96,
   "blend": 20
  },
  "search": {
@@ -13,10 +13,10 @@
  "paving": [
   {
    "box": [
-    -85,
-    -85,
-    85,
-    85
+    -87,
+    -87,
+    87,
+    87
    ],
    "y": 0,
    "mix": [
@@ -236,9 +236,9 @@
   {
    "box": [
     -3,
-    -86,
+    -88,
     3,
-    86
+    88
    ],
    "y": 0,
    "mix": [
@@ -258,9 +258,9 @@
   },
   {
    "box": [
-    -86,
+    -88,
     -3,
-    86,
+    88,
     3
    ],
    "y": 0,
@@ -739,7 +739,7 @@
   {
    "t": "revampedvillages:taiga/house/house_5",
    "p": [
-    -63,
+    -65,
     0,
     -65
    ],
@@ -748,7 +748,7 @@
   {
    "t": "revampedvillages:taiga/house/house_4",
    "p": [
-    71,
+    73,
     0,
     -65
    ],
@@ -757,7 +757,7 @@
   {
    "t": "revampedvillages:taiga/house/house_7",
    "p": [
-    77,
+    79,
     0,
     80
    ],
@@ -766,7 +766,7 @@
   {
    "t": "revampedvillages:plains/house/small_house_7",
    "p": [
-    -52,
+    -53,
     0,
     -65
    ],
@@ -775,7 +775,7 @@
   {
    "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    -42,
+    -43,
     0,
     -65
    ],
@@ -784,7 +784,7 @@
   {
    "t": "revampedvillages:plains/house/small_house_1",
    "p": [
-    -32,
+    -33,
     0,
     -65
    ],
@@ -793,7 +793,7 @@
   {
    "t": "revampedvillages:plains/house/small_house_6",
    "p": [
-    -20,
+    -21,
     0,
     -65
    ],
@@ -802,7 +802,7 @@
   {
    "t": "revampedvillages:taiga/house/house_1",
    "p": [
-    -10,
+    -11,
     0,
     -65
    ],
@@ -845,38 +845,11 @@
    "r": "cw180"
   },
   {
-   "t": "revampedvillages:plains/house/small_house_6",
-   "p": [
-    80,
-    0,
-    -65
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "revampedvillages:taiga/house/house_1",
-   "p": [
-    -65,
-    0,
-    -80
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "revampedvillages:taiga/house/house_6",
-   "p": [
-    -65,
-    0,
-    -64
-   ],
-   "r": "cw90"
-  },
-  {
    "t": "revampedvillages:plains/house/small_house_8",
    "p": [
     -65,
     0,
-    -46
+    -63
    ],
    "r": "cw90"
   },
@@ -885,7 +858,7 @@
    "p": [
     -65,
     0,
-    -33
+    -50
    ],
    "r": "cw90"
   },
@@ -894,12 +867,21 @@
    "p": [
     -65,
     0,
-    -19
+    -36
    ],
    "r": "cw90"
   },
   {
-   "t": "revampedvillages:plains/house/small_house_1",
+   "t": "revampedvillages:plains/house/small_house_7",
+   "p": [
+    -65,
+    0,
+    -22
+   ],
+   "r": "cw90"
+  },
+  {
+   "t": "revampedvillages:taiga/house/house_1",
    "p": [
     -65,
     0,
@@ -908,72 +890,36 @@
    "r": "cw90"
   },
   {
-   "t": "revampedvillages:plains/house/small_house_6",
+   "t": "revampedvillages:plains/house/small_house_8",
    "p": [
     -65,
     0,
-    15
+    17
    ],
    "r": "cw90"
   },
   {
-   "t": "revampedvillages:plains/house/stable_2",
+   "t": "revampedvillages:taiga/house/house_2",
    "p": [
     -65,
     0,
-    27
+    33
    ],
    "r": "cw90"
   },
   {
-   "t": "revampedvillages:taiga/house/house_1",
+   "t": "revampedvillages:plains/house/accessory_farm_2",
    "p": [
     -65,
     0,
-    48
+    47
    ],
    "r": "cw90"
   },
   {
    "t": "revampedvillages:plains/house/small_house_8",
    "p": [
-    -65,
-    0,
-    60
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "revampedvillages:plains/house/small_house_3",
-   "p": [
-    -65,
-    0,
-    71
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "revampedvillages:plains/house/small_house_3",
-   "p": [
-    -80,
-    0,
-    65
-   ],
-   "r": "none"
-  },
-  {
-   "t": "revampedvillages:taiga/house/house_6",
-   "p": [
-    -64,
-    0,
-    65
-   ],
-   "r": "none"
-  },
-  {
-   "t": "revampedvillages:plains/house/small_house_8",
-   "p": [
-    -46,
+    -63,
     0,
     65
    ],
@@ -982,7 +928,7 @@
   {
    "t": "revampedvillages:taiga/house/house_2",
    "p": [
-    -33,
+    -50,
     0,
     65
    ],
@@ -991,32 +937,41 @@
   {
    "t": "revampedvillages:plains/house/accessory_farm_2",
    "p": [
-    -19,
+    -36,
     0,
     65
    ],
    "r": "none"
   },
   {
-   "t": "revampedvillages:plains/house/stable_2",
+   "t": "revampedvillages:plains/house/small_house_7",
    "p": [
-    5,
+    -22,
     0,
     65
    ],
    "r": "none"
   },
   {
-   "t": "revampedvillages:taiga/house/house_1",
+   "t": "revampedvillages:taiga/house/house_2",
    "p": [
-    23,
+    7,
     0,
     65
    ],
    "r": "none"
   },
   {
-   "t": "revampedvillages:plains/house/small_house_8",
+   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "p": [
+    21,
+    0,
+    65
+   ],
+   "r": "none"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_7",
    "p": [
     35,
     0,
@@ -1025,9 +980,9 @@
    "r": "none"
   },
   {
-   "t": "revampedvillages:plains/house/accessory_farm_2",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
-    46,
+    49,
     0,
     65
    ],
@@ -1038,7 +993,7 @@
    "p": [
     65,
     0,
-    -54
+    -53
    ],
    "r": "ccw90"
   },
@@ -1047,21 +1002,30 @@
    "p": [
     65,
     0,
-    -40
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "revampedvillages:taiga/house/house_6",
-   "p": [
-    65,
-    0,
-    -21
+    -39
    ],
    "r": "ccw90"
   },
   {
    "t": "revampedvillages:plains/house/small_house_3",
+   "p": [
+    65,
+    0,
+    -29
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_1",
+   "p": [
+    65,
+    0,
+    -19
+   ],
+   "r": "ccw90"
+  },
+  {
+   "t": "revampedvillages:plains/house/small_house_6",
    "p": [
     65,
     0,
@@ -1070,580 +1034,76 @@
    "r": "ccw90"
   },
   {
-   "t": "revampedvillages:plains/house/small_house_8",
+   "t": "revampedvillages:plains/house/small_house_3",
    "p": [
     65,
     0,
-    13
+    11
    ],
    "r": "ccw90"
   },
   {
-   "t": "revampedvillages:taiga/house/house_2",
+   "t": "revampedvillages:plains/house/small_house_1",
    "p": [
     65,
     0,
-    28
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "revampedvillages:plains/house/accessory_farm_2",
-   "p": [
-    65,
-    0,
-    44
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "revampedvillages:plains/house/small_house_7",
-   "p": [
-    65,
-    0,
-    58
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -90,
-    -3,
-    -91
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    82,
-    -3,
-    -91
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -90,
-    -3,
-    81
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    82,
-    -3,
-    81
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -13,
-    -3,
-    -91
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -13,
-    -3,
-    81
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -90,
-    -3,
-    -14
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    82,
-    -3,
-    -14
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    5,
-    -3,
-    -91
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    5,
-    -3,
-    81
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    -90,
-    -3,
-    4
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_tower_round",
-   "p": [
-    82,
-    -3,
-    4
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -24,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -35,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -46,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -57,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -68,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -79,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    14,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    25,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    36,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    47,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    58,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    69,
-    -3,
-    -86
-   ],
-   "r": "none"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -14,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -25,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -36,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -47,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -58,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -69,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    24,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    35,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    46,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    57,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    68,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    79,
-    -3,
-    86
-   ],
-   "r": "cw180"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -24
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -35
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -46
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -57
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -68
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    -79
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    14
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    25
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    36
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    47
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    58
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    86,
-    -3,
-    69
-   ],
-   "r": "cw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -14
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -25
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -36
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -47
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -58
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
-    -69
-   ],
-   "r": "ccw90"
-  },
-  {
-   "t": "lemursaucepacket:castle_wall",
-   "p": [
-    -86,
-    -3,
     24
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:castle_wall",
+   "t": "revampedvillages:plains/house/small_house_6",
    "p": [
-    -86,
-    -3,
-    35
+    65,
+    0,
+    36
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:castle_wall",
+   "t": "revampedvillages:plains/house/stable_2",
    "p": [
-    -86,
-    -3,
-    46
+    65,
+    0,
+    54
    ],
    "r": "ccw90"
   },
   {
-   "t": "lemursaucepacket:castle_wall",
+   "t": "lemursaucepacket:lemurton_wall_north",
    "p": [
-    -86,
-    -3,
-    57
+    -11,
+    -2,
+    -95
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:castle_wall",
+   "t": "lemursaucepacket:lemurton_wall_east",
    "p": [
-    -86,
-    -3,
-    68
+    0,
+    -2,
+    -11
    ],
-   "r": "ccw90"
+   "r": "none"
   },
   {
-   "t": "lemursaucepacket:castle_wall",
+   "t": "lemursaucepacket:lemurton_wall_south",
    "p": [
-    -86,
-    -3,
-    79
+    -95,
+    -2,
+    -1
    ],
-   "r": "ccw90"
+   "r": "none"
+  },
+  {
+   "t": "lemursaucepacket:lemurton_wall_west",
+   "p": [
+    -93,
+    -2,
+    -92
+   ],
+   "r": "none"
   }
  ],
  "blocks": [
@@ -3299,6 +2759,30 @@
    "p": [
     73,
     1,
+    4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
+    2,
+    4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
+    3,
+    4
+   ],
+   "s": "mcwlights:classic_street_lamp[lit=true]"
+  },
+  {
+   "p": [
+    73,
+    1,
     -4
    ],
    "s": "mcwlights:classic_street_lamp[lit=true]"
@@ -3325,49 +2809,155 @@
   "place feature minecraft:oak ~22 ~1 ~-22",
   "place feature minecraft:oak ~-22 ~1 ~22",
   "place feature minecraft:oak ~22 ~1 ~22",
-  "place feature minecraft:oak ~-79 ~1 ~-38",
-  "place feature minecraft:oak ~-80 ~1 ~-29",
-  "place feature minecraft:fancy_oak ~-79 ~1 ~12",
-  "place feature minecraft:birch ~-79 ~1 ~35",
-  "place feature minecraft:oak ~-59 ~1 ~-80",
-  "place feature minecraft:fancy_oak ~-45 ~1 ~-79",
-  "place feature minecraft:fancy_oak ~-38 ~1 ~78",
-  "place feature minecraft:oak ~18 ~1 ~-78",
-  "place feature minecraft:oak ~35 ~1 ~77",
-  "place feature minecraft:oak ~42 ~1 ~-78",
-  "place feature minecraft:oak ~46 ~1 ~77",
-  "place feature minecraft:fancy_oak ~54 ~1 ~78",
-  "place feature minecraft:oak ~62 ~1 ~-80",
-  "place feature minecraft:oak ~78 ~1 ~-13",
+  "place feature minecraft:oak ~-79 ~1 ~-81",
+  "place feature minecraft:oak ~-81 ~1 ~-73",
+  "place feature minecraft:oak ~-80 ~1 ~-47",
+  "place feature minecraft:birch ~-80 ~1 ~-39",
+  "place feature minecraft:oak ~-78 ~1 ~-22",
+  "place feature minecraft:oak ~-78 ~1 ~-18",
+  "place feature minecraft:birch ~-81 ~1 ~-8",
+  "place feature minecraft:oak ~-79 ~1 ~24",
+  "place feature minecraft:birch ~-82 ~1 ~31",
+  "place feature minecraft:oak ~-81 ~1 ~68",
+  "place feature minecraft:fancy_oak ~-81 ~1 ~75",
+  "place feature minecraft:birch ~-71 ~1 ~67",
+  "place feature minecraft:birch ~-74 ~1 ~75",
+  "place feature minecraft:fancy_oak ~-66 ~1 ~-79",
+  "place feature minecraft:oak ~-67 ~1 ~62",
+  "place feature minecraft:birch ~-58 ~1 ~-82",
+  "place feature minecraft:oak ~-54 ~1 ~-79",
+  "place feature minecraft:fancy_oak ~-44 ~1 ~-80",
+  "place feature minecraft:fancy_oak ~-37 ~1 ~-78",
+  "place feature minecraft:birch ~-30 ~1 ~-79",
+  "place feature minecraft:oak ~-23 ~1 ~-79",
+  "place feature minecraft:oak ~10 ~1 ~-79",
+  "place feature minecraft:oak ~16 ~1 ~-78",
+  "place feature minecraft:fancy_oak ~46 ~1 ~-80",
+  "place feature minecraft:fancy_oak ~51 ~1 ~-80",
+  "place feature minecraft:birch ~54 ~1 ~-65",
+  "place feature minecraft:birch ~62 ~1 ~-81",
+  "place feature minecraft:oak ~69 ~1 ~-82",
+  "place feature minecraft:fancy_oak ~65 ~1 ~59",
+  "place feature minecraft:birch ~76 ~1 ~-82",
+  "team add lsp_npcs",
+  "team modify lsp_npcs nametagVisibility never",
+  "team modify lsp_npcs collisionRule never",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_baker.npc.snbt ~-9.5 ~1 ~-9.5 5ecd818f-58b8-4561-a9be-b3ca602cb911",
+  "summon minecraft:text_display ~-9.5 ~3.37 ~-9.5 {UUID:[I;1662924366,-310471181,6776583,-2016772680],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Bessa the Baker\",\"color\":\"#E8B76A\"}'}",
+  "summon minecraft:text_display ~-9.5 ~3.10 ~-9.5 {UUID:[I;6072391,-469359769,-798722332,-993794162],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 5ecd818f-58b8-4561-a9be-b3ca602cb911",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fruit_seller.npc.snbt ~4.5 ~1 ~-7.5 a85602d2-d8ed-471e-ac5d-ac3c479f80ef",
+  "summon minecraft:text_display ~4.5 ~3.37 ~-7.5 {UUID:[I;-213658941,-1138761991,-628441247,-1010039008],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Old Wren\",\"color\":\"#7FCB5A\"}'}",
+  "summon minecraft:text_display ~4.5 ~3.10 ~-7.5 {UUID:[I;-457311009,-1106309823,-1861333404,1351873272],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs a85602d2-d8ed-471e-ac5d-ac3c479f80ef",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_gem_trader.npc.snbt ~7.5 ~1 ~0.5 8da59074-eb4c-4a49-abf0-3bd967862667",
+  "summon minecraft:text_display ~7.5 ~3.37 ~0.5 {UUID:[I;-552269749,166589456,231339765,166732913],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Imran the Gem Trader\",\"color\":\"#B774E0\"}'}",
+  "summon minecraft:text_display ~7.5 ~3.10 ~0.5 {UUID:[I;-2062072306,-280308702,1046994894,-2088879442],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 8da59074-eb4c-4a49-abf0-3bd967862667",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_spice_merchant.npc.snbt ~7.5 ~1 ~9.5 5d1e7b99-5d15-4095-a214-b1f083781c73",
+  "summon minecraft:text_display ~7.5 ~3.37 ~9.5 {UUID:[I;497382849,-36377627,137245096,-109580603],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Saffi the Spice Merchant\",\"color\":\"#E08A3C\"}'}",
+  "summon minecraft:text_display ~7.5 ~3.10 ~9.5 {UUID:[I;1262408573,-2009254004,747887891,1419818456],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 5d1e7b99-5d15-4095-a214-b1f083781c73",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_fishmonger.npc.snbt ~-4.5 ~1 ~15.5 22f975be-255b-4fea-a19e-ed56e8469fd7",
+  "summon minecraft:text_display ~-4.5 ~3.37 ~15.5 {UUID:[I;-1130666315,-496515859,-738980268,728000936],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Gil the Fishmonger\",\"color\":\"#5EC4C4\"}'}",
+  "summon minecraft:text_display ~-4.5 ~3.10 ~15.5 {UUID:[I;-891483053,-1416497868,1317527353,-472856695],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 22f975be-255b-4fea-a19e-ed56e8469fd7",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_tailor.npc.snbt ~-4.5 ~1 ~7.5 767ceb46-aaca-4c9a-a28a-fbbb51bd5666",
+  "summon minecraft:text_display ~-4.5 ~3.37 ~7.5 {UUID:[I;1511771323,-665242430,674060705,529155359],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Maud the Weaver\",\"color\":\"#6EA5E0\"}'}",
+  "summon minecraft:text_display ~-4.5 ~3.10 ~7.5 {UUID:[I;1636902682,-1525732732,914207154,1268522771],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 767ceb46-aaca-4c9a-a28a-fbbb51bd5666",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_flower_seller.npc.snbt ~-0.5 ~1 ~1.5 547275a4-829f-49a8-acb9-fd27dc57455b",
+  "summon minecraft:text_display ~-0.5 ~3.37 ~1.5 {UUID:[I;1964497386,-798528069,-1098383432,1210560401],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Posy the Flower Seller\",\"color\":\"#E07AB0\"}'}",
+  "summon minecraft:text_display ~-0.5 ~3.10 ~1.5 {UUID:[I;511946465,-566356928,2054115258,-748391854],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 547275a4-829f-49a8-acb9-fd27dc57455b",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_butcher.npc.snbt ~-11.5 ~2 ~3.5 f357d4a8-7c01-493f-a973-367398129d01",
+  "summon minecraft:text_display ~-11.5 ~4.37 ~3.5 {UUID:[I;452745372,-1173475701,419231853,-1883535505],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Ragnar the Butcher\",\"color\":\"#B05A3C\"}'}",
+  "summon minecraft:text_display ~-11.5 ~4.10 ~3.5 {UUID:[I;1842379786,958098672,1261009949,-1027228399],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs f357d4a8-7c01-493f-a973-367398129d01",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt ~-47.5 ~1 ~-44.5 7d026c89-9edb-4953-a913-45b8e1d71ea5",
+  "summon minecraft:text_display ~-47.5 ~3.37 ~-44.5 {UUID:[I;-8585179,1403165070,-334764389,-1031824501],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Sister Agnes\",\"color\":\"#D86AA0\"}'}",
+  "summon minecraft:text_display ~-47.5 ~3.10 ~-44.5 {UUID:[I;1579174249,-1795381437,-157137060,-666275595],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 7d026c89-9edb-4953-a913-45b8e1d71ea5",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_fishing.npc.snbt ~-41.5 ~1 ~-37.5 68898716-0e95-489d-ac0c-589039c359d6",
+  "summon minecraft:text_display ~-41.5 ~3.37 ~-37.5 {UUID:[I;463618666,1124020634,2101718066,791195829],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Hamish of the Docks\",\"color\":\"#4F86C6\"}'}",
+  "summon minecraft:text_display ~-41.5 ~3.10 ~-37.5 {UUID:[I;-1268969255,-1618998139,-1461922479,-4357767],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 68898716-0e95-489d-ac0c-589039c359d6",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt ~10.5 ~2 ~-38.5 e3370a3c-750d-4d64-ad58-6b9ae89881e2",
+  "summon minecraft:text_display ~10.5 ~4.37 ~-38.5 {UUID:[I;1184188762,-2122100864,-491182937,-719778545],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Brann the Smith\",\"color\":\"#C9C9C9\"}'}",
+  "summon minecraft:text_display ~10.5 ~4.10 ~-38.5 {UUID:[I;1148166116,-193799283,-1764490713,-701251658],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs e3370a3c-750d-4d64-ad58-6b9ae89881e2",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt ~28.5 ~1 ~-32.5 c5e0c41d-29de-4ffb-a280-3cd1dc929448",
+  "summon minecraft:text_display ~28.5 ~3.37 ~-32.5 {UUID:[I;-378000681,906955007,2010958923,1675128017],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Odo the Tailor\",\"color\":\"#B48C64\"}'}",
+  "summon minecraft:text_display ~28.5 ~3.10 ~-32.5 {UUID:[I;-1753760478,-715510935,744304840,-165060249],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs c5e0c41d-29de-4ffb-a280-3cd1dc929448",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt ~55.5 ~1 ~-35.5 a60c43d9-4f0d-44d3-acee-afab2766f044",
+  "summon minecraft:text_display ~55.5 ~3.37 ~-35.5 {UUID:[I;-1223264704,-1072805403,-578039232,-633772983],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Lucan the Jeweller\",\"color\":\"#E0C35A\"}'}",
+  "summon minecraft:text_display ~55.5 ~3.10 ~-35.5 {UUID:[I;-1495655002,-383230855,635628195,990529327],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs a60c43d9-4f0d-44d3-acee-afab2766f044",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_shop_builder.npc.snbt ~-39.5 ~1 ~2.5 2686e6bb-2cdf-4f58-a8a1-786af2571f9c",
+  "summon minecraft:text_display ~-39.5 ~3.37 ~2.5 {UUID:[I;261221516,-956888320,186050048,-491449985],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Gerta the Mason\",\"color\":\"#A88A6A\"}'}",
+  "summon minecraft:text_display ~-39.5 ~3.10 ~2.5 {UUID:[I;458942671,376923682,1904306172,-73504981],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 2686e6bb-2cdf-4f58-a8a1-786af2571f9c",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_varrock_general_store.npc.snbt ~-38.5 ~1 ~44.5 ea1b9a42-49e6-4239-a206-be04d0b56349",
+  "summon minecraft:text_display ~-38.5 ~3.37 ~44.5 {UUID:[I;235638655,1197195415,-1435460365,456462533],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Pip the Shopkeeper\",\"color\":\"#8FBF60\"}'}",
+  "summon minecraft:text_display ~-38.5 ~3.10 ~44.5 {UUID:[I;1206722521,1108559780,-771690566,-725069938],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs ea1b9a42-49e6-4239-a206-be04d0b56349",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~-81.5 92b86225-443c-40f4-a593-f0b0ad808564",
+  "summon minecraft:text_display ~-1.5 ~3.22 ~-81.5 {UUID:[I;-557204566,1065834650,540039058,-411097292],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~-1.5 ~2.95 ~-81.5 {UUID:[I;-1615230104,786235610,-1956291968,-107357392],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 92b86225-443c-40f4-a593-f0b0ad808564",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~-81.5 970a55b2-3847-4778-a27d-7d0fb63f4ef8",
+  "summon minecraft:text_display ~2.5 ~3.22 ~-81.5 {UUID:[I;-633639304,1227435357,-2040769311,-1120544353],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~2.5 ~2.95 ~-81.5 {UUID:[I;932115252,1408804851,249183708,-836290387],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 970a55b2-3847-4778-a27d-7d0fb63f4ef8",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-1.5 ~1 ~82.5 286d9497-0759-44ce-a3dd-81eab482cd7c",
+  "summon minecraft:text_display ~-1.5 ~3.22 ~82.5 {UUID:[I;-1873954875,82086989,706871537,-1211672240],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~-1.5 ~2.95 ~82.5 {UUID:[I;1734954005,1690158683,248502363,-866380641],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 286d9497-0759-44ce-a3dd-81eab482cd7c",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~2.5 ~1 ~82.5 fd801e76-d551-4f35-a4dc-0b0335f10d10",
+  "summon minecraft:text_display ~2.5 ~3.22 ~82.5 {UUID:[I;-211281145,425012175,-822244646,1155425510],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~2.5 ~2.95 ~82.5 {UUID:[I;1803699198,1429149484,-2005996174,-1670913781],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs fd801e76-d551-4f35-a4dc-0b0335f10d10",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-81.5 ~1 ~-1.5 c23d7541-4a22-4a2a-adc2-0794bf09842c",
+  "summon minecraft:text_display ~-81.5 ~3.22 ~-1.5 {UUID:[I;1030548352,1172308477,-946188888,1496969834],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~-81.5 ~2.95 ~-1.5 {UUID:[I;-1002767394,82185931,758742309,1988571422],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs c23d7541-4a22-4a2a-adc2-0794bf09842c",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~-81.5 ~1 ~2.5 3cbf54cf-daf5-4974-af94-6435ced5a03b",
+  "summon minecraft:text_display ~-81.5 ~3.22 ~2.5 {UUID:[I;-1024414034,1101022608,1052826917,-337161125],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~-81.5 ~2.95 ~2.5 {UUID:[I;949589904,1766783305,-719044921,-1121535739],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 3cbf54cf-daf5-4974-af94-6435ced5a03b",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~82.5 ~1 ~-1.5 5c0e725a-85dc-4552-a690-1e2c498c3d54",
+  "summon minecraft:text_display ~82.5 ~3.22 ~-1.5 {UUID:[I;1543289091,-896342894,-1745209226,1430528330],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~82.5 ~2.95 ~-1.5 {UUID:[I;1112357295,-1847180232,-1005350552,181874506],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 5c0e725a-85dc-4552-a690-1e2c498c3d54",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_guard.npc.snbt ~82.5 ~1 ~2.5 fcad7e53-3795-4b63-a978-8a4d61885b5b",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_mayor.npc.snbt ~-4.5 ~1 ~17.5 efb5d08b-8627-42de-af59-63a3fb3f64ca",
+  "summon minecraft:text_display ~82.5 ~3.22 ~2.5 {UUID:[I;-1336277359,-612882406,398081752,2057447680],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"City Guard\",\"color\":\"#9DB4CC\"}'}",
+  "summon minecraft:text_display ~82.5 ~2.95 ~2.5 {UUID:[I;-257031344,173938443,-1779132577,246930827],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs fcad7e53-3795-4b63-a978-8a4d61885b5b",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/humanoid/lemurton_mayor.npc.snbt ~-2.5 ~1 ~19.5 cf2dd23e-1b39-4532-ad65-94f48d81ec75",
+  "summon minecraft:text_display ~-2.5 ~3.22 ~19.5 {UUID:[I;247940546,1420627798,-1823089779,792754297],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Mayor Thaddeus\",\"color\":\"#E0AC46\"}'}",
+  "summon minecraft:text_display ~-2.5 ~2.95 ~19.5 {UUID:[I;-559424472,937941410,-318985022,1629918268],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs cf2dd23e-1b39-4532-ad65-94f48d81ec75",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-9.5 ~1 ~23.5 99420333-30ae-4d7e-ad70-1d892342af0d",
+  "summon minecraft:text_display ~-9.5 ~3.37 ~23.5 {UUID:[I;-1100471707,-542469360,-2059039582,41045550],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Townsfolk\",\"color\":\"#CFCFCF\"}'}",
+  "summon minecraft:text_display ~-9.5 ~3.10 ~23.5 {UUID:[I;1017518814,-1624592055,-1208787005,598145864],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 99420333-30ae-4d7e-ad70-1d892342af0d",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~12.5 ~1 ~23.5 5fd10d28-9374-4a42-aee3-21ce8eeb8316",
+  "summon minecraft:text_display ~12.5 ~3.37 ~23.5 {UUID:[I;-235898243,-209648122,-1798085854,1397416242],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Townsfolk\",\"color\":\"#CFCFCF\"}'}",
+  "summon minecraft:text_display ~12.5 ~3.10 ~23.5 {UUID:[I;-400493175,-2139504720,-1332425348,-969946830],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 5fd10d28-9374-4a42-aee3-21ce8eeb8316",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~-22.5 ~1 ~-7.5 6882db28-0064-4b8a-a453-bf8250119546",
+  "summon minecraft:text_display ~-22.5 ~3.37 ~-7.5 {UUID:[I;922492961,-818103856,-1532758806,-2085699081],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Townsfolk\",\"color\":\"#CFCFCF\"}'}",
+  "summon minecraft:text_display ~-22.5 ~3.10 ~-7.5 {UUID:[I;1841058366,302884661,-472185931,-1972706786],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 6882db28-0064-4b8a-a453-bf8250119546",
   "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~23.5 ~1 ~9.5 0556983f-918d-4fa0-a7f8-1b74cdd207a5",
-  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~3.5 ~1 ~-22.5 285efed2-e6eb-4748-ab0a-a34d7865d9ee"
+  "summon minecraft:text_display ~23.5 ~3.37 ~9.5 {UUID:[I;1697311888,-752679413,-65354262,-6196329],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Townsfolk\",\"color\":\"#CFCFCF\"}'}",
+  "summon minecraft:text_display ~23.5 ~3.10 ~9.5 {UUID:[I;27136484,1258256593,1352674919,-2123242809],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 0556983f-918d-4fa0-a7f8-1b74cdd207a5",
+  "easy_npc preset import data lemursaucepacket:easy_npc/preset/villager/lemurton_townsfolk.npc.snbt ~3.5 ~1 ~-22.5 285efed2-e6eb-4748-ab0a-a34d7865d9ee",
+  "summon minecraft:text_display ~3.5 ~3.37 ~-22.5 {UUID:[I;46151901,1013843458,1665552371,879380383],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"Townsfolk\",\"color\":\"#CFCFCF\"}'}",
+  "summon minecraft:text_display ~3.5 ~3.10 ~-22.5 {UUID:[I;1985906270,-271296047,-1457966652,-1317222607],billboard:\"center\",shadow:1b,background:0,see_through:0b,Tags:[\"lsp_npc_tag\"],text:'{\"text\":\"CLICK\",\"color\":\"yellow\",\"bold\":true}'}",
+  "team join lsp_npcs 285efed2-e6eb-4748-ab0a-a34d7865d9ee"
  ],
  "waystone": {
   "p": [
@@ -3386,10 +2976,10 @@
  "zone": {
   "name": "hub",
   "box": [
-   -98,
-   -98,
-   98,
-   98
+   -100,
+   -100,
+   100,
+   100
   ]
  },
  "credits": [

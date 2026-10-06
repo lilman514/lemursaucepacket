@@ -14,7 +14,7 @@
 - a market square round a great tree, with the **Lemurton waystone** (visible to everyone from the start);
 - a cathedral, a church and a fountain square;
 - shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;
-- four gates, with guards;
+- a curtain wall with round towers (some crenellated, some under conical roofs) and a walkway you can climb up to and walk round, and four gatehouses with guards;
 - its people: Mayor Thaddeus at the south edge of the market, a trader at every market stall, a keeper in every shop, and townsfolk about the streets.
 
 The buildings are from [Luki's Grand Capitals](https://modrinth.com/mod/lukis-grand-capitals) by Luki, which is in the pack.
@@ -27,7 +27,7 @@ World spawn is never inside a town: if a new world would start you in one, the s
 
 ### Townsfolk, trade and quests
 
-Right-click anyone in Lemurton to talk to them.
+Right-click anyone in Lemurton to talk to them: every townsperson has their name over their head, with a yellow **CLICK** under it.
 
 - **Market traders and shopkeepers** sell for Numismatics coins. The market has fruit, bread and cakes, fish, meat, seeds and spices, flowers and saplings, and wool. The shops on the ring streets have tools and weapons, leather armour, building blocks, fishing gear, brewing supplies and a general store. Most also buy what you bring them, such as wheat, wool, leather, fish, gems and gold. Trades refill every hour.
 - **Mayor Thaddeus** gives the first quest, *Welcome to Lemurton* (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market, then report back. The rewards hand themselves over as you go. More questlines start in Lemurton as the city grows.

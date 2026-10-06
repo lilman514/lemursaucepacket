@@ -284,10 +284,15 @@ public final class HubBuilder {
             t = t * t * (3 - 2 * t);
             target = (int) Math.round(baseY + (natural - baseY) * t);
         }
-        for (int y = Math.max(top, target + 1); y > target; y--) {
-            BlockState s = level.getBlockState(p.setY(y));
-            if (!s.isAir()) level.setBlock(p, Blocks.AIR.defaultBlockState(), FLAGS);
-        }
+        // Inside the city, and wherever the blend lowers the ground, everything above the new surface goes. Where the
+        // blend keeps or raises it (natural ground at or under the new surface), trees and plants stay.
+        boolean clear = d <= plan.flatRadius() || natural > target;
+        if (clear)
+            for (int y = Math.max(top, target + 1); y > target; y--) {
+                BlockState s = level.getBlockState(p.setY(y));
+                if (!s.isAir()) level.setBlock(p, Blocks.AIR.defaultBlockState(), FLAGS);
+            }
+        if (!clear && natural == target) return; // already the right height: leave its own ground and plants
         // Fill down to real ground (rivers, ponds, dips), at most 24 blocks; grass on top, dirt, then stone.
         level.setBlock(p.setY(target), Blocks.GRASS_BLOCK.defaultBlockState(), FLAGS);
         for (int y = target - 1; y >= target - 24; y--) {

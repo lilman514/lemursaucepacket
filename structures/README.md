@@ -14,6 +14,7 @@ are ours: drawn in code, baked in a scratch server, and shipped as structure tem
 | `lib/nbt.mjs` | NBT writer and reader (structure templates are gzipped NBT). |
 | `lib/canvas.mjs` | A sparse 3D grid of block states; `toTemplate()` writes Minecraft's structure format. Unset positions keep the terrain; air clears it. |
 | `lib/parts.mjs` | Walls, timber frames, gable and hip roofs (Macaw's pieces, three pitches), doors, windows, shutters, flower boxes, furniture, lights, chimneys, a seeded rng. |
+| `lib/walls.mjs`, `buildings/60-walls.mjs` | Lemurton's curtain wall: a rounded loop with towers, gatehouses and a walkway, drawn in city coordinates and split into four quarter templates that hub.mjs places unturned at their offsets. `insideWalls()` keeps buildings off it. |
 | `lib/house.mjs` | `house(spec)`: foundation, storeys (rough stone, dressed stone or timber frame, upper floors jettied), roof, door, windows, chimney and interior. Most houses are one spec. |
 | `buildings/*.mjs` | The buildings. Each module exports `buildings: [{ name, kind, notes, build(canvas) }]`; `00-*.mjs` are samplers, built only with `--samplers`. |
 | `build.mjs` | Draws every building into a raw template in `raw/` plus `raw/manifest.json` (sizes, solid bounds, marks such as the door and NPC spots). `node structures/build.mjs [name-regex] [--samplers]`. |

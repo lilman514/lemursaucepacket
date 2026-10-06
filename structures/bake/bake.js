@@ -103,16 +103,30 @@ function bkStart(server) {
   let L = bkLayoutNow
   bkSay(`baking ${L.slots.length} templates`)
   // One forceload per row of cells (the command refuses more than 256 chunks at once).
+  // /forceload takes at most 256 chunks a call: a row at a time, split along x where the cells are big.
+  let span = Math.max(16, Math.floor(256 / (Math.ceil(L.cell / 16) + 1)) * 16 - 16)
   for (let row = -1; row <= L.rows; row++) {
     let z1 = BAKE.origin.z + row * L.cell
-    server.runCommand(`forceload add ${BAKE.origin.x - BAKE.margin} ${z1} ${L.endX + BAKE.margin} ${z1 + L.cell - 1}`)
+    for (let x = BAKE.origin.x - BAKE.margin; x <= L.endX + BAKE.margin; x += span) server.runCommand(`forceload add ${x} ${z1} ${Math.min(x + span - 1, L.endX + BAKE.margin)} ${z1 + L.cell - 1}`)
   }
   JsonIO.write('kubejs/bake/layout.json', { showY: BAKE.showY, slots: L.slots.map((s) => ({ name: s.t.name, x: s.x, z: s.z, size: s.t.size, solid: s.t.solid, facing: bkFacing(s.t) })) })
   let jobs = bkWipeJobs(server, L)
   L.slots.forEach((s) => {
     let size = s.t.size
     // A bed of structure void exactly the template's size, then the raw template on top of it.
-    jobs.push(() => server.runCommandSilent(`fill ${s.x} ${BAKE.y} ${s.z} ${s.x + size[0] - 1} ${BAKE.y + size[1] - 1} ${s.z + size[2] - 1} minecraft:structure_void`))
+    // Structure void under the whole template, in 32-block cubes (/fill takes at most 32768 blocks at once; a
+    // bigger box fails without a word and would leave air, which the save would keep).
+    for (let fx = 0; fx < size[0]; fx += 32)
+      for (let fy = 0; fy < size[1]; fy += 32)
+        for (let fz = 0; fz < size[2]; fz += 32) {
+          let x1 = s.x + fx
+          let y1 = BAKE.y + fy
+          let z1 = s.z + fz
+          let x2 = Math.min(s.x + size[0] - 1, x1 + 31)
+          let y2 = Math.min(BAKE.y + size[1] - 1, y1 + 31)
+          let z2 = Math.min(s.z + size[2] - 1, z1 + 31)
+          jobs.push(() => server.runCommandSilent(`fill ${x1} ${y1} ${z1} ${x2} ${y2} ${z2} minecraft:structure_void`))
+        }
     jobs.push(() => server.runCommand(`place template lsp_raw:${s.t.name} ${s.x} ${BAKE.y} ${s.z}`))
   })
   bkQueue(jobs)
@@ -159,7 +173,17 @@ function bkClearJobs(server) {
   let jobs = []
   bkLayoutNow.slots.forEach((s) => {
     let size = s.t.size
-    jobs.push(() => server.runCommandSilent(`fill ${s.x} ${BAKE.y} ${s.z} ${s.x + size[0] - 1} ${BAKE.y + size[1] - 1} ${s.z + size[2] - 1} minecraft:air`))
+    for (let fx = 0; fx < size[0]; fx += 32)
+      for (let fy = 0; fy < size[1]; fy += 32)
+        for (let fz = 0; fz < size[2]; fz += 32) {
+          let x1 = s.x + fx
+          let y1 = BAKE.y + fy
+          let z1 = s.z + fz
+          let x2 = Math.min(s.x + size[0] - 1, x1 + 31)
+          let y2 = Math.min(BAKE.y + size[1] - 1, y1 + 31)
+          let z2 = Math.min(s.z + size[2] - 1, z1 + 31)
+          jobs.push(() => server.runCommandSilent(`fill ${x1} ${y1} ${z1} ${x2} ${y2} ${z2} minecraft:air`))
+        }
   })
   return jobs
 }

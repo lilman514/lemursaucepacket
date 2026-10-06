@@ -19,6 +19,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { AT_BUILDING, MARKET_TRADERS, NPCS, presetId } from '../npcs/npcs.mjs'
 import { rng } from './lib/parts.mjs'
+import { WALL, insideWalls } from './lib/walls.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
@@ -29,7 +30,7 @@ const NS = 'lemursaucepacket'
 
 export const CITY = {
   name: 'Lemurton',
-  half: 86, // the walls stand at +-86
+  half: WALL.half, // the walls' straight runs stand at +-88 (corners rounded: structures/lib/walls.mjs)
   avenue: 3, // avenues are 7 wide (+-3)
   street: 2, // ring streets are 5 wide (+-2 around their centre line)
   inner: 27, // inner ring street centre line, round the market square
@@ -149,13 +150,13 @@ function pave(x1, z1, x2, z2, mix, y = 0) {
  * Greedy: at each spot it takes the next design that fits the span, stays inside `bounds` and doesn't overlap
  * anything placed; otherwise it moves on a block. Names in `once` are used at most once in the whole city.
  */
-function row({ names, along, at, from, to, faces, gap = 1, r, bounds, once }) {
+function row({ names, along, at, from, to, faces, gap = 1, r, bounds, once, keep }) {
   const before = placements.length
   const dir = from <= to ? 1 : -1
   let pos = from
   // Rows with landmarks or shops (`once`) try them first; others start at a random design so streets don't repeat.
   let i = r && !once ? r.int(0, names.length - 1) : 0
-  const inside = (b) => !bounds || (b.x1 >= bounds.x1 && b.x2 <= bounds.x2 && b.z1 >= bounds.z1 && b.z2 <= bounds.z2)
+  const inside = (b) => (!bounds || (b.x1 >= bounds.x1 && b.x2 <= bounds.x2 && b.z1 >= bounds.z1 && b.z2 <= bounds.z2)) && (!keep || keep(b))
   while (dir > 0 ? pos <= to : pos >= to) {
     let placed = false
     for (let k = 0; k < names.length && !placed; k++) {
@@ -305,15 +306,17 @@ function build() {
   const out1 = outer + S + 1
   const wallIn = H - 6
   const ob = { x1: -wallIn, z1: -wallIn, x2: wallIn, z2: wallIn }
+  // The walls' corners are rounded: keep every corner of a building well inside them.
+  const keep = (b) => [[b.x1, b.z1], [b.x2, b.z1], [b.x1, b.z2], [b.x2, b.z2]].every(([x, z]) => insideWalls(x, z, 5))
   TOWERS.forEach((name, i) => {
     const [sx, sz] = [[-1, -1], [1, -1], [1, 1]][i]
     place(name, sz > 0 ? 'north' : 'south', sx * (wallIn - 14), sz * out1, { tag: 'tower_house' })
   })
   for (const sg of [-1, 1]) {
-    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
-    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob })
-    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
-    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob })
+    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob, keep })
+    row({ names: OUTSKIRTS, along: 'x', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'north' : 'south', gap: 3, r, bounds: ob, keep })
+    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: -wallIn, to: -A - 2, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob, keep })
+    row({ names: OUTSKIRTS, along: 'z', at: sg * out1, from: A + 2, to: wallIn, faces: sg > 0 ? 'west' : 'east', gap: 3, r, bounds: ob, keep })
   }
 
   // Trees in the outskirts' gardens, wherever there's room for a crown (not on the roads).
@@ -329,28 +332,12 @@ function build() {
       footprints.push({ x1: tx - 1, z1: tz - 1, x2: tx + 1, z2: tz + 1, tag: 'planter' })
     }
 
-  // Walls: towers on the corners and either side of each gate, curtain wall between.
-  const towerAt = (x, z) => place('castle_tower_round', 'south', x, z + 5, { tag: 'tower' })
-  for (const [x, z] of [[-H, -H], [H, -H], [-H, H], [H, H]]) towerAt(x, z)
-  for (const sg of [-1, 1]) {
-    towerAt(sg * (A + 6), -H)
-    towerAt(sg * (A + 6), H)
-    towerAt(-H, sg * (A + 6))
-    towerAt(H, sg * (A + 6))
+  // The curtain wall (structures/lib/walls.mjs): four pieces drawn in city coordinates, each at its own offset.
+  for (const q of ['north', 'east', 'south', 'west']) {
+    const t = tpl(`lemurton_wall_${q}`)
+    placements.push({ t: `${NS}:${t.name}`, p: t.offset, r: 'none' })
+    footprints.push({ x1: t.offset[0], z1: t.offset[2], x2: t.offset[0] + t.size[0] - 1, z2: t.offset[2] + t.size[2] - 1, tag: 'wall' })
   }
-  const wallLen = tpl('castle_wall').size[0]
-  for (const side of ['north', 'south', 'east', 'west'])
-    for (const sg of [-1, 1]) {
-      let from = A + 11
-      while (from + wallLen <= H - 5) {
-        const m = sg * (from + Math.floor(wallLen / 2))
-        if (side === 'north') place('castle_wall', 'south', m, -H + 4, { tag: 'wall' })
-        if (side === 'south') place('castle_wall', 'north', m, H - 4, { tag: 'wall' })
-        if (side === 'west') place('castle_wall', 'east', -H + 4, m, { tag: 'wall' })
-        if (side === 'east') place('castle_wall', 'west', H - 4, m, { tag: 'wall' })
-        from += wallLen
-      }
-    }
 
   // Street lamps along the avenues, where there's room.
   for (let d = inner + 6; d < H - 6; d += 10)
@@ -375,7 +362,7 @@ function overlaps() {
 function people() {
   const H = CITY.half
   for (const [gx, gz] of [[0, -1], [0, 1], [-1, 0], [1, 0]]) {
-    const inward = H - 4
+    const inward = WALL.half - 6
     for (const side of [-2, 2]) {
       const x = gx === 0 ? side : gx * inward
       const z = gz === 0 ? side : gz * inward
@@ -383,9 +370,15 @@ function people() {
     }
   }
   // The mayor greets newcomers where they arrive.
-  npcSpots.push({ who: 'mayor', x: spawn[0] + 2, y: 1, z: spawn[2] - 1 })
+  npcSpots.push({ who: 'mayor', x: spawn[0] + 4, y: 1, z: spawn[2] + 1 })
   const ringIn = CITY.inner - CITY.street - 1
   for (const [x, z] of [[-10, ringIn - 1], [12, ringIn - 1], [-ringIn + 1, -8], [ringIn - 1, 9], [3, -ringIn + 1]]) if (!clashes({ x1: x, z1: z, x2: x, z2: z })) npcSpots.push({ who: 'townsfolk', x, y: 1, z })
+}
+
+/** The same kind of stable UUID as the int array NBT wants: [I;a,b,c,d]. */
+function intUuid(key) {
+  const h = createHash('sha1').update(`lemurton:${key}`).digest()
+  return `[I;${[0, 4, 8, 12].map((i) => h.readInt32BE(i)).join(',')}]`
 }
 
 /** A stable UUID per NPC spot (re-importing the plan updates the same NPCs instead of adding more). */
@@ -397,10 +390,22 @@ function uuidFor(key) {
 build()
 if (!waystone) throw new Error('no waystone in the city')
 people()
+// The townsfolk's team: its only job is hiding the vanilla nametags (they get SkyBlock ones below).
+commands.push('team add lsp_npcs', 'team modify lsp_npcs nametagVisibility never', 'team modify lsp_npcs collisionRule never')
 for (const n of npcSpots) {
   const def = NPCS[n.who]
   if (!def) throw new Error(`no NPC ${n.who}`)
-  commands.push(`easy_npc preset import data ${presetId(n.who, def.model)} ~${n.x + 0.5} ~${n.y} ~${n.z + 0.5} ${uuidFor(`${n.who}@${n.x},${n.z}`)}`)
+  const uuid = uuidFor(`${n.who}@${n.x},${n.z}`)
+  commands.push(`easy_npc preset import data ${presetId(n.who, def.model)} ~${n.x + 0.5} ~${n.y} ~${n.z + 0.5} ${uuid}`)
+  // A Hypixel SkyBlock nametag: the name in its colour over a bold yellow CLICK (the vanilla nametag is hidden by
+  // the team). Text displays with fixed UUIDs, so building the plan again doesn't add more.
+  const head = n.y + (def.model === 'humanoid' ? 1.95 : 2.1)
+  const snbtText = (json) => `'${JSON.stringify(json).replace(/'/g, "\\'")}'`
+  const line = (key, dy, json) =>
+    commands.push(`summon minecraft:text_display ~${n.x + 0.5} ~${(head + dy).toFixed(2)} ~${n.z + 0.5} {UUID:${intUuid(`${key}@${n.x},${n.z}`)},billboard:"center",shadow:1b,background:0,see_through:0b,Tags:["lsp_npc_tag"],text:${snbtText(json)}}`)
+  line(`${n.who}:name`, 0.27, { text: def.name, color: def.color ?? 'white' })
+  line(`${n.who}:click`, 0, { text: 'CLICK', color: 'yellow', bold: true })
+  commands.push(`team join lsp_npcs ${uuid}`)
 }
 const problems = overlaps()
 const plan = {

@@ -32,6 +32,7 @@ const rawDir = path.resolve(arg('raw', path.join(here, 'raw')))
 // --views: which camera angles to take (a: front right, b: front left).
 const views = arg('views', 'ab')
 const manifest = JSON.parse(readFileSync(path.join(rawDir, 'manifest.json'), 'utf8'))
+if (arg('only')) manifest.templates = manifest.templates.filter((t) => new RegExp(arg('only')).test(t.name))
 const shots = manifest.templates.length * views.length
 const seconds = 12 + shots * 6 + 20
 
