@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.lemursaucepacket.fixes.skills.Levels;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -18,6 +22,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.util.BlockSnapshot;
@@ -71,26 +76,40 @@ public final class Construction {
         return List.of(e.getPos());
     }
 
+    /** What a plain block's stack may carry: a name, lore, and the pack's owner mark (lifesteal.js). */
+    private static final Set<String> OWNER_MARK = Set.of("lsp_owner", "lsp_gen");
+
     /**
-     * The saving perk: the block goes back in the bag (one of the stack it came from, so a stack with anything on it comes
-     * back as it was), and the one placed is free (it drops nothing if broken).
+     * The saving perk: the block goes back in the bag (one of the stack it came from, so it stacks with the rest), and
+     * the one placed is free (it drops nothing if broken). Only ever a plain block from the player's hand: never a
+     * stack holding anything, so nothing stored in one is ever copied.
      */
     private static void save(ServerPlayer p, ServerLevel level, Block block, List<BlockPos> spots) {
-        ItemStack back = ItemStack.EMPTY;
+        ItemStack held = ItemStack.EMPTY;
         for (InteractionHand hand : InteractionHand.values()) {
-            ItemStack held = p.getItemInHand(hand);
-            if (held.is(block.asItem())) {
-                back = held.copyWithCount(1);
+            if (p.getItemInHand(hand).is(block.asItem())) {
+                held = p.getItemInHand(hand);
                 break;
             }
         }
-        if (back.isEmpty()) back = new ItemStack(block.asItem());
-        ItemStack give = back;
+        if (held.isEmpty() || !plainStack(held)) return;
+        ItemStack give = held.copyWithCount(1);
         GIVE_BACK.add(() -> {
             if (!p.getInventory().add(give)) p.drop(give, false);
             p.playNotifySound(SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.25f, 1.7f);
         });
         for (BlockPos pos : spots) FreeBlocks.mark(level, pos, level.getBlockState(pos).getBlock());
+    }
+
+    /** A stack that's only its block: no contents, no block entity data, nothing but a name, lore or the owner mark. */
+    static boolean plainStack(ItemStack stack) {
+        for (Map.Entry<DataComponentType<?>, Optional<?>> e : stack.getComponentsPatch().entrySet()) {
+            DataComponentType<?> type = e.getKey();
+            if (e.getValue().isEmpty() || type == DataComponents.CUSTOM_NAME || type == DataComponents.LORE || type == DataComponents.REPAIR_COST) continue;
+            if (type == DataComponents.CUSTOM_DATA && e.getValue().get() instanceof CustomData data && OWNER_MARK.containsAll(data.copyTag().getAllKeys())) continue;
+            return false;
+        }
+        return true;
     }
 
     /** The Builder's Wand (kubejs gear.js) sets its blocks directly: each pays as if placed by hand. */

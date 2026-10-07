@@ -218,6 +218,10 @@ public final class Crandor {
             p.playNotifySound(SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, 1f, 1f);
             names.add(p.getGameProfile().getName());
         }
+        // Her kill count on the hiscores: everyone in the fight, quest or not.
+        for (ServerPlayer p : level.players()) {
+            if (p.distanceToSqr(dead) <= CREDIT_RANGE * CREDIT_RANGE) net.lemursaucepacket.fixes.hiscores.Hiscores.count(p, "elvarg", 1);
+        }
         if (!names.isEmpty()) server.getPlayerList().broadcastSystemMessage(Component.literal(String.join(", ", names) + (names.size() == 1 ? " has" : " have") + " slain Elvarg, the dragon of Crandor!").withStyle(ChatFormatting.GOLD), false);
         QuestModule.LOGGER.info("Elvarg died; credit to {}", names);
     }

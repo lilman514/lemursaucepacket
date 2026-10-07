@@ -1,0 +1,54 @@
+{
+  "name": "Hiscores",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:gold_block",
+  "sortnum": 17,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Everyone who plays on the server is on the hiscores, ranked like RuneScape's: every skill, your total and combat levels, quest points, boss kills and collections. In game, $(#e0ac46)/hiscores$() shows the tables in chat; on the web, $(l:https://play.limas.ca/hiscores)play.limas.ca/hiscores$(/l) shows the same ones, with a page for each player."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "In game",
+      "text": "$(#b9a98a)Command - Shows$()$(br)$(bold)$(#e0ac46)/hiscores$()$() - Overall: everyone by total level, then total XP$(br)$(bold)$(#e0ac46)/hiscores skills$() (or $(#e0ac46)bosses$(), $(#e0ac46)activities$(), $(#e0ac46)collections$())$() - Every table in that group, to click$(br)$(bold)$(#e0ac46)/hiscores mining$() (any table's name: $(#e0ac46)elvarg$(), $(#e0ac46)quest_points$(), $(#e0ac46)music_discs$()…)$() - That table$(br)$(bold)$(#e0ac46)/hiscores player <name>$()$() - Someone's hiscores: their rank in every skill, their activities, boss kills and collections"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each table shows the top ten and where you are. Click a name for that player's hiscores, a group to see its tables, or $(bold)On the website$() to open the table on play.limas.ca."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How the ranking works",
+      "text": "$(li)$(bold)Overall$() ranks by total level, and total XP between players on the same total. $(bold)Skills$() rank by XP. Everything else ranks by count.$(br)$(li)You're on a table once you have something on it: a skill you've trained, a boss you've killed. Overall and combat level have everyone.$(br)$(li)Ties go in name order.$(br)$(li)The server writes everyone online down every five minutes, and when you join or leave. What changed goes to the website every ten minutes, so the website can be a few minutes behind the game."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Elvarg counts for everyone who was in the fight when she fell; a Fight Pits or Inferno win counts for the one who won it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Skills",
+      "text": "Overall, each of the 16 skills (Attack, Defence, Strength, Hitpoints, Ranged, Enchanting, Cooking, Woodcutting, Fishing, Crafting, Smithing, Mining, Brewing, Agility, Farming, Construction) and combat level."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Activities",
+      "text": "$(#b9a98a)Table - What counts$()$(br)$(bold)Quest points$() - Quest points from the main quests (14 in all: Cook's Assistant 1, The Knight's Sword 1, Dragon Slayer I 2, Dragon Slayer II 3, The Fight Pits 2, Ashes of the Kiln 2, The Inferno 3)$(br)$(bold)Capes earned$() - Capes of every kind: skill, quest and feat capes$(br)$(bold)Collection log$() - Every kind of item you've had: held, worn, picked up or crafted$(br)$(bold)Quest book quests$() - Quests finished in the quest book$(br)$(bold)Raids won$() - Villages saved from a raid$(br)$(bold)Monsters slain$() - Creatures killed, of every kind"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Players slain$() - Other players killed$(br)$(bold)Hours played$() - Time on the server"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bosses",
+      "text": "$(#b9a98a)Table - What counts$()$(br)$(bold)Elvarg$() - Elvarg's Lair: everyone in the fight when she falls$(br)$(bold)Kiln-Tok-Jad$() - Fight Pits wins$(br)$(bold)Kiln-Kal-Zuk$() - Inferno wins$(br)$(bold)Ender Dragon$() - Kills$(br)$(bold)Wither$() - Kills$(br)$(bold)Warden$() - Kills$(br)$(bold)Elder Guardian$() - Kills$(br)$(bold)Invoker$() - Kills$(br)$(bold)Ice and Fire dragons$() - Fire, ice and lightning dragons slain"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Collections",
+      "text": "Each counts the kinds you have had, out of how many there are.$(br2)$(#b9a98a)Table - What counts$()$(br)$(bold)Relics$() - The Relics mod's artefacts$(br)$(bold)Music discs$() - Every music disc$(br)$(bold)Armour trims$() - Armour trim smithing templates$(br)$(bold)Pottery sherds$() - Pottery sherds from the trail ruins and the rest$(br)$(bold)Mob heads$() - Skeleton, wither skeleton, zombie, creeper, piglin and dragon heads"
+    }
+  ]
+}

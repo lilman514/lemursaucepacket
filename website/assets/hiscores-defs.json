@@ -1,0 +1,191 @@
+{
+  "overall": {
+    "id": "overall",
+    "name": "Overall",
+    "icon": "/assets/skills/total_level.webp"
+  },
+  "skills": [
+    {
+      "id": "attack",
+      "name": "Attack",
+      "icon": "/assets/skills/attack.webp"
+    },
+    {
+      "id": "defence",
+      "name": "Defence",
+      "icon": "/assets/skills/defence.webp"
+    },
+    {
+      "id": "strength",
+      "name": "Strength",
+      "icon": "/assets/skills/strength.webp"
+    },
+    {
+      "id": "hitpoints",
+      "name": "Hitpoints",
+      "icon": "/assets/skills/hitpoints.webp"
+    },
+    {
+      "id": "ranged",
+      "name": "Ranged",
+      "icon": "/assets/skills/ranged.webp"
+    },
+    {
+      "id": "enchanting",
+      "name": "Enchanting",
+      "icon": "/assets/skills/enchanting.webp"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "icon": "/assets/skills/cooking.webp"
+    },
+    {
+      "id": "woodcutting",
+      "name": "Woodcutting",
+      "icon": "/assets/skills/woodcutting.webp"
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing",
+      "icon": "/assets/skills/fishing.webp"
+    },
+    {
+      "id": "crafting",
+      "name": "Crafting",
+      "icon": "/assets/skills/crafting.webp"
+    },
+    {
+      "id": "smithing",
+      "name": "Smithing",
+      "icon": "/assets/skills/smithing.webp"
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "icon": "/assets/skills/mining.webp"
+    },
+    {
+      "id": "brewing",
+      "name": "Brewing",
+      "icon": "/assets/skills/brewing.webp"
+    },
+    {
+      "id": "agility",
+      "name": "Agility",
+      "icon": "/assets/skills/agility.webp"
+    },
+    {
+      "id": "farming",
+      "name": "Farming",
+      "icon": "/assets/skills/farming.webp"
+    },
+    {
+      "id": "construction",
+      "name": "Construction",
+      "icon": "/assets/skills/construction.webp"
+    }
+  ],
+  "combat": {
+    "id": "combat",
+    "name": "Combat level",
+    "icon": "/assets/skills/attack.webp"
+  },
+  "activities": [
+    {
+      "id": "quest_points",
+      "name": "Quest points"
+    },
+    {
+      "id": "capes",
+      "name": "Capes earned"
+    },
+    {
+      "id": "collection",
+      "name": "Collection log"
+    },
+    {
+      "id": "quests",
+      "name": "Quest book quests"
+    },
+    {
+      "id": "raids",
+      "name": "Raids won"
+    },
+    {
+      "id": "monsters",
+      "name": "Monsters slain"
+    },
+    {
+      "id": "players",
+      "name": "Players slain"
+    },
+    {
+      "id": "hours",
+      "name": "Hours played"
+    }
+  ],
+  "bosses": [
+    {
+      "id": "elvarg",
+      "name": "Elvarg"
+    },
+    {
+      "id": "fight_pits",
+      "name": "Kiln-Tok-Jad",
+      "note": "Fight Pits wins"
+    },
+    {
+      "id": "inferno",
+      "name": "Kiln-Kal-Zuk",
+      "note": "Inferno wins"
+    },
+    {
+      "id": "ender_dragon",
+      "name": "Ender Dragon"
+    },
+    {
+      "id": "wither",
+      "name": "Wither"
+    },
+    {
+      "id": "warden",
+      "name": "Warden"
+    },
+    {
+      "id": "elder_guardian",
+      "name": "Elder Guardian"
+    },
+    {
+      "id": "invoker",
+      "name": "Invoker"
+    },
+    {
+      "id": "dragons",
+      "name": "Ice and Fire dragons"
+    }
+  ],
+  "collections": [
+    {
+      "id": "relics",
+      "name": "Relics"
+    },
+    {
+      "id": "music_discs",
+      "name": "Music discs"
+    },
+    {
+      "id": "trims",
+      "name": "Armour trims"
+    },
+    {
+      "id": "sherds",
+      "name": "Pottery sherds"
+    },
+    {
+      "id": "heads",
+      "name": "Mob heads"
+    }
+  ],
+  "questPoints": 14
+}

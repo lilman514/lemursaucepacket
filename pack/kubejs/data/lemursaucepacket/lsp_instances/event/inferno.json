@@ -513,6 +513,7 @@
     "safe_deaths": true,
     "win_commands": [
       "lsp cape award {player} infernal_cape",
+      "lsp hiscores count {player} inferno",
       "tag {player} add q_inf_cape",
       "lsp coins give {player} 40000",
       "tellraw @a {\"text\":\"{player} has survived the Inferno and earned an Infernal Cape!\",\"color\":\"red\",\"bold\":true}"

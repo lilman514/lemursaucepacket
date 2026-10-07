@@ -173,6 +173,7 @@ const fightPits = {
     safe_deaths: true,
     win_commands: [
       'lsp cape award {player} fire_cape',
+      'lsp hiscores count {player} fight_pits',
       'tag {player} add q_pits_fire',
       'lsp coins give {player} 10000',
       'tellraw @a {"text":"{player} has defeated Kiln-Tok-Jad and earned a Fire Cape!","color":"gold"}'
@@ -205,6 +206,7 @@ const inferno = {
     safe_deaths: true,
     win_commands: [
       'lsp cape award {player} infernal_cape',
+      'lsp hiscores count {player} inferno',
       'tag {player} add q_inf_cape',
       'lsp coins give {player} 40000',
       'tellraw @a {"text":"{player} has survived the Inferno and earned an Infernal Cape!","color":"red","bold":true}'

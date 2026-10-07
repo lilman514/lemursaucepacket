@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not found · LemurSaucePacket</title>
-<meta name="robots" content="noindex">
-<meta name="description" content="Every LemurSaucePacket pack update, newest first: Elvarg's Lair, the main quests, Gold Coins and vendors, Lemurton and more.">
+<title>Hiscores · LemurSaucePacket</title>
+<meta name="description" content="Everyone who plays on the LemurSaucePacket server, ranked RuneScape-style: every skill, total and combat level, quest points, bosses and collections.">
+<link rel="canonical" href="https://play.limas.ca/hiscores">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LemurSaucePacket">
-<meta property="og:title" content="LemurSaucePacket updates">
-<meta property="og:description" content="Every pack update, newest first.">
-<meta property="og:url" content="https://play.limas.ca/updates">
+<meta property="og:title" content="LemurSaucePacket hiscores">
+<meta property="og:description" content="Every skill, quest points, bosses and collections, ranked.">
+<meta property="og:url" content="https://play.limas.ca/hiscores">
 <meta property="og:image" content="https://play.limas.ca/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#191715">
@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&amp;family=Pixelify+Sans:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
+<script src="/assets/hiscores.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -39,7 +40,7 @@
       <a href="/gallery">Gallery</a>
       <a href="/join">How to join</a>
       <a href="/updates">Updates</a>
-      <a href="/hiscores">Hiscores</a>
+      <a href="/hiscores" aria-current="page">Hiscores</a>
       <a class="ext" href="/wiki">Wiki</a>
     </nav>
     <div class="topbar-actions">
@@ -50,13 +51,31 @@
 </header>
 
 <main id="main">
-<section class="final" style="min-height:70vh;display:grid;align-items:center">
-  <img class="bg" src="/assets/shots/lemurton_night-1280.webp" width="1280" height="720" alt="">
+<section class="page-hero">
+  <img class="bg" src="/assets/shots/lemurton_golden-1280.webp" srcset="/assets/shots/lemurton_golden-640.webp 640w, /assets/shots/lemurton_golden-1280.webp 1280w, /assets/shots/lemurton_golden-1920.webp 1920w" sizes="100vw" width="1280" height="720" alt="">
   <div class="wrap">
-    <img class="mascot" src="/assets/emblems/mascot.webp" width="112" height="112" alt="">
-    <h2>Lost in the dark?</h2>
-    <p>There is nothing at this address. The compass points home.</p>
-    <div class="cta-row"><a class="btn-brass" href="/">Back to Lemurton</a><a class="btn-plate" href="/wiki">The wiki</a></div>
+    <p class="kicker"><img src="/assets/icons/statistics.webp" width="36" height="36" alt="">Hiscores</p>
+    <h1>Who's on top</h1>
+    <p>Everyone who plays on mc.limas.ca, ranked: every skill, total and combat level, quest points, bosses and collections. The server sends its records here every ten minutes, and <code>/hiscores</code> shows the same tables in game.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap hs">
+    <aside class="hs-side">
+      <form class="hs-find" role="search" data-hs-find>
+        <label class="visually-hidden" for="hs-search">Look up a player</label>
+        <input id="hs-search" type="search" list="hs-names" placeholder="Look up a player" autocomplete="off" spellcheck="false" maxlength="16" data-hs-search>
+        <button class="btn-line" type="submit">Look up</button>
+        <datalist id="hs-names"></datalist>
+      </form>
+      <label class="hs-pick"><span class="visually-hidden">Table</span><select data-hs-pick></select></label>
+      <nav class="hs-tables" data-hs-tables aria-label="Hiscores tables"></nav>
+    </aside>
+    <div class="hs-main">
+      <div data-hs-main aria-live="polite"><p class="hs-note">Loading the hiscores…</p></div>
+      <p class="hs-updated" data-hs-updated></p>
+    </div>
   </div>
 </section>
 </main>

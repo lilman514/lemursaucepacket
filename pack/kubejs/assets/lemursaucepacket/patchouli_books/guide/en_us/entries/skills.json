@@ -53,7 +53,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Saving blocks.$() Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block the perk saved you is free: if it's broken later it drops nothing, so it can never be turned into more than you had.$(br)$(li)$(bold)Decorative blocks in bulk.$() Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay ball, mossy and cracked kinds without a furnace, eight stairs where vanilla gives four, a lantern for less iron. The guide below lists them all."
+      "text": "$(li)$(bold)Saving blocks.$() Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block the perk saved you is free: if it's broken later it drops nothing, so it can never be turned into more than you had. It only ever saves building blocks: never storage blocks (iron, gold, diamond and the rest, modded ones too), beacon bases, ores, copper of any kind, coin stacks or amethyst, and never anything that holds items or has contents (chests, shulker boxes, backpacks, machines)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Decorative blocks in bulk.$() Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay ball, mossy and cracked kinds without a furnace, eight stairs where vanilla gives four, a lantern for less iron. The guide below lists them all."
     },
     {
       "type": "patchouli:text",
@@ -76,6 +80,10 @@
       "type": "patchouli:text",
       "title": "What each skill unlocks",
       "text": "Like a RuneScape skill guide: the level each thing needs.$(br2)$(li)$(bold)Making things.$() If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking pot) and a message says what it takes. The item's tooltip says it too. Create's crafting blueprint asks the same of whoever clicks it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Create's machines$() each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, Cooking for fans, Crafting for mechanical crafters, Construction for the schematicannon, Smithing for steam engines, Agility for trains and Enchanting for the blaze enchanter and the printer. The Create machines table lists them by level. Anyone can use a machine someone else made."
     },
     {
       "type": "patchouli:text",
@@ -133,6 +141,15 @@
       "type": "patchouli:text",
       "title": "Combat level",
       "text": "$(#b9a98a)Level - Lets you$()$(br)$(bold)75$() - Get wither skeleton skulls (the Wither) as drops"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Create machines",
+      "text": "$(#b9a98a)Level - Skill - Lets you make$()$(br)$(bold)15$() - Farming - Mechanical harvesters and ploughs$(br)$(bold)15$() - Mining - Mechanical drills$(br)$(bold)15$() - Woodcutting - Mechanical saws$(br)$(bold)20$() - Cooking - Encased fans (bulk smoking, blasting and washing)$(br)$(bold)30$() - Construction - Schematicannons$(br)$(bold)30$() - Crafting - Mechanical crafters$(br)$(bold)35$() - Agility - Train stations and train controls$(br)$(bold)35$() - Enchanting - Blaze enchanters$(br)$(bold)35$() - Smithing - Steam engines$(br)$(bold)50$() - Enchanting - Printers (they copy enchanted books)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)50$() - Mining - Drill heads for the ore vein drilling machine$(br)$(bold)65$() - Mining - Diamond drill heads$(br)$(bold)80$() - Mining - Netherite drill heads"
     },
     {
       "type": "patchouli:text",

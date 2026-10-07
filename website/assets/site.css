@@ -1596,6 +1596,318 @@ a.shot:hover img,
   translate: 0 0;
 }
 
+/* ---------------------------------------------------------------- hiscores (assets/hiscores.js draws the tables) */
+
+.page-hero code {
+  padding: 1px 6px;
+  border: 1px solid rgba(135, 89, 26, 0.6);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 0.9em;
+}
+
+.hs {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: start;
+}
+
+.hs-side {
+  position: sticky;
+  top: calc(var(--topbar) + 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - var(--topbar) - 32px);
+}
+
+.hs-find {
+  display: flex;
+  gap: 8px;
+}
+
+.hs-find input,
+.hs-pick select {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg-deep);
+  color: var(--text);
+  font: 15px/1.3 var(--body);
+}
+
+.hs-find input:focus,
+.hs-pick select:focus {
+  border-color: var(--brass);
+}
+
+.hs-find .btn-line {
+  flex: none;
+  padding: 9px 14px;
+  font: 700 15px/1.3 var(--body);
+  cursor: pointer;
+}
+
+.hs-pick {
+  display: none;
+}
+
+.hs-tables {
+  overflow-y: auto;
+  padding: 4px 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+  scrollbar-color: var(--brass-dark) transparent;
+}
+
+.hs-tables h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 8px 4px;
+  color: var(--brass);
+  font: 600 13px/1 var(--px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hs-tables h3 img {
+  width: 20px;
+  height: 20px;
+}
+
+.hs-tables a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--text-2);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.hs-tables a:hover {
+  background: var(--card);
+  color: var(--text);
+}
+
+.hs-tables a[aria-current='page'] {
+  background: var(--card-hi);
+  color: var(--brass-hi);
+  box-shadow: inset 2px 0 0 var(--brass);
+}
+
+.hs-tables img,
+.hs-table td img {
+  flex: none;
+  width: 24px;
+  height: 24px;
+}
+
+.hs-dot {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.hs-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  rotate: 45deg;
+  background: var(--tone, var(--brass));
+}
+
+.hs-activity {
+  --tone: var(--green);
+}
+
+.hs-boss {
+  --tone: var(--ember);
+}
+
+.hs-collection {
+  --tone: var(--sky);
+}
+
+.hs-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.hs-head img {
+  flex: none;
+  width: 56px;
+  height: 56px;
+}
+
+.hs-head h2 {
+  font-size: clamp(28px, 3.4vw, 38px);
+}
+
+.hs-head p {
+  margin: 6px 0 0;
+  color: var(--text-2);
+  font-size: 15.5px;
+}
+
+.hs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.hs-table th,
+.hs-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.hs-table th {
+  background: var(--bg-raised);
+  color: var(--brass);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hs-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hs-table .rank {
+  width: 70px;
+  color: var(--text-3);
+}
+
+.hs-table tbody tr:hover {
+  background: rgba(224, 172, 70, 0.05);
+}
+
+.hs-table tbody tr:nth-child(1) td.rank {
+  color: var(--brass-hi);
+  font-weight: 700;
+}
+
+.hs-table tbody tr:nth-child(2) td.rank {
+  color: #d9d4cb;
+  font-weight: 700;
+}
+
+.hs-table tbody tr:nth-child(3) td.rank {
+  color: #d58c4f;
+  font-weight: 700;
+}
+
+.hs-table a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hs-table a:hover {
+  text-decoration: underline;
+}
+
+.hs-table td img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.hs-table tr.none,
+.hs-table tr.none a {
+  color: var(--text-3);
+  font-weight: 400;
+}
+
+.hs-of {
+  color: var(--text-3);
+}
+
+.hs-bar {
+  display: block;
+  height: 4px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--bg-deep);
+}
+
+.hs-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--brass-dark), var(--brass));
+}
+
+.hs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.hs-card {
+  padding: 16px 18px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(51, 46, 43, 0.75), rgba(32, 29, 27, 0.75));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.hs-card.wide {
+  grid-column: 1 / -1;
+}
+
+.hs-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--brass-hi);
+  font: 700 20px/1.2 var(--head);
+}
+
+.hs-card .hs-table {
+  font-size: 15px;
+}
+
+.hs-card .hs-table th,
+.hs-card .hs-table td {
+  padding: 7px 10px;
+}
+
+.hs-card .hs-table .num {
+  width: 1%;
+}
+
+.hs-note {
+  color: var(--text-2);
+}
+
+.hs-card .hs-note {
+  margin: 12px 0 0;
+  font-size: 15px;
+}
+
+.hs-updated {
+  margin: 16px 0 0;
+  color: var(--text-3);
+  font-size: 14px;
+  text-align: right;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1675,6 +1987,22 @@ a.shot:hover img,
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .hs {
+    grid-template-columns: 1fr;
+  }
+  .hs-side {
+    position: static;
+    max-height: none;
+  }
+  .hs-tables {
+    display: none;
+  }
+  .hs-pick {
+    display: block;
+  }
+  .hs-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1740,6 +2068,29 @@ a.shot:hover img,
   .lightbox .lb-btn {
     width: 42px;
     height: 42px;
+  }
+  .hs-table,
+  .hs-card .hs-table {
+    font-size: 14px;
+  }
+  .hs-table th,
+  .hs-table td,
+  .hs-card .hs-table th,
+  .hs-card .hs-table td {
+    padding: 7px 6px;
+  }
+  .hs-table .rank {
+    width: 44px;
+  }
+  .hs-table td img {
+    margin-right: 6px;
+  }
+  .hs-head img {
+    width: 44px;
+    height: 44px;
+  }
+  .hs-card {
+    padding: 14px 12px 12px;
   }
 }
 

@@ -125,7 +125,7 @@
 	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.", "", "&eChapter prize:&r 40,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.010023C1444D0FF4.title: "&6Legacy"
 	quest.014760E2F2483D38.title: "Bone Collector"
-	quest.01C3F051E3FA4FDC.quest_desc: ["Reach &eMining 99&r. Mining gives faster mining.", "", "&6The Mining Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
+	quest.01C3F051E3FA4FDC.quest_desc: ["Reach &eMining 99&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 80: netherite drill heads", "", "&6The Mining Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.01C3F051E3FA4FDC.title: "&aMining 99"
 	quest.022ED40E89E99353.quest_desc: ["Wild tomatoes, cabbages, onions and rice grow around the world. Replant them at home."]
 	quest.022ED40E89E99353.title: "New Crops"
@@ -143,7 +143,7 @@
 	quest.041B7F870C5C6510.title: "Dragon's Breath"
 	quest.043F5AD0FE7E848A.quest_desc: ["Oziach keeps the armoury on the ring street. He came closer to killing the Ender Dragon than anyone."]
 	quest.043F5AD0FE7E848A.title: "Oziach"
-	quest.0444095009517E71.quest_desc: ["Reach &eAgility 50&r. Agility gives speed and less fall damage.", "", "&eUnlocked on the way:&r", "• 30: the elytra", "• 40: the Aeronaut's set"]
+	quest.0444095009517E71.quest_desc: ["Reach &eAgility 50&r. Agility gives speed and less fall damage.", "", "&eUnlocked on the way:&r", "• 30: the elytra", "• 35: train stations and train controls", "• 40: the Aeronaut's set"]
 	quest.0444095009517E71.title: "&bAgility 50"
 	quest.046A889E2F3F50C9.quest_desc: ["A blaze forger merges and strips enchantments the way an anvil does, but never gets too expensive."]
 	quest.046A889E2F3F50C9.title: "Born Talent of Fire"
@@ -351,7 +351,7 @@
 	quest.2031A04C680089C5.title: "Wings"
 	quest.206401FD17FA8617.quest_desc: ["Golden sheets and brass casing: this one waits for the Brass Age."]
 	quest.206401FD17FA8617.title: "Gold Backpack"
-	quest.20DC7B4C0A7F46B7.quest_desc: ["Reach &eMining 25&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 15: iron picks", "• 20: Hardness II (gold, redstone)"]
+	quest.20DC7B4C0A7F46B7.quest_desc: ["Reach &eMining 25&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 15: iron picks; mechanical drills", "• 20: Hardness II (gold, redstone)"]
 	quest.20DC7B4C0A7F46B7.title: "&aMining 25"
 	quest.210C30021F4A3817.quest_desc: ["Item vaults join into one big inventory. Eight is a small warehouse."]
 	quest.210C30021F4A3817.title: "Bulk Storage"
@@ -368,7 +368,7 @@
 	quest.22594C04715A3EDC.quest_desc: ["Reach &eHitpoints 10&r. Hitpoints gives a heart every ten levels.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.22594C04715A3EDC.title: "&cHitpoints 10"
 	quest.2266A2935B8512A6.title: "End City"
-	quest.226FAFDCF8627F75.quest_desc: ["Reach &eEnchanting 50&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 40: level VII"]
+	quest.226FAFDCF8627F75.quest_desc: ["Reach &eEnchanting 50&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 35: blaze enchanters", "• 40: level VII", "• 50: printers (they copy enchanted books)"]
 	quest.226FAFDCF8627F75.title: "&6Enchanting 50"
 	quest.2348D594EF1CBA8B.quest_desc: ["Leather and a fishing rod. +2 Luck: better catches, better loot.", "&7Needs Fishing 25."]
 	quest.2348D594EF1CBA8B.title: "Angler's Cap"
@@ -379,7 +379,7 @@
 	quest.23D0C909F4F34B0D.title: "Warp Stone"
 	quest.24A74A9AE03817A1.quest_desc: ["Wake it on purpose, and win. Bring the whole server.", "", "&eChapter prize:&r a totem, a relic and two rolls on the Legend's Hoard."]
 	quest.24A74A9AE03817A1.title: "&cThe Warden"
-	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour", "• 35: aeronaut's Rigging (for the Aeronaut set)", "• 40: enchanting tables; duelist's Filigree (for the Brass Duelist set)", "• 50: ender chests"]
+	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour; mechanical crafters", "• 35: aeronaut's Rigging (for the Aeronaut set)", "• 40: enchanting tables; duelist's Filigree (for the Brass Duelist set)", "• 50: ender chests"]
 	quest.25B714A6FCD8983E.title: "&6Crafting 50"
 	quest.26C3A5928BAFE1CB.quest_desc: ["Run a pair of crushing wheels at maximum speed. Everything that goes in comes out doubled."]
 	quest.26C3A5928BAFE1CB.title: "Crushing It"
@@ -512,9 +512,9 @@
 	quest.373FC2254A526ABB.title: "Hardness III"
 	quest.377C3F31EF6DA6DC.quest_desc: ["Soul sand, a bone block and two experience nuggets, mixed over a blaze burner: two Grave Essence. A few also lie in dungeon and ancient city chests."]
 	quest.377C3F31EF6DA6DC.title: "Grave Essence"
-	quest.378AA4B49CBB296F.quest_desc: ["Reach &eConstruction 50&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 30: chiseled stone bricks by the eight: stone bricks round an iron nugget", "• 40: cracked deepslate bricks without a furnace", "• 45: cracked deepslate tiles without a furnace", "• 50: cracked nether bricks without a furnace"]
+	quest.378AA4B49CBB296F.quest_desc: ["Reach &eConstruction 50&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 30: schematicannons; chiseled stone bricks by the eight: stone bricks round an iron nugget", "• 40: cracked deepslate bricks without a furnace", "• 45: cracked deepslate tiles without a furnace", "• 50: cracked nether bricks without a furnace"]
 	quest.378AA4B49CBB296F.title: "&6Construction 50"
-	quest.3793ECB6905AEA11.quest_desc: ["Reach &eCooking 25&r. Cooking gives XP from every meal.", "", "&eUnlocked on the way:&r", "• 20: cake, rabbit stew, stews, rice dishes and rolls"]
+	quest.3793ECB6905AEA11.quest_desc: ["Reach &eCooking 25&r. Cooking gives XP from every meal.", "", "&eUnlocked on the way:&r", "• 20: cake, rabbit stew, stews, rice dishes and rolls; encased fans (bulk smoking, blasting and washing)"]
 	quest.3793ECB6905AEA11.title: "&6Cooking 25"
 	quest.3838D00F121D3CDE.title: "Pale Garden"
 	quest.38A6292D5FAEFB5B.quest_desc: ["Every ship deserves a name. A nameplate on the hull sets it."]
@@ -633,7 +633,7 @@
 	quest.48ADAA3611CDE116.title: "Lost Item Compass"
 	quest.492848993E0A2588.quest_desc: ["Redstone mixed into quartz, then polished on a belt with sandpaper or a deployer."]
 	quest.492848993E0A2588.title: "Rose Quartz"
-	quest.4947E85286FBECA2.quest_desc: ["Reach &eFarming 25&r. Farming gives faster tilling.", "", "&eUnlocked on the way:&r", "• 15: iron hoes; planting pumpkins and melons", "• 20: planting rice", "• 25: planting cocoa"]
+	quest.4947E85286FBECA2.quest_desc: ["Reach &eFarming 25&r. Farming gives faster tilling.", "", "&eUnlocked on the way:&r", "• 15: iron hoes; mechanical harvesters and ploughs; planting pumpkins and melons", "• 20: planting rice", "• 25: planting cocoa"]
 	quest.4947E85286FBECA2.title: "&aFarming 25"
 	quest.4967BBE9FD472FB4.quest_desc: ["The Lost Item Compass, a sculk sensor, two comparators and a precision mechanism. Its switch adds &eanything&r: it also points at chests and players holding your item, without saying which."]
 	quest.4967BBE9FD472FB4.title: "Seeker's Compass"
@@ -676,7 +676,7 @@
 	quest.4F4A58B9C1A5E8F7.title: "Compacted Diamond"
 	quest.4F8E07BC0C47B163.quest_desc: ["A proper meal gives Nourishment: fed and healthy for a long while."]
 	quest.4F8E07BC0C47B163.title: "Nourishing!"
-	quest.4FEE26AC564DC139.quest_desc: ["Reach &eMining 50&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 30: diamond picks, Hardness III (diamonds, obsidian) and the Prospector's Pickaxe", "• 35: the Prospector's set", "• 40: Hardness IV (ancient debris) and the Excavator's Pickaxe", "• 50: netherite picks and Hardness V"]
+	quest.4FEE26AC564DC139.quest_desc: ["Reach &eMining 50&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 30: diamond picks, Hardness III (diamonds, obsidian) and the Prospector's Pickaxe", "• 35: the Prospector's set", "• 40: Hardness IV (ancient debris) and the Excavator's Pickaxe", "• 50: netherite picks and Hardness V; drill heads for the ore vein drilling machine"]
 	quest.4FEE26AC564DC139.title: "&aMining 50"
 	quest.5025E32F75521917.quest_desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew the Ender Dragon. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", "", "&eRequires:&r combat level 60.", "", "&7Kiln Hollow has a waystone: touch it so you can come straight back."]
 	quest.5025E32F75521917.quest_subtitle: "Started by the Champions' Guild"
@@ -729,7 +729,7 @@
 	quest.54D0E314F5B3B32E.title: "Hunting Belt"
 	quest.54FDF2788C384A54.quest_desc: ["Andesite is everywhere, and Create is built on it. Gather a stack."]
 	quest.54FDF2788C384A54.title: "The Grey Stone"
-	quest.55BC4C80831ECB99.quest_desc: ["Reach &eMining 75&r. Mining gives faster mining."]
+	quest.55BC4C80831ECB99.quest_desc: ["Reach &eMining 75&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 65: diamond drill heads"]
 	quest.55BC4C80831ECB99.title: "&aMining 75"
 	quest.563583BD661DA7DA.quest_desc: ["Mending never rolls at the table. Librarians, loot chests and the reward crates carry it."]
 	quest.563583BD661DA7DA.title: "Mending"
@@ -947,7 +947,7 @@
 	quest.7071385904D2EB7A.quest_desc: ["A mechanical mixer above a basin combines ingredients, heated or not."]
 	quest.7071385904D2EB7A.title: "Mix It Up"
 	quest.70B8478F4E2B143D.title: "First Enchantment"
-	quest.70FBA22C44AA6C51.quest_desc: ["Reach &eWoodcutting 25&r. Woodcutting gives faster chopping.", "", "&eUnlocked on the way:&r", "• 15: iron axes; chopping jungle trees"]
+	quest.70FBA22C44AA6C51.quest_desc: ["Reach &eWoodcutting 25&r. Woodcutting gives faster chopping.", "", "&eUnlocked on the way:&r", "• 15: iron axes; mechanical saws; chopping jungle trees"]
 	quest.70FBA22C44AA6C51.title: "&aWoodcutting 25"
 	quest.7167FD1EB7C9FE3B.quest_desc: ["Found in Nether chests."]
 	quest.7167FD1EB7C9FE3B.title: "Ring of the Seven Deadly Sins"
@@ -973,7 +973,7 @@
 	quest.7535D89CEF267AFC.quest_desc: ["A rotation speed controller lets one network run machines at exactly the speed you choose.", "", "&eChapter prize:&r precision mechanisms, brass casing and the Brass Age Cape."]
 	quest.7535D89CEF267AFC.quest_subtitle: "Controlled speed"
 	quest.7535D89CEF267AFC.title: "&aThe Brass Age"
-	quest.757A2973CCB44D1B.quest_desc: ["Reach &eSmithing 50&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 40: copying armour trim templates", "• 45: diamond Lattice (for the Compacted Diamond set)", "• 50: netherite gear (the smithing table upgrade)"]
+	quest.757A2973CCB44D1B.quest_desc: ["Reach &eSmithing 50&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 35: steam engines", "• 40: copying armour trim templates", "• 45: diamond Lattice (for the Compacted Diamond set)", "• 50: netherite gear (the smithing table upgrade)"]
 	quest.757A2973CCB44D1B.title: "&6Smithing 50"
 	quest.757CBF5DBDB08000.quest_desc: ["Sir Vyvin will never know.", "", "&eRewards:&r 1 quest point, 8,000 Smithing XP, coins."]
 	quest.757CBF5DBDB08000.quest_subtitle: "The Knight's Sword"

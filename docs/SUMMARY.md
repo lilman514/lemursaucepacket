@@ -30,6 +30,7 @@
 * [Enchanting](enchanting.md)
 * [Gear](gear.md)
 * [Capes](capes.md)
+* [Hiscores](hiscores.md)
 
 ## Reference
 

@@ -337,6 +337,113 @@
       "items": [
         "minecraft:ender_eye"
       ]
+    },
+    {
+      "skill": "mining",
+      "level": 15,
+      "what": "Mechanical drills",
+      "items": [
+        "create:mechanical_drill"
+      ]
+    },
+    {
+      "skill": "woodcutting",
+      "level": 15,
+      "what": "Mechanical saws",
+      "items": [
+        "create:mechanical_saw"
+      ]
+    },
+    {
+      "skill": "farming",
+      "level": 15,
+      "what": "Mechanical harvesters and ploughs",
+      "items": [
+        "create:mechanical_harvester",
+        "create:mechanical_plough"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 20,
+      "what": "Encased fans (bulk smoking, blasting and washing)",
+      "items": [
+        "create:encased_fan"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 30,
+      "what": "Mechanical crafters",
+      "items": [
+        "create:mechanical_crafter"
+      ]
+    },
+    {
+      "skill": "construction",
+      "level": 30,
+      "what": "Schematicannons",
+      "items": [
+        "create:schematicannon"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 35,
+      "what": "Steam engines",
+      "items": [
+        "create:steam_engine"
+      ]
+    },
+    {
+      "skill": "agility",
+      "level": 35,
+      "what": "Train stations and train controls",
+      "items": [
+        "create:track_station",
+        "create:controls"
+      ]
+    },
+    {
+      "skill": "enchanting",
+      "level": 35,
+      "what": "Blaze enchanters",
+      "items": [
+        "create_enchantment_industry:blaze_enchanter",
+        "create_enchantment_industry:classic_blaze_enchanter"
+      ]
+    },
+    {
+      "skill": "enchanting",
+      "level": 50,
+      "what": "Printers (they copy enchanted books)",
+      "items": [
+        "create_enchantment_industry:printer"
+      ]
+    },
+    {
+      "skill": "mining",
+      "level": 50,
+      "what": "Drill heads for the ore vein drilling machine",
+      "items": [
+        "createoreexcavation:drill"
+      ]
+    },
+    {
+      "skill": "mining",
+      "level": 65,
+      "what": "Diamond drill heads",
+      "items": [
+        "createoreexcavation:diamond_drill"
+      ]
+    },
+    {
+      "skill": "mining",
+      "level": 80,
+      "what": "Netherite drill heads",
+      "items": [
+        "createoreexcavation:netherite_drill"
+      ]
     }
   ],
   "recipes": [
@@ -524,6 +631,14 @@
       }
     ],
     "savePerLevel": 0.001,
+    "saveNever": [
+      "#c:storage_blocks",
+      "#minecraft:beacon_base_blocks",
+      "#c:ores",
+      "#minecraft:shulker_boxes",
+      "#minecraft:flower_pots",
+      "~.*(copper|coinstack|coin_stack|amethyst|gold|diamond|emerald|netherite|lapis|_ore$|raw_|gilded).*"
+    ],
     "palette": {
       "level": 99,
       "coins": 10000,

@@ -1,0 +1,9 @@
+{
+  "name": "lemursaucepacket-website",
+  "private": true,
+  "type": "module",
+  "description": "play.limas.ca: static pages, plus the hiscores' two functions in api/ (Neon via Vercel's integration).",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  }
+}

@@ -48,7 +48,7 @@ Your combat level is worked out the way RuneScape works it out, from your combat
 
 Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobblestone wall pays little, cut and polished stone more, Macaw's roofs, windows and furniture and Create Deco more again, and a lectern or a sea lantern most of all. The ground as you found it (dirt, sand, gravel, natural stone, logs) pays nothing, nor do machines, chests, redstone, rails, torches or scaffolding. A spot pays once, so pulling a block down and putting it back earns nothing; build somewhere new. The Builder's Wand's blocks pay too.
 
-- **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block the perk saved you is free: if it's broken later it drops nothing, so it can never be turned into more than you had.
+- **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block the perk saved you is free: if it's broken later it drops nothing, so it can never be turned into more than you had. It only ever saves building blocks: never storage blocks (iron, gold, diamond and the rest, modded ones too), beacon bases, ores, copper of any kind, coin stacks or amethyst, and never anything that holds items or has contents (chests, shulker boxes, backpacks, machines).
 - **Decorative blocks in bulk.** Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay ball, mossy and cracked kinds without a furnace, eight stairs where vanilla gives four, a lantern for less iron. The guide below lists them all.
 - **The Mason's Palette** comes with the Construction Cape at 99. Right-click the air to open it and choose a block, then right-click to place as many as you like: none are used up. Middle-click a block to choose that kind. It holds stone of every kind, deepslate, tuff, blackstone, sandstone, bricks, quartz, purpur, prismarine, concrete, terracotta, glass, Create's cut stone, Create Deco and the stone and metal blocks of Macaw's mods, and a few decorations (lanterns, chains, bars, end rods, lecterns).
 - **Why it can't be farmed.** What the palette places drops nothing when broken, and stays put: pistons and Create's contraptions won't move it, an explosion or a drill takes it without drops, and it rides an airship without losing that. It never places anything you'd otherwise grow or gather (no wood, wool, crops or ores), nothing that falls, holds items or weathers, nothing with redstone, and nothing Create can crush, mill or wash into something else. Lost it? Gerta the Mason in Lemurton makes another for 10,000 coins.
@@ -72,6 +72,7 @@ Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weak
 Like a RuneScape skill guide: the level each thing needs.
 
 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking pot) and a message says what it takes. The item's tooltip says it too. Create's crafting blueprint asks the same of whoever clicks it.
+- **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, Cooking for fans, Crafting for mechanical crafters, Construction for the schematicannon, Smithing for steam engines, Agility for trains and Enchanting for the blaze enchanter and the printer. The [Create machines](#create-machines) table lists them by level. Anyone can use a machine someone else made.
 - **Machines.** The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists or use a recipe that waits on a level, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself.
 - **Brewing stands and cooking pots** that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for won't go into a stand by hand.
 - **Enchantments** past their vanilla level need two skills: Enchanting to make them, and the gear's own skill to use them. Fishing for Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. See [Enchanting](enchanting.md).
@@ -194,6 +195,24 @@ Like a RuneScape skill guide: the level each thing needs.
 | Level | Lets you |
 |---|---|
 | 75 | Get wither skeleton skulls (the Wither) as drops |
+
+### Create machines
+
+| Level | Skill | Lets you make |
+|---|---|---|
+| 15 | Farming | Mechanical harvesters and ploughs |
+| 15 | Mining | Mechanical drills |
+| 15 | Woodcutting | Mechanical saws |
+| 20 | Cooking | Encased fans (bulk smoking, blasting and washing) |
+| 30 | Construction | Schematicannons |
+| 30 | Crafting | Mechanical crafters |
+| 35 | Agility | Train stations and train controls |
+| 35 | Enchanting | Blaze enchanters |
+| 35 | Smithing | Steam engines |
+| 50 | Enchanting | Printers (they copy enchanted books) |
+| 50 | Mining | Drill heads for the ore vein drilling machine |
+| 65 | Mining | Diamond drill heads |
+| 80 | Mining | Netherite drill heads |
 
 ### Construction
 

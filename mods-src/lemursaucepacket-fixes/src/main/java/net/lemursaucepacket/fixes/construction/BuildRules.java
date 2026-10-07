@@ -26,7 +26,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.FallingBlock;
@@ -56,12 +59,15 @@ public final class BuildRules {
     private static int paletteLevel = 99;
     private static long paletteCoins = 10000;
     private static final List<Predicate<Block>> NEVER = new ArrayList<>();
+    private static final List<Predicate<Block>> SAVE_NEVER = new ArrayList<>();
     private static final Set<ResourceLocation> ENTITIES_ALLOWED = new HashSet<>();
     private static final List<Predicate<Block>> PROCESSING_ALLOWED = new ArrayList<>();
     private static final List<Map.Entry<String, Map.Entry<ResourceLocation, List<Predicate<Block>>>>> CATEGORY_RULES = new ArrayList<>();
 
     private static final Map<Block, Integer> XP = Collections.synchronizedMap(new IdentityHashMap<>());
+    private static final Map<Block, Boolean> SAVES = Collections.synchronizedMap(new IdentityHashMap<>());
     private static volatile Set<Item> processable;
+    private static volatile Set<Item> packed;
     private static volatile List<Category> categories;
     private static volatile Map<Block, Category> paletteOf;
     private static Class<?> wrenchable;
@@ -78,6 +84,7 @@ public final class BuildRules {
             XP_RULES.add(new XpRule(r.get("xp").getAsInt(), matchers(r.getAsJsonArray("match"))));
         }
         savePerLevel = c.has("savePerLevel") ? c.get("savePerLevel").getAsDouble() : 0;
+        if (c.has("saveNever")) SAVE_NEVER.addAll(matchers(c.getAsJsonArray("saveNever")));
         JsonObject p = c.has("palette") ? c.getAsJsonObject("palette") : new JsonObject();
         if (p.has("level")) paletteLevel = p.get("level").getAsInt();
         if (p.has("coins")) paletteCoins = p.get("coins").getAsLong();
@@ -124,7 +131,9 @@ public final class BuildRules {
     /** After a datapack reload: tags and recipes may have changed. */
     static void invalidate() {
         XP.clear();
+        SAVES.clear();
         processable = null;
+        packed = null;
         categories = null;
         paletteOf = null;
     }
@@ -145,9 +154,14 @@ public final class BuildRules {
         return Math.max(0, level) * savePerLevel;
     }
 
-    /** Whether the saving perk may give this block back: a building block that pays XP, plain, and not grist for Create. */
+    /**
+     * Whether the saving perk may give this block back: a building block that pays XP, plain, not grist for Create, and
+     * worth no more as a material than as a block (skills/unlocks.mjs CONSTRUCTION_SAVE_NEVER, and nothing a recipe
+     * unpacks).
+     */
     public static boolean saveEligible(Block block) {
-        return xp(block) > 0 && plain(block, false) && !processable(block);
+        parse();
+        return SAVES.computeIfAbsent(block, b -> xp(b) > 0 && plain(b, false) && !any(SAVE_NEVER, b) && !processable(b) && !packed(b));
     }
 
     /**
@@ -193,6 +207,40 @@ public final class BuildRules {
             }
         }
         processable = out;
+        return out;
+    }
+
+    /**
+     * Whether a crafting recipe unpacks this block's item into four or more of something on its own: storage blocks,
+     * crates and coin stacks, modded ones too (tagged or not).
+     */
+    static boolean packed(Block block) {
+        Set<Item> set = packed;
+        if (set == null) set = rebuildPacked();
+        return set.contains(block.asItem());
+    }
+
+    private static synchronized Set<Item> rebuildPacked() {
+        if (packed != null) return packed;
+        Set<Item> out = new HashSet<>();
+        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+        if (server != null) {
+            for (RecipeHolder<CraftingRecipe> holder : server.getRecipeManager().getAllRecipesFor(RecipeType.CRAFTING)) {
+                try {
+                    List<Ingredient> slots = holder.value().getIngredients().stream().filter(i -> !i.isEmpty()).toList();
+                    if (slots.size() != 1) continue;
+                    ItemStack result = holder.value().getResultItem(server.registryAccess());
+                    if (result.getCount() < 4) continue;
+                    for (ItemStack s : slots.get(0).getItems()) {
+                        if (s.getItem() instanceof BlockItem && s.getItem() != result.getItem()) out.add(s.getItem());
+                    }
+                } catch (RuntimeException ex) {
+                    // a special recipe with nothing fixed to read
+                }
+            }
+        }
+        packed = out;
+        ConstructionModule.LOGGER.info("Construction: {} blocks a recipe unpacks into four or more are never saved", out.size());
         return out;
     }
 

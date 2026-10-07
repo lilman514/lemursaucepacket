@@ -1,0 +1,195 @@
+{
+  "skills": [
+    "attack",
+    "defence",
+    "strength",
+    "hitpoints",
+    "ranged",
+    "enchanting",
+    "cooking",
+    "woodcutting",
+    "fishing",
+    "crafting",
+    "smithing",
+    "mining",
+    "brewing",
+    "agility",
+    "farming",
+    "construction"
+  ],
+  "questPoints": [
+    {
+      "tag": "q_cook_done",
+      "points": 1
+    },
+    {
+      "tag": "q_sword_done",
+      "points": 1
+    },
+    {
+      "tag": "q_ds_done",
+      "points": 2
+    },
+    {
+      "tag": "q_ds2_done",
+      "points": 3
+    },
+    {
+      "tag": "q_pits_done",
+      "points": 2
+    },
+    {
+      "tag": "q_ash_done",
+      "points": 2
+    },
+    {
+      "tag": "q_inf_done",
+      "points": 3
+    }
+  ],
+  "activities": [
+    {
+      "id": "quest_points",
+      "name": "Quest points"
+    },
+    {
+      "id": "capes",
+      "name": "Capes earned"
+    },
+    {
+      "id": "collection",
+      "name": "Collection log"
+    },
+    {
+      "id": "quests",
+      "name": "Quest book quests"
+    },
+    {
+      "id": "raids",
+      "name": "Raids won",
+      "stat": "minecraft:raid_win"
+    },
+    {
+      "id": "monsters",
+      "name": "Monsters slain",
+      "stat": "minecraft:mob_kills"
+    },
+    {
+      "id": "players",
+      "name": "Players slain",
+      "stat": "minecraft:player_kills"
+    },
+    {
+      "id": "hours",
+      "name": "Hours played",
+      "stat": "minecraft:play_time",
+      "divide": 72000
+    }
+  ],
+  "bosses": [
+    {
+      "id": "elvarg",
+      "name": "Elvarg",
+      "counter": true
+    },
+    {
+      "id": "fight_pits",
+      "name": "Kiln-Tok-Jad",
+      "counter": true
+    },
+    {
+      "id": "inferno",
+      "name": "Kiln-Kal-Zuk",
+      "counter": true
+    },
+    {
+      "id": "ender_dragon",
+      "name": "Ender Dragon",
+      "kills": [
+        "minecraft:ender_dragon"
+      ]
+    },
+    {
+      "id": "wither",
+      "name": "Wither",
+      "kills": [
+        "minecraft:wither"
+      ]
+    },
+    {
+      "id": "warden",
+      "name": "Warden",
+      "kills": [
+        "minecraft:warden"
+      ]
+    },
+    {
+      "id": "elder_guardian",
+      "name": "Elder Guardian",
+      "kills": [
+        "minecraft:elder_guardian"
+      ]
+    },
+    {
+      "id": "invoker",
+      "name": "Invoker",
+      "kills": [
+        "illagerinvasion:invoker"
+      ]
+    },
+    {
+      "id": "dragons",
+      "name": "Ice and Fire dragons",
+      "kills": [
+        "iceandfire:fire_dragon",
+        "iceandfire:ice_dragon",
+        "iceandfire:lightning_dragon"
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "relics",
+      "name": "Relics",
+      "match": [
+        "#relics:relic"
+      ]
+    },
+    {
+      "id": "music_discs",
+      "name": "Music discs",
+      "match": [
+        "~^minecraft:music_disc_.*"
+      ]
+    },
+    {
+      "id": "trims",
+      "name": "Armour trims",
+      "match": [
+        "~^minecraft:.*_armor_trim_smithing_template$"
+      ]
+    },
+    {
+      "id": "sherds",
+      "name": "Pottery sherds",
+      "match": [
+        "~^minecraft:.*_pottery_sherd$"
+      ]
+    },
+    {
+      "id": "heads",
+      "name": "Mob heads",
+      "match": [
+        "minecraft:skeleton_skull",
+        "minecraft:wither_skeleton_skull",
+        "minecraft:zombie_head",
+        "minecraft:creeper_head",
+        "minecraft:piglin_head",
+        "minecraft:dragon_head"
+      ]
+    }
+  ],
+  "recordEvery": 300,
+  "uploadEvery": 600,
+  "uploadUrl": "https://play.limas.ca/api/hiscores-ingest"
+}

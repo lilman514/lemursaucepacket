@@ -298,7 +298,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "311a2cf46d2d3e49c9021ca6c5318277f5fc1aab924887c0c3e842243d83dabe"
+hash = "c32d9385a486f93ef4404629595c35f1e7ee045121e900455ad175e18dce9abf"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -345,6 +345,10 @@ file = "config/lemursaucepacket/gear.json"
 hash = "b80b597ed27966bfba1ba10411dd197871f72890389a6168172206365599d768"
 
 [[files]]
+file = "config/lemursaucepacket/hiscores.json"
+hash = "d6ce148c777c5178f0f336446b90ede04739394e12943c5879952511f0adafb2"
+
+[[files]]
 file = "config/lemursaucepacket/hub_layout.json"
 hash = "f63c952e8549504e9b45d1eb8badfe53bd8dde587923fd22372793ab0903087c"
 
@@ -362,7 +366,7 @@ hash = "9c5c291ecd48928b553c59bd99bcb973a1725ef79443e26f1c98a1e91b776a9c"
 
 [[files]]
 file = "config/lemursaucepacket/skill_gates.json"
-hash = "c9742a0d15b476dedd9005c28d1690e8b6397039e031603442935c0ff24a477a"
+hash = "9b15e70790635338e334c8d1ade35236b81cd9e09a9256a2c8c4a9971aed87c6"
 
 [[files]]
 file = "config/lithium.properties"
@@ -682,7 +686,7 @@ hash = "c66c6014ba6485b07fe44fdab379285249465f0d314f7d7871b7c4ea7a7cd19b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/esc-menu.json"
-hash = "9881bd65ea78125b056ec1f0a0a9774f7466c28526cfa63ddf6314ab92fb97a4"
+hash = "1461a968528d61da0694904efb35ccd13b544772852b3a2928e5e7cfd5e13785"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
@@ -699,6 +703,10 @@ hash = "8a9403f5e2be396bf5b373fa7db9b4c63102e226420ca49cc2363a94d22c3438"
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/getting-started.json"
 hash = "c18a9ffb7732d1a61a29f170362f03cbf1120daf87f029475b335828ea879fe3"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/hiscores.json"
+hash = "b478b1a4b0cf432ecf230f67efcc5e3fb1d9e3ddf6985c4b283cd0667f9bb9fd"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/keybinds.json"
@@ -718,7 +726,7 @@ hash = "73b648c5070a9dc4f025f3d4f8cbbeb29f608fe0a213d6e36121a78c33160126"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
-hash = "94dd27fe3bf85e08148917d98a345bce4b5aa4cb948aa7e78f59e832a3bdc9af"
+hash = "14d75024a0f769912aab091c118835aa43e019732902eefd90a729fae2955161"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
@@ -726,7 +734,7 @@ hash = "51841a4f2dc7b7192828d83e2c9eea30be8258ab7563b5ca38bba2bf959f8140"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
-hash = "1ed71ecaea1f249c475633fb3842cee9878d657a6fd0a4be6e1a79d9ed26c261"
+hash = "7c9419dcafdb4a9b933c95fe92883d518c762e97e69d29aca6eaedff8c0a96db"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/waystones.json"
@@ -2590,11 +2598,11 @@ hash = "5da7a1dc73ab60987415492d9d7036267409c6bc4a076a68f736389f3f54f139"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/fight_pits.json"
-hash = "8e0616c24c84b8e94fec4c91513733ecc538e5d6aaf44cfe50f6907595c09102"
+hash = "052efb3f6b4a0857bb536ede8469568e6436e03a066d18f5142e2b0339f766e4"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/inferno.json"
-hash = "01ae86777379866cb51c29406f9319b82f8bcdb065cab8462db4f5309035a166"
+hash = "3b5d13ce3d9780fe6fb474c01af5834ec1194b24d9d939f104c0831696bda607"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/baker.json"
@@ -4175,8 +4183,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.13.0.jar"
-hash = "462d16524cb7a5e5c9b6cf9023c4c954b579a58aef62bf41474c05066d6e27cb"
+file = "mods/lsp_fixes-1.14.0.jar"
+hash = "cd6e89a40de2889d50d383ceea440092d30a9157caa4e0044990011dfa51fd3d"
 
 [[files]]
 file = "mods/lsp_instances-1.1.0.jar"

@@ -28,7 +28,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
 import {
-  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, PALETTE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL,
+  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, PALETTE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL,
   QUEST_REQUIREMENTS, RANGED
 } from './unlocks.mjs'
 
@@ -311,6 +311,7 @@ write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'),
   construction: {
     xp: CONSTRUCTION_XP.map(({ xp, what, match }) => ({ xp, what, match })),
     savePerLevel: CONSTRUCTION_SAVE_PER_LEVEL,
+    saveNever: CONSTRUCTION_SAVE_NEVER,
     palette: PALETTE
   },
   brew: BREW.map(({ level, item, what }) => ({ level, item, what })),
@@ -348,7 +349,7 @@ function writeSkillGuide() {
   }
   const name = (skill) => (skill === 'combat' ? 'Combat' : skill.split('|').map((s) => s[0].toUpperCase() + s.slice(1)).join(' or '))
   const table = (title, head, rows) => [`### ${title}`, '', `| Level | ${head} |`, '|---|---|', ...rows.sort((x, y) => x[0] - y[0]).map(([l, w]) => `| ${l} | ${w} |`), '']
-  const made = (skill) => CRAFT.filter((c) => c.skill === skill).map((c) => [c.level, c.what])
+  const made = (skill) => CRAFT.filter((c) => c.skill === skill && !c.machine).map((c) => [c.level, c.what])
   const lines = [START, '']
   lines.push(...table('Crafting', 'Lets you make', made('crafting')))
   lines.push(...table('Smithing', 'Lets you make', made('smithing')))
@@ -359,6 +360,9 @@ function writeSkillGuide() {
   lines.push(...table('Fishing', 'Lets you', [[FISHING_TREASURE, 'Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish)']]))
   lines.push(...table('Ranged', 'Lets you use', RANGED.map((r) => [r.level, r.what])))
   lines.push(...table('Combat level', 'Lets you', DROPS.filter((d) => d.skill === 'combat').map((d) => [d.level, `Get ${d.what.charAt(0).toLowerCase() + d.what.slice(1)} as drops`])))
+  // Create's machines: every skill's milestones in one table, by level.
+  lines.push('### Create machines', '', '| Level | Skill | Lets you make |', '|---|---|---|',
+    ...CRAFT.filter((c) => c.machine).sort((x, y) => x.level - y.level || x.skill.localeCompare(y.skill)).map((c) => `| ${c.level} | ${name(c.skill)} | ${c.what} |`), '')
   lines.push(...table('Construction', 'Lets you make', [
     ...CONSTRUCTION_RECIPES.map((r) => [r.level, r.what]),
     [PALETTE.level, "Use the Mason's Palette: as many of one decorative block as you like (see below)"]

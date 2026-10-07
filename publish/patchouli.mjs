@@ -221,7 +221,7 @@ write(path.join(dataDir, 'book.json'), {
 })
 write(path.join(assetDir, 'categories', 'wiki.json'), { name: 'The wiki', description: 'The pages of the LemurSaucePacket wiki, in order.', icon: 'minecraft:writable_book', sortnum: 0 })
 
-const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', lemurton: 'minecraft:bell', elvarg: 'iceandfire:dragon_skull_fire', 'fight-pits': 'minecraft:magma_cream', economy: 'lemursaucepacket:gold_coins', lifesteal: 'minecraft:red_dye', enchanting: 'minecraft:enchanting_table', 'where-to-find': 'minecraft:spyglass', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', keybinds: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
+const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', lemurton: 'minecraft:bell', elvarg: 'iceandfire:dragon_skull_fire', 'fight-pits': 'minecraft:magma_cream', economy: 'lemursaucepacket:gold_coins', lifesteal: 'minecraft:red_dye', enchanting: 'minecraft:enchanting_table', 'where-to-find': 'minecraft:spyglass', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', hiscores: 'minecraft:gold_block', keybinds: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
 let pageCount = 0
 for (const [index, page] of pagesInOrder.entries()) {
   const slug = page.file.replace(/\.md$/, '')

@@ -52,7 +52,23 @@ export const CRAFT = [
   { skill: 'cooking', level: 45, what: 'Golden apples', items: ['minecraft:golden_apple'] },
   { skill: 'cooking', level: 50, what: "Farmer's Delight feasts", items: fd('roast_chicken_block', 'stuffed_pumpkin_block', 'shepherds_pie_block', 'honey_glazed_ham_block', 'rice_roll_medley_block') },
   // Brewing's one crafted thing: the way to the End.
-  { skill: 'brewing', level: 55, what: 'Eyes of ender', items: ['minecraft:ender_eye'] }
+  { skill: 'brewing', level: 55, what: 'Eyes of ender', items: ['minecraft:ender_eye'] },
+  // Create's machines (machine: true), each waiting on the skill it takes over: a milestone or two per skill on the way
+  // to automating it. The press, mixer, blaze burner and deployer stay open (The Knight's Sword needs brass and a
+  // precision mechanism), and so does anything only mechanical crafters make.
+  { skill: 'mining', level: 15, machine: true, what: 'Mechanical drills', items: ['create:mechanical_drill'] },
+  { skill: 'woodcutting', level: 15, machine: true, what: 'Mechanical saws', items: ['create:mechanical_saw'] },
+  { skill: 'farming', level: 15, machine: true, what: 'Mechanical harvesters and ploughs', items: ['create:mechanical_harvester', 'create:mechanical_plough'] },
+  { skill: 'cooking', level: 20, machine: true, what: 'Encased fans (bulk smoking, blasting and washing)', items: ['create:encased_fan'] },
+  { skill: 'crafting', level: 30, machine: true, what: 'Mechanical crafters', items: ['create:mechanical_crafter'] },
+  { skill: 'construction', level: 30, machine: true, what: 'Schematicannons', items: ['create:schematicannon'] },
+  { skill: 'smithing', level: 35, machine: true, what: 'Steam engines', items: ['create:steam_engine'] },
+  { skill: 'agility', level: 35, machine: true, what: 'Train stations and train controls', items: ['create:track_station', 'create:controls'] },
+  { skill: 'enchanting', level: 35, machine: true, what: 'Blaze enchanters', items: ['create_enchantment_industry:blaze_enchanter', 'create_enchantment_industry:classic_blaze_enchanter'] },
+  { skill: 'enchanting', level: 50, machine: true, what: 'Printers (they copy enchanted books)', items: ['create_enchantment_industry:printer'] },
+  { skill: 'mining', level: 50, machine: true, what: 'Drill heads for the ore vein drilling machine', items: ['createoreexcavation:drill'] },
+  { skill: 'mining', level: 65, machine: true, what: 'Diamond drill heads', items: ['createoreexcavation:diamond_drill'] },
+  { skill: 'mining', level: 80, machine: true, what: 'Netherite drill heads', items: ['createoreexcavation:netherite_drill'] }
 ]
 
 /** Brewing: what each ingredient brews and the level it needs (manual or by hopper: a stand brews at the level of whoever last used it). */
@@ -227,6 +243,21 @@ export const CONSTRUCTION_XP = [
 
 /** The saving perk: each Construction level adds this chance that a block you place doesn't get used up (9.9% at 99). */
 export const CONSTRUCTION_SAVE_PER_LEVEL = 0.001
+
+/**
+ * What the saving perk never gives back, even where it pays XP: anything worth more as a material than as a block.
+ * Storage blocks and beacon bases, ores, the whole copper family (an axe scrapes the wax off waxed copper, which would
+ * turn a saved block back into a real one), coin stacks, the precious metals and amethyst, and flower pots (a plant in
+ * one makes it another block). lsp_fixes also leaves out anything a crafting recipe unpacks into four or more of
+ * something (modded storage blocks and crates, untagged ones too), and as before anything with a block entity or
+ * contents (chests, shulker boxes, backpacks, machines, lecterns), anything that falls or weathers, anything Create's
+ * wrench picks up, and what Create grinds into something. It gives back only a plain block: a stack holding anything
+ * (contents, a block entity's data) is never copied.
+ */
+export const CONSTRUCTION_SAVE_NEVER = [
+  '#c:storage_blocks', '#minecraft:beacon_base_blocks', '#c:ores', '#minecraft:shulker_boxes', '#minecraft:flower_pots',
+  '~.*(copper|coinstack|coin_stack|amethyst|gold|diamond|emerald|netherite|lapis|_ore$|raw_|gilded).*'
+]
 
 /**
  * Alternate recipes Construction unlocks: decorative blocks in bulk, without a furnace or a stonecutter. Each has two
