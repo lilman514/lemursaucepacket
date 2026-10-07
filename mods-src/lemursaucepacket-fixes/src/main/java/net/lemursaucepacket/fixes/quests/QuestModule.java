@@ -51,6 +51,7 @@ public final class QuestModule {
         });
         NeoForge.EVENT_BUS.addListener((LivingEquipmentChangeEvent e) -> DragonGear.onEquip(e));
         NeoForge.EVENT_BUS.addListener((LivingIncomingDamageEvent e) -> DragonGear.onDamage(e));
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.tick.PlayerTickEvent.Post e) -> DragonGear.onPlayerTick(e));
         NeoForge.EVENT_BUS.addListener((ItemTooltipEvent e) -> DragonGear.onTooltip(e));
     }
 

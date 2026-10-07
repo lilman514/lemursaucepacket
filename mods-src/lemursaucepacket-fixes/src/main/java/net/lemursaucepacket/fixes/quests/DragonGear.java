@@ -1,5 +1,8 @@
 package net.lemursaucepacket.fixes.quests;
 
+import java.util.Map;
+import java.util.WeakHashMap;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -9,19 +12,22 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 /**
  * What Dragon Slayer I changes about gear, RuneScape style. Dragonscale and dragonsteel armour (the
  * {@code lemursaucepacket:dragonslayer_armor} item tag) can only be worn once you have slain Elvarg and finished the
  * quest, the way the rune platebody waits on Dragon Slayer. And the Anti-dragon Shield (the mayor gives one) takes most of
- * the sting out of dragon breath while you hold it.
+ * the sting out of dragon breath while you hold it, and keeps its fire from catching on you.
  */
 public final class DragonGear {
     public static final String DONE = "q_ds_done";
@@ -30,6 +36,8 @@ public final class DragonGear {
     private static final ResourceKey<DamageType>[] BREATH = breath();
     /** Share of dragon breath damage the shield lets through. */
     private static final float SHIELD_PASSES = 0.2f;
+    /** When each shield holder last took a dragon's breath (game time), so the fire it sets can be put out. */
+    private static final Map<ServerPlayer, Long> SHIELDED = new WeakHashMap<>();
 
     @SuppressWarnings("unchecked")
     private static ResourceKey<DamageType>[] breath() {
@@ -55,22 +63,37 @@ public final class DragonGear {
         return QuestSteps.isQuestItem(stack, SHIELD);
     }
 
-    static void onDamage(LivingIncomingDamageEvent event) {
-        if (!(event.getEntity() instanceof ServerPlayer player)) return;
-        if (!isShield(player.getMainHandItem()) && !isShield(player.getOffhandItem())) return;
+    static boolean holdsShield(Player player) {
+        return isShield(player.getMainHandItem()) || isShield(player.getOffhandItem());
+    }
+
+    static boolean isBreath(DamageSource source) {
         for (ResourceKey<DamageType> key : BREATH) {
-            if (event.getSource().is(key)) {
-                event.setAmount(event.getAmount() * SHIELD_PASSES);
-                return;
-            }
+            if (source.is(key)) return true;
         }
+        return false;
+    }
+
+    static void onDamage(LivingIncomingDamageEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player) || !isBreath(event.getSource()) || !holdsShield(player)) return;
+        event.setAmount(event.getAmount() * SHIELD_PASSES);
+        SHIELDED.put(player, player.level().getGameTime());
+    }
+
+    /** Nor does a dragon's fire catch on whoever holds the shield: the burning its breath leaves (25 s) is put out. */
+    static void onPlayerTick(PlayerTickEvent.Post event) {
+        if (!(event.getEntity() instanceof ServerPlayer player) || !player.isOnFire()) return;
+        Long at = SHIELDED.get(player);
+        if (at == null) return;
+        if (player.level().getGameTime() - at > 40) SHIELDED.remove(player);
+        else if (holdsShield(player)) player.clearFire();
     }
 
     /** Client and server: the requirement on the armour's tooltip. */
     static void onTooltip(ItemTooltipEvent event) {
         ItemStack stack = event.getItemStack();
         if (stack.is(ARMOR)) event.getToolTip().add(Component.literal("Requires: Dragon Slayer I").withStyle(ChatFormatting.DARK_RED));
-        else if (isShield(stack)) event.getToolTip().add(Component.literal("Blocks most of a dragon's breath while held.").withStyle(ChatFormatting.GOLD));
+        else if (isShield(stack)) event.getToolTip().add(Component.literal("Blocks most of a dragon's breath, and its fire, while held.").withStyle(ChatFormatting.GOLD));
     }
 
     private DragonGear() {

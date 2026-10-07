@@ -690,7 +690,7 @@ hash = "48599e782c872f7ffb9a58ba1814116b491f36a88a2a30adea31306916961a7c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
-hash = "a56207e2686be3e31e2a5bded558bd4616d34075e73afa29f597628a4b822dd1"
+hash = "4cb0b08a346e348aeb87bb82133e7fb8c71cd2987e43a2661fcf147eaff3b6d1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
@@ -3532,8 +3532,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.7.0.jar"
-hash = "ffb017affb9234c369e73a05343a73f72654d70054a4e8d85c5901410aef8a48"
+file = "mods/lsp_fixes-1.7.1.jar"
+hash = "12bf4879602f423776fc7010186c2db5556d0c30d314a40d7647422c5cfddfa9"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"

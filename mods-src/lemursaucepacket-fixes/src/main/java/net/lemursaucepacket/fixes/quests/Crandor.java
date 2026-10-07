@@ -23,6 +23,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -162,15 +163,34 @@ public final class Crandor {
 
     /** Summons Elvarg (admins: /lsp crandor spawn). */
     static void summon(MinecraftServer server, int x, int y, int z, int home) {
-        String nbt = "{AgeTicks:" + ELVARG_AGE_TICKS + ",AgingDisabled:1b,Variant:\"red\",Gender:0b,CustomName:'{\"text\":\"Elvarg\",\"color\":\"red\"}',CustomNameVisible:1b,"
-                + "PersistenceRequired:1b,Tags:[\"" + ELVARG_TAG + "\"],HasHomePosition:1b,HomeAreaX:" + x + ",HomeAreaY:" + home + ",HomeAreaZ:" + z + "}";
-        server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput().withPermission(4).withLevel(server.overworld()),
-                "summon iceandfire:fire_dragon " + x + " " + y + " " + z + " " + nbt);
-        // The summon applies her age (and so her max health) after the health is set: top her up.
         ServerLevel level = server.overworld();
-        for (Entity e : level.getEntities((Entity) null, new AABB(x - 8, y - 8, z - 8, x + 8, y + 8, z + 8), e -> e.getTags().contains(ELVARG_TAG))) {
-            if (e instanceof LivingEntity living) living.setHealth(living.getMaxHealth());
+        CompoundTag nbt = new CompoundTag();
+        nbt.putString("id", "iceandfire:fire_dragon");
+        nbt.putInt("AgeTicks", ELVARG_AGE_TICKS);
+        nbt.putBoolean("AgingDisabled", true);
+        nbt.putString("Variant", "red");
+        nbt.putBoolean("Gender", false);
+        nbt.putBoolean("PersistenceRequired", true);
+        nbt.putBoolean("HasHomePosition", true);
+        nbt.putInt("HomeAreaX", x);
+        nbt.putInt("HomeAreaY", home);
+        nbt.putInt("HomeAreaZ", z);
+        // Made here rather than with /summon, so she can be topped up on the spot: looking for a summoned Elvarg afterwards
+        // could miss her and leave her on 20 health (and inside a command, /lsp crandor spawn, a /summon waits until it ends).
+        Entity dragon = EntityType.loadEntityRecursive(nbt, level, e -> {
+            e.moveTo(x + 0.5, y, z + 0.5, level.random.nextFloat() * 360f, 0f);
+            return e;
+        });
+        if (dragon == null) {
+            QuestModule.LOGGER.warn("Couldn't make Elvarg: is Ice and Fire installed?");
+            return;
         }
+        dragon.setCustomName(Component.literal("Elvarg").withStyle(ChatFormatting.RED));
+        dragon.setCustomNameVisible(true);
+        dragon.addTag(ELVARG_TAG);
+        // Her age (and so her max health) comes in as she loads, after her health was set: top her up.
+        if (dragon instanceof LivingEntity living) living.setHealth(living.getMaxHealth());
+        if (!level.tryAddFreshEntityWithPassengers(dragon)) QuestModule.LOGGER.warn("Elvarg couldn't be added at {} {} {}", x, y, z);
     }
 
     @Nullable
