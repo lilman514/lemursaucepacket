@@ -1,0 +1,471 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "fight_pits"
+	group: "1F2E0B7F304AB615"
+	icon: {
+		id: "minecraft:magma_cream"
+	}
+	id: "120668064D22C33B"
+	images: [
+		{
+			height: 2.9872340425531916d
+			id: "09EDDA0656332902"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 7.4297872340425535d
+			x: 2.7d
+			y: -2.2d
+		}
+	]
+	order_index: 4
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:magma_cream"
+			}
+			id: "5025E32F75521917"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "0D303BE6020027C3"
+					type: "xp"
+					xp: 150
+				}
+				{
+					auto: "enabled"
+					id: "4F6A1F1E38C96C6E"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "011E0A100FAC6DDE"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:compass"
+					}
+					id: "25664D4940D74EE6"
+					stage: "q_pits_started"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 2.1d
+		}
+		{
+			dependencies: ["5025E32F75521917"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:gilded_blackstone"
+			}
+			id: "278B70EDDC3E7A67"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "3FA34A5D58F1DB10"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "6C202D4E33899FE3"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "550785151D0FDC6D"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:gilded_blackstone"
+					}
+					id: "51D20A76FC247D26"
+					stage: "q_pits_elder"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 2.1d
+		}
+		{
+			dependencies: ["278B70EDDC3E7A67"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:magma_cream"
+			}
+			id: "3E9479708A0557AB"
+			optional: true
+			rewards: [
+				{
+					id: "243C716A3ED92D06"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "57900C0961D6B96B"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "1C69D2D2554F0AB3"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "76C67C862F838DFD"
+					item: {
+						count: 1
+						id: "minecraft:magma_cream"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4F0B1D84D73681D8"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "3F67F6F66099676B"
+					item: {
+						count: 1
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+			]
+			x: 4.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["278B70EDDC3E7A67"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:obsidian"
+			}
+			id: "2ABC465DFAF8148D"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "55E73331FC833EA9"
+					type: "xp"
+					xp: 60
+				}
+				{
+					auto: "enabled"
+					id: "07AADE93E2A6F452"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "71ACA5141F4E77FF"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:obsidian"
+					}
+					id: "4B72F6A67ED1A0E4"
+					stage: "q_pits_offering"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 2.1d
+		}
+		{
+			dependencies: ["278B70EDDC3E7A67"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:blaze_rod"
+			}
+			id: "009DC4D468479018"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "6589A010506E9BFF"
+					type: "xp"
+					xp: 400
+				}
+				{
+					auto: "enabled"
+					id: "4B112E6C49E6C19C"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "337D9204F8BD76CE"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "tag {p} add q_pits_trial"
+					elevate_perms: true
+					id: "2AE50DAC76E1FDD6"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:blaze"
+					id: "16E733DCA3B459A0"
+					type: "kill"
+					value: 15L
+				}
+				{
+					entity: "minecraft:magma_cube"
+					id: "7DBF6BBC25A9E6F3"
+					type: "kill"
+					value: 15L
+				}
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "689E4AECB2DEEB62"
+					type: "kill"
+					value: 8L
+				}
+			]
+			x: 4.6d
+			y: 3.7d
+		}
+		{
+			dependencies: ["2ABC465DFAF8148D", "009DC4D468479018"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:golden_axe"
+			}
+			id: "035FAA74FDEDB2D7"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "58C5C0BB6F52A4CD"
+					type: "xp"
+					xp: 150
+				}
+				{
+					auto: "enabled"
+					id: "1B16A9756EC4EF56"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "48889A9DDDCEDA45"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:golden_axe"
+					}
+					id: "583945A538DDA755"
+					stage: "q_pits_allowed"
+					type: "gamestage"
+				}
+			]
+			x: 6.9d
+			y: 2.9d
+		}
+		{
+			dependencies: ["035FAA74FDEDB2D7"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:magma_block"
+			}
+			id: "18FDC07B9A38D5E2"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "068FC9F349C50B89"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "7D45B950E37FADA3"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 5120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "6840C4FC02CF57F2"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:magma_block"
+					}
+					id: "033AA0476E7F9DA7"
+					stage: "q_pits_fire"
+					type: "gamestage"
+				}
+			]
+			x: 9.2d
+			y: 2.9d
+		}
+		{
+			dependencies: ["18FDC07B9A38D5E2"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:magma_cream"
+			}
+			id: "7EE3C57F25469E1F"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "194D87CDAED55821"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "5CC1C5F4D16DA75E"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 35120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "605E4AEA296FE63D"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add attack xp 25000"
+					elevate_perms: true
+					id: "47C8250D232442C1"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add strength xp 25000"
+					elevate_perms: true
+					id: "77AF61CC336AD31C"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add defence xp 25000"
+					elevate_perms: true
+					id: "658731D74AF0A448"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add hitpoints xp 25000"
+					elevate_perms: true
+					id: "716DE4DC8A520296"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:magma_cream"
+					}
+					id: "0107505D942E21FE"
+					stage: "q_pits_done"
+					type: "gamestage"
+				}
+			]
+			x: 11.5d
+			y: 2.9d
+		}
+	]
+}

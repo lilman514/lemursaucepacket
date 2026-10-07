@@ -35,6 +35,7 @@ URL (pages keep their file names: `docs/quests.md` is `<gitbook>/quests`).
   the launcher's Fancy shaders on their top preset and 32 chunks of render distance), then converted with
   `node website/tools/shots.mjs <folder of shot_*.png>`. The same script writes the wiki's copies to `docs/images`.
 - `node website/tools/gallery.mjs` rewrites `gallery.html` from its list.
+- `node website/tools/capes.mjs <folder>` makes the wiki's cape pictures from a photo session's back views: a sheet per kind of cape and the animated capes in motion (`docs/images/capes_*.jpg`, `capes_animated.webp`); then `node capes/build.mjs` puts them on the Capes page.
 
 ## Working on it
 

@@ -18,8 +18,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 
 /**
- * {@code /instance leave} for anyone in a fight; {@code /instances list|start|end|open|keeper} for admins (and tests:
- * {@code open} shows a player an event's window as if they'd spoken to its NPC, minus the NPC).
+ * {@code /instance leave} for anyone in a fight; {@code /instances list|start|end|wave|open|keeper} for admins (and tests:
+ * {@code wave} jumps a wave fight to a wave, {@code open} shows a player an event's window as if they'd spoken to its
+ * NPC, minus the NPC).
  */
 final class InstanceCommands {
     static void register(CommandDispatcher<CommandSourceStack> d) {
@@ -68,6 +69,19 @@ final class InstanceCommands {
                     InstanceManager.end(c.getSource().getServer(), s, "An admin ended the fight.");
                     return 1;
                 })))
+                // Run 0: the run the one giving the command is fighting in.
+                .then(Commands.literal("wave").then(Commands.argument("run", IntegerArgumentType.integer(0)).then(Commands.argument("wave", IntegerArgumentType.integer(1)).executes(c -> {
+                    int run = IntegerArgumentType.getInteger(c, "run");
+                    var s = run == 0 ? (c.getSource().getPlayer() == null ? null : InstanceManager.sessionInside(c.getSource().getPlayer().getUUID()).orElse(null))
+                            : InstanceManager.sessions().get(run);
+                    int wave = IntegerArgumentType.getInteger(c, "wave");
+                    if (s == null || !InstanceManager.skipTo(c.getSource().getServer(), s, wave)) {
+                        c.getSource().sendFailure(Component.literal("No such run, or it isn't a wave fight with that wave."));
+                        return 0;
+                    }
+                    c.getSource().sendSuccess(() -> Component.literal("Run " + s.id + " goes on to wave " + wave + "."), true);
+                    return 1;
+                }))))
                 .then(Commands.literal("open").then(Commands.argument("event", ResourceLocationArgument.id())
                         .suggests((c, b) -> SharedSuggestionProvider.suggestResource(EventLoader.all().keySet(), b))
                         .then(Commands.argument("player", EntityArgument.player()).executes(c -> {

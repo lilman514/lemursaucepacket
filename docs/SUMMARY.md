@@ -21,6 +21,7 @@
 
 * [Quests](quests.md)
 * [Elvarg's Lair](elvarg.md)
+* [The Fight Pits and the Inferno](fight-pits.md)
 * [Where to find things](where-to-find.md)
 
 ## Your character

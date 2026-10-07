@@ -759,6 +759,256 @@ export default {
       ]
     },
 
+    {
+      key: 'fight_pits',
+      group: 'main_quests',
+      title: 'The Fight Pits',
+      subtitle: 'Main quest · Master · 2 quest points',
+      about: "The Kilnfolk, ashen piglins who left the Nether for the fire mountains, test their champions in the Fight Pits: thirty waves of pit beasts, and Kiln-Tok-Jad at the end. They've heard of Elvarg's fall.",
+      unlocks: 'the Fire Cape (+12% critical damage and Fire Resistance), Attack, Strength, Defence and Hitpoints XP, and a fortune.',
+      icon: 'minecraft:magma_cream',
+      quests: [
+        {
+          key: 'start',
+          title: '&6The Fight Pits',
+          subtitle: "Started by the Champions' Guild",
+          shape: 'gear',
+          size: 1.6,
+          invisible: true,
+          icon: 'minecraft:magma_cream',
+          tier: 3,
+          auto: true,
+          desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew Elvarg. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", '', tip('Kiln Hollow has a waystone: touch it so you can come straight back.')],
+          tasks: [{ stage: 'q_pits_started', title: 'Take the Kilnfolk Pass from Greaves', icon: 'minecraft:compass' }]
+        },
+        {
+          key: 'elder',
+          title: 'Elder Ashka',
+          after: ['start'],
+          hidden: true,
+          tier: 2,
+          auto: true,
+          icon: 'minecraft:gilded_blackstone',
+          desc: ['Follow the pass to Kiln Hollow and speak to Elder Ashka, on her seat of blackstone and gold. Outsiders only fight in the pits if one of the Kilnfolk vouches for them.'],
+          tasks: [{ stage: 'q_pits_elder', title: 'Speak to Elder Ashka', icon: 'minecraft:gilded_blackstone' }]
+        },
+        {
+          key: 'offering_items',
+          title: 'The Offering',
+          after: ['elder'],
+          hidden: true,
+          optional: true,
+          tier: 2,
+          desc: ['The Kiln takes an offering from every outsider: 8 magma cream, 4 blaze rods and 16 obsidian.', '', tip('Magma cream drops from magma cubes, or is brewed from slime and blaze powder.')],
+          tasks: [{ item: 'minecraft:magma_cream', count: 8 }, { item: 'minecraft:blaze_rod', count: 4 }, { item: 'minecraft:obsidian', count: 16 }]
+        },
+        {
+          key: 'offering',
+          title: 'An Offering for the Kiln',
+          after: ['elder'],
+          hidden: true,
+          tier: 2,
+          auto: true,
+          icon: 'minecraft:obsidian',
+          desc: ['Give Elder Ashka the offering.'],
+          tasks: [{ stage: 'q_pits_offering', title: 'Give the Elder the offering', icon: 'minecraft:obsidian' }]
+        },
+        {
+          key: 'trial',
+          title: 'The Ashen Trial',
+          after: ['elder'],
+          hidden: true,
+          tier: 4,
+          auto: true,
+          icon: 'minecraft:blaze_rod',
+          desc: ["The Kilnfolk's young prove themselves on the fire beasts of the Nether. So will you."],
+          tasks: [{ kill: 'minecraft:blaze', count: 15 }, { kill: 'minecraft:magma_cube', count: 15 }, { kill: 'minecraft:wither_skeleton', count: 8 }],
+          reward: { commands: ['tag {p} add q_pits_trial'] }
+        },
+        {
+          key: 'allowed',
+          title: 'Vouched For',
+          after: ['offering', 'trial'],
+          hidden: true,
+          tier: 3,
+          auto: true,
+          icon: 'minecraft:golden_axe',
+          desc: ['With the offering given and the trial passed, ask Elder Ashka to vouch for you. She also wants you strong enough: &eDefence 50, Hitpoints 50, and Attack or Ranged 50&r.'],
+          tasks: [{ stage: 'q_pits_allowed', title: 'Have Elder Ashka vouch for you', icon: 'minecraft:golden_axe' }]
+        },
+        {
+          key: 'pits',
+          title: '&cThe Fight Pits',
+          after: ['allowed'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.5,
+          tier: 5,
+          auto: true,
+          icon: 'minecraft:magma_block',
+          desc: [
+            'Speak to Grull the Pitmaster at the pit mouth to go down. You fight alone: thirty waves of pit beasts, each wave a few seconds after the last falls.',
+            '',
+            '&6Kiln-Kih&r: embers. &6Kiln-Kek&r: split when they die. &6Kiln-Xil&r: shoot flaming arrows. &6Kiln-MejKot&r: hit hard and heal the beasts near them. &6Kiln-Zek&r: throw fire that Fire Resistance does not stop.',
+            '',
+            '&cKiln-Tok-Jad&r comes last. When flame gathers in him, &eraise your shield toward him&r. When he rises and a ring burns round your feet, &eget out of the ring&r. At half health he calls menders: strike one and they all turn on you instead of healing him.',
+            '',
+            tip('If you fall, Grull pulls you out alive with everything you had: only the run is lost. Bring food, potions, a shield and a bow for the Xil.')
+          ],
+          tasks: [{ stage: 'q_pits_fire', title: 'Defeat Kiln-Tok-Jad', icon: 'minecraft:magma_block' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: 'The Fight Pits',
+          after: ['pits'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.6,
+          icon: 'minecraft:magma_cream',
+          tier: 5,
+          auto: true,
+          desc: ['You won a Fire Cape in the Fight Pits.', '', '&eRewards:&r 2 quest points, the Fire Cape, 25,000 Attack, Strength, Defence and Hitpoints XP, a fortune in coins.'],
+          tasks: [{ stage: 'q_pits_done', title: 'Show Elder Ashka your Fire Cape', icon: 'minecraft:magma_cream' }],
+          reward: { coins: 30000, commands: ['pmmo admin {p} add attack xp 25000', 'pmmo admin {p} add strength xp 25000', 'pmmo admin {p} add defence xp 25000', 'pmmo admin {p} add hitpoints xp 25000'] }
+        }
+      ]
+    },
+    {
+      key: 'ashes_of_the_kiln',
+      group: 'main_quests',
+      title: 'Ashes of the Kiln',
+      subtitle: 'Main quest · Grandmaster · 2 quest points',
+      about: "Below the Fight Pits burns the Inferno, and its seal only opens for someone the whole world already fears. Elder Ashka sets you on the way.",
+      unlocks: 'the way into the Inferno, and the XP and coins of three great kills.',
+      icon: 'minecraft:nether_star',
+      quests: [
+        {
+          key: 'start',
+          title: '&6Ashes of the Kiln',
+          subtitle: 'Started by Elder Ashka',
+          shape: 'gear',
+          size: 1.6,
+          invisible: true,
+          icon: 'minecraft:nether_star',
+          tier: 3,
+          auto: true,
+          desc: ['After the Fight Pits, Elder Ashka speaks of a deeper pit: the Inferno, where Kiln-Kal-Zuk waits behind his shield.'],
+          tasks: [{ stage: 'q_ash_started', title: 'Hear of the Inferno', icon: 'minecraft:nether_star' }]
+        },
+        {
+          key: 'beasts',
+          title: 'The Great Beasts',
+          after: ['start'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.3,
+          tier: 5,
+          auto: true,
+          icon: 'minecraft:wither_skeleton_skull',
+          desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither, the Ender Dragon and the Warden.", '', tip('The Wither drops the nether star the Infernal Key needs.')],
+          tasks: [{ kill: 'minecraft:wither', count: 1 }, { kill: 'minecraft:ender_dragon', count: 1 }, { kill: 'minecraft:warden', count: 1 }],
+          reward: { commands: ['tag {p} add q_ash_beasts'] }
+        },
+        {
+          key: 'key_items',
+          title: 'What the Key Is Made Of',
+          after: ['start'],
+          hidden: true,
+          optional: true,
+          tier: 4,
+          desc: ['Brakka the Smith forges the Infernal Key from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods.'],
+          tasks: [{ item: 'minecraft:nether_star' }, { item: 'minecraft:netherite_ingot', count: 4 }, { item: 'minecraft:crying_obsidian', count: 16 }, { item: 'minecraft:blaze_rod', count: 16 }]
+        },
+        {
+          key: 'key',
+          title: 'The Infernal Key',
+          after: ['start'],
+          hidden: true,
+          tier: 4,
+          auto: true,
+          icon: 'minecraft:ominous_trial_key',
+          desc: ['Bring Brakka, at his forge in Kiln Hollow, what the key is made of.'],
+          tasks: [{ stage: 'q_ash_key', title: 'Have Brakka forge an Infernal Key', icon: 'minecraft:ominous_trial_key' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: 'Ashes of the Kiln',
+          after: ['beasts', 'key'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.5,
+          icon: 'minecraft:nether_star',
+          tier: 5,
+          auto: true,
+          desc: ['Give Elder Ashka the Infernal Key. She also wants you strong enough: &eDefence 80, Hitpoints 80, and Attack or Ranged 80&r.', '', '&eRewards:&r 2 quest points, the way into the Inferno, coins.'],
+          tasks: [{ stage: 'q_ash_done', title: 'Give Elder Ashka the key', icon: 'minecraft:ominous_trial_key' }],
+          reward: { coins: 40000 }
+        }
+      ]
+    },
+    {
+      key: 'the_inferno',
+      group: 'main_quests',
+      title: 'The Inferno',
+      subtitle: 'Main quest · Grandmaster · 3 quest points',
+      about: "The Kilnfolk's oldest pit: harder beasts, Kal-Tok-Jads, and Kiln-Kal-Zuk. Survive it and win the Infernal Cape.",
+      unlocks: 'the Infernal Cape (+20% critical damage, +5% critical chance, +1 heart and Fire Resistance), a mountain of XP, and a fortune.',
+      icon: 'minecraft:crying_obsidian',
+      quests: [
+        {
+          key: 'start',
+          title: '&4The Inferno',
+          subtitle: 'Opened by Elder Ashka',
+          shape: 'gear',
+          size: 1.8,
+          invisible: true,
+          icon: 'minecraft:crying_obsidian',
+          tier: 5,
+          auto: true,
+          desc: [
+            "Speak to Keeper Zarn at the Inferno's gate to go down. You fight alone, as in the Fight Pits: twenty-six waves of the Kal- beasts, then a Kal-Tok-Jad, then two at once, then Kiln-Kal-Zuk.",
+            '',
+            '&6Kal-Nib&r: swarms. &6Kal-MejRah&r: slow and tire you. &6Kal-Ak&r: split, and split again. &6Kal-ImKot&r: burrow up beside you. &6Kal-Xil&r: shoot. &6Kal-Zek&r: call up vexes.',
+            '',
+            "&4Kiln-Kal-Zuk&r hangs over the lava lake behind a shield that drifts along its shore. When his eyes burn, &ebe behind the shield&r, or most of your health goes. As he weakens he sends beasts, a Kal-Tok-Jad, then menders.",
+            '',
+            tip('Fall and Zarn pulls you out alive with everything you had. A bow helps with Zuk; so does fighting right behind the shield.')
+          ],
+          tasks: [{ stage: 'q_ash_done', title: 'Be made ready for the Inferno', icon: 'minecraft:crying_obsidian' }]
+        },
+        {
+          key: 'zuk',
+          title: '&4Kiln-Kal-Zuk',
+          after: ['start'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.6,
+          tier: 5,
+          auto: true,
+          icon: 'minecraft:ghast_tear',
+          desc: ['Survive the Inferno and defeat Kiln-Kal-Zuk.'],
+          tasks: [{ stage: 'q_inf_cape', title: 'Defeat Kiln-Kal-Zuk', icon: 'minecraft:ghast_tear' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: 'The Inferno',
+          after: ['zuk'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.8,
+          icon: 'minecraft:crying_obsidian',
+          tier: 5,
+          auto: true,
+          desc: ['You survived the Inferno.', '', '&eRewards:&r 3 quest points, the Infernal Cape, 75,000 Attack, Strength, Defence and Hitpoints XP, a fortune in coins.'],
+          tasks: [{ stage: 'q_inf_done', title: 'Show Elder Ashka your Infernal Cape', icon: 'minecraft:crying_obsidian' }],
+          reward: { coins: 100000, commands: ['pmmo admin {p} add attack xp 75000', 'pmmo admin {p} add strength xp 75000', 'pmmo admin {p} add defence xp 75000', 'pmmo admin {p} add hitpoints xp 75000'] }
+        }
+      ]
+    },
+
     // ================================================================= THE AGES
     {
       key: 'landfall',

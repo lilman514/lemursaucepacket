@@ -1,0 +1,397 @@
+{
+  "name": "The Fight Pits",
+  "description": [
+    "Thirty waves of the Kilnfolk's pit beasts, one after another, and last of all their champion, Kiln-Tok-Jad.",
+    "You fight alone. Fall, and Grull pulls you out alive with everything you had: only the run is lost.",
+    "Jad draws in flame (raise your shield) or rises to slam (get out of the ring). Win, and the Fire Cape is yours."
+  ],
+  "arena": "lemursaucepacket:fight_pits",
+  "strip_containers": true,
+  "max_players": 1,
+  "time_limit": 5400,
+  "loot_time": 20,
+  "start_requires": {
+    "tags": [
+      "q_pits_allowed"
+    ],
+    "message": "Elder Ashka must vouch for you before Grull lets you in."
+  },
+  "radius": 25,
+  "trial": {
+    "waves": [
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kih\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:13.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:0}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kiln-Kek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:9.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:31.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:2}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:70.0d},{id:\"minecraft:generic.scale\",base:1.25d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:piglin_brute\",CustomName:'{\"text\":\"Kiln-MejKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_mejkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],HandItems:[{id:\"minecraft:golden_axe\",count:1},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kiln-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:44.0d},{id:\"minecraft:generic.scale\",base:0.9d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":2,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kiln-Tok-Jad\",\"color\":\"red\"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_jad\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:600.0d},{id:\"minecraft:generic.scale\",base:3.0d},{id:\"minecraft:generic.knockback_resistance\",base:1.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],NoAI:1b,NoGravity:1b}",
+            "full_health": true,
+            "boss": true,
+            "at": {
+              "x": 0,
+              "z": -11,
+              "y": 4
+            }
+          }
+        ]
+      }
+    ],
+    "rest": 6,
+    "safe_deaths": true,
+    "win_commands": [
+      "lsp cape flag {player} pits:fire_cape",
+      "tag {player} add q_pits_fire",
+      "lsp coins give {player} 10000",
+      "tellraw @a {\"text\":\"{player} has defeated Kiln-Tok-Jad and earned a Fire Cape!\",\"color\":\"gold\"}"
+    ]
+  }
+}

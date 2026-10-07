@@ -74,6 +74,27 @@ export const MATERIALS = {
     enchantmentValue: 15,
     repair: 'lemursaucepacket:compacted_netherite',
     fireResistant: true
+  },
+  // Single pieces: their own worn look (art/armor-px.mjs), the stats of the set they sit beside.
+  anglers: {
+    name: "Angler's",
+    base: 'leather',
+    tint: '#2c8577',
+    defense: { helmet: 2, chestplate: 5, leggings: 4, boots: 2 },
+    toughness: 0,
+    knockbackResistance: 0,
+    enchantmentValue: 15,
+    repair: 'minecraft:leather'
+  },
+  ember: {
+    name: 'Ember',
+    base: 'iron',
+    tint: '#f06a19',
+    defense: { helmet: 3, chestplate: 7, leggings: 5, boots: 3 },
+    toughness: 1,
+    knockbackResistance: 0,
+    enchantmentValue: 14,
+    repair: 'create:brass_ingot'
   }
 }
 
@@ -185,7 +206,7 @@ export const PIECES = [
     id: 'anglers_cap',
     name: "Angler's Cap",
     slot: 'helmet',
-    material: 'aeronaut',
+    material: 'anglers',
     stats: { luck: 2 },
     requirement: { skill: 'fishing', level: 25 },
     text: '+2 Luck: better catches and better loot',
@@ -197,7 +218,7 @@ export const PIECES = [
     id: 'ember_crown',
     name: 'Ember Crown',
     slot: 'helmet',
-    material: 'duelist',
+    material: 'ember',
     perk: 'fire_immunity',
     stats: { damage: 1 },
     requirement: { skill: 'defence', level: 40 },

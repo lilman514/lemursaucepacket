@@ -1742,3 +1742,8 @@ a.shot:hover img,
     height: 42px;
   }
 }
+
+/* The Fight Pits band: Jad sits right of the middle, so the copy keeps the left. */
+.pits .dragon-art img {
+  object-position: 62% 30%;
+}

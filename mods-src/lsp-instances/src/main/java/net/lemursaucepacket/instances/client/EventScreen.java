@@ -55,7 +55,15 @@ public final class EventScreen extends Screen {
 
         List<Button> buttons = new ArrayList<>();
         int full = WIDTH - 24, half = (full - GAP) / 2;
-        if (data.mine().isEmpty()) {
+        if (data.mine().isEmpty() && data.maxPlayers() <= 1) {
+            // A solo trial: one way in.
+            Button solo = Button.builder(Component.literal("Enter"), b -> send(InstanceNet.SOLO, NOBODY)).size(full, BUTTON).build();
+            if (!data.canStart()) {
+                solo.active = false;
+                if (!data.startNote().isEmpty()) solo.setTooltip(Tooltip.create(Component.literal(data.startNote())));
+            }
+            buttons.add(solo);
+        } else if (data.mine().isEmpty()) {
             Button solo = Button.builder(Component.literal("Fight alone"), b -> send(InstanceNet.SOLO, NOBODY)).size(half, BUTTON).build();
             Button host = Button.builder(Component.literal("Open a co-op fight"), b -> send(InstanceNet.HOST, NOBODY)).size(half, BUTTON).build();
             if (!data.canStart()) {

@@ -90,6 +90,8 @@ public final class CrandorMemorial {
             for (int z = cz - CHUNK_RADIUS; z <= cz + CHUNK_RADIUS; z++) level.setChunkForced(x, z, false);
         s.memorial = BUILT;
         s.setDirty();
+        // Saved at once: a crash before the next autosave would otherwise build it (and Ned) a second time.
+        level.getDataStorage().save();
     }
 
     /**

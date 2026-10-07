@@ -15,6 +15,8 @@ import { ECONOMY } from './values.mjs'
 import { QUEST_STEPS } from './quests.mjs'
 import { byte, json, snbt } from './snbt.mjs'
 
+const SKILLS = new Set(['attack', 'strength', 'defence', 'ranged', 'hitpoints', 'mining', 'woodcutting', 'farming', 'fishing', 'cooking', 'smithing', 'crafting', 'agility', 'enchanting'])
+
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
 const dataDir = path.join(root, 'pack', 'kubejs', 'data', 'lemursaucepacket')
@@ -128,6 +130,7 @@ for (const [id, n] of Object.entries(NPCS)) {
 }
 // Quest steps: every item they take or give must exist, and every dialog they open must be one of the NPCs'.
 const dialogLabels = new Set(Object.values(NPCS).flatMap((n) => n.dialogs.map((d) => d.label)))
+const allStages = new Set(Object.values(QUEST_STEPS).flatMap((q) => q.stages))
 rmSync(questDir, { recursive: true, force: true })
 mkdirSync(questDir, { recursive: true })
 let steps = 0
@@ -137,7 +140,9 @@ for (const [id, q] of Object.entries(QUEST_STEPS)) {
     for (const t of st.take ?? []) if (!known(t.id) && !t.id.startsWith('iceandfire:')) throw new Error(`${where}: unknown item ${t.id}`)
     for (const g of st.give ?? []) if (!known(g.id)) throw new Error(`${where}: unknown item ${g.id}`)
     for (const d of [st.ok, st.missing, st.done]) if (d && !dialogLabels.has(d)) throw new Error(`${where}: no NPC has a dialog '${d}'`)
-    for (const stage of [...(st.needs ?? []), ...(st.lacks ?? []), st.stage].filter(Boolean)) if (!q.stages.includes(stage) && !/^q_welcome_/.test(stage)) throw new Error(`${where}: stage ${stage} isn't one of the quest's`)
+    if (st.stage && !q.stages.includes(st.stage)) throw new Error(`${where}: stage ${st.stage} isn't one of the quest's`)
+    for (const stage of [...(st.needs ?? []), ...(st.lacks ?? [])]) if (!allStages.has(stage) && !/^q_welcome_/.test(stage)) throw new Error(`${where}: stage ${stage} isn't any quest's`)
+    for (const skill of Object.keys(st.skills ?? {})) for (const s of skill.split('|')) if (!SKILLS.has(s)) throw new Error(`${where}: no skill ${s}`)
     steps++
   }
   writeFileSync(path.join(questDir, `${id}.json`), JSON.stringify(q, null, 2) + '\n')

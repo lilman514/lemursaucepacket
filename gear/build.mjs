@@ -538,9 +538,13 @@ function docsPage() {
     '<figure><img src="images/gear_sets.jpg" alt="Pixel art of four armour sets: Prospector, Aeronaut, Brass Duelist and Compacted Diamond"><figcaption><p>Prospector, Aeronaut, Brass Duelist and Compacted Diamond</p></figcaption></figure>',
     ''
   ]
+  if (existsSync(path.join(root, 'docs', 'images', 'armor_icons.jpg')))
+    lines.push('<figure><img src="images/armor_icons.jpg" alt="Every armour piece in an inventory, a Compacted Netherite set worn"><figcaption><p>Every set\'s pieces, and Compacted Netherite worn</p></figcaption></figure>', '')
   for (const set of SETS) {
     const m = MATERIALS[set.material]
-    lines.push(`### ${set.name}`, '', set.theme, '', `Wear: ${req(set.requirement)}. Defense ${m.defense.helmet}/${m.defense.chestplate}/${m.defense.leggings}/${m.defense.boots}, toughness ${m.toughness}${m.knockbackResistance ? `, knockback resistance ${m.knockbackResistance}` : ''}.`, '')
+    lines.push(`### ${set.name}`, '')
+    if (existsSync(path.join(root, 'docs', 'images', `set_${set.id}.jpg`))) lines.push(`<figure><img src="images/set_${set.id}.jpg" alt="${set.name} worn in game"><figcaption><p>${set.name}, worn</p></figcaption></figure>`, '')
+    lines.push(set.theme, '', `Wear: ${req(set.requirement)}. Defense ${m.defense.helmet}/${m.defense.chestplate}/${m.defense.leggings}/${m.defense.boots}, toughness ${m.toughness}${m.knockbackResistance ? `, knockback resistance ${m.knockbackResistance}` : ''}.`, '')
     lines.push('| Piece | Stats and perk |', '|---|---|')
     for (const piece of Object.values(set.pieces)) lines.push(`| ${piece.name} | ${[statText(piece.stats), piece.perkText].filter(Boolean).join('; ') || '—'} |`)
     lines.push('', `**Full set:** ${set.set.text}.${set.synergy ? ` **With the ${set.synergy.relic.split(':')[1].replace(/_/g, ' ')}:** ${set.synergy.text}.` : ''}`, '', `**How to get:** ${set.howToGet}`, '')

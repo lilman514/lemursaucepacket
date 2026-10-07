@@ -16,7 +16,11 @@ Stats: **Damage**, **Attack Speed**, **Crit Chance** (added to the Strength/Rang
 
 <figure><img src="images/gear_sets.jpg" alt="Pixel art of four armour sets: Prospector, Aeronaut, Brass Duelist and Compacted Diamond"><figcaption><p>Prospector, Aeronaut, Brass Duelist and Compacted Diamond</p></figcaption></figure>
 
+<figure><img src="images/armor_icons.jpg" alt="Every armour piece in an inventory, a Compacted Netherite set worn"><figcaption><p>Every set's pieces, and Compacted Netherite worn</p></figcaption></figure>
+
 ### Prospector's Set
+
+<figure><img src="images/set_prospector.jpg" alt="Prospector's Set worn in game"><figcaption><p>Prospector's Set, worn</p></figcaption></figure>
 
 Mining utility: light where you dig, haste when you commit to the whole set.
 
@@ -35,6 +39,8 @@ Wear: Mining 35. Defense 2/6/5/2, toughness 0.
 
 ### Aeronaut's Set
 
+<figure><img src="images/set_aeronaut.jpg" alt="Aeronaut's Set worn in game"><figcaption><p>Aeronaut's Set, worn</p></figcaption></figure>
+
 Mobility for people who live on airships and rooftops.
 
 Wear: Agility 40. Defense 2/5/4/2, toughness 0.
@@ -51,6 +57,8 @@ Wear: Agility 40. Defense 2/5/4/2, toughness 0.
 **How to get:** Mechanical crafting from leather, propeller parts and sturdy sheets.
 
 ### Brass Duelist Set
+
+<figure><img src="images/set_duelist.jpg" alt="Brass Duelist Set worn in game"><figcaption><p>Brass Duelist Set, worn</p></figcaption></figure>
 
 Fighting armour: every piece sharpens your criticals.
 
@@ -69,6 +77,8 @@ Wear: Attack 40. Defense 3/7/5/3, toughness 1.
 
 ### Compacted Diamond Set
 
+<figure><img src="images/set_compacted_diamond.jpg" alt="Compacted Diamond Set worn in game"><figcaption><p>Compacted Diamond Set, worn</p></figcaption></figure>
+
 Heavy plate pressed from compacted diamond.
 
 Wear: Defence 45. Defense 4/9/7/4, toughness 3, knockback resistance 0.1.
@@ -85,6 +95,8 @@ Wear: Defence 45. Defense 4/9/7/4, toughness 3, knockback resistance 0.1.
 **How to get:** Press diamonds into compacted diamond (basin + mechanical press), then mechanical crafting.
 
 ### Compacted Netherite Set
+
+<figure><img src="images/set_compacted_netherite.jpg" alt="Compacted Netherite Set worn in game"><figcaption><p>Compacted Netherite Set, worn</p></figcaption></figure>
 
 The last armour you will need.
 

@@ -48,6 +48,120 @@
       Type:"STANDARD",
       DialogDataSet:[
         {
+          Label:"pits_champion",
+          Name:"Fire Cape",
+          Priority:45,
+          Texts:[
+            {
+              Text:"A Fire Cape! I've seen one once in my life, @initiator, on a Kilnfolk champion. The Guild has never been prouder."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_champion_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_go",
+          Name:"Kiln Hollow",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Follow the Kilnfolk Pass to Kiln Hollow and speak to Elder Ashka. And take a good shield: their champion breathes fire."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_go_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_offer",
+          Name:"The Kilnfolk",
+          Priority:35,
+          Texts:[
+            {
+              Text:"Champion! Word of Elvarg's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.
+
+Ashen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew Elvarg."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_offer_0",
+              Name:"I'll go to the Kilnfolk",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator fight_pits pass @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"pits_offer_1",
+              Name:"Not now",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_pass_given",
+          Name:"The pass",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Hold the pass and it pulls toward Kiln Hollow, like a compass to its lodestone. Good luck, @initiator."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_pass_given_0",
+              Name:"I'm on my way",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
           Label:"ds_done",
           Name:"Champion",
           Priority:30,

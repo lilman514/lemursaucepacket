@@ -23,7 +23,7 @@
     {
       "type": "patchouli:text",
       "title": "Chapters",
-      "text": "Thirty-three chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing."
+      "text": "Thirty-six chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing."
     },
     {
       "type": "patchouli:text",
@@ -36,7 +36,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "murton) - See below - 2 quest points, the right to wear dragon armour, Attack and Defence XP, 25,000 coins and more$(br2)$(bold)Dragon Slayer I$(), as in RuneScape: Oziach, who keeps the armoury on the ring street, tells you how to reach Elvarg on the isle of Crandor."
+      "text": "murton) - See below - 2 quest points, the right to wear dragon armour, Attack and Defence XP, 25,000 coins and more$(br)$(bold)The Fight Pits (master)$() - Guildmaster Greaves, after Dragon Slayer I - An offering, the Ashen Trial, Defence, Hitpoints and Attack or Ranged 50, then thirty waves and Kiln-Tok-Jad - 2 quest points, the Fire Cape, combat XP, 30,000 coins$(br)$(bold)Ashes of the Kiln (grandmaster)$() - Elder Ashka, after the Fight Pits - The Wither, the Ender Dragon and the Warden; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 - 2 quest points, the way into the Inferno, 40,000 coins$(br)$(b"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "old)The Inferno (grandmaster)$() - Elder Ashka, after Ashes of the Kiln - The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk - 3 quest points, the Infernal Cape, combat XP, 100,000 coins$(br2)$(bold)Dragon Slayer I$(), as in RuneScape: Oziach, who keeps the armoury on the ring street, tells you how to reach Elvarg on the isle of Crandor."
     },
     {
       "type": "patchouli:text",
@@ -48,7 +52,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press $(italic)Take back your things$(). Touch the memorial's waystone on your way up, so you can come straight back.$(br2)Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.$(br2)The fight itself, step by step: $(l:lemursaucepacket:elvarg)Elvarg's Lair$(/l).$(br2)$(bold)The Ages$() - one chapter per stage of progress:"
+      "text": "If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press $(italic)Take back your things$(). Touch the memorial's waystone on your way up, so you can come straight back.$(br2)Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.$(br2)The fight itself, step by step: $(l:lemursaucepacket:elvarg)Elvarg's Lair$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The Fight Pits, Ashes of the Kiln and the Inferno$() come after it: the Kilnfolk, ashen piglins in the volcanic lands, test outsiders in their wave fights, and the winners earn the Fire Cape and the Infernal Cape. Everything about them: $(l:lemursaucepacket:fight-pits)The Fight Pits and the Inferno$(/l).$(br2)$(bold)The Ages$() - one chapter per stage of progress:"
     },
     {
       "type": "patchouli:text",

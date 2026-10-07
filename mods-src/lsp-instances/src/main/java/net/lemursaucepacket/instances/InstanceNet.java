@@ -41,10 +41,11 @@ public final class InstanceNet {
      * @param startNote why not, when they may not
      * @param mine      the co-op fight this player is in, if any
      * @param kept      how many stacks the keeper holds for this player
+     * @param maxPlayers the event's party size: 1 is a solo trial, with no co-op buttons
      */
     public record Window(int mode, ResourceLocation event, int npc, String title, List<String> lines, boolean canStart,
                          String startNote, List<LobbyView> lobbies, Optional<LobbyView> mine, boolean hosting, int kept,
-                         String keeper) implements CustomPacketPayload {
+                         String keeper, int maxPlayers) implements CustomPacketPayload {
         public static final Type<Window> TYPE = new Type<>(LspInstances.id("window"));
         public static final StreamCodec<RegistryFriendlyByteBuf, Window> CODEC = StreamCodec.of((buf, w) -> {
             buf.writeVarInt(w.mode);
@@ -59,12 +60,13 @@ public final class InstanceNet {
             buf.writeBoolean(w.hosting);
             buf.writeVarInt(w.kept);
             buf.writeUtf(w.keeper);
+            buf.writeVarInt(w.maxPlayers);
         }, buf -> new Window(buf.readVarInt(), buf.readResourceLocation(), buf.readVarInt(), buf.readUtf(),
                 buf.readList(FriendlyByteBuf::readUtf), buf.readBoolean(), buf.readUtf(), buf.readList(LobbyView::read),
-                buf.readOptional(LobbyView::read), buf.readBoolean(), buf.readVarInt(), buf.readUtf()));
+                buf.readOptional(LobbyView::read), buf.readBoolean(), buf.readVarInt(), buf.readUtf(), buf.readVarInt()));
 
         static Window close(ResourceLocation event) {
-            return new Window(CLOSE, event, -1, "", List.of(), false, "", List.of(), Optional.empty(), false, 0, "");
+            return new Window(CLOSE, event, -1, "", List.of(), false, "", List.of(), Optional.empty(), false, 0, "", 1);
         }
 
         @Override

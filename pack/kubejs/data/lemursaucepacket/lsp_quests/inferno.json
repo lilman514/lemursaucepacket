@@ -1,0 +1,20 @@
+{
+  "title": "The Inferno",
+  "stages": [
+    "q_inf_cape",
+    "q_inf_done"
+  ],
+  "steps": {
+    "done": {
+      "needs": [
+        "q_inf_cape"
+      ],
+      "lacks": [
+        "q_inf_done"
+      ],
+      "stage": "q_inf_done",
+      "message": "Elder Ashka honours your Infernal Cape.",
+      "ok": "inf_thanks"
+    }
+  }
+}

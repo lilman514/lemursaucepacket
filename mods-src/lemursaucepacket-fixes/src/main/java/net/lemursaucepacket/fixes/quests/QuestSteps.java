@@ -38,14 +38,16 @@ import net.minecraft.world.item.component.CustomData;
 
 /**
  * RuneScape-style quest steps that NPC dialog buttons run: "here are the ingredients", "buy the map piece", "take this
- * shield". A step (data/<ns>/lsp_quests/<quest>.json, written by npcs/build.mjs from npcs/quests.mjs) checks stage tags,
- * takes items and coins, gives items, sets the next stage and opens the NPC's next dialog; if something is missing it
- * says what, and opens the "missing" dialog instead. Stages are player tags, which double as FTB Quests stages.
+ * shield". A step (data/<ns>/lsp_quests/<quest>.json, written by npcs/build.mjs from npcs/quests.mjs) checks stage tags
+ * and skill levels, takes items and coins, gives items, sets the next stage and opens the NPC's next dialog; if
+ * something is missing it says what, and opens the "missing" dialog instead. Stages are player tags, which double as
+ * FTB Quests stages. A skill requirement's key may name several skills ("attack|ranged"): the best of them counts.
  *
  * <pre>
  * { "title": "Cook's Assistant", "stages": ["q_cook_started", "q_cook_done"],
  *   "steps": { "deliver": { "needs": ["q_cook_started"], "lacks": ["q_cook_done"],
  *                           "take": [ { "id": "minecraft:egg", "count": 1 }, { "id": "minecraft:iron_sword", "quest": "vyvin_sword" } ],
+ *                           "skills": { "defence": 50, "attack|ranged": 50 },
  *                           "coins": 0, "give": [ ItemStack... ], "special": ["crandor_map"], "stage": "q_cook_done",
  *                           "commands": ["..."], "message": "...", "ok": "thanks", "missing": "missing", "done": "after" } } }
  * </pre>
@@ -57,7 +59,7 @@ public final class QuestSteps {
     public record Take(Item item, int count, @Nullable String quest) {
     }
 
-    public record Step(List<String> needs, List<String> lacks, List<Take> take, long coins, List<ItemStack> give, List<String> special,
+    public record Step(List<String> needs, List<String> lacks, Map<String, Integer> skills, List<Take> take, long coins, List<ItemStack> give, List<String> special,
             @Nullable String stage, List<String> commands, @Nullable String message, @Nullable String ok, @Nullable String missing, @Nullable String done) {
     }
 
@@ -110,7 +112,9 @@ public final class QuestSteps {
             if (s.has("give")) for (JsonElement g : s.getAsJsonArray("give")) {
                 give.add(ItemStack.CODEC.parse(ops, g).getOrThrow(msg -> new IllegalArgumentException("step " + e.getKey() + " give: " + msg)));
             }
-            steps.put(e.getKey(), new Step(strings(s, "needs"), strings(s, "lacks"), List.copyOf(take), s.has("coins") ? s.get("coins").getAsLong() : 0,
+            Map<String, Integer> skills = new TreeMap<>();
+            if (s.has("skills")) for (var sk : s.getAsJsonObject("skills").entrySet()) skills.put(sk.getKey(), sk.getValue().getAsInt());
+            steps.put(e.getKey(), new Step(strings(s, "needs"), strings(s, "lacks"), Map.copyOf(skills), List.copyOf(take), s.has("coins") ? s.get("coins").getAsLong() : 0,
                     List.copyOf(give), strings(s, "special"), str(s, "stage"), strings(s, "commands"), str(s, "message"), str(s, "ok"), str(s, "missing"), str(s, "done")));
         }
         return new Quest(id, json.has("title") ? json.get("title").getAsString() : id, strings(json, "stages"), Map.copyOf(steps));
@@ -152,6 +156,14 @@ public final class QuestSteps {
         }
         long purse = Coins.purse(player);
         if (step.coins() > purse) missing.add(Coins.text(step.coins() - purse));
+        step.skills().forEach((key, need) -> {
+            long have = 0;
+            for (String skill : key.split("\\|")) have = Math.max(have, level(player, skill));
+            if (have < need) {
+                String names = String.join(" or ", java.util.Arrays.stream(key.split("\\|")).map(QuestSteps::skillName).toList());
+                missing.add(Component.literal(names + " level " + need + " (you have " + have + ")"));
+            }
+        });
         if (!missing.isEmpty()) {
             MutableComponent line = Component.literal("You still need: ").withStyle(ChatFormatting.RED);
             for (int i = 0; i < missing.size(); i++) line.append(i == 0 ? Component.empty() : Component.literal(", ").withStyle(ChatFormatting.RED)).append(missing.get(i).withStyle(ChatFormatting.WHITE));
@@ -169,6 +181,7 @@ public final class QuestSteps {
         }
         for (String special : step.special()) {
             if (special.equals("crandor_map")) Crandor.giveMap(player);
+            if (special.equals("kiln_pass")) net.lemursaucepacket.fixes.pits.KilnHollow.givePass(player);
         }
         if (step.stage() != null) player.addTag(step.stage());
         MinecraftServer server = player.getServer();
@@ -184,6 +197,19 @@ public final class QuestSteps {
         QuestModule.LOGGER.info("{} did {}/{}", player.getGameProfile().getName(), questId, stepId);
         if (step.ok() != null && npc != null) NpcInteractions.openDialog(player, npc, step.ok());
         return 1;
+    }
+
+    /** A Project MMO skill level (0 if Project MMO has none for the player yet). */
+    private static long level(ServerPlayer player, String skill) {
+        try {
+            return harmonised.pmmo.api.APIUtils.getLevel(skill, player);
+        } catch (RuntimeException | NoClassDefFoundError e) {
+            return 0;
+        }
+    }
+
+    private static String skillName(String skill) {
+        return skill.isEmpty() ? skill : Character.toUpperCase(skill.charAt(0)) + skill.substring(1);
     }
 
     /** Forgets a quest for a player: its stage tags go, so it can be done again (tests, admins). */
@@ -227,6 +253,7 @@ public final class QuestSteps {
                 case "vyvin_sword" -> Component.literal("Sir Vyvin's Sword");
                 case "elvarg_head" -> Component.literal("Elvarg's Head");
                 case "map_piece_1", "map_piece_2", "map_piece_3" -> Component.literal("Map Part " + t.quest().substring(t.quest().length() - 1));
+                case "infernal_key" -> Component.literal("Infernal Key");
                 default -> null;
             };
             if (special != null) return special;

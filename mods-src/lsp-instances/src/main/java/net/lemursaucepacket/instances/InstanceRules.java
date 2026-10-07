@@ -42,6 +42,8 @@ final class InstanceRules {
         // After Curios adds worn items to the drops (HIGHEST) and lifesteal's Heart (KubeJS, NORMAL); before the
         // Gravestone mod makes a grave of them (LOWEST).
         NeoForge.EVENT_BUS.addListener(EventPriority.LOW, InstanceRules::onDrops);
+        // A trial with safe deaths pulls a falling player out alive, before anything else hears of the death.
+        NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, InstanceRules::onDeath);
         NeoForge.EVENT_BUS.addListener(InstanceRules::onBreak);
         NeoForge.EVENT_BUS.addListener(InstanceRules::onPlace);
         NeoForge.EVENT_BUS.addListener(InstanceRules::onUseOnBlock);
@@ -77,6 +79,23 @@ final class InstanceRules {
         if (event.getHand() == InteractionHand.MAIN_HAND && event.getEntity() instanceof ServerPlayer player) {
             InstanceManager.open(player, id.get(), event.getTarget(), InstanceNet.OPEN);
         }
+    }
+
+    /** Safe deaths (a wave trial): no death at all. The player is healed and taken back, with everything they had. */
+    private static void onDeath(net.neoforged.neoforge.event.entity.living.LivingDeathEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player) || !inArena(player.level())) return;
+        Optional<InstanceManager.Session> session = InstanceManager.safeDeathFor(player);
+        if (session.isEmpty()) return;
+        event.setCanceled(true);
+        InstanceManager.Session s = session.get();
+        player.setHealth(player.getMaxHealth());
+        player.clearFire();
+        player.removeAllEffects();
+        player.getFoodData().setFoodLevel(20);
+        InstanceManager.leave(player);
+        player.sendSystemMessage(Component.literal("You fell on wave " + Math.max(1, s.wave) + " of " + s.def.trial().waves().size() + " of " + s.def.name()
+                + ". Nothing is lost: come back when you're ready.").withStyle(ChatFormatting.GOLD));
+        LspInstances.LOGGER.info("{} fell in {} on wave {}", player.getGameProfile().getName(), s.event, s.wave);
     }
 
     /** A death in an event with a keeper: everything that would drop goes to the keeper instead, and nothing falls. */

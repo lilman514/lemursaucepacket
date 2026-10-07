@@ -2,7 +2,7 @@
   "name": "Gear",
   "category": "lemursaucepacket:wiki",
   "icon": "lemursaucepacket:brass_sabre",
-  "sortnum": 14,
+  "sortnum": 15,
   "pages": [
     {
       "type": "patchouli:text",

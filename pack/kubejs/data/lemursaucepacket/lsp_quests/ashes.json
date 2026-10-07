@@ -1,0 +1,85 @@
+{
+  "title": "Ashes of the Kiln",
+  "stages": [
+    "q_ash_started",
+    "q_ash_beasts",
+    "q_ash_key",
+    "q_ash_done"
+  ],
+  "steps": {
+    "key": {
+      "needs": [
+        "q_ash_started"
+      ],
+      "lacks": [
+        "q_ash_key"
+      ],
+      "take": [
+        {
+          "id": "minecraft:nether_star",
+          "count": 1
+        },
+        {
+          "id": "minecraft:netherite_ingot",
+          "count": 4
+        },
+        {
+          "id": "minecraft:crying_obsidian",
+          "count": 16
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "count": 16
+        }
+      ],
+      "give": [
+        {
+          "id": "minecraft:ominous_trial_key",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Infernal Key\",\"color\":\"red\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"Forged by Brakka from a\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"nether star and netherite.\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"It opens the Inferno.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "infernal_key"
+            }
+          }
+        }
+      ],
+      "stage": "q_ash_key",
+      "message": "Brakka forges you an Infernal Key.",
+      "ok": "key_forged",
+      "missing": "key_missing"
+    },
+    "ready": {
+      "needs": [
+        "q_ash_started",
+        "q_ash_beasts",
+        "q_ash_key"
+      ],
+      "lacks": [
+        "q_ash_done"
+      ],
+      "skills": {
+        "defence": 80,
+        "hitpoints": 80,
+        "attack|ranged": 80
+      },
+      "take": [
+        {
+          "id": "minecraft:ominous_trial_key",
+          "count": 1,
+          "quest": "infernal_key"
+        }
+      ],
+      "stage": "q_ash_done",
+      "message": "Elder Ashka takes your Infernal Key: the Inferno's seal will open for you.",
+      "ok": "ash_ready",
+      "missing": "ash_not_ready",
+      "done": "ash_not_ready"
+    }
+  }
+}

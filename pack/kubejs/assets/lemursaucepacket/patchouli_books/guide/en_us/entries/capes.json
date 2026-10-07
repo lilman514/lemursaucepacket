@@ -2,7 +2,7 @@
   "name": "Capes",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:white_banner",
-  "sortnum": 15,
+  "sortnum": 16,
   "pages": [
     {
       "type": "patchouli:text",
@@ -34,7 +34,15 @@
     {
       "type": "patchouli:text",
       "title": "Legendary capes",
-      "text": "Animated, and exceedingly hard to earn.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Maxed Cape $(italic)(animated)$()$() - Every skill at 99. - +5% crit chance, +5% crit damage, +1 heart$(br)$(bold)Completionist Cape $(italic)(animated)$()$() - Every chapter of the quest book finished. - +10% speed$(br)$(bold)Dragonslayer Cape $(italic)(animated)$()$() - Kill the Ender Dragon. - Fire Resistance"
+      "text": "Animated, and exceedingly hard to earn."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Maxed Cape $(italic)(animated)$()$() - Every skill at 99. - +5% crit chance, +5% crit damage, +1 heart$(br)$(bold)Completionist Cape $(italic)(animated)$()$() - Every chapter of the quest book finished. - +10% speed$(br)$(bold)Dragonslayer Cape $(italic)(animated)$()$() - Kill the Ender Dragon. - Fire Resistance$(br)$(bold)Fire Cape $(italic)(animated)$()$() - Defeat the champion of the Fight Pits. - +12% crit damage, Fire Resistance$(br)$(bold)Infernal Cape $(italic)(animated)$()$() - Survive the Inferno. - +20% crit damage, +5% crit chance, +1 heart, Fire Res"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "istance"
     },
     {
       "type": "patchouli:text",

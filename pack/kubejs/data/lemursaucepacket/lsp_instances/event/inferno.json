@@ -1,0 +1,521 @@
+{
+  "name": "The Inferno",
+  "description": [
+    "The Kilnfolk's oldest pit: harder beasts, Kal-Tok-Jads, and Kiln-Kal-Zuk, who burns everything in front of him.",
+    "When Zuk's eyes burn, be behind the shield that drifts along the lava's edge. Win, and the Infernal Cape is yours.",
+    "You fight alone. Fall, and Zarn pulls you out alive with everything you had: only the run is lost."
+  ],
+  "arena": "lemursaucepacket:inferno",
+  "strip_containers": true,
+  "max_players": 1,
+  "time_limit": 7200,
+  "loot_time": 20,
+  "start_requires": {
+    "tags": [
+      "q_ash_done"
+    ],
+    "message": "The seal only opens for one Elder Ashka has made ready."
+  },
+  "radius": 31,
+  "trial": {
+    "waves": [
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:phantom\",CustomName:'{\"text\":\"Kal-MejRah\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_mejrah\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:26.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:1}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          },
+          {
+            "nbt": "{id:\"minecraft:magma_cube\",CustomName:'{\"text\":\"Kal-Ak\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:16.0d,modifiers:[{id:\"lemursaucepacket:pits\",amount:54.0d,operation:\"add_value\"}]}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Size:3}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:vex\",CustomName:'{\"text\":\"Kal-Nib\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:10.0d},{id:\"minecraft:generic.scale\",base:0.9d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 3
+          },
+          {
+            "nbt": "{id:\"minecraft:evoker\",CustomName:'{\"text\":\"Kal-Zek\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zek\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:80.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:wither_skeleton\",CustomName:'{\"text\":\"Kal-Xil\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:60.0d}],HandItems:[{id:\"minecraft:bow\",count:1,components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":4,\"minecraft:flame\":1}}}},{}],HandDropChances:[0.0f,0.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}",
+            "full_health": true,
+            "count": 2
+          },
+          {
+            "nbt": "{id:\"minecraft:hoglin\",CustomName:'{\"text\":\"Kal-ImKot\",\"color\":\"gold\"}',CustomNameVisible:0b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_imkot\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:90.0d},{id:\"minecraft:generic.attack_damage\",base:8.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],IsImmuneToZombification:1b}",
+            "full_health": true
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kal-Tok-Jad\",\"color\":\"red\"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_jad\",\"lsp_inf_jad\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:500.0d},{id:\"minecraft:generic.scale\",base:3.0d},{id:\"minecraft:generic.knockback_resistance\",base:1.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],NoAI:1b,NoGravity:1b}",
+            "full_health": true,
+            "at": {
+              "x": 0,
+              "z": -6,
+              "y": 4
+            }
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kal-Tok-Jad\",\"color\":\"red\"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_jad\",\"lsp_inf_jad\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:500.0d},{id:\"minecraft:generic.scale\",base:3.0d},{id:\"minecraft:generic.knockback_resistance\",base:1.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],NoAI:1b,NoGravity:1b}",
+            "full_health": true,
+            "at": {
+              "x": -9,
+              "z": -4,
+              "y": 4
+            }
+          },
+          {
+            "nbt": "{id:\"minecraft:blaze\",CustomName:'{\"text\":\"Kal-Tok-Jad\",\"color\":\"red\"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_pits_jad\",\"lsp_inf_jad\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:500.0d},{id:\"minecraft:generic.scale\",base:3.0d},{id:\"minecraft:generic.knockback_resistance\",base:1.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],NoAI:1b,NoGravity:1b}",
+            "full_health": true,
+            "at": {
+              "x": 9,
+              "z": -4,
+              "y": 4
+            }
+          }
+        ]
+      },
+      {
+        "spawns": [
+          {
+            "nbt": "{id:\"minecraft:ghast\",CustomName:'{\"text\":\"Kiln-Kal-Zuk\",\"color\":\"dark_red\"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:\"minecraft:empty\",Tags:[\"lsp_pits\",\"lsp_inf_zuk\"],attributes:[{id:\"minecraft:generic.follow_range\",base:48.0d},{id:\"minecraft:generic.max_health\",base:1000.0d},{id:\"minecraft:generic.scale\",base:2.0d},{id:\"minecraft:generic.knockback_resistance\",base:1.0d}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],active_effects:[{id:\"minecraft:resistance\",amplifier:0b,duration:-1,show_particles:0b,show_icon:0b,ambient:0b}],NoAI:1b,NoGravity:1b,ExplosionPower:0b}",
+            "full_health": true,
+            "boss": true,
+            "at": {
+              "x": 0,
+              "z": -22,
+              "y": 5
+            }
+          }
+        ]
+      }
+    ],
+    "rest": 8,
+    "safe_deaths": true,
+    "win_commands": [
+      "lsp cape flag {player} pits:infernal_cape",
+      "tag {player} add q_inf_cape",
+      "lsp coins give {player} 40000",
+      "tellraw @a {\"text\":\"{player} has survived the Inferno and earned an Infernal Cape!\",\"color\":\"red\",\"bold\":true}"
+    ]
+  }
+}

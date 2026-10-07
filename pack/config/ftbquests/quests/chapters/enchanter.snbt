@@ -23,7 +23,7 @@
 			y: -1.0d
 		}
 	]
-	order_index: 15
+	order_index: 18
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [

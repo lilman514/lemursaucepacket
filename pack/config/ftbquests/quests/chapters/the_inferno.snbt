@@ -1,0 +1,206 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_inferno"
+	group: "1F2E0B7F304AB615"
+	icon: {
+		id: "minecraft:crying_obsidian"
+	}
+	id: "7F5364F0DB416709"
+	images: [
+		{
+			height: 2.7574468085106383d
+			id: "79BC69694F418644"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.970212765957447d
+			x: 2.1d
+			y: -2.1d
+		}
+	]
+	order_index: 6
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:crying_obsidian"
+			}
+			id: "2D9C8830586639B4"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "7DB4277A1C822969"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "13C5AC47661F35AB"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 5120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "04823A8F53E36CF6"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.8d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:crying_obsidian"
+					}
+					id: "6A1B7D1EF6F00394"
+					stage: "q_ash_done"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 0.9d
+		}
+		{
+			dependencies: ["2D9C8830586639B4"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:ghast_tear"
+			}
+			id: "1717C54612491172"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "6012CD8826717F66"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "724BDB114208926A"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 5120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "625A6C2A3FD9A02A"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:ghast_tear"
+					}
+					id: "77826851452E080E"
+					stage: "q_inf_cape"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 0.9d
+		}
+		{
+			dependencies: ["1717C54612491172"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:crying_obsidian"
+			}
+			id: "09202567917646FC"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "10E2391A8231D051"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "157795937B641CDE"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 105120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "11B6363DF69457EF"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add attack xp 75000"
+					elevate_perms: true
+					id: "6B4B6CD6941CDB46"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add strength xp 75000"
+					elevate_perms: true
+					id: "15E09D017018860B"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add defence xp 75000"
+					elevate_perms: true
+					id: "2A903F8ED0EAEE08"
+					silent: true
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					command: "pmmo admin {p} add hitpoints xp 75000"
+					elevate_perms: true
+					id: "34E82FA9C337ABA5"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.8d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:crying_obsidian"
+					}
+					id: "7665505C7418EA97"
+					stage: "q_inf_done"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 0.9d
+		}
+	]
+}

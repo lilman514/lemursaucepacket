@@ -95,6 +95,12 @@ public final class InstanceManager {
         ServerBossEvent bar;
         long started, wonAt = -1;
         int warned;
+        /** A wave fight: waves started so far, when the next one comes (-1: one is on), how many the current began with. */
+        int wave;
+        long nextWaveAt = -1;
+        int waveSize;
+        /** The arena's {@code wave_spawn} markers. */
+        final List<Vec3> waveSpots = new ArrayList<>();
 
         Session(int id, ResourceLocation event, EventDef def, int slot, BlockPos origin, Vec3i size) {
             this.id = id;
@@ -174,7 +180,7 @@ public final class InstanceManager {
         boolean can = def.start().met(player);
         int kept = InstanceData.get(server).keptFor(me, event.toString()).size();
         PacketDistributor.sendToPlayer(player, new InstanceNet.Window(mode, event, npc == null ? -1 : npc.getId(), def.name(),
-                def.description(), can, can ? "" : def.start().message(), open, mine, hosting, kept, def.keeper()));
+                def.description(), can, can ? "" : def.start().message(), open, mine, hosting, kept, def.keeper(), def.maxPlayers()));
     }
 
     private static InstanceNet.LobbyView view(MinecraftServer server, Lobby l, EventDef def) {
@@ -317,34 +323,14 @@ public final class InstanceManager {
                 party.stream().map(p -> p.getGameProfile().getName()).toList(), Util.getMillis() - began);
 
         for (EventDef.Spawn spawn : def.spawns()) {
-            Vec3 at = place(level, s, spawn.at());
-            String nbt = spawn.nbt().replace("{x}", Integer.toString((int) Math.floor(at.x))).replace("{y}", Integer.toString((int) Math.floor(at.y)))
-                    .replace("{z}", Integer.toString((int) Math.floor(at.z))).replace("{ground}", Integer.toString(ground(level, at)));
-            Entity entity;
-            try {
-                CompoundTag tag = TagParser.parseTag(nbt);
-                entity = EntityType.loadEntityRecursive(tag, level, e -> {
-                    e.moveTo(at.x, at.y, at.z, level.random.nextFloat() * 360F, 0F);
-                    return e;
-                });
-            } catch (CommandSyntaxException e) {
-                LspInstances.LOGGER.error("Event {}: bad spawn NBT {}", event, nbt, e);
-                continue;
-            }
-            if (entity == null) {
-                LspInstances.LOGGER.error("Event {}: couldn't make {}", event, nbt);
-                continue;
-            }
-            // Mobs whose max health comes from their NBT (an aged dragon) start on the base health: top them up.
-            if (spawn.fullHealth() && entity instanceof LivingEntity living) living.setHealth(living.getMaxHealth());
-            if (!level.tryAddFreshEntityWithPassengers(entity)) continue;
-            if (spawn.boss()) {
-                s.bosses.add(entity.getUUID());
-                s.bossSpawns.add(at);
-                if (s.bossName.isEmpty()) s.bossName = entity.getDisplayName().getString();
-            }
+            for (int n = 0; n < spawn.count(); n++) spawnOne(level, s, spawn, place(level, s, spawn.at().orElse(CENTRE)));
         }
-        if (!s.bosses.isEmpty()) {
+        if (def.trial().hasWaves()) {
+            s.bar = new ServerBossEvent(Component.literal(def.name() + ": wave 1 of " + def.trial().waves().size()).withStyle(ChatFormatting.GOLD),
+                    BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.PROGRESS);
+            s.bar.setProgress(0F);
+            s.nextWaveAt = server.getTickCount() + Math.max(3, def.trial().rest()) * 20L;
+        } else if (!s.bosses.isEmpty()) {
             s.bar = new ServerBossEvent(Component.literal(s.bossName).withStyle(ChatFormatting.RED), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.NOTCHED_10);
         }
 
@@ -365,7 +351,7 @@ public final class InstanceManager {
             double off = (i % 2 == 0 ? 1 : -1) * ((i + 1) / 2);
             double side = Math.toRadians(yaw);
             double px = s.spawn.x + Math.cos(side) * off, pz = s.spawn.z + Math.sin(side) * off;
-            double py = ground(level, new Vec3(px, s.spawn.y, pz));
+            double py = standAt(level, px, s.spawn.y, pz);
             p.teleportTo(level, px, py, pz, yaw, 0F);
             if (s.bar != null) s.bar.addPlayer(p);
             p.sendSystemMessage(Component.literal(def.name() + (party.size() > 1 ? ": your party of " + party.size() + " is in." : ": you're in.")).withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
@@ -376,6 +362,104 @@ public final class InstanceManager {
         s.started = server.getTickCount();
         SESSIONS.put(s.id, s);
         return Optional.of(s);
+    }
+
+    private static final EventDef.Spot CENTRE = new EventDef.Spot(0, 0, 0);
+
+    /** Makes one of a spawn at a place in the arena; a boss joins the run's bosses. Null if it couldn't be made. */
+    private static Entity spawnOne(ServerLevel level, Session s, EventDef.Spawn spawn, Vec3 at) {
+        String nbt = spawn.nbt().replace("{x}", Integer.toString((int) Math.floor(at.x))).replace("{y}", Integer.toString((int) Math.floor(at.y)))
+                .replace("{z}", Integer.toString((int) Math.floor(at.z))).replace("{ground}", Integer.toString(standAt(level, at.x, at.y, at.z)));
+        Entity entity;
+        try {
+            CompoundTag tag = TagParser.parseTag(nbt);
+            entity = EntityType.loadEntityRecursive(tag, level, e -> {
+                e.moveTo(at.x, at.y, at.z, level.random.nextFloat() * 360F, 0F);
+                return e;
+            });
+        } catch (CommandSyntaxException e) {
+            LspInstances.LOGGER.error("Event {}: bad spawn NBT {}", s.event, nbt, e);
+            return null;
+        }
+        if (entity == null) {
+            LspInstances.LOGGER.error("Event {}: couldn't make {}", s.event, nbt);
+            return null;
+        }
+        // Mobs whose max health comes from their NBT (an aged dragon) start on the base health: top them up.
+        if (spawn.fullHealth() && entity instanceof LivingEntity living) living.setHealth(living.getMaxHealth());
+        if (!level.tryAddFreshEntityWithPassengers(entity)) return null;
+        if (spawn.boss()) {
+            s.bosses.add(entity.getUUID());
+            s.bossSpawns.add(at);
+            if (s.bossName.isEmpty()) s.bossName = entity.getDisplayName().getString();
+        }
+        return entity;
+    }
+
+    /** The next wave: its spawns at their places, or round the arena's wave markers; every mob goes for a player. */
+    private static void spawnWave(MinecraftServer server, ServerLevel level, Session s) {
+        EventDef.Trial trial = s.def.trial();
+        EventDef.Wave wave = trial.waves().get(s.wave);
+        s.wave++;
+        List<Vec3> spots = new ArrayList<>(s.waveSpots);
+        java.util.Collections.shuffle(spots, new java.util.Random(level.random.nextLong()));
+        int next = 0, made = 0;
+        List<ServerPlayer> players = s.inside.stream().map(u -> server.getPlayerList().getPlayer(u)).filter(java.util.Objects::nonNull).toList();
+        for (EventDef.Spawn spawn : wave.spawns()) {
+            for (int n = 0; n < spawn.count(); n++) {
+                Vec3 at;
+                if (spawn.at().isPresent()) at = place(level, s, spawn.at().get());
+                else if (!spots.isEmpty()) at = spots.get(next++ % spots.size());
+                else {
+                    // No markers: round a ring two thirds of the way out.
+                    double angle = level.random.nextDouble() * Math.PI * 2, r = s.def.radius() * 0.66;
+                    at = place(level, s, new EventDef.Spot((int) (Math.cos(angle) * r), (int) (Math.sin(angle) * r), 0));
+                }
+                Entity e = spawnOne(level, s, spawn, at);
+                if (e == null) continue;
+                made++;
+                if (e instanceof net.minecraft.world.entity.Mob mob) {
+                    mob.setPersistenceRequired();
+                    players.stream().min(java.util.Comparator.comparingDouble(p -> p.distanceToSqr(mob))).ifPresent(mob::setTarget);
+                }
+            }
+        }
+        s.waveSize = Math.max(1, made);
+        boolean last = s.wave == trial.waves().size();
+        if (s.bar != null) {
+            s.bar.setName(Component.literal(s.def.name() + ": wave " + s.wave + " of " + trial.waves().size() + (last && !s.bosses.isEmpty() ? " (" + s.bossName + ")" : ""))
+                    .withStyle(last ? ChatFormatting.RED : ChatFormatting.GOLD));
+            s.bar.setColor(last ? BossEvent.BossBarColor.RED : BossEvent.BossBarColor.YELLOW);
+        }
+        for (ServerPlayer p : players) {
+            p.sendSystemMessage(Component.literal(last ? "Final wave!" + (s.bossName.isEmpty() ? "" : " " + s.bossName + " enters the pit.") : "Wave " + s.wave + " of " + trial.waves().size() + ".")
+                    .withStyle(last ? ChatFormatting.RED : ChatFormatting.GOLD, ChatFormatting.BOLD));
+            p.playNotifySound(last ? SoundEvents.WITHER_SPAWN : SoundEvents.RAID_HORN.value(), SoundSource.HOSTILE, last ? 0.6F : 0.9F, 1F);
+        }
+    }
+
+    /** Everything alive in the arena that isn't a player: a wave's mobs, and whatever they split into. */
+    private static List<LivingEntity> aliveInArena(ServerLevel level, Session s) {
+        AABB box = new AABB(s.origin.getX() - 8, level.getMinBuildHeight(), s.origin.getZ() - 8,
+                s.origin.getX() + s.size.getX() + 8, level.getMaxBuildHeight(), s.origin.getZ() + s.size.getZ() + 8);
+        return level.getEntitiesOfClass(LivingEntity.class, box, e -> e.isAlive() && !(e instanceof Player) && !(e instanceof net.minecraft.world.entity.decoration.ArmorStand));
+    }
+
+    /** The fight is won: the rest of the pit's creatures go, and the event's win commands run for everyone inside. */
+    private static void won(MinecraftServer server, ServerLevel level, Session s, long now) {
+        s.wonAt = now;
+        String what = s.bossName.isEmpty() ? s.def.name() + " is cleared!" : s.bossName + " is slain!";
+        tell(server, s.inside, Component.literal(what + " You have " + s.def.lootTime() + " seconds before you're taken back.").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
+        if (s.def.trial().hasWaves()) for (LivingEntity e : aliveInArena(level, s)) e.discard();
+        for (UUID u : s.inside) {
+            ServerPlayer p = server.getPlayerList().getPlayer(u);
+            if (p == null) continue;
+            p.playNotifySound(SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, 1F, 1F);
+            for (String command : s.def.trial().winCommands()) {
+                server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), command.replace("{player}", p.getGameProfile().getName()));
+            }
+        }
+        LspInstances.LOGGER.info("Run {} of {} won by {}", s.id, s.event, s.inside.stream().map(u -> server.getPlayerList().getPlayer(u)).filter(java.util.Objects::nonNull).map(p -> p.getGameProfile().getName()).toList());
     }
 
     private static boolean slotTaken(int slot) {
@@ -404,7 +488,9 @@ public final class InstanceManager {
         // Data markers (structure blocks in DATA mode) name places in the arena; they go once read.
         for (StructureTemplate.StructureBlockInfo info : template.filterBlocks(s.origin, settings, Blocks.STRUCTURE_BLOCK)) {
             if (info.nbt() == null || !"DATA".equals(info.nbt().getString("mode"))) continue;
-            if ("player_spawn".equals(info.nbt().getString("metadata"))) s.marker = info.pos();
+            String meta = info.nbt().getString("metadata");
+            if ("player_spawn".equals(meta)) s.marker = info.pos();
+            if ("wave_spawn".equals(meta)) s.waveSpots.add(Vec3.atBottomCenterOf(info.pos()));
             level.setBlock(info.pos(), Blocks.AIR.defaultBlockState(), Block.UPDATE_CLIENTS);
         }
         data.slotArena.put(s.slot, now);
@@ -425,10 +511,29 @@ public final class InstanceManager {
         for (Entity e : level.getEntities((Entity) null, box, e -> !(e instanceof Player))) e.discard();
     }
 
-    /** A place in the arena: its x and z from the centre, standing on the ground there plus {@code dy}. */
+    /**
+     * A place in the arena: its x and z from the centre, standing on the ground there plus {@code dy}; or, given its
+     * {@code y} (an arena under a roof), that high above the arena's bottom.
+     */
     private static Vec3 place(ServerLevel level, Session s, EventDef.Spot spot) {
         double x = s.centre.getX() + spot.x() + 0.5, z = s.centre.getZ() + spot.z() + 0.5;
+        if (spot.y().isPresent()) return new Vec3(x, s.origin.getY() + spot.y().get() + spot.dy(), z);
         return new Vec3(x, ground(level, new Vec3(x, 0, z)) + spot.dy(), z);
+    }
+
+    /**
+     * Where someone stands at x, z near height y: the first floor found going down from just above it (solid below,
+     * room for feet and head), so a roof overhead doesn't count; the ground from above if there's none.
+     */
+    private static int standAt(ServerLevel level, double x, double y, double z) {
+        BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos();
+        int bx = (int) Math.floor(x), bz = (int) Math.floor(z), top = (int) Math.floor(y) + 2;
+        for (int yy = top; yy >= top - 12; yy--) {
+            if (!level.getBlockState(p.set(bx, yy - 1, bz)).blocksMotion()) continue;
+            if (level.getBlockState(p.set(bx, yy, bz)).blocksMotion() || level.getBlockState(p.set(bx, yy + 1, bz)).blocksMotion()) continue;
+            return yy;
+        }
+        return ground(level, new Vec3(x, y, z));
     }
 
     private static int ground(ServerLevel level, Vec3 at) {
@@ -474,18 +579,32 @@ public final class InstanceManager {
                     boss.teleportTo(home.x, home.y, home.z);
                 }
             }
-            if (s.bar != null) {
-                s.bar.setProgress(max > 0 ? Math.clamp(health / max, 0F, 1F) : 0F);
-                for (ServerPlayer p : List.copyOf(s.bar.getPlayers())) if (!s.inside.contains(p.getUUID())) s.bar.removePlayer(p);
-            }
-            if (!s.bosses.isEmpty() && max == 0 && s.wonAt < 0) {
-                s.wonAt = now;
-                tell(server, s.inside, Component.literal(s.bossName + " is slain! You have " + s.def.lootTime() + " seconds before you're taken back.").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
-                for (UUID u : s.inside) {
-                    ServerPlayer p = server.getPlayerList().getPlayer(u);
-                    if (p != null) p.playNotifySound(SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, 1F, 1F);
+            EventDef.Trial trial = s.def.trial();
+            // The bosses' health was measured before a wave that comes this tick: no win on that alone.
+            boolean spawned = false;
+            if (trial.hasWaves() && s.wonAt < 0 && !s.inside.isEmpty()) {
+                int alive = aliveInArena(level, s).size();
+                if (s.nextWaveAt < 0 && s.wave > 0 && alive == 0) {
+                    if (s.wave >= trial.waves().size()) won(server, level, s, now);
+                    else {
+                        s.nextWaveAt = now + trial.rest() * 20L;
+                        tell(server, s.inside, Component.literal("Wave " + s.wave + " cleared." + (trial.rest() > 0 ? " The next comes in " + trial.rest() + " seconds." : "")).withStyle(ChatFormatting.GREEN));
+                    }
                 }
+                if (s.nextWaveAt >= 0 && now >= s.nextWaveAt && s.wonAt < 0) {
+                    s.nextWaveAt = -1;
+                    spawnWave(server, level, s);
+                    spawned = true;
+                }
+                if (s.bar != null && s.wonAt < 0) {
+                    // On a boss wave the bar follows the bosses; otherwise how much of the wave is left.
+                    s.bar.setProgress(max > 0 ? Math.clamp(health / max, 0F, 1F) : s.nextWaveAt >= 0 ? 0F : Math.clamp(alive / (float) s.waveSize, 0F, 1F));
+                }
+            } else if (s.bar != null) {
+                s.bar.setProgress(max > 0 ? Math.clamp(health / max, 0F, 1F) : 0F);
             }
+            if (s.bar != null) for (ServerPlayer p : List.copyOf(s.bar.getPlayers())) if (!s.inside.contains(p.getUUID())) s.bar.removePlayer(p);
+            if (!spawned && !s.bosses.isEmpty() && max == 0 && s.wonAt < 0 && (!trial.hasWaves() || s.wave >= trial.waves().size())) won(server, level, s, now);
             if (s.inside.isEmpty()) {
                 end(server, s, null);
             } else if (s.wonAt >= 0 && now - s.wonAt >= s.def.lootTime() * 20L) {
@@ -534,6 +653,23 @@ public final class InstanceManager {
             return;
         }
         p.teleportTo(level, to.pos().getX() + 0.5, to.pos().getY(), to.pos().getZ() + 0.5, p.getYRot(), 0F);
+    }
+
+    /** Admins and tests: a wave fight jumps to a wave (1 is the first); what's in the arena now goes. False if it can't. */
+    static boolean skipTo(MinecraftServer server, Session s, int wave) {
+        EventDef.Trial trial = s.def.trial();
+        ServerLevel level = server.getLevel(DIMENSION);
+        if (!trial.hasWaves() || level == null || s.wonAt >= 0 || wave < 1 || wave > trial.waves().size()) return false;
+        for (LivingEntity e : aliveInArena(level, s)) e.discard();
+        s.wave = wave - 1;
+        s.nextWaveAt = server.getTickCount() + 20;
+        tell(server, s.inside, Component.literal("An admin moves the fight on to wave " + wave + ".").withStyle(ChatFormatting.GRAY));
+        return true;
+    }
+
+    /** A wave fight with safe deaths: the run this player is fighting in. */
+    static Optional<Session> safeDeathFor(ServerPlayer player) {
+        return sessionInside(player.getUUID()).filter(s -> s.def.trial().safeDeaths());
     }
 
     /** /instance leave: back out the way you came. */

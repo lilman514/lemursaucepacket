@@ -1,6 +1,6 @@
 ---
 description: >-
-  The quest book is a road map, not a gate: thirty-three chapters, and RuneScape-style main quests up to Dragon Slayer I.
+  The quest book is a road map, not a gate: thirty-six chapters, and RuneScape-style main quests from Cook's Assistant to the Inferno.
 icon: scroll
 cover: images/quest_book_landfall.jpg
 coverY: 0
@@ -16,7 +16,7 @@ The quest book (ESC → Quests) is a road map, not a gate: nothing is locked beh
 
 ## Chapters
 
-Thirty-three chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing.
+Thirty-six chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing.
 
 ## Main quests
 
@@ -29,6 +29,9 @@ RuneScape style: Lemurton's people have troubles of their own, and a quest only 
 | Cook's Assistant (novice) | The Cook, in the butcher's shop on the ring street | A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) | 1 quest point, Cooking XP, coins |
 | The Knight's Sword (intermediate) | Squire Asrol, at the armourer's | Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots | 1 quest point, Smithing XP, coins |
 | Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | See below | 2 quest points, the right to wear dragon armour, Attack and Defence XP, 25,000 coins and more |
+| The Fight Pits (master) | Guildmaster Greaves, after Dragon Slayer I | An offering, the Ashen Trial, Defence, Hitpoints and Attack or Ranged 50, then thirty waves and Kiln-Tok-Jad | 2 quest points, the Fire Cape, combat XP, 30,000 coins |
+| Ashes of the Kiln (grandmaster) | Elder Ashka, after the Fight Pits | The Wither, the Ender Dragon and the Warden; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 | 2 quest points, the way into the Inferno, 40,000 coins |
+| The Inferno (grandmaster) | Elder Ashka, after Ashes of the Kiln | The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk | 3 quest points, the Infernal Cape, combat XP, 100,000 coins |
 
 **Dragon Slayer I**, as in RuneScape: Oziach, who keeps the armoury on the ring street, tells you how to reach Elvarg on the isle of Crandor.
 
@@ -45,6 +48,8 @@ If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps every
 Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
 
 The fight itself, step by step: [Elvarg's Lair](elvarg.md).
+
+**The Fight Pits, Ashes of the Kiln and the Inferno** come after it: the Kilnfolk, ashen piglins in the volcanic lands, test outsiders in their wave fights, and the winners earn the Fire Cape and the Infernal Cape. Everything about them: [The Fight Pits and the Inferno](fight-pits.md).
 
 **The Ages** — one chapter per stage of progress:
 

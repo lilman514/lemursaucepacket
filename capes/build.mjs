@@ -2,7 +2,7 @@
 // Turns capes/capes.mjs into pack/config/lemursaucepacket/capes.json (read by the server and client cape
 // scripts) and docs/capes.md. Run `node capes/build.mjs`; publish.mjs does.
 
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { CAPES, NAMESPACE } from './capes.mjs'
@@ -57,10 +57,16 @@ const lines = [
   '**Wardrobe:** ESC → Capes, or `/capes`. It lists what you have unlocked; click a cape to wear it, or `/capes off` for none. Unlocks announce themselves in chat.',
   ''
 ]
+// In-game pictures (website/tools/capes.mjs makes them from a photo session): a sheet per kind, and the animated capes
+// moving side by side.
+const picture = (file, alt, caption) => `<figure><img src="images/${file}" alt="${alt}"><figcaption><p>${caption}</p></figcaption></figure>`
 for (const kind of ['skill', 'quest', 'achievement', 'legendary', 'owner']) {
   const list = CAPES.filter((c) => c.kind === kind)
   if (list.length === 0) continue
-  lines.push(`## ${KIND_TITLE[kind]}`, '', KIND_TEXT[kind], '', '| Cape | How to earn it | Perk |', '|---|---|---|')
+  lines.push(`## ${KIND_TITLE[kind]}`, '', KIND_TEXT[kind], '')
+  if (existsSync(path.join(root, 'docs', 'images', `capes_${kind}.jpg`))) lines.push(picture(`capes_${kind}.jpg`, `The ${KIND_TITLE[kind].toLowerCase()} as worn in game`, `The ${KIND_TITLE[kind].toLowerCase()}, worn`), '')
+  if (kind === 'legendary' && existsSync(path.join(root, 'docs', 'images', 'capes_animated.webp'))) lines.push(picture('capes_animated.webp', 'The animated capes in motion', 'In motion'), '')
+  lines.push('| Cape | How to earn it | Perk |', '|---|---|---|')
   for (const c of list) lines.push(`| ${c.name}${c.animated ? ' *(animated)*' : ''} | ${c.description} | ${c.perkText ?? '—'} |`)
   lines.push('')
 }

@@ -1,0 +1,659 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Elder of the Kilnfolk: the Fight Pits, Ashes of the Kiln and the Inferno.",
+    entityTypeId:"easy_npc:piglin",
+    name:"Elder Ashka",
+    variantType:"WARPAINT",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:piglin",
+    VariantType:"WARPAINT",
+    CustomName:'{"text":"Elder Ashka","color":"#E8742C"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"inf_honoured",
+          Name:"Infernal",
+          Priority:90,
+          Texts:[
+            {
+              Text:"Kiln-Kal-Zuk is ash, and an outsider wears the Infernal Cape. The Kilnfolk will sing of you, @initiator, for as long as the mountains burn."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_inf_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"inf_honoured_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"inf_cape",
+          Name:"You came back",
+          Priority:85,
+          Texts:[
+            {
+              Text:"You came back out of the Inferno. With the cape. I have waited my whole life to see that."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_inf_cape"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"inf_cape_0",
+              Name:"Zuk is no more",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator inferno done @npc-uuid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"inf_thanks",
+          Name:"Honoured",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Wear it, champion. Every one of the Kilnfolk will bow when you pass."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"inf_thanks_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_wait",
+          Name:"The seal",
+          Priority:80,
+          Texts:[
+            {
+              Text:"The seal will open for you. Keeper Zarn waits at the Inferno's gate behind me.
+
+Keep the drifting shield between you and Zuk when his eyes burn, and strike his menders before they mend him."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ash_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_wait_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_check",
+          Name:"Ready?",
+          Priority:70,
+          Texts:[
+            {
+              Text:"Have you done it all? The Wither, the Ender Dragon and the Warden slain; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ash_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_check_0",
+              Name:"I am ready. Here is the key",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator ashes ready @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ash_check_1",
+              Name:"What must I do again?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ash_tasks"
+                }
+              ]
+            },
+            {
+              Label:"ash_check_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_ready",
+          Name:"The seal",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Then the seal will open for you. Speak to Keeper Zarn at the gate. May the Kiln keep you."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_ready_0",
+              Name:"I'll go",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Not yet. The three great beasts, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_not_ready_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_honoured",
+          Name:"Fire Cape",
+          Priority:60,
+          Texts:[
+            {
+              Text:"You wear the Fire Cape, @initiator. No outsider has, in a hundred years.
+
+But there is a deeper pit than Grull's..."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_honoured_0",
+              Name:"A deeper pit?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ash_start"
+                }
+              ]
+            },
+            {
+              Label:"pits_honoured_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_start",
+          Name:"The Inferno",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Below the Fight Pits burns the Inferno, where our oldest champion, Kiln-Kal-Zuk, waits behind his shield. Its seal opens to an Infernal Key, and to no one the world doesn't already fear.
+
+Slay the Wither, the Ender Dragon and the Warden. Have Brakka forge you a key. Grow stronger. Then come back."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_start_0",
+              Name:"I'll do it",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_ash_started"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ash_tasks"
+                }
+              ]
+            },
+            {
+              Label:"ash_start_1",
+              Name:"Another time",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ash_tasks",
+          Name:"The way to the Inferno",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Three things. The great beasts: the Wither, the Ender Dragon and the Warden, slain (your quest book counts them). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ash_tasks_0",
+              Name:"I understand",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_fire",
+          Name:"The Fire Cape!",
+          Priority:55,
+          Texts:[
+            {
+              Text:"Kiln-Tok-Jad has fallen to an outsider. Grull told me, and I did not believe him. Let me see it..."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_fire"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_fire_0",
+              Name:"Here it is",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator fight_pits done @npc-uuid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_thanks",
+          Name:"Honoured",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"It suits you. The Kiln has accepted you, champion."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_thanks_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_wait",
+          Name:"The pits",
+          Priority:50,
+          Texts:[
+            {
+              Text:"Grull waits at the pit mouth. Thirty waves, and Kiln-Tok-Jad at the end of them.
+
+When flame gathers in him, raise your shield toward him. When he rises, run from the burning ring. And when his menders come, strike one."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_allowed"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_wait_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_check",
+          Name:"Well, outsider?",
+          Priority:40,
+          Texts:[
+            {
+              Text:"Well? The offering for the Kiln, the Ashen Trial, and the strength the pits ask: Defence 50, Hitpoints 50, and Attack or Ranged 50."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_elder"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_check_0",
+              Name:"Here is the offering",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator fight_pits offering @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"pits_check_1",
+              Name:"I am ready for the pits",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator fight_pits allowed @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"pits_check_2",
+              Name:"What must I do again?",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"pits_tasks"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_tasks",
+          Name:"Three things",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Three things. An offering for the Kiln: 8 magma cream, 4 blaze rods and 16 obsidian. The Ashen Trial: hunt the fire beasts of the Nether (your quest book counts them). And strength: Defence 50, Hitpoints 50, and Attack or Ranged 50."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_tasks_0",
+              Name:"I understand",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_offering_ok",
+          Name:"Accepted",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"The Kiln accepts your offering. Now the trial, and your strength."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_offering_ok_0",
+              Name:"Thank you, Elder",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_offering_missing",
+          Name:"Not enough",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"That is not the whole offering. 8 magma cream, 4 blaze rods, 16 obsidian."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_offering_missing_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_allowed",
+          Name:"Go, then",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Then I vouch for you. Speak to Grull at the pit mouth. Do not die in there: it would shame us both."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_allowed_0",
+              Name:"I won't",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Not yet. The offering, the Ashen Trial, and your strength: all three. Your quest book shows what's done; your chat says what's missing."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_not_ready_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_intro",
+          Name:"The Guild sent you",
+          Priority:30,
+          Texts:[
+            {
+              Text:"So the Guild's dragonslayer came. The Kilnfolk heard about Elvarg; we heard you did not run.
+
+The Fight Pits are not for outsiders, @initiator. Prove you can stand the heat, and I will vouch for you."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_pits_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_intro_0",
+              Name:"I'll prove myself",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_pits_elder"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"pits_tasks"
+                }
+              ]
+            },
+            {
+              Label:"pits_intro_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"default",
+          Name:"Outsider",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Outsider. You smell of rain and green things.
+
+This is Kiln Hollow. Our champions fight in the pits below; outsiders do not, unless one of us vouches for them."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {},
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.kiln_elder"
+    ]
+  }
+}

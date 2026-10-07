@@ -1,0 +1,272 @@
+{
+  PresetMetadata:{
+    access:"RESTRICTED",
+    author:"LemurSaucePacket",
+    category:"Lemurton",
+    description:"Kilnfolk smith: fire-proof goods, and the Infernal Key for Ashes of the Kiln.",
+    entityTypeId:"easy_npc:piglin",
+    name:"Brakka the Smith",
+    variantType:"PIGLIN",
+    version:"1.0.0"
+  },
+  data:{
+    id:"easy_npc:piglin",
+    VariantType:"PIGLIN",
+    CustomName:'{"text":"Brakka the Smith","color":"#C9A227"}',
+    CustomNameVisible:1b,
+    Invulnerable:1b,
+    PersistenceRequired:1b,
+    EasyNPCVersion:3,
+    EntityAttribute:{
+      IsInvulnerable:1b,
+      IsAttackableByPlayers:0b,
+      IsAttackableByMonsters:0b,
+      IsPushable:0b,
+      IsKnockbackResistant:1b
+    },
+    ObjectiveData:{
+      HasObjectives:1b,
+      ObjectiveDataSet:[
+        {
+          Type:"LOOK_AT_PLAYER"
+        },
+        {
+          Type:"LOOK_AT_RESET"
+        }
+      ]
+    },
+    ActionData:{
+      ActionEventSet:{
+        ON_INTERACTION:[
+          {
+            Type:"OPEN_DEFAULT_DIALOG"
+          }
+        ]
+      }
+    },
+    DialogData:{
+      Type:"STANDARD",
+      DialogDataSet:[
+        {
+          Label:"default",
+          Name:"Greeting",
+          Priority:10,
+          Texts:[
+            {
+              Text:"Obsidian, blackstone, things that burn and things that do not. Gold talks, outsider."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"default_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"default_1",
+              Name:"Tell me about yourself",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"about"
+                }
+              ]
+            },
+            {
+              Label:"default_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"about",
+          Name:"About",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"I forge with lava, not coal. The Elder says outsiders are soft. You look less soft than most."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"about_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"about_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"key_after",
+          Name:"Brakka",
+          Priority:35,
+          Texts:[
+            {
+              Text:"Obsidian, blackstone, things that burn and things that don't. That key of yours still warm?"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ash_key"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"key_after_0",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"key_after_1",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"key_ask",
+          Name:"An Infernal Key",
+          Priority:30,
+          Texts:[
+            {
+              Text:"The Elder wants you an Infernal Key? Then bring me what it is made of: a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ash_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"key_ask_0",
+              Name:"Here they are",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator ashes key @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"key_ask_1",
+              Name:"Let's trade",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp shop open @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"key_ask_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"key_forged",
+          Name:"Forged",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"There. Hold it by the cord: it burns. Give it to the Elder when you are ready."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"key_forged_0",
+              Name:"Thank you, Brakka",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"key_missing",
+          Name:"Not enough",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"A nether star, 4 netherite ingots, 16 crying obsidian, 16 blaze rods. All of it."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"key_missing_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    HandItems:[
+      {
+        id:"minecraft:golden_sword",
+        count:1
+      },
+      {}
+    ],
+    ArmorItems:[
+      {},
+      {},
+      {},
+      {}
+    ],
+    SkinData:{
+      Type:"DEFAULT"
+    },
+    Tags:[
+      "lsp_zone_allowed",
+      "lemurton_npc",
+      "lsp_npc.kiln_smith"
+    ]
+  }
+}

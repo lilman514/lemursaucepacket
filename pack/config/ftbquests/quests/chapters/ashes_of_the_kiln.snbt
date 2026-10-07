@@ -1,0 +1,309 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ashes_of_the_kiln"
+	group: "1F2E0B7F304AB615"
+	icon: {
+		id: "minecraft:nether_star"
+	}
+	id: "261571326DCB4199"
+	images: [
+		{
+			height: 2.7574468085106383d
+			id: "4AFE7515E681AB95"
+			image: "lemursaucepacket:textures/quests/panel.png"
+			rotation: 0.0d
+			text_h_align: "start"
+			text_inset: 3
+			text_on_image: true
+			text_shadow: true
+			text_v_align: "start"
+			width: 6.280851063829787d
+			x: 1.9d
+			y: -2.1d
+		}
+	]
+	order_index: 5
+	progression_mode: "default"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "6DF1F43696BD92CE"
+			invisible: true
+			rewards: [
+				{
+					auto: "enabled"
+					id: "100E00434702E287"
+					type: "xp"
+					xp: 150
+				}
+				{
+					auto: "enabled"
+					id: "3C7A76B596CD7E47"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "36083B5DF614C6DB"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:nether_star"
+					}
+					id: "39E3440AB9DC3AC4"
+					stage: "q_ash_started"
+					type: "gamestage"
+				}
+			]
+			x: 0.0d
+			y: 2.35d
+		}
+		{
+			dependencies: ["6DF1F43696BD92CE"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:wither_skeleton_skull"
+			}
+			id: "6BFA736EC61E0DA6"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "7D3C576E958403B6"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "49AFDA76DBBCC506"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 5120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "2B92FFA533DC546E"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					auto: "enabled"
+					command: "tag {p} add q_ash_beasts"
+					elevate_perms: true
+					id: "65F706A71E2DDF22"
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{
+					entity: "minecraft:wither"
+					id: "2F2D733EF04716AD"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "minecraft:ender_dragon"
+					id: "3F5D0504D6000E7F"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "minecraft:warden"
+					id: "0D006DBE3B5162FF"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.3d
+			y: 0.65d
+		}
+		{
+			dependencies: ["6DF1F43696BD92CE"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "30E402239C163422"
+			optional: true
+			rewards: [
+				{
+					id: "5B415655259A519A"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "2DE67ABBA36D0D36"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "6D85B5B75BB6BB43"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5E24F2369F3423BE"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "21D79F35080AC4A6"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "336BEFE41C044CE7"
+					item: {
+						count: 1
+						id: "minecraft:crying_obsidian"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6418711762B61CCD"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+			]
+			x: 2.3d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6DF1F43696BD92CE"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:ominous_trial_key"
+			}
+			id: "6BA06D227782B3AF"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "705B4DD37C9A563F"
+					type: "xp"
+					xp: 400
+				}
+				{
+					auto: "enabled"
+					id: "34BDE472757224C2"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "41FF79B8C5E436F8"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:ominous_trial_key"
+					}
+					id: "0E6BB7E0E4BDC991"
+					stage: "q_ash_key"
+					type: "gamestage"
+				}
+			]
+			x: 2.3d
+			y: 2.4d
+		}
+		{
+			dependencies: ["6BFA736EC61E0DA6", "6BA06D227782B3AF"]
+			hide_until_deps_complete: true
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "7AE1DF02F7AD3701"
+			rewards: [
+				{
+					auto: "enabled"
+					id: "1814433290D3C772"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					auto: "enabled"
+					id: "21D1E3E8F53B02F2"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 45120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					id: "2690D5016AF8A320"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: {
+						id: "minecraft:ominous_trial_key"
+					}
+					id: "35E42CE433839740"
+					stage: "q_ash_done"
+					type: "gamestage"
+				}
+			]
+			x: 4.6d
+			y: 1.55d
+		}
+	]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "The Fight Pits and the Inferno",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:magma_cream",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(bold)Kilnfolk$() are ashen piglins who left the Nether long ago for the fire mountains of the Overworld. Their champions prove themselves in the $(bold)Fight Pits$(), thirty waves of pit beasts with $(bold)Kiln-Tok-Jad$() at the end, and the best of them in the $(bold)Inferno$() below it, where $(bold)Kiln-Kal-Zuk$() waits behind his shield. Win and you earn the two best capes in the pack: the $(bold)Fire Cape$() and the $(bold)Infernal Cape$().$(br2)It's our take on RuneScape's Fight Cave and Inferno, with Minecraft's own creatures standing in for the TzHaar's."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Both are solo and instanced: every run gets a pit of its own, so nobody can join in or steal it. $(bold)If you fall, you're pulled out alive with everything you had$(): no drop, no grave, no Heart lost. Only the run is lost."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Kiln Hollow",
+      "text": "The Kilnfolk's outpost stands in the volcanic lands nearest Lemurton (a volcanic crater or peak, or failing those basalt cliffs, an ashen savanna or badlands). It's a plaza of blackstone cut into the rock: the grated mouth of the Fight Pits in the middle, the sealed gate of the Inferno behind it, a waystone by the way in, and a safe zone like Lemurton's."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Who - Where - What for$()$(br)$(bold)$(bold)Elder Ashka$()$() - On her seat of blackstone and gold (west) - The quests: she decides who goes in$(br)$(bold)$(bold)Grull the Pitmaster$()$() - At the pit mouth - Right-click: the Fight Pits$(br)$(bold)$(bold)Keeper Zarn$()$() - At the Inferno's gate - Right-click: the Inferno$(br)$(bold)$(bold)Brakka the Smith$()$() - At his forge (east) - Obsidian, blackstone, fire charges, Fire Resistance, arrows and shields for coins; he forges the Infernal Key"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(bold)Kilnfolk Pass$(), which Guildmaster Greaves gives you, is a compass that points to Kiln Hollow. Touch the waystone when you get there."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting in",
+      "text": "Three main quests, one after another (they show up in your book under $(bold)Main Quests$() once someone gives them to you; see $(l:lemursaucepacket:quests)Quests$(/l)):$(br2)1. $(bold)The Fight Pits$() (after $(l:lemursaucepacket:elvarg)Dragon Slayer I$(/l)): Guildmaster Greaves gives you the Kilnfolk Pass. At Kiln Hollow, Elder Ashka wants three things before she vouches for you:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(italic) an $(bold)offering$() for the Kiln: 8 magma cream, 4 blaze rods and 16 obsidian; $() the $(bold)Ashen Trial$(): 15 blazes, 15 magma cubes and 8 wither skeletons, in the Nether (the quest book counts them); * the strength the pits ask: $(bold)Defence 50, Hitpoints 50, and Attack or Ranged 50$().$(br2)Then Grull lets you in. Win, and show the Elder your Fire Cape."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "2. $(bold)Ashes of the Kiln$() (after the Fire Cape): slay the $(bold)Wither, the Ender Dragon and the Warden$(); have Brakka forge an $(bold)Infernal Key$() from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods; and grow to $(bold)Defence 80, Hitpoints 80, and Attack or Ranged 80$(). Give the Elder the key.$(br)3. $(bold)The Inferno$(): Keeper Zarn opens the seal. Win, and show the Elder your Infernal Cape."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How a wave fight works",
+      "text": "$(li)Right-click Grull (or Zarn) and press $(bold)Enter$(). You arrive on the south side of the pit, facing in.$(br)$(li)The waves come one after another: each a few seconds after the last beast of the one before falls (including what it split into or called up). The bar at the top counts them; on the last wave it follows the boss.$(br)$(li)Beasts come in from all round the pit. Use the boulders (and in the Inferno, the pillars) to break their line of sight.$(br)$(li)You have 90 minutes in the Fight Pits and two hours in the Inferno. $(#e0ac46)/instance leave$() walks out early.$(br)$(li)Win and you have 20 secon"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ds before you're taken back. You can fight again any time for the coins (10,000 a win in the Fight Pits, 40,000 in the Inferno); each cape only comes once."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Fight Pits",
+      "text": "$(#b9a98a)Beast - What it is - What it does$()$(br)$(bold)$(bold)Kiln-Kih$()$() - A small magma cube - Embers: quick and weak$(br)$(bold)$(bold)Kiln-Kek$()$() - A big magma cube - Splits into embers when it dies$(br)$(bold)$(bold)Kiln-Xil$()$() - A wither skeleton with a bow - Shoots flaming arrows from range$(br)$(bold)$(bold)Kiln-MejKot$()$() - A piglin brute - Hits hard, and heals the beasts round it: kill it first$(br)$(bold)$(bold)Kiln-Zek$()$() - A big blaze - Throws fire that Fire Resistance doesn't stop$(br)$(bold)$(bold)Kiln-Tok-Jad$()$() - A giant blaze - The champion: see below"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Waves 1 to 6 are Kih and Kek, 7 to 12 bring in the Xil, 13 to 19 the MejKot, 20 to 29 the Zek, and wave 30 is Kiln-Tok-Jad alone."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Kiln-Tok-Jad",
+      "text": "Jad drifts toward you and attacks every four seconds. Every attack is telegraphed, and the line above your hotbar says which:$(br2)$(li)$(bold)Fire volley$(): flames gather in his maw. $(bold)Raise your shield toward him$() (it has to be up a moment before he fires). If it isn't, about two thirds of your health goes, through armour and Protection.$(br)$(li)$(bold)Slam$(): he rises, and a ring of fire burns round where you stand. $(bold)Get out of the ring$() before he comes down. Inside it, more than half your health goes and you're thrown up."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "At half health he calls $(bold)four menders$() (Kiln-HurKot, zombified piglins) who walk to him and heal him. $(bold)Strike one$() and they all turn on you instead, as zombified piglins do. Then they're just four more beasts to deal with, and Jad is yours.$(br2)Bring a shield (the Anti-dragon Shield works), food, healing and Strength potions, golden apples (their absorption hearts soak up a hit) and a bow for the Xil. Fire Resistance helps against burning and lava, but not against the hits themselves."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Inferno",
+      "text": "Twenty-six waves of the Kal- beasts, each with a swarm of Nib in it, then a $(bold)Kal-Tok-Jad$(), then $(bold)two at once$(), then $(bold)Kiln-Kal-Zuk$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Beast - What it is - What it does$()$(br)$(bold)$(bold)Kal-Nib$()$() - A vex - Swarms of three in every wave$(br)$(bold)$(bold)Kal-MejRah$()$() - A phantom - Drains your run: Slowness and Hunger when it hits$(br)$(bold)$(bold)Kal-Ak$()$() - A great magma cube - Splits, and splits again$(br)$(bold)$(bold)Kal-ImKot$()$() - A hoglin - Burrows up beside you when it can't get closer$(br)$(bold)$(bold)Kal-Xil$()$() - A wither skeleton with a stronger bow - Shoots from range$(br)$(bold)$(bold)Kal-Zek$()$() - An evoker - Fangs, and calls up vexes$(br)$(bold)$(bold)Kal-Tok-Jad$()$() - A giant blaze - Jad again, "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "with three menders at half health"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Kiln-Kal-Zuk",
+      "text": "Zuk hangs over the lava lake on the north side, and a $(bold)shield$() of obsidian and crying obsidian drifts back and forth along its shore."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Every few seconds $(bold)his eyes burn$() (his face opens and he wails). Then he burns everyone the shield doesn't cover: $(bold)be behind the shield$(), on the line between you and him, or nine tenths of your health goes.$(br)$(li)He's close enough to the shore to hit from right behind the shield, so you can fight him as it drifts, keeping it between you. With a bow you can shoot from anywhere behind it.$(br)$(li)At four fifths and three fifths of his health he sends a Kal-Xil and a Kal-Zek; at half, a Kal-Tok-Jad; at a quarter, three menders (Kal-MejJak) who walk to the shore to heal him. Strike one.$(br)$"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "(li)Near the end he burns more often."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The capes",
+      "text": "$(#b9a98a)Cape - Won in - Perks$()$(br)$(bold)$(bold)Fire Cape$()$() - The Fight Pits - +12% critical damage, Fire Resistance$(br)$(bold)$(bold)Infernal Cape$()$() - The Inferno - +20% critical damage, +5% critical chance, +1 heart, Fire Resistance$(br2)Both are animated: lava pours down the Fire Cape, and the Infernal Cape's cracks pulse from a molten core. Wear them from the $(l:lemursaucepacket:capes)cape menu$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "For admins",
+      "text": "$(li)$(#e0ac46)/lsp kiln where$(): where Kiln Hollow is (or its land, before it's built); $(#e0ac46)/lsp kiln goto <player>$(); $(#e0ac46)/lsp kiln pass <player>$().$(br)$(li)$(#e0ac46)/instances start lemursaucepacket:fight_pits <player>$() (or $(#e0ac46)lemursaucepacket:inferno$()) starts a run without the quests; $(#e0ac46)/instances wave <run> <wave>$() jumps a run to a wave (run 0 is the one you are in); $(#e0ac46)/instances list$() shows the runs."
+    }
+  ]
+}

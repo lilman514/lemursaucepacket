@@ -16,6 +16,8 @@ Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Ever
 
 One per skill, at level 99. Each has a perk while worn.
 
+<figure><img src="images/capes_skill.jpg" alt="The skill capes as worn in game"><figcaption><p>The skill capes, worn</p></figcaption></figure>
+
 | Cape | How to earn it | Perk |
 |---|---|---|
 | Attack Cape | Attack 99. | +5% crit chance |
@@ -37,6 +39,8 @@ One per skill, at level 99. Each has a perk while worn.
 
 Finish a chapter of the quest book (its last quest hands the cape over).
 
+<figure><img src="images/capes_quest.jpg" alt="The quest capes as worn in game"><figcaption><p>The quest capes, worn</p></figcaption></figure>
+
 | Cape | How to earn it | Perk |
 |---|---|---|
 | Settler's Cape | Finish the Landfall chapter. | — |
@@ -51,6 +55,8 @@ Finish a chapter of the quest book (its last quest hands the cape over).
 
 Vanilla advancements that take real effort.
 
+<figure><img src="images/capes_achievement.jpg" alt="The achievement capes as worn in game"><figcaption><p>The achievement capes, worn</p></figcaption></figure>
+
 | Cape | How to earn it | Perk |
 |---|---|---|
 | Explorer Cape | Visit every Overworld biome (Adventuring Time). | — |
@@ -62,15 +68,23 @@ Vanilla advancements that take real effort.
 
 Animated, and exceedingly hard to earn.
 
+<figure><img src="images/capes_legendary.jpg" alt="The legendary capes as worn in game"><figcaption><p>The legendary capes, worn</p></figcaption></figure>
+
+<figure><img src="images/capes_animated.webp" alt="The animated capes in motion"><figcaption><p>In motion</p></figcaption></figure>
+
 | Cape | How to earn it | Perk |
 |---|---|---|
 | Maxed Cape *(animated)* | Every skill at 99. | +5% crit chance, +5% crit damage, +1 heart |
 | Completionist Cape *(animated)* | Every chapter of the quest book finished. | +10% speed |
 | Dragonslayer Cape *(animated)* | Kill the Ender Dragon. | Fire Resistance |
+| Fire Cape *(animated)* | Defeat the champion of the Fight Pits. | +12% crit damage, Fire Resistance |
+| Infernal Cape *(animated)* | Survive the Inferno. | +20% crit damage, +5% crit chance, +1 heart, Fire Resistance |
 
 ## The owner's cape
 
 Not earnable.
+
+<figure><img src="images/capes_owner.jpg" alt="The the owner's cape as worn in game"><figcaption><p>The the owner's cape, worn</p></figcaption></figure>
 
 | Cape | How to earn it | Perk |
 |---|---|---|

@@ -20,7 +20,8 @@ export const QUEST_ITEMS = {
   antidragon_shield: questItem('minecraft:shield', 'antidragon_shield', 'Anti-dragon Shield', 'gold', ['Lemurton has kept it since', 'the old dragon wars.']),
   map_piece_1: questItem('minecraft:paper', 'map_piece_1', 'Map Part (1 of 3)', 'yellow', ['A torn scrap of an old sea chart.', 'Lucan the Jeweller sold it to you.']),
   map_piece_2: questItem('minecraft:paper', 'map_piece_2', 'Map Part (2 of 3)', 'yellow', ['Wizard Traiborn kept it in a', 'box only a spell could open.']),
-  map_piece_3: questItem('minecraft:paper', 'map_piece_3', 'Map Part (3 of 3)', 'yellow', ["The Champions' Guild gives it", 'to those who pass its trial.'])
+  map_piece_3: questItem('minecraft:paper', 'map_piece_3', 'Map Part (3 of 3)', 'yellow', ["The Champions' Guild gives it", 'to those who pass its trial.']),
+  infernal_key: questItem('minecraft:ominous_trial_key', 'infernal_key', 'Infernal Key', 'red', ['Forged by Brakka from a', 'nether star and netherite.', 'It opens the Inferno.'])
 }
 
 const take = (id, count = 1, quest) => ({ id, count, quest })
@@ -100,6 +101,72 @@ export const QUEST_STEPS = {
     }
   }
 }
+
+/** The Kilnfolk's quests (Kiln Hollow): the Fight Pits for the Fire Cape, then Ashes of the Kiln and the Inferno. */
+Object.assign(QUEST_STEPS, {
+  fight_pits: {
+    title: 'The Fight Pits',
+    stages: ['q_pits_started', 'q_pits_elder', 'q_pits_offering', 'q_pits_trial', 'q_pits_allowed', 'q_pits_fire', 'q_pits_done'],
+    steps: {
+      pass: { needs: ['q_ds_done'], lacks: ['q_pits_started'], special: ['kiln_pass'], stage: 'q_pits_started', message: 'Guildmaster Greaves gives you a Kilnfolk Pass.', ok: 'pits_pass_given' },
+      offering: {
+        needs: ['q_pits_elder'],
+        lacks: ['q_pits_offering'],
+        take: [take('minecraft:magma_cream', 8), take('minecraft:blaze_rod', 4), take('minecraft:obsidian', 16)],
+        stage: 'q_pits_offering',
+        message: 'You lay the offering before the Kiln.',
+        ok: 'pits_offering_ok',
+        missing: 'pits_offering_missing',
+        done: 'pits_check'
+      },
+      allowed: {
+        needs: ['q_pits_elder', 'q_pits_offering', 'q_pits_trial'],
+        lacks: ['q_pits_allowed'],
+        skills: { defence: 50, hitpoints: 50, 'attack|ranged': 50 },
+        stage: 'q_pits_allowed',
+        message: 'Elder Ashka vouches for you: the Fight Pits are open to you.',
+        ok: 'pits_allowed',
+        missing: 'pits_not_ready',
+        done: 'pits_not_ready'
+      },
+      done: { needs: ['q_pits_fire'], lacks: ['q_pits_done'], stage: 'q_pits_done', message: 'Elder Ashka honours your Fire Cape.', ok: 'pits_thanks' }
+    }
+  },
+  ashes: {
+    title: 'Ashes of the Kiln',
+    stages: ['q_ash_started', 'q_ash_beasts', 'q_ash_key', 'q_ash_done'],
+    steps: {
+      key: {
+        needs: ['q_ash_started'],
+        lacks: ['q_ash_key'],
+        take: [take('minecraft:nether_star'), take('minecraft:netherite_ingot', 4), take('minecraft:crying_obsidian', 16), take('minecraft:blaze_rod', 16)],
+        give: [QUEST_ITEMS.infernal_key],
+        stage: 'q_ash_key',
+        message: 'Brakka forges you an Infernal Key.',
+        ok: 'key_forged',
+        missing: 'key_missing'
+      },
+      ready: {
+        needs: ['q_ash_started', 'q_ash_beasts', 'q_ash_key'],
+        lacks: ['q_ash_done'],
+        skills: { defence: 80, hitpoints: 80, 'attack|ranged': 80 },
+        take: [take('minecraft:ominous_trial_key', 1, 'infernal_key')],
+        stage: 'q_ash_done',
+        message: "Elder Ashka takes your Infernal Key: the Inferno's seal will open for you.",
+        ok: 'ash_ready',
+        missing: 'ash_not_ready',
+        done: 'ash_not_ready'
+      }
+    }
+  },
+  inferno: {
+    title: 'The Inferno',
+    stages: ['q_inf_cape', 'q_inf_done'],
+    steps: {
+      done: { needs: ['q_inf_cape'], lacks: ['q_inf_done'], stage: 'q_inf_done', message: 'Elder Ashka honours your Infernal Cape.', ok: 'inf_thanks' }
+    }
+  }
+})
 
 /** What the main quests ask before Dragon Slayer I: the Champions' Guild wants proven adventurers. */
 export const DRAGON_SLAYER_NEEDS = ['q_welcome_done', 'q_cook_done', 'q_sword_done']

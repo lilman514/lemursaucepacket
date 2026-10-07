@@ -46,6 +46,28 @@ const G = [
   ['elvarg_low', 'Too close for comfort', 'crandor'],
   ['lair_wide', 'Her lair: a clearing she burnt for herself', 'crandor'],
   ['event_window', "Ned's window: fight alone or open a co-op fight", 'interface crandor'],
+  ['kiln_aerial', 'Kiln Hollow, on a volcano above the clouds', 'kiln', true],
+  ['kiln_hollow', 'Kiln Hollow from the way in', 'kiln'],
+  ['kiln_dusk', 'Dusk over Kiln Hollow', 'kiln'],
+  ['kiln_forge', "Brakka's forge", 'kiln'],
+  ['kiln_people', 'The Kilnfolk at the pit mouth', 'kiln people'],
+  ['kiln_elder', 'Elder Ashka', 'kiln interface'],
+  ['pits_window', "Grull's window: one way in", 'kiln interface'],
+  ['pits_jad', 'Kiln-Tok-Jad draws in flame', 'kiln', true],
+  ['pits_arena', 'The Fight Pits', 'kiln'],
+  ['pits_jad_side', 'Jad over the pit floor', 'kiln'],
+  ['pits_menders', 'Jad and his menders', 'kiln'],
+  ['inferno_shield', "Kiln-Kal-Zuk's eyes burn: get behind the shield", 'kiln', true],
+  ['inferno_zuk', 'Kiln-Kal-Zuk over the lava lake', 'kiln'],
+  ['inferno_arena', 'The Inferno and its pillars', 'kiln'],
+  ['inferno_wide', 'Zuk across the lake', 'kiln'],
+  ['set_compacted_netherite', 'The Compacted Netherite set', 'gear', true],
+  ['set_prospector', "The Prospector's set", 'gear'],
+  ['set_aeronaut', "The Aeronaut's set", 'gear'],
+  ['set_duelist', 'The Brass Duelist set', 'gear'],
+  ['set_compacted_diamond', 'The Compacted Diamond set', 'gear'],
+  ['cape_fire_cape', 'The Fire Cape: lava running down the cloth', 'gear'],
+  ['cape_infernal_cape', 'The Infernal Cape: cracks pulsing from a molten core', 'gear'],
   ['esc_menu', 'The ESC menu', 'interface', true],
   ['inventory', 'The inventory and the skills panel', 'interface'],
   ['xp_tracker', 'XP as it comes in', 'interface'],
@@ -111,6 +133,8 @@ const main = `<main id="main">
       <button type="button" data-filter="night" aria-pressed="false">By night</button>
       <button type="button" data-filter="people" aria-pressed="false">Townsfolk</button>
       <button type="button" data-filter="crandor" aria-pressed="false">Crandor and Elvarg</button>
+      <button type="button" data-filter="kiln" aria-pressed="false">The Kilnfolk</button>
+      <button type="button" data-filter="gear" aria-pressed="false">Gear and capes</button>
       <button type="button" data-filter="interface" aria-pressed="false">Menus</button>
       <button type="button" data-filter="launcher" aria-pressed="false">Launcher</button>
     </div>

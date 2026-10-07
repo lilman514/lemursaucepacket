@@ -264,9 +264,10 @@ ServerEvents.commandRegistry((event) => {
           .then(
             Commands.literal('flag').then(
               Commands.argument('player', Arguments.PLAYER.create(event)).then(
-                Commands.argument('flag', Arguments.STRING.create(event)).executes((ctx) => {
+                // The rest of the line: flags have a colon (chapter:landfall), which a plain string argument stops at.
+                Commands.argument('flag', Arguments.GREEDY_STRING.create(event)).executes((ctx) => {
                   let player = target(ctx)
-                  let flag = Arguments.STRING.getResult(ctx, 'flag')
+                  let flag = String(Arguments.GREEDY_STRING.getResult(ctx, 'flag')).trim()
                   let data = capeData(player)
                   if (data.flags.indexOf(flag) < 0) data.flags.push(flag)
                   saveCapeData(player, data)

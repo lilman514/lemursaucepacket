@@ -1,0 +1,201 @@
+{
+  "name": "Brakka the Smith",
+  "color": "#C9A227",
+  "talks": [
+    {
+      "dialog": "key_ask",
+      "when": [
+        "q_ash_started"
+      ],
+      "unless": [
+        "q_ash_key"
+      ]
+    },
+    {
+      "dialog": "default",
+      "intro": true
+    }
+  ],
+  "shop": {
+    "goods": [
+      {
+        "item": {
+          "id": "minecraft:obsidian",
+          "count": 4
+        },
+        "price": 160
+      },
+      {
+        "item": {
+          "id": "minecraft:crying_obsidian",
+          "count": 2
+        },
+        "price": 200
+      },
+      {
+        "item": {
+          "id": "minecraft:magma_block",
+          "count": 8
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:blackstone",
+          "count": 32
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:basalt",
+          "count": 32
+        },
+        "price": 80
+      },
+      {
+        "item": {
+          "id": "minecraft:gilded_blackstone",
+          "count": 1
+        },
+        "price": 200
+      },
+      {
+        "item": {
+          "id": "minecraft:blaze_powder",
+          "count": 4
+        },
+        "price": 160
+      },
+      {
+        "item": {
+          "id": "minecraft:fire_charge",
+          "count": 4
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:potion",
+          "count": 1,
+          "components": {
+            "minecraft:potion_contents": {
+              "potion": "minecraft:fire_resistance"
+            }
+          }
+        },
+        "price": 220
+      },
+      {
+        "item": {
+          "id": "minecraft:potion",
+          "count": 1,
+          "components": {
+            "minecraft:potion_contents": {
+              "potion": "minecraft:long_fire_resistance"
+            }
+          }
+        },
+        "price": 320
+      },
+      {
+        "item": {
+          "id": "minecraft:golden_carrot",
+          "count": 4
+        },
+        "price": 300
+      },
+      {
+        "item": {
+          "id": "minecraft:arrow",
+          "count": 32
+        },
+        "price": 120
+      },
+      {
+        "item": {
+          "id": "minecraft:spectral_arrow",
+          "count": 16
+        },
+        "price": 160
+      },
+      {
+        "item": {
+          "id": "minecraft:shield",
+          "count": 1
+        },
+        "price": 160
+      }
+    ],
+    "onBuy": []
+  },
+  "quests": [
+    {
+      "title": "The Fight Pits",
+      "steps": [
+        {
+          "stage": "q_pits_started",
+          "text": "Take the Kilnfolk Pass from Guildmaster Greaves"
+        },
+        {
+          "stage": "q_pits_elder",
+          "text": "Find Elder Ashka at Kiln Hollow"
+        },
+        {
+          "stage": "q_pits_offering",
+          "text": "Bring the Kiln its offering"
+        },
+        {
+          "stage": "q_pits_trial",
+          "text": "Pass the Ashen Trial"
+        },
+        {
+          "stage": "q_pits_allowed",
+          "text": "Have Elder Ashka vouch for you"
+        },
+        {
+          "stage": "q_pits_fire",
+          "text": "Survive the Fight Pits and defeat Kiln-Tok-Jad"
+        },
+        {
+          "stage": "q_pits_done",
+          "text": "Show Elder Ashka your Fire Cape"
+        }
+      ]
+    },
+    {
+      "title": "Ashes of the Kiln",
+      "steps": [
+        {
+          "stage": "q_ash_started",
+          "text": "Hear of the Inferno from Elder Ashka"
+        },
+        {
+          "stage": "q_ash_beasts",
+          "text": "Slay the Wither, the Ender Dragon and the Warden"
+        },
+        {
+          "stage": "q_ash_key",
+          "text": "Have Brakka forge an Infernal Key"
+        },
+        {
+          "stage": "q_ash_done",
+          "text": "Give Elder Ashka the key"
+        }
+      ]
+    },
+    {
+      "title": "The Inferno",
+      "steps": [
+        {
+          "stage": "q_inf_cape",
+          "text": "Survive the Inferno and defeat Kiln-Kal-Zuk"
+        },
+        {
+          "stage": "q_inf_done",
+          "text": "Show Elder Ashka your Infernal Cape"
+        }
+      ]
+    }
+  ]
+}

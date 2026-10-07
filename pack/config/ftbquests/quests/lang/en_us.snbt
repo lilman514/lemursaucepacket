@@ -7,12 +7,16 @@
 	chapter.09B4C4E200CCB72C.title: "Atlas"
 	chapter.0E4B734290B837FE.chapter_subtitle: ["Heat, mixing and precision."]
 	chapter.0E4B734290B837FE.title: "Brass Age"
+	chapter.120668064D22C33B.chapter_subtitle: ["Main quest · Master · 2 quest points"]
+	chapter.120668064D22C33B.title: "The Fight Pits"
 	chapter.16909E8386D20890.chapter_subtitle: ["Maps, waypoints, dungeons and towers."]
 	chapter.16909E8386D20890.title: "Cartographer"
 	chapter.175772C5C18C88D1.chapter_subtitle: ["Main quest · Novice · 1 quest point"]
 	chapter.175772C5C18C88D1.title: "Cook's Assistant"
 	chapter.1DAA2EF48DF6A016.chapter_subtitle: ["Main quest · Experienced · 2 quest points"]
 	chapter.1DAA2EF48DF6A016.title: "Dragon Slayer I"
+	chapter.261571326DCB4199.chapter_subtitle: ["Main quest · Grandmaster · 2 quest points"]
+	chapter.261571326DCB4199.title: "Ashes of the Kiln"
 	chapter.2C2A22A66EC818AF.chapter_subtitle: ["New faces, old foes."]
 	chapter.2C2A22A66EC818AF.title: "Bestiary"
 	chapter.2D35B320696E0A9F.chapter_subtitle: ["Brassworks Missions: six jobs a week, paid in coin pouches."]
@@ -65,6 +69,8 @@
 	chapter.7C57D87C2A66E36C.title: "Arcane Works"
 	chapter.7DF2979C619D19C1.chapter_subtitle: ["Nether industry: lava, crushing wheels, sturdy sheets and netherite."]
 	chapter.7DF2979C619D19C1.title: "The Foundry"
+	chapter.7F5364F0DB416709.chapter_subtitle: ["Main quest · Grandmaster · 3 quest points"]
+	chapter.7F5364F0DB416709.title: "The Inferno"
 	chapter_group.05D7205A6D5637F0.title: "Expeditions"
 	chapter_group.071A8EAF90A2B719.title: "The Ages"
 	chapter_group.1F2E0B7F304AB615.title: "Main Quests"
@@ -75,6 +81,7 @@
 	file.0000000000000001.title: "LemurSaucePacket"
 	image.0127D551BC5CCFD9.title: " \\n&6&lCook's Assistant\\n&r&7Main quest · Novice · 1 quest point\\n \\n&r&fLemurton's Cook is in a panic: the mayor's feast\\n&r&fis tonight and there is nothing for the cake.\\n \\n&r&eUnlocks:\\n&r&fthe Cook's thanks, Cooking XP, and the\\n&r&ffirst step towards the Champions' Guild.\\n "
 	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Find the capital, meet the mayor and find your way around.\\n \\n&r&fLemurton is the realm's first city, a short walk from\\n&r&fwhere you wake up, and a safe zone: no fighting,\\n&r&fdigging or building inside the walls. Its people trade\\n&r&fand hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
+	image.09EDDA0656332902.title: " \\n&6&lThe Fight Pits\\n&r&7Main quest · Master · 2 quest points\\n \\n&r&fThe Kilnfolk, ashen piglins who left the Nether for\\n&r&fthe fire mountains, test their champions in the Fight\\n&r&fPits: thirty waves of pit beasts, and Kiln-Tok-Jad\\n&r&fat the end. They've heard of Elvarg's fall.\\n \\n&r&eUnlocks:\\n&r&fthe Fire Cape (+12% critical damage and Fire Resistance),\\n&r&fAttack, Strength, Defence and Hitpoints XP, and a fortune.\\n "
 	image.0A5D205330DDDF01.title: " \\n&6&lThe Enchanter\\n&r&7The Enchanting skill, Hardness tomes\\n&r&7and levels past the vanilla max.\\n \\n&r&fEnchanting is a skill here. The table trains it, and the skill\\n&r&fdecides how far an enchantment can go: Sharpness X at\\n&r&f99. Hardness tomes let your pickaxe break harder ores.\\n \\n&r&eUnlocks:\\n&r&fenchantments up to level X, Telekinesis, and the Hardness\\n&r&ftomes for iron, gold, diamonds, obsidian and ancient debris.\\n "
 	image.0F421FB4917EAF3E.title: " \\n&6&lRailway Company\\n&r&7Long trains, long journeys and a network that runs itself.\\n \\n&r&fIron Roads got you a line. This chapter makes\\n&r&fit a railway: signals, timetables, whistles, a\\n&r&ftrack factory and a train six carriages long.\\n \\n&r&eUnlocks:\\n&r&ffreight and passenger lines across the\\n&r&fwhole map, and the Grand Central prize.\\n "
 	image.0F5DA6A8095784F5.title: " \\n&6&lThe Knight's Sword\\n&r&7Main quest · Intermediate · 1 quest point\\n \\n&r&fSir Vyvin's squire has lost his master's\\n&r&fsword, and Sir Vyvin is back tomorrow.\\n \\n&r&eUnlocks:\\n&r&fSmithing XP, coins, and the squire's undying gratitude.\\n "
@@ -96,6 +103,7 @@
 	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
 	image.453135B25BEDB43B.title: " \\n&6&lHearts \\& Graves\\n&r&7Every death costs a heart. Run out\\n&r&7and everything you built goes with you.\\n \\n&r&fYou start with ten hearts and lose one every time you\\n&r&fdie, dropped where you fell for anyone to take. Graves\\n&r&fcost Grave Essence, compasses find what you dropped,\\n&r&fand a new Heart is the hardest thing in the pack to make.\\n \\n&r&eUnlocks:\\n&r&fgraves that keep your items, compasses for what\\n&r&fyou lost, a spare Heart for a friend, and the\\n&r&frecipe that makes hearts from a Heart of the Sea.\\n "
 	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, settle a base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fyour first backpack, a bed in a village,\\n&r&fand the wrench that starts Create.\\n "
+	image.4AFE7515E681AB95.title: " \\n&6&lAshes of the Kiln\\n&r&7Main quest · Grandmaster · 2 quest points\\n \\n&r&fBelow the Fight Pits burns the Inferno, and its\\n&r&fseal only opens for someone the whole world\\n&r&falready fears. Elder Ashka sets you on the way.\\n \\n&r&eUnlocks:\\n&r&fthe way into the Inferno, and the\\n&r&fXP and coins of three great kills.\\n "
 	image.4CD9468FE484D9D0.title: " \\n&6&lGrand Kitchen\\n&r&7Farmer's Delight from first knife to Master Chef.\\n \\n&r&fHomestead got you cooking. This is the full menu: compost,\\n&r&frice paddies, feasts, chocolate, and every meal in the book.\\n \\n&r&eUnlocks:\\n&r&fthe Chef's Hat relic, a netherite knife, and food\\n&r&fthat keeps you fed and healthy for whole days.\\n "
 	image.4F9F61A1C37B8E32.title: " \\n&6&lCartographer\\n&r&7Maps, waypoints, dungeons and towers.\\n \\n&r&fThe world is full of places worth a pin on the map: When\\n&r&fDungeons Arise, Dungeons and Taverns, Towers of the\\n&r&fWild and Structory. Lootr gives every player their own\\n&r&floot in each chest, so nobody arrives too late.\\n \\n&r&eUnlocks:\\n&r&fthe Explorer Cape for Adventuring\\n&r&fTime, and every crate in between.\\n "
 	image.5C7F14B75509F33F.title: " \\n&6&lIron Roads\\n&r&7Trains, stations, freight and waystones.\\n \\n&r&fLay track between bases, run trains on schedules,\\n&r&fand let parcels and stock links move your goods.\\n&r&fWaystones take one traveller home in a blink.\\n \\n&r&eUnlocks:\\n&r&ffast travel between towns, automated\\n&r&ffreight, ordering items from anywhere on\\n&r&fyour network, and a waystone of your own.\\n "
@@ -106,8 +114,11 @@
 	image.7367AF30B1A8A05A.title: " \\n&6&lLegacy\\n&r&7The End, and what you leave behind.\\n \\n&r&fFace the dragon, earn your wings, and\\n&r&fturn enchanting into an assembly line.\\n \\n&r&eUnlocks:\\n&r&felytra flight, automated enchanting, banking,\\n&r&fand a build the whole server will remember.\\n "
 	image.77A6E082E3D8F1C8.title: " \\n&6&lThe Warehouse\\n&r&7Storage that sorts, packs and delivers itself.\\n \\n&r&fVaults, chain conveyors, frogports and stock keepers\\n&r&fon the Create side; magnets, stacks and Create upgrades\\n&r&fon the backpack side. Never dig through a chest again.\\n \\n&r&eUnlocks:\\n&r&fa stock network you can order from\\n&r&fanywhere, packages that find their own way,\\n&r&fand a backpack that presses and mixes.\\n "
 	image.7866688CE01BD9F9.title: " \\n&6&lDeep Dark\\n&r&7Sculk, the ancient city and the thing that guards it.\\n \\n&r&fBelow the deepslate lies the deep dark.\\n&r&fSneak past the sensors, loot the city,\\n&r&fand decide whether to wake the Warden.\\n \\n&r&eUnlocks:\\n&r&fswift sneak, echo shards, the silence trim,\\n&r&fand the Warden kill nobody will believe.\\n "
+	image.79BC69694F418644.title: " \\n&6&lThe Inferno\\n&r&7Main quest · Grandmaster · 3 quest points\\n \\n&r&fThe Kilnfolk's oldest pit: harder beasts, Kal-Tok-Jads,\\n&r&fand Kiln-Kal-Zuk. Survive it and win the Infernal Cape.\\n \\n&r&eUnlocks:\\n&r&fthe Infernal Cape (+20% critical damage, +5%\\n&r&fcritical chance, +1 heart and Fire\\n&r&fResistance), a mountain of XP, and a fortune.\\n "
 	quest.007E391695FCA435.quest_desc: ["Iron sheets and andesite casing."]
 	quest.007E391695FCA435.title: "Iron Backpack"
+	quest.009DC4D468479018.quest_desc: ["The Kilnfolk's young prove themselves on the fire beasts of the Nether. So will you."]
+	quest.009DC4D468479018.title: "The Ashen Trial"
 	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.", "", "&eChapter prize:&r 40,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.010023C1444D0FF4.title: "&6Legacy"
 	quest.014760E2F2483D38.title: "Bone Collector"
@@ -119,6 +130,8 @@
 	quest.025287B46079B5C3.title: "Applied Kinematics"
 	quest.02B4AD1A491CBA19.quest_desc: ["A compacting upgrade turns nuggets and gems into blocks inside the backpack."]
 	quest.02B4AD1A491CBA19.title: "Backpack Compacting"
+	quest.035FAA74FDEDB2D7.quest_desc: ["With the offering given and the trial passed, ask Elder Ashka to vouch for you. She also wants you strong enough: &eDefence 50, Hitpoints 50, and Attack or Ranged 50&r."]
+	quest.035FAA74FDEDB2D7.title: "Vouched For"
 	quest.0374FA1B04AB7C95.quest_desc: ["Four netherite ingots in a basin under a superheated press. The material of the last armour you will need."]
 	quest.0374FA1B04AB7C95.title: "Compacted Netherite"
 	quest.0390E0DEB91A43F2.quest_desc: ["Create packs items into parcels with a packager. Parcels can be addressed and sent anywhere a frogport or train reaches."]
@@ -183,6 +196,9 @@
 	quest.08CB68987F5A93F5.title: "&cStrength 75"
 	quest.0913243E056A9EB7.quest_desc: ["Reach &eAgility 75&r. Agility gives speed and less fall damage."]
 	quest.0913243E056A9EB7.title: "&bAgility 75"
+	quest.09202567917646FC.quest_desc: ["You survived the Inferno.", "", "&eRewards:&r 3 quest points, the Infernal Cape, 75,000 Attack, Strength, Defence and Hitpoints XP, a fortune in coins."]
+	quest.09202567917646FC.quest_subtitle: "The Inferno"
+	quest.09202567917646FC.title: "&aQuest complete!"
 	quest.0939B7CAC0EB0921.quest_desc: ["Lucan the Jeweller bought a scrap of the map from a sailor. He wants 10,000 coins for it."]
 	quest.0939B7CAC0EB0921.title: "Map Part: Lucan"
 	quest.0940D6B1B450D563.quest_desc: ["Four scrap, four gold, one ingot. Four ingots is a serious pile."]
@@ -277,6 +293,8 @@
 	quest.169ABAA65ECC4F3E.title: "&6The Knight's Sword"
 	quest.16EAAB5FF0BF63C9.quest_desc: ["A portable storage interface unloads a passing contraption. Your quarry empties itself every lap."]
 	quest.16EAAB5FF0BF63C9.title: "Drive-by Exchange"
+	quest.1717C54612491172.quest_desc: ["Survive the Inferno and defeat Kiln-Kal-Zuk."]
+	quest.1717C54612491172.title: "&4Kiln-Kal-Zuk"
 	quest.171CC58A88C06C2C.quest_desc: ["Reach &eEnchanting 10&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.171CC58A88C06C2C.title: "&6Enchanting 10"
 	quest.1730C1BDFD2D3A2A.quest_desc: ["A castle keep from When Dungeons Arise. Every room is a fight."]
@@ -285,6 +303,8 @@
 	quest.18E83D5A3727EEC3.title: "Ward Trim"
 	quest.18F4D883CEADC699.quest_desc: ["Found in cave, village and pillager chests."]
 	quest.18F4D883CEADC699.title: "Rider Flute"
+	quest.18FDC07B9A38D5E2.quest_desc: ["Speak to Grull the Pitmaster at the pit mouth to go down. You fight alone: thirty waves of pit beasts, each wave a few seconds after the last falls.", "", "&6Kiln-Kih&r: embers. &6Kiln-Kek&r: split when they die. &6Kiln-Xil&r: shoot flaming arrows. &6Kiln-MejKot&r: hit hard and heal the beasts near them. &6Kiln-Zek&r: throw fire that Fire Resistance does not stop.", "", "&cKiln-Tok-Jad&r comes last. When flame gathers in him, &eraise your shield toward him&r. When he rises and a ring burns round your feet, &eget out of the ring&r. At half health he calls menders: strike one and they all turn on you instead of healing him.", "", "&7If you fall, Grull pulls you out alive with everything you had: only the run is lost. Bring food, potions, a shield and a bow for the Xil."]
+	quest.18FDC07B9A38D5E2.title: "&cThe Fight Pits"
 	quest.190D30D37AF325E2.quest_desc: ["Brass needs heat, and heat means blazes. Build a portal.", "", "&7Obsidian as an item needs Hardness III. Cast the frame in place with lava and water, or use a ruined portal."]
 	quest.190D30D37AF325E2.title: "Through the Portal"
 	quest.1917D6689D0B2836.quest_desc: ["Reach &eCrafting 75&r. Crafting gives XP from everything you craft."]
@@ -361,6 +381,8 @@
 	quest.26C7BB4F327F6808.title: "Breeze"
 	quest.26E5A5ABB5584E32.quest_desc: ["Defeat a raid. Villages remember who stood with them, and the Hero cape is yours."]
 	quest.26E5A5ABB5584E32.title: "Hero of the Village"
+	quest.278B70EDDC3E7A67.quest_desc: ["Follow the pass to Kiln Hollow and speak to Elder Ashka, on her seat of blackstone and gold. Outsiders only fight in the pits if one of the Kilnfolk vouches for them."]
+	quest.278B70EDDC3E7A67.title: "Elder Ashka"
 	quest.27D0E044CF8AFF5B.quest_desc: ["Shafts carry rotation in a line; cogwheels turn corners and change speed."]
 	quest.27D0E044CF8AFF5B.title: "Shafts and Cogs"
 	quest.27EA29FC4610DE4A.quest_desc: ["Hardness IV and Mining 40 open the netherite layer. Eight pieces of debris."]
@@ -386,6 +408,8 @@
 	quest.2A066EC0CDE8CF63.title: "It Spreads"
 	quest.2A80E44450656EBB.quest_desc: ["Industrial iron blocks: the foundry's floor, and the base of the heaviest machines."]
 	quest.2A80E44450656EBB.title: "Industrial Iron"
+	quest.2ABC465DFAF8148D.quest_desc: ["Give Elder Ashka the offering."]
+	quest.2ABC465DFAF8148D.title: "An Offering for the Kiln"
 	quest.2B59BEE4CAA41223.title: "The Invoker"
 	quest.2B62654758D9FB7B.quest_desc: ["Four end crystals on the portal frame bring the dragon back. Fight it on your own terms.", "", "&eChapter prize:&r 5,000 coins, an end stone waystone, a relic and two rolls on the Legend's Hoard."]
 	quest.2B62654758D9FB7B.title: "&aThe End... Again"
@@ -412,6 +436,9 @@
 	quest.2D0B9945E26F6B56.title: "Ghost Riders in the Sky"
 	quest.2D371AC3E7BCEC75.quest_desc: ["Some meals are big enough to place down and share."]
 	quest.2D371AC3E7BCEC75.title: "A Glorious Feast"
+	quest.2D9C8830586639B4.quest_desc: ["Speak to Keeper Zarn at the Inferno's gate to go down. You fight alone, as in the Fight Pits: twenty-six waves of the Kal- beasts, then a Kal-Tok-Jad, then two at once, then Kiln-Kal-Zuk.", "", "&6Kal-Nib&r: swarms. &6Kal-MejRah&r: slow and tire you. &6Kal-Ak&r: split, and split again. &6Kal-ImKot&r: burrow up beside you. &6Kal-Xil&r: shoot. &6Kal-Zek&r: call up vexes.", "", "&4Kiln-Kal-Zuk&r hangs over the lava lake behind a shield that drifts along its shore. When his eyes burn, &ebe behind the shield&r, or most of your health goes. As he weakens he sends beasts, a Kal-Tok-Jad, then menders.", "", "&7Fall and Zarn pulls you out alive with everything you had. A bow helps with Zuk; so does fighting right behind the shield."]
+	quest.2D9C8830586639B4.quest_subtitle: "Opened by Elder Ashka"
+	quest.2D9C8830586639B4.title: "&4The Inferno"
 	quest.2DC3A790A559DD34.quest_desc: ["Give Brann the makings and he forges a sword Sir Vyvin will never tell from his own."]
 	quest.2DC3A790A559DD34.title: "Sir Vyvin's Sword"
 	quest.2DCBA603428C116C.quest_desc: ["A mechanical grindstone strips an enchanted item and drains the enchantment into liquid experience."]
@@ -430,6 +457,8 @@
 	quest.30292594BC7586F9.title: "&6Crafting 99"
 	quest.3073E0625A50D025.quest_desc: ["Smart and gyroscopic propellers give you finer control over thrust and direction."]
 	quest.3073E0625A50D025.title: "Steering"
+	quest.30E402239C163422.quest_desc: ["Brakka the Smith forges the Infernal Key from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods."]
+	quest.30E402239C163422.title: "What the Key Is Made Of"
 	quest.311FD1C3F8C48610.title: "Jungle Temple"
 	quest.314B641BBB80CD1C.quest_desc: ["Reach &eAgility 10&r. Agility gives speed and less fall damage.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.314B641BBB80CD1C.title: "&bAgility 10"
@@ -508,6 +537,8 @@
 	quest.3D6B7C71416026B4.title: "The Makings"
 	quest.3DEE9A11DAD5A1B7.quest_desc: ["Reach &eAttack 25&r. Attack gives each level adds melee and bow damage.", "", "&eUnlocked on the way:&r", "• 15: iron swords and the crossbow", "• 20: the potato cannon", "• 25: the Brass Sabre"]
 	quest.3DEE9A11DAD5A1B7.title: "&cAttack 25"
+	quest.3E9479708A0557AB.quest_desc: ["The Kiln takes an offering from every outsider: 8 magma cream, 4 blaze rods and 16 obsidian.", "", "&7Magma cream drops from magma cubes, or is brewed from slime and blaze powder."]
+	quest.3E9479708A0557AB.title: "The Offering"
 	quest.3EA0112185B2B663.quest_desc: ["Terralith's mage towers change with the season they were built in."]
 	quest.3EA0112185B2B663.title: "Mage Tower"
 	quest.3ECBA42CB865A41B.quest_desc: ["Crying obsidian and glowstone: a bed for the Nether. Charge it before you need it."]
@@ -623,6 +654,9 @@
 	quest.4F8E07BC0C47B163.title: "Nourishing!"
 	quest.4FEE26AC564DC139.quest_desc: ["Reach &eMining 50&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 30: diamond picks, Hardness III (diamonds, obsidian) and the Prospector's Pickaxe", "• 35: the Prospector's set", "• 40: Hardness IV (ancient debris) and the Excavator's Pickaxe", "• 50: netherite picks and Hardness V"]
 	quest.4FEE26AC564DC139.title: "&aMining 50"
+	quest.5025E32F75521917.quest_desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew Elvarg. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", "", "&7Kiln Hollow has a waystone: touch it so you can come straight back."]
+	quest.5025E32F75521917.quest_subtitle: "Started by the Champions' Guild"
+	quest.5025E32F75521917.title: "&6The Fight Pits"
 	quest.5032BD083368AADD.quest_desc: ["Found in Nether chests."]
 	quest.5032BD083368AADD.title: "Shield of Retaliation"
 	quest.506B714272D7E830.quest_desc: ["Rope above a tomato crop and it climbs."]
@@ -846,6 +880,10 @@
 	quest.6B48EE6BC198801A.quest_desc: ["A blaze queen shielded by a ring of fire. She lives in the Nether citadels. Bring fire resistance."]
 	quest.6B48EE6BC198801A.title: "Wildfire"
 	quest.6B975E15BFC541FC.title: "End Lighthouse"
+	quest.6BA06D227782B3AF.quest_desc: ["Bring Brakka, at his forge in Kiln Hollow, what the key is made of."]
+	quest.6BA06D227782B3AF.title: "The Infernal Key"
+	quest.6BFA736EC61E0DA6.quest_desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither, the Ender Dragon and the Warden.", "", "&7The Wither drops the nether star the Infernal Key needs."]
+	quest.6BFA736EC61E0DA6.title: "The Great Beasts"
 	quest.6C33C59167DDCBE0.quest_desc: ["Structory Towers: a wizard lived here. Check the top floor."]
 	quest.6C33C59167DDCBE0.title: "Wizard Tower"
 	quest.6C7C4AD923FF97C2.quest_desc: ["Reach &eSmithing 99&r. Smithing gives XP from ingots and gear.", "", "&6The Smithing Cape is yours at 99.&r Open /capes to wear it."]
@@ -854,6 +892,9 @@
 	quest.6CCB97A898611F24.title: "Bank of Flames"
 	quest.6DB6A9AAE90900A7.quest_desc: ["A press over a basin turns many items into fewer: nuggets into ingots, ingots into blocks, diamonds into compacted diamond."]
 	quest.6DB6A9AAE90900A7.title: "Compactification"
+	quest.6DF1F43696BD92CE.quest_desc: ["After the Fight Pits, Elder Ashka speaks of a deeper pit: the Inferno, where Kiln-Kal-Zuk waits behind his shield."]
+	quest.6DF1F43696BD92CE.quest_subtitle: "Started by Elder Ashka"
+	quest.6DF1F43696BD92CE.title: "&6Ashes of the Kiln"
 	quest.6E3533FCD9B8000A.quest_desc: ["Five different relics."]
 	quest.6E3533FCD9B8000A.title: "Collector"
 	quest.6E5CBF9205B8157C.quest_desc: ["Enchanting 60 allows level VIII."]
@@ -935,6 +976,9 @@
 	quest.7A8548237DEB6F6E.title: "Zinc Hunt"
 	quest.7AD39FF2D6EF980B.quest_desc: ["Reach &eCrafting 25&r. Crafting gives XP from everything you craft."]
 	quest.7AD39FF2D6EF980B.title: "&6Crafting 25"
+	quest.7AE1DF02F7AD3701.quest_desc: ["Give Elder Ashka the Infernal Key. She also wants you strong enough: &eDefence 80, Hitpoints 80, and Attack or Ranged 80&r.", "", "&eRewards:&r 2 quest points, the way into the Inferno, coins."]
+	quest.7AE1DF02F7AD3701.quest_subtitle: "Ashes of the Kiln"
+	quest.7AE1DF02F7AD3701.title: "&aQuest complete!"
 	quest.7AE34ECD5192B505.quest_desc: ["Chain conveyors carry packages between buildings, over anything."]
 	quest.7AE34ECD5192B505.title: "Chain Conveyor"
 	quest.7AEB0207AFCC95A7.quest_desc: ["A handle on the hull lets you hold on while the ship moves. Sneak-grab moves the ship instead of you."]
@@ -960,6 +1004,9 @@
 	quest.7E6AE4EBA6DB21F9.title: "&cDefence 99"
 	quest.7ED5141FF9D485A0.quest_desc: ["A blaze burner in the head: ores come out already smelted.", "&7Needs Mining 30."]
 	quest.7ED5141FF9D485A0.title: "Prospector's Pickaxe"
+	quest.7EE3C57F25469E1F.quest_desc: ["You won a Fire Cape in the Fight Pits.", "", "&eRewards:&r 2 quest points, the Fire Cape, 25,000 Attack, Strength, Defence and Hitpoints XP, a fortune in coins."]
+	quest.7EE3C57F25469E1F.quest_subtitle: "The Fight Pits"
+	quest.7EE3C57F25469E1F.title: "&aQuest complete!"
 	quest.7FBB643180077AD8.quest_desc: ["Reach &eFishing 50&r. Fishing gives better catches."]
 	quest.7FBB643180077AD8.title: "&aFishing 50"
 	quest.7FD19E17640BDAEE.quest_desc: ["A portable engine burns fuel for rotation on board, no boiler needed."]
@@ -972,9 +1019,11 @@
 	reward_table.6BEF5404D318C66E.title: "Master's Cache"
 	task.001B653AFE21341D.title: "Offer to help the Cook"
 	task.005B02B98D7242DE.title: "Slay Elvarg"
+	task.0107505D942E21FE.title: "Show Elder Ashka your Fire Cape"
 	task.0262E8B8D100926B.title: "Total level 250"
 	task.028A827B62B8932F.title: "Got it"
 	task.02A48E9759D0C17D.title: "Give the sword to Squire Asrol"
+	task.033AA0476E7F9DA7.title: "Defeat Kiln-Tok-Jad"
 	task.045C049531AE2E11.title: "I built my legacy"
 	task.0528FB0EF90324F3.title: "Ask Brann for a new sword"
 	task.05487329B4EB197A.title: "Crafting level 25"
@@ -985,6 +1034,7 @@
 	task.0BFC231DBC52126C.title: "Mining level 50"
 	task.0C81425927F0EC9C.title: "Cook with a skillet"
 	task.0D831586539FE852.title: "Pump from an infinite lava lake"
+	task.0E6BB7E0E4BDC991.title: "Have Brakka forge an Infernal Key"
 	task.0E9C2C0CA54C59A9.title: "Obtain an experience lantern"
 	task.0F5CCDCB1C3211E3.title: "Ranged level 75"
 	task.0F82105158D6AB10.title: "A book of Mending"
@@ -1033,6 +1083,7 @@
 	task.228A7F3F36CA07D6.title: "Defence level 99"
 	task.22C3280D7A0095C0.title: "Understood"
 	task.24052E9904429209.title: "Have Oziach make the map"
+	task.25664D4940D74EE6.title: "Take the Kilnfolk Pass from Greaves"
 	task.25D933E538A4AB77.title: "Mining level 10"
 	task.2663517334BA68A6.title: "Buy the piece from Lucan"
 	task.26EFBBD08509408D.title: "Levitate 50 blocks from shulker attacks"
@@ -1060,11 +1111,13 @@
 	task.34A9ED5FE84E5130.title: "Kill a phantom with a mounted potato cannon"
 	task.34AC6A9E56814F07.title: "Run a contraption with drills, saws or harvesters"
 	task.34C29127BC0A7D43.title: "Grab a handle"
+	task.35E42CE433839740.title: "Give Elder Ashka the key"
 	task.35EAB0B028B4A946.title: "Defence level 75"
 	task.36C16DA6DFDE0B7F.title: "Defence level 10"
 	task.36D9364B933E096E.title: "Obtain nuggets of experience"
 	task.378C9080FF311EAA.title: "Obtain a blaze enchanter"
 	task.3960EF91492B34CB.title: "Three lines meet at my station"
+	task.39E3440AB9DC3AC4.title: "Hear of the Inferno"
 	task.3AEAB2E3FFD715E5.title: "Total level 1386"
 	task.3AFFC3CD8B5C906C.title: "Eat every meal"
 	task.3B55DEB84677C8AE.title: "Total level 100"
@@ -1103,6 +1156,7 @@
 	task.4A63548DC9F2B37D.title: "Bring Traiborn what his spell needs"
 	task.4A9DA782299AD918.title: "I have a plan"
 	task.4B1C7BE52A2C4FD7.title: "Attack level 99"
+	task.4B72F6A67ED1A0E4.title: "Give the Elder the offering"
 	task.4BF994C58320B80F.title: "Talk to the mayor"
 	task.4C8A68F1BF4EAC05.title: "Cure a zombie villager"
 	task.4CE188EBE076F344.title: "I know what a death costs"
@@ -1113,6 +1167,7 @@
 	task.50DF782369180329.title: "Defeat a raid"
 	task.514341551027CD15.title: "Cultivate every crop"
 	task.51CEE64643774577.title: "Refine a sturdy sheet"
+	task.51D20A76FC247D26.title: "Speak to Elder Ashka"
 	task.52839873A10CA2AD.title: "Farming level 75"
 	task.5293A86776CCFD9D.title: "Make a stone pickaxe"
 	task.52D047C2096075FA.title: "Move items through a portable storage interface"
@@ -1127,6 +1182,7 @@
 	task.57311AF74A5F0D5A.title: "Open 50 Lootr containers"
 	task.57C8B19A0CDCD144.title: "Enchanting level 99"
 	task.57DE43A1214E8616.title: "Woodcutting level 25"
+	task.583945A538DDA755.title: "Have Elder Ashka vouch for you"
 	task.583F3523D2DAE1CF.title: "Ride a train through a portal"
 	task.5A55792FFEAC94F9.title: "Store experience in an experience hatch"
 	task.5A88981357C5EF90.title: "Farming level 99"
@@ -1165,6 +1221,7 @@
 	task.690B6C71D0AB6018.title: "Total level 1000"
 	task.6965B4E3CDB16836.title: "Kill a mob near a sculk catalyst"
 	task.6A19741A26D7FA8A.title: "Connect a large cogwheel to a small one"
+	task.6A1B7D1EF6F00394.title: "Be made ready for the Inferno"
 	task.6A95230CF0E815B1.title: "Obtain a blaze forger"
 	task.6B30B6E9641FAED4.title: "Assemble a train of six carriages"
 	task.6C5A7187CD379D5A.title: "Open 10 Lootr containers"
@@ -1183,6 +1240,8 @@
 	task.747BDA36F8642A2D.title: "Woodcutting level 99"
 	task.7481F2571690158A.title: "Enchant an item with a blaze enchanter"
 	task.748A833715661317.title: "Strength level 50"
+	task.7665505C7418EA97.title: "Show Elder Ashka your Infernal Cape"
+	task.77826851452E080E.title: "Defeat Kiln-Kal-Zuk"
 	task.78456872482BCB63.title: "Crafting level 10"
 	task.79081D743E510EEA.title: "A Hardness IV tome"
 	task.7997257C8F55CC96.title: "Fill an airtight envelope with hot air"

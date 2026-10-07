@@ -1,0 +1,86 @@
+{
+  "title": "The Fight Pits",
+  "stages": [
+    "q_pits_started",
+    "q_pits_elder",
+    "q_pits_offering",
+    "q_pits_trial",
+    "q_pits_allowed",
+    "q_pits_fire",
+    "q_pits_done"
+  ],
+  "steps": {
+    "pass": {
+      "needs": [
+        "q_ds_done"
+      ],
+      "lacks": [
+        "q_pits_started"
+      ],
+      "special": [
+        "kiln_pass"
+      ],
+      "stage": "q_pits_started",
+      "message": "Guildmaster Greaves gives you a Kilnfolk Pass.",
+      "ok": "pits_pass_given"
+    },
+    "offering": {
+      "needs": [
+        "q_pits_elder"
+      ],
+      "lacks": [
+        "q_pits_offering"
+      ],
+      "take": [
+        {
+          "id": "minecraft:magma_cream",
+          "count": 8
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "count": 4
+        },
+        {
+          "id": "minecraft:obsidian",
+          "count": 16
+        }
+      ],
+      "stage": "q_pits_offering",
+      "message": "You lay the offering before the Kiln.",
+      "ok": "pits_offering_ok",
+      "missing": "pits_offering_missing",
+      "done": "pits_check"
+    },
+    "allowed": {
+      "needs": [
+        "q_pits_elder",
+        "q_pits_offering",
+        "q_pits_trial"
+      ],
+      "lacks": [
+        "q_pits_allowed"
+      ],
+      "skills": {
+        "defence": 50,
+        "hitpoints": 50,
+        "attack|ranged": 50
+      },
+      "stage": "q_pits_allowed",
+      "message": "Elder Ashka vouches for you: the Fight Pits are open to you.",
+      "ok": "pits_allowed",
+      "missing": "pits_not_ready",
+      "done": "pits_not_ready"
+    },
+    "done": {
+      "needs": [
+        "q_pits_fire"
+      ],
+      "lacks": [
+        "q_pits_done"
+      ],
+      "stage": "q_pits_done",
+      "message": "Elder Ashka honours your Fire Cape.",
+      "ok": "pits_thanks"
+    }
+  }
+}

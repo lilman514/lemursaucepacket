@@ -83,6 +83,34 @@ export const QUESTS = {
       { stage: 'q_ds_elvarg', text: 'Slay Elvarg on Crandor' },
       { stage: 'q_ds_done', text: "Bring Elvarg's head to Oziach" }
     ]
+  },
+  fight_pits: {
+    title: 'The Fight Pits',
+    steps: [
+      { stage: 'q_pits_started', text: 'Take the Kilnfolk Pass from Guildmaster Greaves' },
+      { stage: 'q_pits_elder', text: 'Find Elder Ashka at Kiln Hollow' },
+      { stage: 'q_pits_offering', text: 'Bring the Kiln its offering' },
+      { stage: 'q_pits_trial', text: 'Pass the Ashen Trial' },
+      { stage: 'q_pits_allowed', text: 'Have Elder Ashka vouch for you' },
+      { stage: 'q_pits_fire', text: 'Survive the Fight Pits and defeat Kiln-Tok-Jad' },
+      { stage: 'q_pits_done', text: 'Show Elder Ashka your Fire Cape' }
+    ]
+  },
+  ashes: {
+    title: 'Ashes of the Kiln',
+    steps: [
+      { stage: 'q_ash_started', text: 'Hear of the Inferno from Elder Ashka' },
+      { stage: 'q_ash_beasts', text: 'Slay the Wither, the Ender Dragon and the Warden' },
+      { stage: 'q_ash_key', text: 'Have Brakka forge an Infernal Key' },
+      { stage: 'q_ash_done', text: 'Give Elder Ashka the key' }
+    ]
+  },
+  inferno: {
+    title: 'The Inferno',
+    steps: [
+      { stage: 'q_inf_cape', text: 'Survive the Inferno and defeat Kiln-Kal-Zuk' },
+      { stage: 'q_inf_done', text: 'Show Elder Ashka your Infernal Cape' }
+    ]
   }
 }
 
@@ -280,6 +308,14 @@ export const NPCS = {
     model: 'humanoid', variant: 'KNIGHT_01', name: 'Guildmaster Greaves', color: '#E8A33C', description: "Head of the Champions' Guild: starts Dragon Slayer I.",
     equipment: { head: 'minecraft:golden_helmet', chest: 'minecraft:golden_chestplate', mainhand: 'minecraft:diamond_sword' },
     dialogs: [
+      dialog('pits_champion', 'Fire Cape', "A Fire Cape! I've seen one once in my life, @initiator, on a Kilnfolk champion. The Guild has never been prouder.", { priority: 45, conditions: [tag('q_pits_done')], buttons: [goodbye] }),
+      dialog('pits_go', 'Kiln Hollow', 'Follow the Kilnfolk Pass to Kiln Hollow and speak to Elder Ashka. And take a good shield: their champion breathes fire.', { priority: 40, conditions: [tag('q_pits_started')], buttons: [goodbye] }),
+      dialog('pits_offer', 'The Kilnfolk', "Champion! Word of Elvarg's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.\n\nAshen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew Elvarg.", {
+        priority: 35,
+        conditions: [tag('q_ds_done')],
+        buttons: [button("I'll go to the Kilnfolk", [stepCmd('fight_pits', 'pass')]), button('Not now', [close()])]
+      }),
+      dialog('pits_pass_given', 'The pass', 'Hold the pass and it pulls toward Kiln Hollow, like a compass to its lodestone. Good luck, @initiator.', { buttons: [button("I'm on my way", [close()])] }),
       dialog('ds_done', 'Champion', 'Elvarg is slain! The whole realm will hear of it. The Champions\' Guild salutes you, @initiator.', { priority: 30, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
       dialog('ds_go', 'Oziach', 'Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about Elvarg than any man living.', { priority: 20, conditions: [tag('q_ds_started')], buttons: [goodbye] }),
       dialog('default', "The Champions' Guild", "Welcome to the Champions' Guild. Only the realm's finest adventurers drink here.", { priority: 10, buttons: [button('I want to be a champion', [open('ask')]), goodbye] }),
@@ -338,6 +374,105 @@ export const NPCS = {
     description: "Old sailor at the Crandor memorial: takes you up to Elvarg, and keeps the things of those who fall to her.",
     tags: ['lsp_event.lemursaucepacket.elvarg'],
     dialogs: [dialog('default', 'Ned', "Elvarg's den is just up the hill. I sailed many a brave soul to Crandor in my day, and I've buried a good few since.\n\nWhen you're ready, I'll see you up there. And if she gets you, I'll keep your things safe till you come back for them.", { priority: 10, buttons: [goodbye] })]
+  },
+
+  // The Kilnfolk, at Kiln Hollow in the volcanic lands: lsp_fixes' KilnHollow brings them in at the outpost's npc markers.
+  // Grull and Zarn open the Fight Pits' and the Inferno's windows (lsp_instances, the lsp_event tag); their dialogs are
+  // only the fallback without that mod. Their quests: npcs/quests.mjs (fight_pits, ashes, inferno) and quests/book.mjs.
+  kiln_elder: {
+    model: 'piglin', variant: 'WARPAINT', name: 'Elder Ashka', color: '#E8742C',
+    description: 'Elder of the Kilnfolk: the Fight Pits, Ashes of the Kiln and the Inferno.',
+    dialogs: [
+      dialog('inf_honoured', 'Infernal', 'Kiln-Kal-Zuk is ash, and an outsider wears the Infernal Cape. The Kilnfolk will sing of you, @initiator, for as long as the mountains burn.', { priority: 90, conditions: [tag('q_inf_done')], buttons: [goodbye] }),
+      dialog('inf_cape', 'You came back', 'You came back out of the Inferno. With the cape. I have waited my whole life to see that.', {
+        priority: 85,
+        conditions: [tag('q_inf_cape')],
+        buttons: [button('Zuk is no more', [stepCmd('inferno', 'done')])]
+      }),
+      dialog('inf_thanks', 'Honoured', 'Wear it, champion. Every one of the Kilnfolk will bow when you pass.', { buttons: [goodbye] }),
+      dialog('ash_wait', 'The seal', "The seal will open for you. Keeper Zarn waits at the Inferno's gate behind me.\n\nKeep the drifting shield between you and Zuk when his eyes burn, and strike his menders before they mend him.", { priority: 80, conditions: [tag('q_ash_done')], buttons: [goodbye] }),
+      dialog('ash_check', 'Ready?', 'Have you done it all? The Wither, the Ender Dragon and the Warden slain; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80.', {
+        priority: 70,
+        conditions: [tag('q_ash_started')],
+        buttons: [button('I am ready. Here is the key', [stepCmd('ashes', 'ready')]), button('What must I do again?', [open('ash_tasks')]), goodbye]
+      }),
+      dialog('ash_ready', 'The seal', 'Then the seal will open for you. Speak to Keeper Zarn at the gate. May the Kiln keep you.', { buttons: [button("I'll go", [close()])] }),
+      dialog('ash_not_ready', 'Not yet', "Not yet. The three great beasts, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('pits_honoured', 'Fire Cape', "You wear the Fire Cape, @initiator. No outsider has, in a hundred years.\n\nBut there is a deeper pit than Grull's...", {
+        priority: 60,
+        conditions: [tag('q_pits_done')],
+        buttons: [button('A deeper pit?', [open('ash_start')]), goodbye]
+      }),
+      dialog('ash_start', 'The Inferno', "Below the Fight Pits burns the Inferno, where our oldest champion, Kiln-Kal-Zuk, waits behind his shield. Its seal opens to an Infernal Key, and to no one the world doesn't already fear.\n\nSlay the Wither, the Ender Dragon and the Warden. Have Brakka forge you a key. Grow stronger. Then come back.", {
+        buttons: [button("I'll do it", [cmd('tag @initiator add q_ash_started'), open('ash_tasks')]), button('Another time', [close()])]
+      }),
+      dialog('ash_tasks', 'The way to the Inferno', 'Three things. The great beasts: the Wither, the Ender Dragon and the Warden, slain (your quest book counts them). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80.', { buttons: [button('I understand', [close()])] }),
+      dialog('pits_fire', 'The Fire Cape!', 'Kiln-Tok-Jad has fallen to an outsider. Grull told me, and I did not believe him. Let me see it...', {
+        priority: 55,
+        conditions: [tag('q_pits_fire')],
+        buttons: [button('Here it is', [stepCmd('fight_pits', 'done')])]
+      }),
+      dialog('pits_thanks', 'Honoured', 'It suits you. The Kiln has accepted you, champion.', { buttons: [goodbye] }),
+      dialog('pits_wait', 'The pits', 'Grull waits at the pit mouth. Thirty waves, and Kiln-Tok-Jad at the end of them.\n\nWhen flame gathers in him, raise your shield toward him. When he rises, run from the burning ring. And when his menders come, strike one.', { priority: 50, conditions: [tag('q_pits_allowed')], buttons: [goodbye] }),
+      dialog('pits_check', 'Well, outsider?', 'Well? The offering for the Kiln, the Ashen Trial, and the strength the pits ask: Defence 50, Hitpoints 50, and Attack or Ranged 50.', {
+        priority: 40,
+        conditions: [tag('q_pits_elder')],
+        buttons: [
+          button('Here is the offering', [stepCmd('fight_pits', 'offering')]),
+          button('I am ready for the pits', [stepCmd('fight_pits', 'allowed')]),
+          button('What must I do again?', [open('pits_tasks')])
+        ]
+      }),
+      dialog('pits_tasks', 'Three things', 'Three things. An offering for the Kiln: 8 magma cream, 4 blaze rods and 16 obsidian. The Ashen Trial: hunt the fire beasts of the Nether (your quest book counts them). And strength: Defence 50, Hitpoints 50, and Attack or Ranged 50.', { buttons: [button('I understand', [close()])] }),
+      dialog('pits_offering_ok', 'Accepted', 'The Kiln accepts your offering. Now the trial, and your strength.', { buttons: [button('Thank you, Elder', [close()])] }),
+      dialog('pits_offering_missing', 'Not enough', 'That is not the whole offering. 8 magma cream, 4 blaze rods, 16 obsidian.', { buttons: [button("I'll be back", [close()])] }),
+      dialog('pits_allowed', 'Go, then', 'Then I vouch for you. Speak to Grull at the pit mouth. Do not die in there: it would shame us both.', { buttons: [button("I won't", [close()])] }),
+      dialog('pits_not_ready', 'Not yet', "Not yet. The offering, the Ashen Trial, and your strength: all three. Your quest book shows what's done; your chat says what's missing.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('pits_intro', 'The Guild sent you', "So the Guild's dragonslayer came. The Kilnfolk heard about Elvarg; we heard you did not run.\n\nThe Fight Pits are not for outsiders, @initiator. Prove you can stand the heat, and I will vouch for you.", {
+        priority: 30,
+        conditions: [tag('q_pits_started')],
+        buttons: [button("I'll prove myself", [cmd('tag @initiator add q_pits_elder'), open('pits_tasks')]), goodbye]
+      }),
+      dialog('default', 'Outsider', 'Outsider. You smell of rain and green things.\n\nThis is Kiln Hollow. Our champions fight in the pits below; outsiders do not, unless one of us vouches for them.', { priority: 10, buttons: [goodbye] })
+    ]
+  },
+  pit_master: {
+    model: 'piglin', variant: 'PIGLIN_BRUTE', name: 'Grull the Pitmaster', color: '#D9442B',
+    description: 'Keeps the Fight Pits: speaking to him opens them.',
+    equipment: { mainhand: 'minecraft:golden_axe' },
+    tags: ['lsp_event.lemursaucepacket.fight_pits'],
+    dialogs: [dialog('default', 'Grull', 'Thirty waves, outsider. If you fall, I drag you out. Elder Ashka decides who goes in.', { priority: 10, buttons: [goodbye] })]
+  },
+  inferno_keeper: {
+    model: 'piglin', variant: 'PIGLIN_BRUTE', name: 'Keeper Zarn', color: '#9B2D20',
+    description: "Keeps the Inferno's seal: speaking to him opens it.",
+    equipment: { mainhand: 'minecraft:netherite_axe', head: 'minecraft:netherite_helmet' },
+    tags: ['lsp_event.lemursaucepacket.inferno'],
+    dialogs: [dialog('default', 'Zarn', 'The seal stays shut to all but those the Elder makes ready.', { priority: 10, buttons: [goodbye] })]
+  },
+  kiln_smith: {
+    model: 'piglin', variant: 'PIGLIN', name: 'Brakka the Smith', color: '#C9A227',
+    description: 'Kilnfolk smith: fire-proof goods, and the Infernal Key for Ashes of the Kiln.',
+    equipment: { mainhand: 'minecraft:golden_sword' },
+    dialogs: [
+      ...shopDialogs('Obsidian, blackstone, things that burn and things that do not. Gold talks, outsider.', 'I forge with lava, not coal. The Elder says outsiders are soft. You look less soft than most.'),
+      dialog('key_after', 'Brakka', "Obsidian, blackstone, things that burn and things that don't. That key of yours still warm?", { priority: 35, conditions: [tag('q_ash_key')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
+      dialog('key_ask', 'An Infernal Key', 'The Elder wants you an Infernal Key? Then bring me what it is made of: a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods.', {
+        priority: 30,
+        conditions: [tag('q_ash_started')],
+        buttons: [button('Here they are', [stepCmd('ashes', 'key')]), button("Let's trade", [shopScreen()]), goodbye]
+      }),
+      dialog('key_forged', 'Forged', 'There. Hold it by the cord: it burns. Give it to the Elder when you are ready.', { buttons: [button('Thank you, Brakka', [close()])] }),
+      dialog('key_missing', 'Not enough', 'A nether star, 4 netherite ingots, 16 crying obsidian, 16 blaze rods. All of it.', { buttons: [button("I'll be back", [close()])] })
+    ],
+    talks: [{ dialog: 'key_ask', when: ['q_ash_started'], unless: ['q_ash_key'] }],
+    quests: ['fight_pits', 'ashes', 'inferno'],
+    goods: [
+      good('minecraft:obsidian', 4, 160), good('minecraft:crying_obsidian', 2, 200), good('minecraft:magma_block', 8, 120), good('minecraft:blackstone', 32, 80),
+      good('minecraft:basalt', 32, 80), good('minecraft:gilded_blackstone', 1, 200), good('minecraft:blaze_powder', 4, 160), good('minecraft:fire_charge', 4, 120),
+      good(potion('fire_resistance'), 1, 220), good(potion('long_fire_resistance'), 1, 320), good('minecraft:golden_carrot', 4, 300), good('minecraft:arrow', 32, 120),
+      good('minecraft:spectral_arrow', 16, 160), good('minecraft:shield', 1, 160)
+    ]
   },
 
   // Guards and townsfolk.

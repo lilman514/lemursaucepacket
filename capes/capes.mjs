@@ -11,8 +11,8 @@
 // Perks are what the cape does while worn (pack/kubejs/server_scripts/capes.js implements them):
 //   stats { critChance, critDamage }   attributes { armor, toughness, health, speed, luck, breakSpeed }
 //   effects [{ effect, amplifier }]     special: 'log_xp' | 'double_crops' | 'eat_heal' | 'mend'
-// `design` is the art brief for the cape's front (art/generated/capes-a.png, capes-b.png, 4x4 sheets in this
-// order). `animated` capes get that many shimmer frames generated from the one design.
+// `design` describes the cape's front (drawn as pixel art in art/capes-px.mjs). `animated` capes get that many
+// frames of pixel animation (art/capes-px.mjs LEGENDARY), stepped by the client every few ticks.
 
 export const NAMESPACE = 'lemursaucepacket'
 
@@ -57,9 +57,12 @@ export const CAPES = [
   { id: 'beacon_cape', name: 'Beaconeer Cape', kind: 'achievement', unlock: { type: 'advancement', id: 'minecraft:nether/create_full_beacon' }, description: 'Build a full-power beacon.', design: 'a white beam rising from a beacon over a midnight blue field' },
   { id: 'wings_cape', name: 'Wings Cape', kind: 'achievement', unlock: { type: 'advancement', id: 'minecraft:end/elytra' }, description: 'Find an elytra.', design: 'grey elytra wings spread over a pale violet field' },
   // Legendary, animated: the rarest feats.
-  { id: 'maxed_cape', name: 'Maxed Cape', kind: 'legendary', animated: 6, unlock: { type: 'all_skills', level: 99 }, perk: { stats: { critChance: 0.05, critDamage: 0.05 }, attributes: { health: 2 } }, perkText: '+5% crit chance, +5% crit damage, +1 heart', description: 'Every skill at 99.', design: 'a radiant brass star with thirteen small stars around it over a black field with gold trim' },
-  { id: 'completionist_cape', name: 'Completionist Cape', kind: 'legendary', animated: 6, unlock: { type: 'flags_prefix', prefix: 'chapter:', count: 7 }, perk: { attributes: { speed: 0.1 } }, perkText: '+10% speed', description: 'Every chapter of the quest book finished.', design: 'an open book with a brass cog on its pages over a royal purple field with gold trim' },
-  { id: 'dragonslayer_cape', name: 'Dragonslayer Cape', kind: 'legendary', animated: 6, unlock: { type: 'advancement', id: 'minecraft:end/kill_dragon' }, perk: { effects: [{ effect: 'minecraft:fire_resistance', amplifier: 0 }] }, perkText: 'Fire Resistance', description: 'Kill the Ender Dragon.', design: 'a black dragon head breathing purple fire over a dark red field with gold trim' },
+  { id: 'maxed_cape', name: 'Maxed Cape', kind: 'legendary', animated: 12, unlock: { type: 'all_skills', level: 99 }, perk: { stats: { critChance: 0.05, critDamage: 0.05 }, attributes: { health: 2 } }, perkText: '+5% crit chance, +5% crit damage, +1 heart', description: 'Every skill at 99.', design: 'a radiant brass star with thirteen small stars around it over a black field with gold trim' },
+  { id: 'completionist_cape', name: 'Completionist Cape', kind: 'legendary', animated: 12, unlock: { type: 'flags_prefix', prefix: 'chapter:', count: 7 }, perk: { attributes: { speed: 0.1 } }, perkText: '+10% speed', description: 'Every chapter of the quest book finished.', design: 'an open book with a brass cog on its pages over a royal purple field with gold trim' },
+  { id: 'dragonslayer_cape', name: 'Dragonslayer Cape', kind: 'legendary', animated: 12, unlock: { type: 'advancement', id: 'minecraft:end/kill_dragon' }, perk: { effects: [{ effect: 'minecraft:fire_resistance', amplifier: 0 }] }, perkText: 'Fire Resistance', description: 'Kill the Ender Dragon.', design: 'a black dragon head breathing purple fire over a dark red field with gold trim' },
+  // The Fight Pits and the Inferno (the Kilnfolk's trials): lava that moves.
+  { id: 'fire_cape', name: 'Fire Cape', kind: 'legendary', animated: 12, unlock: { type: 'flags', flags: ['pits:fire_cape'] }, perk: { stats: { critDamage: 0.12 }, effects: [{ effect: 'minecraft:fire_resistance', amplifier: 0 }] }, perkText: '+12% crit damage, Fire Resistance', description: 'Defeat the champion of the Fight Pits.', design: 'Minecraft lava pouring down the cloth, edged in obsidian' },
+  { id: 'infernal_cape', name: 'Infernal Cape', kind: 'legendary', animated: 12, unlock: { type: 'flags', flags: ['pits:infernal_cape'] }, perk: { stats: { critDamage: 0.2, critChance: 0.05 }, attributes: { health: 2 }, effects: [{ effect: 'minecraft:fire_resistance', amplifier: 0 }] }, perkText: '+20% crit damage, +5% crit chance, +1 heart, Fire Resistance', description: 'Survive the Inferno.', design: 'black obsidian split by glowing cracks of lava that pulse from a molten core' },
   // The owner's.
   { id: 'lemur_cape', name: 'Lemur Cape', kind: 'owner', unlock: { type: 'command' }, description: 'Given by the server owner.', design: 'a cheerful ring-tailed lemur face in a brass cog over a warm brown field' }
 ]

@@ -377,8 +377,8 @@ const SPRITES = [
     id: 'duelist_helmet',
     base: 'iron_helmet',
     ramps: { a: 'gold' },
-    legend: { r: 'crimson@1', R: 'crimson@3', Q: 'crimson@4', q: 'crimson@0' },
-    paint: ['..........qQ....', '........qRQRq...', '.......qRRq.....', '', '', '', '', '', '....*......*....'],
+    legend: { r: 'crimson@1', R: 'crimson@3', Q: 'crimson@4', q: 'crimson@0', V: 'gold@2', N: 'gold@4' },
+    paint: ['..........qQ....', '........qRQRq...', '.......qRRq.....', '', '', '', '', '......VVVV......', '....*..NN..*....', '.......NN.......'],
     pause: 176
   },
   {
@@ -411,32 +411,32 @@ const SPRITES = [
     id: 'compacted_diamond_helmet',
     base: 'iron_helmet',
     ramps: { a: 'diamond' },
-    legend: { C: 'diamond@4', c: 'diamond@1', S: 'diamond@5' },
-    paint: ['', '.......S........', '......cCc.......', '', '....*...........', '', '', '', '...........S....'],
+    legend: { G: 'gold@4', g: 'gold@2', S: 'diamond@5' },
+    paint: ['', '.......G........', '......gGg.......', '', '....*...........', '', '', '', '....g......g....', '....G......G....', '....g......g....', '....GG....GG....'],
     pause: 184
   },
   {
     id: 'compacted_diamond_chestplate',
     base: 'iron_chestplate',
     ramps: { a: 'diamond' },
-    legend: { S: 'diamond@5' },
-    paint: ['', '', '', '..S.............', '', '', '', '.......-........', '......-.-.......', '.......-...S....', '', '', ''],
+    legend: { G: 'gold@4', g: 'gold@2', S: 'diamond@5' },
+    paint: ['', '', '', '..S.............', '......g..g......', '......GGGG......', '', '', '.......gg.......', '......gSSg......', '.......gg.......', '', '', '.....GGGGGG.....'],
     pause: 200
   },
   {
     id: 'compacted_diamond_leggings',
     base: 'iron_leggings',
     ramps: { a: 'diamond' },
-    legend: { S: 'diamond@5' },
-    paint: ['', '', '', '....S...........', '', '', '', '', '..........S.....'],
+    legend: { G: 'gold@4', g: 'gold@2', S: 'diamond@5' },
+    paint: ['', '', '', '....GGGGGGGG....', '', '', '', '..........S.....', '', '....gg....gg....', '', '', '....GG....GG....'],
     pause: 216
   },
   {
     id: 'compacted_diamond_boots',
     base: 'iron_boots',
     ramps: { a: 'diamond' },
-    legend: { S: 'diamond@5' },
-    paint: ['', '', '', '', '....S.....S.....', '', '', '', '', '..S.............'],
+    legend: { G: 'gold@4', g: 'gold@2', S: 'diamond@5' },
+    paint: ['', '', '', '', '....GG....GG....', '', '', '..S.............', '', '', '', '..GG.......GG...'],
     pause: 232
   },
 
@@ -446,7 +446,7 @@ const SPRITES = [
     base: 'iron_helmet',
     ramps: { a: 'netherite' },
     legend: { H: 'netherite@3', h: 'netherite@1', G: 'nethglow@5', g: 'nethglow@3' },
-    paint: ['', '...G........G...', '...h........h...', '....H......H....', '', '.......g........', '', '', '......G..G......'],
+    paint: ['', '...G........G...', '...h........h...', '....H......H....', '', '.......g........', '', '', '.....GGGGGG.....', '', '', ''],
     pause: 180
   },
   {
@@ -454,7 +454,7 @@ const SPRITES = [
     base: 'iron_chestplate',
     ramps: { a: 'netherite' },
     legend: { G: 'nethglow@4', g: 'nethglow@3' },
-    paint: ['', '', '', '', '', '', '.......g........', '.......G........', '......gGg.......', '.......G........', '.......g........'],
+    paint: ['', '', '', '', '', '', '.......g........', '....ggggGggg....', '......gGg.......', '.......G........', '.......g........', '', '....gggggggg....'],
     pause: 196
   },
   {
@@ -462,7 +462,7 @@ const SPRITES = [
     base: 'iron_leggings',
     ramps: { a: 'netherite' },
     legend: { G: 'nethglow@4', g: 'nethglow@3' },
-    paint: ['', '', '', '.......gg.......', '', '.....g....g.....', '.....G....G.....', '.....g....g.....'],
+    paint: ['', '', '', '....gggggggg....', '', '.....g....g.....', '.....G....G.....', '.....g....g.....', '', '', '....gg....gg....'],
     pause: 212
   },
   {
@@ -470,7 +470,7 @@ const SPRITES = [
     base: 'iron_boots',
     ramps: { a: 'netherite' },
     legend: { G: 'nethglow@4', g: 'nethglow@3' },
-    paint: ['', '', '', '', '', '....g.....g.....', '....G.....G.....', '', '', '', '..g..........g..'],
+    paint: ['', '', '', '', '....gg....gg....', '....g.....g.....', '....G.....G.....', '', '', '', '..g..........g..'],
     pause: 228
   },
 
