@@ -40,6 +40,7 @@ One per skill, at level 99. Each has a perk while worn.
 | Agility Cape | Agility 99. | +10% speed |
 | Enchanting Cape | Enchanting 99. | +20% Enchanting XP |
 | Brewing Cape | Brewing 99. | potions you drink last half as long again |
+| Construction Cape | Construction 99. | +1 block reach, and it comes with the Mason's Palette: as many of one decorative block as you like |
 
 ## Quest capes
 

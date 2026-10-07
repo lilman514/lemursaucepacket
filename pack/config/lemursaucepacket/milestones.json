@@ -396,6 +396,32 @@
           "quest": "3AF1667D91BAFF99"
         }
       ]
+    },
+    {
+      "skill": "construction",
+      "name": "Construction",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "4B10514395CFB710"
+        },
+        {
+          "level": 25,
+          "quest": "2A8B34AC6CE294DE"
+        },
+        {
+          "level": 50,
+          "quest": "378AA4B49CBB296F"
+        },
+        {
+          "level": 75,
+          "quest": "38F7BBDC2B87771F"
+        },
+        {
+          "level": 99,
+          "quest": "7641CE8F38F2E7E3"
+        }
+      ]
     }
   ],
   "total": [
@@ -420,8 +446,8 @@
       "quest": "6457E540F71D6A7E"
     },
     {
-      "level": 1485,
-      "quest": "3850B0A73693A952"
+      "level": 1584,
+      "quest": "28B34CE36B649051"
     }
   ]
 }

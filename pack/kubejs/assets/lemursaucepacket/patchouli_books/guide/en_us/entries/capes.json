@@ -27,6 +27,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(bold)Construction Cape$() - Construction 99. - +1 block reach, and it comes with the Mason's Palette: as many of one decorative block as you like"
+    },
+    {
+      "type": "patchouli:text",
       "title": "Quest capes",
       "text": "Finish a chapter of the quest book (its last quest hands the cape over).$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Settler's Cape$() - Finish the Landfall chapter. - -$(br)$(bold)Brass Age Cape$() - Finish the Brass Age chapter. - -$(br)$(bold)Iron Roads Cape$() - Finish the Iron Roads chapter. - -$(br)$(bold)Skyward Cape$() - Finish the Skyward chapter. - -$(br)$(bold)Crown of Fire Cape$() - Finish the Crown of Fire chapter. - -$(br)$(bold)Legacy Cape$() - Finish the Legacy chapter. - +1 heart$(br)$(bold)Armory Cape$() - Finish the Armory chapter. - -"
     },

@@ -241,7 +241,7 @@ async function icons() {
   await iconSheet('emblems.png', [['', '', '', 'capes'], ['', '', '', ''], ['backpack', '', '', 'map'], ['', 'account', 'quests', '']], [[HUB_ASSETS, 64, 0.02], [`${LAUNCHER_ASSETS}/icons`, 96, 0.02]])
   await iconSheet('skill-icons.png', SKILL_ICONS, [['pack/kubejs/assets/lemursaucepacket/textures/skills', 64, 0.02]])
   // Skills added after the sheet was painted have a transparent master of their own.
-  for (const [file, name] of [['skill-enchanting.png', 'enchanting'], ['skill-brewing.png', 'brewing']]) {
+  for (const [file, name] of [['skill-enchanting.png', 'enchanting'], ['skill-brewing.png', 'brewing'], ['skill-construction.png', 'construction']]) {
     await (await squareIcon(await cleanAlpha(source(file)), 64, 0.02)).toFile(target(`pack/kubejs/assets/lemursaucepacket/textures/skills/${name}.png`))
   }
   console.log(`icons: ${HUB_ICONS.flat().length + 3} hub/launcher icons, ${SKILL_ICONS.flat().length} skill icons`)
@@ -672,7 +672,7 @@ async function website() {
   await iconCells('emblems.png', EMBLEMS, 'emblems', 160)
   await iconCells('hub-icons.png', HUB_ICONS, 'icons', 128)
   await iconCells('skill-icons.png', SKILL_ICONS, 'skills', 128)
-  for (const name of ['enchanting', 'brewing']) await (await squareIcon(await cleanAlpha(source(`skill-${name}.png`)), 128, 0.03)).webp({ quality: 88, alphaQuality: 100 }).toFile(target(`${WEB}/skills/${name}.webp`))
+  for (const name of ['enchanting', 'brewing', 'construction']) await (await squareIcon(await cleanAlpha(source(`skill-${name}.png`)), 128, 0.03)).webp({ quality: 88, alphaQuality: 100 }).toFile(target(`${WEB}/skills/${name}.webp`))
 
   const kit = `${LAUNCHER_ASSETS}/ui`
   for (const [name, width] of [['frame', 600], ['button', 200], ['button-hover', 200], ['plaque', 360], ['ring', 200]]) {

@@ -32,7 +32,8 @@ const list = {
         description: c.description,
         texture: `${NAMESPACE}:textures/capes/${c.id}.png`,
         frames: c.animated ?? 1,
-        reclaim: reclaimOf(c)
+        reclaim: reclaimOf(c),
+        kit: c.kit ?? null
       }
     ])
   )

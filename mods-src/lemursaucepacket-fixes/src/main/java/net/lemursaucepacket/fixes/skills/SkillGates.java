@@ -44,6 +44,8 @@ public final class SkillGates {
     private static final Map<Item, Need> CRAFT = new HashMap<>();
     private static final Map<TagKey<Item>, Need> CRAFT_TAGS = new HashMap<>();
     private static final Map<Item, Need> BREW = new HashMap<>();
+    private static final Map<ResourceLocation, Need> RECIPES = new HashMap<>();
+    private static JsonObject construction = new JsonObject();
     private static final List<Drop> DROPS = new ArrayList<>();
     private static final Map<String, Integer> POTIONS = new HashMap<>();
     private static final Map<Item, Integer> POTION_FORMS = new HashMap<>();
@@ -69,6 +71,11 @@ public final class SkillGates {
                     else item(s).ifPresent(item -> CRAFT.put(item, need));
                 }
             }
+            if (root.has("recipes")) for (JsonElement e : root.getAsJsonArray("recipes")) {
+                JsonObject r = e.getAsJsonObject();
+                RECIPES.put(ResourceLocation.parse(r.get("id").getAsString()), new Need(r.get("skill").getAsString(), r.get("level").getAsInt(), r.get("what").getAsString()));
+            }
+            if (root.has("construction")) construction = root.getAsJsonObject("construction");
             for (JsonElement e : root.getAsJsonArray("brew")) {
                 JsonObject b = e.getAsJsonObject();
                 Need need = new Need("brewing", b.get("level").getAsInt(), b.get("what").getAsString());
@@ -88,8 +95,8 @@ public final class SkillGates {
                 xpBase = root.getAsJsonObject("brewXp").get("base").getAsDouble();
                 xpPerLevel = root.getAsJsonObject("brewXp").get("perLevel").getAsDouble();
             }
-            SkillsModule.LOGGER.info("Skill gates: {} made items (+{} tags), {} brewing ingredients, {} drops, {} potions, fishing treasure at {}",
-                    CRAFT.size(), CRAFT_TAGS.size(), BREW.size(), DROPS.size(), POTIONS.size(), fishingTreasure);
+            SkillsModule.LOGGER.info("Skill gates: {} made items (+{} tags), {} recipes, {} brewing ingredients, {} drops, {} potions, fishing treasure at {}",
+                    CRAFT.size(), CRAFT_TAGS.size(), RECIPES.size(), BREW.size(), DROPS.size(), POTIONS.size(), fishingTreasure);
         } catch (Exception ex) {
             SkillsModule.LOGGER.error("Couldn't read the skill gates {}", file, ex);
         }
@@ -108,6 +115,19 @@ public final class SkillGates {
         if (need != null) return need;
         for (Map.Entry<TagKey<Item>, Need> e : CRAFT_TAGS.entrySet()) if (stack.is(e.getKey())) return e.getValue();
         return null;
+    }
+
+    /** What using this recipe needs (Construction's alternate recipes), or null if anyone can. */
+    @Nullable
+    public static Need recipe(ResourceLocation id) {
+        ensureLoaded();
+        return RECIPES.get(id);
+    }
+
+    /** Construction's part of the file (its XP rules, saving perk and palette), for the construction package. */
+    public static JsonObject construction() {
+        ensureLoaded();
+        return construction;
     }
 
     /** What brewing with this ingredient needs, or null if anyone can. */

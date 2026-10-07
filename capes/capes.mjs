@@ -11,10 +11,11 @@
 //           { type: 'flags_prefix', prefix, count }  that many flags starting with the prefix
 //           { type: 'command' }                      only `/lsp cape unlock <player> <id>` (the owner)
 // Perks are what the cape does while worn (lsp_fixes capes: Capes, CapeCurio implement them):
-//   stats { critChance, critDamage }   attributes { armor, toughness, health, speed, luck, breakSpeed }
+//   stats { critChance, critDamage }   attributes { armor, toughness, health, speed, luck, breakSpeed, reach }
 //   effects [{ effect, amplifier }]     special: 'log_xp' | 'double_crops' | 'eat_heal' | 'mend'
 // `design` describes the cape's front (drawn as pixel art in art/capes-px.mjs). `animated` capes get that many
 // frames of pixel animation (art/capes-px.mjs LEGENDARY), stepped by the client every few ticks.
+// `kit` is an item that comes with the cape each time it's handed over (the Construction Cape's Mason's Palette).
 // A lost cape is made again by the NPC in RECLAIM (by kind, or by id), for coins: their "I've lost a cape" button opens
 // the collection with a buy button. Only someone who has earned a cape can have another made, or wear one.
 
@@ -48,6 +49,10 @@ export const CAPES = [
   skillCape('agility', 'Agility Cape', 'a winged boot over a teal field', { attributes: { speed: 0.1 } }, '+10% speed'),
   skillCape('enchanting', 'Enchanting Cape', 'a gold star over a royal purple field', { special: 'enchant_xp' }, '+20% Enchanting XP'),
   skillCape('brewing', 'Brewing Cape', 'a stoppered potion flask over an emerald field', { special: 'potion_duration' }, 'potions you drink last half as long again'),
+  {
+    ...skillCape('construction', 'Construction Cape', "a mason's trowel over a brick red field", { attributes: { reach: 1 } }, "+1 block reach, and it comes with the Mason's Palette: as many of one decorative block as you like"),
+    kit: 'lsp_fixes:masons_palette'
+  },
   // Quest capes: finishing a chapter's last quest sets a flag.
   { id: 'settlers_cape', name: "Settler's Cape", kind: 'quest', unlock: { type: 'flags', flags: ['chapter:landfall'] }, description: 'Finish the Landfall chapter.', design: 'a small cottage over a plain linen field' },
   { id: 'brass_age_cape', name: 'Brass Age Cape', kind: 'quest', unlock: { type: 'flags', flags: ['chapter:brass_age'] }, description: 'Finish the Brass Age chapter.', design: 'a brass cog with a flame at its heart over a bronze field' },

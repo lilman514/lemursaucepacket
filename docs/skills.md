@@ -1,13 +1,13 @@
 ---
 description: >-
-  Fifteen RuneScape-style skills from 1 to 99: what trains them, what every level unlocks, the combat level and the
-  quests' skill requirements.
+  Sixteen RuneScape-style skills from 1 to 99: what trains them, what every level unlocks, the combat level,
+  Construction and the Mason's Palette, and the quests' skill requirements.
 icon: chart-line
 ---
 
 # Skills
 
-Fifteen RuneScape-style skills, levels 1–99, on RuneScape's XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger, and as in RuneScape each skill unlocks things as it grows: gear you can wield and wear, things you can make, potions you can brew, crops you can plant and trees you can chop. The main quests ask for skills too.
+Sixteen RuneScape-style skills, levels 1–99, on RuneScape's XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger, and as in RuneScape each skill unlocks things as it grows: gear you can wield and wear, things you can make, potions you can brew, crops you can plant, trees you can chop and blocks you can build with. The main quests ask for skills too.
 
 ![The skills panel in the inventory](images/inventory.jpg)
 
@@ -35,6 +35,7 @@ XP shows up as it comes in, in a small tracker at the top of the screen, just be
 | Artisan | Crafting | Crafting | Recipes: bows, shields, diamond gear, ender chests, beacons |
 | Artisan | Enchanting | The enchanting table | How far enchantments go ([Enchanting](enchanting.md)) |
 | Artisan | Brewing | Brewing potions | Which potions you can brew; eyes of ender at 55 |
+| Artisan | Construction | Building | +0.1 % chance a block you place isn't used up; decorative blocks in bulk; the Mason's Palette at 99 |
 | Support | Agility | Moving, sprinting, swimming | +0.01 % speed, −0.5 % fall damage (max 50 %); the elytra |
 
 Every ten levels a skill fires fireworks. You keep every level when you die.
@@ -42,6 +43,15 @@ Every ten levels a skill fires fireworks. You keep every level when you die.
 ## Combat level
 
 Your combat level is worked out the way RuneScape works it out, from your combat skills: a quarter of Defence plus Hitpoints, plus 0.325 times the better of Attack plus Strength, or one and a half times Ranged. It runs from 1 to 113 here (there's no Prayer or Magic), and it shows under your name. Some drops and quests wait on it: see below.
+
+## Construction
+
+Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobblestone wall pays little, cut and polished stone more, Macaw's roofs, windows and furniture and Create Deco more again, and a lectern or a sea lantern most of all. The ground as you found it (dirt, sand, gravel, natural stone, logs) pays nothing, nor do machines, chests, redstone, rails, torches or scaffolding. A spot pays once, so pulling a block down and putting it back earns nothing; build somewhere new. The Builder's Wand's blocks pay too.
+
+- **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block the perk saved you is free: if it's broken later it drops nothing, so it can never be turned into more than you had.
+- **Decorative blocks in bulk.** Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay ball, mossy and cracked kinds without a furnace, eight stairs where vanilla gives four, a lantern for less iron. The guide below lists them all.
+- **The Mason's Palette** comes with the Construction Cape at 99. Right-click the air to open it and choose a block, then right-click to place as many as you like: none are used up. Middle-click a block to choose that kind. It holds stone of every kind, deepslate, tuff, blackstone, sandstone, bricks, quartz, purpur, prismarine, concrete, terracotta, glass, Create's cut stone, Create Deco and the stone and metal blocks of Macaw's mods, and a few decorations (lanterns, chains, bars, end rods, lecterns).
+- **Why it can't be farmed.** What the palette places drops nothing when broken, and stays put: pistons and Create's contraptions won't move it, an explosion or a drill takes it without drops, and it rides an airship without losing that. It never places anything you'd otherwise grow or gather (no wood, wool, crops or ores), nothing that falls, holds items or weathers, nothing with redstone, and nothing Create can crush, mill or wash into something else. Lost it? Gerta the Mason in Lemurton makes another for 10,000 coins.
 
 ## Using gear
 
@@ -62,7 +72,7 @@ Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weak
 Like a RuneScape skill guide: the level each thing needs.
 
 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking pot) and a message says what it takes. The item's tooltip says it too. Create's crafting blueprint asks the same of whoever clicks it.
-- **Machines.** The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself.
+- **Machines.** The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists or use a recipe that waits on a level, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself.
 - **Brewing stands and cooking pots** that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for won't go into a stand by hand.
 - **Enchantments** past their vanilla level need two skills: Enchanting to make them, and the gear's own skill to use them. Fishing for Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. See [Enchanting](enchanting.md).
 
@@ -184,6 +194,33 @@ Like a RuneScape skill guide: the level each thing needs.
 | Level | Lets you |
 |---|---|
 | 75 | Get wither skeleton skulls (the Wither) as drops |
+
+### Construction
+
+| Level | Lets you make |
+|---|---|
+| 5 | Ten stone bricks from eight stone and a clay ball |
+| 10 | Mossy cobblestone by the eight: cobblestone round a moss block |
+| 15 | Mossy stone bricks by the eight: stone bricks round a moss block |
+| 20 | Cracked stone bricks without a furnace: stone bricks round a flint |
+| 25 | Smooth stone without a furnace: stone round a sand |
+| 30 | Chiseled stone bricks by the eight: stone bricks round an iron nugget |
+| 40 | Cracked deepslate bricks without a furnace |
+| 45 | Cracked deepslate tiles without a furnace |
+| 50 | Cracked nether bricks without a furnace |
+| 55 | Cracked polished blackstone bricks without a furnace |
+| 60 | Eight stone brick stairs from six stone bricks and a clay ball |
+| 70 | A lantern from four iron nuggets, four glass panes and a torch |
+| 99 | Use the Mason's Palette: as many of one decorative block as you like (see below) |
+
+| XP a block | What you build with |
+|---|---|
+| 25 | Fine pieces: lecterns, bells, bookshelves, sea lanterns, end rods, decorated pots |
+| 15 | Macaw's roofs, windows, paths, bridges, stairs, fences, lights, doors and furniture, and Create Deco |
+| 10 | Fancy stone and glass: chiseled, cracked, mossy, cut, smooth, polished and tiled kinds, quartz, prismarine, purpur, end stone bricks, copper, glazed terracotta, stained glass, Create's cut stone; lanterns, chains, iron bars, doors and trapdoors |
+| 5 | Building blocks: planks, bricks, stone bricks, glass, wool, concrete, terracotta and sandstone, and every stair, slab, wall and fence |
+| 2 | Cobblestone and stone |
+| 0 | The ground as you found it (dirt, sand, gravel, natural stone, logs, leaves, plants, ores), storage blocks, machines and anything with an inventory, redstone, rails, torches, ladders and scaffolding |
 
 ### Quest requirements
 

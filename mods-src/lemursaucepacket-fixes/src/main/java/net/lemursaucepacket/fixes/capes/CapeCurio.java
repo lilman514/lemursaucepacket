@@ -119,6 +119,7 @@ final class CapeCurio implements ICurioItem {
                 case "speed" -> map.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(modifier, amount, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
                 case "luck" -> map.put(Attributes.LUCK, new AttributeModifier(modifier, amount, AttributeModifier.Operation.ADD_VALUE));
                 case "breakSpeed" -> map.put(Attributes.BLOCK_BREAK_SPEED, new AttributeModifier(modifier, amount, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+                case "reach" -> map.put(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(modifier, amount, AttributeModifier.Operation.ADD_VALUE));
                 default -> CapesModule.LOGGER.warn("The {} has an unknown attribute perk '{}'", def.id(), key);
             }
         }

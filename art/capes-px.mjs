@@ -27,6 +27,7 @@ const CLOTH = {
   white: ['#4a4652', '#7b7784', '#a9a5b1', '#cfccd6', '#ebe8f0', '#ffffff'],
   royal: ['#150a2a', '#2a1454', '#42207e', '#5c31a3', '#7e4fc4', '#aa82e2'],
   emerald: ['#062016', '#0d3f2a', '#15613f', '#1f8455', '#34a86f', '#6cd699'],
+  brick: ['#260d08', '#4d1a10', '#782b19', '#a04026', '#c45f39', '#e38a59'],
   dusk: ['#140f22', '#261d40', '#3a2d5e', '#52427c', '#6f5e9c', '#9a8bc4'],
   // The Infernal Cape's fire: redder and darker than lava's embers, from crimson to white-hot.
   inferno: ['#1c0404', '#4a0808', '#86110c', '#c42310', '#f2601c', '#ffe08a']
@@ -53,6 +54,7 @@ const EMBLEMS = {
   crown: { rows: ['Y..Y..Y', 'YY.Y.YY', 'YYYYYYY', 'YrYrYrY', 'YYYYYYY'], pal: { Y: 'gold@4', r: 'crimson@4' } },
   star: { rows: ['..Y..', '..Y..', 'YYYYY', '.YYY.', '.Y.Y.'], pal: { Y: 'gold@5' } },
   potion: { rows: ['..c..', '..g..', '.gPg.', 'gPPPg', 'gPhPg', 'gPPPg', '.ggg.'], pal: { c: 'wood@3', g: 'white@4', P: 'plum@4', h: 'white@5' } },
+  trowel: { rows: ['..S..', '.SWS.', 'SSWSS', '.SSS.', '..S..', '..g..', '..b..', '..b..'], pal: { S: 'steel@4', W: 'steel@5', g: 'gold@4', b: 'wood@3' } },
   compass: { rows: ['..R..', '..W..', 'RW.WR', '..W..', '..R..'], pal: { R: 'crimson@3', W: 'white@4' } },
   emerald: { rows: ['.EE.', 'EeEE', 'EEEE', 'EEEE', '.EE.'], pal: { E: 'emerald@3', e: 'emerald@5' } }
 }
@@ -93,6 +95,8 @@ const PATTERNS = {
   band: (d) => (fx, fy) => (fy === 9 || fy === 10 ? [d.accent, 1] : null),
   beam: () => (fx) => (fx === 4 || fx === 5 ? ['glass', 2] : fx === 3 || fx === 6 ? ['glass', -1] : null),
   feathers: (d) => (fx, fy) => ((fy + Math.round(Math.abs(fx - 4.5))) % 6 === 0 ? [d.field, 2] : null),
+  // Courses of brick: a darker mortar line every fourth row, the joints staggered course by course.
+  bricks: (d) => (fx, fy) => (fy % 4 === 3 || (fx + 2 * (Math.floor(fy / 4) % 2)) % 4 === 3 ? [d.field, -1] : null),
   ringtail: () => (fx, fy) => (Math.floor(fy / 2) % 2 === 0 ? ['black', 0] : ['white', 0])
 }
 
@@ -113,6 +117,7 @@ export const DESIGNS = {
   agility_cape: { field: 'navy', band: 'white', emblem: 'wings' },
   enchanting_cape: { field: 'royal', band: 'gold', emblem: 'star' },
   brewing_cape: { field: 'emerald', band: 'gold', emblem: 'potion' },
+  construction_cape: { field: 'brick', band: 'white', emblem: 'trowel', pattern: 'bricks' },
   settlers_cape: { field: 'forest', field2: 'earth', band: 'brass', emblem: 'sapling', pattern: 'split' },
   brass_age_cape: { field: 'brass', band: 'black', emblem: 'cog' },
   iron_roads_cape: { field: 'iron', band: 'brass', pattern: 'rails' },

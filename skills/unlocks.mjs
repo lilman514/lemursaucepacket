@@ -176,3 +176,127 @@ export const QUEST_REQUIREMENTS = {
   'Ashes of the Kiln': { defence: 80, hitpoints: 80, 'attack|ranged': 80 },
   'The Inferno': {}
 }
+
+// ---------------------------------------------------------------- Construction (lsp_fixes construction package)
+//
+// Block matchers, used by the XP rules and the palette: a block id, a block tag ('#c:glass_blocks'), a whole mod
+// ('@createdeco'), a regex over the id ('~^minecraft:cut_.*'), or '*entity' for any block with a block entity.
+
+/**
+ * Construction XP for each block placed, RuneScape style: the fancier the block, the more it pays. A block pays once it
+ * has stood for a minute, and a spot pays once (until the server restarts), so placing and breaking earns nothing.
+ * Rules are checked in order and the first that matches wins; a block nothing matches pays nothing.
+ */
+export const CONSTRUCTION_XP = [
+  { xp: 25, what: 'Fine pieces: lecterns, bells, bookshelves, sea lanterns, end rods, decorated pots', match: ['minecraft:lectern', 'minecraft:bell', 'minecraft:bookshelf', 'minecraft:chiseled_bookshelf', 'minecraft:sea_lantern', 'minecraft:end_rod', 'minecraft:decorated_pot'] },
+  { xp: 2, what: 'Cobblestone and stone', match: ['minecraft:cobblestone', 'minecraft:stone', 'minecraft:cobbled_deepslate', 'minecraft:mossy_cobblestone'] },
+  {
+    xp: 0,
+    what: 'The ground as you found it (dirt, sand, gravel, natural stone, logs, leaves, plants, ores), storage blocks, machines and anything with an inventory, redstone, rails, torches, ladders and scaffolding',
+    match: [
+      '#minecraft:dirt', '#minecraft:sand', '#c:gravels', '#minecraft:base_stone_overworld', '#minecraft:base_stone_nether', '#minecraft:logs', '#minecraft:leaves',
+      '#minecraft:saplings', '#minecraft:flowers', '#minecraft:crops', '#c:ores', '#c:storage_blocks', '#minecraft:rails', '#minecraft:beds', '#minecraft:ice', '#minecraft:snow',
+      '~^minecraft:(grass_block|mycelium|podzol|mud|clay|moss_block|end_stone|obsidian|crying_obsidian|netherrack|magma_block|soul_sand|soul_soil|sponge|wet_sponge|hay_block|slime_block|honey_block|cactus|sugar_cane|bamboo|kelp|vine|cobweb|farmland|dirt_path|tnt)$',
+      '~.*(torch|ladder|scaffolding|redstone|repeater|comparator|observer|piston|lever|button|pressure_plate|tripwire|daylight_detector|target|note_block|jukebox|dispenser|dropper|hopper|crafter|sculk|_rail|copper_bulb).*',
+      '*entity'
+    ]
+  },
+  {
+    xp: 15,
+    what: "Macaw's roofs, windows, paths, bridges, stairs, fences, lights, doors and furniture, and Create Deco",
+    match: ['@mcwroofs', '@mcwwindows', '@mcwpaths', '@mcwbridges', '@mcwstairs', '@mcwfences', '@mcwlights', '@mcwdoors', '@mcwtrpdoors', '@mcwfurnitures', '@createdeco']
+  },
+  {
+    xp: 10,
+    what: "Fancy stone and glass: chiseled, cracked, mossy, cut, smooth, polished and tiled kinds, quartz, prismarine, purpur, end stone bricks, copper, glazed terracotta, stained glass, Create's cut stone; lanterns, chains, iron bars, doors and trapdoors",
+    match: [
+      '~^minecraft:(chiseled|cracked|mossy|cut|smooth|polished)_.*', '~^minecraft:.*_tiles?(_stairs|_slab|_wall)?$', '~^minecraft:.*(quartz|prismarine|purpur|end_stone_brick|copper).*',
+      '~^minecraft:.*_glazed_terracotta$', '~^minecraft:.*stained_glass.*', '~^minecraft:(tuff|mud|red_nether|nether)_brick.*', '~^create:(cut|polished_cut|small|layered)_.*', '~^create:.*_pillar$',
+      'minecraft:lantern', 'minecraft:soul_lantern', 'minecraft:chain', 'minecraft:iron_bars', '#minecraft:doors', '#minecraft:trapdoors', '#minecraft:fence_gates'
+    ]
+  },
+  {
+    xp: 5,
+    what: 'Building blocks: planks, bricks, stone bricks, glass, wool, concrete, terracotta and sandstone, and every stair, slab, wall and fence',
+    match: [
+      '#minecraft:planks', '#minecraft:stairs', '#minecraft:slabs', '#minecraft:walls', '#minecraft:fences', '#minecraft:wool', '#minecraft:wool_carpets', '#minecraft:terracotta', '#c:glass_blocks', '#c:glass_panes',
+      '~^minecraft:.*_concrete$', '~^minecraft:(red_)?sandstone$', '~^minecraft:.*bricks$', 'minecraft:packed_mud', 'minecraft:flower_pot'
+    ]
+  }
+]
+
+/** The saving perk: each Construction level adds this chance that a block you place doesn't get used up (9.9% at 99). */
+export const CONSTRUCTION_SAVE_PER_LEVEL = 0.001
+
+/**
+ * Alternate recipes Construction unlocks: decorative blocks in bulk, without a furnace or a stonecutter. Each has two
+ * kinds of ingredient in a shape of its own, so Create's mixer and press never pick them up; the crafting table, the
+ * blueprint and the Crafter check the level (machines never use them). skills/build.mjs writes the recipe files
+ * (lemursaucepacket:construction/<id>) and their gates.
+ */
+const ring = (outer, middle) => ({ pattern: ['OOO', 'OMO', 'OOO'], key: { O: outer, M: middle } })
+export const CONSTRUCTION_RECIPES = [
+  { id: 'mortared_stone_bricks', level: 5, what: 'Ten stone bricks from eight stone and a clay ball', ...ring('minecraft:stone', 'minecraft:clay_ball'), result: 'minecraft:stone_bricks', count: 10 },
+  { id: 'mossy_cobblestone', level: 10, what: 'Mossy cobblestone by the eight: cobblestone round a moss block', ...ring('minecraft:cobblestone', 'minecraft:moss_block'), result: 'minecraft:mossy_cobblestone', count: 8 },
+  { id: 'mossy_stone_bricks', level: 15, what: 'Mossy stone bricks by the eight: stone bricks round a moss block', ...ring('minecraft:stone_bricks', 'minecraft:moss_block'), result: 'minecraft:mossy_stone_bricks', count: 8 },
+  { id: 'cracked_stone_bricks', level: 20, what: 'Cracked stone bricks without a furnace: stone bricks round a flint', ...ring('minecraft:stone_bricks', 'minecraft:flint'), result: 'minecraft:cracked_stone_bricks', count: 8 },
+  { id: 'smooth_stone', level: 25, what: 'Smooth stone without a furnace: stone round a sand', ...ring('minecraft:stone', 'minecraft:sand'), result: 'minecraft:smooth_stone', count: 8 },
+  { id: 'chiseled_stone_bricks', level: 30, what: 'Chiseled stone bricks by the eight: stone bricks round an iron nugget', ...ring('minecraft:stone_bricks', 'minecraft:iron_nugget'), result: 'minecraft:chiseled_stone_bricks', count: 8 },
+  { id: 'cracked_deepslate_bricks', level: 40, what: 'Cracked deepslate bricks without a furnace', ...ring('minecraft:deepslate_bricks', 'minecraft:flint'), result: 'minecraft:cracked_deepslate_bricks', count: 8 },
+  { id: 'cracked_deepslate_tiles', level: 45, what: 'Cracked deepslate tiles without a furnace', ...ring('minecraft:deepslate_tiles', 'minecraft:flint'), result: 'minecraft:cracked_deepslate_tiles', count: 8 },
+  { id: 'cracked_nether_bricks', level: 50, what: 'Cracked nether bricks without a furnace', ...ring('minecraft:nether_bricks', 'minecraft:flint'), result: 'minecraft:cracked_nether_bricks', count: 8 },
+  { id: 'cracked_polished_blackstone_bricks', level: 55, what: 'Cracked polished blackstone bricks without a furnace', ...ring('minecraft:polished_blackstone_bricks', 'minecraft:flint'), result: 'minecraft:cracked_polished_blackstone_bricks', count: 8 },
+  { id: 'stone_brick_stairs', level: 60, what: 'Eight stone brick stairs from six stone bricks and a clay ball', pattern: ['S  ', 'SS ', 'SSC'], key: { S: 'minecraft:stone_bricks', C: 'minecraft:clay_ball' }, result: 'minecraft:stone_brick_stairs', count: 8 },
+  { id: 'lantern', level: 70, what: 'A lantern from four iron nuggets, four glass panes and a torch', pattern: ['NGN', 'GTG', 'NGN'], key: { N: 'minecraft:iron_nugget', G: 'minecraft:glass_pane', T: 'minecraft:torch' }, result: 'minecraft:lantern', count: 1 }
+]
+
+/**
+ * The Mason's Palette (lsp_fixes:masons_palette), the Construction Cape's: at Construction 99 it places as many of one
+ * decorative block as you like, without using any up. Nothing it places drops anything when broken (nor slips away on
+ * a piston, a contraption, an explosion or a drill, or rides an airship back out), so it can't be turned into items, and
+ * it never places what you'd otherwise farm or mine for (no wood, wool or crops), what Create crushes, mills or washes
+ * into something (lsp_fixes reads those from Create's own recipes: raw tuff, granite and diorite, terracotta, Create's
+ * ore stones), anything that falls, holds items, changes on its own (copper) or carries redstone. Nothing of any wood
+ * either: lsp_fixes also leaves out every block named after a kind of planks in the game (so modded woods too). Categories
+ * list in order; a block goes in the first that matches.
+ */
+export const PALETTE = {
+  level: 99,
+  coins: 10000,
+  never: [
+    '#minecraft:logs', '#minecraft:planks', '#minecraft:wool', '#minecraft:wool_carpets', '#minecraft:beds', '#minecraft:candles', '#minecraft:banners', '#c:storage_blocks', '#c:ores', '#minecraft:rails',
+    // Every Compat is wood-type variants of other mods' blocks; Macaw's furniture is wood or wool.
+    '@everycomp', '@mcwfurnitures',
+    '~.*(seat|couch|chaise|curtain|paper|froglass|cushion).*',
+    '~.*(oak|spruce|birch|jungle|acacia|mangrove|cherry|bamboo|crimson|warped|azalea|_wood|_log|planks|stem|hyphae).*',
+    '~.*(hay|honey|slime|glowstone|shroomlight|amethyst|sponge|coinstack|infested|_ore|raw_|gilded|skull|_head|copper|flower_pot|potted|candle|carpet).*',
+    '~.*(torch|ladder|scaffolding|redstone|repeater|comparator|observer|piston|lever|button|pressure_plate|tripwire|daylight_detector|target|note_block|jukebox|dispenser|dropper|hopper|crafter|sculk|tnt|lightning_rod).*',
+    '~^minecraft:(obsidian|crying_obsidian|netherite_block|lodestone|respawn_anchor|beacon|conduit|spawner|bedrock|end_portal_frame|budding_amethyst|dragon_egg|reinforced_deepslate|bookshelf|chiseled_bookshelf|ice|packed_ice|blue_ice)$'
+  ],
+  // The one block with a block entity it may place: a lectern holds a book you put there, which drops as usual.
+  blockEntities: ['minecraft:lectern'],
+  // Create's processing inputs that only give back what a cobblestone generator already does.
+  processingAllowed: ['minecraft:cobblestone', 'minecraft:sandstone', '#c:glass_blocks', '#c:glass_panes'],
+  categories: [
+    { name: 'Stone', icon: 'minecraft:stone_bricks', match: ['~^minecraft:(stone|cobblestone|mossy_cobblestone|smooth_stone)(_stairs|_slab|_wall)?$', '~^minecraft:(mossy_|cracked_|chiseled_)?stone_brick(s|_stairs|_slab|_wall)$'] },
+    { name: 'Granite, diorite and andesite', icon: 'minecraft:polished_andesite', match: ['~^minecraft:(polished_)?(granite|diorite|andesite)(_stairs|_slab|_wall)?$'] },
+    { name: 'Deepslate and tuff', icon: 'minecraft:deepslate_tiles', match: ['~^minecraft:.*(deepslate|tuff).*'] },
+    { name: 'Blackstone and basalt', icon: 'minecraft:polished_blackstone_bricks', match: ['~^minecraft:.*(blackstone|basalt).*'] },
+    { name: 'Sandstone', icon: 'minecraft:cut_sandstone', match: ['~^minecraft:.*sandstone.*'] },
+    { name: 'Bricks', icon: 'minecraft:bricks', match: ['~^minecraft:(bricks|brick_.*|mud_brick.*|packed_mud|.*nether_brick.*)$'] },
+    { name: 'Quartz, purpur and end stone', icon: 'minecraft:quartz_bricks', match: ['~^minecraft:.*(quartz|purpur|end_stone_brick).*'] },
+    { name: 'Prismarine', icon: 'minecraft:prismarine_bricks', match: ['~^minecraft:.*prismarine.*', 'minecraft:sea_lantern'] },
+    { name: 'Concrete', icon: 'minecraft:light_gray_concrete', match: ['~^minecraft:.*_concrete$'] },
+    { name: 'Terracotta', icon: 'minecraft:orange_glazed_terracotta', match: ['#minecraft:terracotta', '~^minecraft:.*_glazed_terracotta$'] },
+    { name: 'Glass', icon: 'minecraft:glass', match: ['#c:glass_blocks', '#c:glass_panes'] },
+    { name: "Create's stone", icon: 'create:cut_limestone', match: ['~^create:(cut|polished_cut|small|layered)_.*', '~^create:.*_pillar$', '~^create:(limestone|scoria|scorchia)$'] },
+    { name: 'Create Deco', icon: 'createdeco:dusk_bricks', match: ['@createdeco'] },
+    { name: "Macaw's roofs", icon: 'mcwroofs:stone_roof', match: ['@mcwroofs'] },
+    { name: "Macaw's paths", icon: 'mcwpaths:andesite_basket_weave_paving', match: ['@mcwpaths'] },
+    { name: "Macaw's stairs and bridges", icon: 'mcwbridges:stone_brick_bridge', match: ['@mcwstairs', '@mcwbridges'] },
+    { name: "Macaw's windows and doors", icon: 'mcwwindows:stone_window', match: ['@mcwwindows', '@mcwdoors', '@mcwtrpdoors'] },
+    { name: "Macaw's fences and walls", icon: 'mcwfences:modern_stone_brick_wall', match: ['@mcwfences'] },
+    { name: "Macaw's lights", icon: 'mcwlights:chain_lantern', match: ['@mcwlights'] },
+    { name: 'Decoration', icon: 'minecraft:lantern', match: ['minecraft:lectern', 'minecraft:lantern', 'minecraft:soul_lantern', 'minecraft:chain', 'minecraft:iron_bars', 'minecraft:end_rod', '~^create:(andesite|brass)_bars$', '~^create:.*_iron_window(_pane)?$'] }
+  ]
+}

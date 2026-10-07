@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "OOO",
+    "OMO",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:cobblestone"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "result": {
+    "id": "minecraft:mossy_cobblestone",
+    "count": 8
+  }
+}

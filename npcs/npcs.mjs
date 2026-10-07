@@ -42,6 +42,8 @@ function shopDialogs(greeting, about, extra = []) {
 
 /** For the NPCs who make capes (capes/capes.mjs RECLAIM): the cape collection, with a buy button for theirs (lsp_fixes capes). */
 const lostCape = button("I've lost a cape", [cmd('lsp cape shop @npc-uuid @initiator')])
+/** For Gerta the Mason: a new Mason's Palette for a Construction 99 (lsp_fixes construction). */
+const lostPalette = button("I've lost my palette", [cmd('lsp palette shop @npc-uuid @initiator')])
 
 /** One lot in a shop: `count` of `item` (an id, or { id, components }) for `price` Gold Coins. */
 export const good = (item, count, price) => ({ item: typeof item === 'string' ? { id: item } : item, count, price })
@@ -256,7 +258,7 @@ export const NPCS = {
   },
   shop_builder: {
     model: 'villager', variant: 'PLAINS_MASON', name: 'Gerta the Mason', color: '#A88A6A', description: "Builder's merchant.",
-    dialogs: shopDialogs('Stone, brick and timber, by the stack.', 'Half the houses in this city went up on my bricks.'),
+    dialogs: shopDialogs('Stone, brick and timber, by the stack.', "Half the houses in this city went up on my bricks. Build enough and you'll learn the trade's tricks; a true master carries a Mason's Palette, and if you lose yours, I make them.", [lostPalette]),
     goods: [good('minecraft:cobblestone', 64, 40), good('minecraft:stone_bricks', 16, 40), good('minecraft:smooth_stone', 16, 40), good('minecraft:bricks', 16, 80), good('minecraft:terracotta', 16, 60), good('minecraft:oak_log', 16, 60), good('minecraft:oak_planks', 32, 40), good('minecraft:spruce_planks', 32, 40), good('minecraft:glass', 16, 60), good('minecraft:lantern', 4, 80)]
   },
   shop_jeweller: {

@@ -47,7 +47,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 public final class Capes {
     /** The skills an "all_skills" unlock counts (skills/build.mjs). */
     static final List<String> SKILLS = List.of("attack", "strength", "defence", "ranged", "hitpoints", "mining", "woodcutting", "farming", "fishing",
-            "cooking", "smithing", "crafting", "agility", "enchanting", "brewing");
+            "cooking", "smithing", "crafting", "agility", "enchanting", "brewing", "construction");
     /** The client's copy of its own player's capes ({@link CapeNet.State}). */
     public static final CapeData CLIENT = new CapeData();
     /** Where the KubeJS capes kept a player's capes (persistent data, a JSON string), before capes were items. */
@@ -173,6 +173,9 @@ public final class Capes {
         }
         data(p).given.add(def.id());
         if (!p.getInventory().add(stack)) p.drop(stack, false);
+        // A cape that comes with something (the Construction Cape's Mason's Palette): that too, each time.
+        ItemStack kit = def.kitStack();
+        if (!kit.isEmpty() && !p.getInventory().add(kit)) p.drop(kit, false);
         return true;
     }
 

@@ -2,5 +2,6 @@
   "key.categories.lsp_fixes": "LemurSaucePacket",
   "key.lsp_fixes.hud_layout": "Edit HUD layout",
   "item.lsp_fixes.gold_coins": "Gold Coins",
-  "item.lsp_fixes.coin_pouch": "Coin Pouch"
+  "item.lsp_fixes.coin_pouch": "Coin Pouch",
+  "item.lsp_fixes.masons_palette": "Mason's Palette"
 }

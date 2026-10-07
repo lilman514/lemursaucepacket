@@ -39,7 +39,7 @@ Each chapter opens with a painted crest and an info card. The card says what the
 
 The server owner asked for a full RPG layer in the style of RuneScape, combat stats included. Project MMO runs it, configured from `skills/build.mjs`.
 
-**Levels.** There are 15 skills, each levelling 1–99 on RuneScape's own XP table: level 50 takes 101,333 XP and level 99 takes 13,034,431. XP comes from doing the thing:
+**Levels.** There are 16 skills, each levelling 1–99 on RuneScape's own XP table: level 50 takes 101,333 XP and level 99 takes 13,034,431. XP comes from doing the thing:
 - Combat: 4 XP per point of damage to the style used, as in RuneScape.
 - Mining and woodcutting: ores (scaled by rarity), stone and logs.
 - Farming: harvests.
@@ -50,6 +50,7 @@ The server owner asked for a full RPG layer in the style of RuneScape, combat st
 - Agility: sprinting and jumping.
 - Enchanting: the table (see "Enchanting" below).
 - Brewing: each potion taken out of a stand, once per kind of potion it becomes (8 XP plus 2.2 per level the potion needs: Strength, at 35, is 85).
+- Construction: each block placed, by kind (2 for cobblestone up to 25 for a lectern), once it has stood for a minute, and once per spot until a restart (see "Construction" below).
 - Quest XP is vanilla XP and doesn't count towards skills.
 - Create's machines earn nobody skill XP.
 - Deaths cost no skill XP.
@@ -64,6 +65,7 @@ The server owner asked for a full RPG layer in the style of RuneScape, combat st
 | Mining / Woodcutting / Farming | Needed for pickaxes and shovels, axes, and hoes. +0.5% dig speed per level with the matching tool |
 | Fishing, Cooking, Smithing, Crafting | What they unlock: see "Skill gates" below |
 | Brewing | Each brewing ingredient waits on a level; Brewing 55 makes Eyes of Ender |
+| Construction | +0.1% a level that a placed block isn't used up; bulk decorative recipes; the Mason's Palette at 99 |
 | Agility | Needed to wear an elytra (30). Up to +10% speed and −50% fall damage |
 
 **Level requirements**, the way RuneScape gates its metals:
@@ -90,6 +92,12 @@ The server owner asked for a full RPG layer in the style of RuneScape, combat st
 - **Drops and fishing:** a wither skeleton's skull only drops for a killer with combat level 75, and treasure below Fishing 20 comes up as a cod. The combat level is RuneScape's formula, shown under every name on the `lsp_combat` scoreboard.
 - **Quests:** the main quests' start steps ask for levels (`npcs/quests.mjs`), listed in the quest book and on the wiki.
 - **Checks:** each gate is a mixin, and a mixin whose target moved is skipped without a word. At server start the module looks for each gate's handler and logs `Skill gates in: …` or `Skill gates MISSING: …`.
+
+**Construction** (pack 1.12.0, `lsp_fixes` package `construction`, data in `skills/unlocks.mjs`: `CONSTRUCTION_XP`, `CONSTRUCTION_RECIPES`, `PALETTE`). The owner asked for a building skill whose cape gives "a block that places unlimited decorative blocks, but not busted".
+- **XP** is lsp_fixes', not Project MMO's (whose place event would pay for placing and breaking): a placed block queues its XP, which pays a minute later if the block still stands, and a spot pays once until a restart. Block rules match ids, tags, mods, regexes or "has a block entity"; first match wins. The Builder's Wand calls `Construction.placedByWand` (kubejs gear.js), since it sets blocks directly.
+- **Free blocks**: the saving perk (0.1% a level) and the Mason's Palette mark what they place in a chunk attachment (`lsp_fixes:free_blocks`), with the block placed. A free block never becomes an item: `BlockDropsEvent` is cancelled for it (vanilla's drops, and Create's drills and saws, which post the same event for their own drop list), explosions remove it without drops, pistons won't move it, Create contraptions refuse it (a `BlockMovementChecks` check, registered by reflection), and Sable's `moveBlocks` carries the record into an airship and back (or removes the block if its new chunk can't be found). A real block placed onto a free one of the same kind (a slab half) stays free, so a pair can't split into two real slabs.
+- **The palette** only places plain decorative blocks: never wood (any block named after a kind of planks in the game, so modded woods too, and all of Every Compat), wool or cloth (Create seats, Macaw's couches and curtains), paper, crops, storage blocks, ores, redstone, anything that falls, holds items (bar lecterns) or weathers (copper), anything Create's wrench picks up, and nothing that's an input to Create's crushing, milling or washing (read from the server's recipes, so cut tuff and Create's ore stones are out but cut limestone is in). It places through the usual place event, as if from a stack that never runs out, so safe zones and claims apply. Players choose in a picker (`PaletteScreen`) or by pick-block. The Construction Cape's `kit` (capes.mjs) hands it over; Gerta the Mason (`lsp palette shop`, `/palette buy`) makes another for 10,000 coins.
+- **Recipes**: twelve shaped recipes (`lemursaucepacket:construction/*`) gated by id (`skill_gates.json` `recipes`): crafting grids, the blueprint and Sophisticated Backpacks ask the player; the Crafter and mechanical crafters never use them; each has two kinds of ingredient so the mixer and press never do.
 
 Every 10 levels sets off fireworks and lists what the new level unlocks. Crits are rolled in `kubejs/server_scripts/skills.js`, which also switches off Project MMO's "builtin/default" datapack. That datapack would add requirements for Project MMO's own skills.
 
@@ -258,7 +266,7 @@ Everything a player looks at outside the world — the launcher, the loading scr
 - **Widgets:** the pack replaces the vanilla button, slider, tab, text field, checkbox and scrollbar sprites and the menu backgrounds with pixel-drawn brass versions (a resource pack in `kubejs/assets`). Anything that uses vanilla widgets — the options screens, FTB Quests, most mod screens — inherits the look. The launcher draws its buttons, fields and cards from the same sprites at 3×.
 - **Tooltips** follow Hypixel SkyBlock's layout on every item (`pack/kubejs/client_scripts/tooltips.js`, and `gear/build.mjs` for the pack's own gear): the name in its rarity colour, a stat block (Damage, Attack Speed, Defense, Health… with the value coloured by stat, built from the item's real attribute modifiers, which vanilla's own attribute lines no longer duplicate), gold section headers for abilities and set bonuses, Project MMO requirements as "❣ Requires Mining 35" in red until met and green with a tick after, a "Hold Shift for details" hint that reveals skill XP, the "How to get"/"Found in" hints and set-bonus text, and a bold "UNCOMMON HELMET"-style footer. Create items keep Create's own Shift summary; Relics items keep their research hold. Project MMO's own tooltip lines are switched off in the shipped client config.
 - **Item art:** the pack's own items are 16x16 pixel art in the style of the Relics mod (`art/items.mjs`, drawn in code): coloured outlines instead of black, hue-shifted shading, small sparkles, and Relics' shimmer animation (a long still frame, then a quick light sweep, with the pause varied per item). Vanilla armour and tool sprites give the silhouettes so a helmet still reads as a helmet; the unusual items (scythe, wand, pattern, crown) are hand-placed pixels. The two Relics status-effect icons Relics 0.12.8 ships without (Flight, Tremor) are drawn the same way into `assets/relics`. The lifesteal compasses get 32 needle frames of their own, vanilla's compass frames recoloured by role (casing, face, needle) with one colour table so the needle never flickers as it turns; their frame models are static files next to the textures.
-- **Icons:** the ESC menu, the launcher pages and the 15 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
+- **Icons:** the ESC menu, the launcher pages and the 16 skills use icons painted in the same style as the quest emblems (Higgsfield sheets in `art/generated`), so the quest book, the skills screen and the menu share symbols (the quest book's book, the backpack, the atlas).
 - **The ESC menu** is a riveted board with three recessed panels: *Adventure* (Map, Quests, Missions, Waypoints, plus where you are), *Game Menu* (the vanilla pause buttons, moved into the panel; "Options" is renamed "Settings") and *Player* (your character, Skills, Backpack, Team, Voice). Buttons added by other mods land in free slots or a tray under Disconnect, so nothing disappears. *HUD Layout* sits at the right end of that bottom row (see *HUD layout editor* under *Fixes shipped in the pack*). The vanilla "Game Menu" title is blanked through a language override.
 
 Not skinned, on purpose: inventories and machine GUIs (Create's own look is part of the pack's identity), Brassworks Missions, Xaero's map screens and JEI. They sit inside the brass-framed screens rather than fighting them.

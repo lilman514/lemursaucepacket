@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.12: Construction and the Mason’s Palette",
+      "date": "2026-10-07",
+      "body": "Construction is the sixteenth skill: every block you place pays XP once it has stood for a minute, and the fancier the block the more (cobblestone pays 2, Macaw's roofs and furniture 15, a lectern or a sea lantern 25); placing and breaking pays nothing. Each level adds a 0.1% chance a block isn't used up, and Construction unlocks twelve crafting recipes for decorative blocks in bulk (ten stone bricks from eight stone and a clay ball, cracked and mossy kinds without a furnace, eight stairs where vanilla gives four). At 99 the Construction Cape comes with the Mason's Palette: choose a block (stone of every kind, bricks, quartz, concrete, glass, Create's cut stone, Create Deco, Macaw's stone and metal blocks, lanterns, lecterns) and place as many as you like. What it places drops nothing when broken, so it can't be farmed. Lost it? Gerta the Mason makes another. The Maxed Cape now asks for Construction 99 too. The Builder's Wand and the Harvester's Scythe now respect safe zones like Lemurton.",
+      "url": "https://play.limas.ca/wiki/skills"
+    },
+    {
       "title": "1.11: Skills that unlock things",
       "date": "2026-10-07",
       "body": "Every skill now unlocks things on the way to 99, like a RuneScape skill guide: Crafting 30 makes diamond gear, Smithing 50 netherite, the bigger meals wait on Cooking, and Farming and Woodcutting gate the rarer crops and trees. Brewing is the fifteenth skill: each potion you take out of a stand trains it, each ingredient waits on a level, and Brewing 55 makes Eyes of Ender, so it's also the way to the Ender Dragon. Wither skeletons drop skulls only at combat level 75, treasure on the line needs Fishing 20, and crossbows and tridents moved to Ranged. Enchantments past their vanilla level also need the gear's own skill to use: Fishing for Lure, Mining for Fortune, Attack for Sharpness. Your combat level shows under your name. The bigger main quests ask for levels first (Dragon Slayer I: combat 40 and Brewing 55). Each gear set takes a hand-made part, and machines (the Crafter, Create's crafters, mixer and press) won't make anything gated. The Brewing Cape makes potions last half as long again.",

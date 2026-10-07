@@ -117,6 +117,10 @@ function gearState(player) {
 
 // The cape in the player's Curios cape slot (lsp_fixes capes; 0 without one, or with one they haven't earned).
 const GearCapes = Java.loadClass('net.lemursaucepacket.fixes.capes.Capes')
+// The wand sets blocks directly, so it tells Construction (lsp_fixes) what it placed: those pay XP as if placed by hand.
+const GearConstruction = Java.loadClass('net.lemursaucepacket.fixes.construction.Construction')
+// Both set blocks directly, past the place and break events, so they ask the safe zones themselves.
+const GearZones = Java.loadClass('net.lemursaucepacket.fixes.zone.ZoneEvents')
 function gearCapeStats(player) {
   try {
     return { critChance: Number(GearCapes.stat(player, 'critChance')), critDamage: Number(GearCapes.stat(player, 'critDamage')) }
@@ -307,6 +311,7 @@ function gearScythe(event, player) {
         let age = crop.properties.age
         if (age === undefined || Number(age) < ripe) continue
         if (player.mainHandItem.isEmpty()) break
+        if (!GearZones.mayBuild(player, player.level, crop.pos)) continue
         player.gameMode.destroyBlock(crop.pos)
         crop.set(id, { age: '0' })
         harvested++
@@ -352,7 +357,9 @@ function gearWand(event, player) {
   let placed = 0
   for (let t = 0; t < targets.length; t++) {
     if (inventory.count(id) <= 0) break
+    if (!GearZones.mayBuild(player, player.level, targets[t].pos)) continue
     targets[t].set(id)
+    GearConstruction.placedByWand(player, targets[t].pos)
     let removed = false
     for (let slot = 0; slot < inventory.getSlots() && !removed; slot++) {
       let stack = inventory.getStackInSlot(slot)

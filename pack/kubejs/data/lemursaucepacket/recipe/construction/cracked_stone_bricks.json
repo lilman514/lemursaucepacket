@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "OOO",
+    "OMO",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:stone_bricks"
+    },
+    "M": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "id": "minecraft:cracked_stone_bricks",
+    "count": 8
+  }
+}

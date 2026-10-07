@@ -274,7 +274,7 @@ hash = "4a9171754e40e23b6fadd8c3712f39eaa9d5b4a6086d426cbe6e2b2d947a82b4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skills.snbt"
-hash = "91d7c0b0d33f5931ab2bf8756b943f48bd8fd71f1737bd8ff3a50d73e4670824"
+hash = "6c95e80f22225657d33cfa6c5bbe15a5010a7789a88d01d1e99210125e32d5f7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
@@ -298,7 +298,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "ac8490a254e10b4c2ad793e4c1f7ee4162fb475696aff12b3e1b55caba8422f5"
+hash = "311a2cf46d2d3e49c9021ca6c5318277f5fc1aab924887c0c3e842243d83dabe"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -334,7 +334,7 @@ hash = "d4433544ec21a3c08397203c32052bbc4676f05ec9041c223c1ae0eeae841cd7"
 
 [[files]]
 file = "config/lemursaucepacket/capes.json"
-hash = "ebe1242315c5e85bace8514382589ac99530c832c9836b8508c093ca5a62cd7c"
+hash = "63cac905118cbd31a04a665e40ab0266baaf1f2bae5c656e05940ea0d8981260"
 
 [[files]]
 file = "config/lemursaucepacket/enchanting.json"
@@ -358,11 +358,11 @@ hash = "9188fa3717f24765ef4dd7ffa34f2c0db8f4e9b955c2aa4df216efce892b5ea3"
 
 [[files]]
 file = "config/lemursaucepacket/milestones.json"
-hash = "2c0f2b4452d7039655818d71765727a32d880d42955165ca02c8615a092226e0"
+hash = "9c5c291ecd48928b553c59bd99bcb973a1725ef79443e26f1c98a1e91b776a9c"
 
 [[files]]
 file = "config/lemursaucepacket/skill_gates.json"
-hash = "a5401b1d71e51330e8cfa198a397f5a67c535f7026b36dec0004793d5bc0e823"
+hash = "c9742a0d15b476dedd9005c28d1690e8b6397039e031603442935c0ff24a477a"
 
 [[files]]
 file = "config/lithium.properties"
@@ -666,7 +666,7 @@ hash = "d98e030ac014577dcb0aa80c7da61164f12a8843503be565ed8c4b4a76e86635"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/capes.json"
-hash = "7b299c83ab1bdcad45b90c6de838874df75d43f8a399460478e675983d57e487"
+hash = "11668f129518c86170b5842657af1176c543cbd8cc3ac8d38ae821979f419195"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/economy.json"
@@ -726,7 +726,7 @@ hash = "51841a4f2dc7b7192828d83e2c9eea30be8258ab7563b5ca38bba2bf959f8140"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
-hash = "db9c192b0b74ef5285271c519267b42c998f36e802a091cb47def69bd5cd4413"
+hash = "1ed71ecaea1f249c475633fb3842cee9878d657a6fd0a4be6e1a79d9ed26c261"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/waystones.json"
@@ -815,6 +815,10 @@ hash = "4fd4e1b2d19890fce719200ba7646c6f573eca3eafd5cae620e73c29bf99e30b"
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/completionist_cape_f9.png"
 hash = "50c3c40c27a3e1132549c5882aa0021fc2f2455c8674473959a15928468fee4b"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/capes/construction_cape.png"
+hash = "52ba8602606302790c21f1017ab1265bbc6abf14431a92e0ea9d0c7aa9b21026"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/cooking_cape.png"
@@ -1291,6 +1295,10 @@ hash = "60bcea1cc9b6717d3b788dc22e5d32968ae5c87d5a60fb54c26a37f6bbcdbe2c"
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/completionist_cape.png.mcmeta"
 hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/construction_cape.png"
+hash = "37363666419251415de0cec8f264ae73964aed24b03f7f66a0960f59cf3143a7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/cooking_cape.png"
@@ -2005,6 +2013,10 @@ file = "kubejs/assets/lemursaucepacket/textures/skills/brewing.png"
 hash = "77f231aecfe9aee860784bc5435afa102c01836b722cdc5bb634f55a859392cd"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/skills/construction.png"
+hash = "7e8bcfacd32bca2d3fa124b272a05ee5792ef8263ce2cec6238a0afd364aee13"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/skills/cooking.png"
 hash = "84d2708dadf044d320dff344458317d71ca3d2cbc05223d2359e73ba86fdc59c"
 
@@ -2250,7 +2262,7 @@ hash = "b058450ef6ce1bbc831feec405fa2103dbc2b097c2fb02c1cc23dfca96f1e234"
 
 [[files]]
 file = "kubejs/assets/pmmo/lang/en_us.json"
-hash = "7162b9cdf3d5a742d6dfa021777b2c11e27fbc9e4ec84e2a0800ea7ce9e4e65c"
+hash = "7d4687fdab83a19ef6cb93f7bde2785d7163bfbaacb232366abbb94dfbc3a464"
 
 [[files]]
 file = "kubejs/assets/pmmo/textures/gui/player_stats.png"
@@ -2334,7 +2346,7 @@ hash = "6b526d2e42765e4c096aa7826d182d8e2fc71f4f4d77efd01c25be57ad37178c"
 
 [[files]]
 file = "kubejs/data/curios/tags/item/cape.json"
-hash = "6e4ba541205ab7a6d985a29a4559c2ac5b427b0a15888210dfd814c3194eb00c"
+hash = "61d7683f2d396d35417cbb207487f070a6874ad4e4093decc43c2a97d4321ea4"
 
 [[files]]
 file = "kubejs/data/dungeons_arise/enchantment/discharge.json"
@@ -2526,7 +2538,7 @@ hash = "21d576ceeefc2309f2a0095e91feb6a0acdcbe44303b458223bb47df8eb4a49e"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_builder.npc.snbt"
-hash = "7557a818a4f143f5ebf06401a066251f16e9a277ff45c6f1e6c9c83c7ce28033"
+hash = "4c991538aaedfa92de5fd1778562b6852038c76afbd90ba26e58198bc9ea6ded"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_fishing.npc.snbt"
@@ -3085,6 +3097,54 @@ file = "kubejs/data/lemursaucepacket/pmmo/items/xp_zinc_ingot.json"
 hash = "5faa50a6fdc41b05d0289364c31ceb693a7b77d721ada9b35c685ac10ab10a51"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/chiseled_stone_bricks.json"
+hash = "10a43535546baf9a2d55b681f70744d8754f97241c5b7605e931294f39aec9c1"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/cracked_deepslate_bricks.json"
+hash = "11148aec83dd55538d2befa6659998bfc2f53609dba51f388ffa66c1f2b35a0a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/cracked_deepslate_tiles.json"
+hash = "7b675d93bda6124812ebed68d3089b2e5298cf9aac184c705e3a1dc1a843727a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/cracked_nether_bricks.json"
+hash = "03bd4628b9760af9f398ae47289e4a2fb9aa5462256eff382b8b45c8f80481c3"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/cracked_polished_blackstone_bricks.json"
+hash = "7cbb549bccb357acf6cdbf08e411b100a25c5f093bfdc313db76956ca4a96a8f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/cracked_stone_bricks.json"
+hash = "7af55afe6140e9d814060f2681c990a30f18410bb7e3b61b20a861e2d9b49292"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/lantern.json"
+hash = "2bbed26475a40beec5780472b76d0d021bf0cc401e1142675bcb89a62d0fbbbe"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/mortared_stone_bricks.json"
+hash = "eebd714798a6d6b2f0a8f763b7f47c3bfdb7d7c89875db6fc56f8778aaf88cce"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/mossy_cobblestone.json"
+hash = "879b7d1698386d3269693d117c15b27e9a7908e03ea0b86697e40e90827c694a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/mossy_stone_bricks.json"
+hash = "ef306c6b7ffe18ffa7ba6c0847385af9269f05de98d6b8524b4e3e1c04704f06"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/smooth_stone.json"
+hash = "17c776326895088c867be2402ec365373a017f5904d0b2bb70932cda8c34f417"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/recipe/construction/stone_brick_stairs.json"
+hash = "041be2dcd19e36393e48f6c921e41ea8d7ff3d010a51aa8c2c3d119b18dab376"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/structure/crandor_memorial.nbt"
 hash = "63ef04147b6032a10d09bca7ac7ffd8348d027e3c2894b39b11253f56b789883"
 
@@ -3538,7 +3598,7 @@ hash = "5adb02eb51eca4d1d1b0152f3a312ec09247f6d1f425d2cd0610e7d664f59995"
 
 [[files]]
 file = "kubejs/data/pmmo/config/perks.json"
-hash = "581dfda4dacde77fe3f8a5b057fbb5ff09a3e5122e2982b6f135f9ff80d7dff8"
+hash = "64fe8f84a676d4e571dea350556e8109a329e60b3f6ed88a61454cc697e3abbb"
 
 [[files]]
 file = "kubejs/data/pmmo/config/server.json"
@@ -3546,7 +3606,7 @@ hash = "22e62837a7e60199c572e4a89459f29044afb288bf9a7b57ee9a309236878c5f"
 
 [[files]]
 file = "kubejs/data/pmmo/config/skills.json"
-hash = "205e08ac52e950b2cecc7053c3dc2e536b2c82e216345dc23c9412bfeac5dd53"
+hash = "cd547f8e292a3510a398cb38ff7b725ffca27c7a4c042d2bc9a2d4fd29344330"
 
 [[files]]
 file = "kubejs/data/waystones/tags/worldgen/biome/has_structure/blackstone_waystone.json"
@@ -3586,7 +3646,7 @@ hash = "4975352b58174866372a55151e3b6e46cd2e6b571766effd29f6182aebbc34b4"
 
 [[files]]
 file = "kubejs/server_scripts/gear.js"
-hash = "71ead2b0035eff33b33cc8a94e58d614037724e69f2ecc6d09fdee445971b391"
+hash = "7dd0c8550571afa761a0e112f5004fb50c74a4891533f506047d0f077bfc67fd"
 
 [[files]]
 file = "kubejs/server_scripts/gear_loot.js"
@@ -4115,8 +4175,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.12.0.jar"
-hash = "f22214626ce1ef6ea6bf6f6f990d33be3522641d91128624827645c855a13c6b"
+file = "mods/lsp_fixes-1.13.0.jar"
+hash = "462d16524cb7a5e5c9b6cf9023c4c954b579a58aef62bf41474c05066d6e27cb"
 
 [[files]]
 file = "mods/lsp_instances-1.1.0.jar"

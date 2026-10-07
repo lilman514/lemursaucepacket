@@ -27,7 +27,10 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
-import { BREW, BREW_XP, CHOP, CRAFT, DROPS, FISHING_TREASURE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL, QUEST_REQUIREMENTS, RANGED } from './unlocks.mjs'
+import {
+  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, PALETTE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL,
+  QUEST_REQUIREMENTS, RANGED
+} from './unlocks.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = path.join(root, 'pack', 'kubejs', 'data')
@@ -70,7 +73,8 @@ const SKILLS = {
     smithing: ['Smithing', 0xe0ac46],
     crafting: ['Crafting', 0xe0ac46],
     enchanting: ['Enchanting', 0xe0ac46],
-    brewing: ['Brewing', 0xe0ac46]
+    brewing: ['Brewing', 0xe0ac46],
+    construction: ['Construction', 0xe0ac46]
   },
   support: {
     agility: ['Agility', 0x6fb7e8]
@@ -286,9 +290,29 @@ write(langFile, {
 for (const { level, blocks } of PLANT) write(path.join(rulesDir, 'blocks', `req_plant_${level}_${blocks[0].split(':')[1]}.json`), { override: false, isTagFor: blocks, requirements: { PLACE: { farming: level } } })
 for (const { level, blocks } of CHOP) write(path.join(rulesDir, 'blocks', `req_chop_${level}.json`), { override: false, isTagFor: blocks, requirements: { BREAK: { woodcutting: level } } })
 
-// What lsp_fixes enforces itself (skills package): making things, brewing, drops and fishing treasure.
+// Construction's alternate recipes (skills/unlocks.mjs CONSTRUCTION_RECIPES): plain datapack recipes, gated by id.
+const recipeDir = path.join(dataDir, 'lemursaucepacket', 'recipe', 'construction')
+rmSync(recipeDir, { recursive: true, force: true })
+for (const r of CONSTRUCTION_RECIPES) {
+  write(path.join(recipeDir, `${r.id}.json`), {
+    type: 'minecraft:crafting_shaped',
+    category: 'building',
+    pattern: r.pattern,
+    key: Object.fromEntries(Object.entries(r.key).map(([k, item]) => [k, { item }])),
+    result: { id: r.result, count: r.count }
+  })
+}
+
+// What lsp_fixes enforces itself (skills and construction packages): making things, brewing, drops, fishing
+// treasure, recipes only a level may use, and Construction's XP, saving perk and palette.
 write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'), {
   craft: CRAFT.map(({ skill, level, what, items }) => ({ skill, level, what, items })),
+  recipes: CONSTRUCTION_RECIPES.map(({ id, level, what }) => ({ id: `lemursaucepacket:construction/${id}`, skill: 'construction', level, what })),
+  construction: {
+    xp: CONSTRUCTION_XP.map(({ xp, what, match }) => ({ xp, what, match })),
+    savePerLevel: CONSTRUCTION_SAVE_PER_LEVEL,
+    palette: PALETTE
+  },
   brew: BREW.map(({ level, item, what }) => ({ level, item, what })),
   brewXp: BREW_XP,
   // Every potion id the game has for each base: its longer (long_) and stronger (strong_) kinds take more.
@@ -306,7 +330,7 @@ write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'),
 writeSkillGuide()
 
 const fileCount = requirements.length + ITEM_XP.length + BLOCK_XP.length
-console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files), ${PLANT.length + CHOP.length} planting/chopping rules, ${CRAFT.length} making gates, ${BREW.length} brewing gates; level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
+console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files), ${PLANT.length + CHOP.length} planting/chopping rules, ${CRAFT.length} making gates, ${BREW.length} brewing gates, ${CONSTRUCTION_RECIPES.length} Construction recipes, ${PALETTE.categories.length} palette categories; level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
 
 // ---------------------------------------------------------------- the wiki's skill guide
 
@@ -335,6 +359,12 @@ function writeSkillGuide() {
   lines.push(...table('Fishing', 'Lets you', [[FISHING_TREASURE, 'Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish)']]))
   lines.push(...table('Ranged', 'Lets you use', RANGED.map((r) => [r.level, r.what])))
   lines.push(...table('Combat level', 'Lets you', DROPS.filter((d) => d.skill === 'combat').map((d) => [d.level, `Get ${d.what.charAt(0).toLowerCase() + d.what.slice(1)} as drops`])))
+  lines.push(...table('Construction', 'Lets you make', [
+    ...CONSTRUCTION_RECIPES.map((r) => [r.level, r.what]),
+    [PALETTE.level, "Use the Mason's Palette: as many of one decorative block as you like (see below)"]
+  ]))
+  lines.push('| XP a block | What you build with |', '|---|---|', ...CONSTRUCTION_XP.filter((x) => x.xp > 0).sort((a, b) => b.xp - a.xp).map((x) => `| ${x.xp} | ${x.what} |`))
+  lines.push(`| 0 | ${CONSTRUCTION_XP.find((x) => x.xp === 0).what} |`, '')
   lines.push('### Quest requirements', '', '| Quest | Needs |', '|---|---|')
   for (const [quest, reqs] of Object.entries(QUEST_REQUIREMENTS)) {
     const list = Object.entries(reqs).map(([s, l]) => `${name(s)} ${l}`)

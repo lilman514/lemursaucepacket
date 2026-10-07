@@ -26,6 +26,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const ITEM_DIR = path.join(root, 'pack/kubejs/assets/lemursaucepacket/textures/item')
 const MODEL_DIR = path.join(root, 'pack/kubejs/assets/lemursaucepacket/models/item')
 const EFFECT_DIR = path.join(root, 'pack/kubejs/assets/relics/textures/mob_effect')
+// Items the pack's own mod registers (kind 'mod'): lsp_fixes's textures and models, in its jar.
+const MOD_ASSETS = path.join(root, 'mods-src/lemursaucepacket-fixes/src/main/resources/assets/lsp_fixes')
+const MOD_ITEM_DIR = path.join(MOD_ASSETS, 'textures/item')
+const MOD_MODEL_DIR = path.join(MOD_ASSETS, 'models/item')
 const JAR =
   process.env.MINECRAFT_JAR ??
   path.join(process.env.LOCALAPPDATA ?? '', 'Temp', 'claude', 'C--Create-Modpack', 'ab1859ba-46fb-401e-9816-544fdbbd5524', 'scratchpad', 'headless', 'minecraft', 'versions', '1.21.1', '1.21.1.jar')
@@ -818,6 +822,34 @@ const SPRITES = [
     pause: 180
   },
 
+  // ------------------------------------------------ lsp_fixes items
+  {
+    // The Mason's Palette (Construction 99): a wooden hawk with a thumb hole, dabbed with stone, brick, sandstone,
+    // quartz and prismarine.
+    id: 'masons_palette',
+    kind: 'mod',
+    px: [
+      '................',
+      '.....OOOOOO.....',
+      '...OOWWWWWWOO...',
+      '..OWWSSWWRRWWO..',
+      '.OWWSsSWWRrRWWO.',
+      '.OWWWSSWWWRRWWO.',
+      '.OWWWWWWWWWWDDO.',
+      '.OwwWWQQWWWwDdO.',
+      '.OwwOOQqwwwwwwO.',
+      '.OwO..OwwPPwwwO.',
+      '.OwO..OwPppPwwO.',
+      '..OwOOwwwPPwwO..',
+      '...OvvvvvvvvvO..',
+      '....OOvvvvvOO...',
+      '......OOOOO.....',
+      '................'
+    ],
+    pal: { O: 'wood@0', W: 'wood@4', w: 'wood@3', v: 'wood@2', S: 'iron@3', s: 'iron@5', R: 'crimson@3', r: 'crimson@5', D: 'parchment@3', d: 'parchment@5', Q: 'fleece@4', q: 'fleece@5', P: 'teal@4', p: 'teal@5' },
+    pause: 206
+  },
+
   // ------------------------------------------------ Relics effect icons Relics 0.12.8 forgot
   {
     id: 'flight',
@@ -979,8 +1011,13 @@ export async function buildItems({ preview } = {}) {
     else cells = fromGrid(s.grid, s.parts)
     cells = paint(cells, s.paint && s.paint.map((r) => (r === '' ? '.'.repeat(W) : r)).concat(Array(Math.max(0, H - (s.paint?.length ?? 0))).fill('.'.repeat(W))), s.legend)
     const frames = s.shimmer === false ? [cells] : shimmerFrames(cells)
-    const dir = s.kind === 'effect' ? EFFECT_DIR : ITEM_DIR
+    const dir = s.kind === 'effect' ? EFFECT_DIR : s.kind === 'mod' ? MOD_ITEM_DIR : ITEM_DIR
+    mkdirSync(dir, { recursive: true })
     await writeSprite(path.join(dir, `${s.id}.png`), frames, s.pause ?? 200)
+    if (s.kind === 'mod') {
+      mkdirSync(MOD_MODEL_DIR, { recursive: true })
+      writeFileSync(path.join(MOD_MODEL_DIR, `${s.id}.json`), JSON.stringify({ parent: 'minecraft:item/generated', textures: { layer0: `lsp_fixes:item/${s.id}` } }, null, 2) + String.fromCharCode(10))
+    }
     firstFrames.push({ id: s.id, rgba: toRgba(cells) })
   }
   console.log(`items: ${SPRITES.filter((s) => s.kind !== 'effect').length} item sprites (16x16, Relics style), ${SPRITES.filter((s) => s.kind === 'effect').length} Relics effect icons`)

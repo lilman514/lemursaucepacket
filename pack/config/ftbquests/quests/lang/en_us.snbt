@@ -63,7 +63,7 @@
 	chapter.724775AA8236458B.title: "The Enchanter"
 	chapter.7467C6A904BEEE10.chapter_subtitle: ["Main quest · Intermediate · 1 quest point"]
 	chapter.7467C6A904BEEE10.title: "The Knight's Sword"
-	chapter.78EE8FA17C687CCA.chapter_subtitle: ["Fifteen skills, five milestones each, and the total-level ladder."]
+	chapter.78EE8FA17C687CCA.chapter_subtitle: ["Sixteen skills, five milestones each, and the total-level ladder."]
 	chapter.78EE8FA17C687CCA.title: "Skills"
 	chapter.7B86A63090539256.chapter_subtitle: ["The Nether, properly."]
 	chapter.7B86A63090539256.title: "Crown of Fire"
@@ -92,7 +92,7 @@
 	image.12E3C18622AFD831.title: " \\n&6&lBestiary\\n&r&7New faces, old foes.\\n \\n&r&fThe world has new creatures and\\n&r&ftougher bosses. Track down each one.\\n \\n&r&eRewards:\\n&r&fa crate for every first encounter,\\n&r&fand tips on what each creature does.\\n "
 	image.133712B15DC30ACA.title: " \\n&6&lHomestead\\n&r&7Farms, kitchens and the happy ghast.\\n \\n&r&fGrow new crops, cook proper meals,\\n&r&fbreed animals and raise a happy ghast.\\n \\n&r&eUnlocks:\\n&r&ffood that lasts far longer, automated\\n&r&fkitchens, and a friendly flying mount.\\n "
 	image.19441437222BDB59.title: " \\n&6&lCoin \\& Commerce\\n&r&7Gold Coins, vendors and trading.\\n \\n&r&fEvery quest pays Gold Coins. The vendors in the towns\\n&r&fsell their own goods for them and buy anything you bring;\\n&r&fother players trade with you through the trade window.\\n \\n&r&eUnlocks:\\n&r&fa purse that grows with your factory, and\\n&r&fthe coins to buy what you can't make yet.\\n "
-	image.1B208C463904DB4D.title: " \\n&6&lSkills\\n&r&7Fifteen skills, five milestones\\n&r&7each, and the total-level ladder.\\n \\n&r&fEvery skill pays out at 10, 25, 50, 75 and 99. The server\\n&r&fchecks your Project MMO levels every few seconds and\\n&r&fcompletes the milestones for you; the rewards wait here to\\n&r&fbe claimed. Level 99 comes with a skill cape and a sun coin.\\n \\n&r&eRewards:\\n&r&fcrates that grow with the level, a prize\\n&r&fbuilt for the skill at 50 and 75, and 40,000\\n&r&fcoins, a relic and the Legend's Hoard at 99.\\n "
+	image.1B208C463904DB4D.title: " \\n&6&lSkills\\n&r&7Sixteen skills, five milestones\\n&r&7each, and the total-level ladder.\\n \\n&r&fEvery skill pays out at 10, 25, 50, 75 and 99. The server\\n&r&fchecks your Project MMO levels every few seconds and\\n&r&fcompletes the milestones for you; the rewards wait here to\\n&r&fbe claimed. Level 99 comes with a skill cape and a sun coin.\\n \\n&r&eRewards:\\n&r&fcrates that grow with the level, a prize\\n&r&fbuilt for the skill at 50 and 75, and 40,000\\n&r&fcoins, a relic and the Legend's Hoard at 99.\\n "
 	image.1E6AC162DFC49BA8.title: " \\n&6&lSkyward\\n&r&7Create Aeronautics: balloons, propellers and airships.\\n \\n&r&fBuild ships that fly. Lift, thrust and steering\\n&r&fall come from real Create machinery, and a\\n&r&fphysics assembler turns the build into a ship.\\n \\n&r&eUnlocks:\\n&r&fflying bases, travel over any terrain, and\\n&r&fdocking, naming and navigating your own fleet.\\n "
 	image.2106E24A0F482020.title: " \\n&6&lFactory Floor\\n&r&7Automate everything: farms,\\n&r&7processing, assembly and stock.\\n \\n&r&fA factory takes raw materials in one end and\\n&r&fputs finished goods in a vault at the other. Build\\n&r&fone line at a time and let Create keep score.\\n \\n&r&eUnlocks:\\n&r&fhands-free farms, ore processing, sequenced assembly\\n&r&fand a stock system that orders its own ingredients.\\n "
 	image.219EF655FEFAE9B1.title: " \\n&6&lThe Armory\\n&r&7The pack's own gear: tools that save time, weapons\\n&r&7with real stats, armour sets with bonuses.\\n \\n&r&fEverything here is made with Create and gated\\n&r&fby skills. Tooltips show the stats and how to\\n&r&fget each piece; JEI (R on an item) has the\\n&r&frecipe and an info page with the same text.\\n \\n&r&eUnlocks:\\n&r&fa tree-felling axe, a 3x3 pickaxe, an auto-smelting\\n&r&fpickaxe, a scythe, a wand, and five armour sets.\\n "
@@ -275,7 +275,7 @@
 	quest.1209889B45004838.quest_desc: ["A dried ghast placed in water slowly revives into a ghastling, and grows into a gentle happy ghast. Saddle it with a harness and it will carry up to four players.", "&7The friendliest way to fly before you have an airship.", "", "&eChapter prize:&r a harness, a feast and a roll on the Master's Cache."]
 	quest.1209889B45004838.title: "Happy Ghast"
 	quest.121B7682E75B11E7.title: "Kitchen Knife"
-	quest.127F5773383C1521.quest_desc: ["A hundred levels across every skill.", "", "&7Your total level is every skill added together, 15 to 1485."]
+	quest.127F5773383C1521.quest_desc: ["A hundred levels across every skill.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.127F5773383C1521.title: "&eTotal 100"
 	quest.12CFB6C5115393AF.quest_desc: ["A thousand missions. Years of contracts.", "", "&eChapter prize:&r 80,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.12CFB6C5115393AF.title: "&6Legendary Fixer"
@@ -401,6 +401,8 @@
 	quest.28319CD936D67937.title: "Iron Maiden"
 	quest.28528AE6141E4DD2.quest_desc: ["Found in Nether chests."]
 	quest.28528AE6141E4DD2.title: "Ghostly Mantle"
+	quest.28B34CE36B649051.quest_desc: ["Every one of the sixteen skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.", "", "&7Your total level is every skill added together, 16 to 1584."]
+	quest.28B34CE36B649051.title: "&e&6Maxed"
 	quest.290545096FD736F4.quest_desc: ["Seat a mob at a stock ticker and place your first order. It arrives in a package."]
 	quest.290545096FD736F4.title: "Order Up!"
 	quest.29458506A5E19077.quest_desc: ["Nether fortresses are bigger and meaner now. Blazes live here."]
@@ -414,6 +416,8 @@
 	quest.2A066EC0CDE8CF63.title: "It Spreads"
 	quest.2A80E44450656EBB.quest_desc: ["Industrial iron blocks: the foundry's floor, and the base of the heaviest machines."]
 	quest.2A80E44450656EBB.title: "Industrial Iron"
+	quest.2A8B34AC6CE294DE.quest_desc: ["Reach &eConstruction 25&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 15: mossy stone bricks by the eight: stone bricks round a moss block", "• 20: cracked stone bricks without a furnace: stone bricks round a flint", "• 25: smooth stone without a furnace: stone round a sand"]
+	quest.2A8B34AC6CE294DE.title: "&6Construction 25"
 	quest.2ABC465DFAF8148D.quest_desc: ["Give Elder Ashka the offering."]
 	quest.2ABC465DFAF8148D.title: "An Offering for the Kiln"
 	quest.2B59BEE4CAA41223.title: "The Invoker"
@@ -508,14 +512,16 @@
 	quest.373FC2254A526ABB.title: "Hardness III"
 	quest.377C3F31EF6DA6DC.quest_desc: ["Soul sand, a bone block and two experience nuggets, mixed over a blaze burner: two Grave Essence. A few also lie in dungeon and ancient city chests."]
 	quest.377C3F31EF6DA6DC.title: "Grave Essence"
+	quest.378AA4B49CBB296F.quest_desc: ["Reach &eConstruction 50&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 30: chiseled stone bricks by the eight: stone bricks round an iron nugget", "• 40: cracked deepslate bricks without a furnace", "• 45: cracked deepslate tiles without a furnace", "• 50: cracked nether bricks without a furnace"]
+	quest.378AA4B49CBB296F.title: "&6Construction 50"
 	quest.3793ECB6905AEA11.quest_desc: ["Reach &eCooking 25&r. Cooking gives XP from every meal.", "", "&eUnlocked on the way:&r", "• 20: cake, rabbit stew, stews, rice dishes and rolls"]
 	quest.3793ECB6905AEA11.title: "&6Cooking 25"
 	quest.3838D00F121D3CDE.title: "Pale Garden"
-	quest.3850B0A73693A952.quest_desc: ["Every one of the fifteen skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.", "", "&7Your total level is every skill added together, 15 to 1485."]
-	quest.3850B0A73693A952.title: "&e&6Maxed"
 	quest.38A6292D5FAEFB5B.quest_desc: ["Every ship deserves a name. A nameplate on the hull sets it."]
 	quest.38A6292D5FAEFB5B.title: "I Declare Thee..."
 	quest.38DB4749B73BCD83.title: "Ancient Sands"
+	quest.38F7BBDC2B87771F.quest_desc: ["Reach &eConstruction 75&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 55: cracked polished blackstone bricks without a furnace", "• 60: eight stone brick stairs from six stone bricks and a clay ball", "• 70: a lantern from four iron nuggets, four glass panes and a torch"]
+	quest.38F7BBDC2B87771F.title: "&6Construction 75"
 	quest.3949C37922045DC0.quest_desc: ["Organic compost decays into rich soil with sun, water and mushrooms nearby."]
 	quest.3949C37922045DC0.title: "Advanced Composting"
 	quest.39755458087AB908.title: "Shiraz Palace"
@@ -635,6 +641,8 @@
 	quest.49F46141DFEDD2C6.title: "Map Part: The Guild's Trial"
 	quest.49FBDD60BE536D27.quest_desc: ["An experience hatch stores your own levels as liquid, and gives them back."]
 	quest.49FBDD60BE536D27.title: "Spirit-Taking"
+	quest.4B10514395CFB710.quest_desc: ["Reach &eConstruction 10&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 5: ten stone bricks from eight stone and a clay ball", "• 10: mossy cobblestone by the eight: cobblestone round a moss block", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
+	quest.4B10514395CFB710.title: "&6Construction 10"
 	quest.4B5D23369245AFFD.quest_desc: ["Let a shulker hit you and levitate 50 blocks up."]
 	quest.4B5D23369245AFFD.title: "Great View From Up Here"
 	quest.4B9540012C8F2474.quest_desc: ["Hold a million Gold Coins at once. Vendors buy anything you make, so a factory that sells its output fills a purse fast."]
@@ -683,7 +691,7 @@
 	quest.50F24CCC7BFB4E28.quest_desc: ["Reach &eFarming 75&r. Farming gives faster tilling.", "", "&eUnlocked on the way:&r", "• 60: planting chorus flowers"]
 	quest.50F24CCC7BFB4E28.title: "&aFarming 75"
 	quest.513C9025A06A10F1.title: "Electron Tubes"
-	quest.515417F3781A968C.quest_desc: ["Two hundred and fifty levels in all.", "", "&7Your total level is every skill added together, 15 to 1485."]
+	quest.515417F3781A968C.quest_desc: ["Two hundred and fifty levels in all.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.515417F3781A968C.title: "&eTotal 250"
 	quest.51653BAD0DD3C091.quest_desc: ["A mechanical press over a depot or belt flattens ingots into sheets. Sheets are the core of the Andesite Age."]
 	quest.51653BAD0DD3C091.title: "Under Pressure"
@@ -824,7 +832,7 @@
 	quest.63D3B4DA71A590BD.title: "Illager Manor"
 	quest.63FACB40AF50B90A.quest_desc: ["Reach &eHitpoints 50&r. Hitpoints gives a heart every ten levels."]
 	quest.63FACB40AF50B90A.title: "&cHitpoints 50"
-	quest.6457E540F71D6A7E.quest_desc: ["A thousand levels. Very few will get here.", "", "&7Your total level is every skill added together, 15 to 1485."]
+	quest.6457E540F71D6A7E.quest_desc: ["A thousand levels. Very few will get here.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.6457E540F71D6A7E.title: "&eTotal 1000"
 	quest.6471A85F0370A033.quest_desc: ["Reach &eStrength 99&r. Strength gives +0.3% melee crit chance per level.", "", "&6The Strength Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.6471A85F0370A033.title: "&cStrength 99"
@@ -834,11 +842,11 @@
 	quest.64F0759A533C66F2.title: "Trial Chambers"
 	quest.65143E2CCAD21FB2.quest_desc: ["Fluid tanks over heated blaze burners, fed with water, drive steam engines: the strongest early power."]
 	quest.65143E2CCAD21FB2.title: "Full Steam"
-	quest.6524A67A3C268BA2.quest_desc: ["Half way to the top. Five hundred levels.", "", "&7Your total level is every skill added together, 15 to 1485."]
+	quest.6524A67A3C268BA2.quest_desc: ["Half way to the top. Five hundred levels.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.6524A67A3C268BA2.title: "&eTotal 500"
 	quest.65362757C5786E54.quest_desc: ["Glue blocks to a mechanical bearing or piston and they move as one contraption. Drills and saws mine and cut as they go.", "", "&7Drills on a contraption mine iron and zinc ore without a Hardness tome. This is how the Andesite Age gets its metal."]
 	quest.65362757C5786E54.title: "It Moves!"
-	quest.65D1AFE50D8ECE8E.quest_desc: ["Seven hundred and fifty levels.", "", "&7Your total level is every skill added together, 15 to 1485."]
+	quest.65D1AFE50D8ECE8E.quest_desc: ["Seven hundred and fifty levels.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.65D1AFE50D8ECE8E.title: "&eTotal 750"
 	quest.65DD30A5E415DC7A.quest_desc: ["A windmill bearing plus sails (wool, or sail blocks) glued together turns in the wind. More sails, more power."]
 	quest.65DD30A5E415DC7A.title: "Wind Power"
@@ -973,6 +981,8 @@
 	quest.7589B78C135663B5.title: "Aviator"
 	quest.763B2E40973AE7F7.quest_desc: ["Brass casings, andesite alloy and a lantern. The lamp alone gives Night Vision underground; the full set gives Haste and a chance of double ore drops.", "&7Needs Mining 35. With the Clot of Time relic: Haste II."]
 	quest.763B2E40973AE7F7.title: "Prospector's Set"
+	quest.7641CE8F38F2E7E3.quest_desc: ["Reach &eConstruction 99&r. Construction gives XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up.", "", "&eUnlocked on the way:&r", "• 99: the Mason's Palette: as many of one decorative block as you like", "", "&6The Construction Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
+	quest.7641CE8F38F2E7E3.title: "&6Construction 99"
 	quest.765B1B7F8B581B33.quest_desc: ["Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.", "", "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", "", "If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back."]
 	quest.765B1B7F8B581B33.title: "&cElvarg"
 	quest.76E4BD5934F09FD6.quest_desc: ["Illager Invasion adds fortified camps with new illagers: basher, provoker, invoker. Bring friends."]
@@ -1088,6 +1098,7 @@
 	task.17820BE4E53E8696.title: "Mining level 25"
 	task.17DC0AE191486D0F.title: "Hitpoints level 50"
 	task.180ACC907BA571E0.title: "Crafting level 75"
+	task.186031A52CA2E25D.title: "Construction level 10"
 	task.1872ACB78C41AD40.title: "Give the Cook the ingredients"
 	task.19F1E8A4C741BEC4.title: "Collect straw with a knife"
 	task.1ACEE0E64612E30D.title: "Connect two docking connectors"
@@ -1157,7 +1168,6 @@
 	task.400B407A99CC6328.title: "Slay Elvarg"
 	task.401DFC0F2D8BC073.title: "Brewing level 10"
 	task.40BBB80E75D17A8D.title: "Place a feast"
-	task.40BBD006F2C8C31F.title: "Total level 1485"
 	task.419615140253F3EB.title: "Understood"
 	task.41C3372668E0D35D.title: "Farming level 50"
 	task.42B5B77731DFC4E8.title: "Open a Lootr chest"
@@ -1187,6 +1197,7 @@
 	task.4A9DA782299AD918.title: "I have a plan"
 	task.4B1C7BE52A2C4FD7.title: "Attack level 99"
 	task.4B72F6A67ED1A0E4.title: "Give the Elder the offering"
+	task.4BACE15E3229DD50.title: "Total level 1584"
 	task.4BF994C58320B80F.title: "Talk to the mayor"
 	task.4C790ED04765BCDB.title: "Slay the Ender Dragon"
 	task.4C8A68F1BF4EAC05.title: "Cure a zombie villager"
@@ -1246,6 +1257,7 @@
 	task.65A4A2EFDE395408.title: "Sell something to a vendor"
 	task.65AD7D88AC69FB69.title: "Forecast an arrival on a display board"
 	task.665E1FAB32E40F49.title: "Enter an end gateway"
+	task.66A52B05E7BEA35F.title: "Construction level 99"
 	task.66B7B361C4CA44DA.title: "Ranged level 99"
 	task.66E7BFB36BCBD166.title: "Defence level 50"
 	task.681D2FB4E0CCA481.title: "Mining level 99"
@@ -1260,8 +1272,10 @@
 	task.6C834DACBF8FF89F.title: "Fishing level 75"
 	task.6CF527A6F99C7563.title: "Brewing level 75"
 	task.6DB60A38B1A91D20.title: "Shear a mature mushroom colony"
+	task.6E5E11A64B6710ED.title: "Construction level 50"
 	task.6E66318EB6DC6F81.title: "Brewing level 25"
 	task.6E7D1F7BB53A2A51.title: "Farming level 10"
+	task.6E8C3C629377724E.title: "Construction level 75"
 	task.6EB0DCA9A6611806.title: "Sleep in a bed"
 	task.6F3AAB6C8E1C7914.title: "Hold 10,000 coins"
 	task.7022C49B919B2773.title: "Hitpoints level 99"
@@ -1274,6 +1288,7 @@
 	task.747BDA36F8642A2D.title: "Woodcutting level 99"
 	task.7481F2571690158A.title: "Enchant an item with a blaze enchanter"
 	task.748A833715661317.title: "Strength level 50"
+	task.75FA82927F3EA7D0.title: "Construction level 25"
 	task.7665505C7418EA97.title: "Show Elder Ashka your Infernal Cape"
 	task.77826851452E080E.title: "Defeat Kiln-Kal-Zuk"
 	task.78456872482BCB63.title: "Crafting level 10"

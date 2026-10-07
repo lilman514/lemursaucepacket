@@ -72,6 +72,20 @@ public final class Gates {
         return SkillGates.craft(result) == null;
     }
 
+    /** Whether this player may use this recipe (Construction's alternate recipes); says why not. */
+    public static boolean mayUseRecipe(Player player, ResourceLocation recipe) {
+        SkillGates.Need need = SkillGates.recipe(recipe);
+        if (need == null || Levels.of(player, need.skill()) >= need.level()) return true;
+        tell(player, "You need " + Levels.name(need.skill()) + " " + need.level() + " for this recipe: " + need.what().toLowerCase(java.util.Locale.ROOT)
+                + " (you have " + Levels.of(player, need.skill()) + ").");
+        return false;
+    }
+
+    /** Machines never use a recipe that waits on a level. */
+    public static boolean machineMayUseRecipe(ResourceLocation recipe) {
+        return SkillGates.recipe(recipe) == null;
+    }
+
     private static final ResourceLocation CREATE_POTION = ResourceLocation.fromNamespaceAndPath("create", "potion");
     private static final Map<Class<?>, Optional<Method>> FLUID_RESULTS = new ConcurrentHashMap<>();
 

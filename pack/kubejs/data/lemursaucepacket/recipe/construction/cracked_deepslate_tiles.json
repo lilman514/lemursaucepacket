@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "OOO",
+    "OMO",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:deepslate_tiles"
+    },
+    "M": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "id": "minecraft:cracked_deepslate_tiles",
+    "count": 8
+  }
+}

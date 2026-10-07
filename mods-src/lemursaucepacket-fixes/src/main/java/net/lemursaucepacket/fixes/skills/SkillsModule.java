@@ -98,6 +98,8 @@ public final class SkillsModule {
                 {"mechanical crafters", "create", "com.simibubi.create.content.kinetics.crafter.RecipeGridHandler"},
                 {"basins", "create", "com.simibubi.create.content.processing.basin.BasinRecipe"},
                 {"crafting blueprint", "create", "com.simibubi.create.content.equipment.blueprint.BlueprintEntity"},
+                {"airships carry free blocks", "sable", "dev.ryanhcode.sable.api.SubLevelAssemblyHelper"},
+                {"drills spare free blocks", "create", "com.simibubi.create.foundation.utility.BlockHelper"},
         };
         List<String> in = new ArrayList<>(), missing = new ArrayList<>();
         for (String[] g : gates) {
@@ -105,7 +107,7 @@ public final class SkillsModule {
             boolean found = false;
             try {
                 for (Method m : Class.forName(g[2], false, SkillsModule.class.getClassLoader()).getDeclaredMethods()) {
-                    if (m.getName().endsWith("lsp$skillGate")) {
+                    if (m.getName().endsWith("lsp$skillGate") || m.getName().endsWith("lsp$freeBlocks")) {
                         found = true;
                         break;
                     }

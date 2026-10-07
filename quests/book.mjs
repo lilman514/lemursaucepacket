@@ -16,7 +16,7 @@
 // on the tier's reward table; finales and milestones add fixed prizes players can see coming.
 
 import { QUEST_ITEMS } from '../npcs/quests.mjs'
-import { BREW, CHOP, CRAFT, FISHING_TREASURE, PLANT, RANGED } from '../skills/unlocks.mjs'
+import { BREW, CHOP, CONSTRUCTION_RECIPES, CRAFT, FISHING_TREASURE, PALETTE, PLANT, RANGED } from '../skills/unlocks.mjs'
 
 const tip = (text) => `&7${text}`
 
@@ -345,7 +345,8 @@ const SKILLS = [
   { id: 'crafting', name: 'Crafting', group: 'artisan', perk: 'XP from everything you craft', unlocks: { 30: 'the Builder\'s Wand' } },
   { id: 'enchanting', name: 'Enchanting', group: 'artisan', perk: 'enchantments past their vanilla max: the caps open with the skill', unlocks: { 20: 'level VI of the raised enchantments', 40: 'level VII', 60: 'level VIII', 80: 'level IX', 99: 'level X' } },
   { id: 'agility', name: 'Agility', group: 'support', perk: 'speed and less fall damage', unlocks: { 30: 'the elytra', 40: 'the Aeronaut\'s set' } },
-  { id: 'brewing', name: 'Brewing', group: 'artisan', perk: 'XP from every potion you brew', unlocks: {} }
+  { id: 'brewing', name: 'Brewing', group: 'artisan', perk: 'XP from every potion you brew', unlocks: {} },
+  { id: 'construction', name: 'Construction', group: 'artisan', perk: 'XP for building (the fancier the block, the more), and a growing chance that a block you place is not used up', unlocks: {} }
 ]
 // What skills/unlocks.mjs gates, folded into each skill's list (several things at one level share a line).
 {
@@ -361,6 +362,8 @@ const SKILLS = [
   for (const c of CHOP) add('woodcutting', c.level, `chopping ${c.what.toLowerCase()}`)
   for (const r of RANGED) add('ranged', r.level, r.what)
   add('fishing', FISHING_TREASURE, 'landing treasure')
+  for (const r of CONSTRUCTION_RECIPES) add('construction', r.level, r.what)
+  add('construction', PALETTE.level, "the Mason's Palette: as many of one decorative block as you like")
 }
 const SKILL_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
 const SKILL_COUNT_WORD = SKILL_WORDS[SKILLS.length] ?? String(SKILLS.length)
@@ -382,7 +385,8 @@ const SKILL_PRIZES = {
   crafting: { 50: [{ item: 'lemursaucepacket:builders_wand' }], 75: [{ item: 'sophisticatedbackpacks:crafting_upgrade' }, { item: 'create:mechanical_crafter', count: 9 }] },
   enchanting: { 50: [enchantedBook('mending')], 75: [{ item: 'create_enchantment_industry:experience_bucket', count: 2 }, enchantedBook('unbreaking', 5)] },
   agility: { 50: [{ item: 'lemursaucepacket:aeronaut_boots' }], 75: [{ item: 'minecraft:elytra' }] },
-  brewing: { 50: [{ item: 'minecraft:dragon_breath', count: 8 }, { item: 'minecraft:ghast_tear', count: 4 }], 75: [{ item: 'minecraft:brewing_stand', count: 2 }, { item: 'minecraft:blaze_rod', count: 16 }, { item: 'minecraft:turtle_helmet' }] }
+  brewing: { 50: [{ item: 'minecraft:dragon_breath', count: 8 }, { item: 'minecraft:ghast_tear', count: 4 }], 75: [{ item: 'minecraft:brewing_stand', count: 2 }, { item: 'minecraft:blaze_rod', count: 16 }, { item: 'minecraft:turtle_helmet' }] },
+  construction: { 50: [{ item: 'lemursaucepacket:builders_wand' }, { item: 'minecraft:sea_lantern', count: 16 }], 75: [{ item: 'create:schematicannon' }, { item: 'minecraft:quartz_block', count: 64 }, { item: 'minecraft:lantern', count: 32 }] }
 }
 const TOTAL_MILESTONES = [
   { total: 100, tier: 2, title: 'Total 100', desc: 'A hundred levels across every skill.' },

@@ -55,6 +55,11 @@ public final class ZoneEvents {
         return player.hasPermissions(2) && (player.isCreative() || BYPASS.contains(player.getUUID()));
     }
 
+    /** Whether a player may change the block at pos: what scripts that set blocks directly ask (the Builder's Wand, the scythe). */
+    public static boolean mayBuild(Player player, Level level, BlockPos pos) {
+        return SafeZones.at(level, pos, Flag.BUILD) == null || bypasses(player);
+    }
+
     private static Zone zone(LevelAccessor access, BlockPos pos, Flag flag) {
         return access instanceof Level level ? SafeZones.at(level, pos, flag) : null;
     }

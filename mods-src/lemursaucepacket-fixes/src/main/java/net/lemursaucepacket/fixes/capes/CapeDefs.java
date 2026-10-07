@@ -38,7 +38,7 @@ public final class CapeDefs {
      * for a still cape and the frame count for an animated one ({@code <texture>_f<n>.png}).
      */
     public record Def(String id, String name, String kind, String description, @Nullable String perkText, JsonObject perk, JsonObject unlock,
-            ResourceLocation texture, int frames, @Nullable Reclaim reclaim) {
+            ResourceLocation texture, int frames, @Nullable Reclaim reclaim, @Nullable ResourceLocation kit) {
         public ResourceLocation itemId() {
             return ResourceLocation.fromNamespaceAndPath(NAMESPACE, id);
         }
@@ -63,6 +63,13 @@ public final class CapeDefs {
         public boolean animated() {
             return frames > 1;
         }
+
+        /** What comes with the cape when it's handed over (the Construction Cape's Mason's Palette), or nothing. */
+        public ItemStack kitStack() {
+            if (kit == null) return ItemStack.EMPTY;
+            Item item = BuiltInRegistries.ITEM.get(kit);
+            return item == Items.AIR ? ItemStack.EMPTY : new ItemStack(item);
+        }
     }
 
     static void load() {
@@ -83,7 +90,8 @@ public final class CapeDefs {
                         c.has("perk") && c.get("perk").isJsonObject() ? c.getAsJsonObject("perk") : new JsonObject(),
                         c.has("unlock") && c.get("unlock").isJsonObject() ? c.getAsJsonObject("unlock") : new JsonObject(),
                         ResourceLocation.parse(str(c, "texture", NAMESPACE + ":textures/capes/" + e.getKey() + ".png")),
-                        c.has("frames") ? Math.max(1, c.get("frames").getAsInt()) : 1, reclaim));
+                        c.has("frames") ? Math.max(1, c.get("frames").getAsInt()) : 1, reclaim,
+                        c.has("kit") && !c.get("kit").isJsonNull() ? ResourceLocation.parse(c.get("kit").getAsString()) : null));
             }
             CapesModule.LOGGER.info("{} capes from {}", DEFS.size(), file);
         } catch (Exception ex) {

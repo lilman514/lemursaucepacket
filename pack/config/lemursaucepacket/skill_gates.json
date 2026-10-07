@@ -339,6 +339,382 @@
       ]
     }
   ],
+  "recipes": [
+    {
+      "id": "lemursaucepacket:construction/mortared_stone_bricks",
+      "skill": "construction",
+      "level": 5,
+      "what": "Ten stone bricks from eight stone and a clay ball"
+    },
+    {
+      "id": "lemursaucepacket:construction/mossy_cobblestone",
+      "skill": "construction",
+      "level": 10,
+      "what": "Mossy cobblestone by the eight: cobblestone round a moss block"
+    },
+    {
+      "id": "lemursaucepacket:construction/mossy_stone_bricks",
+      "skill": "construction",
+      "level": 15,
+      "what": "Mossy stone bricks by the eight: stone bricks round a moss block"
+    },
+    {
+      "id": "lemursaucepacket:construction/cracked_stone_bricks",
+      "skill": "construction",
+      "level": 20,
+      "what": "Cracked stone bricks without a furnace: stone bricks round a flint"
+    },
+    {
+      "id": "lemursaucepacket:construction/smooth_stone",
+      "skill": "construction",
+      "level": 25,
+      "what": "Smooth stone without a furnace: stone round a sand"
+    },
+    {
+      "id": "lemursaucepacket:construction/chiseled_stone_bricks",
+      "skill": "construction",
+      "level": 30,
+      "what": "Chiseled stone bricks by the eight: stone bricks round an iron nugget"
+    },
+    {
+      "id": "lemursaucepacket:construction/cracked_deepslate_bricks",
+      "skill": "construction",
+      "level": 40,
+      "what": "Cracked deepslate bricks without a furnace"
+    },
+    {
+      "id": "lemursaucepacket:construction/cracked_deepslate_tiles",
+      "skill": "construction",
+      "level": 45,
+      "what": "Cracked deepslate tiles without a furnace"
+    },
+    {
+      "id": "lemursaucepacket:construction/cracked_nether_bricks",
+      "skill": "construction",
+      "level": 50,
+      "what": "Cracked nether bricks without a furnace"
+    },
+    {
+      "id": "lemursaucepacket:construction/cracked_polished_blackstone_bricks",
+      "skill": "construction",
+      "level": 55,
+      "what": "Cracked polished blackstone bricks without a furnace"
+    },
+    {
+      "id": "lemursaucepacket:construction/stone_brick_stairs",
+      "skill": "construction",
+      "level": 60,
+      "what": "Eight stone brick stairs from six stone bricks and a clay ball"
+    },
+    {
+      "id": "lemursaucepacket:construction/lantern",
+      "skill": "construction",
+      "level": 70,
+      "what": "A lantern from four iron nuggets, four glass panes and a torch"
+    }
+  ],
+  "construction": {
+    "xp": [
+      {
+        "xp": 25,
+        "what": "Fine pieces: lecterns, bells, bookshelves, sea lanterns, end rods, decorated pots",
+        "match": [
+          "minecraft:lectern",
+          "minecraft:bell",
+          "minecraft:bookshelf",
+          "minecraft:chiseled_bookshelf",
+          "minecraft:sea_lantern",
+          "minecraft:end_rod",
+          "minecraft:decorated_pot"
+        ]
+      },
+      {
+        "xp": 2,
+        "what": "Cobblestone and stone",
+        "match": [
+          "minecraft:cobblestone",
+          "minecraft:stone",
+          "minecraft:cobbled_deepslate",
+          "minecraft:mossy_cobblestone"
+        ]
+      },
+      {
+        "xp": 0,
+        "what": "The ground as you found it (dirt, sand, gravel, natural stone, logs, leaves, plants, ores), storage blocks, machines and anything with an inventory, redstone, rails, torches, ladders and scaffolding",
+        "match": [
+          "#minecraft:dirt",
+          "#minecraft:sand",
+          "#c:gravels",
+          "#minecraft:base_stone_overworld",
+          "#minecraft:base_stone_nether",
+          "#minecraft:logs",
+          "#minecraft:leaves",
+          "#minecraft:saplings",
+          "#minecraft:flowers",
+          "#minecraft:crops",
+          "#c:ores",
+          "#c:storage_blocks",
+          "#minecraft:rails",
+          "#minecraft:beds",
+          "#minecraft:ice",
+          "#minecraft:snow",
+          "~^minecraft:(grass_block|mycelium|podzol|mud|clay|moss_block|end_stone|obsidian|crying_obsidian|netherrack|magma_block|soul_sand|soul_soil|sponge|wet_sponge|hay_block|slime_block|honey_block|cactus|sugar_cane|bamboo|kelp|vine|cobweb|farmland|dirt_path|tnt)$",
+          "~.*(torch|ladder|scaffolding|redstone|repeater|comparator|observer|piston|lever|button|pressure_plate|tripwire|daylight_detector|target|note_block|jukebox|dispenser|dropper|hopper|crafter|sculk|_rail|copper_bulb).*",
+          "*entity"
+        ]
+      },
+      {
+        "xp": 15,
+        "what": "Macaw's roofs, windows, paths, bridges, stairs, fences, lights, doors and furniture, and Create Deco",
+        "match": [
+          "@mcwroofs",
+          "@mcwwindows",
+          "@mcwpaths",
+          "@mcwbridges",
+          "@mcwstairs",
+          "@mcwfences",
+          "@mcwlights",
+          "@mcwdoors",
+          "@mcwtrpdoors",
+          "@mcwfurnitures",
+          "@createdeco"
+        ]
+      },
+      {
+        "xp": 10,
+        "what": "Fancy stone and glass: chiseled, cracked, mossy, cut, smooth, polished and tiled kinds, quartz, prismarine, purpur, end stone bricks, copper, glazed terracotta, stained glass, Create's cut stone; lanterns, chains, iron bars, doors and trapdoors",
+        "match": [
+          "~^minecraft:(chiseled|cracked|mossy|cut|smooth|polished)_.*",
+          "~^minecraft:.*_tiles?(_stairs|_slab|_wall)?$",
+          "~^minecraft:.*(quartz|prismarine|purpur|end_stone_brick|copper).*",
+          "~^minecraft:.*_glazed_terracotta$",
+          "~^minecraft:.*stained_glass.*",
+          "~^minecraft:(tuff|mud|red_nether|nether)_brick.*",
+          "~^create:(cut|polished_cut|small|layered)_.*",
+          "~^create:.*_pillar$",
+          "minecraft:lantern",
+          "minecraft:soul_lantern",
+          "minecraft:chain",
+          "minecraft:iron_bars",
+          "#minecraft:doors",
+          "#minecraft:trapdoors",
+          "#minecraft:fence_gates"
+        ]
+      },
+      {
+        "xp": 5,
+        "what": "Building blocks: planks, bricks, stone bricks, glass, wool, concrete, terracotta and sandstone, and every stair, slab, wall and fence",
+        "match": [
+          "#minecraft:planks",
+          "#minecraft:stairs",
+          "#minecraft:slabs",
+          "#minecraft:walls",
+          "#minecraft:fences",
+          "#minecraft:wool",
+          "#minecraft:wool_carpets",
+          "#minecraft:terracotta",
+          "#c:glass_blocks",
+          "#c:glass_panes",
+          "~^minecraft:.*_concrete$",
+          "~^minecraft:(red_)?sandstone$",
+          "~^minecraft:.*bricks$",
+          "minecraft:packed_mud",
+          "minecraft:flower_pot"
+        ]
+      }
+    ],
+    "savePerLevel": 0.001,
+    "palette": {
+      "level": 99,
+      "coins": 10000,
+      "never": [
+        "#minecraft:logs",
+        "#minecraft:planks",
+        "#minecraft:wool",
+        "#minecraft:wool_carpets",
+        "#minecraft:beds",
+        "#minecraft:candles",
+        "#minecraft:banners",
+        "#c:storage_blocks",
+        "#c:ores",
+        "#minecraft:rails",
+        "@everycomp",
+        "@mcwfurnitures",
+        "~.*(seat|couch|chaise|curtain|paper|froglass|cushion).*",
+        "~.*(oak|spruce|birch|jungle|acacia|mangrove|cherry|bamboo|crimson|warped|azalea|_wood|_log|planks|stem|hyphae).*",
+        "~.*(hay|honey|slime|glowstone|shroomlight|amethyst|sponge|coinstack|infested|_ore|raw_|gilded|skull|_head|copper|flower_pot|potted|candle|carpet).*",
+        "~.*(torch|ladder|scaffolding|redstone|repeater|comparator|observer|piston|lever|button|pressure_plate|tripwire|daylight_detector|target|note_block|jukebox|dispenser|dropper|hopper|crafter|sculk|tnt|lightning_rod).*",
+        "~^minecraft:(obsidian|crying_obsidian|netherite_block|lodestone|respawn_anchor|beacon|conduit|spawner|bedrock|end_portal_frame|budding_amethyst|dragon_egg|reinforced_deepslate|bookshelf|chiseled_bookshelf|ice|packed_ice|blue_ice)$"
+      ],
+      "blockEntities": [
+        "minecraft:lectern"
+      ],
+      "processingAllowed": [
+        "minecraft:cobblestone",
+        "minecraft:sandstone",
+        "#c:glass_blocks",
+        "#c:glass_panes"
+      ],
+      "categories": [
+        {
+          "name": "Stone",
+          "icon": "minecraft:stone_bricks",
+          "match": [
+            "~^minecraft:(stone|cobblestone|mossy_cobblestone|smooth_stone)(_stairs|_slab|_wall)?$",
+            "~^minecraft:(mossy_|cracked_|chiseled_)?stone_brick(s|_stairs|_slab|_wall)$"
+          ]
+        },
+        {
+          "name": "Granite, diorite and andesite",
+          "icon": "minecraft:polished_andesite",
+          "match": [
+            "~^minecraft:(polished_)?(granite|diorite|andesite)(_stairs|_slab|_wall)?$"
+          ]
+        },
+        {
+          "name": "Deepslate and tuff",
+          "icon": "minecraft:deepslate_tiles",
+          "match": [
+            "~^minecraft:.*(deepslate|tuff).*"
+          ]
+        },
+        {
+          "name": "Blackstone and basalt",
+          "icon": "minecraft:polished_blackstone_bricks",
+          "match": [
+            "~^minecraft:.*(blackstone|basalt).*"
+          ]
+        },
+        {
+          "name": "Sandstone",
+          "icon": "minecraft:cut_sandstone",
+          "match": [
+            "~^minecraft:.*sandstone.*"
+          ]
+        },
+        {
+          "name": "Bricks",
+          "icon": "minecraft:bricks",
+          "match": [
+            "~^minecraft:(bricks|brick_.*|mud_brick.*|packed_mud|.*nether_brick.*)$"
+          ]
+        },
+        {
+          "name": "Quartz, purpur and end stone",
+          "icon": "minecraft:quartz_bricks",
+          "match": [
+            "~^minecraft:.*(quartz|purpur|end_stone_brick).*"
+          ]
+        },
+        {
+          "name": "Prismarine",
+          "icon": "minecraft:prismarine_bricks",
+          "match": [
+            "~^minecraft:.*prismarine.*",
+            "minecraft:sea_lantern"
+          ]
+        },
+        {
+          "name": "Concrete",
+          "icon": "minecraft:light_gray_concrete",
+          "match": [
+            "~^minecraft:.*_concrete$"
+          ]
+        },
+        {
+          "name": "Terracotta",
+          "icon": "minecraft:orange_glazed_terracotta",
+          "match": [
+            "#minecraft:terracotta",
+            "~^minecraft:.*_glazed_terracotta$"
+          ]
+        },
+        {
+          "name": "Glass",
+          "icon": "minecraft:glass",
+          "match": [
+            "#c:glass_blocks",
+            "#c:glass_panes"
+          ]
+        },
+        {
+          "name": "Create's stone",
+          "icon": "create:cut_limestone",
+          "match": [
+            "~^create:(cut|polished_cut|small|layered)_.*",
+            "~^create:.*_pillar$",
+            "~^create:(limestone|scoria|scorchia)$"
+          ]
+        },
+        {
+          "name": "Create Deco",
+          "icon": "createdeco:dusk_bricks",
+          "match": [
+            "@createdeco"
+          ]
+        },
+        {
+          "name": "Macaw's roofs",
+          "icon": "mcwroofs:stone_roof",
+          "match": [
+            "@mcwroofs"
+          ]
+        },
+        {
+          "name": "Macaw's paths",
+          "icon": "mcwpaths:andesite_basket_weave_paving",
+          "match": [
+            "@mcwpaths"
+          ]
+        },
+        {
+          "name": "Macaw's stairs and bridges",
+          "icon": "mcwbridges:stone_brick_bridge",
+          "match": [
+            "@mcwstairs",
+            "@mcwbridges"
+          ]
+        },
+        {
+          "name": "Macaw's windows and doors",
+          "icon": "mcwwindows:stone_window",
+          "match": [
+            "@mcwwindows",
+            "@mcwdoors",
+            "@mcwtrpdoors"
+          ]
+        },
+        {
+          "name": "Macaw's fences and walls",
+          "icon": "mcwfences:modern_stone_brick_wall",
+          "match": [
+            "@mcwfences"
+          ]
+        },
+        {
+          "name": "Macaw's lights",
+          "icon": "mcwlights:chain_lantern",
+          "match": [
+            "@mcwlights"
+          ]
+        },
+        {
+          "name": "Decoration",
+          "icon": "minecraft:lantern",
+          "match": [
+            "minecraft:lectern",
+            "minecraft:lantern",
+            "minecraft:soul_lantern",
+            "minecraft:chain",
+            "minecraft:iron_bars",
+            "minecraft:end_rod",
+            "~^create:(andesite|brass)_bars$",
+            "~^create:.*_iron_window(_pane)?$"
+          ]
+        }
+      ]
+    }
+  },
   "brew": [
     {
       "level": 1,

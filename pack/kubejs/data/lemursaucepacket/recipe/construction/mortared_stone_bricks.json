@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "OOO",
+    "OMO",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:stone"
+    },
+    "M": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "id": "minecraft:stone_bricks",
+    "count": 10
+  }
+}
