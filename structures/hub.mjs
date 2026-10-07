@@ -427,8 +427,10 @@ const plan = {
 }
 const out = path.join(root, 'pack', 'config', 'lemursaucepacket', 'hub_plan.json')
 writeFileSync(out, JSON.stringify(plan, null, 1) + '\n')
-// Ship only the templates of ours the city uses (bake.mjs copies every baked building into the pack).
-const used = new Set(placements.filter((p) => p.t.startsWith(`${NS}:`)).map((p) => p.t.slice(NS.length + 1)))
+// Ship only the templates of ours the city uses (bake.mjs copies every baked building into the pack), plus those placed
+// outside it: the Crandor memorial (lsp_fixes' CrandorMemorial builds it by Elvarg's den).
+const ELSEWHERE = ['crandor_memorial']
+const used = new Set([...placements.filter((p) => p.t.startsWith(`${NS}:`)).map((p) => p.t.slice(NS.length + 1)), ...ELSEWHERE])
 const packStructures = path.join(root, 'pack', 'kubejs', 'data', NS, 'structure')
 const unused = readdirSync(packStructures).filter((f) => f.endsWith('.nbt') && !used.has(f.slice(0, -4)))
 for (const f of unused) rmSync(path.join(packStructures, f))

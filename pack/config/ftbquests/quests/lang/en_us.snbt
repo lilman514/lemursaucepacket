@@ -865,7 +865,7 @@
 	quest.6ED31CFF32B4DC2F.title: "Stack Upgrade II"
 	quest.6F11CCE68303F7B7.quest_desc: ["Keep a small stack on you. It counts in your inventory, hotbar, off-hand or a backpack you carry, and one is used per death."]
 	quest.6F11CCE68303F7B7.title: "Three in the Pocket"
-	quest.6F362A6C985F8F78.quest_desc: ["Follow the map to Crandor. Elvarg rises when you reach her isle: a fire dragon in her prime.", "", "Everyone on this step who is nearby when she falls gets her head.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends."]
+	quest.6F362A6C985F8F78.quest_desc: ["Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.", "", "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", "", "If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back."]
 	quest.6F362A6C985F8F78.title: "&cElvarg"
 	quest.6F46C1816C7EA4AC.title: "Emerald Peaks"
 	quest.6F86C5A7CA35337C.quest_desc: ["At Enchanting 20 the raised enchantments allow level VI. Combine two Sharpness V books at an anvil, or roll it at the table."]

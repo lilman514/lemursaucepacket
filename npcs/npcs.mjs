@@ -331,6 +331,15 @@ export const NPCS = {
     ]
   },
 
+  // At the Crandor memorial, not in the city: lsp_fixes' CrandorMemorial imports him there. Speaking to him opens
+  // Elvarg's Lair (lsp_instances, the lsp_event tag); the dialog is only the fallback without that mod.
+  ned: {
+    model: 'villager', variant: 'PLAINS_FISHERMAN', name: 'Ned', color: '#6FA8DC',
+    description: "Old sailor at the Crandor memorial: takes you up to Elvarg, and keeps the things of those who fall to her.",
+    tags: ['lsp_event.lemursaucepacket.elvarg'],
+    dialogs: [dialog('default', 'Ned', "Elvarg's den is just up the hill. I sailed many a brave soul to Crandor in my day, and I've buried a good few since.\n\nWhen you're ready, I'll see you up there. And if she gets you, I'll keep your things safe till you come back for them.", { priority: 10, buttons: [goodbye] })]
+  },
+
   // Guards and townsfolk.
   guard: { model: 'humanoid', variant: 'KNIGHT_01', name: 'City Guard', color: '#9DB4CC', description: 'Gate guard.', equipment: { mainhand: 'minecraft:iron_sword', offhand: 'minecraft:shield', head: 'minecraft:iron_helmet', chest: 'minecraft:iron_chestplate', legs: 'minecraft:iron_leggings', feet: 'minecraft:iron_boots' }, dialogs: [dialog('default', 'Halt', 'Welcome to Lemurton, @initiator. Keep the peace inside the walls: no fighting, no digging, no building.\n\nThe mayor is by the fountain if you need work.', { priority: 10, buttons: [goodbye] })] },
   townsfolk: { model: 'villager', variant: 'PLAINS_NONE', name: 'Townsfolk', color: '#CFCFCF', description: 'Market square ambience.', wander: true, dialogs: [dialog('default', 'Chatter', 'Lovely day, isn\'t it? They say the old towers to the north hide treasure, if you can climb them.', { priority: 10, buttons: [goodbye] })] }

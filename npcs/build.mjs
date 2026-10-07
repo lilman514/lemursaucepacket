@@ -79,7 +79,7 @@ function preset(id, n) {
     SkinData: { Type: 'DEFAULT' },
     // The safe zone exempts easy_npc entities anyway; lemurton_npc marks them as the city's own and lsp_npc.<id> tells
     // lsp_fixes which of the townsfolk (lsp_npcs/<id>.json) this is.
-    Tags: ['lsp_zone_allowed', 'lemurton_npc', `lsp_npc.${id}`]
+    Tags: ['lsp_zone_allowed', 'lemurton_npc', `lsp_npc.${id}`, ...(n.tags ?? [])]
   }
   return {
     PresetMetadata: { access: 'RESTRICTED', author: 'LemurSaucePacket', category: 'Lemurton', description: n.description ?? '', entityTypeId: entityType, name: n.name, variantType: n.variant, version: '1.0.0' },

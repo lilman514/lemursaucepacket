@@ -94,6 +94,34 @@ public final class QuestModule {
                             p.teleportTo(level, pos.getX() + 48.5, y + 30, pos.getZ() + 0.5, p.getYRot(), p.getXRot());
                             return 1;
                         })))
+                        .then(Commands.literal("den").executes(c -> {
+                            boolean ok = CrandorMemorial.recaptureDen(c.getSource().getServer());
+                            if (ok) c.getSource().sendSuccess(() -> Component.literal("Copied Elvarg's den again: the next fight uses it."), true);
+                            else c.getSource().sendFailure(Component.literal("The memorial isn't built, or the den isn't loaded (go there first)."));
+                            return ok ? 1 : 0;
+                        }))
+                        .then(Commands.literal("memorial").executes(c -> {
+                            BlockPos m = Crandor.memorial(c.getSource().getServer()).orElse(null);
+                            c.getSource().sendSuccess(() -> Component.literal(m == null ? "The memorial isn't built yet (Crandor must be found and its land loaded)."
+                                    : "The memorial is at " + m.getX() + " " + m.getY() + " " + m.getZ()), false);
+                            return m == null ? 0 : 1;
+                        }).then(Commands.argument("player", EntityArgument.player()).executes(c -> {
+                            BlockPos m = Crandor.memorial(c.getSource().getServer()).orElse(null);
+                            if (m == null) {
+                                c.getSource().sendFailure(Component.literal("The memorial isn't built yet."));
+                                return 0;
+                            }
+                            ServerPlayer p = EntityArgument.getPlayer(c, "player");
+                            ServerLevel level = c.getSource().getServer().overworld();
+                            // In front of it (it faces away from the den), looking at it.
+                            BlockPos roost = Crandor.site(c.getSource().getServer());
+                            double ox = m.getX() - roost.getX(), oz = m.getZ() - roost.getZ();
+                            int fx = Math.abs(ox) > Math.abs(oz) ? (int) Math.signum(ox) : 0, fz = fx == 0 ? (oz >= 0 ? 1 : -1) : 0;
+                            int x = m.getX() + fx * 8, z = m.getZ() + fz * 8;
+                            float yaw = (float) Math.toDegrees(Math.atan2(fx, -fz));
+                            p.teleportTo(level, x + 0.5, level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z), z + 0.5, yaw, 0F);
+                            return 1;
+                        })))
                         .then(Commands.literal("reset").executes(c -> {
                             int n = Crandor.reset(c.getSource().getServer());
                             c.getSource().sendSuccess(() -> Component.literal("Cleared " + n + " Elvarg(s) off Crandor; she can rise again at once."), true);

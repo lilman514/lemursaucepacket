@@ -398,44 +398,8 @@ public final class HubBuilder {
         forced.clear();
     }
 
-    /**
-     * Places a waystone and registers it like a village one, named and visible to everyone (GLOBAL). The
-     * Waystones mod has no API for that, so this goes through reflection; without the mod it's just skipped.
-     */
+    /** The city's waystone: named and visible to everyone (GLOBAL). */
     private void placeWaystone(BlockPos pos, String name, String facing) {
-        try {
-            BlockState lower = parse("waystones:waystone[half=lower,facing=" + facing + "]");
-            BlockState upper = parse("waystones:waystone[half=upper,facing=" + facing + "]");
-            level.setBlock(pos, lower, Block.UPDATE_ALL);
-            level.setBlock(pos.above(), upper, Block.UPDATE_ALL);
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be == null) {
-                LOGGER.warn("The waystone at {} has no block entity", pos.toShortString());
-                return;
-            }
-            Class<?> originCls = Class.forName("net.blay09.mods.waystones.api.WaystoneOrigin");
-            Class<?> visCls = Class.forName("net.blay09.mods.waystones.api.WaystoneVisibility");
-            Object village = enumValue(originCls, "VILLAGE");
-            be.getClass().getMethod("initializeWaystone", ServerLevelAccessor.class, net.minecraft.world.entity.LivingEntity.class, originCls).invoke(be, level, null, village);
-            Object waystone = be.getClass().getMethod("getWaystone").invoke(be);
-            waystone.getClass().getMethod("setName", Component.class).invoke(waystone, Component.literal(name));
-            waystone.getClass().getMethod("setVisibility", visCls).invoke(waystone, enumValue(visCls, "GLOBAL"));
-            Class<?> mgrCls = Class.forName("net.blay09.mods.waystones.core.WaystoneManagerImpl");
-            Class<?> apiWaystone = Class.forName("net.blay09.mods.waystones.api.Waystone");
-            Object mgr = mgrCls.getMethod("get", MinecraftServer.class).invoke(null, server);
-            mgrCls.getMethod("updateWaystone", apiWaystone).invoke(mgr, waystone);
-            Class.forName("net.blay09.mods.waystones.core.WaystoneSyncManager").getMethod("sendWaystoneUpdateToAll", MinecraftServer.class, apiWaystone).invoke(null, server, waystone);
-            be.setChanged();
-            LOGGER.info("Waystone '{}' at {}", name, pos.toShortString());
-        } catch (ClassNotFoundException e) {
-            LOGGER.info("Waystones isn't installed; no waystone in the city");
-        } catch (Exception e) {
-            LOGGER.warn("Couldn't set up the city's waystone", e);
-        }
-    }
-
-    @SuppressWarnings({"unchecked", "rawtypes"})
-    private static Object enumValue(Class<?> cls, String name) {
-        return Enum.valueOf((Class<Enum>) cls, name);
+        Waystones.place(level, pos, name, facing, true);
     }
 }

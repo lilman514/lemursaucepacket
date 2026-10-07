@@ -39,9 +39,10 @@ import net.minecraft.world.phys.AABB;
 /**
  * Crandor, Elvarg's isle for Dragon Slayer I: the nearest fire dragon roost to Lemurton (any structure in the
  * {@code lemursaucepacket:crandor} tag), found once per world the way /locate finds things, and saved. The Map to Crandor
- * is a compass that points there. When a player who has the map and hasn't slain her comes close, Elvarg (a stage-four
- * fire dragon tagged {@code lsp_elvarg}) rises over the roost; when she dies, everyone nearby on that step of the quest gets
- * her head.
+ * is a compass that points there. At the foot of the hill stands the memorial ({@link CrandorMemorial}), where Ned starts
+ * the Elvarg event: an instance (lsp_instances) whose arena is a copy of the den, with Elvarg (a stage-four fire dragon
+ * tagged {@code lsp_elvarg}) in it, so she's always there for whoever needs the fight. When she dies, everyone near her on
+ * that step of the quest gets her head.
  */
 public final class Crandor {
     public static final String ELVARG_TAG = "lsp_elvarg";
@@ -50,7 +51,6 @@ public final class Crandor {
     static final String HAS_MAP = "q_ds_map";
     static final String SLAIN = "q_ds_elvarg";
     private static final TagKey<Structure> CRANDOR = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath("lemursaucepacket", "crandor"));
-    private static final int WAKE_RANGE = 72;
     private static final int CREDIT_RANGE = 160;
     private static final long RESPAWN_TICKS = 6000;
     /** Stage four (75 to 100 days old): a real fight for a well-equipped party, not a world-ender. */
@@ -62,6 +62,9 @@ public final class Crandor {
         int x;
         int z;
         long lastDeath = -RESPAWN_TICKS;
+        /** The memorial: {@link CrandorMemorial#NONE}, {@code LOADING} (its land force-loaded) or {@code BUILT}, and where. */
+        int memorial;
+        int mx, my, mz;
 
         static Site load(CompoundTag tag, HolderLookup.Provider registries) {
             Site s = new Site();
@@ -69,6 +72,10 @@ public final class Crandor {
             s.x = tag.getInt("x");
             s.z = tag.getInt("z");
             s.lastDeath = tag.getLong("lastDeath");
+            s.memorial = tag.getInt("memorial");
+            s.mx = tag.getInt("mx");
+            s.my = tag.getInt("my");
+            s.mz = tag.getInt("mz");
             return s;
         }
 
@@ -78,6 +85,10 @@ public final class Crandor {
             tag.putInt("x", x);
             tag.putInt("z", z);
             tag.putLong("lastDeath", lastDeath);
+            tag.putInt("memorial", memorial);
+            tag.putInt("mx", mx);
+            tag.putInt("my", my);
+            tag.putInt("mz", mz);
             return tag;
         }
     }
@@ -122,9 +133,9 @@ public final class Crandor {
         return all.size();
     }
 
-    /** Gives the Map to Crandor: a compass that points at the isle. */
+    /** Gives the Map to Crandor: a compass that points at the memorial at the foot of the isle's hill (the roost before it's built). */
     public static void giveMap(ServerPlayer player) {
-        BlockPos pos = site(player.server);
+        BlockPos pos = memorial(player.server).orElseGet(() -> site(player.server));
         ItemStack map = new ItemStack(Items.COMPASS);
         map.set(DataComponents.LODESTONE_TRACKER, new LodestoneTracker(Optional.of(GlobalPos.of(Level.OVERWORLD, pos)), false));
         map.set(DataComponents.CUSTOM_NAME, Component.literal("Map to Crandor").withStyle(s -> s.withItalic(false).withColor(ChatFormatting.GOLD)));
@@ -137,28 +148,15 @@ public final class Crandor {
         if (!player.getInventory().add(map)) player.drop(map, false);
     }
 
-    /** Every five seconds: wake Elvarg for a player with the map who has come to Crandor. */
+    /** Every five seconds: the memorial (Elvarg herself is the instanced event's, started by Ned). */
     static void tick(MinecraftServer server) {
+        CrandorMemorial.tick(server, state(server));
+    }
+
+    /** Where the memorial is, if it's built. */
+    public static Optional<BlockPos> memorial(MinecraftServer server) {
         Site s = state(server);
-        if (!s.found) return;
-        ServerLevel level = server.overworld();
-        List<ServerPlayer> near = new ArrayList<>();
-        for (ServerPlayer p : level.players()) {
-            if (!p.getTags().contains(HAS_MAP) || p.getTags().contains(SLAIN) || p.isSpectator()) continue;
-            double dx = p.getX() - s.x;
-            double dz = p.getZ() - s.z;
-            if (dx * dx + dz * dz <= WAKE_RANGE * WAKE_RANGE) near.add(p);
-        }
-        if (near.isEmpty() || elvarg(level, s) != null) return;
-        if (level.getGameTime() - s.lastDeath < RESPAWN_TICKS) return;
-        if (!level.hasChunkAt(new BlockPos(s.x, 64, s.z))) return;
-        int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, s.x, s.z);
-        summon(server, s.x, y + 8, s.z, y);
-        for (ServerPlayer p : near) {
-            p.sendSystemMessage(Component.literal("The ground shakes. Elvarg has seen you!").withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
-            p.playNotifySound(SoundEvents.ENDER_DRAGON_GROWL, SoundSource.HOSTILE, 1f, 0.8f);
-        }
-        QuestModule.LOGGER.info("Elvarg rose on Crandor ({} {} {}) for {}", s.x, y, s.z, near.stream().map(p -> p.getGameProfile().getName()).toList());
+        return s.memorial == CrandorMemorial.BUILT ? Optional.of(new BlockPos(s.mx, s.my, s.mz)) : Optional.empty();
     }
 
     /** Summons Elvarg (admins: /lsp crandor spawn). */

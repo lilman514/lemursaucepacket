@@ -1,0 +1,86 @@
+{
+  "name": "Elvarg's Lair",
+  "description": [
+    "Up the hill, in a clearing she burnt herself, Elvarg sleeps on her hoard. Ned will see you up there.",
+    "Fight her alone, or open a co-op fight that others join from this window (up to four).",
+    "Hold the Anti-dragon Shield when she breathes. If she gets you, Ned keeps your things here until you come back for them."
+  ],
+  "arena": "lemursaucepacket:crandor_den",
+  "strip_containers": true,
+  "player_spawn": {
+    "x": 0,
+    "z": 36,
+    "dy": 0
+  },
+  "spawns": [
+    {
+      "nbt": "{id:\"iceandfire:fire_dragon\",AgeTicks:1920000,AgingDisabled:1b,Variant:\"red\",Gender:0b,CustomName:'{\"text\":\"Elvarg\",\"color\":\"red\"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:[\"lsp_elvarg\"],HasHomePosition:1b,HomeAreaX:{x},HomeAreaY:{ground},HomeAreaZ:{z}}",
+      "at": {
+        "x": 0,
+        "z": 0,
+        "dy": 8
+      },
+      "boss": true,
+      "full_health": true
+    }
+  ],
+  "max_players": 4,
+  "time_limit": 1200,
+  "loot_time": 90,
+  "start_requires": {
+    "tags": [
+      "q_ds_map"
+    ],
+    "not_tags": [
+      "q_ds_elvarg"
+    ],
+    "message": "Only someone Oziach sent, with the Map to Crandor, can wake her. You can still join someone's co-op fight."
+  },
+  "keeper": "Ned",
+  "keeper_place": "the Crandor memorial",
+  "radius": 52,
+  "replace": [
+    {
+      "blocks": [
+        "#minecraft:leaves",
+        "#minecraft:logs",
+        "minecraft:bamboo",
+        "minecraft:vine",
+        "minecraft:cocoa",
+        "minecraft:short_grass",
+        "minecraft:tall_grass",
+        "minecraft:fern",
+        "minecraft:large_fern",
+        "#minecraft:flowers",
+        "minecraft:moss_carpet",
+        "minecraft:melon",
+        "minecraft:pumpkin",
+        "minecraft:sweet_berry_bush",
+        "minecraft:dead_bush",
+        "minecraft:snow"
+      ],
+      "with": "minecraft:air",
+      "radius": 30
+    },
+    {
+      "blocks": [
+        "minecraft:grass_block",
+        "minecraft:podzol",
+        "minecraft:mycelium",
+        "minecraft:moss_block"
+      ],
+      "with": "iceandfire:chared_grass",
+      "radius": 30
+    },
+    {
+      "blocks": [
+        "minecraft:dirt",
+        "minecraft:coarse_dirt",
+        "minecraft:rooted_dirt",
+        "minecraft:mud"
+      ],
+      "with": "iceandfire:chared_dirt",
+      "radius": 30
+    }
+  ]
+}

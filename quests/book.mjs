@@ -738,7 +738,7 @@ export default {
           tier: 4,
           auto: true,
           icon: 'iceandfire:dragon_skull_fire',
-          desc: ['Follow the map to Crandor. Elvarg rises when you reach her isle: a fire dragon in her prime.', '', 'Everyone on this step who is nearby when she falls gets her head.', '', tip('Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends.')],
+          desc: ['Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.', '', "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", '', 'If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.', '', tip('Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back.')],
           tasks: [{ stage: 'q_ds_elvarg', title: 'Slay Elvarg', icon: 'iceandfire:dragon_skull_fire' }]
         },
         {

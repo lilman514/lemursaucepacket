@@ -282,7 +282,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "ef6178a92ab1c4d68dbc7cf51c25220cbcbed317b2facb9e0d86839647e2094a"
+hash = "fa7b31e245f475bbd127c6285c95b4bc051712ea0c419da107a11787fc2d0181"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -690,7 +690,7 @@ hash = "48599e782c872f7ffb9a58ba1814116b491f36a88a2a30adea31306916961a7c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
-hash = "4cb0b08a346e348aeb87bb82133e7fb8c71cd2987e43a2661fcf147eaff3b6d1"
+hash = "e02ce21386c4df64f570ba41cdda19536746e5712d37a428ca5b7ab1bca756b7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
@@ -2073,6 +2073,10 @@ file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_gem_trade
 hash = "98b4b833e45d7ae529ee596b41c5791f3a6e1565ac4356a77a729e04ff73654f"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_ned.npc.snbt"
+hash = "2714f71264195c377af4c780cb2bd9e546ab9637dd9fdb645fc7983680f84b8a"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_oziach.npc.snbt"
 hash = "3c9164d3aa7ad71c55e439a72d7bc9863244a3d844e42ec22a542ac22c674888"
 
@@ -2129,6 +2133,10 @@ file = "kubejs/data/lemursaucepacket/lsp_economy/values.json"
 hash = "301b14362a882c30bcc715b80525566a1be7a8e3fffd57e9b3bcaf4b76ed1ba7"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/lsp_instances/event/elvarg.json"
+hash = "cd2453e964b422ce8a36bc44533eebc06e05fc761295208abf131db80fe956a9"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/baker.json"
 hash = "d59431280b4a28c060e7a4d1b7efe1beb8efa9e5f8b7a8547128ca4325877810"
 
@@ -2167,6 +2175,10 @@ hash = "05c1796fb5ba026fffa722576a66cd86188a7154e137e8326d666b5d0bfd9a0b"
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/mayor.json"
 hash = "229da833afc54d0b9108add389fb34844d14c4ecbf4b680bf7cf09d2857e834f"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_npcs/ned.json"
+hash = "03b1e0989e17fee3a2996e09bf4f9a3b776eb7e614b372caa8ed24eca35f8e0a"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/oziach.json"
@@ -2531,6 +2543,10 @@ hash = "8588bea0fce99e237045d022173524581927bc97dd77e8d3b8df2f6e7ac422a5"
 [[files]]
 file = "kubejs/data/lemursaucepacket/pmmo/items/xp_zinc_ingot.json"
 hash = "5faa50a6fdc41b05d0289364c31ceb693a7b77d721ada9b35c685ac10ab10a51"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/structure/crandor_memorial.nbt"
+hash = "63ef04147b6032a10d09bca7ac7ffd8348d027e3c2894b39b11253f56b789883"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/structure/lemurton_wall_east.nbt"
@@ -3018,7 +3034,7 @@ hash = "35fd20a294a26e56e825aea5bce8a322bbdbfb386cd8e89208fc2bfc51f8f81b"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal.js"
-hash = "282acfe914d23774741927c16a79f637b7e09c1341da48e548a313ac541789b2"
+hash = "e196a21f816f2bbc4290a325b940844d92476ea525c057c1d106969a58821d67"
 
 [[files]]
 file = "kubejs/server_scripts/lifesteal_recipes.js"
@@ -3532,8 +3548,12 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.7.2.jar"
-hash = "314353a1f72811e79282364a2413d0a1a63249e422d9c99796cfa603c04fcfed"
+file = "mods/lsp_fixes-1.8.0.jar"
+hash = "7c36860f818e9a762931f25431aef88890512e4767608307c8fe2b4f5a35c43f"
+
+[[files]]
+file = "mods/lsp_instances-1.0.0.jar"
+hash = "a86331c5a737d508428ffcfb5adc0f2e2760f2b5548f729b51fb3add7149b6e9"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"

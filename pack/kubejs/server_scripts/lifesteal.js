@@ -30,6 +30,11 @@ const LsOperation = Java.loadClass('net.minecraft.world.entity.ai.attributes.Att
 const LsResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
 const LsItemEntity = Java.loadClass('net.minecraft.world.entity.item.ItemEntity')
 const LsUUID = Java.loadClass('java.util.UUID')
+// Instanced events (lsp_instances): a Heart lost in one goes to the event's keeper with the rest of the player's things.
+let LsInstances = null
+try {
+  LsInstances = Java.loadClass('net.lemursaucepacket.instances.InstanceApi')
+} catch (e) {}
 const LsGameType = Java.loadClass('net.minecraft.world.level.GameType')
 const LsLevel = Java.loadClass('net.minecraft.world.level.Level')
 let LsCuriosApi = null
@@ -290,8 +295,11 @@ function lsDeath(player, source) {
   data.putInt('lsp_hearts', lsBalance(player) - 1)
   let lives = lsLives(player)
   let heart = lsMakeHeart(name, String(player.uuid))
-  lsSpawnHeart(player.level, player.x, player.y, player.z, heart)
-  lsLog(server, `${name} lost a heart (${lives} left)${killer ? ', killed by ' + killer.username : ''}; Heart ${lsHeartSerial(heart)} dropped at ${lsDim(player.level)} ${Math.floor(player.x)} ${Math.floor(player.y)} ${Math.floor(player.z)}`)
+  let keeper = LsInstances == null ? '' : String(LsInstances.keeperName(player))
+  let kept = keeper !== '' && LsInstances.keep(player, heart)
+  if (!kept) lsSpawnHeart(player.level, player.x, player.y, player.z, heart)
+  let heartWhere = kept ? 'kept by ' + keeper : 'dropped at ' + lsDim(player.level) + ' ' + Math.floor(player.x) + ' ' + Math.floor(player.y) + ' ' + Math.floor(player.z)
+  lsLog(server, `${name} lost a heart (${lives} left)${killer ? ', killed by ' + killer.username : ''}; Heart ${lsHeartSerial(heart)} ${heartWhere}`)
   if (lives <= 0) {
     data.putBoolean('lsp_eliminated', true)
     data.putString('lsp_death_pos', `${lsDim(player.level)} ${Math.floor(player.x)} ${Math.floor(player.y)} ${Math.floor(player.z)}`)
@@ -301,7 +309,7 @@ function lsDeath(player, source) {
     lsLog(server, `${name} is eliminated`)
     return
   }
-  player.tell(Text.of('').append(Text.red('You lost a heart. ')).append(Text.gray(`${lives} left. Your Heart is on the ground where you died.`)))
+  player.tell(Text.of('').append(Text.red('You lost a heart. ')).append(Text.gray(kept ? `${lives} left. ${keeper} has your Heart, with the rest of your things.` : `${lives} left. Your Heart is on the ground where you died.`)))
   if (killer != null) {
     killer.tell(Text.of('').append(Text.gold(`${name}'s Heart dropped where they died. `)).append(Text.gray('Pick it up and right-click it.')))
     lsBroadcast(server, Text.of('').append(Text.yellow(killer.username)).append(Text.gray(' took a heart from ')).append(Text.yellow(name)).append(Text.gray(`. ${name} has ${lives} left.`)))

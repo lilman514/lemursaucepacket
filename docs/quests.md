@@ -24,9 +24,11 @@ RuneScape style: Lemurton's people have troubles of their own, and a quest only 
 
 1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath, and her fire won't catch on you.
 2. Find the three pieces of the map: **Lucan the Jeweller** sells one for 10,000 coins, **Wizard Traiborn** (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the **Champions' Guild** gives the third for its trial (20 zombies and 10 skeletons).
-3. Oziach puts them together: the **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton).
-4. Go there. **Elvarg**, a fire dragon in her prime, rises when you arrive. Everyone with the map who is nearby when she falls gets her head.
+3. Oziach puts them together: the **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill.
+4. At the **Crandor memorial**, speak to **Ned**. His window takes you up to **Elvarg**, a fire dragon in her prime, in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back.
 5. Bring **Elvarg's Head** to Oziach.
+
+If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press *Take back your things*. Touch the memorial's waystone on your way up, so you can come straight back.
 
 Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
 
