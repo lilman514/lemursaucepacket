@@ -18,7 +18,7 @@ Pressing ESC opens a riveted board with three panels.
 | Quests | The quest book | — |
 | Missions | This week's Brassworks missions | H |
 | Waypoints | Your Xaero waypoints | U |
-| Capes | Your wardrobe: the [capes](capes.md) you've earned | `/capes` |
+| Capes | Your [cape](capes.md) collection: every cape, how to earn it, and where to get another if you lose one | `/capes` |
 
 Between the buttons: your coordinates, the time and the biome you're in.
 

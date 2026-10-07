@@ -32,13 +32,16 @@ export const dialog = (label, name, text, { priority = -1, buttons = [], conditi
 
 const goodbye = button('Goodbye', [close()])
 
-/** The usual shop dialog: a greeting, "let's trade", a line about themselves, goodbye. */
-function shopDialogs(greeting, about) {
+/** The usual shop dialog: a greeting, "let's trade", a line about themselves, goodbye; `extra` buttons go before goodbye. */
+function shopDialogs(greeting, about, extra = []) {
   return [
-    dialog('default', 'Greeting', greeting, { priority: 10, buttons: [button("Let's trade", [shopScreen()]), button('Tell me about yourself', [open('about')]), goodbye] }),
-    dialog('about', 'About', about, { buttons: [button("Let's trade", [shopScreen()]), goodbye] })
+    dialog('default', 'Greeting', greeting, { priority: 10, buttons: [button("Let's trade", [shopScreen()]), button('Tell me about yourself', [open('about')]), ...extra, goodbye] }),
+    dialog('about', 'About', about, { buttons: [button("Let's trade", [shopScreen()]), ...extra, goodbye] })
   ]
 }
+
+/** For the NPCs who make capes (capes/capes.mjs RECLAIM): the cape collection, with a buy button for theirs (lsp_fixes capes). */
+const lostCape = button("I've lost a cape", [cmd('lsp cape shop @npc-uuid @initiator')])
 
 /** One lot in a shop: `count` of `item` (an id, or { id, components }) for `price` Gold Coins. */
 export const good = (item, count, price) => ({ item: typeof item === 'string' ? { id: item } : item, count, price })
@@ -238,7 +241,7 @@ export const NPCS = {
   },
   shop_tailor: {
     model: 'villager', variant: 'PLAINS_LEATHERWORKER', name: 'Odo the Tailor', color: '#B48C64', description: 'Tailor.',
-    dialogs: shopDialogs('Leathers and cloth, made to measure.', 'A good coat keeps out more than the cold.'),
+    dialogs: shopDialogs('Leathers and cloth, made to measure.', 'A good coat keeps out more than the cold. I stitch capes, too: skill capes, quest capes, the rare ones. If you earned it and lost it, I will make you another.', [lostCape]),
     goods: [good('minecraft:leather_helmet', 1, 60), good('minecraft:leather_chestplate', 1, 120), good('minecraft:leather_leggings', 1, 100), good('minecraft:leather_boots', 1, 60), good('minecraft:leather', 2, 40), good('minecraft:saddle', 1, 300), good('minecraft:lead', 1, 60)]
   },
   shop_apothecary: {
@@ -492,8 +495,8 @@ export const NPCS = {
     description: 'Kilnfolk smith: fire-proof goods, and the Infernal Key for Ashes of the Kiln.',
     equipment: { mainhand: 'minecraft:golden_sword' },
     dialogs: [
-      ...shopDialogs('Obsidian, blackstone, things that burn and things that do not. Gold talks, outsider.', 'I forge with lava, not coal. The Elder says outsiders are soft. You look less soft than most.'),
-      dialog('key_after', 'Brakka', "Obsidian, blackstone, things that burn and things that don't. That key of yours still warm?", { priority: 35, conditions: [tag('q_ash_key')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
+      ...shopDialogs('Obsidian, blackstone, things that burn and things that do not. Gold talks, outsider.', 'I forge with lava, not coal. The Elder says outsiders are soft. You look less soft than most. Lose a cape the pits gave you, and I will weave another from their fire.', [lostCape]),
+      dialog('key_after', 'Brakka', "Obsidian, blackstone, things that burn and things that don't. That key of yours still warm?", { priority: 35, conditions: [tag('q_ash_key')], buttons: [button("Let's trade", [shopScreen()]), lostCape, goodbye] }),
       dialog('key_ask', 'An Infernal Key', 'The Elder wants you an Infernal Key? Then bring me what it is made of: a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods.', {
         priority: 30,
         conditions: [tag('q_ash_started')],

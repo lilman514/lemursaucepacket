@@ -108,21 +108,18 @@ function gearState(player) {
     state.critDamage += held.critDamage || 0
     if (held.perk) state.perks.push(held.perk)
   }
-  // The cape being worn (capes.js) can add crit stats too.
+  // The cape being worn (lsp_fixes capes) can add crit stats too.
   let capeStats = gearCapeStats(player)
   state.critChance += capeStats.critChance
   state.critDamage += capeStats.critDamage
   return state
 }
 
-const GEAR_CAPES = JsonIO.read('config/lemursaucepacket/capes.json').capes
+// The cape in the player's Curios cape slot (lsp_fixes capes; 0 without one, or with one they haven't earned).
+const GearCapes = Java.loadClass('net.lemursaucepacket.fixes.capes.Capes')
 function gearCapeStats(player) {
   try {
-    let raw = player.persistentData.getString('lsp_capes')
-    if (raw == null || raw === '') return { critChance: 0, critDamage: 0 }
-    let cape = GEAR_CAPES[JSON.parse(raw).wearing]
-    let stats = cape && cape.perk && cape.perk.stats ? cape.perk.stats : {}
-    return { critChance: stats.critChance || 0, critDamage: stats.critDamage || 0 }
+    return { critChance: Number(GearCapes.stat(player, 'critChance')), critDamage: Number(GearCapes.stat(player, 'critDamage')) }
   } catch (e) {
     return { critChance: 0, critDamage: 0 }
   }

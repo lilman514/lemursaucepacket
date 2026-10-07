@@ -1,0 +1,12 @@
+{
+  "size": 1,
+  "order": 85,
+  "icon": "lemursaucepacket:slot/empty_cape_slot",
+  "add_cosmetic": false,
+  "render_toggle": true,
+  "use_native_gui": true,
+  "drop_rule": "DEFAULT",
+  "validators": [
+    "curios:tag"
+  ]
+}

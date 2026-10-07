@@ -5,7 +5,7 @@ icon: puzzle-piece
 
 # Mods in the pack
 
-179 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+178 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
 ## On the server and every client (135)
 
@@ -145,7 +145,7 @@ icon: puzzle-piece
 - [YUNG's Bridges](https://modrinth.com/project/Ht4BfYp6)
 - [YUNG's Extras](https://modrinth.com/project/ZYgyPyfq)
 
-## Client only (44)
+## Client only (43)
 
 Visuals, sound, performance and interface. The ones marked optional in the launcher's Mods tab can be switched off.
 
@@ -155,7 +155,6 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 - [AmbientSounds](https://modrinth.com/project/fM515JnW)
 - [BadOptimizations](https://modrinth.com/project/g96Z4WVZ)
 - [Better Block Entities](https://modrinth.com/project/ONZm0H7Y)
-- [CapeJS](https://modrinth.com/project/BfY01IQg)
 - [Chat Heads](https://modrinth.com/project/Wb5oqrBJ)
 - [Controlify (Controller support)](https://modrinth.com/project/DOUdJVEm)
 - [Controlling](https://modrinth.com/project/xv94TkTM)

@@ -1,6 +1,8 @@
-// LemurSaucePacket capes: cosmetics you earn, not items. Edit this file, then run `node capes/build.mjs`
-// (publish.mjs does). It is the single source for the cape list the server and client scripts read
-// (pack/config/lemursaucepacket/capes.json), the wiki page docs/capes.md, and the art cut in art/process.mjs.
+// LemurSaucePacket capes: items you earn and wear in their own Curios slot ("cape"), and can hang on armor stands.
+// Edit this file, then run `node capes/build.mjs` (publish.mjs does). It is the single source for the cape list
+// (pack/config/lemursaucepacket/capes.json: KubeJS registers the items from it, lsp_fixes' capes package does the
+// rest), the Curios slot and item tag, the wiki page docs/capes.md, and the art in art/process.mjs (the textures and
+// the item icons).
 //
 // Unlocks:  { type: 'skill', skill, level }        one skill reaching a level
 //           { type: 'all_skills', level }            every skill at that level
@@ -8,11 +10,13 @@
 //           { type: 'flags', flags: [...] }          flags set by quest rewards (`lsp cape flag {p} <flag>`)
 //           { type: 'flags_prefix', prefix, count }  that many flags starting with the prefix
 //           { type: 'command' }                      only `/lsp cape unlock <player> <id>` (the owner)
-// Perks are what the cape does while worn (pack/kubejs/server_scripts/capes.js implements them):
+// Perks are what the cape does while worn (lsp_fixes capes: Capes, CapeCurio implement them):
 //   stats { critChance, critDamage }   attributes { armor, toughness, health, speed, luck, breakSpeed }
 //   effects [{ effect, amplifier }]     special: 'log_xp' | 'double_crops' | 'eat_heal' | 'mend'
 // `design` describes the cape's front (drawn as pixel art in art/capes-px.mjs). `animated` capes get that many
 // frames of pixel animation (art/capes-px.mjs LEGENDARY), stepped by the client every few ticks.
+// A lost cape is made again by the NPC in RECLAIM (by kind, or by id), for coins: their "I've lost a cape" button opens
+// the collection with a buy button. Only someone who has earned a cape can have another made, or wear one.
 
 export const NAMESPACE = 'lemursaucepacket'
 
@@ -66,6 +70,32 @@ export const CAPES = [
   // The owner's.
   { id: 'lemur_cape', name: 'Lemur Cape', kind: 'owner', unlock: { type: 'command' }, description: 'Given by the server owner.', design: 'a cheerful ring-tailed lemur face in a brass cog over a warm brown field' }
 ]
+
+/** Who makes a lost cape again: lsp_npc.<npc> is the NPC's tag (npcs/npcs.mjs gives them the "I've lost a cape" button). */
+export const RECLAIM_PLACES = {
+  tailor: { npc: 'shop_tailor', where: 'Odo the Tailor in Lemurton' },
+  kiln: { npc: 'kiln_smith', where: 'Brakka the Smith at Kiln Hollow' }
+}
+
+/** Where and for how much, by cape id first, then by kind. A skill cape costs 99,000, as in RuneScape. */
+export const RECLAIM = {
+  fire_cape: { at: 'kiln', coins: 150000, note: 'Or win the Fight Pits again.' },
+  infernal_cape: { at: 'kiln', coins: 500000, note: 'Or survive the Inferno again.' },
+  lemur_cape: null,
+  skill: { at: 'tailor', coins: 99000 },
+  quest: { at: 'tailor', coins: 25000 },
+  achievement: { at: 'tailor', coins: 25000 },
+  legendary: { at: 'tailor', coins: 250000 },
+  owner: null
+}
+
+/** A cape's RECLAIM entry with its place filled in, or null. */
+export function reclaimOf(cape) {
+  const r = cape.id in RECLAIM ? RECLAIM[cape.id] : RECLAIM[cape.kind]
+  if (!r) return null
+  const place = RECLAIM_PLACES[r.at]
+  return { npc: place.npc, where: place.where, coins: r.coins, note: r.note ?? '' }
+}
 
 /** Which chapter's last quest sets which flag (quests/book.mjs adds the command reward). */
 export const CHAPTER_FLAGS = { landfall: 'chapter:landfall', brass_age: 'chapter:brass_age', iron_roads: 'chapter:iron_roads', skyward: 'chapter:skyward', crown_of_fire: 'chapter:crown_of_fire', legacy: 'chapter:legacy', armory: 'chapter:armory' }

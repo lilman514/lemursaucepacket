@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-// Turns capes/capes.mjs into pack/config/lemursaucepacket/capes.json (read by the server and client cape
-// scripts) and docs/capes.md. Run `node capes/build.mjs`; publish.mjs does.
+// Turns capes/capes.mjs into what the pack needs, and docs/capes.md. Run `node capes/build.mjs`; publish.mjs does.
+//   pack/config/lemursaucepacket/capes.json              the list: KubeJS registers the items from it
+//                                                        (startup_scripts/capes.js), lsp_fixes reads it (capes package)
+//   pack/kubejs/data/lemursaucepacket/curios/...         the "cape" slot, on players and armor stands
+//   pack/kubejs/data/curios/tags/item/cape.json          the cape items, the only things the slot takes
+//   pack/kubejs/assets/lemursaucepacket/lang/en_us.json  the slot's name (merged into what's there)
 
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { CAPES, NAMESPACE } from './capes.mjs'
+import { CAPES, NAMESPACE, reclaimOf } from './capes.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const out = (rel, text) => {
@@ -13,8 +17,9 @@ const out = (rel, text) => {
   mkdirSync(path.dirname(file), { recursive: true })
   writeFileSync(file, text)
 }
+const json = (rel, value) => out(rel, JSON.stringify(value, null, 2) + '\n')
 
-const json = {
+const list = {
   capes: Object.fromEntries(
     CAPES.map((c) => [
       c.id,
@@ -26,12 +31,33 @@ const json = {
         perkText: c.perkText ?? null,
         description: c.description,
         texture: `${NAMESPACE}:textures/capes/${c.id}.png`,
-        frames: c.animated ?? 1
+        frames: c.animated ?? 1,
+        reclaim: reclaimOf(c)
       }
     ])
   )
 }
-out('pack/config/lemursaucepacket/capes.json', JSON.stringify(json))
+out('pack/config/lemursaucepacket/capes.json', JSON.stringify(list))
+
+// The Curios slot: one cape, shown on the back (the eye toggles it), dropped on death like the rest of your things.
+json('pack/kubejs/data/lemursaucepacket/curios/slots/cape.json', {
+  size: 1,
+  order: 85,
+  icon: `${NAMESPACE}:slot/empty_cape_slot`,
+  add_cosmetic: false,
+  render_toggle: true,
+  use_native_gui: true,
+  drop_rule: 'DEFAULT',
+  validators: ['curios:tag']
+})
+json('pack/kubejs/data/lemursaucepacket/curios/entities/capes.json', { entities: ['minecraft:player', 'minecraft:armor_stand'], slots: ['cape'] })
+json('pack/kubejs/data/curios/tags/item/cape.json', { replace: false, values: CAPES.map((c) => `${NAMESPACE}:${c.id}`) })
+
+const langFile = path.join(root, 'pack/kubejs/assets/lemursaucepacket/lang/en_us.json')
+const lang = existsSync(langFile) ? JSON.parse(readFileSync(langFile, 'utf8')) : {}
+lang['curios.identifier.cape'] = 'Cape'
+lang['curios.modifiers.cape'] = 'When worn as a cape:'
+json('pack/kubejs/assets/lemursaucepacket/lang/en_us.json', lang)
 
 const KIND_TITLE = { skill: 'Skill capes', quest: 'Quest capes', achievement: 'Achievement capes', legendary: 'Legendary capes', owner: "The owner's cape" }
 const KIND_TEXT = {
@@ -41,10 +67,12 @@ const KIND_TEXT = {
   legendary: 'Animated, and exceedingly hard to earn.',
   owner: 'Not earnable.'
 }
+const coins = (n) => n.toLocaleString('en-US')
 const lines = [
   '---',
   'description: >-',
-  '  Cosmetics you earn, never buy: a cape for every skill at 99, for finished chapters and for real feats.',
+  '  Capes you earn and wear in their own slot: one for every skill at 99, for finished chapters and for real feats. Hang',
+  '  them on armor stands; lose one and you can have another made.',
   'icon: user-shield',
   '---',
   '',
@@ -52,24 +80,43 @@ const lines = [
   '',
   '<figure><img src="images/capes_sheet.webp" alt="Every cape\'s design as its texture in game, with its name; the legendary ones move as they do in game"><figcaption><p>Every cape there is to earn (the legendary ones move)</p></figcaption></figure>',
   '',
-  'Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Everyone on the server sees the cape you wear. Some capes have a **perk** while worn; the legendary ones are **animated**.',
+  "Capes are items you earn. When you earn one it goes into your bag. Everyone on the server sees the cape you wear; some have a **perk** while worn, and the legendary ones are **animated**.",
   '',
-  '**Wardrobe:** ESC → Capes, or `/capes`. It lists what you have unlocked; click a cape to wear it, or `/capes off` for none. Unlocks announce themselves in chat.',
+  '- **Wear it:** right-click the cape, or put it in the **Cape** slot of the Curios panel in your inventory. The eye on the slot hides it without taking it off. Only someone who has earned a cape can wear it.',
+  '- **Show it off:** right-click an **armor stand** with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.',
+  '- **Your collection:** ESC → Capes, or `/capes`. Every cape there is: the ones you have, how to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off.',
+  '',
+  'Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave).',
   ''
 ]
 // In-game pictures (website/tools/capes.mjs makes them from a photo session): a sheet per kind, and the animated capes
 // moving side by side.
 const picture = (file, alt, caption) => `<figure><img src="images/${file}" alt="${alt}"><figcaption><p>${caption}</p></figcaption></figure>`
 for (const kind of ['skill', 'quest', 'achievement', 'legendary', 'owner']) {
-  const list = CAPES.filter((c) => c.kind === kind)
-  if (list.length === 0) continue
+  const capes = CAPES.filter((c) => c.kind === kind)
+  if (capes.length === 0) continue
   lines.push(`## ${KIND_TITLE[kind]}`, '', KIND_TEXT[kind], '')
   if (existsSync(path.join(root, 'docs', 'images', `capes_${kind}.jpg`))) lines.push(picture(`capes_${kind}.jpg`, `The ${KIND_TITLE[kind].toLowerCase()} as worn in game`, `The ${KIND_TITLE[kind].toLowerCase()}, worn`), '')
   if (kind === 'legendary' && existsSync(path.join(root, 'docs', 'images', 'capes_animated.webp'))) lines.push(picture('capes_animated.webp', 'The animated capes in motion', 'In motion'), '')
   lines.push('| Cape | How to earn it | Perk |', '|---|---|---|')
-  for (const c of list) lines.push(`| ${c.name}${c.animated ? ' *(animated)*' : ''} | ${c.description} | ${c.perkText ?? '—'} |`)
+  for (const c of capes) lines.push(`| ${c.name}${c.animated ? ' *(animated)*' : ''} | ${c.description} | ${c.perkText ?? '—'} |`)
   lines.push('')
 }
+lines.push('## Lost a cape?', '', "Whoever makes a cape will make you another, as long as you earned it: speak to them and choose *I've lost a cape*. Your collection shows who makes each cape and what it costs.", '')
+lines.push('| Cape | Who makes another | Coins |', '|---|---|---|')
+const reclaimRows = new Map()
+for (const c of CAPES) {
+  const r = reclaimOf(c)
+  const key = r ? `${r.where}|${r.coins}|${r.note}` : 'owner'
+  if (!reclaimRows.has(key)) reclaimRows.set(key, { names: [], r, kind: c.kind })
+  reclaimRows.get(key).names.push(c.name)
+}
+for (const { names, r, kind } of reclaimRows.values()) {
+  const what = kind === 'skill' && names.length > 3 ? 'Any skill cape' : names.join(', ')
+  if (!r) lines.push(`| ${what} | Ask the server owner | — |`)
+  else lines.push(`| ${what} | ${r.where}${r.note ? '. ' + r.note : ''} | ${coins(r.coins)} |`)
+}
+lines.push('', 'Every win in the Fight Pits or the Inferno hands over another of its cape, so a lost Fire or Infernal Cape can also be won back.', '')
 lines.push('Generated from `capes/capes.mjs`, so this page matches the game.', '')
 out('docs/capes.md', lines.join('\n'))
-console.log(`capes: ${CAPES.length} capes (${CAPES.filter((c) => c.animated).length} animated); capes.json and docs/capes.md`)
+console.log(`capes: ${CAPES.length} capes (${CAPES.filter((c) => c.animated).length} animated); capes.json, the Curios slot and tag, docs/capes.md`)

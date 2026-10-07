@@ -126,7 +126,7 @@ hash = "89c7757dc3aacc26acb364469a56259ab50b81fb93ee2844d5a57a2b6d87be7a"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_pause.txt"
-hash = "596897115dff682b4b0dce937e69622630fb329e00427b2d251d4fd7690d0d55"
+hash = "ef0d03bdef86d7f4b4b33a33e5f3b92ebcf39692b9fcb61c61b24bba9672a16d"
 
 [[files]]
 file = "config/fancymenu/customization/lemursaucepacket_title.txt"
@@ -298,7 +298,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "c24400ba2a89e3242aa2b60dd6ea6a731b4510a7acd6c4eb73058deb371194e4"
+hash = "4492895e024f8882980908e60e2b69b79213f5dccbc243ee4ed392731ce101c5"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -334,7 +334,7 @@ hash = "d4433544ec21a3c08397203c32052bbc4676f05ec9041c223c1ae0eeae841cd7"
 
 [[files]]
 file = "config/lemursaucepacket/capes.json"
-hash = "8907c8994129dd15f876ef54ed35076823ee154cee075a133bad6cfc0afd4a0b"
+hash = "3ccd568e57615968b3d697a61f9ced971851bc462778e449bd344f21f415514a"
 
 [[files]]
 file = "config/lemursaucepacket/enchanting.json"
@@ -398,7 +398,7 @@ hash = "2945bc982607d8e19379aa2c0cab0a477c5974d4301d03e43aae1d5068319af2"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/lang/en_us.json"
-hash = "709fc2a2cec1a59b5b5405a0018c6b94798d8d0d744f5abc7f2a86469e4611d4"
+hash = "a9b0bd3c7a5b4a7981bd8eff74fd367b6ddc79ae03fc0f1943e1f09b83742103"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/models/item/lost_item_compass_00.json"
@@ -662,7 +662,7 @@ hash = "d98e030ac014577dcb0aa80c7da61164f12a8843503be565ed8c4b4a76e86635"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/capes.json"
-hash = "a936e9fa3c335df9d80bf1c535aa25c4aa9c7d46a961686a98fa697be38f7326"
+hash = "27a3f1fdcec537739a4b603db4439fc57f78c53fe20961be5ccb3ae6b93b1690"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/economy.json"
@@ -678,7 +678,7 @@ hash = "3a7a801a7e1cad17c3cdfe4b0791354c54b8cc38d4a07f19a538002735a4a5e1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/esc-menu.json"
-hash = "6150461be61a93a27259ca3258a712f5a2f36531415a95a1bd2cf8bb3a6c8392"
+hash = "9881bd65ea78125b056ec1f0a0a9774f7466c28526cfa63ddf6314ab92fb97a4"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/faq.json"
@@ -710,11 +710,11 @@ hash = "7b6e87fe06530d788884c6946a62ea0ce166c9908f84810a0973ff9770da96ae"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
-hash = "a622767b40549225dcb06d94bb22aa649bc6287648c232d4cf12dd5322c442d3"
+hash = "b19c221cc0c1d0a09ffa394f220bab6d2e6b1b2bffe98e0818e7baa2846db6a6"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/mods.json"
-hash = "74c076cc3c9928f1fa0d5205fe81b93b7c99436a06325e8301a89c3d5a4aa23b"
+hash = "f45525e6139d0f1ad10f228e11dba31d875c73b7a4ab5762a3614c3debd49f41"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
@@ -954,55 +954,55 @@ hash = "b151237fd7463c51472bac64644a8fcce6aa6399f3fef7797275fd2f462ff9cc"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape.png"
-hash = "511fc411b6a4a680c16e7106e4889932666cd15607b6e25ef3c56f31908251db"
+hash = "25ec324f33d7084097654da872a1be606b61c8709b4447dfd3b6c488777c718b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f0.png"
-hash = "511fc411b6a4a680c16e7106e4889932666cd15607b6e25ef3c56f31908251db"
+hash = "25ec324f33d7084097654da872a1be606b61c8709b4447dfd3b6c488777c718b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f1.png"
-hash = "fb12f76ab8b0844dfd764d78d3439ea2404a86c74c679df3aa405749e8f9890a"
+hash = "6fe21903ca33200e0a59129752d6c8da955e003d6e00fd2ff18fcd55e2a28df7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f10.png"
-hash = "e1a6efd890a6cdf389af0ae98835b421e735bbc887d868b2457cb6bf066e0aea"
+hash = "d7fa56e1c2d4fdea9d6eb3563fe3a502083594cd5c0c33afc07ebac91ccff388"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f11.png"
-hash = "ba01101fbff90dc1e5b0e5f959cb58aeb3b0e5547768d066fb7da59efe8d215b"
+hash = "d04d178ba18b9ab885b2c93c2680153bcb3ccfa4d9e553803fa77453b342e9c7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f2.png"
-hash = "ed31241813e4fea9dcc15140da14a62655b64f80556e9a0c7ce3053c562b635e"
+hash = "4d66e8550c4eb6431ff5fa83ba73d12deb341b0bf13c00bc20186b4d2a3e6785"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f3.png"
-hash = "4b9081b56e1f2e6c4d2361f8371206c3d5f34b19be0f9e8511c20cefe2d156d9"
+hash = "ea8895fbe10ca906d05ac502667312311ab834633cc4f8f2365b265ce426853b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f4.png"
-hash = "10bc40cc1b6810bd88ae938a6a73fe769af68a4c16dc4757229056918e3fe94d"
+hash = "5d56bcee628381612531478d1f355162126d484c85c87d57b474262a9bf9594a"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f5.png"
-hash = "6bbad8c186a1a05c1def024da02c5a214b4f4218556e1798360c8fd33c7957c4"
+hash = "b1f7104c7f8efa81973f3d54055e0e2f7251d977164d67d3356273390cd7c07d"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f6.png"
-hash = "37517c9b449a11255f3afc4fb174015f9de009e95f260d662a8f156abd3b84e2"
+hash = "c7e3706929fd4eaff25c50fb46947e42f021da9f9fbb96b8710b048932d52177"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f7.png"
-hash = "01b683f4ec10ce6ab60f829bf1131151ffa1fb0285752254627282c9ae9beaba"
+hash = "1a57ce8ad41b5852521f988903ce2ce3412049ec656fc81a448f96c289c6c838"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f8.png"
-hash = "266074a7f5be2a837bb9706e2dbae4d5af17d7b56fc5991b08413e5351a3ac57"
+hash = "59eddbb46dfaead0208fd63561c393283a6e898acf514809b486a8639635973b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/infernal_cape_f9.png"
-hash = "7cc575d7e8312e8bf807d432c3163a38263c434b5a8928bce2df63e6509a3989"
+hash = "812cdd8c6f6c8b4bafab97a39d106a9f25a31383d25bcb0b9fea4bb8e2cf8230"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/iron_roads_cape.png"
@@ -1141,12 +1141,32 @@ file = "kubejs/assets/lemursaucepacket/textures/item/aeronaut_leggings.png.mcmet
 hash = "5cffdce98a5a0968c0bad105034c8140b71364c3ab44075319a2eea895a95d6f"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/agility_cape.png"
+hash = "3fac7c6e49b613f0f0b4b1e7f66fcc529b8066f5fc092e44587bf6f45223f3a3"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/anglers_cap.png"
 hash = "aa3b007314bb98adecf2947c68633aa07e21711c7a361cedf6d549900155073f"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/anglers_cap.png.mcmeta"
 hash = "a2e4f1702a7cc652072c9b344e0733de40fea7ddd08e9e2281778a18c7682ea6"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/armory_cape.png"
+hash = "1266448d1fc1a992b26d5ecc2e99db4121b0a56f602c12d57930383ab9b859ee"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/attack_cape.png"
+hash = "e2bcb824559a818e6052b1fa59c6b7aaec20c4d7685fc697d9006816b0a995fb"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/beacon_cape.png"
+hash = "95eebe25ddc96745417728e500bf7de61f76b87578c27ede1124a8dec727c749"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/brass_age_cape.png"
+hash = "33f3461a7c7c06c6bb593ed8fab7c0917356ae4f214f0a9decee8aba94eedee6"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/brass_sabre.png"
@@ -1245,6 +1265,38 @@ file = "kubejs/assets/lemursaucepacket/textures/item/compacted_netherite_legging
 hash = "37951fe22c375f2cfd0c6edc814b98ab5b6df0f29a3f4ff79e137b87ef4eb237"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/completionist_cape.png"
+hash = "60bcea1cc9b6717d3b788dc22e5d32968ae5c87d5a60fb54c26a37f6bbcdbe2c"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/completionist_cape.png.mcmeta"
+hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/cooking_cape.png"
+hash = "33c210301658da4faab941cf416c001ecb60393a5e6bfcb7834dc2f45bb5463e"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/crafting_cape.png"
+hash = "98a99111e4360ff007e6d8b4a59da29ba760e512dda52cae45e9b2c568856007"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/crown_of_fire_cape.png"
+hash = "f0f428e9b64d2b8ab2cbeeb5e88f995bb74bd966dd1399b77f55075439b70b79"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/defence_cape.png"
+hash = "27d0e2399e86ccfabd592ee2d627d867a1dd45b2ac310105b963682030cd333a"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/dragonslayer_cape.png"
+hash = "0b05fdcc4224af32c19ff00affe226bc43c83b535a43f16f0b5847acf1207503"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/dragonslayer_cape.png.mcmeta"
+hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/duelist_boots.png"
 hash = "9b948dd1c076cbd43c82ad859be0877dd2cf2341c4fde90fed6a4ba7333a39f9"
 
@@ -1293,12 +1345,36 @@ file = "kubejs/assets/lemursaucepacket/textures/item/ember_crown.png.mcmeta"
 hash = "ca63b79817478cd174e5aeb52879058de32f0b2477e90273075defbd8a18cb67"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/enchanting_cape.png"
+hash = "4ad07ed25e02b8466c596844eaffc493146094a733033a308e349657cb0c763d"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/excavators_pickaxe.png"
 hash = "c653c237a9cbf6f1211e565b80dbf694faa38fb4b5234e26db244908f4db288d"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/excavators_pickaxe.png.mcmeta"
 hash = "5cffdce98a5a0968c0bad105034c8140b71364c3ab44075319a2eea895a95d6f"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/explorer_cape.png"
+hash = "36c04687007fc9b83e585b004b7d0bcdc6f81bfb1e80fb28ff7f8c3bce4956d7"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/farming_cape.png"
+hash = "0dfbd9c19e14fa2617695b49a4dc69eb4bf3099639ab02430b2da39c4d13fc7b"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/fire_cape.png"
+hash = "c0b5f471aa6c838b9565f39c72ea202208a826f47fe10c779563ca423dafa9bb"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/fire_cape.png.mcmeta"
+hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/fishing_cape.png"
+hash = "6f3ebb57f92d7744314edcef542a8a3da9b690c796ea4dad20f95e06ada36e53"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/grave_essence.png"
@@ -1325,12 +1401,40 @@ file = "kubejs/assets/lemursaucepacket/textures/item/heart.png.mcmeta"
 hash = "59a9e1165373c1fd9d6ac5e8affe991fec42442587c4654e353606a4af5e1605"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/hero_cape.png"
+hash = "1ab030db861233694b63250b7a78cea60fc8d58b4757170463e4ce9a96fc5d9b"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/hitpoints_cape.png"
+hash = "01f015fbe995393f6cab6b1733370761c29b51e99c9a0617aa8f7c2333cf65be"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/incomplete_heart.png"
 hash = "d703cc579be00ad0d7f7346becfa30b8ae79f9e99f9559de382f4a68ea8a2973"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/incomplete_heart.png.mcmeta"
 hash = "f30ee1eba3c897664e3d6c20d8461f40b47e4cfc414e801e64acc41f6aaeb1ec"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/infernal_cape.png"
+hash = "f38d00330563008019a97bcce841aa430416538e46e55c561e11d5660e4744cb"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/infernal_cape.png.mcmeta"
+hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/iron_roads_cape.png"
+hash = "befd55c077704ef174d873363929dd4659eb6899bee734694d998a3682710e25"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/legacy_cape.png"
+hash = "6d340ae7c75d5e19d294cce517c6869a6b317fbf9aa2a642ddba49e830370793"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/lemur_cape.png"
+hash = "2dedd3031e2ac0b4375a4f6cd1cb62f76420b5d4b2d12218502ba67381fb41b1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/lost_item_compass.png"
@@ -1473,6 +1577,18 @@ file = "kubejs/assets/lemursaucepacket/textures/item/lumber_axe.png.mcmeta"
 hash = "d3ac036e2980b53a9c9c43142fb3688bcd7e27f010f82607a485c22d54076819"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/maxed_cape.png"
+hash = "cf3e2f5de0c936bb39d8993a588acdd3788395e75f946d3d20f30e3567a5dbf8"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/maxed_cape.png.mcmeta"
+hash = "0a7d35605159254889c8cee17b71e0fd4bbe23f3388287e1a743f4bb4fbe1f23"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/mining_cape.png"
+hash = "2cec6fb26c59aec42f805bfbbe860da51725dc1a6faa8a00b6f69542b7f097bf"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/prospector_boots.png"
 hash = "06352f07a1dbd17aac2196bcd055d73f3d9e84f854dcad82b62f3fb8da9b5095"
 
@@ -1511,6 +1627,10 @@ hash = "2b56fcde3c067cf98baf240f9210b63b7e12f25cd7321060f0b17d4d073aef76"
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/prospectors_pickaxe.png.mcmeta"
 hash = "59a9e1165373c1fd9d6ac5e8affe991fec42442587c4654e353606a4af5e1605"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/ranged_cape.png"
+hash = "e24f96b113f9977477a705976ee9bc5254fc99ba4aaf51d792b7f339bb9ae98a"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/seekers_compass.png"
@@ -1645,6 +1765,18 @@ file = "kubejs/assets/lemursaucepacket/textures/item/seekers_compass_31.png"
 hash = "1dc749505948ef8d1e6b429d266d858795ad0c99c52a5a0dbb27df4ad9dfc7ae"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/settlers_cape.png"
+hash = "014f93d38815e6ecb0985c135f6df6a4d251125de27ccf374e4916f1945b61e5"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/skyward_cape.png"
+hash = "c84103c46069d9ea7892367965368963b52e4bc4777576cbbcc36c0c281648a3"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/smithing_cape.png"
+hash = "643e3a2f37f07a60e0e3c9692ff59c85b2d70f19922cb528fd7eb602b3631bbb"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/stormcallers_sabre.png"
 hash = "edc285bdb6e1e2546cd60d1a871f5f78fc09a52b84f229bfa8a312f7c97a9d43"
 
@@ -1653,12 +1785,24 @@ file = "kubejs/assets/lemursaucepacket/textures/item/stormcallers_sabre.png.mcme
 hash = "776cceffe957ab6c495e73b826a9e8c98fd2258623fd50ae55d91c4f14255022"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/strength_cape.png"
+hash = "2d4f3f308c8755adfd480618f389e9b72576145f46f7ee4cae2d6efe40bfaaf8"
+
+[[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/sturdy_warhammer.png"
 hash = "7f714d6439c6d5c516133cc589882195c83f74b20f2b19d58390328521d1134d"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/item/sturdy_warhammer.png.mcmeta"
 hash = "e5ffaed1d67009a5d32a55fcb5f2a41857dd76c698bc2416da0ea147f0888a73"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/wings_cape.png"
+hash = "b5eb6f41781b2f1f5494d8ee6cf6b1a3a7cacdc12d75f78287f0617eb6477883"
+
+[[files]]
+file = "kubejs/assets/lemursaucepacket/textures/item/woodcutting_cape.png"
+hash = "5fe5c3b0d1291a65a19250feb22637d41e8bd9468212770343978d5b88471e1c"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/models/armor/aeronaut_layer_1.png"
@@ -1873,6 +2017,10 @@ file = "kubejs/assets/lemursaucepacket/textures/skills/woodcutting.png"
 hash = "be94d10c7cbf45e4e229ac50e44158318b8644cb03874451b539a81d531c37ef"
 
 [[files]]
+file = "kubejs/assets/lemursaucepacket/textures/slot/empty_cape_slot.png"
+hash = "a2792798c27bfe85506335d8a55503a7addeebb7bad4bc44c400b6e97ad52ccf"
+
+[[files]]
 file = "kubejs/assets/minecraft/lang/en_us.json"
 hash = "b22ca9b0e424a959b85995c106b57a29483a7e6143d0cc353a21ac7768e12305"
 
@@ -2085,10 +2233,6 @@ file = "kubejs/assets/relics/textures/mob_effect/tremor.png"
 hash = "d3173a79e9b399ac0e4a180f495f2f44430129ecc0bfce292bf8fd16efbb4d8d"
 
 [[files]]
-file = "kubejs/client_scripts/capes_client.js"
-hash = "8d555fa896848caae890db35159deb30f7212fa9fee6480ca5fda92b95bf6e3d"
-
-[[files]]
 file = "kubejs/client_scripts/gear_client.js"
 hash = "c0d00d4a047228a5749f1f5eec4935efa6222a5086584f75bde0d70089d7721f"
 
@@ -2139,6 +2283,10 @@ hash = "1e6ee618e759a62a6d6faf92ca9b9ff1b9be219759b23aab94015850fd108904"
 [[files]]
 file = "kubejs/data/create_ltab/enchantment/enchantment_luck.json"
 hash = "6b526d2e42765e4c096aa7826d182d8e2fc71f4f4d77efd01c25be57ad37178c"
+
+[[files]]
+file = "kubejs/data/curios/tags/item/cape.json"
+hash = "9cc9ae126a18c58f3983382c5020b002fe2ed25612f20f70a60dce56e4c0c6bc"
 
 [[files]]
 file = "kubejs/data/dungeons_arise/enchantment/discharge.json"
@@ -2229,6 +2377,14 @@ file = "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen/siren_island.js
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "kubejs/data/lemursaucepacket/curios/entities/capes.json"
+hash = "e6bfafae0b5450373098ead9503f6805f607bbf10f12a1126977b1781eda9722"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/curios/slots/cape.json"
+hash = "87f0550abc2fa239e60736ea99dfd72ce83a7c09b9bf367498d071c233e6620f"
+
+[[files]]
 file = "kubejs/data/lemursaucepacket/damage_type/jad_slam.json"
 hash = "8854cf690e1fdbc570441cb2a93f6b6c2f32366c88c226cea3e586acb26fc727"
 
@@ -2274,7 +2430,7 @@ hash = "7ac5c78d8377b9eb4a9605cb6440930d2560772087982010be16603ba9b14004"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/piglin/lemurton_kiln_smith.npc.snbt"
-hash = "246a22d2df0c7a1272756b833a561b18bf12b9a088cab72cc7854e9702e35a65"
+hash = "d6bb8ad5b0b4988c5512fe6a6f30a72c4bedf49a03a31819d3db6e902cf5ec84"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/piglin/lemurton_pit_master.npc.snbt"
@@ -2338,7 +2494,7 @@ hash = "b527bcafbb7e4a542bf163d24e50f2c0527f8d41260c2a3f6bce194661521515"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_tailor.npc.snbt"
-hash = "326cd9ccac818ef0373fdae3f96ad35eb056ae8191a7fb2969b7b4333015ecdb"
+hash = "9b872c914dcdb0ce6165ad15203129e8a910536e3e03a925e97cafe0e0612244"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_spice_merchant.npc.snbt"
@@ -2374,11 +2530,11 @@ hash = "5da7a1dc73ab60987415492d9d7036267409c6bc4a076a68f736389f3f54f139"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/fight_pits.json"
-hash = "e315b0c5071492accec7c73d102b7603bc6da5d3e23912e1ff68b22d98556942"
+hash = "8e0616c24c84b8e94fec4c91513733ecc538e5d6aaf44cfe50f6907595c09102"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/inferno.json"
-hash = "eb0e6544a5f2e77c994502a3e2eb2f643464e285411e7e3a8a583ec9e1c9a996"
+hash = "01ae86777379866cb51c29406f9319b82f8bcdb065cab8462db4f5309035a166"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/baker.json"
@@ -3313,10 +3469,6 @@ file = "kubejs/server_scripts/backpacks.js"
 hash = "8830c1b0ae382433fc4f6b66242f9c5b11930214cfcc6772a4b680f9af2d0062"
 
 [[files]]
-file = "kubejs/server_scripts/capes.js"
-hash = "8dc480a60b178acbf32855d87609db2ddc1788902819e58a3650eaae7b0732d0"
-
-[[files]]
 file = "kubejs/server_scripts/enchanting.js"
 hash = "6b8659bab681c97d11fb1547b33d1110d221e7cf00bd16335528950cb2b77b88"
 
@@ -3330,7 +3482,7 @@ hash = "4975352b58174866372a55151e3b6e46cd2e6b571766effd29f6182aebbc34b4"
 
 [[files]]
 file = "kubejs/server_scripts/gear.js"
-hash = "c2e5c46669d1c7aff92e94da4093abc92fca8a1fdc0a77e9a7c7ee423ecf81c6"
+hash = "71ead2b0035eff33b33cc8a94e58d614037724e69f2ecc6d09fdee445971b391"
 
 [[files]]
 file = "kubejs/server_scripts/gear_loot.js"
@@ -3367,6 +3519,10 @@ hash = "73e96f14226e67a74fd801bbc64574c121edcf033989586871814277c559b135"
 [[files]]
 file = "kubejs/server_scripts/waystones.js"
 hash = "a392fc271b5bd89ff1663016f62beb874d44ad33c8eca024f0e86799a0367fba"
+
+[[files]]
+file = "kubejs/startup_scripts/capes.js"
+hash = "a257e5d346e528404ace1efed36eea83dbfefe0b46b6abb2d00fe1deb8c66ba8"
 
 [[files]]
 file = "kubejs/startup_scripts/enchanting.js"
@@ -3432,11 +3588,6 @@ metafile = true
 [[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "68d6016fa3707c434b3aca5db041c7518c70feb53d0183faa2502cc6efd4c827"
-metafile = true
-
-[[files]]
-file = "mods/capejs.pw.toml"
-hash = "c3b107baa934b37096b6d09e82c3c5c791ce35c5a17d7c995a602d07c348c157"
 metafile = true
 
 [[files]]
@@ -3860,8 +4011,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.10.0.jar"
-hash = "14b0c84681bb8982b1f4fcf46cbccdb3d05055a44fc39493e8d1068129284585"
+file = "mods/lsp_fixes-1.11.0.jar"
+hash = "21365299e94c473d2dc5573720333f568f5650a7124dfead4da6ac2bae01c569"
 
 [[files]]
 file = "mods/lsp_instances-1.1.0.jar"

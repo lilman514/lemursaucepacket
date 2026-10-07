@@ -84,7 +84,7 @@ If you accept, this happens:
 - **Every block you ever placed is removed**, in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched. Blocks placed with a schematicannon or moved by contraptions and ships are not tracked and stay.
 - **Every item that is yours is deleted**, wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box, on the ground, in your ender chest, and in other players' inventories, online or not.
 - **Containers you placed break.** Anything inside that belongs to someone else drops on the floor.
-- You respawn at world spawn with 10 hearts, an empty inventory. Your skills, quests and capes stay.
+- You respawn at world spawn with 10 hearts, an empty inventory. Your skills, quests and earned [capes](capes.md) stay: the new life gets your capes back.
 
 Admins keep an archive of everything erased and can put it back if the erasure was a bug.
 

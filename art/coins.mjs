@@ -1,9 +1,11 @@
-// Gold Coins and the Coin Pouch, 16x16, in the pack's Relics-style gold ramp (art/items.mjs).
+// Gold Coins and the Coin Pouch, 16x16, drawn the way vanilla draws its gold: the gold nugget's and ingot's own
+// colours, flat blocky shading lit from the top left with a white glint, and an outline in dark gold rather than black
+// (lighter along the top and left, darker along the bottom and right, as vanilla's items are).
 //
 // Like RuneScape's coin icons, the pile grows with the amount: ten sprites for 1, 2, 3, 4, 5, 25, 100, 250, 1,000 and
-// 10,000+ coins (the client picks one with the lsp_fixes:pile item property, see EconomyClient). Each coin is a tilted
-// disc: an elliptical face shaded from the top-left with a glint, over a one-pixel rim, outlined in the ramp's darkest
-// step. Coins are drawn back to front, so the ones in front keep their outline over the ones behind.
+// 10,000+ coins (the client picks one with the lsp_fixes:pile item property, see EconomyClient). Each coin is a disc
+// seen from a little above: its face, and its edge below it, so a stack shows as stripes of edges under the top face.
+// Coins are drawn back to front, and each keeps a thin dark line where it lies over the ones behind it.
 //
 // Run: node art/coins.mjs [--preview out.png]. Writes the mod's textures and item models:
 //   mods-src/lemursaucepacket-fixes/src/main/resources/assets/lsp_fixes/{textures,models}/item/
@@ -12,60 +14,71 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import sharp from 'sharp'
-import { RAMPS } from './items.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const ASSETS = path.join(root, 'mods-src/lemursaucepacket-fixes/src/main/resources/assets/lsp_fixes')
 const W = 16
 const H = 16
-const GOLD = RAMPS.gold
-const LEATHER = RAMPS.leather
+
+// Vanilla's gold (item/gold_nugget.png and item/gold_ingot.png), by role.
+const GOLD = {
+  w: '#ffffff', // glint
+  h: '#fffde0', // highlight
+  c: '#f9f969', // the bright face
+  f: '#fdf55f', // face
+  m: '#f8d26a', // face, turning away
+  g: '#e9b115', // shade
+  d: '#dc9613', // the edge
+  s: '#b26411', // the edge's underside, and the line between overlapping coins
+  o: '#7f520c', // outline, top and left
+  O: '#6e470b' // outline, bottom and right
+}
+// Vanilla's bundle (item/bundle.png): its leathers, by role.
+const LEATHER = { hi: '#dfc38d', lt: '#cd7b46', mid: '#a6572c', md: '#815634', dk: '#7d4034', sh: '#623220', o: '#4f2b10', O: '#421e01' }
 
 class Canvas {
   constructor() {
-    this.tone = new Array(W * H).fill(-1)
-    this.ramp = new Array(W * H).fill(null)
+    this.px = new Array(W * H).fill(null)
   }
-  put(x, y, ramp, tone) {
+  put(x, y, hex) {
     if (x < 0 || y < 0 || x >= W || y >= H) return
-    this.tone[y * W + x] = tone
-    this.ramp[y * W + x] = ramp
+    this.px[y * W + x] = hex
   }
   filled(x, y) {
-    return x >= 0 && y >= 0 && x < W && y < H && this.tone[y * W + x] >= 0
+    return x >= 0 && y >= 0 && x < W && y < H && this.px[y * W + x] != null
   }
-  /** The dark outline round the outside of the whole sprite, a pixel beyond its edge. */
-  outline(ramp) {
+  /** The outline a pixel beyond the sprite: the lighter colour where the sprite lies below or right of it, else the darker. */
+  outline(light, dark) {
     const edge = []
     for (let y = 0; y < H; y++)
       for (let x = 0; x < W; x++) {
         if (this.filled(x, y)) continue
-        if (this.filled(x + 1, y) || this.filled(x - 1, y) || this.filled(x, y + 1) || this.filled(x, y - 1)) edge.push([x, y])
+        const below = this.filled(x, y + 1) || this.filled(x + 1, y)
+        const above = this.filled(x, y - 1) || this.filled(x - 1, y)
+        if (below || above) edge.push([x, y, below && !above ? light : dark])
       }
-    for (const [x, y] of edge) this.put(x, y, ramp, 0)
+    for (const [x, y, hex] of edge) this.put(x, y, hex)
   }
   rgba() {
     const buf = Buffer.alloc(W * H * 4)
     for (let i = 0; i < W * H; i++) {
-      if (this.tone[i] < 0) continue
-      const hex = this.ramp[i][Math.max(0, Math.min(5, this.tone[i]))]
+      const hex = this.px[i]
+      if (hex == null) continue
       buf.set([parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16), 255], i * 4)
     }
     return buf
   }
 }
 
-// A coin seen from a little above: a face lit from the top-left with a glint, and a darker rim row below it. Digits are
-// steps of the gold ramp; the outline comes last, round the whole pile.
+// A coin from a little above: the face (lit top left, a glint, shading toward the bottom right) over its edge.
+// Letters are GOLD's roles; '.' is nothing.
+// The single coin faces you instead: a minted rim (lit top left, shaded bottom right) round a stamped centre.
 const STAMPS = {
-  big: ['...3333...', '.33455543.', '3455554443', '3445544433', '2344444432', '.12222221.', '..111111..'],
-  small: ['.34443.', '3455443', '2344432', '.12221.']
+  face: ['...hhcc...', '.hhccccgg.', '.hcwhcffgd', 'hcwcfmmfgd', 'hchfmggmgd', 'cffmggmfgd', 'cfffmmffgd', '.gfffffgd.', '.ggggggdd.', '...dddd...'],
+  small: ['.ccccf.', 'cwcccfg', 'cfffmgg', '.ddddd.']
 }
 
-/**
- * A coin with its top-left at (x0, y0). Where it overlaps coins already drawn, a dark line is left round it, so each
- * coin keeps its shape in a pile.
- */
+/** A coin with its top-left at (x0, y0). Where it lies over coins already drawn, a thin line keeps its shape. */
 function coin(c, x0, y0, kind = 'small') {
   const rows = STAMPS[kind]
   const mine = new Set()
@@ -75,10 +88,10 @@ function coin(c, x0, y0, kind = 'small') {
     for (const [ax, ay] of [[0, -1], [-1, 0], [1, 0], [0, 1]]) {
       const nx = x + ax
       const ny = y + ay
-      if (!mine.has(`${nx},${ny}`) && c.filled(nx, ny)) c.put(nx, ny, GOLD, Math.min(c.tone[ny * W + nx], 1))
+      if (!mine.has(`${nx},${ny}`) && c.filled(nx, ny)) c.put(nx, ny, GOLD.s)
     }
   }
-  rows.forEach((r, dy) => [...r].forEach((ch, dx) => ch !== '.' && c.put(x0 + dx, y0 + dy, GOLD, Number(ch))))
+  rows.forEach((r, dy) => [...r].forEach((ch, dx) => ch !== '.' && c.put(x0 + dx, y0 + dy, GOLD[ch])))
 }
 
 /** A column of `n` coins, the bottom one's top-left at (x0, y0), two pixels a coin. */
@@ -88,7 +101,7 @@ function column(c, x0, y0, n) {
 
 // Back to front within each pile.
 const PILES = [
-  { n: 1, draw: (c) => coin(c, 3, 4, 'big') },
+  { n: 1, draw: (c) => coin(c, 3, 3, 'face') },
   { n: 2, draw: (c) => (coin(c, 7, 4), coin(c, 2, 8)) },
   { n: 3, draw: (c) => (coin(c, 8, 3), coin(c, 1, 6), coin(c, 6, 9)) },
   { n: 4, draw: (c) => (coin(c, 1, 3), coin(c, 8, 4), coin(c, 3, 8), coin(c, 8, 10)) },
@@ -107,52 +120,48 @@ const PILES = [
   }
 ]
 
-/** A leather pouch tied with a gold cord, a coin peeking out. */
+/** A leather pouch in the bundle's leathers, tied with a gold cord, a coin showing at the neck. */
 function pouch() {
   const c = new Canvas()
+  // L leather, l its lit side, n the neck's gather; the outline comes after.
   const rows = [
     '................',
     '................',
-    '.......gg.......',
-    '......gGGg......',
-    '.....llgglll....',
-    '....llLllLLll...',
-    '...lLLLLLLLLll..',
-    '..lLLLLLLLLLLll.',
-    '..lLLLLLLLLLLLl.',
-    '..lLLLLLLLLLLLl.',
-    '..lLLLLLLLLLLll.',
-    '...lLLLLLLLLll..',
-    '....llllllll....',
     '................',
+    '......nnnn......',
+    '.......nn.......',
+    '.....LLLLLL.....',
+    '....LlLLLLLL....',
+    '...LllLLLLLLL...',
+    '...LlLLLLLLLL...',
+    '..LllLLLLLLLLL..',
+    '..LlLLLLLLLLLL..',
+    '..LLLLLLLLLLLL..',
+    '...LLLLLLLLLL...',
+    '....LLLLLLLL....',
     '................',
     '................'
   ]
-  const inBag = (x, y) => x >= 0 && y >= 0 && x < W && y < H && /[lL]/.test(rows[y][x])
-  for (let y = 0; y < H; y++) {
+  for (let y = 0; y < H; y++)
     for (let x = 0; x < W; x++) {
       const ch = rows[y][x]
       if (ch === '.') continue
-      if (ch === 'g' || ch === 'G') {
-        c.put(x, y, GOLD, ch === 'G' ? 4 : 0)
+      if (ch === 'n') {
+        c.put(x, y, x < 8 ? LEATHER.lt : LEATHER.mid)
         continue
       }
-      const edge = !inBag(x + 1, y) || !inBag(x - 1, y) || !inBag(x, y + 1) || !inBag(x, y - 1)
-      if (edge && ch === 'l') {
-        c.put(x, y, LEATHER, 0)
-        continue
-      }
-      const light = -((x - 8) / 6) * 0.5 - ((y - 8) / 4) * 0.8
-      c.put(x, y, LEATHER, Math.max(1, Math.min(4, 3 + Math.round(light))))
+      // Flat bands of leather, darker toward the bottom right; the lit side along the left.
+      const shade = x + y * 1.4
+      c.put(x, y, ch === 'l' ? LEATHER.hi : shade < 16 ? LEATHER.lt : shade < 22 ? LEATHER.mid : shade < 27 ? LEATHER.dk : LEATHER.sh)
     }
-  }
-  // The cord round the neck, and its stitched seam.
-  for (const x of [5, 6, 7, 8, 9, 10]) c.put(x, 5, GOLD, x % 2 ? 3 : 4)
-  c.put(4, 5, GOLD, 0)
-  c.put(11, 5, GOLD, 0)
-  c.put(10, 6, GOLD, 3)
-  c.put(10, 7, GOLD, 2)
-  for (const [x, y] of [[5, 8], [6, 9], [11, 9], [12, 8]]) c.put(x, y, LEATHER, 5)
+  // The gold cord round the neck, its knot, and a coin peeking out at the top.
+  for (const x of [5, 6, 7, 8, 9, 10]) c.put(x, 5, x % 2 ? GOLD.g : GOLD.c)
+  c.put(10, 6, GOLD.d)
+  c.put(10, 7, GOLD.g)
+  for (const [x, ch] of [[6, 'c'], [7, 'w'], [8, 'c'], [9, 'f']]) c.put(x, 2, GOLD[ch])
+  // Stitches down the seam.
+  for (const y of [8, 10, 12]) c.put(11, y, LEATHER.sh)
+  c.outline(LEATHER.o, LEATHER.O)
   return c
 }
 
@@ -169,7 +178,7 @@ export async function buildCoins({ preview } = {}) {
   for (const [i, p] of PILES.entries()) {
     const c = new Canvas()
     p.draw(c)
-    c.outline(GOLD)
+    c.outline(GOLD.o, GOLD.O)
     const name = `gold_coins_${p.n}`
     await png(path.join(tex, `${name}.png`), c.rgba())
     sprites.push({ name, rgba: c.rgba() })

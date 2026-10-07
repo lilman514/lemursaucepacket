@@ -107,13 +107,17 @@ public final class Limbo {
         data.putBoolean(KubeData.NEW_LIFE, true);
         player.setRespawnPosition(Level.OVERWORLD, null, 0.0F, false, false);
         server.getPlayerList().broadcastSystemMessage(Component.literal(name + " accepted elimination and starts over.").withStyle(ChatFormatting.RED), false);
+        ServerPlayer next = player;
         if (player.isDeadOrDying()) {
             ServerPlayer respawned = server.getPlayerList().respawn(player, false, Entity.RemovalReason.KILLED);
             respawned.connection.player = respawned;
             if (respawned.connection.hasChannel(LifestealNet.LimboState.TYPE)) {
                 PacketDistributor.sendToPlayer(respawned, new LifestealNet.LimboState(false, "", 0, 0, 0));
             }
+            next = respawned;
         }
+        // Earned capes outlive a life (docs/lifesteal.md): the new one gets their items again.
+        net.lemursaucepacket.fixes.capes.Capes.newLife(next);
     }
 
     static void forget(UUID uuid) {

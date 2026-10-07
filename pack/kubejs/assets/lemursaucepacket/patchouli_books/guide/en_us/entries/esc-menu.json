@@ -19,7 +19,7 @@
     {
       "type": "patchouli:text",
       "title": "Adventure (left)",
-      "text": "$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Map$() - Xaero's world map - M$(br)$(bold)Quests$() - The quest book - -$(br)$(bold)Missions$() - This week's Brassworks missions - H$(br)$(bold)Waypoints$() - Your Xaero waypoints - U$(br)$(bold)Capes$() - Your wardrobe: the $(l:lemursaucepacket:capes)capes$(/l) you've earned - $(#e0ac46)/capes$()$(br2)Between the buttons: your coordinates, the time and the biome you're in."
+      "text": "$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Map$() - Xaero's world map - M$(br)$(bold)Quests$() - The quest book - -$(br)$(bold)Missions$() - This week's Brassworks missions - H$(br)$(bold)Waypoints$() - Your Xaero waypoints - U$(br)$(bold)Capes$() - Your $(l:lemursaucepacket:capes)cape$(/l) collection: every cape, how to earn it, and where to get another if you lose one - $(#e0ac46)/capes$()$(br2)Between the buttons: your coordinates, the time and the biome you're in."
     },
     {
       "type": "patchouli:text",

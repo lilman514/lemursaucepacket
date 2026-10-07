@@ -69,7 +69,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": " at world spawn with 10 hearts, an empty inventory. Your skills, quests and capes stay.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
+      "text": " at world spawn with 10 hearts, an empty inventory. Your skills, quests and earned $(l:lemursaucepacket:capes)capes$(/l) stay: the new life gets your capes back.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
     },
     {
       "type": "patchouli:text",

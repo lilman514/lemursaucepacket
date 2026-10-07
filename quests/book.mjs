@@ -325,7 +325,7 @@ const TABLES = [
 ]
 
 // ---------------------------------------------------------------- skills
-// Mirrors skills/build.mjs (and SKILLS_FOR_CAPES in kubejs/server_scripts/capes.js): id, name, group, what each
+// Mirrors skills/build.mjs (and Capes.SKILLS in lsp_fixes capes): id, name, group, what each
 // level does, and the levels that unlock something (for the milestone quests' text).
 
 const SKILL_GROUPS = { combat: '&c', gathering: '&a', artisan: '&6', support: '&b' }
@@ -370,7 +370,7 @@ const TOTAL_MILESTONES = [
   { total: 500, tier: 4, title: 'Total 500', desc: 'Half way to the top. Five hundred levels.', coins: 5000 },
   { total: 750, tier: 4, title: 'Total 750', desc: 'Seven hundred and fifty levels.', tables: ['relic_cache'], coins: 5000 },
   { total: 1000, tier: 5, title: 'Total 1000', desc: 'A thousand levels. Very few will get here.', coins: 40000 },
-  { total: 1386, tier: 5, title: '&6Maxed', desc: 'Every one of the fourteen skills at 99. The animated Maxed Cape unlocks the moment you get there (/capes).', coins: 80000, tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
+  { total: 1386, tier: 5, title: '&6Maxed', desc: 'Every one of the fourteen skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.', coins: 80000, tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
 ]
 
 function skillsChapter() {
@@ -389,7 +389,7 @@ function skillsChapter() {
         const desc = [`Reach &e${skill.name} ${level}&r. ${skill.name} gives ${skill.perk}.`]
         if (unlocked.length) desc.push('', '&eUnlocked on the way:&r', ...unlocked.map((u) => `• ${u}`))
         if (i === 0) desc.push('', tip('Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed.'))
-        if (level === 99) desc.push('', `&6The ${skill.name} Cape is yours at 99.&r Open /capes to wear it.`)
+        if (level === 99) desc.push('', `&6The ${skill.name} Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape).`)
         const reward = { items: [...(SKILL_PRIZES[skill.id]?.[level] ?? [])] }
         if (level === 99) {
           reward.coins = 40000

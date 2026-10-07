@@ -33,7 +33,7 @@ export const HUB_BUTTONS = {
     ['quests', 'Quests', 'The quest book: guided goals with rewards', CLOSE_THEN('sendmessage;/ftbquests open_book'), 'quests'],
     ['missions', 'Missions', "This week's Create missions (H)", CLOSE_THEN(KEY('key.brassworksmissions.open_missions_ui')), 'missions'],
     ['waypoints', 'Waypoints', 'Your waypoints: rename, colour, teleport-free travel notes (U)', CLOSE_THEN(KEY('gui.xaero_waypoints_key')), 'claims'],
-    ['capes', 'Capes', 'Your wardrobe: wear a cape you have earned (/capes)', CLOSE_THEN('sendmessage;/capes'), 'capes']
+    ['capes', 'Capes', 'Your collection: every cape, how to earn it, where to get a lost one (/capes)', CLOSE_THEN('sendmessage;/capes'), 'capes']
   ],
   right: [
     // The inventory's skills panel, not Project MMO's glossary: the glossary registers textures off the render

@@ -2,5 +2,7 @@
   "enchantment.lemursaucepacket.telekinesis": "Telekinesis",
   "enchantment.lemursaucepacket.telekinesis.desc": "Blocks you break and mobs you kill drop straight into your inventory (at your feet when it is full).",
   "enchantment.lemursaucepacket.hardness": "Hardness",
-  "enchantment.lemursaucepacket.hardness.desc": "Lets a pickaxe break harder blocks. Each tier needs a Mining level: I iron, zinc and lapis; II gold and redstone; III diamond, emerald and obsidian; IV ancient debris; V reinforced deepslate and budding amethyst."
+  "enchantment.lemursaucepacket.hardness.desc": "Lets a pickaxe break harder blocks. Each tier needs a Mining level: I iron, zinc and lapis; II gold and redstone; III diamond, emerald and obsidian; IV ancient debris; V reinforced deepslate and budding amethyst.",
+  "curios.identifier.cape": "Cape",
+  "curios.modifiers.cape": "When worn as a cape:"
 }

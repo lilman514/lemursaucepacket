@@ -199,7 +199,7 @@ element {
   width = 84
   height = 20
   label = Capes
-  description = Your wardrobe: wear a cape you have earned (/capes)
+  description = Your collection: every cape, how to earn it, where to get a lost one (/capes)
   buttonaction = closegui%btnaction_splitter_fm%sendmessage;/capes%btnaction_splitter_fm%
   stay_on_screen = true
 }

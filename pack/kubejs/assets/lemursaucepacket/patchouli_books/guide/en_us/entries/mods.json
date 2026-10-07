@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "179 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
+      "text": "178 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current."
     },
     {
       "type": "patchouli:text",
@@ -75,32 +75,32 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Client only (44)",
+      "title": "Client only (43)",
       "text": "Visuals, sound, performance and interface. The ones marked optional in the launcher's Mods tab can be switched off."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)[[EMF] Entity Model Features](https://modrinth.com/project/4I1XuqiY)$(br)$(li)[[ETF] Entity Texture Features](https://modrinth.com/project/BVzZfTc1)$(br)$(li)$(l:https://modrinth.com/project/zV5r3pPn)3D Skin Layers$(/l)$(br)$(li)$(l:https://modrinth.com/project/fM515JnW)AmbientSounds$(/l)$(br)$(li)$(l:https://modrinth.com/project/g96Z4WVZ)BadOptimizations$(/l)$(br)$(li)$(l:https://modrinth.com/project/ONZm0H7Y)Better Block Entities$(/l)$(br)$(li)$(l:https://modrinth.com/project/BfY01IQg)CapeJS$(/l)$(br)$(li)$(l:https://modrinth.com/project/Wb5oqrBJ)Chat Heads$(/l)$(br)$(li)$(l:https://modrinth.com/project/DO"
+      "text": "$(li)[[EMF] Entity Model Features](https://modrinth.com/project/4I1XuqiY)$(br)$(li)[[ETF] Entity Texture Features](https://modrinth.com/project/BVzZfTc1)$(br)$(li)$(l:https://modrinth.com/project/zV5r3pPn)3D Skin Layers$(/l)$(br)$(li)$(l:https://modrinth.com/project/fM515JnW)AmbientSounds$(/l)$(br)$(li)$(l:https://modrinth.com/project/g96Z4WVZ)BadOptimizations$(/l)$(br)$(li)$(l:https://modrinth.com/project/ONZm0H7Y)Better Block Entities$(/l)$(br)$(li)$(l:https://modrinth.com/project/Wb5oqrBJ)Chat Heads$(/l)$(br)$(li)$(l:https://modrinth.com/project/DOUdJVEm)Controlify (Controller support)$(/l)$(br)$(li)$(l:https:"
     },
     {
       "type": "patchouli:text",
-      "text": "UdJVEm)Controlify (Controller support)$(/l)$(br)$(li)$(l:https://modrinth.com/project/xv94TkTM)Controlling$(/l)$(br)$(li)$(l:https://modrinth.com/project/ix1qq8Ux)Crash Assistant$(/l)$(br)$(li)$(l:https://modrinth.com/project/1fkSpqmV)Create JEI Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/TlQAWQCY)Create: Cyber Goggles$(/l)$(br)$(li)$(l:https://modrinth.com/project/c47YxuuI)Create: Nowheel$(/l)$(br)$(li)$(l:https://modrinth.com/project/v3CYg2V9)Drippy Loading Screen$(/l)$(br)$(li)$(l:https://modrinth.com/project/LQ3K71Q1)Dynamic FPS$(/l)$(br)$(li)$(l:https://modrinth.com/project/NNAgCjsB)Entity Culling$"
+      "text": "//modrinth.com/project/xv94TkTM)Controlling$(/l)$(br)$(li)$(l:https://modrinth.com/project/ix1qq8Ux)Crash Assistant$(/l)$(br)$(li)$(l:https://modrinth.com/project/1fkSpqmV)Create JEI Compat$(/l)$(br)$(li)$(l:https://modrinth.com/project/TlQAWQCY)Create: Cyber Goggles$(/l)$(br)$(li)$(l:https://modrinth.com/project/c47YxuuI)Create: Nowheel$(/l)$(br)$(li)$(l:https://modrinth.com/project/v3CYg2V9)Drippy Loading Screen$(/l)$(br)$(li)$(l:https://modrinth.com/project/LQ3K71Q1)Dynamic FPS$(/l)$(br)$(li)$(l:https://modrinth.com/project/NNAgCjsB)Entity Culling$(/l)$(br)$(li)$(l:https://modrinth.com/project/2JAUNCL4)Falling"
     },
     {
       "type": "patchouli:text",
-      "text": "(/l)$(br)$(li)$(l:https://modrinth.com/project/2JAUNCL4)Falling Leaves (NeoForge/Forge)$(/l)$(br)$(li)$(l:https://modrinth.com/project/RQ6INv2n)Fancy Entity Renderer$(/l)$(br)$(li)$(l:https://modrinth.com/project/H5XMjpHi)First-person Model$(/l)$(br)$(li)$(l:https://modrinth.com/project/5ZwdcRci)ImmediatelyFast$(/l)$(br)$(li)$(l:https://modrinth.com/project/O7RBXm3n)Inventory Profiles Next$(/l)$(br)$(li)$(l:https://modrinth.com/project/YL57xq9U)Iris Shaders$(/l)$(br)$(li)$(l:https://modrinth.com/project/p8RJPJIC)Ixeris$(/l)$(br)$(li)$(l:https://modrinth.com/project/9Pk89J3g)Just Enough Breeding (JEBr)$(/l)$(br)$("
+      "text": " Leaves (NeoForge/Forge)$(/l)$(br)$(li)$(l:https://modrinth.com/project/RQ6INv2n)Fancy Entity Renderer$(/l)$(br)$(li)$(l:https://modrinth.com/project/H5XMjpHi)First-person Model$(/l)$(br)$(li)$(l:https://modrinth.com/project/5ZwdcRci)ImmediatelyFast$(/l)$(br)$(li)$(l:https://modrinth.com/project/O7RBXm3n)Inventory Profiles Next$(/l)$(br)$(li)$(l:https://modrinth.com/project/YL57xq9U)Iris Shaders$(/l)$(br)$(li)$(l:https://modrinth.com/project/p8RJPJIC)Ixeris$(/l)$(br)$(li)$(l:https://modrinth.com/project/9Pk89J3g)Just Enough Breeding (JEBr)$(/l)$(br)$(li)$(l:https://modrinth.com/project/EO27GKs1)Just Enough Effect"
     },
     {
       "type": "patchouli:text",
-      "text": "li)$(l:https://modrinth.com/project/EO27GKs1)Just Enough Effect Descriptions (JEED)$(/l)$(br)$(li)$(l:https://modrinth.com/project/iAiqcykM)Just Zoom$(/l)$(br)$(li)$(l:https://modrinth.com/project/yBW8D80W)LambDynamicLights - Dynamic Lights$(/l)$(br)$(li)$(l:https://modrinth.com/project/atHH8NyV)Legendary Tooltips$(/l)$(br)$(li)$(l:https://modrinth.com/project/onSQdWhM)libIPN$(/l)$(br)$(li)$(l:https://modrinth.com/project/51shyZVL)More Culling$(/l)$(br)$(li)$(l:https://modrinth.com/project/aC3cM3Vq)Mouse Tweaks$(/l)$(br)$(li)$(l:https://modrinth.com/project/MPCX6s5C)Not Enough Animations$(/l)$(br)$(li)$(l:https:/"
+      "text": " Descriptions (JEED)$(/l)$(br)$(li)$(l:https://modrinth.com/project/iAiqcykM)Just Zoom$(/l)$(br)$(li)$(l:https://modrinth.com/project/yBW8D80W)LambDynamicLights - Dynamic Lights$(/l)$(br)$(li)$(l:https://modrinth.com/project/atHH8NyV)Legendary Tooltips$(/l)$(br)$(li)$(l:https://modrinth.com/project/onSQdWhM)libIPN$(/l)$(br)$(li)$(l:https://modrinth.com/project/51shyZVL)More Culling$(/l)$(br)$(li)$(l:https://modrinth.com/project/aC3cM3Vq)Mouse Tweaks$(/l)$(br)$(li)$(l:https://modrinth.com/project/MPCX6s5C)Not Enough Animations$(/l)$(br)$(li)$(l:https://modrinth.com/project/nrikgvxm)Particle Rain$(/l)$(br)$(li)$(l:"
     },
     {
       "type": "patchouli:text",
-      "text": "/modrinth.com/project/nrikgvxm)Particle Rain$(/l)$(br)$(li)$(l:https://modrinth.com/project/1OE8wbN0)Prism$(/l)$(br)$(li)$(l:https://modrinth.com/project/Bh37bMuy)Reese's Sodium Options$(/l)$(br)$(li)$(l:https://modrinth.com/project/fuuu3xnx)Searchables$(/l)$(br)$(li)$(l:https://modrinth.com/project/kepjj2sy)Shoulder Surfing Reloaded$(/l)$(br)$(li)$(l:https://modrinth.com/project/AANobbMI)Sodium$(/l)$(br)$(li)$(l:https://modrinth.com/project/PtjYWJkn)Sodium Extra$(/l)$(br)$(li)$(l:https://modrinth.com/project/EIa1eiMm)Sodium Shadowy Path Blocks (SSPB)$(/l)$(br)$(li)$(l:https://modrinth.com/project/4q8UOK1d)Subtle"
+      "text": "https://modrinth.com/project/1OE8wbN0)Prism$(/l)$(br)$(li)$(l:https://modrinth.com/project/Bh37bMuy)Reese's Sodium Options$(/l)$(br)$(li)$(l:https://modrinth.com/project/fuuu3xnx)Searchables$(/l)$(br)$(li)$(l:https://modrinth.com/project/kepjj2sy)Shoulder Surfing Reloaded$(/l)$(br)$(li)$(l:https://modrinth.com/project/AANobbMI)Sodium$(/l)$(br)$(li)$(l:https://modrinth.com/project/PtjYWJkn)Sodium Extra$(/l)$(br)$(li)$(l:https://modrinth.com/project/EIa1eiMm)Sodium Shadowy Path Blocks (SSPB)$(/l)$(br)$(li)$(l:https://modrinth.com/project/4q8UOK1d)Subtle Effects$(/l)$(br)$(li)$(l:https://modrinth.com/project/z13R7Et"
     },
     {
       "type": "patchouli:text",
-      "text": " Effects$(/l)$(br)$(li)$(l:https://modrinth.com/project/z13R7Et1)Visuality: Reforged$(/l)$(br)$(li)$(l:https://modrinth.com/project/kYuIpRLv)Wavey Capes$(/l)"
+      "text": "1)Visuality: Reforged$(/l)$(br)$(li)$(l:https://modrinth.com/project/kYuIpRLv)Wavey Capes$(/l)"
     },
     {
       "type": "patchouli:text",

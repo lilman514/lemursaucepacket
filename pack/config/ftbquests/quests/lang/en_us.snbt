@@ -125,7 +125,7 @@
 	quest.010023C1444D0FF4.quest_desc: ["Build something the whole server will still be using long after you log off: a station, a market, a monument. Then tick this.", "", "&eChapter prize:&r 40,000 coins, a relic and two rolls on the Legend's Hoard."]
 	quest.010023C1444D0FF4.title: "&6Legacy"
 	quest.014760E2F2483D38.title: "Bone Collector"
-	quest.01C3F051E3FA4FDC.quest_desc: ["Reach &eMining 99&r. Mining gives faster mining.", "", "&6The Mining Cape is yours at 99.&r Open /capes to wear it."]
+	quest.01C3F051E3FA4FDC.quest_desc: ["Reach &eMining 99&r. Mining gives faster mining.", "", "&6The Mining Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.01C3F051E3FA4FDC.title: "&aMining 99"
 	quest.022ED40E89E99353.quest_desc: ["Wild tomatoes, cabbages, onions and rice grow around the world. Replant them at home."]
 	quest.022ED40E89E99353.title: "New Crops"
@@ -172,7 +172,7 @@
 	quest.067418C3A35E0C99.title: "&cDefence 10"
 	quest.067BD52C411EFB1F.quest_desc: ["Made by sequenced assembly: a golden sheet goes round a loop of deployers and a press, several times.", "&7JEI shows every step. Long recipes have pages: scroll to flip."]
 	quest.067BD52C411EFB1F.title: "Precision Mechanism"
-	quest.06869B1E4A020D77.quest_desc: ["Reach &eAttack 99&r. Attack gives each level adds melee and bow damage.", "", "&6The Attack Cape is yours at 99.&r Open /capes to wear it."]
+	quest.06869B1E4A020D77.quest_desc: ["Reach &eAttack 99&r. Attack gives each level adds melee and bow damage.", "", "&6The Attack Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.06869B1E4A020D77.title: "&cAttack 99"
 	quest.06B6B5C52AB737B3.quest_desc: ["Copper sheets and andesite alloy around your backpack. Everything inside comes along."]
 	quest.06B6B5C52AB737B3.title: "Copper Backpack"
@@ -245,9 +245,9 @@
 	quest.0E15A5F94789A015.quest_desc: ["Walk within range of a sculk sensor or shrieker without setting it off."]
 	quest.0E15A5F94789A015.title: "Sneak 100"
 	quest.0E23F4609946F60D.title: "Herd"
-	quest.0E57C80EC4E538D3.quest_desc: ["Reach &eAgility 99&r. Agility gives speed and less fall damage.", "", "&6The Agility Cape is yours at 99.&r Open /capes to wear it."]
+	quest.0E57C80EC4E538D3.quest_desc: ["Reach &eAgility 99&r. Agility gives speed and less fall damage.", "", "&6The Agility Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.0E57C80EC4E538D3.title: "&bAgility 99"
-	quest.0ED5A6F8166F3911.quest_desc: ["Reach &eFishing 99&r. Fishing gives better catches.", "", "&6The Fishing Cape is yours at 99.&r Open /capes to wear it."]
+	quest.0ED5A6F8166F3911.quest_desc: ["Reach &eFishing 99&r. Fishing gives better catches.", "", "&6The Fishing Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.0ED5A6F8166F3911.title: "&aFishing 99"
 	quest.0F8154AF0A9D749C.quest_desc: ["Two docking connectors, lined up and locked: a ship moored to a tower, or two ships made one."]
 	quest.0F8154AF0A9D749C.title: "A Calculated Connection"
@@ -312,7 +312,7 @@
 	quest.190D30D37AF325E2.title: "Through the Portal"
 	quest.1917D6689D0B2836.quest_desc: ["Reach &eCrafting 75&r. Crafting gives XP from everything you craft."]
 	quest.1917D6689D0B2836.title: "&6Crafting 75"
-	quest.1AB048DD42AAA115.quest_desc: ["Reach &eEnchanting 99&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 80: level IX", "• 99: level X", "", "&6The Enchanting Cape is yours at 99.&r Open /capes to wear it."]
+	quest.1AB048DD42AAA115.quest_desc: ["Reach &eEnchanting 99&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 80: level IX", "• 99: level X", "", "&6The Enchanting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.1AB048DD42AAA115.title: "&6Enchanting 99"
 	quest.1AB513AC5DD0460B.quest_desc: ["Create Backpack Upgrades: a press and a mixer that work inside the bag. Pressable items on the left, results on the right."]
 	quest.1AB513AC5DD0460B.title: "Backpack Press and Mixer"
@@ -363,14 +363,14 @@
 	quest.21A96E8D9C535CB0.quest_desc: ["A water wheel next to flowing water gives steady rotation, day and night."]
 	quest.21A96E8D9C535CB0.title: "Water Power"
 	quest.21F50FAA76AA6AA4.title: "The Stronghold"
-	quest.21FEF4092AE26D1C.quest_desc: ["Reach &eHitpoints 99&r. Hitpoints gives a heart every ten levels.", "", "&6The Hitpoints Cape is yours at 99.&r Open /capes to wear it."]
+	quest.21FEF4092AE26D1C.quest_desc: ["Reach &eHitpoints 99&r. Hitpoints gives a heart every ten levels.", "", "&6The Hitpoints Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.21FEF4092AE26D1C.title: "&cHitpoints 99"
 	quest.22594C04715A3EDC.quest_desc: ["Reach &eHitpoints 10&r. Hitpoints gives a heart every ten levels.", "", "&7Milestones complete by themselves: the server checks your levels every few seconds. Rewards wait here to be claimed."]
 	quest.22594C04715A3EDC.title: "&cHitpoints 10"
 	quest.2266A2935B8512A6.title: "End City"
 	quest.226FAFDCF8627F75.quest_desc: ["Reach &eEnchanting 50&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 40: level VII"]
 	quest.226FAFDCF8627F75.title: "&6Enchanting 50"
-	quest.232BCECCF98900F6.quest_desc: ["Every one of the fourteen skills at 99. The animated Maxed Cape unlocks the moment you get there (/capes).", "", "&7Your total level is every skill added together, 14 to 1386."]
+	quest.232BCECCF98900F6.quest_desc: ["Every one of the fourteen skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.", "", "&7Your total level is every skill added together, 14 to 1386."]
 	quest.232BCECCF98900F6.title: "&e&6Maxed"
 	quest.2348D594EF1CBA8B.quest_desc: ["Leather and a fishing rod. +2 Luck: better catches, better loot.", "&7Needs Fishing 25."]
 	quest.2348D594EF1CBA8B.title: "Angler's Cap"
@@ -461,7 +461,7 @@
 	quest.2F6270CB2985EC5F.quest_desc: ["Copper and zinc in a heated basin give brass."]
 	quest.2F6270CB2985EC5F.title: "Brass"
 	quest.2FAE318E17AE49CB.title: "Mission Virtuoso"
-	quest.30292594BC7586F9.quest_desc: ["Reach &eCrafting 99&r. Crafting gives XP from everything you craft.", "", "&6The Crafting Cape is yours at 99.&r Open /capes to wear it."]
+	quest.30292594BC7586F9.quest_desc: ["Reach &eCrafting 99&r. Crafting gives XP from everything you craft.", "", "&6The Crafting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.30292594BC7586F9.title: "&6Crafting 99"
 	quest.3073E0625A50D025.quest_desc: ["Smart and gyroscopic propellers give you finer control over thrust and direction."]
 	quest.3073E0625A50D025.title: "Steering"
@@ -530,7 +530,7 @@
 	quest.3BB197E455CD7B4D.quest_desc: ["Mayor Thaddeus greets newcomers at the south edge of the market, in the middle of the city.", "", "Right-click him and ask for work.", "", "&7Everyone in Lemurton talks: shopkeepers, market traders, guards, townsfolk."]
 	quest.3BB197E455CD7B4D.quest_subtitle: "By the market"
 	quest.3BB197E455CD7B4D.title: "&6Meet the Mayor"
-	quest.3BD270C52A42450F.quest_desc: ["Reach &eWoodcutting 99&r. Woodcutting gives faster chopping.", "", "&6The Woodcutting Cape is yours at 99.&r Open /capes to wear it."]
+	quest.3BD270C52A42450F.quest_desc: ["Reach &eWoodcutting 99&r. Woodcutting gives faster chopping.", "", "&6The Woodcutting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.3BD270C52A42450F.title: "&aWoodcutting 99"
 	quest.3C106E95B4AD258E.quest_desc: ["Reach &eDefence 50&r. Defence gives +0.02 armour per level.", "", "&eUnlocked on the way:&r", "• 30: diamond armour", "• 40: the Ember Crown", "• 45: the Compacted Diamond set", "• 50: netherite armour and diving gear"]
 	quest.3C106E95B4AD258E.title: "&cDefence 50"
@@ -784,7 +784,7 @@
 	quest.5F3D242C9ABE4D82.title: "Someone's Second Chance"
 	quest.5F56628DA2CF2B6F.quest_desc: ["• A relic goes in a &eCurios slot&r (the extra slots in your inventory), not your hand.", "• Using its ability earns the relic experience; levels give upgrade points for its abilities.", "• &eResearch&r an ability by holding the relic's tooltip open: it costs player XP.", "• Rank up a relic to raise its quality; that resets its upgrades.", "• Some armour sets have a &esynergy&r relic: the Prospector's set with the Clot of Time, the Aeronaut's with the Kinetic Belt, the Brass Duelist with the Ring of the Seven Deadly Sins.", "", "&7The \"Found in\" line on each relic's tooltip says which chests to open. Lootr means every chest is fresh for you."]
 	quest.5F56628DA2CF2B6F.title: "How Relics Work"
-	quest.6023EB023769D255.quest_desc: ["Reach &eRanged 99&r. Ranged gives +0.3% ranged crit chance per level.", "", "&6The Ranged Cape is yours at 99.&r Open /capes to wear it."]
+	quest.6023EB023769D255.quest_desc: ["Reach &eRanged 99&r. Ranged gives +0.3% ranged crit chance per level.", "", "&6The Ranged Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.6023EB023769D255.title: "&cRanged 99"
 	quest.609C15735B7DD942.quest_desc: ["Ancient debris needs &eHardness IV&r on your pickaxe and Mining 40, to mine and to smelt. Bastion chests carry netherite scrap, which has no gate."]
 	quest.609C15735B7DD942.title: "Netherite"
@@ -818,7 +818,7 @@
 	quest.63FACB40AF50B90A.title: "&cHitpoints 50"
 	quest.6457E540F71D6A7E.quest_desc: ["A thousand levels. Very few will get here.", "", "&7Your total level is every skill added together, 14 to 1386."]
 	quest.6457E540F71D6A7E.title: "&eTotal 1000"
-	quest.6471A85F0370A033.quest_desc: ["Reach &eStrength 99&r. Strength gives +0.3% melee crit chance per level.", "", "&6The Strength Cape is yours at 99.&r Open /capes to wear it."]
+	quest.6471A85F0370A033.quest_desc: ["Reach &eStrength 99&r. Strength gives +0.3% melee crit chance per level.", "", "&6The Strength Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.6471A85F0370A033.title: "&cStrength 99"
 	quest.649E555235E44A96.quest_desc: ["Reach &eStrength 25&r. Strength gives +0.3% melee crit chance per level."]
 	quest.649E555235E44A96.title: "&cStrength 25"
@@ -836,7 +836,7 @@
 	quest.65DD30A5E415DC7A.title: "Wind Power"
 	quest.6613015F3DD6B729.quest_desc: ["Guard Villagers: hand a nitwit or an unemployed villager a sword or a crossbow and they take up arms. Give them armour too."]
 	quest.6613015F3DD6B729.title: "Guards"
-	quest.66192FFEFDC02054.quest_desc: ["Reach &eFarming 99&r. Farming gives faster tilling.", "", "&6The Farming Cape is yours at 99.&r Open /capes to wear it."]
+	quest.66192FFEFDC02054.quest_desc: ["Reach &eFarming 99&r. Farming gives faster tilling.", "", "&6The Farming Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.66192FFEFDC02054.title: "&aFarming 99"
 	quest.662538D6920CCD84.title: "Woodland Mansion"
 	quest.662C96E9CF58163E.quest_desc: ["Zombies and skeletons adapt to their homes: frozen gelids, swamp murks, jungle thickets."]
@@ -863,7 +863,7 @@
 	quest.6908E235099BD1DF.title: "&aMining 10"
 	quest.691B1E3F949C5DB7.quest_desc: ["Enchanting 99. The third slot costs 150 levels and gives level X. A book of Sharpness X is the proof.", "", "&eChapter prize:&r a bucket of liquid experience, a Telekinesis book, a relic and a roll on the Legend's Hoard."]
 	quest.691B1E3F949C5DB7.title: "&aSharpness X"
-	quest.6931D3DA0A1E5545.quest_desc: ["Reach &eCooking 99&r. Cooking gives XP from every meal.", "", "&6The Cooking Cape is yours at 99.&r Open /capes to wear it."]
+	quest.6931D3DA0A1E5545.quest_desc: ["Reach &eCooking 99&r. Cooking gives XP from every meal.", "", "&6The Cooking Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.6931D3DA0A1E5545.title: "&6Cooking 99"
 	quest.696E2ECE05FA8FF3.quest_desc: ["An encased fan blows items through whatever is in front of it:", "• water: &ewashing&r   • fire: &esmoking&r   • lava: &eblasting&r", "Point one at a belt and let the fan cook for you."]
 	quest.696E2ECE05FA8FF3.title: "Bulk Processing"
@@ -896,7 +896,7 @@
 	quest.6BFA736EC61E0DA6.title: "The Great Beasts"
 	quest.6C33C59167DDCBE0.quest_desc: ["Structory Towers: a wizard lived here. Check the top floor."]
 	quest.6C33C59167DDCBE0.title: "Wizard Tower"
-	quest.6C7C4AD923FF97C2.quest_desc: ["Reach &eSmithing 99&r. Smithing gives XP from ingots and gear.", "", "&6The Smithing Cape is yours at 99.&r Open /capes to wear it."]
+	quest.6C7C4AD923FF97C2.quest_desc: ["Reach &eSmithing 99&r. Smithing gives XP from ingots and gear.", "", "&6The Smithing Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.6C7C4AD923FF97C2.title: "&6Smithing 99"
 	quest.6CCB97A898611F24.quest_desc: ["Eight blaze burners in a row: a boiler, a mixer line and a superheater all at once."]
 	quest.6CCB97A898611F24.title: "Bank of Flames"
@@ -1015,7 +1015,7 @@
 	quest.7E2F07E0DFBB02E0.title: "Lumber Axe"
 	quest.7E5CF71802CB596E.quest_desc: ["A bucket of milk, an egg, and a pot of flour: grind wheat in a Create millstone.", "", "Take them to the Cook."]
 	quest.7E5CF71802CB596E.title: "The Ingredients"
-	quest.7E6AE4EBA6DB21F9.quest_desc: ["Reach &eDefence 99&r. Defence gives +0.02 armour per level.", "", "&6The Defence Cape is yours at 99.&r Open /capes to wear it."]
+	quest.7E6AE4EBA6DB21F9.quest_desc: ["Reach &eDefence 99&r. Defence gives +0.02 armour per level.", "", "&6The Defence Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.7E6AE4EBA6DB21F9.title: "&cDefence 99"
 	quest.7ED5141FF9D485A0.quest_desc: ["A blaze burner in the head: ores come out already smelted.", "&7Needs Mining 30."]
 	quest.7ED5141FF9D485A0.title: "Prospector's Pickaxe"

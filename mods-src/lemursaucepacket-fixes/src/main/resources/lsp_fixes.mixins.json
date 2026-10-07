@@ -16,6 +16,7 @@
     "LightningZoneMixin"
   ],
   "client": [
+    "CapeSkinMixin",
     "pmmo.SkillHudMixin",
     "pmmo.GainHudMixin",
     "pmmo.GainEntryAccessor",

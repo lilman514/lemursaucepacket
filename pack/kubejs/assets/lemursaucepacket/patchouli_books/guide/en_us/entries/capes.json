@@ -6,7 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Everyone on the server sees the cape you wear. Some capes have a $(bold)perk$() while worn; the legendary ones are $(bold)animated$().$(br2)$(bold)Wardrobe:$() ESC → Capes, or $(#e0ac46)/capes$(). It lists what you have unlocked; click a cape to wear it, or $(#e0ac46)/capes off$() for none. Unlocks announce themselves in chat."
+      "text": "Capes are items you earn. When you earn one it goes into your bag. Everyone on the server sees the cape you wear; some have a $(bold)perk$() while worn, and the legendary ones are $(bold)animated$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Wear it:$() right-click the cape, or put it in the $(bold)Cape$() slot of the Curios panel in your inventory. The eye on the slot hides it without taking it off. Only someone who has earned a cape can wear it.$(br)$(li)$(bold)Show it off:$() right-click an $(bold)armor stand$() with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.$(br)$(li)$(bold)Your collection:$() ESC → Capes, or $(#e0ac46)/capes$(). Every cape there is: the ones you have, ho"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "w to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off.$(br2)Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave)."
     },
     {
       "type": "patchouli:text",
@@ -47,7 +55,20 @@
     {
       "type": "patchouli:text",
       "title": "The owner's cape",
-      "text": "Not earnable.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Lemur Cape$() - Given by the server owner. - -$(br2)Generated from $(#e0ac46)capes/capes.mjs$(), so this page matches the game."
+      "text": "Not earnable.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Lemur Cape$() - Given by the server owner. - -"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lost a cape?",
+      "text": "Whoever makes a cape will make you another, as long as you earned it: speak to them and choose $(italic)I've lost a cape$(). Your collection shows who makes each cape and what it costs."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Cape - Who makes another - Coins$()$(br)$(bold)Any skill cape$() - Odo the Tailor in Lemurton - 99,000$(br)$(bold)Settler's Cape, Brass Age Cape, Iron Roads Cape, Skyward Cape, Crown of Fire Cape, Legacy Cape, Armory Cape, Explorer Cape, Hero of the Village Cape, Beaconeer Cape, Wings Cape$() - Odo the Tailor in Lemurton - 25,000$(br)$(bold)Maxed Cape, Completionist Cape, Dragonslayer Cape$() - Odo the Tailor in Lemurton - 250,000$(br)$(bold)Fire Cape$() - Brakka the Smith at Kiln Hollow. Or win the Fight Pits again. - 150,000$(br)$(bold)Infernal Cape$() - Brakka the Smith at Kiln Hollow. Or survive the"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Inferno again. - 500,000$(br)$(bold)Lemur Cape$() - Ask the server owner - -$(br2)Every win in the Fight Pits or the Inferno hands over another of its cape, so a lost Fire or Infernal Cape can also be won back.$(br2)Generated from $(#e0ac46)capes/capes.mjs$(), so this page matches the game."
     }
   ]
 }

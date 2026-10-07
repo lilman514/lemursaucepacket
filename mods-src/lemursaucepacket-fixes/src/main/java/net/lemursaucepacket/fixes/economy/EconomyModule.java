@@ -7,6 +7,7 @@ import com.google.gson.JsonElement;
 
 import net.lemursaucepacket.fixes.economy.npc.NpcBook;
 import net.lemursaucepacket.fixes.economy.npc.NpcInteractions;
+import net.lemursaucepacket.fixes.economy.npc.NpcRefresh;
 import net.lemursaucepacket.fixes.economy.shop.Shops;
 import net.lemursaucepacket.fixes.economy.trade.Trades;
 import net.minecraft.resources.ResourceLocation;
@@ -50,6 +51,7 @@ public final class EconomyModule {
 
     public static void init(IEventBus modBus) {
         EconomyContent.register(modBus);
+        NpcRefresh.init();
         modBus.addListener(EconomyNet::register);
         NeoForge.EVENT_BUS.addListener(EconomyModule::onReloadListeners);
         NeoForge.EVENT_BUS.addListener(EconomyModule::onServerStarted);

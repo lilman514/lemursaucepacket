@@ -27,7 +27,9 @@ const CLOTH = {
   white: ['#4a4652', '#7b7784', '#a9a5b1', '#cfccd6', '#ebe8f0', '#ffffff'],
   royal: ['#150a2a', '#2a1454', '#42207e', '#5c31a3', '#7e4fc4', '#aa82e2'],
   emerald: ['#062016', '#0d3f2a', '#15613f', '#1f8455', '#34a86f', '#6cd699'],
-  dusk: ['#140f22', '#261d40', '#3a2d5e', '#52427c', '#6f5e9c', '#9a8bc4']
+  dusk: ['#140f22', '#261d40', '#3a2d5e', '#52427c', '#6f5e9c', '#9a8bc4'],
+  // The Infernal Cape's fire: redder and darker than lava's embers, from crimson to white-hot.
+  inferno: ['#1c0404', '#4a0808', '#86110c', '#c42310', '#f2601c', '#ffe08a']
 }
 const ramp = (name) => CLOTH[name] ?? RAMPS[name] ?? (() => { throw new Error(`no ramp ${name}`) })()
 
@@ -157,14 +159,13 @@ const LAVA = [
   'c233443322',
   '3223344332'
 ]
-// The Infernal Cape: black obsidian split by branching cracks of lava, over a molten hem. Each crack is a path from
-// the collar down (cloth x, y); light pulses down the paths a step a frame.
-const INFERNAL_CRACKS = [
-  [[4, 1], [4, 2], [3, 3], [3, 4], [2, 5], [2, 6], [3, 7], [3, 8], [2, 9], [2, 10], [1, 11], [2, 12], [2, 13]],
-  [[5, 3], [5, 4], [6, 5], [6, 6], [7, 7], [6, 8], [6, 9], [7, 10], [7, 11], [8, 12], [7, 13]],
-  [[4, 5], [4, 6], [5, 7], [5, 8], [4, 9], [4, 10], [5, 11], [5, 12], [4, 13]]
-]
-const INFERNAL_START = [0, 2, 4] // where each crack branches off, in steps
+// The Infernal Cape: RuneScape's black cape on fire from the hem up. Tongues of flame in the inferno tones (crimson to
+// white-hot, never the Fire Cape's orange lava) rise from the hem, each cloth column at its own height and flicker
+// (INFERNAL_TONGUES: height, phase; FLICKER over twelve frames), sparks lifting off the tallest; above them the obsidian
+// is dark but for one hairline crack (a path from the collar down, cloth x, y) where a dull glow runs down.
+const INFERNAL_CRACK = [[4, 1], [4, 2], [3, 3], [3, 4], [2, 5], [2, 6], [3, 7], [3, 8], [2, 9]]
+const INFERNAL_TONGUES = [[5, 0], [7, 7], [4, 3], [8, 10], [6, 5], [9, 2], [5, 9], [7, 4]]
+const FLICKER = [0, 1, 1, 2, 1, 0, -1, 0, 1, 0, -1, -1]
 
 export const LEGENDARY = {
   maxed_cape: { field: 'black', band: 'gold', trim: 'gold', frames: 12, animate: 'stars' },
@@ -254,15 +255,21 @@ function animateLegendary(px, d, frame) {
       }
     return
   } else if (d.animate === 'infernal') {
-    // Light runs down the cracks: the step at the pulse burns white-hot, the two behind it cool.
-    INFERNAL_CRACKS.forEach((path, k) =>
-      path.forEach(([fx, fy], i) => {
-        const behind = frame - (INFERNAL_START[k] + i)
-        px[at(fx, fy)] = ['ember', behind === 0 ? 5 : behind === 1 ? 4 : behind === 2 ? 3 : 2]
-      })
-    )
-    // The molten hem, brightest as the pulse reaches it.
-    for (let fx = 1; fx <= 8; fx++) px[at(fx, 14)] = ['ember', (fx + frame) % 4 === 0 ? 4 : frame >= 10 ? 4 : 3]
+    INFERNAL_CRACK.forEach(([fx, fy], i) => (px[at(fx, fy)] = ['inferno', (frame - i + 24) % 12 < 2 ? 2 : 1]))
+    INFERNAL_TONGUES.forEach(([height, phase], i) => {
+      const fx = i + 1
+      const h = Math.max(2, height + FLICKER[(frame + phase) % 12])
+      // White-hot at the hem, then orange, scarlet, and crimson at the tip.
+      for (let dy = 0; dy < h && 14 - dy >= 1; dy++) {
+        const up = dy / (h - 1)
+        px[at(fx, 14 - dy)] = ['inferno', up > 0.85 ? 1 : up > 0.6 ? 2 : up > 0.35 ? 3 : up > 0.12 ? 4 : 5]
+      }
+      if (height >= 6) {
+        const rise = (frame + phase) % 6
+        const fy = 14 - h - 1 - rise
+        if (fy >= 2) px[at(fx, fy)] = ['inferno', rise < 2 ? 4 : 3]
+      }
+    })
     return
   }
   // The glint: a diagonal of light sweeps from the top left to the hem in six frames, then rests for six.

@@ -1,6 +1,7 @@
 ---
 description: >-
-  Cosmetics you earn, never buy: a cape for every skill at 99, for finished chapters and for real feats.
+  Capes you earn and wear in their own slot: one for every skill at 99, for finished chapters and for real feats. Hang
+  them on armor stands; lose one and you can have another made.
 icon: user-shield
 ---
 
@@ -8,9 +9,13 @@ icon: user-shield
 
 <figure><img src="images/capes_sheet.webp" alt="Every cape's design as its texture in game, with its name; the legendary ones move as they do in game"><figcaption><p>Every cape there is to earn (the legendary ones move)</p></figcaption></figure>
 
-Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Everyone on the server sees the cape you wear. Some capes have a **perk** while worn; the legendary ones are **animated**.
+Capes are items you earn. When you earn one it goes into your bag. Everyone on the server sees the cape you wear; some have a **perk** while worn, and the legendary ones are **animated**.
 
-**Wardrobe:** ESC → Capes, or `/capes`. It lists what you have unlocked; click a cape to wear it, or `/capes off` for none. Unlocks announce themselves in chat.
+- **Wear it:** right-click the cape, or put it in the **Cape** slot of the Curios panel in your inventory. The eye on the slot hides it without taking it off. Only someone who has earned a cape can wear it.
+- **Show it off:** right-click an **armor stand** with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.
+- **Your collection:** ESC → Capes, or `/capes`. Every cape there is: the ones you have, how to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off.
+
+Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave).
 
 ## Skill capes
 
@@ -89,5 +94,20 @@ Not earnable.
 | Cape | How to earn it | Perk |
 |---|---|---|
 | Lemur Cape | Given by the server owner. | — |
+
+## Lost a cape?
+
+Whoever makes a cape will make you another, as long as you earned it: speak to them and choose *I've lost a cape*. Your collection shows who makes each cape and what it costs.
+
+| Cape | Who makes another | Coins |
+|---|---|---|
+| Any skill cape | Odo the Tailor in Lemurton | 99,000 |
+| Settler's Cape, Brass Age Cape, Iron Roads Cape, Skyward Cape, Crown of Fire Cape, Legacy Cape, Armory Cape, Explorer Cape, Hero of the Village Cape, Beaconeer Cape, Wings Cape | Odo the Tailor in Lemurton | 25,000 |
+| Maxed Cape, Completionist Cape, Dragonslayer Cape | Odo the Tailor in Lemurton | 250,000 |
+| Fire Cape | Brakka the Smith at Kiln Hollow. Or win the Fight Pits again. | 150,000 |
+| Infernal Cape | Brakka the Smith at Kiln Hollow. Or survive the Inferno again. | 500,000 |
+| Lemur Cape | Ask the server owner | — |
+
+Every win in the Fight Pits or the Inferno hands over another of its cape, so a lost Fire or Infernal Cape can also be won back.
 
 Generated from `capes/capes.mjs`, so this page matches the game.

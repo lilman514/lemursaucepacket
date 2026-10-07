@@ -24,6 +24,7 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import { buildArmor } from './armor-px.mjs'
 import { buildItems } from './items.mjs'
+import { capeIcon, capeSlotIcon } from './cape-items.mjs'
 import { DESIGNS as CAPE_DESIGNS, LEGENDARY as LEGENDARY_CAPES, renderCape } from './capes-px.mjs'
 import { BOARD, PANELS, PLAQUE, hubLayoutJson, writePauseLayout } from './hub.mjs'
 import { STYLE, board, checkbox, panel, plate, plateTile, pmmoAtlas, rowPlate, scroller, scrollerBackground, separator, sliderHandle, tab, textField } from './pixel-kit.mjs'
@@ -484,6 +485,33 @@ async function capes() {
 }
 
 /**
+ * Capes as items (lsp_fixes capes): each cape's inventory icon drawn from its own texture (art/cape-items.mjs), animated
+ * like the cape for the legendary ones (a strip of frames and a .mcmeta, four ticks a frame), and the Curios cape slot's
+ * empty-slot icon.
+ */
+async function capeItems() {
+  const { CAPES } = await import('../capes/capes.mjs')
+  const ITEMS = 'pack/kubejs/assets/lemursaucepacket/textures/item'
+  const raw = (pixels, width, height) => sharp(Buffer.from(pixels), { raw: { width, height, channels: 4 } }).png({ compressionLevel: 9 })
+  let count = 0
+  for (const cape of CAPES) {
+    if (!CAPE_DESIGNS[cape.id] && !LEGENDARY_CAPES[cape.id]) continue
+    const frames = cape.animated ?? 0
+    if (frames > 1) {
+      const strip = new Uint8Array(16 * 16 * 4 * frames)
+      for (let f = 0; f < frames; f++) strip.set(capeIcon(renderCape(cape.id, f)), f * 16 * 16 * 4)
+      await raw(strip, 16, 16 * frames).toFile(target(`${ITEMS}/${cape.id}.png`))
+      writeFileSync(target(`${ITEMS}/${cape.id}.png.mcmeta`), JSON.stringify({ animation: { frametime: 4 } }) + '\n')
+    } else {
+      await raw(capeIcon(renderCape(cape.id, 0)), 16, 16).toFile(target(`${ITEMS}/${cape.id}.png`))
+    }
+    count++
+  }
+  await raw(capeSlotIcon(), 16, 16).toFile(target('pack/kubejs/assets/lemursaucepacket/textures/slot/empty_cape_slot.png'))
+  console.log(`capeItems: ${count} cape icons (${CAPES.filter((c) => c.animated).length} animated) and the cape slot icon`)
+}
+
+/**
  * The gear and cape sheets on the website (website/assets/art/gear.webp, capes.webp) and the wiki's Gear and Capes
  * pages (docs/images/gear_sets.jpg, capes_sheet.webp), drawn from the game's own textures and scaled up pixel for pixel:
  * each cape's design (the 10x16 front of its 64x32 texture, as people see it on your back) and each armour piece's icon
@@ -657,7 +685,7 @@ async function website() {
 }
 
 // `node process.mjs` runs every step; naming steps runs only those, e.g. `node process.mjs launcherKit`.
-const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes, sheets, website }
+const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes, capeItems, sheets, website }
 const only = process.argv.slice(2)
 for (const name of only) if (!(name in steps)) throw new Error(`Unknown step "${name}". Steps: ${Object.keys(steps).join(', ')}`)
 for (const [name, step] of Object.entries(steps)) if (!only.length || only.includes(name)) await step()

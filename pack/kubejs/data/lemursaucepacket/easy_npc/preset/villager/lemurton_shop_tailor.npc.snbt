@@ -79,6 +79,16 @@
             },
             {
               Label:"default_2",
+              Name:"I've lost a cape",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp cape shop @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"default_3",
               Name:"Goodbye",
               Actions:[
                 {
@@ -94,7 +104,7 @@
           Priority:-1,
           Texts:[
             {
-              Text:"A good coat keeps out more than the cold."
+              Text:"A good coat keeps out more than the cold. I stitch capes, too: skill capes, quest capes, the rare ones. If you earned it and lost it, I will make you another."
             }
           ],
           Buttons:[
@@ -110,6 +120,16 @@
             },
             {
               Label:"about_1",
+              Name:"I've lost a cape",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp cape shop @npc-uuid @initiator"
+                }
+              ]
+            },
+            {
+              Label:"about_2",
               Name:"Goodbye",
               Actions:[
                 {
