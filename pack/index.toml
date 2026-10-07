@@ -734,7 +734,7 @@ hash = "51841a4f2dc7b7192828d83e2c9eea30be8258ab7563b5ca38bba2bf959f8140"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
-hash = "7c9419dcafdb4a9b933c95fe92883d518c762e97e69d29aca6eaedff8c0a96db"
+hash = "8b87f82ece03dff2f88706f169c5b9f13f009b776d2fc5c6fcb4af038fc9c2e7"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/waystones.json"
@@ -1922,7 +1922,7 @@ hash = "2e194e360f5804785f0cf98efbcaf026fa4790f9a82da94e552241e4b9f126f3"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/patchouli/inventory.png"
-hash = "672ec9eaee61387821b8802de21ca6e515f26a8ca1785e9fd7ff0ace54882afe"
+hash = "5fb95bdb0367dd9b94ba820336bc19640eaf61719d74012a547e786972c3c5c5"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/patchouli/quest_book_landfall.png"
@@ -1930,7 +1930,7 @@ hash = "5e289aa3e7bfcfa4b1a2ff53315d3dffd79e6236a0f554a5225ed9eb0630decb"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/patchouli/shop.png"
-hash = "3a0c3a96961b8ff04f44616bad83b4d70a927a87e4ac1e2e6bd4a2794ad033dc"
+hash = "109b45f794a0ebb95485ba30db9e7b9c8611bef76e83e00e0089544b2762199b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/patchouli/title-screen.png"

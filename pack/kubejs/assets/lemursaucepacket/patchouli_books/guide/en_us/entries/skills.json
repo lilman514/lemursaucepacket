@@ -87,11 +87,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Machines.$() The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists or use a recipe that waits on a level, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself.$(br)$(li)$(bold)Brewing stands and cooking pots$() that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for won't go into a stand by hand."
+      "text": "$(li)$(bold)Machines.$() The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists or use a recipe that waits on a level, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Enchantments$() past their vanilla level need two skills: Enchanting to make them, and the gear's own skill to use them. Fishing for Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
+      "text": "$(li)$(bold)Brewing stands and cooking pots$() that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for won't go into a stand by hand.$(br)$(li)$(bold)Enchantments$() past their vanilla level need two skills: Enchanting to make them, and the gear's own skill to use them. Fishing for Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
     },
     {
       "type": "patchouli:text",

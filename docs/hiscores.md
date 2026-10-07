@@ -20,6 +20,10 @@ Everyone who plays on the server is on the hiscores, ranked like RuneScape's: ev
 
 Each table shows the top ten and where you are. Click a name for that player's hiscores, a group to see its tables, or **On the website** to open the table on play.limas.ca.
 
+<figure><img src="images/hiscores_tables.jpg" alt="Chat showing the Overall and Mining tables, the groups to click, and the boss tables"><figcaption><p>/hiscores, /hiscores mining and /hiscores bosses</p></figcaption></figure>
+
+<figure><img src="images/hiscores_player.jpg" alt="Chat showing one player's hiscores: overall rank, total level and XP, combat level, every skill, bosses, activities and collections"><figcaption><p>/hiscores player: one player's hiscores</p></figcaption></figure>
+
 ## How the ranking works
 
 - **Overall** ranks by total level, and total XP between players on the same total. **Skills** rank by XP. Everything else ranks by count.

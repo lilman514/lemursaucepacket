@@ -15,6 +15,12 @@ Capes are items you earn. When you earn one it goes into your bag. Everyone on t
 - **Show it off:** right-click an **armor stand** with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.
 - **Your collection:** ESC → Capes, or `/capes`. Every cape there is: the ones you have, how to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off.
 
+<figure><img src="images/capes_collection.jpg" alt="The Capes screen: every cape by kind with how many are earned, and the chosen cape's picture, how to earn it, its perk and who makes another"><figcaption><p>ESC → Capes: your collection</p></figcaption></figure>
+
+<figure><img src="images/capes_slot.jpg" alt="The inventory with the Curios panel open: the Infernal Cape in the Cape slot, and an Agility Cape's tooltip in the bag"><figcaption><p>The Cape slot in the Curios panel, and a cape's tooltip</p></figcaption></figure>
+
+<figure><img src="images/capes_stands.jpg" alt="Five armor stands in Lemurton's square, each in a gear set with a cape hung on its back"><figcaption><p>Capes on armor stands</p></figcaption></figure>
+
 Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave).
 
 ## Skill capes
