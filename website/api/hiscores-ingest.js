@@ -7,7 +7,10 @@ import { db, ensureTables } from './_hiscores-db.js'
 
 // The game servers allowed to upload: the public key /lsp hiscores keygen printed (also in the server's
 // config/lemursaucepacket/hiscores-public.key). More can be added in HISCORES_KEYS, comma-separated.
-const SERVER_KEYS = []
+const SERVER_KEYS = [
+  // mc.limas.ca (C:\LemurSaucePacket-Server), made 2026-10-07
+  'MCowBQYDK2VwAyEALS2KLJ6ZJiBtMyJLOGLCmZZRyy0kmbu7HmcV0KfJqrc='
+]
 const MAX_SKEW = 15 * 60 * 1000
 const MAX_BODY = 4 * 1024 * 1024
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
