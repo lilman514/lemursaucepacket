@@ -535,7 +535,7 @@ function docsPage() {
     '',
     '## Armour sets',
     '',
-    '<figure><img src="images/gear_sets.jpg" alt="Pixel art of four armour sets: Prospector, Aeronaut, Brass Duelist and Compacted Diamond"><figcaption><p>Prospector, Aeronaut, Brass Duelist and Compacted Diamond</p></figcaption></figure>',
+    '<figure><img src="images/gear_sets.jpg" alt="Every armour set\'s pieces as their icons in game, and the two single pieces"><figcaption><p>The armour sets and the single pieces</p></figcaption></figure>',
     ''
   ]
   if (existsSync(path.join(root, 'docs', 'images', 'armor_icons.jpg')))

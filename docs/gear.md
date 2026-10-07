@@ -14,7 +14,7 @@ Stats: **Damage**, **Attack Speed**, **Crit Chance** (added to the Strength/Rang
 
 ## Armour sets
 
-<figure><img src="images/gear_sets.jpg" alt="Pixel art of four armour sets: Prospector, Aeronaut, Brass Duelist and Compacted Diamond"><figcaption><p>Prospector, Aeronaut, Brass Duelist and Compacted Diamond</p></figcaption></figure>
+<figure><img src="images/gear_sets.jpg" alt="Every armour set's pieces as their icons in game, and the two single pieces"><figcaption><p>The armour sets and the single pieces</p></figcaption></figure>
 
 <figure><img src="images/armor_icons.jpg" alt="Every armour piece in an inventory, a Compacted Netherite set worn"><figcaption><p>Every set's pieces, and Compacted Netherite worn</p></figcaption></figure>
 

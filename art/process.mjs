@@ -483,6 +483,111 @@ async function capes() {
   console.log(`capes: ${count} cape textures (${CAPES.filter((c) => c.animated).length} animated)`)
 }
 
+/**
+ * The gear and cape sheets on the website (website/assets/art/gear.webp, capes.webp) and the wiki's Gear and Capes
+ * pages (docs/images/gear_sets.jpg, capes_sheet.jpg), drawn from the game's own textures and scaled up pixel for pixel:
+ * each cape's design (the 10x16 front of its 64x32 texture, as people see it on your back) and each armour piece's icon
+ * (the first frame of its shimmer strip). The site's cape sheet moves: its legendary capes step through their frames.
+ * (These replaced the AI reference sheets in art/generated/, which never matched the game.)
+ */
+async function sheets() {
+  const { CAPES } = await import('../capes/capes.mjs')
+  const { SETS, PIECES } = await import('../gear/gear.mjs')
+  const ITEMS = path.join(root, 'pack/kubejs/assets/lemursaucepacket/textures/item')
+  const PLATE = '#211e1c'
+  const font = 'Segoe UI, Helvetica, Arial, sans-serif'
+  const escapeXml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/'/g, '&apos;')
+  const text = (s, w, h, { size = 20, anchor = 'middle', weight = 600, colour = '#f2e6cf' } = {}) => {
+    // A name too long for its cell gets smaller, and if that would make it too small, two lines (never cut off).
+    const fits = (t, px) => t.length * px * 0.56 <= w - 8
+    let lines = [s]
+    let px = size
+    while (!fits(s, px) && px > 14) px--
+    if (!fits(s, px)) {
+      const words = s.split(' ')
+      let best = null
+      for (let i = 1; i < words.length; i++) {
+        const pair = [words.slice(0, i).join(' '), words.slice(i).join(' ')]
+        if (!best || Math.max(...pair.map((t) => t.length)) < Math.max(...best.map((t) => t.length))) best = pair
+      }
+      lines = best ?? [s]
+      px = size
+      while (!lines.every((t) => fits(t, px)) && px > 10) px--
+    }
+    const x = anchor === 'middle' ? w / 2 : 4
+    const ys = lines.length === 1 ? [Math.round(h * 0.68)] : [Math.round(h * 0.42), Math.round(h * 0.42) + px + 2]
+    const spans = lines.map((t, i) => `<text x="${x}" y="${ys[i]}" font-family="${font}" font-size="${px}" font-weight="${weight}" fill="${colour}" text-anchor="${anchor}">${escapeXml(t)}</text>`).join('')
+    return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}">${spans}</svg>`)
+  }
+  /** A cape's front, scaled up: raw 64x32 RGBA from renderCape, the 10x16 at (1, 1). */
+  const capeFace = (id, frame, scale) =>
+    sharp(renderCape(id, frame), { raw: { width: 64, height: 32, channels: 4 } }).extract({ left: 1, top: 1, width: 10, height: 16 }).resize(10 * scale, 16 * scale, { kernel: 'nearest' }).png().toBuffer()
+  const icon = (id, scale) => sharp(path.join(ITEMS, `${id}.png`)).extract({ left: 0, top: 0, width: 16, height: 16 }).resize(16 * scale, 16 * scale, { kernel: 'nearest' }).png().toBuffer()
+  const canvas = (width, height, background) => sharp({ create: { width, height, channels: 4, background } })
+  const clear = { r: 0, g: 0, b: 0, alpha: 0 }
+
+  // The wiki: every cape, its name under it.
+  {
+    const scale = 10, cols = 8, gap = 24, label = 40
+    const w = 10 * scale, h = 16 * scale
+    const rows = Math.ceil(CAPES.length / cols)
+    const width = cols * w + (cols + 1) * gap
+    const height = rows * (h + label) + (rows + 1) * gap
+    const parts = []
+    for (let i = 0; i < CAPES.length; i++) {
+      const x = gap + (i % cols) * (w + gap), y = gap + Math.floor(i / cols) * (h + label + gap)
+      parts.push({ input: await capeFace(CAPES[i].id, 0, scale), left: x, top: y })
+      parts.push({ input: text(CAPES[i].name.replace(/ Cape$/, ''), w + gap, label, { size: 17 }), left: x - gap / 2, top: y + h })
+    }
+    await canvas(width, height, PLATE).composite(parts).flatten({ background: PLATE }).jpeg({ quality: 90, mozjpeg: true }).toFile(target('docs/images/capes_sheet.jpg'))
+  }
+  // The site: twelve capes, the legendary ones moving.
+  {
+    const pick = ['fire_cape', 'infernal_cape', 'dragonslayer_cape', 'maxed_cape', 'completionist_cape', 'attack_cape', 'strength_cape', 'defence_cape', 'mining_cape', 'skyward_cape', 'hero_cape', 'wings_cape']
+    const capes = pick.map((id) => CAPES.find((c) => c.id === id)).filter(Boolean)
+    const scale = 12, cols = 4, gap = 24
+    const w = 10 * scale, h = 16 * scale
+    const rows = Math.ceil(capes.length / cols)
+    const width = cols * w + (cols + 1) * gap, height = rows * h + (rows + 1) * gap
+    const frames = []
+    for (let f = 0; f < 12; f++) {
+      const parts = []
+      for (let i = 0; i < capes.length; i++) {
+        const c = capes[i]
+        parts.push({ input: await capeFace(c.id, c.animated ? f % c.animated : 0, scale), left: gap + (i % cols) * (w + gap), top: gap + Math.floor(i / cols) * (h + gap) })
+      }
+      frames.push(await canvas(width, height, clear).composite(parts).png().toBuffer())
+    }
+    // A frame every four ticks, as the game steps them.
+    await sharp(frames, { join: { animated: true } }).webp({ lossless: true, loop: 0, delay: frames.map(() => 200) }).toFile(target('website/assets/art/capes.webp'))
+  }
+  // The armour: each set's four pieces (and the single pieces), its name beside them on the wiki.
+  const sets = SETS.map((s) => ({ name: s.name, ids: ['helmet', 'chestplate', 'leggings', 'boots'].map((p) => `${s.id}_${p}`) }))
+  const singles = { name: PIECES.map((p) => p.name).join(', '), ids: PIECES.map((p) => p.id) }
+  {
+    const scale = 8, gap = 24, labelW = 330
+    const cell = 16 * scale
+    const rows = [...sets, singles]
+    const width = gap + labelW + 4 * (cell + gap), height = gap + rows.length * (cell + gap)
+    const parts = []
+    for (let r = 0; r < rows.length; r++) {
+      const y = gap + r * (cell + gap)
+      parts.push({ input: text(rows[r].name, labelW, cell, { size: rows[r] === singles ? 19 : 24, anchor: 'start' }), left: gap, top: y })
+      for (let i = 0; i < rows[r].ids.length; i++) parts.push({ input: await icon(rows[r].ids[i], scale), left: gap + labelW + i * (cell + gap), top: y })
+    }
+    await canvas(width, height, PLATE).composite(parts).flatten({ background: PLATE }).jpeg({ quality: 90, mozjpeg: true }).toFile(target('docs/images/gear_sets.jpg'))
+  }
+  {
+    const scale = 7, gap = 20
+    const cell = 16 * scale
+    const width = 4 * cell + 5 * gap, height = sets.length * cell + (sets.length + 1) * gap
+    const parts = []
+    for (let r = 0; r < sets.length; r++) for (let i = 0; i < 4; i++) parts.push({ input: await icon(sets[r].ids[i], scale), left: gap + i * (cell + gap), top: gap + r * (cell + gap) })
+    await canvas(width, height, clear).composite(parts).webp({ lossless: true }).toFile(target('website/assets/art/gear.webp'))
+  }
+  console.log(`sheets: ${CAPES.length} capes and ${sets.length} armour sets from their textures → docs/images (capes_sheet, gear_sets) and website/assets/art (capes, gear)`)
+}
+
 /** The ESC menu layout and the geometry its client script shares. */
 async function pauseMenu() {
   await writePauseLayout(target('pack/config/fancymenu/customization/lemursaucepacket_pause.txt'), target(`${MENU_ASSETS}/logo.png`))
@@ -492,7 +597,7 @@ async function pauseMenu() {
 
 /**
  * The website (website/, play.limas.ca): key art in widths for srcset, the logo, the mascot as favicons, every
- * emblem, hub and skill icon, the gear and cape sheets, the social preview card, and the launcher's brass kit at
+ * emblem, hub and skill icon, the social preview card, and the launcher's brass kit at
  * half size (the page draws the frame at 52px and the button at 22px, so that is still 1.5-2x for sharp screens).
  * WebP throughout: the site is served from Vercel, and every byte there counts.
  */
@@ -535,13 +640,6 @@ async function website() {
   await iconCells('hub-icons.png', HUB_ICONS, 'icons', 128)
   await iconCells('skill-icons.png', SKILL_ICONS, 'skills', 128)
   await (await squareIcon(await cleanAlpha(source('skill-enchanting.png')), 128, 0.03)).webp({ quality: 88, alphaQuality: 100 }).toFile(target(`${WEB}/skills/enchanting.webp`))
-  for (const file of ['gear-a.png', 'gear-b.png', 'capes-a.png', 'capes-b.png']) {
-    if (existsSync(source(file))) await sharp(source(file)).resize({ width: 1024 }).webp({ quality: 82, alphaQuality: 90, effort: 6 }).toFile(target(`${WEB}/art/${file.replace('.png', '.webp')}`))
-  }
-  // The same sheets on the wiki's Gear and Capes pages (GitBook and GitHub Pages), on the wiki's dark plate.
-  for (const [file, name] of [['gear-a.png', 'gear_sets'], ['capes-a.png', 'capes_sheet']]) {
-    await sharp(source(file)).resize({ width: 1024 }).flatten({ background: '#211e1c' }).jpeg({ quality: 84, mozjpeg: true }).toFile(target(`docs/images/${name}.jpg`))
-  }
 
   const kit = `${LAUNCHER_ASSETS}/ui`
   for (const [name, width] of [['frame', 600], ['button', 200], ['button-hover', 200], ['plaque', 360], ['ring', 200]]) {
@@ -550,11 +648,11 @@ async function website() {
   for (const name of ['plate-plain', 'panel', 'button', 'button-hover']) {
     writeFileSync(target(`${WEB}/pixel/${name}.png`), readFileSync(path.join(root, LAUNCHER_ASSETS, 'pixel', `${name}.png`)))
   }
-  console.log('website: key art, og.jpg, logo, favicons, emblem/hub/skill icons, gear and cape sheets, brass kit → website/assets')
+  console.log('website: key art, og.jpg, logo, favicons, emblem/hub/skill icons, brass kit → website/assets (the gear and cape sheets are the sheets step)')
 }
 
 // `node process.mjs` runs every step; naming steps runs only those, e.g. `node process.mjs launcherKit`.
-const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes, website }
+const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes, sheets, website }
 const only = process.argv.slice(2)
 for (const name of only) if (!(name in steps)) throw new Error(`Unknown step "${name}". Steps: ${Object.keys(steps).join(', ')}`)
 for (const [name, step] of Object.entries(steps)) if (!only.length || only.includes(name)) await step()
