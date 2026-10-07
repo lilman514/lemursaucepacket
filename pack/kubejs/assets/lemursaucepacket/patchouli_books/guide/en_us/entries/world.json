@@ -34,19 +34,19 @@
     },
     {
       "type": "patchouli:text",
-      "text": " prospector and drill with Create machines.$(br)$(li)$(bold)Dragons:$() Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their hoards. They can't break blocks. Their eggs hatch into dragons you can raise and ride; their scales, bones and blood make the best gear in the realm, but dragon armour can only be worn after Dragon Slayer I. Ice and Fire's other creatures and structures aren't in the pack.$(br)$(li)$(bold)Economy:$() Gold Coins, one stack however many you have. Quests and missions pay them, vendors buy anything for them and sell their ow"
+      "text": " prospector and drill with Create machines.$(br)$(li)$(bold)Dragons:$() Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their hoards. They can't break blocks. Their eggs hatch into dragons you can raise and ride; their scales, bones and blood make the best gear in the realm, but dragon armour can only be worn after Dragon Slayer II. Ice and Fire's other creatures and structures aren't in the pack.$(br)$(li)$(bold)Economy:$() Gold Coins, one stack however many you have. Quests and missions pay them, vendors buy anything for them and sell their o"
     },
     {
       "type": "patchouli:text",
-      "text": "n goods, and $(#e0ac46)/trade$() swaps items and coins with other players. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Skills:$() RuneScape-style levels gate weapons, tools and armour and make you stronger. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Hard blocks need Hardness:$() a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted from andesite, copper and a book), gold and redstone Hardness II (or a Mechanical Drill on a contraption, which breaks up to tier II), diamonds and obsidian Hardness III, ancient "
+      "text": "wn goods, and $(#e0ac46)/trade$() swaps items and coins with other players. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Skills:$() RuneScape-style levels gate weapons, tools and armour and make you stronger. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Hard blocks need Hardness:$() a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted from andesite, copper and a book), gold and redstone Hardness II (or a Mechanical Drill on a contraption, which breaks up to tier II), diamonds and obsidian Hardness III, ancient"
     },
     {
       "type": "patchouli:text",
-      "text": "debris IV, with Mining levels to match. Found some before you can mine it? You can keep it in a chest or drop it, but recipes, machines and other containers refuse it until your Mining level is there. Early obsidian for a table or a portal comes from ruined-portal and bastion chests, or from casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for its settings; $(bold"
+      "text": " debris IV, with Mining levels to match. Found some before you can mine it? You can keep it in a chest or drop it, but recipes, machines and other containers refuse it until your Mining level is there. Early obsidian for a table or a portal comes from ruined-portal and bastion chests, or from casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for its settings; $(bol"
     },
     {
       "type": "patchouli:text",
-      "text": ")O$() mutes your microphone."
+      "text": "d)O$() mutes your microphone."
     },
     {
       "type": "patchouli:text",

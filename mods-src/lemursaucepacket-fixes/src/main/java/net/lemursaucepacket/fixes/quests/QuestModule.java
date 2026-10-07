@@ -24,8 +24,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * RuneScape-style quests (docs/quests.md): the steps NPC dialogs run ({@link QuestSteps}), Crandor and Elvarg for
- * Dragon Slayer I ({@link Crandor}), and the gear that quest unlocks ({@link DragonGear}). The quests themselves are FTB
+ * RuneScape-style quests (docs/quests.md): the steps NPC dialogs run ({@link QuestSteps}), the Ender Dragon for Dragon
+ * Slayer I ({@link TheEnd}), Crandor and Elvarg for Dragon Slayer II ({@link Crandor}), and the gear Dragon Slayer II
+ * unlocks ({@link DragonGear}). The quests themselves are FTB
  * Quests chapters that stay hidden until an NPC gives them to you (quests/book.mjs).
  */
 public final class QuestModule {
@@ -34,6 +35,11 @@ public final class QuestModule {
     public static void init() {
         NeoForge.EVENT_BUS.addListener((AddReloadListenerEvent e) -> e.addListener(new QuestSteps.Loader(e.getRegistryAccess())));
         NeoForge.EVENT_BUS.addListener((RegisterCommandsEvent e) -> register(e.getDispatcher()));
+        // Finding the stronghold takes a second or two: do it while the server starts rather than when a player is waiting
+        // on Oziach (once Lemurton stands, so it's measured from there).
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.server.ServerStartedEvent e) -> {
+            if (net.lemursaucepacket.fixes.hub.HubState.get(e.getServer()).status() == net.lemursaucepacket.fixes.hub.HubState.Status.BUILT) TheEnd.stronghold(e.getServer());
+        });
         NeoForge.EVENT_BUS.addListener((ServerTickEvent.Post e) -> {
             if (e.getServer().getTickCount() % 100 == 17) {
                 try {
@@ -43,11 +49,16 @@ public final class QuestModule {
                 }
             }
         });
-        // Elvarg's death counts even if another mod cancels it (Ice and Fire turns dead dragons into lootable bodies), and so
-        // does her health reaching zero.
-        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, true, LivingDeathEvent.class, e -> Crandor.onDeath(e.getEntity()));
+        // A dragon's death counts even if another mod cancels it (Ice and Fire turns dead dragons into lootable bodies), and
+        // so does its health reaching zero (the Ender Dragon goes on dying for ten seconds after the killing blow).
+        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.HIGHEST, true, LivingDeathEvent.class, e -> {
+            Crandor.onDeath(e.getEntity());
+            TheEnd.onDeath(e.getEntity());
+        });
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.entity.living.LivingDamageEvent.Post e) -> {
-            if (e.getEntity().getHealth() <= 0) Crandor.onDeath(e.getEntity());
+            if (e.getEntity().getHealth() > 0) return;
+            Crandor.onDeath(e.getEntity());
+            TheEnd.onDeath(e.getEntity());
         });
         NeoForge.EVENT_BUS.addListener((LivingEquipmentChangeEvent e) -> DragonGear.onEquip(e));
         NeoForge.EVENT_BUS.addListener((LivingIncomingDamageEvent e) -> DragonGear.onDamage(e));
@@ -74,6 +85,16 @@ public final class QuestModule {
                             QuestSteps.all().values().forEach(q -> c.getSource().sendSuccess(() -> Component.literal(q.id() + ": " + q.title() + " (" + q.steps().size() + " steps)"), false));
                             return QuestSteps.all().size();
                         })))
+                .then(Commands.literal("stronghold")
+                        .then(Commands.literal("where").executes(c -> {
+                            var pos = TheEnd.stronghold(c.getSource().getServer());
+                            c.getSource().sendSuccess(() -> Component.literal(pos.map(p -> "Dragon Slayer I's stronghold is at " + p.getX() + " " + p.getZ()).orElse("No stronghold found near Lemurton.")), false);
+                            return pos.isPresent() ? 1 : 0;
+                        }))
+                        .then(Commands.literal("map").then(Commands.argument("player", EntityArgument.player()).executes(c -> {
+                            TheEnd.giveMap(EntityArgument.getPlayer(c, "player"));
+                            return 1;
+                        }))))
                 .then(Commands.literal("crandor")
                         .then(Commands.literal("where").executes(c -> {
                             BlockPos pos = Crandor.site(c.getSource().getServer());

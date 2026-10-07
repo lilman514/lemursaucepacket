@@ -4,12 +4,12 @@
 	filename: "dragon_slayer"
 	group: "1F2E0B7F304AB615"
 	icon: {
-		id: "iceandfire:dragon_skull_fire"
+		id: "minecraft:dragon_head"
 	}
 	id: "1DAA2EF48DF6A016"
 	images: [
 		{
-			height: 2.527659574468085d
+			height: 2.7574468085106383d
 			id: "3E9C644EFAAE5DA3"
 			image: "lemursaucepacket:textures/quests/panel.png"
 			rotation: 0.0d
@@ -18,9 +18,9 @@
 			text_on_image: true
 			text_shadow: true
 			text_v_align: "start"
-			width: 6.561702127659575d
-			x: 0.1d
-			y: 0.5d
+			width: 6.6127659574468085d
+			x: -0.05d
+			y: 0.6d
 		}
 	]
 	order_index: 3
@@ -29,7 +29,7 @@
 	quests: [
 		{
 			icon: {
-				id: "iceandfire:dragon_skull_fire"
+				id: "minecraft:dragon_head"
 			}
 			id: "2EF09854B0FC5403"
 			invisible: true
@@ -64,7 +64,7 @@
 			tasks: [
 				{
 					icon: {
-						id: "iceandfire:dragon_skull_fire"
+						id: "minecraft:dragon_head"
 					}
 					id: "5B222F8979DDFACE"
 					stage: "q_ds_started"
@@ -309,16 +309,10 @@
 			]
 			tasks: [
 				{
-					entity: "minecraft:zombie"
+					entity: "minecraft:enderman"
 					id: "06AE886C38BD1DE6"
 					type: "kill"
-					value: 20L
-				}
-				{
-					entity: "minecraft:skeleton"
-					id: "017D7EAF7481BE96"
-					type: "kill"
-					value: 10L
+					value: 12L
 				}
 			]
 			x: 4.6d
@@ -374,19 +368,19 @@
 			dependencies: ["2CFE482090B033FF"]
 			hide_until_deps_complete: true
 			icon: {
-				id: "iceandfire:dragon_skull_fire"
+				id: "minecraft:dragon_egg"
 			}
-			id: "6F362A6C985F8F78"
+			id: "1CDF4C57D498DD4A"
 			rewards: [
 				{
 					auto: "enabled"
-					id: "3D6D33FAD02FF98A"
+					id: "7D67997F9C83F8B8"
 					type: "xp"
 					xp: 400
 				}
 				{
 					auto: "enabled"
-					id: "41016AEC9E8DA564"
+					id: "03155905926018D1"
 					item: {
 						components: {
 							"lsp_fixes:coin_amount": 1280
@@ -398,7 +392,7 @@
 				}
 				{
 					auto: "enabled"
-					id: "78852F3FF30E93E1"
+					id: "3D1BCE62357884C4"
 					table_id: 7777527461190354542L
 					type: "random"
 				}
@@ -408,10 +402,10 @@
 			tasks: [
 				{
 					icon: {
-						id: "iceandfire:dragon_skull_fire"
+						id: "minecraft:dragon_egg"
 					}
-					id: "005B02B98D7242DE"
-					stage: "q_ds_elvarg"
+					id: "4C790ED04765BCDB"
+					stage: "q_ds_dragon"
 					type: "gamestage"
 				}
 			]
@@ -419,10 +413,10 @@
 			y: 2.1d
 		}
 		{
-			dependencies: ["6F362A6C985F8F78"]
+			dependencies: ["1CDF4C57D498DD4A"]
 			hide_until_deps_complete: true
 			icon: {
-				id: "iceandfire:dragon_skull_fire"
+				id: "minecraft:dragon_head"
 			}
 			id: "60C14FFAEB799C74"
 			rewards: [
@@ -437,7 +431,7 @@
 					id: "7B0949756F0654C0"
 					item: {
 						components: {
-							"lsp_fixes:coin_amount": 30120
+							"lsp_fixes:coin_amount": 20120
 						}
 						count: 1
 						id: "lsp_fixes:gold_coins"
@@ -452,7 +446,7 @@
 				}
 				{
 					auto: "enabled"
-					command: "pmmo admin {p} add attack xp 20000"
+					command: "pmmo admin {p} add attack xp 15000"
 					elevate_perms: true
 					id: "2C5830DF40FF20D2"
 					silent: true
@@ -460,7 +454,7 @@
 				}
 				{
 					auto: "enabled"
-					command: "pmmo admin {p} add defence xp 20000"
+					command: "pmmo admin {p} add defence xp 15000"
 					elevate_perms: true
 					id: "30460ED2D33B9A88"
 					silent: true
@@ -472,7 +466,7 @@
 			tasks: [
 				{
 					icon: {
-						id: "iceandfire:dragon_skull_fire"
+						id: "minecraft:dragon_head"
 					}
 					id: "1065B441AEA70305"
 					stage: "q_ds_done"

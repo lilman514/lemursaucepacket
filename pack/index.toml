@@ -146,51 +146,51 @@ hash = "a7dd01fff1f0cb71bcf1571ac7863579286761651b36cc1d56f744de3cef3293"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/arcane_works.snbt"
-hash = "8f835f19fd14f9744b232f49308c5ef21179b511201c0936deaf9d547bc678eb"
+hash = "08e52a5ee6675868392bbfed6919826d6a827a6703d0a0f310eb527a9e4d1944"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/armory.snbt"
-hash = "9ec9155b664896afb3fbf6e301929ba9e2bc0d03a46b5333b41656abadbbdeaa"
+hash = "b71824422e2ee13f614108d8922c12039d16144dd56a924f2271265cfd0e2654"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/ashes_of_the_kiln.snbt"
-hash = "e7ceb4a8651216d529f7548aea26cca7202119b6ab40cab609e2b6f500a0b9c2"
+hash = "b83557d547c9c2cd7914611e3a6eacffb8671f98c97dbdfebc20b82d32bcb828"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/atlas.snbt"
-hash = "858e55e6b1d9796c3bd59cb3f1909ff4c39814d9df09fbfc4f680c825b82e44e"
+hash = "a7196bfe119afe776424521264eb0c57618ae726cff21207dfb68446f9d2c567"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/backpack_workshop.snbt"
-hash = "54b367ed2ed5a01b7a2fa38be6175dc39d04b8ea18e2669866152d63401caa42"
+hash = "de77da438eaa8e6daa5830f0efbc408c40635b1ec339c56d5839fd476f61e695"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/banners.snbt"
-hash = "ca2d540859191be7012d4aface51fda5ee3ea132eaeaf4b178b5d992f689bf5a"
+hash = "557e0a8db676c0801a62bc393c4ffc647aa04f5634b1ca635938164978524487"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/bestiary.snbt"
-hash = "571555f88b560fabb9006fcc2df9aed743b6bdba3c2d193795becfdfb098c6b5"
+hash = "d7fa7640e8254a0ee76df54c46a426f4e9ea0bc5061606402f916f99063222df"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/beyond.snbt"
-hash = "9750e2ac70209e4832456ecec9710eff0eab1fc1ba638765a6efb69da2aa6f7f"
+hash = "901d1d349a4a79694c82d4758dc0e27281e50e8c4fce653c6c7fd37fb051574e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/brass_age.snbt"
-hash = "22b55fb83999ba8bab3a908c692fd82e469cd0078dbb142732baf8a49d2f8aed"
+hash = "9a5f7b000b05986b7bbb91b3f40b9bffdc1ee7fc29611ea66ef1f16dd5bd8e1a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/cartographer.snbt"
-hash = "58c161c2000b1451c09e26b7c6f76cf13ae4c1974f82e603d1cb2bd2d3258df8"
+hash = "4275be49493305192ef190c2b1f3f6f1ca3c74995901cf9c36076633d9f12011"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/commerce.snbt"
-hash = "b1435da429a218995957d9cf38696ec3a79d568f078edb3918d3831c635e6988"
+hash = "21d214c4afdf0d1ca21a3d0b6c183fddbb0df4db2ffefec5a4cd231dfe10a28d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/contracts.snbt"
-hash = "062ea97a6531c8fbf307eb6809c00c4445043f54747d829c8d60f50d548433e6"
+hash = "1b0779c830c3cf64278bd61ff96eaa83e935bb6252d8b4dc38990b8c97d37b58"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/cooks_assistant.snbt"
@@ -198,51 +198,55 @@ hash = "f9ff60788e7837498fb3cd8c2e605971b8a61987e59a69bca888aa9f39bf736f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/crown_of_fire.snbt"
-hash = "92e8e9749e213a7d14fd4dc2de4ede5e67e83f16ab9228db41c37b52dc7d265d"
+hash = "fe074e000188edca0de7e013748f3165e96a3fbad2966be83f915b6ec9e474a0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deep_dark.snbt"
-hash = "12301d0c5eeb6e6c1f399c814277fa0c0a7334b7d84bcd91ef509a1f57baf740"
+hash = "ff4357f526870d1e107270b3969766c90cae8ea9d7ee2122f5756e7d90acbd82"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dragon_slayer.snbt"
-hash = "f1041c7a55ee8a1d90a76faf04463d52ffa798b34ff1afcd5629076cd94264d6"
+hash = "2ce71d5217f1ee749325ce58db9d192e4d8c908da8db622603ee05f1662f899e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/dragon_slayer_2.snbt"
+hash = "704c8d447dc2d4df0cc0ad6f9a066d8e85b9484279238cddc727f491bbeee063"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/enchanter.snbt"
-hash = "16216409ea09209831656845f42689c61db95bcff5cd10289ac259d69dc3ca19"
+hash = "f6e32103c99f6c8eaef91b4108648fe87827daa1250f602b5b9af9ab352ba865"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/factory_floor.snbt"
-hash = "f4fc12b205f2fa77628a7042f7cf638c1b9978dacc93a82ce62910a70b59f014"
+hash = "241edfd20159cf314208f27faaede7633f92c68e99ec8b2256491b29bda9a19a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/fight_pits.snbt"
-hash = "172cda825b6e2fb98767234fe6d87546fde4e96cde03b4ebcbd22185e2850afa"
+hash = "5d01dd501774684c60cdaf37d443d5171c3a938e6b1f6abc735167cf8f984421"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/first_rotation.snbt"
-hash = "11527825152b5fe5310cadd67be851fe5d787e16eb8b5c24e13304e375557caf"
+hash = "c17983e4f71f7a2e695fd00f54f3481077333050cc76fecd3e39c6c63a4eec08"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/foundry.snbt"
-hash = "d8f1e7138854fa74afb330bf4131261ac3dcac0f7fb568ad80132ea0fdcb248d"
+hash = "0520dc45124c0875d17aed6c17e809b242e34d90320da2449bab9b1c2ba94d68"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/hearts.snbt"
-hash = "d88f378e10d018803a40b89d04f8a6effde6197756c83bffb92c879e6a8cea5c"
+hash = "a01fdece462040fd2aa3064ff829447c70ea001dc0d82fb944da8b67079aa4e5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homestead.snbt"
-hash = "124222ea3c4036f12ed7579c44ac33f98d78490a8eb8e1e2bae402dd0529f45b"
+hash = "eaafe021c1a3c7bd93c38715a7d5370fdabe051666601d0c8a2ba947a5cf7796"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/iron_roads.snbt"
-hash = "4f5d430c6c641b482fad3729923d1ad590520feff831f9ef1e1493491340d808"
+hash = "b6e549ba662eacb57dbc607fe72cffc5da7d715900964ffb6f0cb4f2fbb4abb3"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kitchen.snbt"
-hash = "d03d955a9f95587bee9e8dde47dc2b63c753911dd63ce45218d5481c4206a760"
+hash = "3f608898f70077278e66c7790b031a1e8137e354b0cb56110a42b02451d567da"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/knights_sword.snbt"
@@ -250,11 +254,11 @@ hash = "787b67356a81a518c324b9b8eb4d4d083db38617aba39dd8b0882a3d1edce29d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landfall.snbt"
-hash = "5cd31a8696ea296e3d8b693dd14fb9a8a61cf8a5568bb1109b4cf6b2324212a5"
+hash = "c73c5bf96b7dc1131f52c008d2e28856b012aaf58760984f20e70b4390f079c1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/legacy.snbt"
-hash = "f90e72adcf49f2e00df851327c4c72b0994e96e8e1fb14d2a0fcb35d6a06467d"
+hash = "1eda90d7794fc88506dccc20d2484c17135461da71c2b4c2e56493c9bc0f467a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/lemurton_welcome.snbt"
@@ -262,31 +266,31 @@ hash = "beeec026fe4a7275fed10ed6a063729b08ce94ec4cfb50c14b4f3d7f204850ec"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/railway.snbt"
-hash = "948f82ac14911d31f163d3bc8840117766afc25eff14529b556eacf36fe948c6"
+hash = "eb3397e0883c76741620dca4749315fc558338adf84d21d62a1ad63a5eb001a9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/relic_hunter.snbt"
-hash = "54a60cb10852677fdfd14e27a2479b1597bcf9726265edb94c7a3b70f990d56c"
+hash = "4a9171754e40e23b6fadd8c3712f39eaa9d5b4a6086d426cbe6e2b2d947a82b4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skills.snbt"
-hash = "4da82d24cde85ebe4a9d348ee62f1fe03ee4c7a8ea3b220ba5cc11038ad8ad95"
+hash = "8e138006bc73a35adc0121e67a4bd2ff7809c85a35ea5c0459cee96ace6fe205"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skyward.snbt"
-hash = "30bebf3ed4652878631f4d4ba7657aee476395cda29a95854828489d39da2721"
+hash = "8f4fe24f006d6aef4f1a56088b05209d837d82e214187f6d616818c647ab8cc8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_inferno.snbt"
-hash = "9a712d5f7a67f3737e72454aec7227ef6a8938a70cad379ce3fa04869c4442f4"
+hash = "5576a804177ce4b372ede65203fedc50a00a46d0fb4c3d8551bb5e7e882bd0f6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_life.snbt"
-hash = "8418cee1aa33e812216f86d0c996d1b101fab342274c065e88aa6fe89413dfb9"
+hash = "9209911904145d16f79bd738915f2a14dbf41a0e7d5a6a8ae9fb5dd0a34cba49"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/warehouse.snbt"
-hash = "3d8a3d8600ec3da7b57ec0a0932a1077068d4f8d42e749a582aa4effe63d6005"
+hash = "31d462db697f69b013ba54acd35901ec1bf3286c7dab7a6d547f952eba375f65"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -294,7 +298,7 @@ hash = "6198ef8f1deea1b4cb2f856cb168af4aef0e2007f0da13840106e1387676ddbe"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "a621f09300a2d4f23c7166c1930cadb1b720ddd88854c56bcd43f9cab2e7fb3a"
+hash = "c24400ba2a89e3242aa2b60dd6ea6a731b4510a7acd6c4eb73058deb371194e4"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/artisans_crate.snbt"
@@ -666,7 +670,7 @@ hash = "b3af6c17bcc51e3fc49755122a759e5861832e4b1fd722c507c31d4dd6a89b8f"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/elvarg.json"
-hash = "2a4fe02f550a93ea26d6f49e2528b23028d055ead33ce86254d6ccb286116ee6"
+hash = "65ed8807fed0cd5a9d896303c305ea94955d8dfa9285239b9b7b37245c939100"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/enchanting.json"
@@ -682,7 +686,7 @@ hash = "e1cfb61de6398123d8a9dc4e700092502761763d446911e4576c35310ea8fc4a"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/fight-pits.json"
-hash = "9be9a0df916f0fe52652af5de210dd3997e311dc235b0d38d93a26915f4e7b39"
+hash = "515b1c53cc11e1fa903b076a84b50d5c53f2bc2a825b322c254eed61357e6fb0"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/gear.json"
@@ -702,7 +706,7 @@ hash = "2debf26df93c79f5f2a3263a5d66a5e99ef18fe8fbab0e89702af3c0fe741951"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lemurton.json"
-hash = "5bbdea633cb67f0a04722df51e70386af2e2915912b68fff16f9194184ebb6ce"
+hash = "7b6e87fe06530d788884c6946a62ea0ce166c9908f84810a0973ff9770da96ae"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
@@ -714,7 +718,7 @@ hash = "74c076cc3c9928f1fa0d5205fe81b93b7c99436a06325e8301a89c3d5a4aa23b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/quests.json"
-hash = "00b24af122fd2b1c6c6a3cfd102ad5450f2b4b84ee398d6f2b5bdad173e5d661"
+hash = "4f5137bc8573b95755adbc5e39ae42686433d27a93836c405d8310c14272b1a6"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
@@ -730,7 +734,7 @@ hash = "a8acbf1d9b3b9831fe2f95d1d219b7034ac42326bdde199045e077fd811800b9"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "f1ff1bacbb7c9d79230d28bf165951292607883201d0907f88c2b8c56da032c2"
+hash = "a78198e04565475131438c3b5e6ca1693fef803a4c280ecd29a849cae5a8f7b1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/textures/capes/agility_cape.png"
@@ -2246,11 +2250,11 @@ hash = "f076d5e9dbf7e5ce1cdf1f0814c8db9161ad67796d5cdd459cd45651e0c04a50"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_guildmaster.npc.snbt"
-hash = "77bc640e54e30f8474b8405dc257e603202f065c7fb002adc04df7822a6853f1"
+hash = "ef8bef1165d8b70d0ccdcdd4fa2a5c62833fa746450255dafe3cf5cf7f0ba022"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_mayor.npc.snbt"
-hash = "2da5a51c360260d911d45959e1a8a8925030b9f55520580c94559e0766961df5"
+hash = "7c45558eb1c81439c2e2eaa98070de06ae45542e1e825cb2ea9593f3eb41e36e"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/humanoid/lemurton_squire.npc.snbt"
@@ -2258,7 +2262,7 @@ hash = "f9d7508236aad33d71e42604c31b2a95150aa56f08a011f0347a83b4d6a6572a"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/illusioner/lemurton_wizard.npc.snbt"
-hash = "a2c16d33be1679fa7b53bb7123faf2ac9123ab5243d474e7cb690755346fb54a"
+hash = "eac5972e885b8fc9689c81d32aa567d778529fa069fe2b1ade9ebc3b613a7cfd"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/piglin/lemurton_inferno_keeper.npc.snbt"
@@ -2266,7 +2270,7 @@ hash = "53983981e224b19385ed0d2828616c3596c4430b04350380292e0df172599319"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/piglin/lemurton_kiln_elder.npc.snbt"
-hash = "7389f1e117dbd7a6307b1e0446646cf730314bf3e20ca2d5aa0568a8c8e973d7"
+hash = "7ac5c78d8377b9eb4a9605cb6440930d2560772087982010be16603ba9b14004"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/piglin/lemurton_kiln_smith.npc.snbt"
@@ -2306,11 +2310,11 @@ hash = "98b4b833e45d7ae529ee596b41c5791f3a6e1565ac4356a77a729e04ff73654f"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_ned.npc.snbt"
-hash = "2714f71264195c377af4c780cb2bd9e546ab9637dd9fdb645fc7983680f84b8a"
+hash = "1870496975ff04c6a04f2ad1d7540126dba6cc912614784333f139a7fb635890"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_oziach.npc.snbt"
-hash = "3c9164d3aa7ad71c55e439a72d7bc9863244a3d844e42ec22a542ac22c674888"
+hash = "a8338b01531d5314850d1a9cc4cbc4ae81ec5ec26f1dc424c090864769944622"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_apothecary.npc.snbt"
@@ -2326,7 +2330,7 @@ hash = "6bf36b1c405bd6796e6fa0994edae81e9308393c9a9854f454389a24c318e51b"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_jeweller.npc.snbt"
-hash = "8643c401693551fc7dfe1c3df1ab96b63f18dcebcc194d235cfa45134e9336af"
+hash = "f1bb0beb909af2422c652e44b41b786d9adb8e101a20446729f328fc3289ce64"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/easy_npc/preset/villager/lemurton_shop_smithy.npc.snbt"
@@ -2366,7 +2370,7 @@ hash = "301b14362a882c30bcc715b80525566a1be7a8e3fffd57e9b3bcaf4b76ed1ba7"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/elvarg.json"
-hash = "cd2453e964b422ce8a36bc44533eebc06e05fc761295208abf131db80fe956a9"
+hash = "5da7a1dc73ab60987415492d9d7036267409c6bc4a076a68f736389f3f54f139"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_instances/event/fight_pits.json"
@@ -2422,7 +2426,7 @@ hash = "870950e3fb46d12af105230264b651c3a1d64877357796292e7a0039f54cbd61"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/kiln_smith.json"
-hash = "2c380b204cbc6a565c5ca68461536bd74398dec201a12b969a1b9a73939d0036"
+hash = "7027e135053c7a7841f3291bd50a5786de87ed472fa4a135e41a00e928e66853"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/mayor.json"
@@ -2454,7 +2458,7 @@ hash = "ba2ace900d2318f6a13b81cef3bcd9eb368a3da63ac6e82fd737b711739a2790"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_jeweller.json"
-hash = "abd1ee68048caf620205a6e95d52711147538b769c5ad72f4907c3ec85a29a4c"
+hash = "ebc1a4aae5639109be4631ff2e91c0ef3ec5a768df5b1e921342fc029c53aa74"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_npcs/shop_smithy.json"
@@ -2494,7 +2498,7 @@ hash = "ee41688adee4883a4a5f941f7347315e43ea4609125b6269a0d3a8933dbf67b2"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_quests/ashes.json"
-hash = "e4aadb0cc411f03d5d1aa3105e5d26a0fcabc7a3399e32daa5f3fc7bb87d8797"
+hash = "614b7b49e708cf6b2b4b6a578e7bff20d558efcc17ef1c1bd56a32b47645c643"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_quests/cooks_assistant.json"
@@ -2502,7 +2506,11 @@ hash = "07a5d0ca52beaf996618bc78ca15ff9b04db6112d132f35dd1501285b418656f"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_quests/dragon_slayer.json"
-hash = "bd4b104a59612dee717d3c094fc76cd408d9c5a56bb2cd11facccaa5842bcdd8"
+hash = "45160a4bef7c24d44b271a2799e92960945bf0128a2f595d14d059b9c176928a"
+
+[[files]]
+file = "kubejs/data/lemursaucepacket/lsp_quests/dragon_slayer_2.json"
+hash = "2cdfdbab46f1f039e3f2508ff030bde6950d2647b46e6051ba9db6df6ef95e3d"
 
 [[files]]
 file = "kubejs/data/lemursaucepacket/lsp_quests/fight_pits.json"
@@ -3852,8 +3860,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.9.0.jar"
-hash = "749be1356ec7ae3c57294380b663e18eed5128d113407f578040d8e4d782c121"
+file = "mods/lsp_fixes-1.10.0.jar"
+hash = "14b0c84681bb8982b1f4fcf46cbccdb3d05055a44fc39493e8d1068129284585"
 
 [[files]]
 file = "mods/lsp_instances-1.1.0.jar"

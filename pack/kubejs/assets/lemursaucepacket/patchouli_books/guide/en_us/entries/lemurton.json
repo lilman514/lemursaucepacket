@@ -35,19 +35,23 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Who - Where - What they do$()$(br)$(bold)Mayor Thaddeus$() - The south edge of the market - Gives the first quest, $(italic)Welcome to Lemurton$(), and the Anti-dragon Shield for Dragon Slayer I$(br)$(bold)Old Wren$() - Market stall - Fruit and vegetables$(br)$(bold)Bessa the Baker$() - Market stall - Bread, cake and pies; buying from her is a step of $(italic)Welcome to Lemurton$()$(br)$(bold)Imran the Gem Trader$() - Market stall - Gems and crystals$(br)$(bold)Saffi the Spice Merchant$() - Market stall - Seeds from the far south (Farmer's Delight crops), sugar and cocoa$(br)$(bold)Gil the Fishmonger$("
+      "text": "$(#b9a98a)Who - Where - What they do$()$(br)$(bold)Mayor Thaddeus$() - The south edge of the market - Gives the first quest, $(italic)Welcome to Lemurton$(), and the Anti-dragon Shield for Dragon Slayer I (and a copy if you lose it)$(br)$(bold)Old Wren$() - Market stall - Fruit and vegetables$(br)$(bold)Bessa the Baker$() - Market stall - Bread, cake and pies; buying from her is a step of $(italic)Welcome to Lemurton$()$(br)$(bold)Imran the Gem Trader$() - Market stall - Gems and crystals$(br)$(bold)Saffi the Spice Merchant$() - Market stall - Seeds from the far south (Farmer's Delight crops), sugar and cocoa$(br"
     },
     {
       "type": "patchouli:text",
-      "text": ") - Market stall - Fish, cooked or raw$(br)$(bold)Maud the Weaver$() - Market stall - Wool in every colour, and string$(br)$(bold)Posy the Flower Seller$() - Market stall - Flowers and saplings$(br)$(bold)Ragnar the Butcher$() - Market stall - Meat$(br)$(bold)Brann the Smith$() - The smithy - Tools and weapons; forges the sword in $(italic)The Knight's Sword$()$(br)$(bold)Odo the Tailor$() - The tannery - Leather armour and saddles$(br)$(bold)Sister Agnes$() - The apothecary - Potions and brewing supplies$(br)$(bold)Hamish of the Docks$() - The fishing shop - Rods, line and bait$(br)$(bold)Gerta the Mason$() - Th"
+      "text": ")$(bold)Gil the Fishmonger$() - Market stall - Fish, cooked or raw$(br)$(bold)Maud the Weaver$() - Market stall - Wool in every colour, and string$(br)$(bold)Posy the Flower Seller$() - Market stall - Flowers and saplings$(br)$(bold)Ragnar the Butcher$() - Market stall - Meat$(br)$(bold)Brann the Smith$() - The smithy - Tools and weapons; forges the sword in $(italic)The Knight's Sword$()$(br)$(bold)Odo the Tailor$() - The tannery - Leather armour and saddles$(br)$(bold)Sister Agnes$() - The apothecary - Potions and brewing supplies$(br)$(bold)Hamish of the Docks$() - The fishing shop - Rods, line and bait$(br)$("
     },
     {
       "type": "patchouli:text",
-      "text": "e builder's merchant - Stone, brick and timber by the stack$(br)$(bold)Lucan the Jeweller$() - The jeweller's - Gold and gems; sells a piece of the map to Crandor$(br)$(bold)Pip the Shopkeeper$() - The general store - A bit of everything$(br)$(bold)Cook$() - The butcher's shop on the ring street - $(italic)Cook's Assistant$()$(br)$(bold)Squire Asrol$() - The armourer's - $(italic)The Knight's Sword$()$(br)$(bold)Guildmaster Greaves$() - The Champions' Guild - Starts $(italic)Dragon Slayer I$() and runs the guild's trial$(br)$(bold)Oziach$() - The armoury on the ring street - Tells you how to reach Elvarg, and tak"
+      "text": "bold)Gerta the Mason$() - The builder's merchant - Stone, brick and timber by the stack$(br)$(bold)Lucan the Jeweller$() - The jeweller's - Gold and gems; sells a piece of the map to the stronghold$(br)$(bold)Pip the Shopkeeper$() - The general store - A bit of everything$(br)$(bold)Cook$() - The butcher's shop on the ring street - $(italic)Cook's Assistant$()$(br)$(bold)Squire Asrol$() - The armourer's - $(italic)The Knight's Sword$()$(br)$(bold)Guildmaster Greaves$() - The Champions' Guild - Starts $(italic)Dragon Slayer I$() and runs the guild's trial$(br)$(bold)Oziach$() - The armoury on the ring street - Tel"
     },
     {
       "type": "patchouli:text",
-      "text": "es her head$(br)$(bold)Wizard Traiborn$() - His tower by the wall - Trades a piece of the map for a ghast tear, a blaze rod and an amethyst shard$(br)$(bold)City Guards$() - The four gatehouses - Keep the peace$(br)$(bold)Townsfolk$() - About the streets - Gossip$(br2)Every vendor buys anything you bring, whatever they sell themselves. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l) for how prices work, and $(l:lemursaucepacket:quests)Quests$(/l) for the questlines."
+      "text": "ls you how to reach the Ender Dragon and Elvarg, and takes their heads ($(italic)Dragon Slayer I$() and $(italic)II$())$(br)$(bold)Wizard Traiborn$() - His tower by the wall - Trades a piece of the map for a ghast tear, a blaze rod and an amethyst shard, and scries Crandor for $(italic)Dragon Slayer II$()$(br)$(bold)City Guards$() - The four gatehouses - Keep the peace$(br)$(bold)Townsfolk$() - About the streets - Gossip"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Every vendor buys anything you bring, whatever they sell themselves. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l) for how prices work, and $(l:lemursaucepacket:quests)Quests$(/l) for the questlines."
     },
     {
       "type": "patchouli:text",

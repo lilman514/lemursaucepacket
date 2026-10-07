@@ -47,6 +47,8 @@
 	chapter.514FCA55A49A33A2.title: "Welcome to Lemurton"
 	chapter.51E82E0954F782A5.chapter_subtitle: ["Farmer's Delight from first knife to Master Chef."]
 	chapter.51E82E0954F782A5.title: "Grand Kitchen"
+	chapter.552C81806FCEF26D.chapter_subtitle: ["Main quest · Master · 3 quest points"]
+	chapter.552C81806FCEF26D.title: "Dragon Slayer II"
 	chapter.55ED1DC4BC96FEB5.chapter_subtitle: ["Find your feet in a world that has been reworked."]
 	chapter.55ED1DC4BC96FEB5.title: "Landfall"
 	chapter.576718F3DA1B68BA.chapter_subtitle: ["Fair backpacks: every tier is built from its age's Create parts."]
@@ -81,7 +83,8 @@
 	file.0000000000000001.title: "LemurSaucePacket"
 	image.0127D551BC5CCFD9.title: " \\n&6&lCook's Assistant\\n&r&7Main quest · Novice · 1 quest point\\n \\n&r&fLemurton's Cook is in a panic: the mayor's feast\\n&r&fis tonight and there is nothing for the cake.\\n \\n&r&eUnlocks:\\n&r&fthe Cook's thanks, Cooking XP, and the\\n&r&ffirst step towards the Champions' Guild.\\n "
 	image.03025A03888D22DC.title: " \\n&6&lWelcome to Lemurton\\n&r&7Find the capital, meet the mayor and find your way around.\\n \\n&r&fLemurton is the realm's first city, a short walk from\\n&r&fwhere you wake up, and a safe zone: no fighting,\\n&r&fdigging or building inside the walls. Its people trade\\n&r&fand hand out quests: right-click one to talk.\\n \\n&r&eUnlocks:\\n&r&fa purse of coins, a loaf of bread, and the run of the city.\\n "
-	image.09EDDA0656332902.title: " \\n&6&lThe Fight Pits\\n&r&7Main quest · Master · 2 quest points\\n \\n&r&fThe Kilnfolk, ashen piglins who left the Nether for\\n&r&fthe fire mountains, test their champions in the Fight\\n&r&fPits: thirty waves of pit beasts, and Kiln-Tok-Jad\\n&r&fat the end. They've heard of Elvarg's fall.\\n \\n&r&eUnlocks:\\n&r&fthe Fire Cape (+12% critical damage and Fire Resistance),\\n&r&fAttack, Strength, Defence and Hitpoints XP, and a fortune.\\n "
+	image.050EAD2F10E3B2B9.title: " \\n&6&lDragon Slayer II\\n&r&7Main quest · Master · 3 quest points\\n \\n&r&fThe Ender Dragon is dead, but she isn't the dragon\\n&r&fOziach lost his ship to. That was Elvarg, a fire\\n&r&fdragon of the old world, on the isle of Crandor.\\n \\n&r&eUnlocks:\\n&r&fthe right to wear dragonscale and dragonsteel armour,\\n&r&fAttack, Strength and Defence XP, and a fortune.\\n "
+	image.09EDDA0656332902.title: " \\n&6&lThe Fight Pits\\n&r&7Main quest · Master · 2 quest points\\n \\n&r&fThe Kilnfolk, ashen piglins who left the Nether for\\n&r&fthe fire mountains, test their champions in the Fight\\n&r&fPits: thirty waves of pit beasts, and Kiln-Tok-Jad at\\n&r&fthe end. They've heard of the Ender Dragon's fall.\\n \\n&r&eUnlocks:\\n&r&fthe Fire Cape (+12% critical damage and Fire Resistance),\\n&r&fAttack, Strength, Defence and Hitpoints XP, and a fortune.\\n "
 	image.0A5D205330DDDF01.title: " \\n&6&lThe Enchanter\\n&r&7The Enchanting skill, Hardness tomes\\n&r&7and levels past the vanilla max.\\n \\n&r&fEnchanting is a skill here. The table trains it, and the skill\\n&r&fdecides how far an enchantment can go: Sharpness X at\\n&r&f99. Hardness tomes let your pickaxe break harder ores.\\n \\n&r&eUnlocks:\\n&r&fenchantments up to level X, Telekinesis, and the Hardness\\n&r&ftomes for iron, gold, diamonds, obsidian and ancient debris.\\n "
 	image.0F421FB4917EAF3E.title: " \\n&6&lRailway Company\\n&r&7Long trains, long journeys and a network that runs itself.\\n \\n&r&fIron Roads got you a line. This chapter makes\\n&r&fit a railway: signals, timetables, whistles, a\\n&r&ftrack factory and a train six carriages long.\\n \\n&r&eUnlocks:\\n&r&ffreight and passenger lines across the\\n&r&fwhole map, and the Grand Central prize.\\n "
 	image.0F5DA6A8095784F5.title: " \\n&6&lThe Knight's Sword\\n&r&7Main quest · Intermediate · 1 quest point\\n \\n&r&fSir Vyvin's squire has lost his master's\\n&r&fsword, and Sir Vyvin is back tomorrow.\\n \\n&r&eUnlocks:\\n&r&fSmithing XP, coins, and the squire's undying gratitude.\\n "
@@ -99,7 +102,7 @@
 	image.378495272D3FABC3.title: " \\n&6&lAtlas\\n&r&7A world worth crossing by rail.\\n \\n&r&fTerralith biomes and rebuilt structures are\\n&r&fworth the trip. Visit each landmark once.\\n \\n&r&eRewards:\\n&r&fa crate for exploring, and a head\\n&r&fstart on where to lay rail lines.\\n "
 	image.3BDA63444C2D4695.title: " \\n&6&lContracts\\n&r&7Brassworks Missions: six jobs a week, paid in coin pouches.\\n \\n&r&fPress H for the mission board. Missions are Create jobs:\\n&r&fpress this, mix that, deliver the other. Each pays Coin\\n&r&fPouches on its own (right-click one: 100 coins; rerolls\\n&r&fcost pouches); these quests pay again for keeping at it.\\n \\n&r&eRewards:\\n&r&fa crate at 10, 50, 100, 250 and 500 missions,\\n&r&fand the Legendary Fixer prize at 1000.\\n "
 	image.3C351D3EC5ADA9D5.title: " \\n&6&lFirst Rotation\\n&r&7The Andesite Age: power, presses and belts.\\n \\n&r&fTurn water and wind into rotational power, then use it\\n&r&fto press sheets, wash ores and move items on belts.\\n \\n&r&eUnlocks:\\n&r&fautomatic ore and sheet processing, moving\\n&r&fcontraptions, and infinite ore veins to mine.\\n "
-	image.3E9C644EFAAE5DA3.title: " \\n&6&lDragon Slayer I\\n&r&7Main quest · Experienced · 2 quest points\\n \\n&r&fThe Champions' Guild sends its proven\\n&r&fadventurers after Elvarg, the dragon of Crandor.\\n \\n&r&eUnlocks:\\n&r&fthe right to wear dragonscale and dragonsteel\\n&r&farmour, Attack and Defence XP, and a fortune.\\n "
+	image.3E9C644EFAAE5DA3.title: " \\n&6&lDragon Slayer I\\n&r&7Main quest · Experienced · 2 quest points\\n \\n&r&fThe Champions' Guild sends its proven adventurers\\n&r&fafter the oldest dragon there is: the Ender\\n&r&fDragon, on her island at the end of the world.\\n \\n&r&eUnlocks:\\n&r&fDragon Slayer II, the Fight Pits,\\n&r&fAttack and Defence XP, and coins.\\n "
 	image.3F530A450715CB7D.title: " \\n&6&lBrass Age\\n&r&7Heat, mixing and precision.\\n \\n&r&fCapture a blaze to heat your basins. Brass and precision\\n&r&fmechanisms are the gateway to Create's smarter machines.\\n \\n&r&eUnlocks:\\n&r&fmechanical arms and crafters, sorting with\\n&r&fbrass tunnels, steam engines and electricity.\\n "
 	image.453135B25BEDB43B.title: " \\n&6&lHearts \\& Graves\\n&r&7Every death costs a heart. Run out\\n&r&7and everything you built goes with you.\\n \\n&r&fYou start with ten hearts and lose one every time you\\n&r&fdie, dropped where you fell for anyone to take. Graves\\n&r&fcost Grave Essence, compasses find what you dropped,\\n&r&fand a new Heart is the hardest thing in the pack to make.\\n \\n&r&eUnlocks:\\n&r&fgraves that keep your items, compasses for what\\n&r&fyou lost, a spare Heart for a friend, and the\\n&r&frecipe that makes hearts from a Heart of the Sea.\\n "
 	image.496C74611560E5DB.title: " \\n&6&lLandfall\\n&r&7Find your feet in a world that has been reworked.\\n \\n&r&fStart here. Learn the server's rules, settle a base,\\n&r&fand gather the basics every other chapter builds on.\\n \\n&r&eUnlocks:\\n&r&fyour first backpack, a bed in a village,\\n&r&fand the wrench that starts Create.\\n "
@@ -138,7 +141,7 @@
 	quest.0390E0DEB91A43F2.title: "Parcels"
 	quest.041B7F870C5C6510.quest_desc: ["Bottle the purple cloud. Lingering potions need it."]
 	quest.041B7F870C5C6510.title: "Dragon's Breath"
-	quest.043F5AD0FE7E848A.quest_desc: ["Oziach keeps the armoury on the ring street. He came closer to killing Elvarg than anyone."]
+	quest.043F5AD0FE7E848A.quest_desc: ["Oziach keeps the armoury on the ring street. He came closer to killing the Ender Dragon than anyone."]
 	quest.043F5AD0FE7E848A.title: "Oziach"
 	quest.0444095009517E71.quest_desc: ["Reach &eAgility 50&r. Agility gives speed and less fall damage.", "", "&eUnlocked on the way:&r", "• 30: the elytra", "• 40: the Aeronaut's set"]
 	quest.0444095009517E71.title: "&bAgility 50"
@@ -199,7 +202,7 @@
 	quest.09202567917646FC.quest_desc: ["You survived the Inferno.", "", "&eRewards:&r 3 quest points, the Infernal Cape, 75,000 Attack, Strength, Defence and Hitpoints XP, a fortune in coins."]
 	quest.09202567917646FC.quest_subtitle: "The Inferno"
 	quest.09202567917646FC.title: "&aQuest complete!"
-	quest.0939B7CAC0EB0921.quest_desc: ["Lucan the Jeweller bought a scrap of the map from a sailor. He wants 10,000 coins for it."]
+	quest.0939B7CAC0EB0921.quest_desc: ["Lucan the Jeweller bought a scrap of the map from a treasure hunter. He wants 10,000 coins for it."]
 	quest.0939B7CAC0EB0921.title: "Map Part: Lucan"
 	quest.0940D6B1B450D563.quest_desc: ["Four scrap, four gold, one ingot. Four ingots is a serious pile."]
 	quest.0940D6B1B450D563.title: "Netherite Ingots"
@@ -328,6 +331,11 @@
 	quest.1C82F5FAFD7A4EFA.title: "&6Cooking 50"
 	quest.1C8C064C0C2008FC.quest_desc: ["Run a line from your base to another player's, with a station at each end.", "", "&cNote:&r trains can cross Nether portals, but riding through one is still buggy. Send freight across unmanned.", "", "&eChapter prize:&r railway casing for the next carriage, a warp stone and the Iron Roads Cape."]
 	quest.1C8C064C0C2008FC.title: "Connect Two Towns"
+	quest.1C9442ADA966FD0F.quest_desc: ["You slew Elvarg, the dragon of Crandor.", "", "&eRewards:&r 3 quest points, the right to wear dragonscale and dragonsteel armour, 25,000 Attack, Strength and Defence XP, a fortune in coins."]
+	quest.1C9442ADA966FD0F.quest_subtitle: "Dragon Slayer II"
+	quest.1C9442ADA966FD0F.title: "&aQuest complete!"
+	quest.1CDF4C57D498DD4A.quest_desc: ["Follow the map to the stronghold and find its portal room. Fill the portal's frame with eyes of ender (blaze powder and ender pearls) and go through.", "", "On her island, break the end crystals on the pillars first: they heal her. Everyone on this step who is near her when she falls gets her head.", "", "Someone slew her before you? Set four end crystals on the edges of the exit portal and she rises again.", "", "&7Hold the Anti-dragon Shield in her breath. Bring a bow for the caged crystals, blocks to pillar up, slow falling or water, and friends. Bottle some of her breath while you are there: Dragon Slayer II needs it."]
+	quest.1CDF4C57D498DD4A.title: "&5The Ender Dragon"
 	quest.1D0D33F4A4AD24C5.quest_desc: ["Wizard Traiborn, in his tower by the wall, keeps a piece in a box that only opens to a spell.", "", "The spell needs a ghast tear, a blaze rod and an amethyst shard."]
 	quest.1D0D33F4A4AD24C5.title: "Map Part: The Wizard"
 	quest.1D813B0744C534CF.quest_desc: ["Mushrooms on rich soil grow into colonies. Shear a full one."]
@@ -428,8 +436,8 @@
 	quest.2CD0388FFD593882.title: "&5The Dragon"
 	quest.2CEEFD1A5DD9339E.quest_desc: ["A castle full of Create machinery. Explore it carefully."]
 	quest.2CEEFD1A5DD9339E.title: "The King's Castle"
-	quest.2CFE482090B033FF.quest_desc: ["Bring Oziach all three pieces and he puts them together: a map whose needle points to Crandor."]
-	quest.2CFE482090B033FF.title: "The Map to Crandor"
+	quest.2CFE482090B033FF.quest_desc: ["Bring Oziach all three pieces and he puts them together: a map whose needle points to the stronghold whose portal leads to the End."]
+	quest.2CFE482090B033FF.title: "The Map to the Stronghold"
 	quest.2D07A9F53C740CFC.quest_desc: ["Link a grid of mechanical crafters for recipes too big for a crafting table: gear, waystones and Hardness tomes."]
 	quest.2D07A9F53C740CFC.title: "Mechanical Crafting"
 	quest.2D0B9945E26F6B56.quest_desc: ["The Heavenly Conqueror is a ship in the clouds. An airship or a very tall tower gets you there."]
@@ -447,7 +455,7 @@
 	quest.2E3C640C0E9BCEDF.title: "&cRanged 25"
 	quest.2EE8DBD9ED51E927.quest_desc: ["Signals split the line into blocks; track observers tell redstone when a train passes."]
 	quest.2EE8DBD9ED51E927.title: "Traffic Control"
-	quest.2EF09854B0FC5403.quest_desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay Elvarg, the dragon of Crandor.", "", "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."]
+	quest.2EF09854B0FC5403.quest_desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay the Ender Dragon.", "", "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."]
 	quest.2EF09854B0FC5403.quest_subtitle: "Started by the Champions' Guild"
 	quest.2EF09854B0FC5403.title: "&6Dragon Slayer I"
 	quest.2F6270CB2985EC5F.quest_desc: ["Copper and zinc in a heated basin give brass."]
@@ -515,7 +523,7 @@
 	quest.39FD1FA2F1B75A78.title: "Aeronaut's Set"
 	quest.3A35D7C2F436EB92.title: "Brass Casing"
 	quest.3A55BEAD0546926A.title: "Stone Age"
-	quest.3A69AE942A765080.quest_desc: ["Elvarg's breath cooks people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and her fire does a fifth of the harm."]
+	quest.3A69AE942A765080.quest_desc: ["A dragon's breath melts people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and a dragon's breath does a fifth of the harm, the Ender Dragon's as well as Elvarg's.", "", "&7Lost it? The mayor has Brann copy it for 2,000 coins."]
 	quest.3A69AE942A765080.title: "An Anti-dragon Shield"
 	quest.3A83D5B48D315F47.quest_desc: ["Reach &eFishing 75&r. Fishing gives better catches."]
 	quest.3A83D5B48D315F47.title: "&aFishing 75"
@@ -617,7 +625,7 @@
 	quest.4947E85286FBECA2.title: "&aFarming 25"
 	quest.4967BBE9FD472FB4.quest_desc: ["The Lost Item Compass, a sculk sensor, two comparators and a precision mechanism. Its switch adds &eanything&r: it also points at chests and players holding your item, without saying which."]
 	quest.4967BBE9FD472FB4.title: "Seeker's Compass"
-	quest.49F46141DFEDD2C6.quest_desc: ["The Champions' Guild gives its piece to those who prove their arm against the dead."]
+	quest.49F46141DFEDD2C6.quest_desc: ["The Champions' Guild gives its piece to those who prove their arm against the Endermen: the Ender Dragon's own."]
 	quest.49F46141DFEDD2C6.title: "Map Part: The Guild's Trial"
 	quest.49FBDD60BE536D27.quest_desc: ["An experience hatch stores your own levels as liquid, and gives them back."]
 	quest.49FBDD60BE536D27.title: "Spirit-Taking"
@@ -654,7 +662,7 @@
 	quest.4F8E07BC0C47B163.title: "Nourishing!"
 	quest.4FEE26AC564DC139.quest_desc: ["Reach &eMining 50&r. Mining gives faster mining.", "", "&eUnlocked on the way:&r", "• 30: diamond picks, Hardness III (diamonds, obsidian) and the Prospector's Pickaxe", "• 35: the Prospector's set", "• 40: Hardness IV (ancient debris) and the Excavator's Pickaxe", "• 50: netherite picks and Hardness V"]
 	quest.4FEE26AC564DC139.title: "&aMining 50"
-	quest.5025E32F75521917.quest_desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew Elvarg. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", "", "&7Kiln Hollow has a waystone: touch it so you can come straight back."]
+	quest.5025E32F75521917.quest_desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew the Ender Dragon. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", "", "&7Kiln Hollow has a waystone: touch it so you can come straight back."]
 	quest.5025E32F75521917.quest_subtitle: "Started by the Champions' Guild"
 	quest.5025E32F75521917.title: "&6The Fight Pits"
 	quest.5032BD083368AADD.quest_desc: ["Found in Nether chests."]
@@ -780,7 +788,7 @@
 	quest.6023EB023769D255.title: "&cRanged 99"
 	quest.609C15735B7DD942.quest_desc: ["Ancient debris needs &eHardness IV&r on your pickaxe and Mining 40, to mine and to smelt. Bastion chests carry netherite scrap, which has no gate."]
 	quest.609C15735B7DD942.title: "Netherite"
-	quest.60C14FFAEB799C74.quest_desc: ["You slew Elvarg, the dragon of Crandor.", "", "&eRewards:&r 2 quest points, the right to wear dragonscale and dragonsteel armour, 20,000 Attack and Defence XP, a fortune in coins."]
+	quest.60C14FFAEB799C74.quest_desc: ["You slew the Ender Dragon.", "", "&eRewards:&r 2 quest points, Dragon Slayer II and the Fight Pits, 15,000 Attack and Defence XP, coins."]
 	quest.60C14FFAEB799C74.quest_subtitle: "Dragon Slayer I"
 	quest.60C14FFAEB799C74.title: "&aQuest complete!"
 	quest.60EE714B5E000FF1.title: "Delightful Decade"
@@ -869,6 +877,8 @@
 	quest.69F536FA355762E0.title: "&6Crafting 10"
 	quest.69F81CCCA0DC03BC.quest_desc: ["Grow every food plant there is: vegetables, fruit, fungi and roots."]
 	quest.69F81CCCA0DC03BC.title: "Crop Rotation"
+	quest.6A40369B8D2EC0C6.quest_desc: ["No map shows Crandor any more. Wizard Traiborn, in his tower by the wall, can scry it: his Map to Crandor is a compass that points to the memorial at the foot of her hill."]
+	quest.6A40369B8D2EC0C6.title: "The Isle of Crandor"
 	quest.6A6C2B0374B4AF96.quest_desc: ["Found in forest and jungle chests."]
 	quest.6A6C2B0374B4AF96.title: "Leafy Mantle"
 	quest.6ADD54FE980D3845.quest_desc: ["After the dragon a gateway opens. An ender pearl through it puts you in the outer End."]
@@ -882,7 +892,7 @@
 	quest.6B975E15BFC541FC.title: "End Lighthouse"
 	quest.6BA06D227782B3AF.quest_desc: ["Bring Brakka, at his forge in Kiln Hollow, what the key is made of."]
 	quest.6BA06D227782B3AF.title: "The Infernal Key"
-	quest.6BFA736EC61E0DA6.quest_desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither, the Ender Dragon and the Warden.", "", "&7The Wither drops the nether star the Infernal Key needs."]
+	quest.6BFA736EC61E0DA6.quest_desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither and the Warden, and Elvarg of Crandor (Dragon Slayer II).", "", "&7The Wither drops the nether star the Infernal Key needs."]
 	quest.6BFA736EC61E0DA6.title: "The Great Beasts"
 	quest.6C33C59167DDCBE0.quest_desc: ["Structory Towers: a wizard lived here. Check the top floor."]
 	quest.6C33C59167DDCBE0.title: "Wizard Tower"
@@ -906,13 +916,14 @@
 	quest.6ED31CFF32B4DC2F.title: "Stack Upgrade II"
 	quest.6F11CCE68303F7B7.quest_desc: ["Keep a small stack on you. It counts in your inventory, hotbar, off-hand or a backpack you carry, and one is used per death."]
 	quest.6F11CCE68303F7B7.title: "Three in the Pocket"
-	quest.6F362A6C985F8F78.quest_desc: ["Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.", "", "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", "", "If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back."]
-	quest.6F362A6C985F8F78.title: "&cElvarg"
 	quest.6F46C1816C7EA4AC.title: "Emerald Peaks"
 	quest.6F86C5A7CA35337C.quest_desc: ["At Enchanting 20 the raised enchantments allow level VI. Combine two Sharpness V books at an anvil, or roll it at the table."]
 	quest.6F86C5A7CA35337C.title: "Past the Limit"
 	quest.6FBEA446F15D78AF.quest_desc: ["Three keys that answer most questions:", "• &eR&r on an item: how to make it (JEI). &eU&r: what it is used for.", "• Hold &eW&r over a Create item: a Ponder scene shows it working.", "• Wear &eEngineer's Goggles&r to read speed and stress off machines.", "• &eF5&r cycles to an over-the-shoulder camera, handy for exploring and fights.", "• &eCtrl + mouse wheel&r zooms this quest map.", "", "&7The Mods tab in the launcher lists every mod with a short description."]
 	quest.6FBEA446F15D78AF.title: "Field Notes"
+	quest.6FCC96BD0E5BE815.quest_desc: ["After Dragon Slayer I, Oziach has a score to settle: Elvarg of Crandor burnt his ship and half his crew, and every ship that has gone near her isle since."]
+	quest.6FCC96BD0E5BE815.quest_subtitle: "Started by Oziach"
+	quest.6FCC96BD0E5BE815.title: "&6Dragon Slayer II"
 	quest.700E1D9405CC8E60.title: "Pickup and Magnet"
 	quest.703D761DDAD49C6C.title: "Blazing Enchantment"
 	quest.7059E30B38F68E04.quest_desc: ["A hundred chests opened. Lootr hands out a trophy."]
@@ -952,6 +963,8 @@
 	quest.7589B78C135663B5.title: "Aviator"
 	quest.763B2E40973AE7F7.quest_desc: ["Brass casings, andesite alloy and a lantern. The lamp alone gives Night Vision underground; the full set gives Haste and a chance of double ore drops.", "&7Needs Mining 35. With the Clot of Time relic: Haste II."]
 	quest.763B2E40973AE7F7.title: "Prospector's Set"
+	quest.765B1B7F8B581B33.quest_desc: ["Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.", "", "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", "", "If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.", "", "&7Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back."]
+	quest.765B1B7F8B581B33.title: "&cElvarg"
 	quest.76E4BD5934F09FD6.quest_desc: ["Illager Invasion adds fortified camps with new illagers: basher, provoker, invoker. Bring friends."]
 	quest.76E4BD5934F09FD6.title: "The Illager Fort"
 	quest.76E8CCC8FC0428CC.quest_desc: ["Sturdy sheets and diamonds. Reinforced deepslate and budding amethyst, at Mining 50. Reinforced deepslate drops itself."]
@@ -972,6 +985,8 @@
 	quest.79C2647D374D0278.title: "&cHitpoints 75"
 	quest.7A4552D518DDE81E.quest_desc: ["Buried treasure only, one per chest; treasure maps come from shipwrecks and ocean ruins. Every new Heart starts with one."]
 	quest.7A4552D518DDE81E.title: "Heart of the Sea"
+	quest.7A7CCAA827C344C6.quest_desc: ["To find a dragon, Traiborn's spell needs the breath of a dragon: two bottles of the Ender Dragon's breath (catch it in a glass bottle on her island), and eight blaze powder."]
+	quest.7A7CCAA827C344C6.title: "What the Scrying Needs"
 	quest.7A8548237DEB6F6E.quest_desc: ["Zinc hides in the middle and lower layers. Press &eR&r on zinc ore in JEI to see the heights it spawns at.", "Zinc ore needs &eHardness I&r on your pickaxe (a crafting-table tome, Mining 10). Drill contraptions and the chests of Create ruins give raw zinc too, and Mining 10 is what lets a machine take it. You will need a lot of it for brass."]
 	quest.7A8548237DEB6F6E.title: "Zinc Hunt"
 	quest.7AD39FF2D6EF980B.quest_desc: ["Reach &eCrafting 25&r. Crafting gives XP from everything you craft."]
@@ -1018,7 +1033,6 @@
 	reward_table.4A769831A3D17A9D.title: "Engineer's Crate"
 	reward_table.6BEF5404D318C66E.title: "Master's Cache"
 	task.001B653AFE21341D.title: "Offer to help the Cook"
-	task.005B02B98D7242DE.title: "Slay Elvarg"
 	task.0107505D942E21FE.title: "Show Elder Ashka your Fire Cape"
 	task.0262E8B8D100926B.title: "Total level 250"
 	task.028A827B62B8932F.title: "Got it"
@@ -1027,12 +1041,14 @@
 	task.045C049531AE2E11.title: "I built my legacy"
 	task.0528FB0EF90324F3.title: "Ask Brann for a new sword"
 	task.05487329B4EB197A.title: "Crafting level 25"
+	task.06A9E025580E09DC.title: "Bring Elvarg's head to Oziach"
 	task.076BEAA70434E897.title: "Add an enchantment to an enchanting template"
 	task.08DF0297AFE991AB.title: "A set and its relic, together"
 	task.08EE9869FBD7713A.title: "Collect dragon's breath"
 	task.0A4620E94EE4DEA7.title: "Compact items in a basin"
 	task.0BFC231DBC52126C.title: "Mining level 50"
 	task.0C81425927F0EC9C.title: "Cook with a skillet"
+	task.0D006DBE3B5162FF.title: "Finish Dragon Slayer II"
 	task.0D831586539FE852.title: "Pump from an infinite lava lake"
 	task.0E6BB7E0E4BDC991.title: "Have Brakka forge an Infernal Key"
 	task.0E9C2C0CA54C59A9.title: "Obtain an experience lantern"
@@ -1040,7 +1056,7 @@
 	task.0F82105158D6AB10.title: "A book of Mending"
 	task.0F859D5EAA3757A9.title: "Agility level 99"
 	task.0FC05B182BB9DDF1.title: "Smithing level 10"
-	task.1065B441AEA70305.title: "Bring Elvarg's head to Oziach"
+	task.1065B441AEA70305.title: "Bring the Ender Dragon's head to Oziach"
 	task.10E9A500D94DD936.title: "Complete 500 missions"
 	task.10F3C19DA33C4079.title: "Kill a raid captain"
 	task.11D0A8B5370E498A.title: "A book of Sharpness X"
@@ -1068,7 +1084,7 @@
 	task.1BDC11890252376A.title: "Assemble a train"
 	task.1C86C98ED75BC71A.title: "Run a boiler at maximum power"
 	task.1D4DC35F70270980.title: "I made some friends"
-	task.1D65A53F79368A47.title: "Hear about Elvarg from Oziach"
+	task.1D65A53F79368A47.title: "Hear about the Ender Dragon from Oziach"
 	task.1DFB1C52587D0BDB.title: "Give a driver a schedule"
 	task.1E0B70D49B437B09.title: "Total level 750"
 	task.1E4B43D0D9822D52.title: "Charge a respawn anchor"
@@ -1116,6 +1132,7 @@
 	task.36C16DA6DFDE0B7F.title: "Defence level 10"
 	task.36D9364B933E096E.title: "Obtain nuggets of experience"
 	task.378C9080FF311EAA.title: "Obtain a blaze enchanter"
+	task.38DE6E8600D677F6.title: "Hear about Elvarg from Oziach"
 	task.3960EF91492B34CB.title: "Three lines meet at my station"
 	task.39E3440AB9DC3AC4.title: "Hear of the Inferno"
 	task.3AEAB2E3FFD715E5.title: "Total level 1386"
@@ -1127,6 +1144,7 @@
 	task.3F8193F3B57EBE21.title: "Total level 500"
 	task.3F9E229FA83BCD41.title: "Cooking level 50"
 	task.3FAC20D5D82FFB77.title: "A book of Sharpness VIII"
+	task.400B407A99CC6328.title: "Slay Elvarg"
 	task.40BBB80E75D17A8D.title: "Place a feast"
 	task.419615140253F3EB.title: "Understood"
 	task.41C3372668E0D35D.title: "Farming level 50"
@@ -1158,8 +1176,10 @@
 	task.4B1C7BE52A2C4FD7.title: "Attack level 99"
 	task.4B72F6A67ED1A0E4.title: "Give the Elder the offering"
 	task.4BF994C58320B80F.title: "Talk to the mayor"
+	task.4C790ED04765BCDB.title: "Slay the Ender Dragon"
 	task.4C8A68F1BF4EAC05.title: "Cure a zombie villager"
 	task.4CE188EBE076F344.title: "I know what a death costs"
+	task.4D721A4D3743C9DC.title: "Have Traiborn scry Crandor"
 	task.4DA97E840D2B2C7F.title: "A waystone stands at my base"
 	task.5021F861265A47B3.title: "I opened the board"
 	task.5092FA5802B1D659.title: "Understood"

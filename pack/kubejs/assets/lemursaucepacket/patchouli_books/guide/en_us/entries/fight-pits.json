@@ -28,7 +28,7 @@
     {
       "type": "patchouli:text",
       "title": "Getting in",
-      "text": "Three main quests, one after another (they show up in your book under $(bold)Main Quests$() once someone gives them to you; see $(l:lemursaucepacket:quests)Quests$(/l)):$(br2)1. $(bold)The Fight Pits$() (after $(l:lemursaucepacket:elvarg)Dragon Slayer I$(/l)): Guildmaster Greaves gives you the Kilnfolk Pass. At Kiln Hollow, Elder Ashka wants three things before she vouches for you:"
+      "text": "Three main quests, one after another (they show up in your book under $(bold)Main Quests$() once someone gives them to you; see $(l:lemursaucepacket:quests)Quests$(/l)):$(br2)1. $(bold)The Fight Pits$() (after $(l:lemursaucepacket:quests)Dragon Slayer I$(/l), the Ender Dragon): Guildmaster Greaves gives you the Kilnfolk Pass. At Kiln Hollow, Elder Ashka wants three things before she vouches for you:"
     },
     {
       "type": "patchouli:text",
@@ -36,7 +36,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "2. $(bold)Ashes of the Kiln$() (after the Fire Cape): slay the $(bold)Wither, the Ender Dragon and the Warden$(); have Brakka forge an $(bold)Infernal Key$() from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods; and grow to $(bold)Defence 80, Hitpoints 80, and Attack or Ranged 80$(). Give the Elder the key.$(br)3. $(bold)The Inferno$(): Keeper Zarn opens the seal. Win, and show the Elder your Infernal Cape."
+      "text": "2. $(bold)Ashes of the Kiln$() (after the Fire Cape): slay the $(bold)Wither and the Warden$(), and finish $(bold)Dragon Slayer II$() ($(l:lemursaucepacket:elvarg)Elvarg$(/l)); have Brakka forge an $(bold)Infernal Key$() from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods; and grow to $(bold)Defence 80, Hitpoints 80, and Attack or Ranged 80$(). Give the Elder the key.$(br)3. $(bold)The Inferno$(): Keeper Zarn opens the seal. Win, and show the Elder your Infernal Cape."
     },
     {
       "type": "patchouli:text",

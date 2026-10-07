@@ -1,0 +1,55 @@
+{
+  "title": "Dragon Slayer II",
+  "stages": [
+    "q_ds2_started",
+    "q_ds2_map",
+    "q_ds2_elvarg",
+    "q_ds2_done"
+  ],
+  "steps": {
+    "scry": {
+      "needs": [
+        "q_ds2_started"
+      ],
+      "lacks": [
+        "q_ds2_map"
+      ],
+      "take": [
+        {
+          "id": "minecraft:dragon_breath",
+          "count": 2
+        },
+        {
+          "id": "minecraft:blaze_powder",
+          "count": 8
+        }
+      ],
+      "special": [
+        "crandor_map"
+      ],
+      "stage": "q_ds2_map",
+      "message": "Traiborn scries Crandor: a Map to Crandor.",
+      "ok": "ds2_scried",
+      "missing": "ds2_scry_missing"
+    },
+    "head": {
+      "needs": [
+        "q_ds2_elvarg"
+      ],
+      "lacks": [
+        "q_ds2_done"
+      ],
+      "take": [
+        {
+          "id": "iceandfire:dragon_skull_fire",
+          "count": 1,
+          "quest": "elvarg_head"
+        }
+      ],
+      "stage": "q_ds2_done",
+      "message": "You give Oziach Elvarg's head.",
+      "ok": "ds2_done",
+      "missing": "ds2_no_head"
+    }
+  }
+}

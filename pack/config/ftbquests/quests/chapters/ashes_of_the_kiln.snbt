@@ -23,7 +23,7 @@
 			y: -2.1d
 		}
 	]
-	order_index: 5
+	order_index: 6
 	progression_mode: "default"
 	quest_links: [ ]
 	quests: [
@@ -125,16 +125,18 @@
 					value: 1L
 				}
 				{
-					entity: "minecraft:ender_dragon"
+					entity: "minecraft:warden"
 					id: "3F5D0504D6000E7F"
 					type: "kill"
 					value: 1L
 				}
 				{
-					entity: "minecraft:warden"
+					icon: {
+						id: "iceandfire:dragon_skull_fire"
+					}
 					id: "0D006DBE3B5162FF"
-					type: "kill"
-					value: 1L
+					stage: "q_ds2_done"
+					type: "gamestage"
 				}
 			]
 			x: 2.3d

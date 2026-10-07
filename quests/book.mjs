@@ -644,9 +644,9 @@ export default {
       group: 'main_quests',
       title: 'Dragon Slayer I',
       subtitle: 'Main quest · Experienced · 2 quest points',
-      about: "The Champions' Guild sends its proven adventurers after Elvarg, the dragon of Crandor.",
-      unlocks: 'the right to wear dragonscale and dragonsteel armour, Attack and Defence XP, and a fortune.',
-      icon: 'iceandfire:dragon_skull_fire',
+      about: "The Champions' Guild sends its proven adventurers after the oldest dragon there is: the Ender Dragon, on her island at the end of the world.",
+      unlocks: 'Dragon Slayer II, the Fight Pits, Attack and Defence XP, and coins.',
+      icon: 'minecraft:dragon_head',
       quests: [
         {
           key: 'start',
@@ -655,11 +655,11 @@ export default {
           shape: 'gear',
           size: 1.6,
           invisible: true,
-          icon: 'iceandfire:dragon_skull_fire',
+          icon: 'minecraft:dragon_head',
           tier: 2,
           auto: true,
-          desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay Elvarg, the dragon of Crandor.", '', "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."],
-          tasks: [{ stage: 'q_ds_started', title: "Ask the Champions' Guild for a challenge", icon: 'iceandfire:dragon_skull_fire' }]
+          desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay the Ender Dragon.", '', "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."],
+          tasks: [{ stage: 'q_ds_started', title: "Ask the Champions' Guild for a challenge", icon: 'minecraft:dragon_head' }]
         },
         {
           key: 'oziach',
@@ -669,8 +669,8 @@ export default {
           tier: 1,
           auto: true,
           icon: 'minecraft:iron_chestplate',
-          desc: ['Oziach keeps the armoury on the ring street. He came closer to killing Elvarg than anyone.'],
-          tasks: [{ stage: 'q_ds_oziach', title: 'Hear about Elvarg from Oziach', icon: 'minecraft:iron_chestplate' }]
+          desc: ['Oziach keeps the armoury on the ring street. He came closer to killing the Ender Dragon than anyone.'],
+          tasks: [{ stage: 'q_ds_oziach', title: 'Hear about the Ender Dragon from Oziach', icon: 'minecraft:iron_chestplate' }]
         },
         {
           key: 'shield',
@@ -680,7 +680,7 @@ export default {
           tier: 1,
           auto: true,
           icon: 'minecraft:shield',
-          desc: ["Elvarg's breath cooks people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and her fire does a fifth of the harm."],
+          desc: ["A dragon's breath melts people in their armour. The mayor keeps the city's old anti-dragon shield: hold it and a dragon's breath does a fifth of the harm, the Ender Dragon's as well as Elvarg's.", '', tip('Lost it? The mayor has Brann copy it for 2,000 coins.')],
           tasks: [{ stage: 'q_ds_shield', title: 'Get the shield from the mayor', icon: 'minecraft:shield' }]
         },
         {
@@ -691,7 +691,7 @@ export default {
           tier: 2,
           auto: true,
           icon: 'minecraft:paper',
-          desc: ['Lucan the Jeweller bought a scrap of the map from a sailor. He wants 10,000 coins for it.'],
+          desc: ['Lucan the Jeweller bought a scrap of the map from a treasure hunter. He wants 10,000 coins for it.'],
           tasks: [{ stage: 'q_ds_piece1', title: 'Buy the piece from Lucan', icon: 'minecraft:paper' }]
         },
         {
@@ -713,38 +713,119 @@ export default {
           tier: 3,
           auto: true,
           icon: 'minecraft:paper',
-          desc: ["The Champions' Guild gives its piece to those who prove their arm against the dead."],
-          tasks: [{ kill: 'minecraft:zombie', count: 20 }, { kill: 'minecraft:skeleton', count: 10 }],
+          desc: ["The Champions' Guild gives its piece to those who prove their arm against the Endermen: the Ender Dragon's own."],
+          tasks: [{ kill: 'minecraft:enderman', count: 12 }],
           reward: { items: [QUEST_ITEMS.map_piece_3] }
         },
         {
           key: 'map',
-          title: 'The Map to Crandor',
+          title: 'The Map to the Stronghold',
           after: ['oziach'],
           hidden: true,
           tier: 2,
           auto: true,
           icon: 'minecraft:compass',
-          desc: ['Bring Oziach all three pieces and he puts them together: a map whose needle points to Crandor.'],
+          desc: ['Bring Oziach all three pieces and he puts them together: a map whose needle points to the stronghold whose portal leads to the End.'],
           tasks: [{ stage: 'q_ds_map', title: 'Have Oziach make the map', icon: 'minecraft:compass' }]
         },
         {
-          key: 'elvarg',
-          title: '&cElvarg',
+          key: 'dragon',
+          title: '&5The Ender Dragon',
           after: ['map'],
           hidden: true,
           shape: 'gear',
           size: 1.4,
           tier: 4,
           auto: true,
-          icon: 'iceandfire:dragon_skull_fire',
-          desc: ['Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.', '', "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", '', 'If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.', '', tip('Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back.')],
-          tasks: [{ stage: 'q_ds_elvarg', title: 'Slay Elvarg', icon: 'iceandfire:dragon_skull_fire' }]
+          icon: 'minecraft:dragon_egg',
+          desc: [
+            "Follow the map to the stronghold and find its portal room. Fill the portal's frame with eyes of ender (blaze powder and ender pearls) and go through.",
+            '',
+            'On her island, break the end crystals on the pillars first: they heal her. Everyone on this step who is near her when she falls gets her head.',
+            '',
+            'Someone slew her before you? Set four end crystals on the edges of the exit portal and she rises again.',
+            '',
+            tip('Hold the Anti-dragon Shield in her breath. Bring a bow for the caged crystals, blocks to pillar up, slow falling or water, and friends. Bottle some of her breath while you are there: Dragon Slayer II needs it.')
+          ],
+          tasks: [{ stage: 'q_ds_dragon', title: 'Slay the Ender Dragon', icon: 'minecraft:dragon_egg' }]
         },
         {
           key: 'done',
           title: '&aQuest complete!',
           subtitle: 'Dragon Slayer I',
+          after: ['dragon'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.6,
+          icon: 'minecraft:dragon_head',
+          tier: 5,
+          auto: true,
+          desc: ['You slew the Ender Dragon.', '', '&eRewards:&r 2 quest points, Dragon Slayer II and the Fight Pits, 15,000 Attack and Defence XP, coins.'],
+          tasks: [{ stage: 'q_ds_done', title: "Bring the Ender Dragon's head to Oziach", icon: 'minecraft:dragon_head' }],
+          reward: { coins: 15000, commands: ['pmmo admin {p} add attack xp 15000', 'pmmo admin {p} add defence xp 15000'] }
+        }
+      ]
+    },
+    {
+      key: 'dragon_slayer_2',
+      group: 'main_quests',
+      title: 'Dragon Slayer II',
+      subtitle: 'Main quest · Master · 3 quest points',
+      about: "The Ender Dragon is dead, but she isn't the dragon Oziach lost his ship to. That was Elvarg, a fire dragon of the old world, on the isle of Crandor.",
+      unlocks: 'the right to wear dragonscale and dragonsteel armour, Attack, Strength and Defence XP, and a fortune.',
+      icon: 'iceandfire:dragon_skull_fire',
+      quests: [
+        {
+          key: 'start',
+          title: '&6Dragon Slayer II',
+          subtitle: 'Started by Oziach',
+          shape: 'gear',
+          size: 1.6,
+          invisible: true,
+          icon: 'iceandfire:dragon_skull_fire',
+          tier: 3,
+          auto: true,
+          desc: ['After Dragon Slayer I, Oziach has a score to settle: Elvarg of Crandor burnt his ship and half his crew, and every ship that has gone near her isle since.'],
+          tasks: [{ stage: 'q_ds2_started', title: 'Hear about Elvarg from Oziach', icon: 'iceandfire:dragon_skull_fire' }]
+        },
+        {
+          key: 'scry_items',
+          title: 'What the Scrying Needs',
+          after: ['start'],
+          hidden: true,
+          optional: true,
+          tier: 3,
+          desc: ["To find a dragon, Traiborn's spell needs the breath of a dragon: two bottles of the Ender Dragon's breath (catch it in a glass bottle on her island), and eight blaze powder."],
+          tasks: [{ item: 'minecraft:dragon_breath', count: 2 }, { item: 'minecraft:blaze_powder', count: 8 }]
+        },
+        {
+          key: 'crandor',
+          title: 'The Isle of Crandor',
+          after: ['start'],
+          hidden: true,
+          tier: 3,
+          auto: true,
+          icon: 'minecraft:compass',
+          desc: ['No map shows Crandor any more. Wizard Traiborn, in his tower by the wall, can scry it: his Map to Crandor is a compass that points to the memorial at the foot of her hill.'],
+          tasks: [{ stage: 'q_ds2_map', title: 'Have Traiborn scry Crandor', icon: 'minecraft:compass' }]
+        },
+        {
+          key: 'elvarg',
+          title: '&cElvarg',
+          after: ['crandor'],
+          hidden: true,
+          shape: 'gear',
+          size: 1.4,
+          tier: 5,
+          auto: true,
+          icon: 'iceandfire:dragon_skull_fire',
+          desc: ['Follow the map to Crandor. At the foot of her hill stands a memorial, where old Ned keeps watch: speak to him to go up to Elvarg, a fire dragon in her prime.', '', "Fight her alone, or open a co-op fight in Ned's window that friends join from the same window (up to four). Everyone on this step in the fight gets her head when she falls.", '', 'If she gets you, nothing drops: Ned keeps your things at the memorial until you come back for them.', '', tip('Hold the Anti-dragon Shield when she breathes. Bring food, potions and friends. Touch the memorial waystone so you can come straight back.')],
+          tasks: [{ stage: 'q_ds2_elvarg', title: 'Slay Elvarg', icon: 'iceandfire:dragon_skull_fire' }]
+        },
+        {
+          key: 'done',
+          title: '&aQuest complete!',
+          subtitle: 'Dragon Slayer II',
           after: ['elvarg'],
           hidden: true,
           shape: 'gear',
@@ -752,19 +833,18 @@ export default {
           icon: 'iceandfire:dragon_skull_fire',
           tier: 5,
           auto: true,
-          desc: ['You slew Elvarg, the dragon of Crandor.', '', '&eRewards:&r 2 quest points, the right to wear dragonscale and dragonsteel armour, 20,000 Attack and Defence XP, a fortune in coins.'],
-          tasks: [{ stage: 'q_ds_done', title: "Bring Elvarg's head to Oziach", icon: 'iceandfire:dragon_skull_fire' }],
-          reward: { coins: 25000, commands: ['pmmo admin {p} add attack xp 20000', 'pmmo admin {p} add defence xp 20000'] }
+          desc: ['You slew Elvarg, the dragon of Crandor.', '', '&eRewards:&r 3 quest points, the right to wear dragonscale and dragonsteel armour, 25,000 Attack, Strength and Defence XP, a fortune in coins.'],
+          tasks: [{ stage: 'q_ds2_done', title: "Bring Elvarg's head to Oziach", icon: 'iceandfire:dragon_skull_fire' }],
+          reward: { coins: 30000, commands: ['pmmo admin {p} add attack xp 25000', 'pmmo admin {p} add strength xp 25000', 'pmmo admin {p} add defence xp 25000'] }
         }
       ]
     },
-
     {
       key: 'fight_pits',
       group: 'main_quests',
       title: 'The Fight Pits',
       subtitle: 'Main quest · Master · 2 quest points',
-      about: "The Kilnfolk, ashen piglins who left the Nether for the fire mountains, test their champions in the Fight Pits: thirty waves of pit beasts, and Kiln-Tok-Jad at the end. They've heard of Elvarg's fall.",
+      about: "The Kilnfolk, ashen piglins who left the Nether for the fire mountains, test their champions in the Fight Pits: thirty waves of pit beasts, and Kiln-Tok-Jad at the end. They've heard of the Ender Dragon's fall.",
       unlocks: 'the Fire Cape (+12% critical damage and Fire Resistance), Attack, Strength, Defence and Hitpoints XP, and a fortune.',
       icon: 'minecraft:magma_cream',
       quests: [
@@ -778,7 +858,7 @@ export default {
           icon: 'minecraft:magma_cream',
           tier: 3,
           auto: true,
-          desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew Elvarg. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", '', tip('Kiln Hollow has a waystone: touch it so you can come straight back.')],
+          desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew the Ender Dragon. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", '', tip('Kiln Hollow has a waystone: touch it so you can come straight back.')],
           tasks: [{ stage: 'q_pits_started', title: 'Take the Kilnfolk Pass from Greaves', icon: 'minecraft:compass' }]
         },
         {
@@ -906,8 +986,8 @@ export default {
           tier: 5,
           auto: true,
           icon: 'minecraft:wither_skeleton_skull',
-          desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither, the Ender Dragon and the Warden.", '', tip('The Wither drops the nether star the Infernal Key needs.')],
-          tasks: [{ kill: 'minecraft:wither', count: 1 }, { kill: 'minecraft:ender_dragon', count: 1 }, { kill: 'minecraft:warden', count: 1 }],
+          desc: ["The Inferno's seal opens to no one the world doesn't already fear. Slay the Wither and the Warden, and Elvarg of Crandor (Dragon Slayer II).", '', tip('The Wither drops the nether star the Infernal Key needs.')],
+          tasks: [{ kill: 'minecraft:wither', count: 1 }, { kill: 'minecraft:warden', count: 1 }, { stage: 'q_ds2_done', title: 'Finish Dragon Slayer II', icon: 'iceandfire:dragon_skull_fire' }],
           reward: { commands: ['tag {p} add q_ash_beasts'] }
         },
         {

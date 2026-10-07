@@ -107,9 +107,9 @@
           Priority:35,
           Texts:[
             {
-              Text:"Champion! Word of Elvarg's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.
+              Text:"Champion! Word of the Ender Dragon's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.
 
-Ashen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew Elvarg."
+Ashen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew the Ender Dragon."
             }
           ],
           Conditions:[
@@ -167,7 +167,7 @@ Ashen piglins, @initiator, who left the Nether long ago. Their champions fight i
           Priority:30,
           Texts:[
             {
-              Text:"Elvarg is slain! The whole realm will hear of it. The Champions' Guild salutes you, @initiator."
+              Text:"The Ender Dragon is slain! The whole realm will hear of it. The Champions' Guild salutes you, @initiator."
             }
           ],
           Conditions:[
@@ -194,7 +194,7 @@ Ashen piglins, @initiator, who left the Nether long ago. Their champions fight i
           Priority:20,
           Texts:[
             {
-              Text:"Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about Elvarg than any man living."
+              Text:"Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about dragons than any man living."
             }
           ],
           Conditions:[
@@ -297,11 +297,11 @@ Ashen piglins, @initiator, who left the Nether long ago. Their champions fight i
         },
         {
           Label:"ds_start",
-          Name:"Elvarg",
+          Name:"The Ender Dragon",
           Priority:-1,
           Texts:[
             {
-              Text:"Very well. There is a dragon, Elvarg, on the isle of Crandor. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done."
+              Text:"Very well. Under one of the old strongholds lies a portal to the End, and on its island lives the oldest dragon there is: the Ender Dragon. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done."
             }
           ],
           Buttons:[

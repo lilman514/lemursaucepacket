@@ -7,7 +7,7 @@
     "q_ds_piece1",
     "q_ds_piece2",
     "q_ds_map",
-    "q_ds_elvarg",
+    "q_ds_dragon",
     "q_ds_done"
   ],
   "steps": {
@@ -38,6 +38,31 @@
       "message": "The mayor gives you an Anti-dragon Shield.",
       "ok": "ds_shield_given"
     },
+    "shield_again": {
+      "needs": [
+        "q_ds_shield"
+      ],
+      "coins": 2000,
+      "give": [
+        {
+          "id": "minecraft:shield",
+          "count": 1,
+          "components": {
+            "minecraft:custom_name": "{\"text\":\"Anti-dragon Shield\",\"color\":\"gold\",\"italic\":false}",
+            "minecraft:lore": [
+              "{\"text\":\"Lemurton has kept it since\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"the old dragon wars.\",\"color\":\"gray\",\"italic\":false}"
+            ],
+            "minecraft:custom_data": {
+              "lsp_quest": "antidragon_shield"
+            }
+          }
+        }
+      ],
+      "message": "The mayor has Brann copy the old shield for you.",
+      "ok": "ds_shield_again",
+      "missing": "ds_shield_poor"
+    },
     "piece1": {
       "needs": [
         "q_ds_oziach"
@@ -53,7 +78,7 @@
           "components": {
             "minecraft:custom_name": "{\"text\":\"Map Part (1 of 3)\",\"color\":\"yellow\",\"italic\":false}",
             "minecraft:lore": [
-              "{\"text\":\"A torn scrap of an old sea chart.\",\"color\":\"gray\",\"italic\":false}",
+              "{\"text\":\"A torn scrap of an old map.\",\"color\":\"gray\",\"italic\":false}",
               "{\"text\":\"Lucan the Jeweller sold it to you.\",\"color\":\"gray\",\"italic\":false}"
             ],
             "minecraft:custom_data": {
@@ -134,29 +159,29 @@
         }
       ],
       "special": [
-        "crandor_map"
+        "stronghold_map"
       ],
       "stage": "q_ds_map",
-      "message": "Oziach puts the three pieces together: a Map to Crandor.",
+      "message": "Oziach puts the three pieces together: a Map to the Stronghold.",
       "ok": "ds_map_made",
       "missing": "ds_pieces_missing"
     },
     "head": {
       "needs": [
-        "q_ds_elvarg"
+        "q_ds_dragon"
       ],
       "lacks": [
         "q_ds_done"
       ],
       "take": [
         {
-          "id": "iceandfire:dragon_skull_fire",
+          "id": "minecraft:dragon_head",
           "count": 1,
-          "quest": "elvarg_head"
+          "quest": "ender_dragon_head"
         }
       ],
       "stage": "q_ds_done",
-      "message": "You give Oziach Elvarg's head.",
+      "message": "You give Oziach the Ender Dragon's head.",
       "ok": "ds_done",
       "missing": "ds_no_head"
     }

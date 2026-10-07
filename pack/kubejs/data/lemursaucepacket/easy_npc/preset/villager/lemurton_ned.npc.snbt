@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Old sailor at the Crandor memorial: takes you up to Elvarg, and keeps the things of those who fall to her.",
+    description:"Old sailor at the Crandor memorial: takes you up to Elvarg (Dragon Slayer II), and keeps the things of those who fall to her.",
     entityTypeId:"easy_npc:villager",
     name:"Ned",
     variantType:"PLAINS_FISHERMAN",

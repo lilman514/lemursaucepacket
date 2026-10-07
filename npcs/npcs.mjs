@@ -75,13 +75,22 @@ export const QUESTS = {
     title: 'Dragon Slayer I',
     steps: [
       { stage: 'q_ds_started', text: "Ask the Champions' Guild for a challenge" },
-      { stage: 'q_ds_oziach', text: 'Hear about Elvarg from Oziach' },
+      { stage: 'q_ds_oziach', text: 'Hear about the Ender Dragon from Oziach' },
       { stage: 'q_ds_shield', text: 'Get an anti-dragon shield from the mayor' },
       { stage: 'q_ds_piece1', text: 'Buy a map piece from Lucan the Jeweller' },
       { stage: 'q_ds_piece2', text: "Bring Wizard Traiborn what his spell needs" },
       { stage: 'q_ds_map', text: 'Have Oziach put the map together' },
-      { stage: 'q_ds_elvarg', text: 'Slay Elvarg on Crandor' },
-      { stage: 'q_ds_done', text: "Bring Elvarg's head to Oziach" }
+      { stage: 'q_ds_dragon', text: 'Slay the Ender Dragon in the End' },
+      { stage: 'q_ds_done', text: "Bring the Ender Dragon's head to Oziach" }
+    ]
+  },
+  dragon_slayer_2: {
+    title: 'Dragon Slayer II',
+    steps: [
+      { stage: 'q_ds2_started', text: 'Hear about Elvarg from Oziach' },
+      { stage: 'q_ds2_map', text: 'Have Wizard Traiborn scry Crandor' },
+      { stage: 'q_ds2_elvarg', text: 'Slay Elvarg on Crandor' },
+      { stage: 'q_ds2_done', text: "Bring Elvarg's head to Oziach" }
     ]
   },
   fight_pits: {
@@ -100,7 +109,7 @@ export const QUESTS = {
     title: 'Ashes of the Kiln',
     steps: [
       { stage: 'q_ash_started', text: 'Hear of the Inferno from Elder Ashka' },
-      { stage: 'q_ash_beasts', text: 'Slay the Wither, the Ender Dragon and the Warden' },
+      { stage: 'q_ash_beasts', text: 'Slay the Wither and the Warden, and finish Dragon Slayer II' },
       { stage: 'q_ash_key', text: 'Have Brakka forge an Infernal Key' },
       { stage: 'q_ash_done', text: 'Give Elder Ashka the key' }
     ]
@@ -124,8 +133,11 @@ export const NPCS = {
     color: '#E0AC46',
     description: "Lemurton's mayor: greets newcomers and starts the city's first questline.",
     dialogs: [
-      dialog('ds_after', 'Welcome home', 'Lemurton is glad to have you, @initiator. And proud: not many walk out to face a dragon.', { priority: 46, conditions: [tag('q_ds_shield')], buttons: [button('Tell me about the city again', [open('about')]), goodbye] }),
-      dialog('ds_shield', 'An anti-dragon shield', 'An anti-dragon shield? So you mean to face Elvarg... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive.', {
+      dialog('ds_after', 'Welcome home', 'Lemurton is glad to have you, @initiator. And proud: not many walk out to face a dragon.', { priority: 46, conditions: [tag('q_ds_shield')], buttons: [button('Tell me about the city again', [open('about')]), button("I've lost the shield", [open('ds_shield_lost')]), goodbye] }),
+      dialog('ds_shield_lost', 'Lost it?', "Lost it! Well, Brann can copy the old one, but steel costs money: 2,000 coins.", { buttons: [button('Pay 2,000 coins', [stepCmd('dragon_slayer', 'shield_again')]), button('Never mind', [close()])] }),
+      dialog('ds_shield_again', 'A new shield', 'There. Try to keep this one.', { buttons: [goodbye] }),
+      dialog('ds_shield_poor', 'Not enough', 'Two thousand coins, @initiator. Steel is dear.', { buttons: [goodbye] }),
+      dialog('ds_shield', 'An anti-dragon shield', 'An anti-dragon shield? So you mean to face a dragon... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive.', {
         priority: 45,
         conditions: [tag('q_ds_oziach')],
         buttons: [button('Thank you, mayor', [stepCmd('dragon_slayer', 'shield')])]
@@ -249,7 +261,7 @@ export const NPCS = {
     dialogs: [
       ...shopDialogs('Precious things, bought and sold.', 'Gold, diamonds, the rare stones of the deep: I pay what they are worth, and not a coin less.'),
       dialog('ds_after', 'Precious things', 'Precious things, bought and sold. Still hunting that dragon?', { priority: 21, conditions: [tag('q_ds_piece1')], buttons: [button("Let's trade", [shopScreen()]), goodbye] }),
-      dialog('ds_piece', 'A map piece', "A map piece? Oziach sent you, I'll wager. A sailor sold me this scrap years ago, swore it showed the way to Crandor. It's yours for 10,000 coins.", {
+      dialog('ds_piece', 'A map piece', "A map piece? Oziach sent you, I'll wager. A treasure hunter sold me this scrap years ago, swore it showed the way to the old stronghold, the one with the portal under it. It's yours for 10,000 coins.", {
         priority: 20,
         conditions: [tag('q_ds_oziach')],
         buttons: [button('Buy it (10,000 coins)', [stepCmd('dragon_slayer', 'piece1')]), button("Let's trade", [shopScreen()]), button('Too rich for me', [close()])]
@@ -310,53 +322,78 @@ export const NPCS = {
     dialogs: [
       dialog('pits_champion', 'Fire Cape', "A Fire Cape! I've seen one once in my life, @initiator, on a Kilnfolk champion. The Guild has never been prouder.", { priority: 45, conditions: [tag('q_pits_done')], buttons: [goodbye] }),
       dialog('pits_go', 'Kiln Hollow', 'Follow the Kilnfolk Pass to Kiln Hollow and speak to Elder Ashka. And take a good shield: their champion breathes fire.', { priority: 40, conditions: [tag('q_pits_started')], buttons: [goodbye] }),
-      dialog('pits_offer', 'The Kilnfolk', "Champion! Word of Elvarg's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.\n\nAshen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew Elvarg.", {
+      dialog('pits_offer', 'The Kilnfolk', "Champion! Word of the Ender Dragon's fall has travelled far: as far as the fire mountains, where the Kilnfolk live.\n\nAshen piglins, @initiator, who left the Nether long ago. Their champions fight in the Fight Pits, and an outsider who survives them wins a Fire Cape. Their envoy left a pass for whoever slew the Ender Dragon.", {
         priority: 35,
         conditions: [tag('q_ds_done')],
         buttons: [button("I'll go to the Kilnfolk", [stepCmd('fight_pits', 'pass')]), button('Not now', [close()])]
       }),
       dialog('pits_pass_given', 'The pass', 'Hold the pass and it pulls toward Kiln Hollow, like a compass to its lodestone. Good luck, @initiator.', { buttons: [button("I'm on my way", [close()])] }),
-      dialog('ds_done', 'Champion', 'Elvarg is slain! The whole realm will hear of it. The Champions\' Guild salutes you, @initiator.', { priority: 30, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
-      dialog('ds_go', 'Oziach', 'Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about Elvarg than any man living.', { priority: 20, conditions: [tag('q_ds_started')], buttons: [goodbye] }),
+      dialog('ds_done', 'Champion', "The Ender Dragon is slain! The whole realm will hear of it. The Champions' Guild salutes you, @initiator.", { priority: 30, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
+      dialog('ds_go', 'Oziach', 'Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about dragons than any man living.', { priority: 20, conditions: [tag('q_ds_started')], buttons: [goodbye] }),
       dialog('default', "The Champions' Guild", "Welcome to the Champions' Guild. Only the realm's finest adventurers drink here.", { priority: 10, buttons: [button('I want to be a champion', [open('ask')]), goodbye] }),
       dialog('ask', 'Prove yourself', 'Then prove yourself. Help the people of Lemurton first: the mayor\'s newcomers, the castle cook, Sir Vyvin\'s squire. Come back when they speak well of you.', {
         buttons: [button('They do. Give me a real challenge', [cmd('tag @initiator add q_ds_started'), open('ds_start')], DRAGON_SLAYER_NEEDS.map(tag)), button("I'll come back", [close()])]
       }),
-      dialog('ds_start', 'Elvarg', 'Very well. There is a dragon, Elvarg, on the isle of Crandor. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done.', { buttons: [button("I'll find Oziach", [close()])] })
+      dialog('ds_start', 'The Ender Dragon', 'Very well. Under one of the old strongholds lies a portal to the End, and on its island lives the oldest dragon there is: the Ender Dragon. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done.', { buttons: [button("I'll find Oziach", [close()])] })
     ]
   },
   oziach: {
-    model: 'villager', variant: 'SNOW_ARMORER', name: 'Oziach', color: '#C04A3A', description: 'Old dragon slayer: Dragon Slayer I.',
+    model: 'villager', variant: 'SNOW_ARMORER', name: 'Oziach', color: '#C04A3A', description: 'Old dragon slayer: Dragon Slayer I and II.',
     dialogs: [
-      dialog('ds_done', 'Dragon Slayer', "You did it. You actually did it. You've earned the right to wear dragon armour, @initiator: no one will say otherwise while I live.", { priority: 60, conditions: [tag('q_ds_done')], buttons: [goodbye] }),
-      dialog('ds_head', 'Her head?', "You've the look of someone who's been to Crandor. Well? Did you bring me her head?", {
+      // Dragon Slayer II: Elvarg of Crandor, after the Ender Dragon.
+      dialog('ds2_honoured', 'Dragon Slayer', "Two dragons. You're the greatest dragon slayer this city has known, @initiator. Wear dragon armour with pride: no one will say otherwise while I live.", { priority: 80, conditions: [tag('q_ds2_done')], buttons: [goodbye] }),
+      dialog('ds2_head', 'Her head?', "You've the smell of smoke about you. Crandor? Well? Did you bring me Elvarg's head?", {
+        priority: 75,
+        conditions: [tag('q_ds2_elvarg')],
+        buttons: [button('Here it is', [stepCmd('dragon_slayer_2', 'head')]), button('Not yet', [close()])]
+      }),
+      dialog('ds2_done', 'Elvarg is dead', "Elvarg... dead at last. She burnt my ship and half my crew. You've earned the right to wear dragon armour, @initiator: scale and steel both.", { buttons: [button('Thank you, Oziach', [close()])] }),
+      dialog('ds2_no_head', 'No head', "Where's her head? Bring me proof, or don't come back.", { buttons: [button("I'll get it", [close()])] }),
+      dialog('ds2_go', 'Crandor', "Follow Traiborn's map to Crandor. Old Ned keeps a memorial at the foot of Elvarg's hill: he'll see you up to her. Hold your shield up when she breathes.", { priority: 70, conditions: [tag('q_ds2_map')], buttons: [goodbye] }),
+      dialog('ds2_wizard', 'Finding Crandor', "No map shows Crandor any more, and no captain will sail there. But Wizard Traiborn can scry it, if you bring him what it takes to find a dragon: the breath of another one. Bottle the Ender Dragon's.", { priority: 65, conditions: [tag('q_ds2_started')], buttons: [goodbye] }),
+      dialog('ds2_offer', 'Another dragon', "The Ender Dragon, dead. I never thought I'd see it.\n\nBut she isn't the dragon I lost my ship to, @initiator. That was Elvarg, a fire dragon of the old world, on the isle of Crandor. She's burnt every ship that went near it since. Will you hunt her?", {
+        priority: 62,
+        conditions: [tag('q_ds_done')],
+        buttons: [button("I'll hunt her", [cmd('tag @initiator add q_ds2_started'), open('ds2_wizard')]), button('Not now', [close()])]
+      }),
+      // Dragon Slayer I: the Ender Dragon.
+      dialog('ds_head', 'Her head?', "You've the look of someone who's been to the End. Well? Did you bring me her head?", {
         priority: 50,
-        conditions: [tag('q_ds_elvarg')],
+        conditions: [tag('q_ds_dragon')],
         buttons: [button('Here it is', [stepCmd('dragon_slayer', 'head')]), button('Not yet', [close()])]
       }),
-      dialog('ds_map', 'Crandor', 'Follow that map to Crandor. Kill Elvarg and bring me her head. Hold your shield up when she breathes.', { priority: 40, conditions: [tag('q_ds_map')], buttons: [goodbye] }),
+      dialog('ds_done', 'Dragon Slayer', 'You did it. You actually did it. The Ender Dragon is dead, @initiator.\n\nCome and see me again: there is another dragon I have a score to settle with.', { buttons: [button('Thank you, Oziach', [close()])] }),
+      dialog('ds_map', 'The End', 'Follow that map to the stronghold. Under it is the portal: fill its frame with eyes of ender. On her island, break her crystals first: they heal her. Hold your shield up when she breathes, and bring me her head.\n\nIf someone slew her before you, four end crystals on the edge of her portal will wake her again.', { priority: 40, conditions: [tag('q_ds_map')], buttons: [goodbye] }),
       dialog('ds_pieces', 'The map', 'Got the three pieces of the map yet? Lucan the Jeweller has one, Wizard Traiborn another, and the Guild gives the third to those who pass its trial.', {
         priority: 30,
         conditions: [tag('q_ds_oziach')],
         buttons: [button('Here they are', [stepCmd('dragon_slayer', 'map')]), button('Where are they again?', [open('ds_where')]), goodbye]
       }),
-      dialog('ds_intro', 'Elvarg', "So the Guild sent you. You want to slay Elvarg? Many have tried. She lives on Crandor, an isle no captain will sail to any more, and the only map to it was torn in three.\n\nFind the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will cook you in your armour without one.", {
+      dialog('ds_intro', 'The Ender Dragon', "So the Guild sent you. You want to slay the Ender Dragon? Many have tried. She lives on an island at the end of the world, through a portal under one of the old strongholds, and the only map to them was torn in three.\n\nFind the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will melt you in your armour without one.", {
         priority: 20,
         conditions: [tag('q_ds_started')],
         buttons: [button("I'll do it", [cmd('tag @initiator add q_ds_oziach'), open('ds_where')]), button('Maybe later', [close()])]
       }),
-      dialog('ds_where', 'The pieces', 'One piece is with Lucan the Jeweller: he bought it off a sailor and he\'ll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions\' Guild\'s: pass its trial (your quest book says how) and it\'s yours.', { buttons: [button("I'm on it", [close()])] }),
+      dialog('ds_where', 'The pieces', 'One piece is with Lucan the Jeweller: he bought it off a treasure hunter and he\'ll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions\' Guild\'s: pass its trial (your quest book says how) and it\'s yours.', { buttons: [button("I'm on it", [close()])] }),
       dialog('ds_pieces_missing', 'Three pieces', "That's not all three. I need every piece, or the map is useless.", { buttons: [button("I'll find the rest", [close()])] }),
-      dialog('ds_map_made', 'The map', 'There. Crandor. The needle on that will lead you to her isle. Kill Elvarg and bring me her head.', { buttons: [button('I will', [close()])] }),
+      dialog('ds_map_made', 'The map', 'There. The needle on that points to the stronghold. Fill its portal with eyes of ender, kill her, and bring me her head.', { buttons: [button('I will', [close()])] }),
       dialog('ds_no_head', 'No head', "Where's her head? Bring me proof, or don't come back.", { buttons: [button("I'll get it", [close()])] }),
       dialog('default', 'Oziach', 'Aye? What do you want? Unless you\'re buying, I\'ve work to do.', { priority: 10, buttons: [goodbye] })
     ]
   },
   wizard: {
-    model: 'illusioner', variant: 'ILLUSIONER', name: 'Wizard Traiborn', color: '#7A8CF0', description: 'Absent-minded wizard: a map piece for Dragon Slayer I.',
+    model: 'illusioner', variant: 'ILLUSIONER', name: 'Wizard Traiborn', color: '#7A8CF0', description: 'Absent-minded wizard: a map piece for Dragon Slayer I, and Crandor scried for Dragon Slayer II.',
     dialogs: [
+      dialog('ds2_after', 'Good luck', 'Good luck with Elvarg! Remember: fire beats ice, ice beats fire, and neither beats running away.', { priority: 31, conditions: [tag('q_ds2_map')], buttons: [goodbye] }),
+      dialog('ds2_scry', 'Crandor?', "Crandor! Yes, yes... no map shows it, but a scrying might. To find a dragon, the spell needs the breath of a dragon.\n\nBring me two bottles of the Ender Dragon's breath and eight blaze powder, and we'll see.", {
+        priority: 30,
+        conditions: [tag('q_ds2_started')],
+        buttons: [button('Here they are', [stepCmd('dragon_slayer_2', 'scry')]), button("I'll get them", [close()])]
+      }),
+      dialog('ds2_scry_missing', 'Not yet', "No, no, the spell needs two bottles of the dragon's breath and eight blaze powder.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('ds2_scried', 'There!', 'Hocus... focus... There! Crandor, plain as day. The needle of this will keep pointing at it. Mind the dragon.', { buttons: [button('Thank you, wizard', [close()])] }),
       dialog('ds_piece_after', 'Good luck', 'Good luck with the dragon! Remember: fire beats ice, ice beats fire, and neither beats running away.', { priority: 21, conditions: [tag('q_ds_piece2')], buttons: [goodbye] }),
-      dialog('ds_piece', 'The box', "A map of Crandor? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.\n\nBring me a ghast tear, a blaze rod and an amethyst shard and I'll open it for you.", {
+      dialog('ds_piece', 'The box', "A map of the stronghold? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.\n\nBring me a ghast tear, a blaze rod and an amethyst shard and I'll open it for you.", {
         priority: 20,
         conditions: [tag('q_ds_oziach')],
         buttons: [button('Here they are', [stepCmd('dragon_slayer', 'piece2')]), button("I'll get them", [close()])]
@@ -371,7 +408,7 @@ export const NPCS = {
   // Elvarg's Lair (lsp_instances, the lsp_event tag); the dialog is only the fallback without that mod.
   ned: {
     model: 'villager', variant: 'PLAINS_FISHERMAN', name: 'Ned', color: '#6FA8DC',
-    description: "Old sailor at the Crandor memorial: takes you up to Elvarg, and keeps the things of those who fall to her.",
+    description: "Old sailor at the Crandor memorial: takes you up to Elvarg (Dragon Slayer II), and keeps the things of those who fall to her.",
     tags: ['lsp_event.lemursaucepacket.elvarg'],
     dialogs: [dialog('default', 'Ned', "Elvarg's den is just up the hill. I sailed many a brave soul to Crandor in my day, and I've buried a good few since.\n\nWhen you're ready, I'll see you up there. And if she gets you, I'll keep your things safe till you come back for them.", { priority: 10, buttons: [goodbye] })]
   },
@@ -391,22 +428,22 @@ export const NPCS = {
       }),
       dialog('inf_thanks', 'Honoured', 'Wear it, champion. Every one of the Kilnfolk will bow when you pass.', { buttons: [goodbye] }),
       dialog('ash_wait', 'The seal', "The seal will open for you. Keeper Zarn waits at the Inferno's gate behind me.\n\nKeep the drifting shield between you and Zuk when his eyes burn, and strike his menders before they mend him.", { priority: 80, conditions: [tag('q_ash_done')], buttons: [goodbye] }),
-      dialog('ash_check', 'Ready?', 'Have you done it all? The Wither, the Ender Dragon and the Warden slain; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80.', {
+      dialog('ash_check', 'Ready?', 'Have you done it all? The Wither and the Warden slain, and Elvarg of Crandor; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80.', {
         priority: 70,
         conditions: [tag('q_ash_started')],
         buttons: [button('I am ready. Here is the key', [stepCmd('ashes', 'ready')]), button('What must I do again?', [open('ash_tasks')]), goodbye]
       }),
       dialog('ash_ready', 'The seal', 'Then the seal will open for you. Speak to Keeper Zarn at the gate. May the Kiln keep you.', { buttons: [button("I'll go", [close()])] }),
-      dialog('ash_not_ready', 'Not yet', "Not yet. The three great beasts, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('ash_not_ready', 'Not yet', "Not yet. The great beasts, Elvarg, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing.", { buttons: [button("I'll be back", [close()])] }),
       dialog('pits_honoured', 'Fire Cape', "You wear the Fire Cape, @initiator. No outsider has, in a hundred years.\n\nBut there is a deeper pit than Grull's...", {
         priority: 60,
         conditions: [tag('q_pits_done')],
         buttons: [button('A deeper pit?', [open('ash_start')]), goodbye]
       }),
-      dialog('ash_start', 'The Inferno', "Below the Fight Pits burns the Inferno, where our oldest champion, Kiln-Kal-Zuk, waits behind his shield. Its seal opens to an Infernal Key, and to no one the world doesn't already fear.\n\nSlay the Wither, the Ender Dragon and the Warden. Have Brakka forge you a key. Grow stronger. Then come back.", {
+      dialog('ash_start', 'The Inferno', "Below the Fight Pits burns the Inferno, where our oldest champion, Kiln-Kal-Zuk, waits behind his shield. Its seal opens to an Infernal Key, and to no one the world doesn't already fear.\n\nSlay the Wither and the Warden, and Elvarg of Crandor. Have Brakka forge you a key. Grow stronger. Then come back.", {
         buttons: [button("I'll do it", [cmd('tag @initiator add q_ash_started'), open('ash_tasks')]), button('Another time', [close()])]
       }),
-      dialog('ash_tasks', 'The way to the Inferno', 'Three things. The great beasts: the Wither, the Ender Dragon and the Warden, slain (your quest book counts them). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80.', { buttons: [button('I understand', [close()])] }),
+      dialog('ash_tasks', 'The way to the Inferno', 'Four things. The great beasts: the Wither and the Warden, slain (your quest book counts them). Elvarg of Crandor, slain (Dragon Slayer II). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80.', { buttons: [button('I understand', [close()])] }),
       dialog('pits_fire', 'The Fire Cape!', 'Kiln-Tok-Jad has fallen to an outsider. Grull told me, and I did not believe him. Let me see it...', {
         priority: 55,
         conditions: [tag('q_pits_fire')],
@@ -428,7 +465,7 @@ export const NPCS = {
       dialog('pits_offering_missing', 'Not enough', 'That is not the whole offering. 8 magma cream, 4 blaze rods, 16 obsidian.', { buttons: [button("I'll be back", [close()])] }),
       dialog('pits_allowed', 'Go, then', 'Then I vouch for you. Speak to Grull at the pit mouth. Do not die in there: it would shame us both.', { buttons: [button("I won't", [close()])] }),
       dialog('pits_not_ready', 'Not yet', "Not yet. The offering, the Ashen Trial, and your strength: all three. Your quest book shows what's done; your chat says what's missing.", { buttons: [button("I'll be back", [close()])] }),
-      dialog('pits_intro', 'The Guild sent you', "So the Guild's dragonslayer came. The Kilnfolk heard about Elvarg; we heard you did not run.\n\nThe Fight Pits are not for outsiders, @initiator. Prove you can stand the heat, and I will vouch for you.", {
+      dialog('pits_intro', 'The Guild sent you', "So the Guild's dragonslayer came. The Kilnfolk heard about the Ender Dragon; we heard you did not run.\n\nThe Fight Pits are not for outsiders, @initiator. Prove you can stand the heat, and I will vouch for you.", {
         priority: 30,
         conditions: [tag('q_pits_started')],
         buttons: [button("I'll prove myself", [cmd('tag @initiator add q_pits_elder'), open('pits_tasks')]), goodbye]

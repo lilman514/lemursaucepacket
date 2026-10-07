@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Absent-minded wizard: a map piece for Dragon Slayer I.",
+    description:"Absent-minded wizard: a map piece for Dragon Slayer I, and Crandor scried for Dragon Slayer II.",
     entityTypeId:"easy_npc:illusioner",
     name:"Wizard Traiborn",
     variantType:"ILLUSIONER",
@@ -48,6 +48,114 @@
       Type:"STANDARD",
       DialogDataSet:[
         {
+          Label:"ds2_after",
+          Name:"Good luck",
+          Priority:31,
+          Texts:[
+            {
+              Text:"Good luck with Elvarg! Remember: fire beats ice, ice beats fire, and neither beats running away."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_map"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_after_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_scry",
+          Name:"Crandor?",
+          Priority:30,
+          Texts:[
+            {
+              Text:"Crandor! Yes, yes... no map shows it, but a scrying might. To find a dragon, the spell needs the breath of a dragon.
+
+Bring me two bottles of the Ender Dragon's breath and eight blaze powder, and we'll see."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_scry_0",
+              Name:"Here they are",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer_2 scry @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds2_scry_1",
+              Name:"I'll get them",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_scry_missing",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"No, no, the spell needs two bottles of the dragon's breath and eight blaze powder."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_scry_missing_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_scried",
+          Name:"There!",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Hocus... focus... There! Crandor, plain as day. The needle of this will keep pointing at it. Mind the dragon."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_scried_0",
+              Name:"Thank you, wizard",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
           Label:"ds_piece_after",
           Name:"Good luck",
           Priority:21,
@@ -80,7 +188,7 @@
           Priority:20,
           Texts:[
             {
-              Text:"A map of Crandor? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.
+              Text:"A map of the stronghold? Yes, yes, I have a piece... somewhere... Ah! Locked in this box, which only opens to a spell.
 
 Bring me a ghast tear, a blaze rod and an amethyst shard and I'll open it for you."
             }

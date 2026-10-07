@@ -3,7 +3,7 @@
     access:"RESTRICTED",
     author:"LemurSaucePacket",
     category:"Lemurton",
-    description:"Old dragon slayer: Dragon Slayer I.",
+    description:"Old dragon slayer: Dragon Slayer I and II.",
     entityTypeId:"easy_npc:villager",
     name:"Oziach",
     variantType:"SNOW_ARMORER",
@@ -48,12 +48,174 @@
       Type:"STANDARD",
       DialogDataSet:[
         {
-          Label:"ds_done",
+          Label:"ds2_honoured",
           Name:"Dragon Slayer",
-          Priority:60,
+          Priority:80,
           Texts:[
             {
-              Text:"You did it. You actually did it. You've earned the right to wear dragon armour, @initiator: no one will say otherwise while I live."
+              Text:"Two dragons. You're the greatest dragon slayer this city has known, @initiator. Wear dragon armour with pride: no one will say otherwise while I live."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_done"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_honoured_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_head",
+          Name:"Her head?",
+          Priority:75,
+          Texts:[
+            {
+              Text:"You've the smell of smoke about you. Crandor? Well? Did you bring me Elvarg's head?"
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_elvarg"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_head_0",
+              Name:"Here it is",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer_2 head @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds2_head_1",
+              Name:"Not yet",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_done",
+          Name:"Elvarg is dead",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Elvarg... dead at last. She burnt my ship and half my crew. You've earned the right to wear dragon armour, @initiator: scale and steel both."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_done_0",
+              Name:"Thank you, Oziach",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_no_head",
+          Name:"No head",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Where's her head? Bring me proof, or don't come back."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_no_head_0",
+              Name:"I'll get it",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_go",
+          Name:"Crandor",
+          Priority:70,
+          Texts:[
+            {
+              Text:"Follow Traiborn's map to Crandor. Old Ned keeps a memorial at the foot of Elvarg's hill: he'll see you up to her. Hold your shield up when she breathes."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_map"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_go_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_wizard",
+          Name:"Finding Crandor",
+          Priority:65,
+          Texts:[
+            {
+              Text:"No map shows Crandor any more, and no captain will sail there. But Wizard Traiborn can scry it, if you bring him what it takes to find a dragon: the breath of another one. Bottle the Ender Dragon's."
+            }
+          ],
+          Conditions:[
+            {
+              Type:"PLAYER_TAG",
+              Name:"q_ds2_started"
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_wizard_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds2_offer",
+          Name:"Another dragon",
+          Priority:62,
+          Texts:[
+            {
+              Text:"The Ender Dragon, dead. I never thought I'd see it.
+
+But she isn't the dragon I lost my ship to, @initiator. That was Elvarg, a fire dragon of the old world, on the isle of Crandor. She's burnt every ship that went near it since. Will you hunt her?"
             }
           ],
           Conditions:[
@@ -64,8 +226,22 @@
           ],
           Buttons:[
             {
-              Label:"ds_done_0",
-              Name:"Goodbye",
+              Label:"ds2_offer_0",
+              Name:"I'll hunt her",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/tag @initiator add q_ds2_started"
+                },
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ds2_wizard"
+                }
+              ]
+            },
+            {
+              Label:"ds2_offer_1",
+              Name:"Not now",
               Actions:[
                 {
                   Type:"CLOSE_DIALOG"
@@ -80,13 +256,13 @@
           Priority:50,
           Texts:[
             {
-              Text:"You've the look of someone who's been to Crandor. Well? Did you bring me her head?"
+              Text:"You've the look of someone who's been to the End. Well? Did you bring me her head?"
             }
           ],
           Conditions:[
             {
               Type:"PLAYER_TAG",
-              Name:"q_ds_elvarg"
+              Name:"q_ds_dragon"
             }
           ],
           Buttons:[
@@ -112,12 +288,37 @@
           ]
         },
         {
+          Label:"ds_done",
+          Name:"Dragon Slayer",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"You did it. You actually did it. The Ender Dragon is dead, @initiator.
+
+Come and see me again: there is another dragon I have a score to settle with."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_done_0",
+              Name:"Thank you, Oziach",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
           Label:"ds_map",
-          Name:"Crandor",
+          Name:"The End",
           Priority:40,
           Texts:[
             {
-              Text:"Follow that map to Crandor. Kill Elvarg and bring me her head. Hold your shield up when she breathes."
+              Text:"Follow that map to the stronghold. Under it is the portal: fill its frame with eyes of ender. On her island, break her crystals first: they heal her. Hold your shield up when she breathes, and bring me her head.
+
+If someone slew her before you, four end crystals on the edge of her portal will wake her again."
             }
           ],
           Conditions:[
@@ -187,13 +388,13 @@
         },
         {
           Label:"ds_intro",
-          Name:"Elvarg",
+          Name:"The Ender Dragon",
           Priority:20,
           Texts:[
             {
-              Text:"So the Guild sent you. You want to slay Elvarg? Many have tried. She lives on Crandor, an isle no captain will sail to any more, and the only map to it was torn in three.
+              Text:"So the Guild sent you. You want to slay the Ender Dragon? Many have tried. She lives on an island at the end of the world, through a portal under one of the old strongholds, and the only map to them was torn in three.
 
-Find the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will cook you in your armour without one."
+Find the three pieces and bring them here. And get an anti-dragon shield from the mayor: her breath will melt you in your armour without one."
             }
           ],
           Conditions:[
@@ -234,7 +435,7 @@ Find the three pieces and bring them here. And get an anti-dragon shield from th
           Priority:-1,
           Texts:[
             {
-              Text:"One piece is with Lucan the Jeweller: he bought it off a sailor and he'll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions' Guild's: pass its trial (your quest book says how) and it's yours."
+              Text:"One piece is with Lucan the Jeweller: he bought it off a treasure hunter and he'll want paying. One is with Wizard Traiborn in his tower by the wall. The third is the Champions' Guild's: pass its trial (your quest book says how) and it's yours."
             }
           ],
           Buttons:[
@@ -276,7 +477,7 @@ Find the three pieces and bring them here. And get an anti-dragon shield from th
           Priority:-1,
           Texts:[
             {
-              Text:"There. Crandor. The needle on that will lead you to her isle. Kill Elvarg and bring me her head."
+              Text:"There. The needle on that points to the stronghold. Fill its portal with eyes of ender, kill her, and bring me her head."
             }
           ],
           Buttons:[

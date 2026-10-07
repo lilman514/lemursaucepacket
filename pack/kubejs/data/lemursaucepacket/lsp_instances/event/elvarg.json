@@ -29,12 +29,12 @@
   "loot_time": 90,
   "start_requires": {
     "tags": [
-      "q_ds_map"
+      "q_ds2_map"
     ],
     "not_tags": [
-      "q_ds_elvarg"
+      "q_ds2_elvarg"
     ],
-    "message": "Only someone Oziach sent, with the Map to Crandor, can wake her. You can still join someone's co-op fight."
+    "message": "Only someone hunting her for Oziach, with Traiborn's Map to Crandor, can wake her (Dragon Slayer II). You can still join someone's co-op fight."
   },
   "keeper": "Ned",
   "keeper_place": "the Crandor memorial",

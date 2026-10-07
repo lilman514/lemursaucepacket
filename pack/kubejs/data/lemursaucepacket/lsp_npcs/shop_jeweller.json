@@ -73,7 +73,7 @@
         },
         {
           "stage": "q_ds_oziach",
-          "text": "Hear about Elvarg from Oziach"
+          "text": "Hear about the Ender Dragon from Oziach"
         },
         {
           "stage": "q_ds_shield",
@@ -92,12 +92,12 @@
           "text": "Have Oziach put the map together"
         },
         {
-          "stage": "q_ds_elvarg",
-          "text": "Slay Elvarg on Crandor"
+          "stage": "q_ds_dragon",
+          "text": "Slay the Ender Dragon in the End"
         },
         {
           "stage": "q_ds_done",
-          "text": "Bring Elvarg's head to Oziach"
+          "text": "Bring the Ender Dragon's head to Oziach"
         }
       ]
     }

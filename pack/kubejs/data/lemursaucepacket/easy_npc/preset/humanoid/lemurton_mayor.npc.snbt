@@ -75,6 +75,89 @@
             },
             {
               Label:"ds_after_1",
+              Name:"I've lost the shield",
+              Actions:[
+                {
+                  Type:"OPEN_NAMED_DIALOG",
+                  Cmd:"ds_shield_lost"
+                }
+              ]
+            },
+            {
+              Label:"ds_after_2",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_shield_lost",
+          Name:"Lost it?",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Lost it! Well, Brann can copy the old one, but steel costs money: 2,000 coins."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_shield_lost_0",
+              Name:"Pay 2,000 coins",
+              Actions:[
+                {
+                  Type:"COMMAND",
+                  Cmd:"/lsp quest step @initiator dragon_slayer shield_again @npc-uuid"
+                }
+              ]
+            },
+            {
+              Label:"ds_shield_lost_1",
+              Name:"Never mind",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_shield_again",
+          Name:"A new shield",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"There. Try to keep this one."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_shield_again_0",
+              Name:"Goodbye",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_shield_poor",
+          Name:"Not enough",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Two thousand coins, @initiator. Steel is dear."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_shield_poor_0",
               Name:"Goodbye",
               Actions:[
                 {
@@ -90,7 +173,7 @@
           Priority:45,
           Texts:[
             {
-              Text:"An anti-dragon shield? So you mean to face Elvarg... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive."
+              Text:"An anti-dragon shield? So you mean to face a dragon... The city has kept one since the old dragon wars. Take it, @initiator, and come back alive."
             }
           ],
           Conditions:[

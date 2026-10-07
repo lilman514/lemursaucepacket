@@ -181,6 +181,7 @@ public final class QuestSteps {
         }
         for (String special : step.special()) {
             if (special.equals("crandor_map")) Crandor.giveMap(player);
+            if (special.equals("stronghold_map")) TheEnd.giveMap(player);
             if (special.equals("kiln_pass")) net.lemursaucepacket.fixes.pits.KilnHollow.givePass(player);
         }
         if (step.stage() != null) player.addTag(step.stage());
@@ -252,6 +253,7 @@ public final class QuestSteps {
             Component special = switch (t.quest()) {
                 case "vyvin_sword" -> Component.literal("Sir Vyvin's Sword");
                 case "elvarg_head" -> Component.literal("Elvarg's Head");
+                case "ender_dragon_head" -> Component.literal("The Ender Dragon's Head");
                 case "map_piece_1", "map_piece_2", "map_piece_3" -> Component.literal("Map Part " + t.quest().substring(t.quest().length() - 1));
                 case "infernal_key" -> Component.literal("Infernal Key");
                 default -> null;

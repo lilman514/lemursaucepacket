@@ -58,7 +58,8 @@
       "needs": [
         "q_ash_started",
         "q_ash_beasts",
-        "q_ash_key"
+        "q_ash_key",
+        "q_ds2_done"
       ],
       "lacks": [
         "q_ash_done"

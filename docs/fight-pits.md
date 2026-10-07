@@ -40,13 +40,13 @@ The **Kilnfolk Pass**, which Guildmaster Greaves gives you, is a compass that po
 
 Three main quests, one after another (they show up in your book under **Main Quests** once someone gives them to you; see [Quests](quests.md#main-quests)):
 
-1. **The Fight Pits** (after [Dragon Slayer I](elvarg.md)): Guildmaster Greaves gives you the Kilnfolk Pass. At Kiln Hollow, Elder Ashka wants three things before she vouches for you:
+1. **The Fight Pits** (after [Dragon Slayer I](quests.md#main-quests), the Ender Dragon): Guildmaster Greaves gives you the Kilnfolk Pass. At Kiln Hollow, Elder Ashka wants three things before she vouches for you:
    * an **offering** for the Kiln: 8 magma cream, 4 blaze rods and 16 obsidian;
    * the **Ashen Trial**: 15 blazes, 15 magma cubes and 8 wither skeletons, in the Nether (the quest book counts them);
    * the strength the pits ask: **Defence 50, Hitpoints 50, and Attack or Ranged 50**.
 
    Then Grull lets you in. Win, and show the Elder your Fire Cape.
-2. **Ashes of the Kiln** (after the Fire Cape): slay the **Wither, the Ender Dragon and the Warden**; have Brakka forge an **Infernal Key** from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods; and grow to **Defence 80, Hitpoints 80, and Attack or Ranged 80**. Give the Elder the key.
+2. **Ashes of the Kiln** (after the Fire Cape): slay the **Wither and the Warden**, and finish **Dragon Slayer II** ([Elvarg](elvarg.md)); have Brakka forge an **Infernal Key** from a nether star, 4 netherite ingots, 16 crying obsidian and 16 blaze rods; and grow to **Defence 80, Hitpoints 80, and Attack or Ranged 80**. Give the Elder the key.
 3. **The Inferno**: Keeper Zarn opens the seal. Win, and show the Elder your Infernal Cape.
 
 ## How a wave fight works

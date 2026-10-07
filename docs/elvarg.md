@@ -1,6 +1,6 @@
 ---
 description: >-
-  The end of Dragon Slayer I: a fire dragon in her prime, in a lair of your own. Fight her alone or with up to three
+  The end of Dragon Slayer II: a fire dragon in her prime, in a lair of your own. Fight her alone or with up to three
   friends; if she gets you, nothing drops and nothing is lost.
 icon: dragon
 cover: images/elvarg.jpg
@@ -9,12 +9,12 @@ coverY: 0
 
 # Elvarg's Lair
 
-Elvarg is the fire dragon at the end of [Dragon Slayer I](quests.md#main-quests). She doesn't fly about the world: she sleeps on her hoard on the isle of Crandor, and every party that goes up to fight her gets **its own copy of her lair**. So she's always there for whoever needs the fight, and nobody can steal your kill.
+Elvarg is the fire dragon at the end of [Dragon Slayer II](quests.md#main-quests), the quest Oziach gives you after you slay the Ender Dragon in Dragon Slayer I. She doesn't fly about the world: she sleeps on her hoard on the isle of Crandor, and every party that goes up to fight her gets **its own copy of her lair**. So she's always there for whoever needs the fight, and nobody can steal your kill.
 
 ## Getting there
 
-1. Finish the steps before it: the Anti-dragon Shield from Mayor Thaddeus, and the three pieces of the map (see [Quests](quests.md#main-quests)).
-2. Oziach puts the pieces together into the **Map to Crandor**, a compass that points to the isle: to the memorial at the foot of Elvarg's hill.
+1. Finish **Dragon Slayer I**: the Ender Dragon (see [Quests](quests.md#main-quests)). Keep the Anti-dragon Shield the mayor gave you for it, and bottle two lots of her breath while you're on her island.
+2. Oziach gives you **Dragon Slayer II**. Bring **Wizard Traiborn** the two bottles of dragon's breath and eight blaze powder, and he scries the isle: his **Map to Crandor** is a compass that points to the memorial at the foot of Elvarg's hill.
 3. At the memorial, **touch its waystone**, so you can come straight back after the fight, or after a bad one.
 
 <figure><img src="images/memorial_front.jpg" alt="The Crandor memorial: a stone dais with a dragon skull, braziers and a waystone"><figcaption><p>The Crandor memorial at the foot of Elvarg's hill</p></figcaption></figure>
@@ -52,7 +52,7 @@ The party arrives on her hilltop, in a clearing she has burnt for herself, facin
 
 ## When she falls
 
-Everyone in the fight with the map gets **Elvarg's Head**. You then have **a minute and a half** to loot her body before the party is taken back to where it set out from. Bring the head to Oziach to finish the quest and earn the right to wear dragon armour.
+Everyone in the fight with the map gets **Elvarg's Head**. You then have **a minute and a half** to loot her body before the party is taken back to where it set out from. Bring the head to Oziach to finish Dragon Slayer II and earn the right to wear dragon armour.
 
 ## If she gets you
 

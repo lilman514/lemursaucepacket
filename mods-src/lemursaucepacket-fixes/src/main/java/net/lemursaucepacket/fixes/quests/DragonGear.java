@@ -24,13 +24,14 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 /**
- * What Dragon Slayer I changes about gear, RuneScape style. Dragonscale and dragonsteel armour (the
- * {@code lemursaucepacket:dragonslayer_armor} item tag) can only be worn once you have slain Elvarg and finished the
- * quest, the way the rune platebody waits on Dragon Slayer. And the Anti-dragon Shield (the mayor gives one) takes most of
- * the sting out of dragon breath while you hold it, and keeps its fire from catching on you.
+ * What the Dragon Slayer quests change about gear, RuneScape style. Dragonscale and dragonsteel armour (the
+ * {@code lemursaucepacket:dragonslayer_armor} item tag, made from the scales of Ice and Fire's dragons) can only be worn
+ * once you have slain Elvarg and finished Dragon Slayer II, the way the rune platebody waits on Dragon Slayer. And the
+ * Anti-dragon Shield (the mayor gives one in Dragon Slayer I) takes most of the sting out of dragon breath while you hold
+ * it, the Ender Dragon's as well as Ice and Fire's dragons', and keeps their fire from catching on you.
  */
 public final class DragonGear {
-    public static final String DONE = "q_ds_done";
+    public static final String DONE = "q_ds2_done";
     public static final String SHIELD = "antidragon_shield";
     static final TagKey<Item> ARMOR = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("lemursaucepacket", "dragonslayer_armor"));
     private static final ResourceKey<DamageType>[] BREATH = breath();
@@ -55,7 +56,7 @@ public final class DragonGear {
         ItemStack off = worn.copy();
         player.setItemSlot(event.getSlot(), ItemStack.EMPTY);
         if (!player.getInventory().add(off)) player.drop(off, false);
-        player.displayClientMessage(Component.literal("Only those who have slain Elvarg may wear dragon armour (Dragon Slayer I).").withStyle(ChatFormatting.RED), true);
+        player.displayClientMessage(Component.literal("Only those who have slain Elvarg may wear dragon armour (Dragon Slayer II).").withStyle(ChatFormatting.RED), true);
         player.playNotifySound(SoundEvents.VILLAGER_NO, SoundSource.PLAYERS, 0.6f, 1f);
     }
 
@@ -71,7 +72,10 @@ public final class DragonGear {
         for (ResourceKey<DamageType> key : BREATH) {
             if (source.is(key)) return true;
         }
-        return false;
+        // The Ender Dragon's breath: its lingering cloud hurts as (indirect) magic, with her as the cause.
+        if (source.is(net.minecraft.world.damagesource.DamageTypes.DRAGON_BREATH)) return true;
+        return source.getEntity() instanceof net.minecraft.world.entity.boss.enderdragon.EnderDragon
+                && (source.is(net.minecraft.world.damagesource.DamageTypes.MAGIC) || source.is(net.minecraft.world.damagesource.DamageTypes.INDIRECT_MAGIC));
     }
 
     static void onDamage(LivingIncomingDamageEvent event) {
@@ -92,7 +96,7 @@ public final class DragonGear {
     /** Client and server: the requirement on the armour's tooltip. */
     static void onTooltip(ItemTooltipEvent event) {
         ItemStack stack = event.getItemStack();
-        if (stack.is(ARMOR)) event.getToolTip().add(Component.literal("Requires: Dragon Slayer I").withStyle(ChatFormatting.DARK_RED));
+        if (stack.is(ARMOR)) event.getToolTip().add(Component.literal("Requires: Dragon Slayer II").withStyle(ChatFormatting.DARK_RED));
         else if (isShield(stack)) event.getToolTip().add(Component.literal("Blocks most of a dragon's breath, and its fire, while held.").withStyle(ChatFormatting.GOLD));
     }
 

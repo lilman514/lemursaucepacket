@@ -37,9 +37,9 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.phys.AABB;
 
 /**
- * Crandor, Elvarg's isle for Dragon Slayer I: the nearest fire dragon roost to Lemurton (any structure in the
+ * Crandor, Elvarg's isle for Dragon Slayer II: the nearest fire dragon roost to Lemurton (any structure in the
  * {@code lemursaucepacket:crandor} tag), found once per world the way /locate finds things, and saved. The Map to Crandor
- * is a compass that points there. At the foot of the hill stands the memorial ({@link CrandorMemorial}), where Ned starts
+ * (Wizard Traiborn scries it) is a compass that points there. At the foot of the hill stands the memorial ({@link CrandorMemorial}), where Ned starts
  * the Elvarg event: an instance (lsp_instances) whose arena is a copy of the den, with Elvarg (a stage-four fire dragon
  * tagged {@code lsp_elvarg}) in it, so she's always there for whoever needs the fight. When she dies, everyone near her on
  * that step of the quest gets her head.
@@ -48,8 +48,8 @@ public final class Crandor {
     public static final String ELVARG_TAG = "lsp_elvarg";
     /** Set on Elvarg's body once her slayers have been credited, so it happens once (Ice and Fire leaves a corpse). */
     static final String SLAIN_BODY = "lsp_elvarg_slain";
-    static final String HAS_MAP = "q_ds_map";
-    static final String SLAIN = "q_ds_elvarg";
+    static final String HAS_MAP = "q_ds2_map";
+    static final String SLAIN = "q_ds2_elvarg";
     private static final TagKey<Structure> CRANDOR = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath("lemursaucepacket", "crandor"));
     private static final int CREDIT_RANGE = 160;
     private static final long RESPAWN_TICKS = 6000;
@@ -140,7 +140,7 @@ public final class Crandor {
         map.set(DataComponents.LODESTONE_TRACKER, new LodestoneTracker(Optional.of(GlobalPos.of(Level.OVERWORLD, pos)), false));
         map.set(DataComponents.CUSTOM_NAME, Component.literal("Map to Crandor").withStyle(s -> s.withItalic(false).withColor(ChatFormatting.GOLD)));
         map.set(DataComponents.LORE, new ItemLore(List.of(
-                Component.literal("Three old pieces, put together.").withStyle(s -> s.withItalic(false).withColor(ChatFormatting.GRAY)),
+                Component.literal("Scried by Wizard Traiborn.").withStyle(s -> s.withItalic(false).withColor(ChatFormatting.GRAY)),
                 Component.literal("The needle points to Elvarg's isle.").withStyle(s -> s.withItalic(false).withColor(ChatFormatting.GRAY)))));
         CompoundTag data = new CompoundTag();
         data.putString(QuestSteps.QUEST_ITEM, "crandor_map");

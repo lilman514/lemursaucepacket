@@ -18,7 +18,7 @@ const questItem = (id, key, title, color, lines) => ({ id, count: 1, components:
 export const QUEST_ITEMS = {
   vyvin_sword: questItem('minecraft:iron_sword', 'vyvin_sword', "Sir Vyvin's Sword", 'aqua', ['Forged by Brann the Smith,', 'for the squire to give back.']),
   antidragon_shield: questItem('minecraft:shield', 'antidragon_shield', 'Anti-dragon Shield', 'gold', ['Lemurton has kept it since', 'the old dragon wars.']),
-  map_piece_1: questItem('minecraft:paper', 'map_piece_1', 'Map Part (1 of 3)', 'yellow', ['A torn scrap of an old sea chart.', 'Lucan the Jeweller sold it to you.']),
+  map_piece_1: questItem('minecraft:paper', 'map_piece_1', 'Map Part (1 of 3)', 'yellow', ['A torn scrap of an old map.', 'Lucan the Jeweller sold it to you.']),
   map_piece_2: questItem('minecraft:paper', 'map_piece_2', 'Map Part (2 of 3)', 'yellow', ['Wizard Traiborn kept it in a', 'box only a spell could open.']),
   map_piece_3: questItem('minecraft:paper', 'map_piece_3', 'Map Part (3 of 3)', 'yellow', ["The Champions' Guild gives it", 'to those who pass its trial.']),
   infernal_key: questItem('minecraft:ominous_trial_key', 'infernal_key', 'Infernal Key', 'red', ['Forged by Brakka from a', 'nether star and netherite.', 'It opens the Inferno.'])
@@ -72,11 +72,14 @@ export const QUEST_STEPS = {
       }
     }
   },
+  // The Ender Dragon. The map pieces make a Map to the Stronghold (lsp_fixes TheEnd), whose portal leads to her; her
+  // head comes to everyone on this step who is near her when she falls.
   dragon_slayer: {
     title: 'Dragon Slayer I',
-    stages: ['q_ds_started', 'q_ds_oziach', 'q_ds_shield', 'q_ds_piece1', 'q_ds_piece2', 'q_ds_map', 'q_ds_elvarg', 'q_ds_done'],
+    stages: ['q_ds_started', 'q_ds_oziach', 'q_ds_shield', 'q_ds_piece1', 'q_ds_piece2', 'q_ds_map', 'q_ds_dragon', 'q_ds_done'],
     steps: {
       shield: { needs: ['q_ds_oziach'], lacks: ['q_ds_shield'], give: [QUEST_ITEMS.antidragon_shield], stage: 'q_ds_shield', message: 'The mayor gives you an Anti-dragon Shield.', ok: 'ds_shield_given' },
+      shield_again: { needs: ['q_ds_shield'], coins: 2000, give: [QUEST_ITEMS.antidragon_shield], message: 'The mayor has Brann copy the old shield for you.', ok: 'ds_shield_again', missing: 'ds_shield_poor' },
       piece1: { needs: ['q_ds_oziach'], lacks: ['q_ds_piece1'], coins: 10000, give: [QUEST_ITEMS.map_piece_1], stage: 'q_ds_piece1', message: 'You buy a scrap of old map from Lucan.', ok: 'ds_piece_sold', missing: 'ds_piece_poor' },
       piece2: {
         needs: ['q_ds_oziach'],
@@ -88,15 +91,42 @@ export const QUEST_STEPS = {
         ok: 'ds_piece_given',
         missing: 'ds_piece_missing'
       },
-      map: { needs: ['q_ds_oziach'], lacks: ['q_ds_map'], take: [piece(1), piece(2), piece(3)], special: ['crandor_map'], stage: 'q_ds_map', message: 'Oziach puts the three pieces together: a Map to Crandor.', ok: 'ds_map_made', missing: 'ds_pieces_missing' },
+      map: { needs: ['q_ds_oziach'], lacks: ['q_ds_map'], take: [piece(1), piece(2), piece(3)], special: ['stronghold_map'], stage: 'q_ds_map', message: 'Oziach puts the three pieces together: a Map to the Stronghold.', ok: 'ds_map_made', missing: 'ds_pieces_missing' },
       head: {
-        needs: ['q_ds_elvarg'],
+        needs: ['q_ds_dragon'],
         lacks: ['q_ds_done'],
-        take: [take('iceandfire:dragon_skull_fire', 1, 'elvarg_head')],
+        take: [take('minecraft:dragon_head', 1, 'ender_dragon_head')],
         stage: 'q_ds_done',
-        message: "You give Oziach Elvarg's head.",
+        message: "You give Oziach the Ender Dragon's head.",
         ok: 'ds_done',
         missing: 'ds_no_head'
+      }
+    }
+  },
+  // Elvarg of Crandor (Ice and Fire), after the Ender Dragon: Traiborn scries the isle with the Ender Dragon's breath; Ned
+  // at the Crandor memorial starts her lair (lsp_instances, the elvarg event); her head comes from lsp_fixes Crandor.
+  dragon_slayer_2: {
+    title: 'Dragon Slayer II',
+    stages: ['q_ds2_started', 'q_ds2_map', 'q_ds2_elvarg', 'q_ds2_done'],
+    steps: {
+      scry: {
+        needs: ['q_ds2_started'],
+        lacks: ['q_ds2_map'],
+        take: [take('minecraft:dragon_breath', 2), take('minecraft:blaze_powder', 8)],
+        special: ['crandor_map'],
+        stage: 'q_ds2_map',
+        message: 'Traiborn scries Crandor: a Map to Crandor.',
+        ok: 'ds2_scried',
+        missing: 'ds2_scry_missing'
+      },
+      head: {
+        needs: ['q_ds2_elvarg'],
+        lacks: ['q_ds2_done'],
+        take: [take('iceandfire:dragon_skull_fire', 1, 'elvarg_head')],
+        stage: 'q_ds2_done',
+        message: "You give Oziach Elvarg's head.",
+        ok: 'ds2_done',
+        missing: 'ds2_no_head'
       }
     }
   }
@@ -147,7 +177,7 @@ Object.assign(QUEST_STEPS, {
         missing: 'key_missing'
       },
       ready: {
-        needs: ['q_ash_started', 'q_ash_beasts', 'q_ash_key'],
+        needs: ['q_ash_started', 'q_ash_beasts', 'q_ash_key', 'q_ds2_done'],
         lacks: ['q_ash_done'],
         skills: { defence: 80, hitpoints: 80, 'attack|ranged': 80 },
         take: [take('minecraft:ominous_trial_key', 1, 'infernal_key')],

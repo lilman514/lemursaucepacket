@@ -56,7 +56,7 @@ Everyone in Lemurton has their name over their head and a yellow **CLICK** under
 
 | Who | Where | What they do |
 |---|---|---|
-| Mayor Thaddeus | The south edge of the market | Gives the first quest, *Welcome to Lemurton*, and the Anti-dragon Shield for Dragon Slayer I |
+| Mayor Thaddeus | The south edge of the market | Gives the first quest, *Welcome to Lemurton*, and the Anti-dragon Shield for Dragon Slayer I (and a copy if you lose it) |
 | Old Wren | Market stall | Fruit and vegetables |
 | Bessa the Baker | Market stall | Bread, cake and pies; buying from her is a step of *Welcome to Lemurton* |
 | Imran the Gem Trader | Market stall | Gems and crystals |
@@ -70,13 +70,13 @@ Everyone in Lemurton has their name over their head and a yellow **CLICK** under
 | Sister Agnes | The apothecary | Potions and brewing supplies |
 | Hamish of the Docks | The fishing shop | Rods, line and bait |
 | Gerta the Mason | The builder's merchant | Stone, brick and timber by the stack |
-| Lucan the Jeweller | The jeweller's | Gold and gems; sells a piece of the map to Crandor |
+| Lucan the Jeweller | The jeweller's | Gold and gems; sells a piece of the map to the stronghold |
 | Pip the Shopkeeper | The general store | A bit of everything |
 | Cook | The butcher's shop on the ring street | *Cook's Assistant* |
 | Squire Asrol | The armourer's | *The Knight's Sword* |
 | Guildmaster Greaves | The Champions' Guild | Starts *Dragon Slayer I* and runs the guild's trial |
-| Oziach | The armoury on the ring street | Tells you how to reach Elvarg, and takes her head |
-| Wizard Traiborn | His tower by the wall | Trades a piece of the map for a ghast tear, a blaze rod and an amethyst shard |
+| Oziach | The armoury on the ring street | Tells you how to reach the Ender Dragon and Elvarg, and takes their heads (*Dragon Slayer I* and *II*) |
+| Wizard Traiborn | His tower by the wall | Trades a piece of the map for a ghast tear, a blaze rod and an amethyst shard, and scries Crandor for *Dragon Slayer II* |
 | City Guards | The four gatehouses | Keep the peace |
 | Townsfolk | About the streets | Gossip |
 

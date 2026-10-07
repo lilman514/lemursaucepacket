@@ -6,12 +6,12 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Elvarg is the fire dragon at the end of $(l:lemursaucepacket:quests)Dragon Slayer I$(/l). She doesn't fly about the world: she sleeps on her hoard on the isle of Crandor, and every party that goes up to fight her gets $(bold)its own copy of her lair$(). So she's always there for whoever needs the fight, and nobody can steal your kill."
+      "text": "Elvarg is the fire dragon at the end of $(l:lemursaucepacket:quests)Dragon Slayer II$(/l), the quest Oziach gives you after you slay the Ender Dragon in Dragon Slayer I. She doesn't fly about the world: she sleeps on her hoard on the isle of Crandor, and every party that goes up to fight her gets $(bold)its own copy of her lair$(). So she's always there for whoever needs the fight, and nobody can steal your kill."
     },
     {
       "type": "patchouli:text",
       "title": "Getting there",
-      "text": "1. Finish the steps before it: the Anti-dragon Shield from Mayor Thaddeus, and the three pieces of the map (see $(l:lemursaucepacket:quests)Quests$(/l)).$(br)2. Oziach puts the pieces together into the $(bold)Map to Crandor$(), a compass that points to the isle: to the memorial at the foot of Elvarg's hill.$(br)3. At the memorial, $(bold)touch its waystone$(), so you can come straight back after the fight, or after a bad one."
+      "text": "1. Finish $(bold)Dragon Slayer I$(): the Ender Dragon (see $(l:lemursaucepacket:quests)Quests$(/l)). Keep the Anti-dragon Shield the mayor gave you for it, and bottle two lots of her breath while you're on her island.$(br)2. Oziach gives you $(bold)Dragon Slayer II$(). Bring $(bold)Wizard Traiborn$() the two bottles of dragon's breath and eight blaze powder, and he scries the isle: his $(bold)Map to Crandor$() is a compass that points to the memorial at the foot of Elvarg's hill.$(br)3. At the memorial, $(bold)touch its waystone$(), so you can come straight back after the fight, or after a bad one."
     },
     {
       "type": "patchouli:text",
@@ -46,7 +46,7 @@
     {
       "type": "patchouli:text",
       "title": "When she falls",
-      "text": "Everyone in the fight with the map gets $(bold)Elvarg's Head$(). You then have $(bold)a minute and a half$() to loot her body before the party is taken back to where it set out from. Bring the head to Oziach to finish the quest and earn the right to wear dragon armour."
+      "text": "Everyone in the fight with the map gets $(bold)Elvarg's Head$(). You then have $(bold)a minute and a half$() to loot her body before the party is taken back to where it set out from. Bring the head to Oziach to finish Dragon Slayer II and earn the right to wear dragon armour."
     },
     {
       "type": "patchouli:text",

@@ -158,7 +158,7 @@ Keep the drifting shield between you and Zuk when his eyes burn, and strike his 
           Priority:70,
           Texts:[
             {
-              Text:"Have you done it all? The Wither, the Ender Dragon and the Warden slain; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80."
+              Text:"Have you done it all? The Wither and the Warden slain, and Elvarg of Crandor; an Infernal Key from Brakka; and the strength the Inferno asks: Defence 80, Hitpoints 80, and Attack or Ranged 80."
             }
           ],
           Conditions:[
@@ -226,7 +226,7 @@ Keep the drifting shield between you and Zuk when his eyes burn, and strike his 
           Priority:-1,
           Texts:[
             {
-              Text:"Not yet. The three great beasts, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing."
+              Text:"Not yet. The great beasts, Elvarg, Brakka's key, and your strength. Your quest book shows what's done; your chat says what's missing."
             }
           ],
           Buttons:[
@@ -288,7 +288,7 @@ But there is a deeper pit than Grull's..."
             {
               Text:"Below the Fight Pits burns the Inferno, where our oldest champion, Kiln-Kal-Zuk, waits behind his shield. Its seal opens to an Infernal Key, and to no one the world doesn't already fear.
 
-Slay the Wither, the Ender Dragon and the Warden. Have Brakka forge you a key. Grow stronger. Then come back."
+Slay the Wither and the Warden, and Elvarg of Crandor. Have Brakka forge you a key. Grow stronger. Then come back."
             }
           ],
           Buttons:[
@@ -323,7 +323,7 @@ Slay the Wither, the Ender Dragon and the Warden. Have Brakka forge you a key. G
           Priority:-1,
           Texts:[
             {
-              Text:"Three things. The great beasts: the Wither, the Ender Dragon and the Warden, slain (your quest book counts them). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80."
+              Text:"Four things. The great beasts: the Wither and the Warden, slain (your quest book counts them). Elvarg of Crandor, slain (Dragon Slayer II). An Infernal Key: Brakka the smith forges it. And strength: Defence 80, Hitpoints 80, and Attack or Ranged 80."
             }
           ],
           Buttons:[
@@ -575,7 +575,7 @@ When flame gathers in him, raise your shield toward him. When he rises, run from
           Priority:30,
           Texts:[
             {
-              Text:"So the Guild's dragonslayer came. The Kilnfolk heard about Elvarg; we heard you did not run.
+              Text:"So the Guild's dragonslayer came. The Kilnfolk heard about the Ender Dragon; we heard you did not run.
 
 The Fight Pits are not for outsiders, @initiator. Prove you can stand the heat, and I will vouch for you."
             }

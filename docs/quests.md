@@ -1,6 +1,6 @@
 ---
 description: >-
-  The quest book is a road map, not a gate: thirty-six chapters, and RuneScape-style main quests from Cook's Assistant to the Inferno.
+  The quest book is a road map, not a gate: thirty-seven chapters, and RuneScape-style main quests from Cook's Assistant to the Inferno.
 icon: scroll
 cover: images/quest_book_landfall.jpg
 coverY: 0
@@ -8,7 +8,7 @@ coverY: 0
 
 # Quests
 
-The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it except dragon armour, which waits on Dragon Slayer I as the rune platebody does in RuneScape. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip.
+The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it except dragon armour, which waits on Dragon Slayer II as the rune platebody waits on Dragon Slayer in RuneScape. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip.
 
 ![The quest book](images/quest_book_landfall.jpg)
 
@@ -16,7 +16,7 @@ The quest book (ESC → Quests) is a road map, not a gate: nothing is locked beh
 
 ## Chapters
 
-Thirty-six chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing.
+Thirty-seven chapters. The Ages are the main road through Create; the Main Quests (below) only show up once someone gives them to you; the rest are questlines you dip into whenever they fit what you are doing.
 
 ## Main quests
 
@@ -28,28 +28,38 @@ RuneScape style: Lemurton's people have troubles of their own, and a quest only 
 |---|---|---|---|
 | Cook's Assistant (novice) | The Cook, in the butcher's shop on the ring street | A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) | 1 quest point, Cooking XP, coins |
 | The Knight's Sword (intermediate) | Squire Asrol, at the armourer's | Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots | 1 quest point, Smithing XP, coins |
-| Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | See below | 2 quest points, the right to wear dragon armour, Attack and Defence XP, 25,000 coins and more |
+| Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | The Ender Dragon: see below | 2 quest points, Dragon Slayer II and the Fight Pits, Attack and Defence XP, 15,000 coins |
+| Dragon Slayer II (master) | Oziach, after Dragon Slayer I | Elvarg of Crandor: see below | 3 quest points, the right to wear dragon armour, Attack, Strength and Defence XP, 30,000 coins |
 | The Fight Pits (master) | Guildmaster Greaves, after Dragon Slayer I | An offering, the Ashen Trial, Defence, Hitpoints and Attack or Ranged 50, then thirty waves and Kiln-Tok-Jad | 2 quest points, the Fire Cape, combat XP, 30,000 coins |
-| Ashes of the Kiln (grandmaster) | Elder Ashka, after the Fight Pits | The Wither, the Ender Dragon and the Warden; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 | 2 quest points, the way into the Inferno, 40,000 coins |
+| Ashes of the Kiln (grandmaster) | Elder Ashka, after the Fight Pits | The Wither and the Warden, and Dragon Slayer II; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 | 2 quest points, the way into the Inferno, 40,000 coins |
 | The Inferno (grandmaster) | Elder Ashka, after Ashes of the Kiln | The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk | 3 quest points, the Infernal Cape, combat XP, 100,000 coins |
 
-**Dragon Slayer I**, as in RuneScape: Oziach, who keeps the armoury on the ring street, tells you how to reach Elvarg on the isle of Crandor.
+**Dragon Slayer I** is the oldest dragon there is: the Ender Dragon, on her island at the end of the world. Guildmaster Greaves sets the challenge, and Oziach, who keeps the armoury on the ring street, tells you how to reach her.
 
-1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath, and her fire won't catch on you.
-2. Find the three pieces of the map: **Lucan the Jeweller** sells one for 10,000 coins, **Wizard Traiborn** (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the **Champions' Guild** gives the third for its trial (20 zombies and 10 skeletons).
-3. Oziach puts them together: the **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill.
+1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath (hers, and Elvarg's later), and a dragon's fire won't catch on you. Lose it and the mayor has Brann copy it for 2,000 coins.
+2. Find the three pieces of the map: **Lucan the Jeweller** sells one for 10,000 coins, **Wizard Traiborn** (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the **Champions' Guild** gives the third for its trial (12 endermen).
+3. Oziach puts them together: the **Map to the Stronghold** is a compass that points to the stronghold nearest Lemurton.
+4. Find its **portal room**, fill the frame with **eyes of ender** (blaze powder and ender pearls), and go through.
+5. Slay the **Ender Dragon**. Break the end crystals on the pillars first, since they heal her; bring a bow for the caged ones, blocks to climb, and friends. Everyone with the map who is near her when she falls gets **the Ender Dragon's Head**. If someone has slain her already, set four end crystals on the edges of the exit portal and she rises again.
+6. Bring the head to Oziach.
+
+While you're on her island, catch some of her breath in glass bottles: Dragon Slayer II needs two.
+
+**Dragon Slayer II**: the Ender Dragon isn't the dragon Oziach lost his ship to. That was **Elvarg**, a fire dragon in her prime, on the isle of Crandor. Oziach gives you this quest once Dragon Slayer I is done.
+
+1. No map shows Crandor any more, but **Wizard Traiborn** can scry it with two bottles of **dragon's breath** and eight **blaze powder**. His **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill.
 <figure><img src="images/memorial_front.jpg" alt="The Crandor memorial with the dragon skull on its dais"><figcaption><p>The Crandor memorial</p></figcaption></figure>
 
-4. At the **Crandor memorial**, speak to **Ned**. His window takes you up to **Elvarg**, a fire dragon in her prime, in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back.
-5. Bring **Elvarg's Head** to Oziach.
+2. At the **Crandor memorial**, speak to **Ned**. His window takes you up to **Elvarg** in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back.
+3. Bring **Elvarg's Head** to Oziach.
 
 If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press *Take back your things*. Touch the memorial's waystone on your way up, so you can come straight back.
 
-Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
+Until Dragon Slayer II is done, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
 
 The fight itself, step by step: [Elvarg's Lair](elvarg.md).
 
-**The Fight Pits, Ashes of the Kiln and the Inferno** come after it: the Kilnfolk, ashen piglins in the volcanic lands, test outsiders in their wave fights, and the winners earn the Fire Cape and the Infernal Cape. Everything about them: [The Fight Pits and the Inferno](fight-pits.md).
+**The Fight Pits, Ashes of the Kiln and the Inferno** come after the dragons: the Fight Pits open after Dragon Slayer I, and Ashes of the Kiln needs Dragon Slayer II as well. The Kilnfolk, ashen piglins in the volcanic lands, test outsiders in their wave fights, and the winners earn the Fire Cape and the Infernal Cape. Everything about them: [The Fight Pits and the Inferno](fight-pits.md).
 
 **The Ages** — one chapter per stage of progress:
 
