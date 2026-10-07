@@ -50,7 +50,7 @@ const lines = [
   '',
   '# Capes',
   '',
-  '<figure><img src="images/capes_sheet.jpg" alt="Every cape\'s design as its texture in game, with its name"><figcaption><p>Every cape there is to earn</p></figcaption></figure>',
+  '<figure><img src="images/capes_sheet.webp" alt="Every cape\'s design as its texture in game, with its name; the legendary ones move as they do in game"><figcaption><p>Every cape there is to earn (the legendary ones move)</p></figcaption></figure>',
   '',
   'Capes are cosmetics you earn, not items: nothing to craft, nothing to lose. Everyone on the server sees the cape you wear. Some capes have a **perk** while worn; the legendary ones are **animated**.',
   '',

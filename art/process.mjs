@@ -485,7 +485,7 @@ async function capes() {
 
 /**
  * The gear and cape sheets on the website (website/assets/art/gear.webp, capes.webp) and the wiki's Gear and Capes
- * pages (docs/images/gear_sets.jpg, capes_sheet.jpg), drawn from the game's own textures and scaled up pixel for pixel:
+ * pages (docs/images/gear_sets.jpg, capes_sheet.webp), drawn from the game's own textures and scaled up pixel for pixel:
  * each cape's design (the 10x16 front of its 64x32 texture, as people see it on your back) and each armour piece's icon
  * (the first frame of its shimmer strip). The site's cape sheet moves: its legendary capes step through their frames.
  * (These replaced the AI reference sheets in art/generated/, which never matched the game.)
@@ -526,20 +526,25 @@ async function sheets() {
   const canvas = (width, height, background) => sharp({ create: { width, height, channels: 4, background } })
   const clear = { r: 0, g: 0, b: 0, alpha: 0 }
 
-  // The wiki: every cape, its name under it.
+  // The wiki: every cape, its name under it, the animated ones stepping through their frames as they do in game (a
+  // frame every four ticks), the rest still. Lossless: it's pixel art, and only the moving capes change between frames.
   {
     const scale = 10, cols = 8, gap = 24, label = 40
     const w = 10 * scale, h = 16 * scale
     const rows = Math.ceil(CAPES.length / cols)
     const width = cols * w + (cols + 1) * gap
     const height = rows * (h + label) + (rows + 1) * gap
-    const parts = []
-    for (let i = 0; i < CAPES.length; i++) {
-      const x = gap + (i % cols) * (w + gap), y = gap + Math.floor(i / cols) * (h + label + gap)
-      parts.push({ input: await capeFace(CAPES[i].id, 0, scale), left: x, top: y })
-      parts.push({ input: text(CAPES[i].name.replace(/ Cape$/, ''), w + gap, label, { size: 17 }), left: x - gap / 2, top: y + h })
+    const at = (i) => ({ x: gap + (i % cols) * (w + gap), y: gap + Math.floor(i / cols) * (h + label + gap) })
+    const labels = CAPES.map((c, i) => ({ input: text(c.name.replace(/ Cape$/, ''), w + gap, label, { size: 17 }), left: at(i).x - gap / 2, top: at(i).y + h }))
+    const still = await Promise.all(CAPES.map((c) => capeFace(c.id, 0, scale)))
+    const count = Math.max(1, ...CAPES.map((c) => c.animated ?? 1))
+    const frames = []
+    for (let f = 0; f < count; f++) {
+      const parts = [...labels]
+      for (let i = 0; i < CAPES.length; i++) parts.push({ input: CAPES[i].animated ? await capeFace(CAPES[i].id, f % CAPES[i].animated, scale) : still[i], left: at(i).x, top: at(i).y })
+      frames.push(await canvas(width, height, PLATE).composite(parts).flatten({ background: PLATE }).png().toBuffer())
     }
-    await canvas(width, height, PLATE).composite(parts).flatten({ background: PLATE }).jpeg({ quality: 90, mozjpeg: true }).toFile(target('docs/images/capes_sheet.jpg'))
+    await sharp(frames, { join: { animated: true } }).webp({ lossless: true, effort: 6, loop: 0, delay: frames.map(() => 200) }).toFile(target('docs/images/capes_sheet.webp'))
   }
   // The site: twelve capes, the legendary ones moving.
   {
