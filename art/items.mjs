@@ -646,6 +646,104 @@ const SPRITES = [
     pause: 206
   },
 
+  // The gear sets' hand-made parts.
+  {
+    // A riveted brass plate with a lamp window: the Prospector's.
+    id: 'prospector_plating',
+    px: [
+      '................',
+      '................',
+      '..OOOOOOOOOOOO..',
+      '.OHHHHHHHHHHHLO.',
+      '.OHrLLLLLLLLrDO.',
+      '.OHLLLLLLLLLLDO.',
+      '.OHLLLOOOOLLLDO.',
+      '.OHLLOYYYYOLLDO.',
+      '.OHLLOYWWYOLLDO.',
+      '.OHLLOYYYYOLLDO.',
+      '.OHLLLOOOOLLLDO.',
+      '.OHrLLLLLLLLrDO.',
+      '.OLDDDDDDDDDDDO.',
+      '..OOOOOOOOOOOO..',
+      '................',
+      '................'
+    ],
+    pal: { O: 'brass@0', H: 'brass@5', L: 'brass@3', D: 'brass@2', r: 'iron@4', Y: 'lamp@3', W: 'lamp@5' },
+    pause: 174
+  },
+  {
+    // A coil of rope round a brass hook: the Aeronaut's.
+    id: 'aeronaut_rigging',
+    px: [
+      '................',
+      '.....OOOOOO.....',
+      '...OOttttttOO...',
+      '..OttRRRRRRttO..',
+      '.OtRRttttttRRtO.',
+      '.OtRtOOOOOOtRtO.',
+      'OtRtO......OtRtO',
+      'OtRtO.OBBO.OtRtO',
+      'OtRtO.OBbO.OtRtO',
+      'OtRtO..OO..OtRtO',
+      '.OtRtOOOOOOtRtO.',
+      '.OtRRttttttRRtO.',
+      '..OttRRRRRRttO..',
+      '...OOttttttOO...',
+      '.....OOOOOO.....',
+      '................'
+    ],
+    pal: { O: 'leather@0', t: 'parchment@4', R: 'parchment@2', B: 'brass@4', b: 'brass@2' },
+    pause: 188
+  },
+  {
+    // A gold rosette with a ruby at its heart: the Duelist's.
+    id: 'duelists_filigree',
+    px: [
+      '................',
+      '......OOOO......',
+      '....OOGHGGOO....',
+      '...OGGOGGOGGO...',
+      '..OGOGGHGGOGGO..',
+      '..OGGOOOOOOGGO..',
+      '.OGHGORRRROGGGO.',
+      '.OGGORrRRRROGGO.',
+      '.OGGORRRRRROGgO.',
+      '.OGGGORRRROGGgO.',
+      '..OGGOOOOOOGgO..',
+      '..OGGOGGgOGgGO..',
+      '...OGgOGgOgGO...',
+      '....OOGgggOO....',
+      '......OOOO......',
+      '................'
+    ],
+    pal: { O: 'gold@0', G: 'gold@4', H: 'gold@5', g: 'gold@2', R: 'crimson@3', r: 'crimson@5' },
+    pause: 202
+  },
+  {
+    // Diamond woven through a steel frame: the Compacted Diamond set's lattice.
+    id: 'diamond_lattice',
+    px: [
+      '................',
+      '.OOOOOOOOOOOOOO.',
+      '.OSSSSSSSSSSSSO.',
+      '.OSW.L.WW.L.WSO.',
+      '.OS.WL.LL.LW.SO.',
+      '.OSLLWLDDLWLLSO.',
+      '.OS..LWDDWL..SO.',
+      '.OSWLDDWWDDLWSO.',
+      '.OSWLDDWWDDLWSO.',
+      '.OS..LWDDWL..SO.',
+      '.OSLLWLDDLWLLSO.',
+      '.OS.WL.LL.LW.SO.',
+      '.OSW.L.WW.L.WSO.',
+      '.OSSSSSSSSSSSSO.',
+      '.OOOOOOOOOOOOOO.',
+      '................'
+    ],
+    pal: { O: 'steel@0', S: 'steel@3', W: 'diamond@5', L: 'diamond@3', D: 'diamond@2' },
+    pause: 212
+  },
+
   // ------------------------------------------------ hearts and graves (docs/lifesteal.md)
   {
     // One heart of maximum health: a cut crimson gem, lit from the top-left.

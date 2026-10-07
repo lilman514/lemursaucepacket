@@ -28,39 +28,39 @@
     {
       "type": "patchouli:text",
       "title": "Main quests",
-      "text": "RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under $(bold)Main Quests$()) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so. $(l:lemursaucepacket:lemurton)Lemurton$(/l) lists who is where."
+      "text": "RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under $(bold)Main Quests$()) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so. $(l:lemursaucepacket:lemurton)Lemurton$(/l) lists who is where.$(br2)As in RuneScape, the bigger quests ask for skill levels first: the quest giver says what you're missing, and the quest book lists it under each quest. Your combat level is under your name."
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Quest - Given by - What it takes - Rewards$()$(br)$(bold)Cook's Assistant (novice)$() - The Cook, in the butcher's shop on the ring street - A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) - 1 quest point, Cooking XP, coins$(br)$(bold)The Knight's Sword (intermediate)$() - Squire Asrol, at the armourer's - Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots - 1 quest point, Smithing XP, coins$(br)$(bold)Dragon Slayer I (experienced)$() - Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Le"
+      "text": "$(#b9a98a)Quest - Given by - Skills it needs - What it takes - Rewards$()$(br)$(bold)Cook's Assistant (novice)$() - The Cook, in the butcher's shop on the ring street - None - A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) - 1 quest point, Cooking XP, coins$(br)$(bold)The Knight's Sword (intermediate)$() - Squire Asrol, at the armourer's - Mining 10, Smithing 10 - Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots - 1 quest point, Smithing XP, coins"
     },
     {
       "type": "patchouli:text",
-      "text": "murton) - The Ender Dragon: see below - 2 quest points, Dragon Slayer II and the Fight Pits, Attack and Defence XP, 15,000 coins$(br)$(bold)Dragon Slayer II (master)$() - Oziach, after Dragon Slayer I - Elvarg of Crandor: see below - 3 quest points, the right to wear dragon armour, Attack, Strength and Defence XP, 30,000 coins$(br)$(bold)The Fight Pits (master)$() - Guildmaster Greaves, after Dragon Slayer I - An offering, the Ashen Trial, Defence, Hitpoints and Attack or Ranged 50, then thirty waves and Kiln-Tok-Jad - 2 quest points, the Fire Cape, combat XP, 30,000 coins$(br)$(bold)Ashes of the Kiln (grandmaste"
+      "text": "$(bold)Dragon Slayer I (experienced)$() - Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) - Combat level 40, Brewing 55 (Eyes of Ender) - The Ender Dragon: see below - 2 quest points, Dragon Slayer II and the Fight Pits, Attack and Defence XP, 15,000 coins$(br)$(bold)Dragon Slayer II (master)$() - Oziach, after Dragon Slayer I - Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60, Hitpoints 50 - Elvarg of Crandor: see below - 3 quest points, the right to wear dragon armour, Attack, Strength and Defence XP, 30,000 coins"
     },
     {
       "type": "patchouli:text",
-      "text": "r)$() - Elder Ashka, after the Fight Pits - The Wither and the Warden, and Dragon Slayer II; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 - 2 quest points, the way into the Inferno, 40,000 coins$(br)$(bold)The Inferno (grandmaster)$() - Elder Ashka, after Ashes of the Kiln - The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk - 3 quest points, the Infernal Cape, combat XP, 100,000 coins"
+      "text": "$(bold)The Fight Pits (master)$() - Guildmaster Greaves, after Dragon Slayer I - Combat level 60; Defence, Hitpoints and Attack or Ranged 50 to go in - An offering, the Ashen Trial, then thirty waves and Kiln-Tok-Jad - 2 quest points, the Fire Cape, combat XP, 30,000 coins$(br)$(bold)Ashes of the Kiln (grandmaster)$() - Elder Ashka, after the Fight Pits - Defence, Hitpoints and Attack or Ranged 80 - The Wither and the Warden, and Dragon Slayer II; an Infernal Key - 2 quest points, the way into the Inferno, 40,000 coins"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Dragon Slayer I$() is the oldest dragon there is: the Ender Dragon, on her island at the end of the world. Guildmaster Greaves sets the challenge, and Oziach, who keeps the armoury on the ring street, tells you how to reach her."
+      "text": "$(bold)The Inferno (grandmaster)$() - Elder Ashka, after Ashes of the Kiln - As for Ashes of the Kiln - The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk - 3 quest points, the Infernal Cape, combat XP, 100,000 coins$(br2)$(bold)Dragon Slayer I$() is the oldest dragon there is: the Ender Dragon, on her island at the end of the world. Guildmaster Greaves sets the challenge, and Oziach, who keeps the armoury on the ring street, tells you how to reach her."
     },
     {
       "type": "patchouli:text",
-      "text": "1. Get an $(bold)Anti-dragon Shield$() from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath (hers, and Elvarg's later), and a dragon's fire won't catch on you. Lose it and the mayor has Brann copy it for 2,000 coins.$(br)2. Find the three pieces of the map: $(bold)Lucan the Jeweller$() sells one for 10,000 coins, $(bold)Wizard Traiborn$() (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the $(bold)Champions' Guild$() gives the third for its trial (12 endermen).$(br)3. Oziach puts them together: the $(bold)Map to the Stronghold$()"
+      "text": "1. Get an $(bold)Anti-dragon Shield$() from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath (hers, and Elvarg's later), and a dragon's fire won't catch on you. Lose it and the mayor has Brann copy it for 2,000 coins.$(br)2. Find the three pieces of the map: $(bold)Lucan the Jeweller$() sells one for 10,000 coins, $(bold)Wizard Traiborn$() (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the $(bold)Champions' Guild$() gives the third for its trial (12 endermen)."
     },
     {
       "type": "patchouli:text",
-      "text": " is a compass that points to the stronghold nearest Lemurton.$(br)4. Find its $(bold)portal room$(), fill the frame with $(bold)eyes of ender$() (blaze powder and ender pearls), and go through.$(br)5. Slay the $(bold)Ender Dragon$(). Break the end crystals on the pillars first, since they heal her; bring a bow for the caged ones, blocks to climb, and friends. Everyone with the map who is near her when she falls gets $(bold)the Ender Dragon's Head$(). If someone has slain her already, set four end crystals on the edges of the exit portal and she rises again.$(br)6. Bring the head to Oziach."
+      "text": "3. Oziach puts them together: the $(bold)Map to the Stronghold$() is a compass that points to the stronghold nearest Lemurton.$(br)4. Find its $(bold)portal room$(), fill the frame with $(bold)eyes of ender$() (blaze powder and ender pearls), and go through."
     },
     {
       "type": "patchouli:text",
-      "text": "While you're on her island, catch some of her breath in glass bottles: Dragon Slayer II needs two.$(br2)$(bold)Dragon Slayer II$(): the Ender Dragon isn't the dragon Oziach lost his ship to. That was $(bold)Elvarg$(), a fire dragon in her prime, on the isle of Crandor. Oziach gives you this quest once Dragon Slayer I is done."
+      "text": "5. Slay the $(bold)Ender Dragon$(). Break the end crystals on the pillars first, since they heal her; bring a bow for the caged ones, blocks to climb, and friends. Everyone with the map who is near her when she falls gets $(bold)the Ender Dragon's Head$(). If someone has slain her already, set four end crystals on the edges of the exit portal and she rises again.$(br)6. Bring the head to Oziach.$(br2)While you're on her island, catch some of her breath in glass bottles: Dragon Slayer II needs two."
     },
     {
       "type": "patchouli:text",
-      "text": "1. No map shows Crandor any more, but $(bold)Wizard Traiborn$() can scry it with two bottles of $(bold)dragon's breath$() and eight $(bold)blaze powder$(). His $(bold)Map to Crandor$() is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill."
+      "text": "$(bold)Dragon Slayer II$(): the Ender Dragon isn't the dragon Oziach lost his ship to. That was $(bold)Elvarg$(), a fire dragon in her prime, on the isle of Crandor. Oziach gives you this quest once Dragon Slayer I is done.$(br2)1. No map shows Crandor any more, but $(bold)Wizard Traiborn$() can scry it with two bottles of $(bold)dragon's breath$() and eight $(bold)blaze powder$(). His $(bold)Map to Crandor$() is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill."
     },
     {
       "type": "patchouli:text",
@@ -76,52 +76,48 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Landfall$() - Rules, first tools, iron and Hardness I, a backpack, a village - A wrench, and a starter crate of alloy and cogs$(br)$(bold)First Rotation$() - Water and wind power, presses, fans, belts, saws, drills, zinc, ore veins - 32 andesite casing$(br)$(bold)Brass Age$() - Blaze burners, mixing, brass, precision, sturdy sheets, arms, crafters, steam - A rotation speed controller$(br)$(bold)Banners of the Overworld$() - Outposts, raids, the Illager fort and Invoker, Create ruins - Raise your banner$(br)$(bold)Iron Roads$() - Track, stations, schedul"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Landfall$() - Rules, first tools, iron and Hardness I, a backpack, a village - A wrench, and a starter crate of alloy and cogs$(br)$(bold)First Rotation$() - Water and wind power, presses, fans, belts, saws, drills, zinc, ore veins - 32 andesite casing$(br)$(bold)Brass Age$() - Blaze burners, mixing, brass, precision, sturdy sheets, arms, crafters, steam - A rotation speed controller$(br)$(bold)Banners of the Overworld$() - Outposts, raids, the Illager fort and Invoker, Create ruins - Raise your banner"
     },
     {
       "type": "patchouli:text",
-      "text": "es, signals, parcels, stock keeping, and waystones for the trip home - A line between two towns$(br)$(bold)Skyward$() - Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation - Maiden voyage$(br)$(bold)Crown of Fire$() - Fortresses, citadels, bastions, piglin castes, blaze cakes, netherite - The Wither$(br)$(bold)Legacy$() - The stronghold, the End, the dragon, elytra, crushing wheels, banking - Build your legacy$(br2)$(bold)Industry$() - factories and production lines:"
+      "text": "$(bold)Iron Roads$() - Track, stations, schedules, signals, parcels, stock keeping, and waystones for the trip home - A line between two towns$(br)$(bold)Skyward$() - Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation - Maiden voyage$(br)$(bold)Crown of Fire$() - Fortresses, citadels, bastions, piglin castes, blaze cakes, netherite - The Wither$(br)$(bold)Legacy$() - The stronghold, the End, the dragon, elytra, crushing wheels, banking - Build your legacy$(br2)$(bold)Industry$() - factories and production lines:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Factory Floor$() - Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler - Factory gauges ordering their own ingredients$(br)$(bold)Railway Company$() - Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory - Grand Central: a station where three lines meet$(br)$(bold)The Foundry$() - Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving - Four compacted netherite$(br)$(bold)The Enc"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Factory Floor$() - Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler - Factory gauges ordering their own ingredients$(br)$(bold)Railway Company$() - Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory - Grand Central: a station where three lines meet$(br)$(bold)The Foundry$() - Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving - Four compacted netherite"
     },
     {
       "type": "patchouli:text",
-      "text": "hanter$() - The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes - A book of Sharpness X$(br)$(bold)Arcane Works$() - Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experience - A blaze enchanter used a thousand times$(br)$(bold)The Warehouse$() - Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades - 32 vaults, stock-linked$(br)$(bold)Grand Kitchen$() - Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotat"
+      "text": "$(bold)The Enchanter$() - The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes - A book of Sharpness X$(br)$(bold)Arcane Works$() - Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experience - A blaze enchanter used a thousand times$(br)$(bold)The Warehouse$() - Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades - 32 vaults, stock-linked"
     },
     {
       "type": "patchouli:text",
-      "text": "ion, a netherite knife - Master Chef: every meal eaten$(br2)$(bold)Expeditions$() - places to go and things to hunt:"
+      "text": "$(bold)Grand Kitchen$() - Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotation, a netherite knife - Master Chef: every meal eaten$(br2)$(bold)Expeditions$() - places to go and things to hunt:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Cartographer$() - Waypoints and maps, Lootr chests, When Dungeons Arise, Structory towers, Towers of the Wild, Dungeons and Taverns, Regions Unexplored - Adventuring Time: every Overworld biome$(br)$(bold)Deep Dark$() - Sculk, sneaking, the ancient city, echo shards, disc 5, the ward and silence trims - The Warden$(br)$(bold)Beyond the Dragon$() - Gateways, chorus, end cities, shulkers, dragon's breath, Nullscape biomes, the End castle - Respawn the dragon$(br)$(bold)Village Life$() - Trading, Towns & Towers, bells, golems, guards, curing, fortified vil"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Cartographer$() - Waypoints and maps, Lootr chests, When Dungeons Arise, Structory towers, Towers of the Wild, Dungeons and Taverns, Regions Unexplored - Adventuring Time: every Overworld biome$(br)$(bold)Deep Dark$() - Sculk, sneaking, the ancient city, echo shards, disc 5, the ward and silence trims - The Warden$(br)$(bold)Beyond the Dragon$() - Gateways, chorus, end cities, shulkers, dragon's breath, Nullscape biomes, the End castle - Respawn the dragon"
     },
     {
       "type": "patchouli:text",
-      "text": "lages, raid captains - Hero of the Village$(br)$(bold)Relic Hunter$() - The twenty relics, where each one drops, research and levelling, set synergies - Relic Master: fifteen of twenty$(br2)$(bold)Field Guides$() - side chapters:"
+      "text": "$(bold)Village Life$() - Trading, Towns & Towers, bells, golems, guards, curing, fortified villages, raid captains - Hero of the Village$(br)$(bold)Relic Hunter$() - The twenty relics, where each one drops, research and levelling, set synergies - Relic Master: fifteen of twenty$(br2)$(bold)Field Guides$() - side chapters:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Backpack Workshop$() - Backpack tiers by Create age, upgrades, stack upgrades - The netherite backpack$(br)$(bold)Homestead$() - Farmer's Delight basics, new crops, rich soil, breeding - The happy ghast$(br)$(bold)Bestiary$() - The new mobs and bosses, one quest each - - (a collection)$(br)$(bold)Atlas$() - Terralith biomes and rebuilt structures - - (a collection)$(br)$(bold)Coin & Commerce$() - Gold Coins, selling and buying at vendors, trading, table-cloth shops - 10,000 coins$(br)$(bold)The Armory$() - The pack's own gear: tools, weapons, armour set"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Backpack Workshop$() - Backpack tiers by Create age, upgrades, stack upgrades - The netherite backpack$(br)$(bold)Homestead$() - Farmer's Delight basics, new crops, rich soil, breeding - The happy ghast$(br)$(bold)Bestiary$() - The new mobs and bosses, one quest each - - (a collection)$(br)$(bold)Atlas$() - Terralith biomes and rebuilt structures - - (a collection)$(br)$(bold)Coin & Commerce$() - Gold Coins, selling and buying at vendors, trading, table-cloth shops - 10,000 coins"
     },
     {
       "type": "patchouli:text",
-      "text": "s - The Compacted Netherite set$(br)$(bold)Hearts & Graves$() - The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart - A new Heart made from a Heart of the Sea$(br2)$(bold)Mastery$() - the long game: Skills (below) and Contracts (Brassworks Missions milestones from 10 to 1000 missions).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
+      "text": "$(bold)The Armory$() - The pack's own gear: tools, weapons, armour sets - The Compacted Netherite set$(br)$(bold)Hearts & Graves$() - The hearts system: what a death costs, Grave Essence, the Lost Item and Seeker's compasses, holding a Heart - A new Heart made from a Heart of the Sea$(br2)$(bold)Mastery$() - the long game: Skills (below) and Contracts (Brassworks Missions milestones from 10 to 1000 missions).$(br2)Each chapter opens with a card that says what the questline is for and what finishing it lets you do."
     },
     {
       "type": "patchouli:text",
       "title": "How rewards scale",
-      "text": "Every quest has a tier. The tier sets its XP, its coins and the crate it rolls on once:"
+      "text": "Every quest has a tier. The tier sets its XP, its coins and the crate it rolls on once:$(br2)$(#b9a98a)Tier - XP - Coins - Crate - What the crate holds$()$(br)$(bold)1 Settler$() - 25 - 80 - Settler's Supplies - Ingots, alloy, torches, food, coal, arrows, tea$(br)$(bold)2 Engineer$() - 60 - 240 - Engineer's Crate - Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases$(br)$(bold)3 Artisan$() - 150 - 480 - Artisan's Crate - Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Tier - XP - Coins - Crate - What the crate holds$()$(br)$(bold)1 Settler$() - 25 - 80 - Settler's Supplies - Ingots, alloy, torches, food, coal, arrows, tea$(br)$(bold)2 Engineer$() - 60 - 240 - Engineer's Crate - Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases$(br)$(bold)3 Artisan$() - 150 - 480 - Artisan's Crate - Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts$(br)$(bold)4 Master$() - 400 - 1,280 - Master's Cache - Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades$(br)$(bold)5 Legen"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "d$() - 1000 - 5,120 - Legend's Hoard - Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending$(br2)Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, coins, capes), so the last quest of a line is always worth reaching."
+      "text": "$(bold)4 Master$() - 400 - 1,280 - Master's Cache - Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack upgrades$(br)$(bold)5 Legend$() - 1000 - 5,120 - Legend's Hoard - Relics, Duelist's Patterns, loot-only gear, warp stones, waystones, netherite, totems, Mending$(br2)Hover a crate in the reward list to see everything in it and the odds. Chapter finales add fixed prizes on top (gear pieces, relics, coins, capes), so the last quest of a line is always worth reaching."
     },
     {
       "type": "patchouli:text",

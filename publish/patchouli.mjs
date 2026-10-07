@@ -10,7 +10,8 @@
 // become "cell — cell" lines, plain markdown images (![..](images/..)) become image pages, links to other docs
 // pages become book links. The GitBook extras stay on the web: front matter, captioned <figure> pictures and other
 // HTML blocks are left out, and a {% hint %} keeps only its text. So a picture that should also be in the book is
-// written as a plain markdown image; the rest (most screenshots) as figures, which keeps the pack small.
+// written as a plain markdown image; the rest (most screenshots) as figures, which keeps the pack small. Anything
+// between <!-- book:skip --> and <!-- book:end --> lines is for the web only (e.g. the keybinds page's admin keys).
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -61,15 +62,23 @@ function convert(markdown, slug) {
   const flush = () => {
     const text = buffer.join('$(br2)').trim()
     if (text) {
-      // Long sections become several pages; only the first carries the title.
+      // Long sections become several pages; only the first carries the title. A page ends at a paragraph break, else
+      // at a line break (a table row), else between words: never inside a word or a $(...) code.
+      const cutAt = (rest) => {
+        if (rest.length <= PAGE_CHARS) return rest.length
+        for (const mark of ['$(br2)', '$(br)', ' ']) {
+          const at = rest.lastIndexOf(mark, PAGE_CHARS)
+          if (at > PAGE_CHARS / 3) return at
+        }
+        return PAGE_CHARS
+      }
       let rest = text
       let first = true
       while (rest.length > 0) {
-        let cut = rest.length <= PAGE_CHARS ? rest.length : rest.lastIndexOf('$(br2)', PAGE_CHARS)
-        if (cut <= 0) cut = Math.min(rest.length, PAGE_CHARS)
-        const chunk = rest.slice(0, cut).replace(/\$\(br2\)$/, '')
+        const cut = cutAt(rest)
+        const chunk = rest.slice(0, cut).replace(/(\$\(br2?\)|\s)+$/, '')
         pages.push({ type: 'patchouli:text', ...(first && pageTitle ? { title: pageTitle } : {}), text: chunk })
-        rest = rest.slice(cut).replace(/^\$\(br2\)/, '')
+        rest = rest.slice(cut).replace(/^(\$\(br2?\)|\s)+/, '')
         first = false
       }
     }
@@ -83,6 +92,12 @@ function convert(markdown, slug) {
     const line = lines[i]
     // GitBook tags ({% hint %} ... {% endhint %}): the text between them stays, as ordinary paragraphs.
     if (/^{%.*%}\s*$/.test(line)) {
+      i++
+      continue
+    }
+    // Web-only parts, between <!-- book:skip --> and <!-- book:end -->.
+    if (/^<!-- book:skip -->/.test(line)) {
+      while (i < lines.length && !/^<!-- book:end -->/.test(lines[i])) i++
       i++
       continue
     }
@@ -206,7 +221,7 @@ write(path.join(dataDir, 'book.json'), {
 })
 write(path.join(assetDir, 'categories', 'wiki.json'), { name: 'The wiki', description: 'The pages of the LemurSaucePacket wiki, in order.', icon: 'minecraft:writable_book', sortnum: 0 })
 
-const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', lemurton: 'minecraft:bell', elvarg: 'iceandfire:dragon_skull_fire', 'fight-pits': 'minecraft:magma_cream', economy: 'lemursaucepacket:gold_coins', lifesteal: 'minecraft:red_dye', enchanting: 'minecraft:enchanting_table', 'where-to-find': 'minecraft:spyglass', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', keys: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
+const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', lemurton: 'minecraft:bell', elvarg: 'iceandfire:dragon_skull_fire', 'fight-pits': 'minecraft:magma_cream', economy: 'lemursaucepacket:gold_coins', lifesteal: 'minecraft:red_dye', enchanting: 'minecraft:enchanting_table', 'where-to-find': 'minecraft:spyglass', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', keybinds: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
 let pageCount = 0
 for (const [index, page] of pagesInOrder.entries()) {
   const slug = page.file.replace(/\.md$/, '')

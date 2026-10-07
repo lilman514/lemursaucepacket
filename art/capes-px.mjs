@@ -52,6 +52,7 @@ const EMBLEMS = {
   sapling: { rows: ['.L.L.', 'LlLlL', '.LLL.', '..b..', '..b..', '.bbb.'], pal: { L: 'leaf@3', l: 'leaf@5', b: 'wood@2' } },
   crown: { rows: ['Y..Y..Y', 'YY.Y.YY', 'YYYYYYY', 'YrYrYrY', 'YYYYYYY'], pal: { Y: 'gold@4', r: 'crimson@4' } },
   star: { rows: ['..Y..', '..Y..', 'YYYYY', '.YYY.', '.Y.Y.'], pal: { Y: 'gold@5' } },
+  potion: { rows: ['..c..', '..g..', '.gPg.', 'gPPPg', 'gPhPg', 'gPPPg', '.ggg.'], pal: { c: 'wood@3', g: 'white@4', P: 'plum@4', h: 'white@5' } },
   compass: { rows: ['..R..', '..W..', 'RW.WR', '..W..', '..R..'], pal: { R: 'crimson@3', W: 'white@4' } },
   emerald: { rows: ['.EE.', 'EeEE', 'EEEE', 'EEEE', '.EE.'], pal: { E: 'emerald@3', e: 'emerald@5' } }
 }
@@ -111,6 +112,7 @@ export const DESIGNS = {
   crafting_cape: { field: 'tan', band: 'brass', emblem: 'gear' },
   agility_cape: { field: 'navy', band: 'white', emblem: 'wings' },
   enchanting_cape: { field: 'royal', band: 'gold', emblem: 'star' },
+  brewing_cape: { field: 'emerald', band: 'gold', emblem: 'potion' },
   settlers_cape: { field: 'forest', field2: 'earth', band: 'brass', emblem: 'sapling', pattern: 'split' },
   brass_age_cape: { field: 'brass', band: 'black', emblem: 'cog' },
   iron_roads_cape: { field: 'iron', band: 'brass', pattern: 'rails' },

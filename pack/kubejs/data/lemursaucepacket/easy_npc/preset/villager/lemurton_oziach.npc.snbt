@@ -208,6 +208,27 @@
           ]
         },
         {
+          Label:"ds2_not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Elvarg is no Ender Dragon. To reach her and live you'll need Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60 and Hitpoints 50. Come back when you have them."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds2_not_ready_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
           Label:"ds2_offer",
           Name:"Another dragon",
           Priority:62,
@@ -231,11 +252,7 @@ But she isn't the dragon I lost my ship to, @initiator. That was Elvarg, a fire 
               Actions:[
                 {
                   Type:"COMMAND",
-                  Cmd:"/tag @initiator add q_ds2_started"
-                },
-                {
-                  Type:"OPEN_NAMED_DIALOG",
-                  Cmd:"ds2_wizard"
+                  Cmd:"/lsp quest step @initiator dragon_slayer_2 start @npc-uuid"
                 }
               ]
             },

@@ -25,24 +25,20 @@
     {
       "type": "patchouli:text",
       "title": "Building one",
-      "text": "It's meant to be hard. Everything starts with $(bold)warp dust$(): an ender pearl and an amethyst shard in a basin, mixed over a blaze burner, make 4. The stones need mechanical crafters."
+      "text": "It's meant to be hard. Everything starts with $(bold)warp dust$(): an ender pearl and an amethyst shard in a basin, mixed over a blaze burner, make 4. The stones need mechanical crafters.$(br2)$(#b9a98a)Item - Made on - From$()$(br)$(bold)Warp stone$() - Mechanical crafters - A precision mechanism, 4 warp dust, 4 amethyst shards$(br)$(bold)Waystone$() - Mechanical crafters - A warp stone, a precision mechanism, a brass casing, 2 sturdy sheets, an eye of ender, 4 of the style's stone$(br)$(bold)Sharestone$() - Mechanical crafters - A warp stone, a precision mechanism, 2 sturdy sheets, 2 dye, 3 stone bricks"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Item - Made on - From$()$(br)$(bold)Warp stone$() - Mechanical crafters - A precision mechanism, 4 warp dust, 4 amethyst shards$(br)$(bold)Waystone$() - Mechanical crafters - A warp stone, a precision mechanism, a brass casing, 2 sturdy sheets, an eye of ender, 4 of the style's stone$(br)$(bold)Sharestone$() - Mechanical crafters - A warp stone, a precision mechanism, 2 sturdy sheets, 2 dye, 3 stone bricks$(br)$(bold)Portstone$() - Mechanical crafters - A warp stone, 3 andesite casings, 2 dye, 3 stone bricks$(br)$(bold)Warp plate$() - Mechanical crafters - A dormant shard, a precision mechanism, 3 warp "
-    },
-    {
-      "type": "patchouli:text",
-      "text": "dust, 4 stone bricks$(br)$(bold)Dormant shard$() - Basin and press - 2 warp dust, flint$(br)$(bold)Scrolls$() - Crafting table - Warp dust, brass nuggets and paper (warp scrolls add ink)$(br2)JEI (R on an item) shows every recipe."
+      "text": "$(bold)Portstone$() - Mechanical crafters - A warp stone, 3 andesite casings, 2 dye, 3 stone bricks$(br)$(bold)Warp plate$() - Mechanical crafters - A dormant shard, a precision mechanism, 3 warp dust, 4 stone bricks$(br)$(bold)Dormant shard$() - Basin and press - 2 warp dust, flint$(br)$(bold)Scrolls$() - Crafting table - Warp dust, brass nuggets and paper (warp scrolls add ink)$(br2)JEI (R on an item) shows every recipe."
     },
     {
       "type": "patchouli:text",
       "title": "Travelling",
-      "text": "$(#b9a98a)Use - Takes you to - Costs$()$(br)$(bold)A waystone$() - Any waystone you've activated - A few XP points: 1 per 100 blocks, 27 at most (27 to another dimension)$(br)$(bold)Warp stone (hold right-click)$() - Any waystone you've activated - The same XP. It lasts 128 jumps$(br)$(bold)Warp scroll$() - Any waystone you've activated - Nothing; the scroll is used up$(br)$(bold)Return scroll$() - Your nearest activated waystone - Nothing; used up$(br)$(bold)Bound scroll (a blank scroll used on a waystone)$() - That waystone, for whoever holds it - Nothing; used up$(br)$(bold)Portal scroll$() - Opens a portal to"
+      "text": "$(#b9a98a)Use - Takes you to - Costs$()$(br)$(bold)A waystone$() - Any waystone you've activated - A few XP points: 1 per 100 blocks, 27 at most (27 to another dimension)$(br)$(bold)Warp stone (hold right-click)$() - Any waystone you've activated - The same XP. It lasts 128 jumps$(br)$(bold)Warp scroll$() - Any waystone you've activated - Nothing; the scroll is used up$(br)$(bold)Return scroll$() - Your nearest activated waystone - Nothing; used up$(br)$(bold)Bound scroll (a blank scroll used on a waystone)$() - That waystone, for whoever holds it - Nothing; used up"
     },
     {
       "type": "patchouli:text",
-      "text": " a waystone that others can step through too - Nothing; used up$(br)$(bold)Sharestone$() - Any sharestone of the same colour - Like a waystone$(br)$(bold)Portstone$() - Any waystone you've activated. Nothing can warp to a portstone - Like a waystone$(br)$(bold)Warp plate$() - The plate it's paired with (pair two with an attuned shard) - Nothing$(br)$(bold)Twinbound feather$() - A friend whose feather you linked with yours - -$(br)$(bold)Epitaph$() - Carry one when you die, and you can warp back to where you fell, once - Nothing"
+      "text": "$(bold)Portal scroll$() - Opens a portal to a waystone that others can step through too - Nothing; used up$(br)$(bold)Sharestone$() - Any sharestone of the same colour - Like a waystone$(br)$(bold)Portstone$() - Any waystone you've activated. Nothing can warp to a portstone - Like a waystone$(br)$(bold)Warp plate$() - The plate it's paired with (pair two with an attuned shard) - Nothing$(br)$(bold)Twinbound feather$() - A friend whose feather you linked with yours - -$(br)$(bold)Epitaph$() - Carry one when you die, and you can warp back to where you fell, once - Nothing"
     },
     {
       "type": "patchouli:text",

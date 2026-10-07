@@ -15,7 +15,8 @@ import { ECONOMY } from './values.mjs'
 import { QUEST_STEPS } from './quests.mjs'
 import { byte, json, snbt } from './snbt.mjs'
 
-const SKILLS = new Set(['attack', 'strength', 'defence', 'ranged', 'hitpoints', 'mining', 'woodcutting', 'farming', 'fishing', 'cooking', 'smithing', 'crafting', 'agility', 'enchanting'])
+// Every Project MMO skill, plus 'combat' (the combat level, lsp_fixes skills/Levels).
+const SKILLS = new Set(['attack', 'strength', 'defence', 'ranged', 'hitpoints', 'mining', 'woodcutting', 'farming', 'fishing', 'cooking', 'smithing', 'crafting', 'agility', 'enchanting', 'brewing', 'combat'])
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')

@@ -16,6 +16,7 @@
 // on the tier's reward table; finales and milestones add fixed prizes players can see coming.
 
 import { QUEST_ITEMS } from '../npcs/quests.mjs'
+import { BREW, CHOP, CRAFT, FISHING_TREASURE, PLANT, RANGED } from '../skills/unlocks.mjs'
 
 const tip = (text) => `&7${text}`
 
@@ -330,7 +331,7 @@ const TABLES = [
 
 const SKILL_GROUPS = { combat: '&c', gathering: '&a', artisan: '&6', support: '&b' }
 const SKILLS = [
-  { id: 'attack', name: 'Attack', group: 'combat', perk: 'each level adds melee and bow damage', unlocks: { 5: 'stone swords', 10: 'golden swords', 15: 'iron swords and the crossbow', 20: 'the potato cannon', 25: 'the Brass Sabre', 30: 'diamond swords', 40: 'the trident and the Brass Duelist set', 45: 'the Sturdy Warhammer', 50: 'netherite swords, the mace and the Stormcaller\'s Sabre' } },
+  { id: 'attack', name: 'Attack', group: 'combat', perk: 'each level adds melee and bow damage', unlocks: { 5: 'stone swords', 10: 'golden swords', 15: 'iron swords', 25: 'the Brass Sabre', 30: 'diamond swords', 40: 'the Brass Duelist set', 45: 'the Sturdy Warhammer', 50: 'netherite swords, the mace and the Stormcaller\'s Sabre' } },
   { id: 'strength', name: 'Strength', group: 'combat', perk: '+0.3% melee crit chance per level', unlocks: {} },
   { id: 'defence', name: 'Defence', group: 'combat', perk: '+0.02 armour per level', unlocks: { 5: 'copper diving gear', 10: 'golden and chainmail armour', 15: 'iron armour', 20: 'the turtle helmet', 30: 'diamond armour', 40: 'the Ember Crown', 45: 'the Compacted Diamond set', 50: 'netherite armour and diving gear', 60: 'the Compacted Netherite set' } },
   { id: 'ranged', name: 'Ranged', group: 'combat', perk: '+0.3% ranged crit chance per level', unlocks: {} },
@@ -343,8 +344,26 @@ const SKILLS = [
   { id: 'smithing', name: 'Smithing', group: 'artisan', perk: 'XP from ingots and gear', unlocks: {} },
   { id: 'crafting', name: 'Crafting', group: 'artisan', perk: 'XP from everything you craft', unlocks: { 30: 'the Builder\'s Wand' } },
   { id: 'enchanting', name: 'Enchanting', group: 'artisan', perk: 'enchantments past their vanilla max: the caps open with the skill', unlocks: { 20: 'level VI of the raised enchantments', 40: 'level VII', 60: 'level VIII', 80: 'level IX', 99: 'level X' } },
-  { id: 'agility', name: 'Agility', group: 'support', perk: 'speed and less fall damage', unlocks: { 30: 'the elytra', 40: 'the Aeronaut\'s set' } }
+  { id: 'agility', name: 'Agility', group: 'support', perk: 'speed and less fall damage', unlocks: { 30: 'the elytra', 40: 'the Aeronaut\'s set' } },
+  { id: 'brewing', name: 'Brewing', group: 'artisan', perk: 'XP from every potion you brew', unlocks: {} }
 ]
+// What skills/unlocks.mjs gates, folded into each skill's list (several things at one level share a line).
+{
+  const add = (skillId, level, what) => {
+    const skill = SKILLS.find((x) => x.id === skillId)
+    if (!skill) return
+    const text = what.charAt(0).toLowerCase() + what.slice(1)
+    skill.unlocks[level] = skill.unlocks[level] ? `${skill.unlocks[level]}; ${text}` : text
+  }
+  for (const c of CRAFT) add(c.skill, c.level, c.skill === 'brewing' ? `making ${c.what.toLowerCase()}` : c.what)
+  for (const b of BREW) if (b.level > 1) add('brewing', b.level, `brewing ${b.what.charAt(0).toLowerCase() + b.what.slice(1)}`)
+  for (const p of PLANT) add('farming', p.level, `planting ${p.what.toLowerCase()}`)
+  for (const c of CHOP) add('woodcutting', c.level, `chopping ${c.what.toLowerCase()}`)
+  for (const r of RANGED) add('ranged', r.level, r.what)
+  add('fishing', FISHING_TREASURE, 'landing treasure')
+}
+const SKILL_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+const SKILL_COUNT_WORD = SKILL_WORDS[SKILLS.length] ?? String(SKILLS.length)
 const MILESTONE_LEVELS = [10, 25, 50, 75, 99]
 const MILESTONE_TIER = { 10: 1, 25: 2, 50: 3, 75: 4, 99: 5 }
 /** Fixed prizes at 50 and 75, on top of the tier: something the skill itself makes useful. */
@@ -362,7 +381,8 @@ const SKILL_PRIZES = {
   smithing: { 50: [{ item: 'minecraft:netherite_upgrade_smithing_template', count: 2 }, { item: 'minecraft:netherite_scrap', count: 4 }], 75: [{ item: 'lemursaucepacket:compacted_netherite' }, { item: 'minecraft:netherite_ingot', count: 2 }] },
   crafting: { 50: [{ item: 'lemursaucepacket:builders_wand' }], 75: [{ item: 'sophisticatedbackpacks:crafting_upgrade' }, { item: 'create:mechanical_crafter', count: 9 }] },
   enchanting: { 50: [enchantedBook('mending')], 75: [{ item: 'create_enchantment_industry:experience_bucket', count: 2 }, enchantedBook('unbreaking', 5)] },
-  agility: { 50: [{ item: 'lemursaucepacket:aeronaut_boots' }], 75: [{ item: 'minecraft:elytra' }] }
+  agility: { 50: [{ item: 'lemursaucepacket:aeronaut_boots' }], 75: [{ item: 'minecraft:elytra' }] },
+  brewing: { 50: [{ item: 'minecraft:dragon_breath', count: 8 }, { item: 'minecraft:ghast_tear', count: 4 }], 75: [{ item: 'minecraft:brewing_stand', count: 2 }, { item: 'minecraft:blaze_rod', count: 16 }, { item: 'minecraft:turtle_helmet' }] }
 }
 const TOTAL_MILESTONES = [
   { total: 100, tier: 2, title: 'Total 100', desc: 'A hundred levels across every skill.' },
@@ -370,7 +390,7 @@ const TOTAL_MILESTONES = [
   { total: 500, tier: 4, title: 'Total 500', desc: 'Half way to the top. Five hundred levels.', coins: 5000 },
   { total: 750, tier: 4, title: 'Total 750', desc: 'Seven hundred and fifty levels.', tables: ['relic_cache'], coins: 5000 },
   { total: 1000, tier: 5, title: 'Total 1000', desc: 'A thousand levels. Very few will get here.', coins: 40000 },
-  { total: 1386, tier: 5, title: '&6Maxed', desc: 'Every one of the fourteen skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.', coins: 80000, tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
+  { total: SKILLS.length * 99, tier: 5, title: '&6Maxed', desc: `Every one of the ${SKILL_COUNT_WORD} skills at 99. The animated Maxed Cape lands in your bag the moment you get there: wear it in the Cape slot.`, coins: 80000, tables: ['relic_cache', 'legends_hoard'], size: 1.6, shape: 'gear' }
 ]
 
 function skillsChapter() {
@@ -427,7 +447,7 @@ function skillsChapter() {
       shape: m.shape,
       size: m.size,
       pos: [Math.round((3.15 + i * 2.2) * 20) / 20, totalY],
-      desc: [m.desc, '', tip('Your total level is every skill added together, 14 to 1386.')],
+      desc: [m.desc, '', tip(`Your total level is every skill added together, ${SKILLS.length} to ${SKILLS.length * 99}.`)],
       tasks: [{ custom: true, title: `Total level ${m.total}`, icon: textureIcon('skills/total_level') }],
       reward: { items: m.items, tables: m.tables, coins: m.coins }
     })
@@ -587,7 +607,7 @@ export default {
           icon: 'minecraft:iron_sword',
           tier: 1,
           auto: true,
-          desc: ['Squire Asrol, at the armourer\'s on the ring street, dropped Sir Vyvin\'s sword down a well. Only a smith taught by the dwarves could forge another.'],
+          desc: ['Squire Asrol, at the armourer\'s on the ring street, dropped Sir Vyvin\'s sword down a well. Only a smith taught by the dwarves could forge another.', '', '&eRequires:&r Mining 10, Smithing 10.'],
           tasks: [{ stage: 'q_sword_started', title: 'Hear the squire out', icon: 'minecraft:iron_sword' }]
         },
         {
@@ -658,7 +678,7 @@ export default {
           icon: 'minecraft:dragon_head',
           tier: 2,
           auto: true,
-          desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay the Ender Dragon.", '', "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword."],
+          desc: ["Guildmaster Greaves of the Champions' Guild wants proof that you're a champion: slay the Ender Dragon.", '', "Needs Welcome to Lemurton, Cook's Assistant and The Knight's Sword.", '', '&eRequires:&r combat level 40, Brewing 55 (for the eyes of ender).'],
           tasks: [{ stage: 'q_ds_started', title: "Ask the Champions' Guild for a challenge", icon: 'minecraft:dragon_head' }]
         },
         {
@@ -785,7 +805,7 @@ export default {
           icon: 'iceandfire:dragon_skull_fire',
           tier: 3,
           auto: true,
-          desc: ['After Dragon Slayer I, Oziach has a score to settle: Elvarg of Crandor burnt his ship and half his crew, and every ship that has gone near her isle since.'],
+          desc: ['After Dragon Slayer I, Oziach has a score to settle: Elvarg of Crandor burnt his ship and half his crew, and every ship that has gone near her isle since.', '', '&eRequires:&r Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60, Hitpoints 50.'],
           tasks: [{ stage: 'q_ds2_started', title: 'Hear about Elvarg from Oziach', icon: 'iceandfire:dragon_skull_fire' }]
         },
         {
@@ -858,7 +878,7 @@ export default {
           icon: 'minecraft:magma_cream',
           tier: 3,
           auto: true,
-          desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew the Ender Dragon. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", '', tip('Kiln Hollow has a waystone: touch it so you can come straight back.')],
+          desc: ["After Dragon Slayer I, Guildmaster Greaves has news: the Kilnfolk want to meet the one who slew the Ender Dragon. Their envoy left a Kilnfolk Pass, a compass that pulls toward Kiln Hollow, their outpost in the volcanic lands.", '', '&eRequires:&r combat level 60.', '', tip('Kiln Hollow has a waystone: touch it so you can come straight back.')],
           tasks: [{ stage: 'q_pits_started', title: 'Take the Kilnfolk Pass from Greaves', icon: 'minecraft:compass' }]
         },
         {
@@ -4435,7 +4455,7 @@ export default {
       key: 'skills',
       group: 'mastery',
       title: 'Skills',
-      subtitle: 'Fourteen skills, five milestones each, and the total-level ladder.',
+      subtitle: `${SKILL_COUNT_WORD.charAt(0).toUpperCase() + SKILL_COUNT_WORD.slice(1)} skills, five milestones each, and the total-level ladder.`,
       about: 'Every skill pays out at 10, 25, 50, 75 and 99. The server checks your Project MMO levels every few seconds and completes the milestones for you; the rewards wait here to be claimed. Level 99 comes with a skill cape and a sun coin.',
       unlocksLabel: 'Rewards',
       unlocks: 'crates that grow with the level, a prize built for the skill at 50 and 75, and 40,000 coins, a relic and the Legend\'s Hoard at 99.',

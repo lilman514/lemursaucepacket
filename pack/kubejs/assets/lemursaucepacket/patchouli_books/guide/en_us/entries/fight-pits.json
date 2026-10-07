@@ -41,11 +41,11 @@
     {
       "type": "patchouli:text",
       "title": "How a wave fight works",
-      "text": "$(li)Right-click Grull (or Zarn) and press $(bold)Enter$(). You arrive on the south side of the pit, facing in.$(br)$(li)The waves come one after another: each a few seconds after the last beast of the one before falls (including what it split into or called up). The bar at the top counts them; on the last wave it follows the boss.$(br)$(li)Beasts come in from all round the pit. Use the boulders (and in the Inferno, the pillars) to break their line of sight.$(br)$(li)You have 90 minutes in the Fight Pits and two hours in the Inferno. $(#e0ac46)/instance leave$() walks out early.$(br)$(li)Win and you have 20 secon"
+      "text": "$(li)Right-click Grull (or Zarn) and press $(bold)Enter$(). You arrive on the south side of the pit, facing in.$(br)$(li)The waves come one after another: each a few seconds after the last beast of the one before falls (including what it split into or called up). The bar at the top counts them; on the last wave it follows the boss.$(br)$(li)Beasts come in from all round the pit. Use the boulders (and in the Inferno, the pillars) to break their line of sight.$(br)$(li)You have 90 minutes in the Fight Pits and two hours in the Inferno. $(#e0ac46)/instance leave$() walks out early."
     },
     {
       "type": "patchouli:text",
-      "text": "ds before you're taken back. You can fight again any time for the coins (10,000 a win in the Fight Pits, 40,000 in the Inferno); each cape only comes once."
+      "text": "$(li)Win and you have 20 seconds before you're taken back. You can fight again any time for the coins (10,000 a win in the Fight Pits, 40,000 in the Inferno); each cape only comes once."
     },
     {
       "type": "patchouli:text",
@@ -68,28 +68,20 @@
     {
       "type": "patchouli:text",
       "title": "The Inferno",
-      "text": "Twenty-six waves of the Kal- beasts, each with a swarm of Nib in it, then a $(bold)Kal-Tok-Jad$(), then $(bold)two at once$(), then $(bold)Kiln-Kal-Zuk$()."
+      "text": "Twenty-six waves of the Kal- beasts, each with a swarm of Nib in it, then a $(bold)Kal-Tok-Jad$(), then $(bold)two at once$(), then $(bold)Kiln-Kal-Zuk$().$(br2)$(#b9a98a)Beast - What it is - What it does$()$(br)$(bold)$(bold)Kal-Nib$()$() - A vex - Swarms of three in every wave$(br)$(bold)$(bold)Kal-MejRah$()$() - A phantom - Drains your run: Slowness and Hunger when it hits$(br)$(bold)$(bold)Kal-Ak$()$() - A great magma cube - Splits, and splits again$(br)$(bold)$(bold)Kal-ImKot$()$() - A hoglin - Burrows up beside you when it can't get closer"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Beast - What it is - What it does$()$(br)$(bold)$(bold)Kal-Nib$()$() - A vex - Swarms of three in every wave$(br)$(bold)$(bold)Kal-MejRah$()$() - A phantom - Drains your run: Slowness and Hunger when it hits$(br)$(bold)$(bold)Kal-Ak$()$() - A great magma cube - Splits, and splits again$(br)$(bold)$(bold)Kal-ImKot$()$() - A hoglin - Burrows up beside you when it can't get closer$(br)$(bold)$(bold)Kal-Xil$()$() - A wither skeleton with a stronger bow - Shoots from range$(br)$(bold)$(bold)Kal-Zek$()$() - An evoker - Fangs, and calls up vexes$(br)$(bold)$(bold)Kal-Tok-Jad$()$() - A giant blaze - Jad again, "
-    },
-    {
-      "type": "patchouli:text",
-      "text": "with three menders at half health"
+      "text": "$(bold)$(bold)Kal-Xil$()$() - A wither skeleton with a stronger bow - Shoots from range$(br)$(bold)$(bold)Kal-Zek$()$() - An evoker - Fangs, and calls up vexes$(br)$(bold)$(bold)Kal-Tok-Jad$()$() - A giant blaze - Jad again, with three menders at half health"
     },
     {
       "type": "patchouli:text",
       "title": "Kiln-Kal-Zuk",
-      "text": "Zuk hangs over the lava lake on the north side, and a $(bold)shield$() of obsidian and crying obsidian drifts back and forth along its shore."
+      "text": "Zuk hangs over the lava lake on the north side, and a $(bold)shield$() of obsidian and crying obsidian drifts back and forth along its shore.$(br2)$(li)Every few seconds $(bold)his eyes burn$() (his face opens and he wails). Then he burns everyone the shield doesn't cover: $(bold)be behind the shield$(), on the line between you and him, or nine tenths of your health goes.$(br)$(li)He's close enough to the shore to hit from right behind the shield, so you can fight him as it drifts, keeping it between you. With a bow you can shoot from anywhere behind it."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)Every few seconds $(bold)his eyes burn$() (his face opens and he wails). Then he burns everyone the shield doesn't cover: $(bold)be behind the shield$(), on the line between you and him, or nine tenths of your health goes.$(br)$(li)He's close enough to the shore to hit from right behind the shield, so you can fight him as it drifts, keeping it between you. With a bow you can shoot from anywhere behind it.$(br)$(li)At four fifths and three fifths of his health he sends a Kal-Xil and a Kal-Zek; at half, a Kal-Tok-Jad; at a quarter, three menders (Kal-MejJak) who walk to the shore to heal him. Strike one.$(br)$"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "(li)Near the end he burns more often."
+      "text": "$(li)At four fifths and three fifths of his health he sends a Kal-Xil and a Kal-Zek; at half, a Kal-Tok-Jad; at a quarter, three menders (Kal-MejJak) who walk to the shore to heal him. Strike one.$(br)$(li)Near the end he burns more often."
     },
     {
       "type": "patchouli:text",

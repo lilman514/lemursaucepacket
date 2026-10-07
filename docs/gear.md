@@ -145,6 +145,10 @@ Wear: Defence 60. Defense 5/10/8/5, toughness 4, knockback resistance 0.2.
 | Compacted Diamond | Four diamonds compacted in a basin under a mechanical press. |
 | Compacted Netherite | Four netherite ingots compacted in a basin under a heated mechanical press. |
 | Duelist's Pattern | Only found in Dungeons Arise chests; one pattern per set piece. |
+| Prospector's Plating | A crafting table (Smithing 25): brass sheets, andesite alloy and an iron ingot make two. |
+| Aeronaut's Rigging | A crafting table (Crafting 35): leather, string and a sturdy sheet make two. |
+| Duelist's Filigree | A crafting table (Crafting 40): gold, brass and a precision mechanism make two. |
+| Diamond Lattice | A crafting table (Smithing 45): diamonds woven through sturdy sheets make two. |
 
 ## Loot-only gear
 

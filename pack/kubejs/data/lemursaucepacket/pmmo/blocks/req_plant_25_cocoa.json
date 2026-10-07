@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:cocoa"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 25
+    }
+  }
+}

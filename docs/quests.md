@@ -22,17 +22,19 @@ Thirty-seven chapters. The Ages are the main road through Create; the Main Quest
 
 RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under **Main Quests**) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so. [Lemurton](lemurton.md) lists who is where.
 
+As in RuneScape, the bigger quests ask for skill levels first: the quest giver says what you're missing, and the quest book lists it under each quest. Your combat level is under your name.
+
 <figure><img src="images/quest_book_welcome.jpg" alt="The Welcome to Lemurton chapter in the quest book"><figcaption><p>Welcome to Lemurton, the first questline</p></figcaption></figure>
 
-| Quest | Given by | What it takes | Rewards |
-|---|---|---|---|
-| Cook's Assistant (novice) | The Cook, in the butcher's shop on the ring street | A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) | 1 quest point, Cooking XP, coins |
-| The Knight's Sword (intermediate) | Squire Asrol, at the armourer's | Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots | 1 quest point, Smithing XP, coins |
-| Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | The Ender Dragon: see below | 2 quest points, Dragon Slayer II and the Fight Pits, Attack and Defence XP, 15,000 coins |
-| Dragon Slayer II (master) | Oziach, after Dragon Slayer I | Elvarg of Crandor: see below | 3 quest points, the right to wear dragon armour, Attack, Strength and Defence XP, 30,000 coins |
-| The Fight Pits (master) | Guildmaster Greaves, after Dragon Slayer I | An offering, the Ashen Trial, Defence, Hitpoints and Attack or Ranged 50, then thirty waves and Kiln-Tok-Jad | 2 quest points, the Fire Cape, combat XP, 30,000 coins |
-| Ashes of the Kiln (grandmaster) | Elder Ashka, after the Fight Pits | The Wither and the Warden, and Dragon Slayer II; an Infernal Key; Defence, Hitpoints and Attack or Ranged 80 | 2 quest points, the way into the Inferno, 40,000 coins |
-| The Inferno (grandmaster) | Elder Ashka, after Ashes of the Kiln | The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk | 3 quest points, the Infernal Cape, combat XP, 100,000 coins |
+| Quest | Given by | Skills it needs | What it takes | Rewards |
+|---|---|---|---|---|
+| Cook's Assistant (novice) | The Cook, in the butcher's shop on the ring street | None | A bucket of milk, an egg and a pot of flour (wheat ground in a Create millstone) | 1 quest point, Cooking XP, coins |
+| The Knight's Sword (intermediate) | Squire Asrol, at the armourer's | Mining 10, Smithing 10 | Brann the Smith forges a new sword from a brass ingot, a precision mechanism and two iron ingots | 1 quest point, Smithing XP, coins |
+| Dragon Slayer I (experienced) | Guildmaster Greaves, at the Champions' Guild (needs the two quests above and Welcome to Lemurton) | Combat level 40, Brewing 55 (Eyes of Ender) | The Ender Dragon: see below | 2 quest points, Dragon Slayer II and the Fight Pits, Attack and Defence XP, 15,000 coins |
+| Dragon Slayer II (master) | Oziach, after Dragon Slayer I | Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60, Hitpoints 50 | Elvarg of Crandor: see below | 3 quest points, the right to wear dragon armour, Attack, Strength and Defence XP, 30,000 coins |
+| The Fight Pits (master) | Guildmaster Greaves, after Dragon Slayer I | Combat level 60; Defence, Hitpoints and Attack or Ranged 50 to go in | An offering, the Ashen Trial, then thirty waves and Kiln-Tok-Jad | 2 quest points, the Fire Cape, combat XP, 30,000 coins |
+| Ashes of the Kiln (grandmaster) | Elder Ashka, after the Fight Pits | Defence, Hitpoints and Attack or Ranged 80 | The Wither and the Warden, and Dragon Slayer II; an Infernal Key | 2 quest points, the way into the Inferno, 40,000 coins |
+| The Inferno (grandmaster) | Elder Ashka, after Ashes of the Kiln | As for Ashes of the Kiln | The Inferno's waves, two Kal-Tok-Jads and Kiln-Kal-Zuk | 3 quest points, the Infernal Cape, combat XP, 100,000 coins |
 
 **Dragon Slayer I** is the oldest dragon there is: the Ender Dragon, on her island at the end of the world. Guildmaster Greaves sets the challenge, and Oziach, who keeps the armoury on the ring street, tells you how to reach her.
 

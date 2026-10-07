@@ -50,6 +50,7 @@ export const QUEST_STEPS = {
     title: "The Knight's Sword",
     stages: ['q_sword_started', 'q_sword_brann', 'q_sword_forged', 'q_sword_done'],
     steps: {
+      start: { lacks: ['q_sword_started'], skills: { mining: 10, smithing: 10 }, stage: 'q_sword_started', ok: 'started', missing: 'not_ready' },
       forge: {
         needs: ['q_sword_brann'],
         lacks: ['q_sword_forged'],
@@ -78,6 +79,7 @@ export const QUEST_STEPS = {
     title: 'Dragon Slayer I',
     stages: ['q_ds_started', 'q_ds_oziach', 'q_ds_shield', 'q_ds_piece1', 'q_ds_piece2', 'q_ds_map', 'q_ds_dragon', 'q_ds_done'],
     steps: {
+      start: { needs: ['q_welcome_done', 'q_cook_done', 'q_sword_done'], lacks: ['q_ds_started'], skills: { combat: 40, brewing: 55 }, stage: 'q_ds_started', ok: 'ds_start', missing: 'ds_not_ready' },
       shield: { needs: ['q_ds_oziach'], lacks: ['q_ds_shield'], give: [QUEST_ITEMS.antidragon_shield], stage: 'q_ds_shield', message: 'The mayor gives you an Anti-dragon Shield.', ok: 'ds_shield_given' },
       shield_again: { needs: ['q_ds_shield'], coins: 2000, give: [QUEST_ITEMS.antidragon_shield], message: 'The mayor has Brann copy the old shield for you.', ok: 'ds_shield_again', missing: 'ds_shield_poor' },
       piece1: { needs: ['q_ds_oziach'], lacks: ['q_ds_piece1'], coins: 10000, give: [QUEST_ITEMS.map_piece_1], stage: 'q_ds_piece1', message: 'You buy a scrap of old map from Lucan.', ok: 'ds_piece_sold', missing: 'ds_piece_poor' },
@@ -109,6 +111,7 @@ export const QUEST_STEPS = {
     title: 'Dragon Slayer II',
     stages: ['q_ds2_started', 'q_ds2_map', 'q_ds2_elvarg', 'q_ds2_done'],
     steps: {
+      start: { needs: ['q_ds_done'], lacks: ['q_ds2_started'], skills: { smithing: 70, mining: 68, crafting: 62, agility: 60, enchanting: 60, hitpoints: 50 }, stage: 'q_ds2_started', ok: 'ds2_wizard', missing: 'ds2_not_ready' },
       scry: {
         needs: ['q_ds2_started'],
         lacks: ['q_ds2_map'],
@@ -138,7 +141,7 @@ Object.assign(QUEST_STEPS, {
     title: 'The Fight Pits',
     stages: ['q_pits_started', 'q_pits_elder', 'q_pits_offering', 'q_pits_trial', 'q_pits_allowed', 'q_pits_fire', 'q_pits_done'],
     steps: {
-      pass: { needs: ['q_ds_done'], lacks: ['q_pits_started'], special: ['kiln_pass'], stage: 'q_pits_started', message: 'Guildmaster Greaves gives you a Kilnfolk Pass.', ok: 'pits_pass_given' },
+      pass: { needs: ['q_ds_done'], lacks: ['q_pits_started'], skills: { combat: 60 }, special: ['kiln_pass'], stage: 'q_pits_started', message: 'Guildmaster Greaves gives you a Kilnfolk Pass.', ok: 'pits_pass_given', missing: 'pits_not_ready' },
       offering: {
         needs: ['q_pits_elder'],
         lacks: ['q_pits_offering'],

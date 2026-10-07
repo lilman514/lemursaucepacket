@@ -38,11 +38,11 @@
     {
       "type": "patchouli:text",
       "title": "What next",
-      "text": "$(li)Press $(bold)ESC$() in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)Open the quest book (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins.$(br)$(li)You start with the $(bold)LemurSaucePacket Guide$(), this wiki as a book. ESC → Guide (or $(#e0ac46)/guide$()) opens it anywhere; a book and a brass nugget craft another.$(br)$(li)Follow the $(bold)Compass to Lemurton$() you get on your first login, and talk to Mayor Thaddeus for the first quest. See $(l:le"
+      "text": "$(li)Press $(bold)ESC$() in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)Open the quest book (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins.$(br)$(li)You start with the $(bold)LemurSaucePacket Guide$(), this wiki as a book. ESC → Guide (or $(#e0ac46)/guide$()) opens it anywhere; a book and a brass nugget craft another."
     },
     {
       "type": "patchouli:text",
-      "text": "mursaucepacket:lemurton)Lemurton$(/l).$(br)$(li)Read $(l:lemursaucepacket:world)The world and its rules$(/l) before you build anything you'd miss."
+      "text": "$(li)Follow the $(bold)Compass to Lemurton$() you get on your first login, and talk to Mayor Thaddeus for the first quest. See $(l:lemursaucepacket:lemurton)Lemurton$(/l).$(br)$(li)Read $(l:lemursaucepacket:world)The world and its rules$(/l) before you build anything you'd miss."
     }
   ]
 }

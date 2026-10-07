@@ -1,14 +1,15 @@
 {
   "override": false,
   "isTagFor": [
-    "minecraft:trident"
+    "minecraft:crossbow",
+    "create:potato_cannon"
   ],
   "requirements": {
     "USE": {
-      "attack": 40
+      "ranged": 20
     },
     "WEAPON": {
-      "attack": 40
+      "ranged": 20
     }
   },
   "negative_effect": {

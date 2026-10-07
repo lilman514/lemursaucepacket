@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:nether_wart"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 30
+    }
+  }
+}

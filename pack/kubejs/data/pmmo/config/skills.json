@@ -78,6 +78,12 @@
       "iconSize": 64,
       "maxLevel": 99
     },
+    "brewing": {
+      "color": 14724166,
+      "icon": "lemursaucepacket:textures/skills/brewing.png",
+      "iconSize": 64,
+      "maxLevel": 99
+    },
     "agility": {
       "color": 7321576,
       "icon": "lemursaucepacket:textures/skills/agility.png",
@@ -114,7 +120,8 @@
         "cooking",
         "smithing",
         "crafting",
-        "enchanting"
+        "enchanting",
+        "brewing"
       ]
     },
     "support": {

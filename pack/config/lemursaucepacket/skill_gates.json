@@ -1,0 +1,535 @@
+{
+  "craft": [
+    {
+      "skill": "crafting",
+      "level": 5,
+      "what": "Leather armour",
+      "items": [
+        "minecraft:leather_helmet",
+        "minecraft:leather_chestplate",
+        "minecraft:leather_leggings",
+        "minecraft:leather_boots"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 10,
+      "what": "Bows",
+      "items": [
+        "minecraft:bow"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 15,
+      "what": "Shields",
+      "items": [
+        "minecraft:shield"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 20,
+      "what": "Crossbows",
+      "items": [
+        "minecraft:crossbow"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 30,
+      "what": "Diamond tools, weapons and armour",
+      "items": [
+        "minecraft:diamond_sword",
+        "minecraft:diamond_pickaxe",
+        "minecraft:diamond_axe",
+        "minecraft:diamond_shovel",
+        "minecraft:diamond_hoe",
+        "minecraft:diamond_helmet",
+        "minecraft:diamond_chestplate",
+        "minecraft:diamond_leggings",
+        "minecraft:diamond_boots"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 40,
+      "what": "Enchanting tables",
+      "items": [
+        "minecraft:enchanting_table"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 50,
+      "what": "Ender chests",
+      "items": [
+        "minecraft:ender_chest"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 60,
+      "what": "End crystals",
+      "items": [
+        "minecraft:end_crystal"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 65,
+      "what": "Shulker boxes",
+      "items": [
+        "minecraft:shulker_box"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 70,
+      "what": "Conduits",
+      "items": [
+        "minecraft:conduit"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 75,
+      "what": "Beacons",
+      "items": [
+        "minecraft:beacon"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 80,
+      "what": "Respawn anchors and lodestones",
+      "items": [
+        "minecraft:respawn_anchor",
+        "minecraft:lodestone"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 35,
+      "what": "Aeronaut's Rigging (for the Aeronaut set)",
+      "items": [
+        "lemursaucepacket:aeronaut_rigging"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 40,
+      "what": "Duelist's Filigree (for the Brass Duelist set)",
+      "items": [
+        "lemursaucepacket:duelists_filigree"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 10,
+      "what": "Golden tools, weapons and armour",
+      "items": [
+        "minecraft:golden_sword",
+        "minecraft:golden_pickaxe",
+        "minecraft:golden_axe",
+        "minecraft:golden_shovel",
+        "minecraft:golden_hoe",
+        "minecraft:golden_helmet",
+        "minecraft:golden_chestplate",
+        "minecraft:golden_leggings",
+        "minecraft:golden_boots"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 15,
+      "what": "Iron tools, weapons and armour",
+      "items": [
+        "minecraft:iron_sword",
+        "minecraft:iron_pickaxe",
+        "minecraft:iron_axe",
+        "minecraft:iron_shovel",
+        "minecraft:iron_hoe",
+        "minecraft:iron_helmet",
+        "minecraft:iron_chestplate",
+        "minecraft:iron_leggings",
+        "minecraft:iron_boots"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 20,
+      "what": "Anvils and hoppers",
+      "items": [
+        "minecraft:anvil",
+        "minecraft:hopper"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 25,
+      "what": "Prospector's Plating (for the Prospector set)",
+      "items": [
+        "lemursaucepacket:prospector_plating"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 45,
+      "what": "Diamond Lattice (for the Compacted Diamond set)",
+      "items": [
+        "lemursaucepacket:diamond_lattice"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 40,
+      "what": "Copying armour trim templates",
+      "items": [
+        "#minecraft:trim_templates"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 50,
+      "what": "Netherite gear (the smithing table upgrade)",
+      "items": [
+        "minecraft:netherite_sword",
+        "minecraft:netherite_pickaxe",
+        "minecraft:netherite_axe",
+        "minecraft:netherite_shovel",
+        "minecraft:netherite_hoe",
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 60,
+      "what": "Copying the netherite upgrade template",
+      "items": [
+        "minecraft:netherite_upgrade_smithing_template"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 65,
+      "what": "Compacted netherite armour",
+      "items": [
+        "lemursaucepacket:compacted_netherite_helmet",
+        "lemursaucepacket:compacted_netherite_chestplate",
+        "lemursaucepacket:compacted_netherite_leggings",
+        "lemursaucepacket:compacted_netherite_boots"
+      ]
+    },
+    {
+      "skill": "smithing",
+      "level": 70,
+      "what": "Maces",
+      "items": [
+        "minecraft:mace"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 5,
+      "what": "Beetroot soup, sandwiches and salads",
+      "items": [
+        "minecraft:beetroot_soup",
+        "farmersdelight:egg_sandwich",
+        "farmersdelight:chicken_sandwich",
+        "farmersdelight:bacon_sandwich",
+        "farmersdelight:mixed_salad",
+        "farmersdelight:fruit_salad"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 10,
+      "what": "Pumpkin pie, hamburgers, wraps and Farmer's Delight soups",
+      "items": [
+        "minecraft:pumpkin_pie",
+        "farmersdelight:hamburger",
+        "farmersdelight:mutton_wrap",
+        "farmersdelight:vegetable_soup",
+        "farmersdelight:chicken_soup",
+        "farmersdelight:pumpkin_soup",
+        "farmersdelight:onion_soup",
+        "farmersdelight:noodle_soup",
+        "farmersdelight:bone_broth"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 20,
+      "what": "Cake, rabbit stew, stews, rice dishes and rolls",
+      "items": [
+        "minecraft:cake",
+        "minecraft:rabbit_stew",
+        "farmersdelight:beef_stew",
+        "farmersdelight:fish_stew",
+        "farmersdelight:baked_cod_stew",
+        "farmersdelight:fried_rice",
+        "farmersdelight:mushroom_rice",
+        "farmersdelight:cabbage_rolls",
+        "farmersdelight:dumplings",
+        "farmersdelight:stuffed_potato",
+        "farmersdelight:kelp_roll",
+        "farmersdelight:salmon_roll",
+        "farmersdelight:cod_roll"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 30,
+      "what": "Golden carrots, pies, pasta and plated meals",
+      "items": [
+        "minecraft:golden_carrot",
+        "farmersdelight:apple_pie",
+        "farmersdelight:sweet_berry_cheesecake",
+        "farmersdelight:chocolate_pie",
+        "farmersdelight:pasta_with_meatballs",
+        "farmersdelight:pasta_with_mutton_chop",
+        "farmersdelight:vegetable_noodles",
+        "farmersdelight:steak_and_potatoes",
+        "farmersdelight:roasted_mutton_chops",
+        "farmersdelight:grilled_salmon",
+        "farmersdelight:bacon_and_eggs",
+        "farmersdelight:ratatouille"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 40,
+      "what": "Squid ink pasta, glow berry custard and nether salad",
+      "items": [
+        "farmersdelight:squid_ink_pasta",
+        "farmersdelight:glow_berry_custard",
+        "farmersdelight:nether_salad"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 45,
+      "what": "Golden apples",
+      "items": [
+        "minecraft:golden_apple"
+      ]
+    },
+    {
+      "skill": "cooking",
+      "level": 50,
+      "what": "Farmer's Delight feasts",
+      "items": [
+        "farmersdelight:roast_chicken_block",
+        "farmersdelight:stuffed_pumpkin_block",
+        "farmersdelight:shepherds_pie_block",
+        "farmersdelight:honey_glazed_ham_block",
+        "farmersdelight:rice_roll_medley_block"
+      ]
+    },
+    {
+      "skill": "brewing",
+      "level": 55,
+      "what": "Eyes of ender",
+      "items": [
+        "minecraft:ender_eye"
+      ]
+    }
+  ],
+  "brew": [
+    {
+      "level": 1,
+      "item": "minecraft:nether_wart",
+      "what": "Awkward potions, the base of nearly all others"
+    },
+    {
+      "level": 5,
+      "item": "minecraft:sugar",
+      "what": "Swiftness"
+    },
+    {
+      "level": 10,
+      "item": "minecraft:golden_carrot",
+      "what": "Night Vision"
+    },
+    {
+      "level": 15,
+      "item": "minecraft:rabbit_foot",
+      "what": "Leaping"
+    },
+    {
+      "level": 20,
+      "item": "minecraft:magma_cream",
+      "what": "Fire Resistance"
+    },
+    {
+      "level": 25,
+      "item": "minecraft:glistering_melon_slice",
+      "what": "Healing"
+    },
+    {
+      "level": 25,
+      "item": "minecraft:spider_eye",
+      "what": "Poison"
+    },
+    {
+      "level": 30,
+      "item": "minecraft:pufferfish",
+      "what": "Water Breathing"
+    },
+    {
+      "level": 30,
+      "item": "minecraft:redstone",
+      "what": "Longer potions"
+    },
+    {
+      "level": 35,
+      "item": "minecraft:blaze_powder",
+      "what": "Strength"
+    },
+    {
+      "level": 40,
+      "item": "minecraft:ghast_tear",
+      "what": "Regeneration"
+    },
+    {
+      "level": 45,
+      "item": "minecraft:fermented_spider_eye",
+      "what": "Weakness, Harming, Slowness and Invisibility"
+    },
+    {
+      "level": 50,
+      "item": "minecraft:gunpowder",
+      "what": "Splash potions"
+    },
+    {
+      "level": 50,
+      "item": "minecraft:phantom_membrane",
+      "what": "Slow Falling"
+    },
+    {
+      "level": 60,
+      "item": "minecraft:glowstone_dust",
+      "what": "Stronger potions"
+    },
+    {
+      "level": 65,
+      "item": "minecraft:turtle_helmet",
+      "what": "Turtle Master"
+    },
+    {
+      "level": 70,
+      "item": "minecraft:dragon_breath",
+      "what": "Lingering potions"
+    },
+    {
+      "level": 80,
+      "item": "minecraft:breeze_rod",
+      "what": "Wind Charging"
+    },
+    {
+      "level": 80,
+      "item": "minecraft:cobweb",
+      "what": "Weaving"
+    },
+    {
+      "level": 80,
+      "item": "minecraft:slime_block",
+      "what": "Oozing"
+    },
+    {
+      "level": 80,
+      "item": "minecraft:stone",
+      "what": "Infested"
+    }
+  ],
+  "brewXp": {
+    "base": 8,
+    "perLevel": 2.2
+  },
+  "potions": {
+    "minecraft:awkward": 1,
+    "minecraft:long_awkward": 30,
+    "minecraft:strong_awkward": 60,
+    "minecraft:mundane": 1,
+    "minecraft:long_mundane": 30,
+    "minecraft:strong_mundane": 60,
+    "minecraft:thick": 1,
+    "minecraft:long_thick": 30,
+    "minecraft:strong_thick": 60,
+    "minecraft:swiftness": 5,
+    "minecraft:long_swiftness": 30,
+    "minecraft:strong_swiftness": 60,
+    "minecraft:night_vision": 10,
+    "minecraft:long_night_vision": 30,
+    "minecraft:strong_night_vision": 60,
+    "minecraft:leaping": 15,
+    "minecraft:long_leaping": 30,
+    "minecraft:strong_leaping": 60,
+    "minecraft:fire_resistance": 20,
+    "minecraft:long_fire_resistance": 30,
+    "minecraft:strong_fire_resistance": 60,
+    "minecraft:healing": 25,
+    "minecraft:long_healing": 30,
+    "minecraft:strong_healing": 60,
+    "minecraft:poison": 25,
+    "minecraft:long_poison": 30,
+    "minecraft:strong_poison": 60,
+    "minecraft:water_breathing": 30,
+    "minecraft:long_water_breathing": 30,
+    "minecraft:strong_water_breathing": 60,
+    "minecraft:strength": 35,
+    "minecraft:long_strength": 35,
+    "minecraft:strong_strength": 60,
+    "minecraft:regeneration": 40,
+    "minecraft:long_regeneration": 40,
+    "minecraft:strong_regeneration": 60,
+    "minecraft:invisibility": 45,
+    "minecraft:long_invisibility": 45,
+    "minecraft:strong_invisibility": 60,
+    "minecraft:weakness": 45,
+    "minecraft:long_weakness": 45,
+    "minecraft:strong_weakness": 60,
+    "minecraft:harming": 45,
+    "minecraft:long_harming": 45,
+    "minecraft:strong_harming": 60,
+    "minecraft:slowness": 45,
+    "minecraft:long_slowness": 45,
+    "minecraft:strong_slowness": 60,
+    "minecraft:slow_falling": 50,
+    "minecraft:long_slow_falling": 50,
+    "minecraft:strong_slow_falling": 60,
+    "minecraft:turtle_master": 65,
+    "minecraft:long_turtle_master": 65,
+    "minecraft:strong_turtle_master": 65,
+    "minecraft:wind_charged": 80,
+    "minecraft:long_wind_charged": 80,
+    "minecraft:strong_wind_charged": 80,
+    "minecraft:weaving": 80,
+    "minecraft:long_weaving": 80,
+    "minecraft:strong_weaving": 80,
+    "minecraft:oozing": 80,
+    "minecraft:long_oozing": 80,
+    "minecraft:strong_oozing": 80,
+    "minecraft:infested": 80,
+    "minecraft:long_infested": 80,
+    "minecraft:strong_infested": 80
+  },
+  "potionForms": {
+    "minecraft:splash_potion": 50,
+    "minecraft:lingering_potion": 70
+  },
+  "drops": [
+    {
+      "entity": "minecraft:wither_skeleton",
+      "item": "minecraft:wither_skeleton_skull",
+      "skill": "combat",
+      "level": 75,
+      "what": "Wither skeleton skulls (the Wither)"
+    }
+  ],
+  "fishingTreasure": 20
+}

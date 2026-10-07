@@ -262,11 +262,7 @@ Ashen piglins, @initiator, who left the Nether long ago. Their champions fight i
               Actions:[
                 {
                   Type:"COMMAND",
-                  Cmd:"/tag @initiator add q_ds_started"
-                },
-                {
-                  Type:"OPEN_NAMED_DIALOG",
-                  Cmd:"ds_start"
+                  Cmd:"/lsp quest step @initiator dragon_slayer start @npc-uuid"
                 }
               ],
               Conditions:[
@@ -287,6 +283,48 @@ Ashen piglins, @initiator, who left the Nether long ago. Their champions fight i
             {
               Label:"ask_1",
               Name:"I'll come back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"ds_not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"The Ender Dragon would eat you whole. Come back with a combat level of 40, and Brewing 55: you'll need eyes of ender to find her portal."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"ds_not_ready_0",
+              Name:"I'll be back",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"pits_not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"The Kilnfolk only test champions. Come back with a combat level of 60 and the pass is yours."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"pits_not_ready_0",
+              Name:"I'll be back",
               Actions:[
                 {
                   Type:"CLOSE_DIALOG"

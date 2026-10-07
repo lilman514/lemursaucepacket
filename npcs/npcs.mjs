@@ -313,8 +313,9 @@ export const NPCS = {
       dialog('started', 'Any luck?', 'Have you been to Brann? His smithy is on the ring street. He learned his craft from the dwarves under the mountain: if anyone can forge a sword like Sir Vyvin\'s, he can.', { priority: 20, conditions: [tag('q_sword_started')], buttons: [goodbye] }),
       dialog('default', 'Oh woe', "Oh woe is me! I've lost Sir Vyvin's sword, and he's back tomorrow!", { priority: 10, buttons: [button('What happened?', [open('ask')]), goodbye] }),
       dialog('ask', 'The sword', 'I was polishing it by the well, and it slipped... it\'s gone. The only smith who could make another is Brann at the smithy. Would you ask him for me?', {
-        buttons: [button("I'll ask Brann", [cmd('tag @initiator add q_sword_started'), open('started')]), button('Not my problem', [close()])]
+        buttons: [button("I'll ask Brann", [stepCmd('knights_sword', 'start')]), button('Not my problem', [close()])]
       }),
+      dialog('not_ready', 'Not yet', "Brann won't forge for someone who has never swung a pick or a hammer. Come back when you have Mining 10 and Smithing 10.", { buttons: [button("I'll be back", [close()])] }),
       dialog('no_sword', 'Where is it?', "You haven't got it with you! Bring me the sword Brann made.", { buttons: [button("I'll fetch it", [close()])] }),
       dialog('thanks', 'Thank you', "It's perfect! Sir Vyvin will never know. Please, take this for your trouble.", { buttons: [button('Good luck, squire', [close()])] })
     ]
@@ -335,8 +336,10 @@ export const NPCS = {
       dialog('ds_go', 'Oziach', 'Have you spoken to Oziach? He keeps the armoury on the ring street. He knows more about dragons than any man living.', { priority: 20, conditions: [tag('q_ds_started')], buttons: [goodbye] }),
       dialog('default', "The Champions' Guild", "Welcome to the Champions' Guild. Only the realm's finest adventurers drink here.", { priority: 10, buttons: [button('I want to be a champion', [open('ask')]), goodbye] }),
       dialog('ask', 'Prove yourself', 'Then prove yourself. Help the people of Lemurton first: the mayor\'s newcomers, the castle cook, Sir Vyvin\'s squire. Come back when they speak well of you.', {
-        buttons: [button('They do. Give me a real challenge', [cmd('tag @initiator add q_ds_started'), open('ds_start')], DRAGON_SLAYER_NEEDS.map(tag)), button("I'll come back", [close()])]
+        buttons: [button('They do. Give me a real challenge', [stepCmd('dragon_slayer', 'start')], DRAGON_SLAYER_NEEDS.map(tag)), button("I'll come back", [close()])]
       }),
+      dialog('ds_not_ready', 'Not yet', "The Ender Dragon would eat you whole. Come back with a combat level of 40, and Brewing 55: you'll need eyes of ender to find her portal.", { buttons: [button("I'll be back", [close()])] }),
+      dialog('pits_not_ready', 'Not yet', 'The Kilnfolk only test champions. Come back with a combat level of 60 and the pass is yours.', { buttons: [button("I'll be back", [close()])] }),
       dialog('ds_start', 'The Ender Dragon', 'Very well. Under one of the old strongholds lies a portal to the End, and on its island lives the oldest dragon there is: the Ender Dragon. Many have tried to slay her. Oziach, who keeps the armoury on the ring street, came closest: ask him how it is done.', { buttons: [button("I'll find Oziach", [close()])] })
     ]
   },
@@ -354,10 +357,11 @@ export const NPCS = {
       dialog('ds2_no_head', 'No head', "Where's her head? Bring me proof, or don't come back.", { buttons: [button("I'll get it", [close()])] }),
       dialog('ds2_go', 'Crandor', "Follow Traiborn's map to Crandor. Old Ned keeps a memorial at the foot of Elvarg's hill: he'll see you up to her. Hold your shield up when she breathes.", { priority: 70, conditions: [tag('q_ds2_map')], buttons: [goodbye] }),
       dialog('ds2_wizard', 'Finding Crandor', "No map shows Crandor any more, and no captain will sail there. But Wizard Traiborn can scry it, if you bring him what it takes to find a dragon: the breath of another one. Bottle the Ender Dragon's.", { priority: 65, conditions: [tag('q_ds2_started')], buttons: [goodbye] }),
+      dialog('ds2_not_ready', 'Not yet', "Elvarg is no Ender Dragon. To reach her and live you'll need Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60 and Hitpoints 50. Come back when you have them.", { buttons: [button("I'll be back", [close()])] }),
       dialog('ds2_offer', 'Another dragon', "The Ender Dragon, dead. I never thought I'd see it.\n\nBut she isn't the dragon I lost my ship to, @initiator. That was Elvarg, a fire dragon of the old world, on the isle of Crandor. She's burnt every ship that went near it since. Will you hunt her?", {
         priority: 62,
         conditions: [tag('q_ds_done')],
-        buttons: [button("I'll hunt her", [cmd('tag @initiator add q_ds2_started'), open('ds2_wizard')]), button('Not now', [close()])]
+        buttons: [button("I'll hunt her", [stepCmd('dragon_slayer_2', 'start')]), button('Not now', [close()])]
       }),
       // Dragon Slayer I: the Ender Dragon.
       dialog('ds_head', 'Her head?', "You've the look of someone who's been to the End. Well? Did you bring me her head?", {

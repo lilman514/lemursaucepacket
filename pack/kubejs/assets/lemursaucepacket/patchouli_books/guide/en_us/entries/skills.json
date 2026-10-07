@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Thirteen RuneScape-style skills, levels 1–99, with the RuneScape XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger; some items need a level before you can use them."
+      "text": "Fifteen RuneScape-style skills, levels 1–99, on RuneScape's XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger, and as in RuneScape each skill unlocks things as it grows: gear you can wield and wear, things you can make, potions you can brew, crops you can plant and trees you can chop. The main quests ask for skills too."
     },
     {
       "type": "patchouli:image",
@@ -18,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Open your inventory ($(bold)E$(), or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs."
+      "text": "Open your inventory ($(bold)E$(), or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs, to use it or to make it."
     },
     {
       "type": "patchouli:text",
@@ -27,25 +27,97 @@
     {
       "type": "patchouli:text",
       "title": "The skills",
-      "text": "$(#b9a98a)Group - Skill - Trained by - Each level gives$()$(br)$(bold)Combat$() - Attack - Hitting things - +0.04 melee damage, +0.4 % bow damage; wields weapons$(br)$(bold)Combat$() - Strength - Hitting things - +0.3 % melee critical chance (1.5× damage)$(br)$(bold)Combat$() - Defence - Being hit while wearing armour - +0.02 armour; wears armour$(br)$(bold)Combat$() - Ranged - Arrows, tridents, rockets - +0.3 % ranged critical chance$(br)$(bold)Combat$() - Hitpoints - Any fight (slowly) - +0.2 max health (a heart per ten levels)$(br)$(bold)Gathering$() - Mining - Ores and stone - Faster mining; unlocks pickaxes$"
+      "text": "$(#b9a98a)Group - Skill - Trained by - Each level gives$()$(br)$(bold)Combat$() - Attack - Hitting things - +0.04 melee damage, +0.4 % bow damage; wields weapons$(br)$(bold)Combat$() - Strength - Hitting things - +0.3 % melee critical chance (1.5× damage)$(br)$(bold)Combat$() - Defence - Being hit while wearing armour - +0.02 armour; wears armour$(br)$(bold)Combat$() - Ranged - Arrows, tridents, rockets - +0.3 % ranged critical chance; crossbows and tridents$(br)$(bold)Combat$() - Hitpoints - Any fight (slowly) - +0.2 max health (a heart per ten levels)"
     },
     {
       "type": "patchouli:text",
-      "text": "(br)$(bold)Gathering$() - Woodcutting - Logs - Faster chopping; unlocks axes$(br)$(bold)Gathering$() - Farming - Harvesting crops - Faster tilling; unlocks hoes$(br)$(bold)Gathering$() - Fishing - Catching fish - Better catches$(br)$(bold)Artisan$() - Cooking - Cooking food - -$(br)$(bold)Artisan$() - Smithing - Smelting metals, smithing gear - -$(br)$(bold)Artisan$() - Crafting - Crafting - -$(br)$(bold)Support$() - Agility - Moving, sprinting, swimming - +0.01 % speed, −0.5 % fall damage (max 50 %); unlocks the elytra$(br2)Every ten levels a skill fires fireworks."
+      "text": "$(bold)Gathering$() - Mining - Ores and stone - Faster mining; pickaxes, and the Hardness that harder ores need$(br)$(bold)Gathering$() - Woodcutting - Logs - Faster chopping; axes, and the rarer trees$(br)$(bold)Gathering$() - Farming - Harvesting crops - Faster tilling; hoes, and more crops to plant$(br)$(bold)Gathering$() - Fishing - Catching fish - Better catches; treasure from level 20$(br)$(bold)Artisan$() - Cooking - Cooking food - Recipes: soups, cakes, pies, feasts$(br)$(bold)Artisan$() - Smithing - Smelting metals, smithing gear - Recipes: gold, iron and netherite gear, anvils"
     },
     {
       "type": "patchouli:text",
-      "title": "Level gates",
-      "text": "$(#b9a98a)Level - Attack (wield) - Defence (wear) - Mining / Woodcutting / Farming (use)$()$(br)$(bold)5$() - Stone swords, axes - Copper diving gear - Stone tools$(br)$(bold)10$() - Golden - Golden, chainmail - Golden$(br)$(bold)15$() - Iron, crossbow - Iron - Iron$(br)$(bold)20$() - Potato cannon - Turtle helmet - -$(br)$(bold)30$() - Diamond - Diamond - Diamond$(br)$(bold)40$() - Trident - - - -$(br)$(bold)50$() - Netherite, mace - Netherite, netherite diving gear - Netherite"
+      "text": "$(bold)Artisan$() - Crafting - Crafting - Recipes: bows, shields, diamond gear, ender chests, beacons$(br)$(bold)Artisan$() - Enchanting - The enchanting table - How far enchantments go ($(l:lemursaucepacket:enchanting)Enchanting$(/l))$(br)$(bold)Artisan$() - Brewing - Brewing potions - Which potions you can brew; eyes of ender at 55$(br)$(bold)Support$() - Agility - Moving, sprinting, swimming - +0.01 % speed, −0.5 % fall damage (max 50 %); the elytra$(br2)Every ten levels a skill fires fireworks. You keep every level when you die."
     },
     {
       "type": "patchouli:text",
-      "text": "Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weakness; wearing armour you're not ready for gives Slowness. You keep every level when you die."
+      "title": "Combat level",
+      "text": "Your combat level is worked out the way RuneScape works it out, from your combat skills: a quarter of Defence plus Hitpoints, plus 0.325 times the better of Attack plus Strength, or one and a half times Ranged. It runs from 1 to 113 here (there's no Prayer or Magic), and it shows under your name. Some drops and quests wait on it: see below."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Using gear",
+      "text": "$(#b9a98a)Level - Attack (wield) - Defence (wear) - Ranged (use) - Mining / Woodcutting / Farming (use)$()$(br)$(bold)5$() - Stone swords, axes - Copper diving gear - - - Stone tools$(br)$(bold)10$() - Golden - Golden, chainmail - - - Golden$(br)$(bold)15$() - Iron - Iron - - - Iron$(br)$(bold)20$() - - - Turtle helmet - Crossbows, potato cannon - -$(br)$(bold)30$() - Diamond - Diamond - - - Diamond$(br)$(bold)40$() - - - - - Tridents - -$(br)$(bold)50$() - Netherite, mace - Netherite, netherite diving gear - - - Netherite"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Agility 30 unlocks the elytra. Wielding a weapon you're not ready for gives Weakness; wearing armour you're not ready for gives Slowness."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What each skill unlocks",
+      "text": "Like a RuneScape skill guide: the level each thing needs.$(br2)$(li)$(bold)Making things.$() If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking pot) and a message says what it takes. The item's tooltip says it too. Create's crafting blueprint asks the same of whoever clicks it.$(br)$(li)$(bold)Machines.$() The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Brewing stands and cooking pots$() that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for won't go into a stand by hand.$(br)$(li)$(bold)Enchantments$() past their vanilla level need two skills: Enchanting to make them, and the gear's own skill to use them. Fishing for Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Crafting",
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Leather armour$(br)$(bold)10$() - Bows$(br)$(bold)15$() - Shields$(br)$(bold)20$() - Crossbows$(br)$(bold)30$() - Diamond tools, weapons and armour$(br)$(bold)35$() - Aeronaut's Rigging (for the Aeronaut set)$(br)$(bold)40$() - Enchanting tables$(br)$(bold)40$() - Duelist's Filigree (for the Brass Duelist set)$(br)$(bold)50$() - Ender chests$(br)$(bold)60$() - End crystals$(br)$(bold)65$() - Shulker boxes$(br)$(bold)70$() - Conduits$(br)$(bold)75$() - Beacons$(br)$(bold)80$() - Respawn anchors and lodestones"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Smithing",
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)10$() - Golden tools, weapons and armour$(br)$(bold)15$() - Iron tools, weapons and armour$(br)$(bold)20$() - Anvils and hoppers$(br)$(bold)25$() - Prospector's Plating (for the Prospector set)$(br)$(bold)40$() - Copying armour trim templates$(br)$(bold)45$() - Diamond Lattice (for the Compacted Diamond set)$(br)$(bold)50$() - Netherite gear (the smithing table upgrade)$(br)$(bold)60$() - Copying the netherite upgrade template$(br)$(bold)65$() - Compacted netherite armour$(br)$(bold)70$() - Maces"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking",
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Beetroot soup, sandwiches and salads$(br)$(bold)10$() - Pumpkin pie, hamburgers, wraps and Farmer's Delight soups$(br)$(bold)20$() - Cake, rabbit stew, stews, rice dishes and rolls$(br)$(bold)30$() - Golden carrots, pies, pasta and plated meals$(br)$(bold)40$() - Squid ink pasta, glow berry custard and nether salad$(br)$(bold)45$() - Golden apples$(br)$(bold)50$() - Farmer's Delight feasts"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing",
+      "text": "$(#b9a98a)Level - Lets you brew$()$(br)$(bold)1$() - Awkward potions, the base of nearly all others (nether wart)$(br)$(bold)5$() - Swiftness (sugar)$(br)$(bold)10$() - Night Vision (golden carrot)$(br)$(bold)15$() - Leaping (rabbit foot)$(br)$(bold)20$() - Fire Resistance (magma cream)$(br)$(bold)25$() - Healing (glistering melon slice)$(br)$(bold)25$() - Poison (spider eye)$(br)$(bold)30$() - Water Breathing (pufferfish)$(br)$(bold)30$() - Longer potions (redstone)$(br)$(bold)35$() - Strength (blaze powder)$(br)$(bold)40$() - Regeneration (ghast tear)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)45$() - Weakness, Harming, Slowness and Invisibility (fermented spider eye)$(br)$(bold)50$() - Splash potions (gunpowder)$(br)$(bold)50$() - Slow Falling (phantom membrane)$(br)$(bold)55$() - Eyes of ender (crafting)$(br)$(bold)60$() - Stronger potions (glowstone dust)$(br)$(bold)65$() - Turtle Master (turtle helmet)$(br)$(bold)70$() - Lingering potions (dragon breath)$(br)$(bold)80$() - Wind Charging (breeze rod)$(br)$(bold)80$() - Weaving (cobweb)$(br)$(bold)80$() - Oozing (slime block)$(br)$(bold)80$() - Infested (stone)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Farming",
+      "text": "$(#b9a98a)Level - Lets you plant$()$(br)$(bold)5$() - Beetroot$(br)$(bold)5$() - Cabbages and onions$(br)$(bold)10$() - Tomatoes and sweet berries$(br)$(bold)15$() - Pumpkins and melons$(br)$(bold)20$() - Rice$(br)$(bold)25$() - Cocoa$(br)$(bold)30$() - Nether wart$(br)$(bold)40$() - Torchflowers and pitcher plants$(br)$(bold)60$() - Chorus flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Woodcutting",
+      "text": "$(#b9a98a)Level - Lets you chop$()$(br)$(bold)15$() - Jungle trees$(br)$(bold)30$() - Acacia trees$(br)$(bold)35$() - Dark oak trees$(br)$(bold)45$() - Mangroves$(br)$(bold)50$() - Cherry trees$(br)$(bold)60$() - Crimson and warped stems"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Fishing",
+      "text": "$(#b9a98a)Level - Lets you$()$(br)$(bold)20$() - Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ranged",
+      "text": "$(#b9a98a)Level - Lets you use$()$(br)$(bold)20$() - Crossbows and the potato cannon$(br)$(bold)40$() - Tridents"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Combat level",
+      "text": "$(#b9a98a)Level - Lets you$()$(br)$(bold)75$() - Get wither skeleton skulls (the Wither) as drops"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Quest requirements",
+      "text": "$(#b9a98a)Quest - Needs$()$(br)$(bold)Cook's Assistant$() - Nothing$(br)$(bold)The Knight's Sword$() - Mining 10, Smithing 10$(br)$(bold)Dragon Slayer I$() - Combat 40, Brewing 55$(br)$(bold)Dragon Slayer II$() - Smithing 70, Mining 68, Crafting 62, Agility 60, Enchanting 60, Hitpoints 50$(br)$(bold)The Fight Pits$() - Combat 60, Defence 50, Hitpoints 50, Attack or Ranged 50$(br)$(bold)Ashes of the Kiln$() - Defence 80, Hitpoints 80, Attack or Ranged 80$(br)$(bold)The Inferno$() - Nothing"
     },
     {
       "type": "patchouli:text",
       "title": "Where the numbers come from",
-      "text": "The curve, perks and requirements are generated from $(#e0ac46)skills/build.mjs$() in the pack's repository, so this table is the same as the game's.$(br2)$(bold)Enchanting$() is the fourteenth skill: the enchanting table trains it, and it decides how far enchantments can go. Its own page, $(l:lemursaucepacket:enchanting)Enchanting$(/l), has the caps, the unlock levels and the Hardness tomes pickaxes need for harder blocks."
+      "text": "The curve, the perks and every gate here are generated from $(#e0ac46)skills/build.mjs$() and $(#e0ac46)skills/unlocks.mjs$() in the pack's repository, so these tables are the game's own.$(br2)$(bold)Enchanting$() decides how far enchantments can go. Its own page, $(l:lemursaucepacket:enchanting)Enchanting$(/l), has the caps, the unlock levels and the Hardness tomes pickaxes need for harder blocks."
     }
   ]
 }

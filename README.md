@@ -48,6 +48,7 @@ It piggybacks on infrastructure that already exists instead of hosting everythin
 | `gear/gear.mjs` | **The pack's own gear**: sets, perks, weapons, tools, recipes, loot. `gear/build.mjs` writes the scripts, gates, "How to get" tooltips and JEI pages, and the wiki page |
 | `capes/capes.mjs` | **The capes**: unlock rules and perks. `capes/build.mjs` writes the config the scripts read and the wiki page |
 | `publish/sources.mjs` | **Where loot-only items come from**: scans the mod jars' loot tables (run it by hand after changing mods) and writes the "Found in" JEI pages and tooltips plus `docs/where-to-find.md` |
+| `publish/keybinds.mjs` | **The Keybinds page**: every key a new player starts with, from the game's own defaults (`publish/keybinds/defaults.json`, dumped from a test client; its header says how to refresh it) and `pack/options.txt`. `docs.mjs` runs it: it writes the page's tables and the web page's interactive keyboard |
 | `docs/` | **The wiki** (GitBook layout: front matter, hints, captioned pictures). `publish/docs.mjs` renders it to `site/wiki/` and `publish/patchouli.mjs` to the in-game guide; GitBook syncs it straight from the repo (`.gitbook.yaml`) |
 | `website/` | **The website**, [play.limas.ca](https://play.limas.ca): static pages on Vercel, downloads straight from GitHub. See `website/README.md` |
 | `art/` | Generated art (title screen, loading screen, logo, quest emblems, icons, gear sprites) and the script that sizes it, plus the pixel widget kit |

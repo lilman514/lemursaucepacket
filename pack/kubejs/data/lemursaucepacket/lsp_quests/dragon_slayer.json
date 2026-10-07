@@ -11,6 +11,23 @@
     "q_ds_done"
   ],
   "steps": {
+    "start": {
+      "needs": [
+        "q_welcome_done",
+        "q_cook_done",
+        "q_sword_done"
+      ],
+      "lacks": [
+        "q_ds_started"
+      ],
+      "skills": {
+        "combat": 40,
+        "brewing": 55
+      },
+      "stage": "q_ds_started",
+      "ok": "ds_start",
+      "missing": "ds_not_ready"
+    },
     "shield": {
       "needs": [
         "q_ds_oziach"

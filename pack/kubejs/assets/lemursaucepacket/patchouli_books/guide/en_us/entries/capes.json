@@ -6,28 +6,24 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Capes are items you earn. When you earn one it goes into your bag. Everyone on the server sees the cape you wear; some have a $(bold)perk$() while worn, and the legendary ones are $(bold)animated$()."
+      "text": "Capes are items you earn. When you earn one it goes into your bag. Everyone on the server sees the cape you wear; some have a $(bold)perk$() while worn, and the legendary ones are $(bold)animated$().$(br2)$(li)$(bold)Wear it:$() right-click the cape, or put it in the $(bold)Cape$() slot of the Curios panel in your inventory. The eye on the slot hides it without taking it off. Only someone who has earned a cape can wear it."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Wear it:$() right-click the cape, or put it in the $(bold)Cape$() slot of the Curios panel in your inventory. The eye on the slot hides it without taking it off. Only someone who has earned a cape can wear it.$(br)$(li)$(bold)Show it off:$() right-click an $(bold)armor stand$() with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.$(br)$(li)$(bold)Your collection:$() ESC → Capes, or $(#e0ac46)/capes$(). Every cape there is: the ones you have, ho"
+      "text": "$(li)$(bold)Show it off:$() right-click an $(bold)armor stand$() with a cape to hang it there (the one already on it comes back to you). Sneak and right-click the stand with an empty hand to take it back. A broken stand drops its cape. Any cape can go on a stand, earned or not.$(br)$(li)$(bold)Your collection:$() ESC → Capes, or $(#e0ac46)/capes$(). Every cape there is: the ones you have, how to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off."
     },
     {
       "type": "patchouli:text",
-      "text": "w to earn the rest (with how far along you are), each perk, and where to get another if you lose one. It also puts a cape from your bag on, or takes yours off.$(br2)Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave)."
+      "text": "Unlocks announce themselves in chat. On death a cape goes where the rest of your things go (your grave)."
     },
     {
       "type": "patchouli:text",
       "title": "Skill capes",
-      "text": "One per skill, at level 99. Each has a perk while worn."
+      "text": "One per skill, at level 99. Each has a perk while worn.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Attack Cape$() - Attack 99. - +5% crit chance$(br)$(bold)Strength Cape$() - Strength 99. - +10% crit damage$(br)$(bold)Defence Cape$() - Defence 99. - +2 armour$(br)$(bold)Ranged Cape$() - Ranged 99. - +5% crit chance$(br)$(bold)Hitpoints Cape$() - Hitpoints 99. - +1 heart$(br)$(bold)Mining Cape$() - Mining 99. - +15% dig speed$(br)$(bold)Woodcutting Cape$() - Woodcutting 99. - +25% Woodcutting XP from logs$(br)$(bold)Farming Cape$() - Farming 99. - 20% chance of double crop drops"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Attack Cape$() - Attack 99. - +5% crit chance$(br)$(bold)Strength Cape$() - Strength 99. - +10% crit damage$(br)$(bold)Defence Cape$() - Defence 99. - +2 armour$(br)$(bold)Ranged Cape$() - Ranged 99. - +5% crit chance$(br)$(bold)Hitpoints Cape$() - Hitpoints 99. - +1 heart$(br)$(bold)Mining Cape$() - Mining 99. - +15% dig speed$(br)$(bold)Woodcutting Cape$() - Woodcutting 99. - +25% Woodcutting XP from logs$(br)$(bold)Farming Cape$() - Farming 99. - 20% chance of double crop drops$(br)$(bold)Fishing Cape$() - Fishing 99. - +3 luck$(br)$(bold)Cooking Cape$() - C"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "ooking 99. - eating heals 2 extra hearts$(br)$(bold)Smithing Cape$() - Smithing 99. - +1 armour toughness$(br)$(bold)Crafting Cape$() - Crafting 99. - the item in your hand mends one durability every ten seconds$(br)$(bold)Agility Cape$() - Agility 99. - +10% speed$(br)$(bold)Enchanting Cape$() - Enchanting 99. - +20% Enchanting XP"
+      "text": "$(bold)Fishing Cape$() - Fishing 99. - +3 luck$(br)$(bold)Cooking Cape$() - Cooking 99. - eating heals 2 extra hearts$(br)$(bold)Smithing Cape$() - Smithing 99. - +1 armour toughness$(br)$(bold)Crafting Cape$() - Crafting 99. - the item in your hand mends one durability every ten seconds$(br)$(bold)Agility Cape$() - Agility 99. - +10% speed$(br)$(bold)Enchanting Cape$() - Enchanting 99. - +20% Enchanting XP$(br)$(bold)Brewing Cape$() - Brewing 99. - potions you drink last half as long again"
     },
     {
       "type": "patchouli:text",
@@ -42,15 +38,11 @@
     {
       "type": "patchouli:text",
       "title": "Legendary capes",
-      "text": "Animated, and exceedingly hard to earn."
+      "text": "Animated, and exceedingly hard to earn.$(br2)$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Maxed Cape $(italic)(animated)$()$() - Every skill at 99. - +5% crit chance, +5% crit damage, +1 heart$(br)$(bold)Completionist Cape $(italic)(animated)$()$() - Every chapter of the quest book finished. - +10% speed$(br)$(bold)Dragonslayer Cape $(italic)(animated)$()$() - Kill the Ender Dragon. - Fire Resistance$(br)$(bold)Fire Cape $(italic)(animated)$()$() - Defeat the champion of the Fight Pits. - +12% crit damage, Fire Resistance"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Cape - How to earn it - Perk$()$(br)$(bold)Maxed Cape $(italic)(animated)$()$() - Every skill at 99. - +5% crit chance, +5% crit damage, +1 heart$(br)$(bold)Completionist Cape $(italic)(animated)$()$() - Every chapter of the quest book finished. - +10% speed$(br)$(bold)Dragonslayer Cape $(italic)(animated)$()$() - Kill the Ender Dragon. - Fire Resistance$(br)$(bold)Fire Cape $(italic)(animated)$()$() - Defeat the champion of the Fight Pits. - +12% crit damage, Fire Resistance$(br)$(bold)Infernal Cape $(italic)(animated)$()$() - Survive the Inferno. - +20% crit damage, +5% crit chance, +1 heart, Fire Res"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "istance"
+      "text": "$(bold)Infernal Cape $(italic)(animated)$()$() - Survive the Inferno. - +20% crit damage, +5% crit chance, +1 heart, Fire Resistance"
     },
     {
       "type": "patchouli:text",
@@ -60,15 +52,11 @@
     {
       "type": "patchouli:text",
       "title": "Lost a cape?",
-      "text": "Whoever makes a cape will make you another, as long as you earned it: speak to them and choose $(italic)I've lost a cape$(). Your collection shows who makes each cape and what it costs."
+      "text": "Whoever makes a cape will make you another, as long as you earned it: speak to them and choose $(italic)I've lost a cape$(). Your collection shows who makes each cape and what it costs.$(br2)$(#b9a98a)Cape - Who makes another - Coins$()$(br)$(bold)Any skill cape$() - Odo the Tailor in Lemurton - 99,000$(br)$(bold)Settler's Cape, Brass Age Cape, Iron Roads Cape, Skyward Cape, Crown of Fire Cape, Legacy Cape, Armory Cape, Explorer Cape, Hero of the Village Cape, Beaconeer Cape, Wings Cape$() - Odo the Tailor in Lemurton - 25,000"
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Cape - Who makes another - Coins$()$(br)$(bold)Any skill cape$() - Odo the Tailor in Lemurton - 99,000$(br)$(bold)Settler's Cape, Brass Age Cape, Iron Roads Cape, Skyward Cape, Crown of Fire Cape, Legacy Cape, Armory Cape, Explorer Cape, Hero of the Village Cape, Beaconeer Cape, Wings Cape$() - Odo the Tailor in Lemurton - 25,000$(br)$(bold)Maxed Cape, Completionist Cape, Dragonslayer Cape$() - Odo the Tailor in Lemurton - 250,000$(br)$(bold)Fire Cape$() - Brakka the Smith at Kiln Hollow. Or win the Fight Pits again. - 150,000$(br)$(bold)Infernal Cape$() - Brakka the Smith at Kiln Hollow. Or survive the"
-    },
-    {
-      "type": "patchouli:text",
-      "text": " Inferno again. - 500,000$(br)$(bold)Lemur Cape$() - Ask the server owner - -$(br2)Every win in the Fight Pits or the Inferno hands over another of its cape, so a lost Fire or Infernal Cape can also be won back.$(br2)Generated from $(#e0ac46)capes/capes.mjs$(), so this page matches the game."
+      "text": "$(bold)Maxed Cape, Completionist Cape, Dragonslayer Cape$() - Odo the Tailor in Lemurton - 250,000$(br)$(bold)Fire Cape$() - Brakka the Smith at Kiln Hollow. Or win the Fight Pits again. - 150,000$(br)$(bold)Infernal Cape$() - Brakka the Smith at Kiln Hollow. Or survive the Inferno again. - 500,000$(br)$(bold)Lemur Cape$() - Ask the server owner - -$(br2)Every win in the Fight Pits or the Inferno hands over another of its cape, so a lost Fire or Infernal Cape can also be won back.$(br2)Generated from $(#e0ac46)capes/capes.mjs$(), so this page matches the game."
     }
   ]
 }

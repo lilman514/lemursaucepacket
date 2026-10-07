@@ -102,17 +102,21 @@ function enchTell(player, text) {
   player.displayClientMessage(EnchComponent.literal(text), true)
 }
 
-/** The first enchantment on the stack above the player's Enchanting level, as [id, level, needed], or null. */
+/** The first enchantment on the stack above what the player may use (its useSkill's level), as [id, level, needed, skill], or null. */
 function enchOverLevel(stack, player) {
   let levels = enchLevels(stack)
   let ids = Object.keys(levels)
   if (ids.length === 0) return null
-  let skill = EnchPMMO.getLevel('enchanting', player)
+  let skills = {}
   for (let i = 0; i < ids.length; i++) {
-    if (levels[ids[i]] > enchAllowed(ids[i], skill)) return [ids[i], levels[ids[i]], enchNeeded(ids[i], levels[ids[i]])]
+    let rule = ENCH.enchantments[ids[i]]
+    let useSkill = rule != null && rule.useSkill ? rule.useSkill : 'enchanting'
+    if (skills[useSkill] == null) skills[useSkill] = EnchPMMO.getLevel(useSkill, player)
+    if (levels[ids[i]] > enchAllowed(ids[i], skills[useSkill])) return [ids[i], levels[ids[i]], enchNeeded(ids[i], levels[ids[i]]), useSkill]
   }
   return null
 }
+const enchSkillName = (skill) => (skill ? skill.charAt(0).toUpperCase() + skill.substring(1) : 'Enchanting')
 
 // Mining: no progress on a block whose Hardness tier the pickaxe (or the player's Mining level) doesn't reach,
 // and none with a tool enchanted above the player's Enchanting level.
@@ -140,7 +144,7 @@ NativeEvents.onEvent('net.neoforged.neoforge.event.entity.player.PlayerEvent$Bre
       let over = enchOverLevel(tool, player)
       if (over != null) {
         cancel = true
-        enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs Enchanting ${over[2] == null ? '?' : over[2]}`)
+        enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs ${enchSkillName(over[3])} ${over[2] == null ? '?' : over[2]}`)
       }
     }
   } catch (e) {

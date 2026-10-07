@@ -57,19 +57,19 @@
     {
       "type": "patchouli:text",
       "title": "Elimination",
-      "text": "Lose your last heart and you are $(bold)eliminated$(). Nothing is erased yet. You stay on the death screen and have two choices:"
+      "text": "Lose your last heart and you are $(bold)eliminated$(). Nothing is erased yet. You stay on the death screen and have two choices:$(br2)$(li)$(bold)Wait for a revive.$() Leave the server or stay on the death screen. A friend can bring you back: they hold a Heart and run $(#e0ac46)/revive <your name>$(). The Heart is used up and you respawn with one heart, and nothing is erased. This works while you are offline too."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Wait for a revive.$() Leave the server or stay on the death screen. A friend can bring you back: they hold a Heart and run $(#e0ac46)/revive <your name>$(). The Heart is used up and you respawn with one heart, and nothing is erased. This works while you are offline too.$(br)$(li)$(bold)Accept elimination.$() The respawn button is replaced by $(italic)Accept elimination$(). It warns you, shows what will be erased (how many blocks you placed, how many items are yours), asks you to type ERASE, and then asks you to hold a button for five seconds. Only then does it happen.$(br2)If you accept, this happens:"
+      "text": "$(li)$(bold)Accept elimination.$() The respawn button is replaced by $(italic)Accept elimination$(). It warns you, shows what will be erased (how many blocks you placed, how many items are yours), asks you to type ERASE, and then asks you to hold a button for five seconds. Only then does it happen.$(br2)If you accept, this happens:"
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Every block you ever placed is removed$(), in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched. Blocks placed with a schematicannon or moved by contraptions and ships are not tracked and stay.$(br)$(li)$(bold)Every item that is yours is deleted$(), wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box, on the ground, in your ender chest, and in other players' inventories, online or not.$(br)$(li)$(bold)Containers you placed break.$() Anything inside that belongs to someone else drops on the floor.$(br)$(li)You respawn"
+      "text": "$(li)$(bold)Every block you ever placed is removed$(), in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched. Blocks placed with a schematicannon or moved by contraptions and ships are not tracked and stay.$(br)$(li)$(bold)Every item that is yours is deleted$(), wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box, on the ground, in your ender chest, and in other players' inventories, online or not.$(br)$(li)$(bold)Containers you placed break.$() Anything inside that belongs to someone else drops on the floor."
     },
     {
       "type": "patchouli:text",
-      "text": " at world spawn with 10 hearts, an empty inventory. Your skills, quests and earned $(l:lemursaucepacket:capes)capes$(/l) stay: the new life gets your capes back.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
+      "text": "$(li)You respawn at world spawn with 10 hearts, an empty inventory. Your skills, quests and earned $(l:lemursaucepacket:capes)capes$(/l) stay: the new life gets your capes back.$(br2)Admins keep an archive of everything erased and can put it back if the erasure was a bug."
     },
     {
       "type": "patchouli:text",
@@ -97,11 +97,11 @@
     {
       "type": "patchouli:text",
       "title": "Commands",
-      "text": "$(#b9a98a)Command - What it does$()$(br)$(bold)$(#e0ac46)/hearts$()$() - Your hearts and where they come from$(br)$(bold)$(#e0ac46)/revive <player>$()$() - Bring an eliminated player back with the Heart in your hand$(br)$(bold)`/lsp hearts get\\$() - set\\ - add <player> [n]` - Admin: read or change a player's stock$(br)$(bold)$(#e0ac46)/lsp lifesteal protect <player> <hours>$()$() - Admin: give newcomer protection (only when $(#e0ac46)newcomerProtectionHours$() in lifesteal.json is above 0; it is 0)$(br)$(bold)`/lsp lifesteal eliminate\\$() - revive <player>` - Admin: force or undo elimination$(br)$(bold)$(#e0ac46)"
+      "text": "$(#b9a98a)Command - What it does$()$(br)$(bold)$(#e0ac46)/hearts$()$() - Your hearts and where they come from$(br)$(bold)$(#e0ac46)/revive <player>$()$() - Bring an eliminated player back with the Heart in your hand$(br)$(bold)`/lsp hearts get\\$() - set\\ - add <player> [n]` - Admin: read or change a player's stock$(br)$(bold)$(#e0ac46)/lsp lifesteal protect <player> <hours>$()$() - Admin: give newcomer protection (only when $(#e0ac46)newcomerProtectionHours$() in lifesteal.json is above 0; it is 0)$(br)$(bold)`/lsp lifesteal eliminate\\$() - revive <player>` - Admin: force or undo elimination"
     },
     {
       "type": "patchouli:text",
-      "text": "/lsp lifesteal log [lines]$()$() - Admin: recent heart events$(br)$(bold)$(#e0ac46)/lsp erase preview <player>$()$() - Admin: what an erasure would remove$(br)$(bold)$(#e0ac46)/lsp archive list$() and $(#e0ac46)/lsp restore ...$()$() - Admin: put erased blocks or items back"
+      "text": "$(bold)$(#e0ac46)/lsp lifesteal log [lines]$()$() - Admin: recent heart events$(br)$(bold)$(#e0ac46)/lsp erase preview <player>$()$() - Admin: what an erasure would remove$(br)$(bold)$(#e0ac46)/lsp archive list$() and $(#e0ac46)/lsp restore ...$()$() - Admin: put erased blocks or items back"
     }
   ]
 }

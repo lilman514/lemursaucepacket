@@ -47,6 +47,7 @@ export const CAPES = [
   skillCape('crafting', 'Crafting Cape', 'a brass cog over a wooden-plank pattern', { special: 'mend' }, 'the item in your hand mends one durability every ten seconds'),
   skillCape('agility', 'Agility Cape', 'a winged boot over a teal field', { attributes: { speed: 0.1 } }, '+10% speed'),
   skillCape('enchanting', 'Enchanting Cape', 'a gold star over a royal purple field', { special: 'enchant_xp' }, '+20% Enchanting XP'),
+  skillCape('brewing', 'Brewing Cape', 'a stoppered potion flask over an emerald field', { special: 'potion_duration' }, 'potions you drink last half as long again'),
   // Quest capes: finishing a chapter's last quest sets a flag.
   { id: 'settlers_cape', name: "Settler's Cape", kind: 'quest', unlock: { type: 'flags', flags: ['chapter:landfall'] }, description: 'Finish the Landfall chapter.', design: 'a small cottage over a plain linen field' },
   { id: 'brass_age_cape', name: 'Brass Age Cape', kind: 'quest', unlock: { type: 'flags', flags: ['chapter:brass_age'] }, description: 'Finish the Brass Age chapter.', design: 'a brass cog with a flame at its heart over a bronze field' },

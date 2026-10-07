@@ -50,16 +50,20 @@
     {
       "type": "patchouli:text",
       "title": "Tools",
-      "text": "$(#b9a98a)Tool - Does - Use - How to get$()$(br)$(bold)Lumber Axe$() - Chop one log and the whole tree comes down - Woodcutting 30 - Mechanical crafting from iron sheets, andesite alloy and a mechanical saw.$(br)$(bold)Excavator's Pickaxe$() - Mines a 3x3 (sneak for a single block) - Mining 40 - Mechanical crafting from iron sheets, a drill and brass.$(br)$(bold)Prospector's Pickaxe$() - Ores come out already smelted - Mining 30 - Mechanical crafting from iron sheets, a blaze burner and copper.$(br)$(bold)Harvester's Scythe$() - Right-click: harvests and replants a 5x5 of ripe crops - Farming 30 - Mechanical craf"
+      "text": "$(#b9a98a)Tool - Does - Use - How to get$()$(br)$(bold)Lumber Axe$() - Chop one log and the whole tree comes down - Woodcutting 30 - Mechanical crafting from iron sheets, andesite alloy and a mechanical saw.$(br)$(bold)Excavator's Pickaxe$() - Mines a 3x3 (sneak for a single block) - Mining 40 - Mechanical crafting from iron sheets, a drill and brass.$(br)$(bold)Prospector's Pickaxe$() - Ores come out already smelted - Mining 30 - Mechanical crafting from iron sheets, a blaze burner and copper."
     },
     {
       "type": "patchouli:text",
-      "text": "ting from iron sheets, a mechanical harvester and a shaft.$(br)$(bold)Builder's Wand$() - Right-click a block face to extend it with matching blocks from your inventory (up to 32) - Crafting 30 - Mechanical crafting from brass, a precision mechanism and a schematicannon core."
+      "text": "$(bold)Harvester's Scythe$() - Right-click: harvests and replants a 5x5 of ripe crops - Farming 30 - Mechanical crafting from iron sheets, a mechanical harvester and a shaft.$(br)$(bold)Builder's Wand$() - Right-click a block face to extend it with matching blocks from your inventory (up to 32) - Crafting 30 - Mechanical crafting from brass, a precision mechanism and a schematicannon core."
     },
     {
       "type": "patchouli:text",
       "title": "Materials",
-      "text": "$(#b9a98a)Material - How to get$()$(br)$(bold)Compacted Diamond$() - Four diamonds compacted in a basin under a mechanical press.$(br)$(bold)Compacted Netherite$() - Four netherite ingots compacted in a basin under a heated mechanical press.$(br)$(bold)Duelist's Pattern$() - Only found in Dungeons Arise chests; one pattern per set piece."
+      "text": "$(#b9a98a)Material - How to get$()$(br)$(bold)Compacted Diamond$() - Four diamonds compacted in a basin under a mechanical press.$(br)$(bold)Compacted Netherite$() - Four netherite ingots compacted in a basin under a heated mechanical press.$(br)$(bold)Duelist's Pattern$() - Only found in Dungeons Arise chests; one pattern per set piece.$(br)$(bold)Prospector's Plating$() - A crafting table (Smithing 25): brass sheets, andesite alloy and an iron ingot make two.$(br)$(bold)Aeronaut's Rigging$() - A crafting table (Crafting 35): leather, string and a sturdy sheet make two."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Duelist's Filigree$() - A crafting table (Crafting 40): gold, brass and a precision mechanism make two.$(br)$(bold)Diamond Lattice$() - A crafting table (Smithing 45): diamonds woven through sturdy sheets make two."
     },
     {
       "type": "patchouli:text",

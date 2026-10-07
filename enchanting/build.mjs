@@ -19,6 +19,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { COST, ENCHANT_XP, HARDNESS, KEEP_AVAILABLE, MAX_SKILL_LEVEL, NAMESPACE, PENALTY_EFFECTS, RAISED, TABLE_BOOST, TELEKINESIS, unlockLevel } from './enchanting.mjs'
+import { ENCHANT_SKILL } from '../skills/unlocks.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
@@ -202,8 +203,9 @@ out('pack/config/lemursaucepacket/enchanting.json', {
   maxSkillLevel: MAX_SKILL_LEVEL,
   tableBoost: TABLE_BOOST,
   enchantXp: ENCHANT_XP,
-  // id -> { vanilla, cap, unlocks: Enchanting level needed for vanilla+1, vanilla+2, ... cap; effect }
-  enchantments: table,
+  // id -> { vanilla, cap, unlocks: Enchanting level needed for vanilla+1, vanilla+2, ... cap; effect; useSkill: the skill
+  // that using the levels past vanilla needs (skills/unlocks.mjs ENCHANT_SKILL; Enchanting where none is listed) }
+  enchantments: Object.fromEntries(Object.entries(table).map(([id, rule]) => [id, { ...rule, useSkill: ENCHANT_SKILL[id] ?? 'enchanting' }])),
   telekinesis: { id: ns(TELEKINESIS.id), name: TELEKINESIS.name, description: TELEKINESIS.description },
   hardness: {
     id: ns(HARDNESS.id),
@@ -252,16 +254,18 @@ for (const [id, t] of Object.entries(table)) {
     `- **Training it:** enchanting an item or a book at the table gives Enchanting XP (more for higher-level enchantments); so does using a book at the anvil.`,
     `- **Bigger tables:** the third slot of the table scales with your level, from the usual 30 up to ${30 * (1 + TABLE_BOOST)} at Enchanting ${MAX_SKILL_LEVEL}. Higher levels of an enchantment only appear once the table can reach their cost, and they cost more XP.`,
     '- **Past vanilla max:** the table rolls it, or two equal books or items combine at the anvil, as long as your Enchanting level allows the result. Chests, fishing and villagers only give vanilla levels.',
-    '- **Above your level:** an item enchanted past what you have unlocked does no damage, breaks no blocks and slows you while worn. Level up, and it works.',
+    "- **Using it takes the gear's own skill:** the levels past vanilla need Enchanting to make, but to use them you need the skill that goes with the gear (the table below lists it): Fishing for a rod's Luck of the Sea and Lure, Mining for Fortune and Efficiency, Attack for Sharpness and Looting, Ranged for Power, Defence for Protection, Agility for Feather Falling. It grows the same way, so a fisher at 99 can use Luck of the Sea X that a 99 enchanter made.",
+    '- **Above your level:** an item enchanted past what you can use does no damage, breaks no blocks and slows you while worn. Level the skill, and it works.',
     '',
     '## Caps and unlocks',
     '',
     `Allowed level = vanilla max + a share of the extra levels that grows with your Enchanting level, so every enchantment reaches its cap at ${MAX_SKILL_LEVEL}.`,
     '',
-    '| Enchantment | Vanilla | Cap | Unlocks at Enchanting | Effect per level |',
-    '|---|---|---|---|---|'
+    '| Enchantment | Vanilla | Cap | Unlocks at (Enchanting to make, the use skill to use) | Use skill | Effect per level |',
+    '|---|---|---|---|---|---|'
   ]
-  for (const [id, t] of Object.entries(table)) lines.push(`| ${pretty(id)} | ${roman(t.vanilla)} | ${roman(t.cap)} | ${t.unlocks.map((lvl, i) => `${roman(t.vanilla + i + 1)} at ${lvl}`).join(', ')} | ${t.effect ?? ''} |`)
+  const useSkill = (id) => (ENCHANT_SKILL[id] ?? 'enchanting').replace(/^./, (c) => c.toUpperCase())
+  for (const [id, t] of Object.entries(table)) lines.push(`| ${pretty(id)} | ${roman(t.vanilla)} | ${roman(t.cap)} | ${t.unlocks.map((lvl, i) => `${roman(t.vanilla + i + 1)} at ${lvl}`).join(', ')} | ${useSkill(id)} | ${t.effect ?? ''} |`)
   lines.push('', 'Single-level enchantments (Mending, Infinity, Silk Touch, Aqua Affinity, Flame, Channeling, Multishot, the curses) are unchanged, and so are the ones whose effect stops scaling.', '')
   lines.push('## Telekinesis', '', `**${TELEKINESIS.name}** (one level, on mining tools and weapons): ${TELEKINESIS.description} It rolls at the enchanting table and turns up in loot and villager trades like any other enchantment.`, '')
   lines.push('## Hardness: what your pickaxe can break', '', 'Some blocks need more than a pickaxe tier. A **Hardness** tome is applied to a pickaxe at the anvil, and each tier also needs a Mining level to work. The first tome is made at a crafting table (iron is behind it, and every Create machine needs iron); the rest need a Mechanical Crafter:', '', '| Tier | Mining | Breaks | Tome recipe |', '|---|---|---|---|')

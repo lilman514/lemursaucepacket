@@ -370,6 +370,32 @@
           "quest": "1AB048DD42AAA115"
         }
       ]
+    },
+    {
+      "skill": "brewing",
+      "name": "Brewing",
+      "milestones": [
+        {
+          "level": 10,
+          "quest": "2DEE0108961F3D21"
+        },
+        {
+          "level": 25,
+          "quest": "74081235864C5E1D"
+        },
+        {
+          "level": 50,
+          "quest": "3AD013C52399732A"
+        },
+        {
+          "level": 75,
+          "quest": "4BE28F3C2A44439C"
+        },
+        {
+          "level": 99,
+          "quest": "3AF1667D91BAFF99"
+        }
+      ]
     }
   ],
   "total": [
@@ -394,8 +420,8 @@
       "quest": "6457E540F71D6A7E"
     },
     {
-      "level": 1386,
-      "quest": "232BCECCF98900F6"
+      "level": 1485,
+      "quest": "3850B0A73693A952"
     }
   ]
 }

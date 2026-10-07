@@ -141,7 +141,7 @@ final class CapeCollectionScreen extends Screen {
         try {
             return switch (type) {
                 case "skill" -> "Your " + cap(u.get("skill").getAsString()) + ": " + Capes.skillLevel(p, u.get("skill").getAsString()) + " / " + u.get("level").getAsInt();
-                case "all_skills" -> "Skills at " + u.get("level").getAsInt() + ": " + Capes.skillsAt(p, u.get("level").getAsInt()) + " / 14";
+                case "all_skills" -> "Skills at " + u.get("level").getAsInt() + ": " + Capes.skillsAt(p, u.get("level").getAsInt()) + " / " + Capes.skillCount();
                 case "flags_prefix" -> "So far: " + Capes.CLIENT.flagsStartingWith(u.get("prefix").getAsString()) + " / " + u.get("count").getAsInt();
                 case "command" -> "Not something you can earn.";
                 default -> "";

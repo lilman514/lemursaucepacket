@@ -7,6 +7,25 @@
     "q_ds2_done"
   ],
   "steps": {
+    "start": {
+      "needs": [
+        "q_ds_done"
+      ],
+      "lacks": [
+        "q_ds2_started"
+      ],
+      "skills": {
+        "smithing": 70,
+        "mining": 68,
+        "crafting": 62,
+        "agility": 60,
+        "enchanting": 60,
+        "hitpoints": 50
+      },
+      "stage": "q_ds2_started",
+      "ok": "ds2_wizard",
+      "missing": "ds2_not_ready"
+    },
     "scry": {
       "needs": [
         "q_ds2_started"

@@ -227,7 +227,7 @@ function recipesScript() {
     } else if (r.type === 'mechanical_crafting') {
       lines.push(`  event.recipes.create.mechanical_crafting('${result}', ${js(r.pattern)}, ${js(r.key)}).id('${NAMESPACE}:gear/${r.result}')`)
     } else if (r.type === 'shaped') {
-      lines.push(`  event.shaped('${result}', ${js(r.pattern)}, ${js(r.key)}).id('${NAMESPACE}:gear/${r.result}')`)
+      lines.push(`  event.shaped(${r.count ? `Item.of('${result}', ${r.count})` : `'${result}'`}, ${js(r.pattern)}, ${js(r.key)}).id('${NAMESPACE}:gear/${r.result}')`)
     } else if (r.type === 'smithing') {
       lines.push(`  event.smithing('${result}', 'minecraft:netherite_upgrade_smithing_template', '${ns(r.base)}', '${ns(r.addition)}').id('${NAMESPACE}:gear/${r.result}')`)
     }

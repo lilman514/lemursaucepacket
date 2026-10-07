@@ -47,7 +47,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 public final class Capes {
     /** The skills an "all_skills" unlock counts (skills/build.mjs). */
     static final List<String> SKILLS = List.of("attack", "strength", "defence", "ranged", "hitpoints", "mining", "woodcutting", "farming", "fishing",
-            "cooking", "smithing", "crafting", "agility", "enchanting");
+            "cooking", "smithing", "crafting", "agility", "enchanting", "brewing");
     /** The client's copy of its own player's capes ({@link CapeNet.State}). */
     public static final CapeData CLIENT = new CapeData();
     /** Where the KubeJS capes kept a player's capes (persistent data, a JSON string), before capes were items. */
@@ -336,9 +336,20 @@ public final class Capes {
     }
 
     static void onEat(LivingEntityUseItemEvent.Finish e) {
-        if (!(e.getEntity() instanceof ServerPlayer p) || !e.getItem().has(DataComponents.FOOD)) return;
+        if (!(e.getEntity() instanceof ServerPlayer p)) return;
         CapeDefs.Def def = worn(p);
-        if (def != null && "eat_heal".equals(special(def))) p.heal(4);
+        if (def == null) return;
+        if (e.getItem().has(DataComponents.FOOD) && "eat_heal".equals(special(def))) p.heal(4);
+        // Brewing Cape: what a drunk potion gave lasts half as long again (instant effects aside).
+        var contents = e.getItem().get(DataComponents.POTION_CONTENTS);
+        if (contents != null && e.getItem().is(net.minecraft.world.item.Items.POTION) && "potion_duration".equals(special(def))) {
+            for (MobEffectInstance drunk : contents.getAllEffects()) {
+                if (drunk.getEffect().value().isInstantenous()) continue;
+                MobEffectInstance now = p.getEffect(drunk.getEffect());
+                if (now == null || now.getAmplifier() != drunk.getAmplifier()) continue;
+                p.forceAddEffect(new MobEffectInstance(drunk.getEffect(), now.getDuration() + drunk.getDuration() / 2, now.getAmplifier(), now.isAmbient(), now.isVisible(), now.showIcon()), null);
+            }
+        }
     }
 
     /** Right-clicking a cape you haven't earned says why nothing happens. */
@@ -352,6 +363,11 @@ public final class Capes {
     /** A skill's level (Project MMO), for the collection's progress lines. */
     public static long skillLevel(Player p, String skill) {
         return CapePmmo.level(p, skill);
+    }
+
+    /** How many skills count for the Maxed Cape. */
+    public static int skillCount() {
+        return SKILLS.size();
     }
 
     /** How many skills are at {@code level} or more. */

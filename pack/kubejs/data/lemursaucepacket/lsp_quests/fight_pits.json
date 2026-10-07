@@ -17,12 +17,16 @@
       "lacks": [
         "q_pits_started"
       ],
+      "skills": {
+        "combat": 60
+      },
       "special": [
         "kiln_pass"
       ],
       "stage": "q_pits_started",
       "message": "Guildmaster Greaves gives you a Kilnfolk Pass.",
-      "ok": "pits_pass_given"
+      "ok": "pits_pass_given",
+      "missing": "pits_not_ready"
     },
     "offering": {
       "needs": [

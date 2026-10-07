@@ -200,17 +200,13 @@ public final class QuestSteps {
         return 1;
     }
 
-    /** A Project MMO skill level (0 if Project MMO has none for the player yet). */
+    /** A Project MMO skill level (0 if Project MMO has none for the player yet); "combat" is the combat level. */
     private static long level(ServerPlayer player, String skill) {
-        try {
-            return harmonised.pmmo.api.APIUtils.getLevel(skill, player);
-        } catch (RuntimeException | NoClassDefFoundError e) {
-            return 0;
-        }
+        return net.lemursaucepacket.fixes.skills.Levels.of(player, skill);
     }
 
     private static String skillName(String skill) {
-        return skill.isEmpty() ? skill : Character.toUpperCase(skill.charAt(0)) + skill.substring(1);
+        return net.lemursaucepacket.fixes.skills.Levels.name(skill);
     }
 
     /** Forgets a quest for a player: its stage tags go, so it can be done again (tests, admins). */

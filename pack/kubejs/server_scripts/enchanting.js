@@ -72,17 +72,26 @@ function enchNeeded(id, level) {
   return rule.unlocks[level - rule.vanilla - 1]
 }
 
-/** The first enchantment on the stack above the player's Enchanting level, as [id, level, needed], or null. */
+/**
+ * The first enchantment on the stack above what the player may use, as [id, level, needed, skill], or null. Using the
+ * levels past vanilla takes the gear's own skill (the rule's useSkill: Fishing for Luck of the Sea, Mining for Fortune...),
+ * growing the same way Enchanting's does; making them takes Enchanting.
+ */
 function enchOverLevel(stack, player) {
   let levels = enchLevels(stack)
   let ids = Object.keys(levels)
   if (ids.length === 0) return null
-  let skill = EnchPMMO.getLevel('enchanting', player)
+  let skills = {}
   for (let i = 0; i < ids.length; i++) {
-    if (levels[ids[i]] > enchAllowed(ids[i], skill)) return [ids[i], levels[ids[i]], enchNeeded(ids[i], levels[ids[i]])]
+    let rule = ENCH.enchantments[ids[i]]
+    let useSkill = rule != null && rule.useSkill ? rule.useSkill : 'enchanting'
+    if (skills[useSkill] == null) skills[useSkill] = EnchPMMO.getLevel(useSkill, player)
+    if (levels[ids[i]] > enchAllowed(ids[i], skills[useSkill])) return [ids[i], levels[ids[i]], enchNeeded(ids[i], levels[ids[i]]), useSkill]
   }
   return null
 }
+
+const enchSkillName = (skill) => (skill ? skill.charAt(0).toUpperCase() + skill.substring(1) : 'Enchanting')
 
 /** Hardness tier a player's Mining level unlocks (machines get the machine tier). */
 function enchHardnessUnlocked(player) {
@@ -203,12 +212,30 @@ EntityEvents.beforeHurt((event) => {
     let over = enchOverLevel(weapon, player)
     if (over != null) {
       cancel = true
-      enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs Enchanting ${over[2] == null ? '?' : over[2]}`)
+      enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs ${enchSkillName(over[3])} ${over[2] == null ? '?' : over[2]}`)
     }
   } catch (e) {
     enchError('hurt', e)
   }
   if (cancel) event.cancel()
+})
+
+// Fishing: a rod enchanted past what your Fishing level can use (Luck of the Sea, Lure) catches nothing.
+NativeEvents.onEvent('net.neoforged.neoforge.event.entity.player.ItemFishedEvent', (event) => {
+  let cancel = false
+  try {
+    let player = event.getEntity()
+    if (player == null || player instanceof EnchFakePlayer || player.isCreative()) return
+    let rod = String(player.mainHandItem.id) === 'minecraft:fishing_rod' ? player.mainHandItem : player.offHandItem
+    let over = enchOverLevel(rod, player)
+    if (over != null) {
+      cancel = true
+      enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs ${enchSkillName(over[3])} ${over[2] == null ? '?' : over[2]}: the catch got away`)
+    }
+  } catch (e) {
+    enchError('fishing', e)
+  }
+  if (cancel) event.setCanceled(true)
 })
 
 // Blocks: the safety net behind the startup script's break-speed check (the Excavator's 3x3 and other direct
@@ -232,7 +259,7 @@ BlockEvents.broken((event) => {
       let over = enchOverLevel(tool, player)
       if (over != null) {
         cancel = true
-        enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs Enchanting ${over[2] == null ? '?' : over[2]}`)
+        enchTell(player, `§c${enchName(over[0])} ${enchRoman(over[1])} needs ${enchSkillName(over[3])} ${over[2] == null ? '?' : over[2]}`)
       }
     }
     if (!cancel && String(block.id) === 'minecraft:reinforced_deepslate' && effective >= ENCH.hardness.maxLevel) {
@@ -293,7 +320,7 @@ ServerEvents.tick((event) => {
       let key = String(player.uuid)
       if (enchLastArmourMessage[key] == null || enchTick - enchLastArmourMessage[key] >= 200) {
         enchLastArmourMessage[key] = enchTick
-        player.displayClientMessage(Text.of(`§c${enchName(over[0])} ${enchRoman(over[1])} needs Enchanting ${over[2] == null ? '?' : over[2]}: it weighs you down`), true)
+        player.displayClientMessage(Text.of(`§c${enchName(over[0])} ${enchRoman(over[1])} needs ${enchSkillName(over[3])} ${over[2] == null ? '?' : over[2]}: it weighs you down`), true)
       }
     } catch (e) {
       enchError('armour', e)

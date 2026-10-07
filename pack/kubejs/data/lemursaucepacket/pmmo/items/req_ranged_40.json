@@ -1,14 +1,14 @@
 {
   "override": false,
   "isTagFor": [
-    "minecraft:crossbow"
+    "minecraft:trident"
   ],
   "requirements": {
     "USE": {
-      "attack": 15
+      "ranged": 40
     },
     "WEAPON": {
-      "attack": 15
+      "ranged": 40
     }
   },
   "negative_effect": {

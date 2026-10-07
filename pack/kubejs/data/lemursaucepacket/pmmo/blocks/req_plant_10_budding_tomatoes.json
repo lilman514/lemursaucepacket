@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "farmersdelight:budding_tomatoes",
+    "minecraft:sweet_berry_bush"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 10
+    }
+  }
+}

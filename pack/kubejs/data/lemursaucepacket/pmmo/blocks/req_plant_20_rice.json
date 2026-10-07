@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "farmersdelight:rice"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 20
+    }
+  }
+}

@@ -7,6 +7,18 @@
     "q_sword_done"
   ],
   "steps": {
+    "start": {
+      "lacks": [
+        "q_sword_started"
+      ],
+      "skills": {
+        "mining": 10,
+        "smithing": 10
+      },
+      "stage": "q_sword_started",
+      "ok": "started",
+      "missing": "not_ready"
+    },
     "forge": {
       "needs": [
         "q_sword_brann"

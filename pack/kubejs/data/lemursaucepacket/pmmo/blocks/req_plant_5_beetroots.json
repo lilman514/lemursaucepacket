@@ -1,11 +1,11 @@
 {
   "override": false,
   "isTagFor": [
-    "create:potato_cannon"
+    "minecraft:beetroots"
   ],
   "requirements": {
-    "USE": {
-      "attack": 20
+    "PLACE": {
+      "farming": 5
     }
   }
 }

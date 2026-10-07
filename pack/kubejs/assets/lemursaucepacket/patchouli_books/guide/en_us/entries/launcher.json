@@ -25,7 +25,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": " it. A pick here applies next time you press Play; whatever you choose in game stays until you pick here again.$(br)$(li)$(bold)Join the server automatically:$() skips the title screen.$(br)$(li)$(bold)When the game starts:$() minimise, keep or close the launcher.$(br)$(li)$(bold)Java executable / JVM arguments:$() leave empty unless you know why.$(br)$(li)$(bold)Files & repair:$() opens the game, screenshots and logs folders. $(italic)Repair & play$() re-checks every file and re-downloads anything damaged."
+      "text": "it. A pick here applies next time you press Play; whatever you choose in game stays until you pick here again.$(br)$(li)$(bold)Join the server automatically:$() skips the title screen.$(br)$(li)$(bold)When the game starts:$() minimise, keep or close the launcher.$(br)$(li)$(bold)Java executable / JVM arguments:$() leave empty unless you know why.$(br)$(li)$(bold)Files & repair:$() opens the game, screenshots and logs folders. $(italic)Repair & play$() re-checks every file and re-downloads anything damaged."
     },
     {
       "type": "patchouli:text",

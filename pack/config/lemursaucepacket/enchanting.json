@@ -17,7 +17,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "attack"
     },
     "minecraft:smite": {
       "vanilla": 5,
@@ -33,7 +34,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "attack"
     },
     "minecraft:bane_of_arthropods": {
       "vanilla": 5,
@@ -49,7 +51,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "attack"
     },
     "minecraft:impaling": {
       "vanilla": 5,
@@ -65,7 +68,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "minecraft:power": {
       "vanilla": 5,
@@ -81,7 +85,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "minecraft:density": {
       "vanilla": 5,
@@ -97,7 +102,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "minecraft:breach": {
       "vanilla": 4,
@@ -110,7 +116,8 @@
       "unlocks": [
         50,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "minecraft:wind_burst": {
       "vanilla": 3,
@@ -128,7 +135,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "minecraft:fire_aspect": {
       "vanilla": 2,
@@ -147,7 +155,8 @@
         75,
         87,
         99
-      ]
+      ],
+      "useSkill": "strength"
     },
     "minecraft:knockback": {
       "vanilla": 2,
@@ -166,7 +175,8 @@
         75,
         87,
         99
-      ]
+      ],
+      "useSkill": "strength"
     },
     "minecraft:punch": {
       "vanilla": 2,
@@ -185,7 +195,8 @@
         75,
         87,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "minecraft:sweeping_edge": {
       "vanilla": 3,
@@ -203,7 +214,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "attack"
     },
     "minecraft:looting": {
       "vanilla": 3,
@@ -221,7 +233,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "attack"
     },
     "minecraft:efficiency": {
       "vanilla": 5,
@@ -237,7 +250,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "mining"
     },
     "minecraft:unbreaking": {
       "vanilla": 3,
@@ -255,7 +269,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "minecraft:fortune": {
       "vanilla": 3,
@@ -273,7 +288,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "mining"
     },
     "minecraft:luck_of_the_sea": {
       "vanilla": 3,
@@ -291,7 +307,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "fishing"
     },
     "minecraft:lure": {
       "vanilla": 3,
@@ -304,7 +321,8 @@
       "unlocks": [
         50,
         99
-      ]
+      ],
+      "useSkill": "fishing"
     },
     "minecraft:protection": {
       "vanilla": 4,
@@ -321,7 +339,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "defence"
     },
     "minecraft:fire_protection": {
       "vanilla": 4,
@@ -338,7 +357,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "defence"
     },
     "minecraft:blast_protection": {
       "vanilla": 4,
@@ -355,7 +375,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "defence"
     },
     "minecraft:projectile_protection": {
       "vanilla": 4,
@@ -372,7 +393,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "defence"
     },
     "minecraft:feather_falling": {
       "vanilla": 4,
@@ -386,7 +408,8 @@
         33,
         66,
         99
-      ]
+      ],
+      "useSkill": "agility"
     },
     "minecraft:thorns": {
       "vanilla": 3,
@@ -401,7 +424,8 @@
         50,
         75,
         99
-      ]
+      ],
+      "useSkill": "defence"
     },
     "minecraft:respiration": {
       "vanilla": 3,
@@ -419,7 +443,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "hitpoints"
     },
     "minecraft:soul_speed": {
       "vanilla": 3,
@@ -437,7 +462,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "agility"
     },
     "minecraft:swift_sneak": {
       "vanilla": 3,
@@ -450,7 +476,8 @@
       "unlocks": [
         50,
         99
-      ]
+      ],
+      "useSkill": "agility"
     },
     "minecraft:frost_walker": {
       "vanilla": 2,
@@ -469,7 +496,8 @@
         75,
         87,
         99
-      ]
+      ],
+      "useSkill": "agility"
     },
     "minecraft:loyalty": {
       "vanilla": 3,
@@ -487,7 +515,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "minecraft:riptide": {
       "vanilla": 3,
@@ -505,7 +534,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "agility"
     },
     "minecraft:piercing": {
       "vanilla": 4,
@@ -522,7 +552,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "minecraft:quick_charge": {
       "vanilla": 3,
@@ -535,7 +566,8 @@
       "unlocks": [
         50,
         99
-      ]
+      ],
+      "useSkill": "ranged"
     },
     "create:capacity": {
       "vanilla": 3,
@@ -553,7 +585,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "create:potato_recovery": {
       "vanilla": 3,
@@ -568,7 +601,8 @@
         50,
         75,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "farmersdelight:backstabbing": {
       "vanilla": 3,
@@ -586,7 +620,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "create_ltab:enchantment_luck": {
       "vanilla": 3,
@@ -604,7 +639,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "nova_structures:illagers_bane": {
       "vanilla": 5,
@@ -620,7 +656,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "nova_structures:power": {
       "vanilla": 5,
@@ -636,7 +673,8 @@
         60,
         80,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "nova_structures:piercing": {
       "vanilla": 4,
@@ -653,7 +691,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "nova_structures:outreach": {
       "vanilla": 4,
@@ -670,7 +709,8 @@
         66,
         83,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "nova_structures:traveler": {
       "vanilla": 3,
@@ -688,7 +728,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "dungeons_arise:purification": {
       "vanilla": 3,
@@ -706,7 +747,8 @@
         71,
         85,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "dungeons_arise:discharge": {
       "vanilla": 3,
@@ -721,7 +763,8 @@
         50,
         75,
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     },
     "dungeons_arise:ensnaring": {
       "vanilla": 4,
@@ -733,7 +776,8 @@
       },
       "unlocks": [
         99
-      ]
+      ],
+      "useSkill": "enchanting"
     }
   },
   "telekinesis": {

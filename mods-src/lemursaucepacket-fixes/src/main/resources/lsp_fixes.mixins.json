@@ -13,7 +13,20 @@
     "createoreexcavation.KubeJSExcavationMixin",
     "brassworksmissions.ActiveMissionMixin",
     "FireZoneMixin",
-    "LightningZoneMixin"
+    "LightningZoneMixin",
+    "SkillSlotMixin",
+    "SlotItemHandlerGateMixin",
+    "SmithingGateMixin",
+    "ItemCombinerMenuAccessor",
+    "ContainerClickMixin",
+    "BrewingIngredientMixin",
+    "BrewingStandTickMixin",
+    "BrewingStandMenuAccessor",
+    "create.MechanicalCrafterGateMixin",
+    "CrafterGateMixin",
+    "create.BasinGateMixin",
+    "create.BlueprintGateMixin",
+    "farmersdelight.CookingPotGateMixin"
   ],
   "client": [
     "CapeSkinMixin",

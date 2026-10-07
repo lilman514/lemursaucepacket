@@ -15,11 +15,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Shift + right-click$() a coin stack to take an exact amount: type $(#e0ac46)1500$(), $(#e0ac46)1,500$(), $(#e0ac46)1.5k$() or $(#e0ac46)2m$(). That's how you put a set amount in a chest.$(br)$(li)$(#e0ac46)/purse$() says how many coins you carry. Vendors and trades count the coins in your inventory only.$(br)$(li)$(bold)Coin Pouches$() are what missions pay. Right-click one to open the whole stack: 100 coins a pouch. Keep a few unopened, because mission rerolls are paid in pouches.$(br)$(li)Coins are never owned (see $(l:lemursaucepacket:lifesteal)Hearts and graves$(/l)), so they survive an eliminatio"
+      "text": "$(li)$(bold)Shift + right-click$() a coin stack to take an exact amount: type $(#e0ac46)1500$(), $(#e0ac46)1,500$(), $(#e0ac46)1.5k$() or $(#e0ac46)2m$(). That's how you put a set amount in a chest.$(br)$(li)$(#e0ac46)/purse$() says how many coins you carry. Vendors and trades count the coins in your inventory only.$(br)$(li)$(bold)Coin Pouches$() are what missions pay. Right-click one to open the whole stack: 100 coins a pouch. Keep a few unopened, because mission rerolls are paid in pouches."
     },
     {
       "type": "patchouli:text",
-      "text": "n wherever they're kept."
+      "text": "$(li)Coins are never owned (see $(l:lemursaucepacket:lifesteal)Hearts and graves$(/l)), so they survive an elimination wherever they're kept."
     },
     {
       "type": "patchouli:text",
@@ -50,20 +50,20 @@
     {
       "type": "patchouli:text",
       "title": "Trading with other players",
-      "text": "1. $(#e0ac46)/trade <player>$(), or sneak and right-click them with an empty hand. They get a message with a $(bold)Click to trade$() button. Asking back opens the trade window for both of you. You need to be within about 24 blocks of each other.$(br)2. Your offer is on the left, theirs on the right. Click things in your inventory to put them up, and click them in your offer to take them back. The $(bold)gold button$() sets how many coins you offer (right-click it to take them off). Offered coins are held while the trade is open, so they can't be spent meanwhile.$(br)3. When you're both happy, click $(bold)Accept"
+      "text": "1. $(#e0ac46)/trade <player>$(), or sneak and right-click them with an empty hand. They get a message with a $(bold)Click to trade$() button. Asking back opens the trade window for both of you. You need to be within about 24 blocks of each other.$(br)2. Your offer is on the left, theirs on the right. Click things in your inventory to put them up, and click them in your offer to take them back. The $(bold)gold button$() sets how many coins you offer (right-click it to take them off). Offered coins are held while the trade is open, so they can't be spent meanwhile."
     },
     {
       "type": "patchouli:text",
-      "text": " trade$(). Any change to either offer resets both acceptances and starts a 3-second deal timer, so nobody can swap something at the last second.$(br)4. When both have accepted, everything changes hands. If either of you closes the window, leaves, dies, changes dimension or walks off, the trade is cancelled and everything goes back to its owner."
+      "text": "3. When you're both happy, click $(bold)Accept trade$(). Any change to either offer resets both acceptances and starts a 3-second deal timer, so nobody can swap something at the last second.$(br)4. When both have accepted, everything changes hands. If either of you closes the window, leaves, dies, changes dimension or walks off, the trade is cancelled and everything goes back to its owner."
     },
     {
       "type": "patchouli:text",
       "title": "Admins",
-      "text": "$(li)$(#e0ac46)/lsp coins give|take|set <players> <amount>$(), $(#e0ac46)/lsp coins balance <players>$()$(br)$(li)$(#e0ac46)/lsp values get <item>$() and $(#e0ac46)/lsp values top$(): the value table. It's rebuilt on $(#e0ac46)/reload$(), from $(#e0ac46)data/$(italic)/lsp_economy/$().json$() (the pack's comes from $(#e0ac46)npcs/values.mjs$()) and the server's recipes.$(br)$(li)$(#e0ac46)/lsp npc list$(), $(#e0ac46)/lsp npc talk <npc> <player>$() (as a right-click would), $(#e0ac46)/lsp npc forget <player> [who]$() (their talks play again), $(#e0ac46)/lsp shop open <npc> <player>$()$(br)$(li)Shops, talks and ques"
+      "text": "$(li)$(#e0ac46)/lsp coins give|take|set <players> <amount>$(), $(#e0ac46)/lsp coins balance <players>$()$(br)$(li)$(#e0ac46)/lsp values get <item>$() and $(#e0ac46)/lsp values top$(): the value table. It's rebuilt on $(#e0ac46)/reload$(), from $(#e0ac46)data/$(italic)/lsp_economy/$().json$() (the pack's comes from $(#e0ac46)npcs/values.mjs$()) and the server's recipes.$(br)$(li)$(#e0ac46)/lsp npc list$(), $(#e0ac46)/lsp npc talk <npc> <player>$() (as a right-click would), $(#e0ac46)/lsp npc forget <player> [who]$() (their talks play again), $(#e0ac46)/lsp shop open <npc> <player>$()"
     },
     {
       "type": "patchouli:text",
-      "text": "t steps come from $(#e0ac46)data/*/lsp_npcs/<who>.json$(), written by $(#e0ac46)npcs/build.mjs$() from $(#e0ac46)npcs/npcs.mjs$(). An Easy NPC is one of them when it carries the tag $(#e0ac46)lsp_npc.<who>$()."
+      "text": "$(li)Shops, talks and quest steps come from $(#e0ac46)data/*/lsp_npcs/<who>.json$(), written by $(#e0ac46)npcs/build.mjs$() from $(#e0ac46)npcs/npcs.mjs$(). An Easy NPC is one of them when it carries the tag $(#e0ac46)lsp_npc.<who>$()."
     }
   ]
 }

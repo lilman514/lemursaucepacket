@@ -1,0 +1,12 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:pumpkin_stem",
+    "minecraft:melon_stem"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 15
+    }
+  }
+}

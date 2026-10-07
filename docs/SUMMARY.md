@@ -7,7 +7,7 @@
 * [Getting started](getting-started.md)
 * [The launcher](launcher.md)
 * [FAQ and troubleshooting](faq.md)
-* [Keys](keys.md)
+* [Keybinds](keybinds.md)
 
 ## The world
 

@@ -39,6 +39,7 @@ One per skill, at level 99. Each has a perk while worn.
 | Crafting Cape | Crafting 99. | the item in your hand mends one durability every ten seconds |
 | Agility Cape | Agility 99. | +10% speed |
 | Enchanting Cape | Enchanting 99. | +20% Enchanting XP |
+| Brewing Cape | Brewing 99. | potions you drink last half as long again |
 
 ## Quest capes
 

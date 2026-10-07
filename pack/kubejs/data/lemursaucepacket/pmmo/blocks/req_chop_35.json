@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:dark_oak_log",
+    "minecraft:dark_oak_wood",
+    "minecraft:stripped_dark_oak_log",
+    "minecraft:stripped_dark_oak_wood"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 35
+    }
+  }
+}

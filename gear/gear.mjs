@@ -351,7 +351,13 @@ export const TOOLS = [
 export const MATERIAL_ITEMS = [
   { id: 'compacted_diamond', name: 'Compacted Diamond', rarity: 'RARE', howToGet: 'Four diamonds compacted in a basin under a mechanical press.' },
   { id: 'compacted_netherite', name: 'Compacted Netherite', rarity: 'EPIC', howToGet: 'Four netherite ingots compacted in a basin under a heated mechanical press.', fireResistant: true },
-  { id: 'duelists_pattern', name: "Duelist's Pattern", rarity: 'RARE', howToGet: 'Only found in Dungeons Arise chests; one pattern per set piece.' }
+  { id: 'duelists_pattern', name: "Duelist's Pattern", rarity: 'RARE', howToGet: 'Only found in Dungeons Arise chests; one pattern per set piece.' },
+  // Each set's hand-made part, one per piece: made at a crafting table, so the skill gates (skills/unlocks.mjs CRAFT)
+  // can ask who's making it, which Create's mechanical crafters can't.
+  { id: 'prospector_plating', name: "Prospector's Plating", rarity: 'UNCOMMON', howToGet: 'A crafting table (Smithing 25): brass sheets, andesite alloy and an iron ingot make two.' },
+  { id: 'aeronaut_rigging', name: "Aeronaut's Rigging", rarity: 'UNCOMMON', howToGet: 'A crafting table (Crafting 35): leather, string and a sturdy sheet make two.' },
+  { id: 'duelists_filigree', name: "Duelist's Filigree", rarity: 'RARE', howToGet: 'A crafting table (Crafting 40): gold, brass and a precision mechanism make two.' },
+  { id: 'diamond_lattice', name: 'Diamond Lattice', rarity: 'RARE', howToGet: 'A crafting table (Smithing 45): diamonds woven through sturdy sheets make two.' }
 ]
 
 /**
@@ -405,10 +411,15 @@ export const RECIPES = [
   },
   { type: 'shaped', result: 'anglers_cap', pattern: ['LLL', 'LRL'], key: { L: 'minecraft:leather', R: 'minecraft:fishing_rod' } },
   // Armour: the four pieces of each set share one recipe shape per slot.
-  ...armourRecipes('prospector', { C: 'create:brass_casing', A: 'create:andesite_alloy', X: 'create:brass_ingot' }, { helmet: 'minecraft:lantern' }),
-  ...armourRecipes('aeronaut', { C: 'minecraft:leather', A: 'create:sturdy_sheet', X: 'aeronautics:propeller_bearing' }),
-  ...armourRecipes('duelist', { C: 'create:brass_sheet', A: 'create:precision_mechanism', X: 'lemursaucepacket:duelists_pattern' }),
-  ...armourRecipes('compacted_diamond', { C: 'lemursaucepacket:compacted_diamond', A: 'create:sturdy_sheet', X: 'create:precision_mechanism' }),
+  // A, the accent, is each set's hand-made part (MATERIAL_ITEMS): the level to make it is the set's skill gate.
+  ...armourRecipes('prospector', { C: 'create:brass_casing', A: 'lemursaucepacket:prospector_plating', X: 'create:brass_ingot' }, { helmet: 'minecraft:lantern' }),
+  ...armourRecipes('aeronaut', { C: 'minecraft:leather', A: 'lemursaucepacket:aeronaut_rigging', X: 'aeronautics:propeller_bearing' }),
+  ...armourRecipes('duelist', { C: 'create:brass_sheet', A: 'lemursaucepacket:duelists_filigree', X: 'lemursaucepacket:duelists_pattern' }),
+  ...armourRecipes('compacted_diamond', { C: 'lemursaucepacket:compacted_diamond', A: 'lemursaucepacket:diamond_lattice', X: 'create:precision_mechanism' }),
+  { type: 'shaped', result: 'prospector_plating', count: 2, pattern: ['SAS', 'AIA', 'SAS'], key: { S: 'create:brass_sheet', A: 'create:andesite_alloy', I: 'minecraft:iron_ingot' } },
+  { type: 'shaped', result: 'aeronaut_rigging', count: 2, pattern: ['LTL', 'TST', 'LTL'], key: { L: 'minecraft:leather', T: 'minecraft:string', S: 'create:sturdy_sheet' } },
+  { type: 'shaped', result: 'duelists_filigree', count: 2, pattern: ['GBG', 'BPB', 'GBG'], key: { G: 'minecraft:gold_ingot', B: 'create:brass_nugget', P: 'create:precision_mechanism' } },
+  { type: 'shaped', result: 'diamond_lattice', count: 2, pattern: ['SDS', 'DSD', 'SDS'], key: { S: 'create:sturdy_sheet', D: 'minecraft:diamond' } },
   { type: 'smithing', result: 'compacted_netherite_helmet', base: 'compacted_diamond_helmet', addition: 'compacted_netherite' },
   { type: 'smithing', result: 'compacted_netherite_chestplate', base: 'compacted_diamond_chestplate', addition: 'compacted_netherite' },
   { type: 'smithing', result: 'compacted_netherite_leggings', base: 'compacted_diamond_leggings', addition: 'compacted_netherite' },

@@ -18,7 +18,7 @@
 			rotation: 0.0d
 			width: 0.1d
 			x: 5.25d
-			y: -13.65d
+			y: -15.15d
 		}
 		{
 			height: 3.446808510638298d
@@ -3892,6 +3892,292 @@
 		{
 			icon: {
 				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/brewing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "2DEE0108961F3D21"
+			rewards: [
+				{
+					id: "2CFFDAC49F1BA178"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "611C47A0BB7387A9"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 80
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "6B142E49AA5B52F3"
+					table_id: 3210045145100678495L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "401DFC0F2D8BC073"
+					type: "custom"
+				}
+			]
+			x: 10.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2DEE0108961F3D21"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/brewing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "74081235864C5E1D"
+			rewards: [
+				{
+					id: "3E1F8EF61066B9C9"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "0B78613980C58B01"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "36238D9578024EEC"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "6E66318EB6DC6F81"
+					type: "custom"
+				}
+			]
+			x: 12.2d
+			y: 12.0d
+		}
+		{
+			dependencies: ["74081235864C5E1D"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/brewing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3AD013C52399732A"
+			rewards: [
+				{
+					id: "4C1E8C71CC1265A6"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "7EDFA012EB9E20BD"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "237CD2DF24E9AD49"
+					item: {
+						count: 8
+						id: "minecraft:dragon_breath"
+					}
+					type: "item"
+				}
+				{
+					id: "07076B26B03CC71B"
+					item: {
+						count: 4
+						id: "minecraft:ghast_tear"
+					}
+					type: "item"
+				}
+				{
+					id: "4663D32F9FE4C589"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "3A3AA00C162E6750"
+					type: "custom"
+				}
+			]
+			x: 13.9d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3AD013C52399732A"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/brewing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "4BE28F3C2A44439C"
+			rewards: [
+				{
+					id: "1B806ED0972D3377"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "6599F0C0ED8CD24D"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "5EAFD915984CA44E"
+					item: {
+						count: 2
+						id: "minecraft:brewing_stand"
+					}
+					type: "item"
+				}
+				{
+					id: "4B7D5318443011B1"
+					item: {
+						count: 16
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "099300245A124AA8"
+					item: {
+						count: 1
+						id: "minecraft:turtle_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "4DF1CAB9CF3685DA"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "6CF527A6F99C7563"
+					type: "custom"
+				}
+			]
+			x: 15.6d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4BE28F3C2A44439C"]
+			icon: {
+				components: {
+					"ftbquests:icon": "lemursaucepacket:textures/skills/brewing.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "3AF1667D91BAFF99"
+			rewards: [
+				{
+					id: "4F11BBA025D7C9E3"
+					type: "xp"
+					xp: 3000
+				}
+				{
+					id: "023C2FAA2B6885F4"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 45120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "6B7B5A95B8F1E4D5"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+				{
+					id: "4B5E480C76ECCA6A"
+					table_id: 3944519194703180695L
+					type: "random"
+				}
+				{
+					id: "4049A0481F48A4B8"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					icon: {
+						components: {
+							"ftbquests:icon": "lemursaucepacket:textures/skills/level_up.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
+					id: "7DB87BB66A078435"
+					type: "custom"
+				}
+			]
+			x: 17.3d
+			y: 12.0d
+		}
+		{
+			icon: {
+				components: {
 					"ftbquests:icon": "lemursaucepacket:textures/skills/total_level.png"
 				}
 				id: "ftbquests:custom_icon"
@@ -3933,7 +4219,7 @@
 				}
 			]
 			x: 3.15d
-			y: 12.8d
+			y: 14.3d
 		}
 		{
 			dependencies: ["127F5773383C1521"]
@@ -3980,7 +4266,7 @@
 				}
 			]
 			x: 5.35d
-			y: 12.8d
+			y: 14.3d
 		}
 		{
 			dependencies: ["515417F3781A968C"]
@@ -4027,7 +4313,7 @@
 				}
 			]
 			x: 7.55d
-			y: 12.8d
+			y: 14.3d
 		}
 		{
 			dependencies: ["6524A67A3C268BA2"]
@@ -4079,7 +4365,7 @@
 				}
 			]
 			x: 9.75d
-			y: 12.8d
+			y: 14.3d
 		}
 		{
 			dependencies: ["65D1AFE50D8ECE8E"]
@@ -4126,7 +4412,7 @@
 				}
 			]
 			x: 11.95d
-			y: 12.8d
+			y: 14.3d
 		}
 		{
 			dependencies: ["6457E540F71D6A7E"]
@@ -4136,15 +4422,15 @@
 				}
 				id: "ftbquests:custom_icon"
 			}
-			id: "232BCECCF98900F6"
+			id: "3850B0A73693A952"
 			rewards: [
 				{
-					id: "753E126800BA1D43"
+					id: "4FC7FD9ABEA52220"
 					type: "xp"
 					xp: 1000
 				}
 				{
-					id: "0E9B6941F26B2FCE"
+					id: "31AF40C6C83683C1"
 					item: {
 						components: {
 							"lsp_fixes:coin_amount": 85120
@@ -4155,17 +4441,17 @@
 					type: "item"
 				}
 				{
-					id: "522A7797FBB1A903"
+					id: "1A8CB9A39D8B6045"
 					table_id: 1080448268447668683L
 					type: "random"
 				}
 				{
-					id: "1F0F292E009CC211"
+					id: "5C84E9181BDB6954"
 					table_id: 3944519194703180695L
 					type: "random"
 				}
 				{
-					id: "6E0DDB49ACDE3985"
+					id: "0EF5D11C26E4FD6F"
 					table_id: 1080448268447668683L
 					type: "random"
 				}
@@ -4180,12 +4466,12 @@
 						}
 						id: "ftbquests:custom_icon"
 					}
-					id: "3AEAB2E3FFD715E5"
+					id: "40BBD006F2C8C31F"
 					type: "custom"
 				}
 			]
 			x: 14.15d
-			y: 12.8d
+			y: 14.3d
 		}
 	]
 }

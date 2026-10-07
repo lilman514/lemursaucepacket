@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 // Renders the wiki (docs/, GitBook layout) to site/wiki/ as plain HTML in the pack's brass-and-iron look, so the
 // same pages are on GitHub Pages next to the launcher feed as well as in GitBook. Also writes docs/mods.md from
-// the pack's mod list, so that page never goes stale.
+// the pack's mod list and the keybind tables in docs/keybinds.md (publish/keybinds.mjs), so those never go stale.
 //
 // The pages are GitBook markdown: optional front matter (description, icon, cover), {% hint %} callouts, <figure>
 // pictures with captions, and on the front page a cards table (<table data-view="cards">). GitBook reads them as
 // they are; this script turns the same constructs into HTML of its own (publish/patchouli.mjs does the in-game book).
+// The Keybinds page gets an interactive keyboard here in place of its tables (GitBook keeps the tables).
 //
 //   node publish/docs.mjs        (publish.mjs runs it too)
 
@@ -13,6 +14,7 @@ import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { marked } from 'marked'
+import { buildKeybinds } from './keybinds.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const docsDir = path.join(root, 'docs')
@@ -126,6 +128,18 @@ blockquote{margin:12px 0;padding:8px 14px;border-left:3px solid var(--accent);ba
 
 const htmlName = (file) => (file === 'README.md' ? 'index.html' : file.replace(/\.md$/, '.html'))
 
+/** Pages that were renamed: the old address keeps working as a redirect to the new page. */
+const MOVED = { 'keys.md': 'keybinds.md' }
+
+function redirectPage(to, title) {
+  const href = htmlName(to)
+  return (
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${title} · LemurSaucePacket wiki</title><meta name="robots" content="noindex">` +
+    `<meta http-equiv="refresh" content="0; url=${href}"><link rel="canonical" href="${href}"><script>location.replace('${href}' + location.hash)</script></head>` +
+    `<body style="background:#191715;color:#f1e4c2;font:16px/1.6 'Segoe UI',system-ui,sans-serif;padding:24px"><p>This page is now <a href="${href}" style="color:#f8d982">${title}</a>.</p></body></html>`
+  )
+}
+
 /** Links between pages (with or without an anchor), in markdown and in HTML attributes. */
 const relink = (text) =>
   text
@@ -156,7 +170,7 @@ function toHtml(markdown) {
   return marked.parse(text)
 }
 
-function render() {
+function render(keybinds) {
   const summary = readFileSync(path.join(docsDir, 'SUMMARY.md'), 'utf8')
   // SUMMARY.md: "## Group" headings (GitBook sidebar groups) and "* [Title](file.md)" entries.
   const nav = []
@@ -173,7 +187,10 @@ function render() {
     const source = path.join(docsDir, page.file)
     if (!existsSync(source)) continue
     const { data, body } = frontMatter(readFileSync(source, 'utf8'))
-    let html = toHtml(body)
+    // The Keybinds page: the keyboard and its list stand where the markdown has its tables.
+    const keyboard = page.file === 'keybinds.md' ? keybinds : null
+    let html = toHtml(keyboard ? body.replace(keyboard.region, '<!-- keyboard -->') : body)
+    if (keyboard) html = html.replace('<!-- keyboard -->', () => keyboard.html)
     // The description sits under the page title, as in GitBook.
     if (data.description) html = html.replace(/<\/h1>/, `</h1><p class="lead">${data.description}</p>`)
     const cover = data.cover ? `<div class="cover" style="background-image:url('${data.cover}')"></div>` : ''
@@ -184,13 +201,19 @@ function render() {
     const doc =
       `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · LemurSaucePacket wiki</title>` +
       (data.description ? `<meta name="description" content="${data.description.replace(/"/g, '&quot;')}">` : '') +
-      `<style>${CSS}</style></head><body><div class="wrap"><nav><a class="home" href="index.html">LemurSaucePacket wiki</a><ul>${links}</ul><a class="site" href="https://play.limas.ca">play.limas.ca ↗</a></nav>` +
-      `<main>${cover}<div class="inner">${html}<p class="foot">Generated from the pack's docs folder on ${new Date().toISOString().slice(0, 10)}.</p></div></main></div></body></html>`
+      `<style>${CSS}${keyboard ? keyboard.css : ''}</style></head><body><div class="wrap"><nav><a class="home" href="index.html">LemurSaucePacket wiki</a><ul>${links}</ul><a class="site" href="https://play.limas.ca">play.limas.ca ↗</a></nav>` +
+      `<main>${cover}<div class="inner">${html}<p class="foot">Generated from the pack's docs folder on ${new Date().toISOString().slice(0, 10)}.</p></div></main></div>` +
+      `${keyboard ? `<script>${keyboard.js}</script>` : ''}</body></html>`
     writeFileSync(path.join(outDir, htmlName(page.file)), doc.replace('<ul></ul>', ''))
+  }
+  for (const [from, to] of Object.entries(MOVED)) {
+    const target = pages.find((p) => p.file === to)
+    if (target) writeFileSync(path.join(outDir, htmlName(from)), redirectPage(to, target.title))
   }
   return pages.length
 }
 
 const modCount = writeModsPage()
-const pageCount = render()
-console.log(`wiki: ${pageCount} pages → site/wiki (mods.md lists ${modCount} mods)`)
+const keybinds = buildKeybinds()
+const pageCount = render(keybinds)
+console.log(`wiki: ${pageCount} pages → site/wiki (mods.md lists ${modCount} mods; keybinds.md: ${keybinds.summary})`)

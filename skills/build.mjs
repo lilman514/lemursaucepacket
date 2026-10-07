@@ -18,11 +18,16 @@
 //   sword would need Enchanting but no Attack. Enchanting caps are enforced by kubejs/*/enchanting.js instead.
 // Crit chances for Strength and Ranged are not PMMO perks: kubejs/server_scripts/skills.js rolls them.
 // Enchanting (the skill) is defined here; what it unlocks lives in enchanting/enchanting.mjs.
+// What every skill unlocks level by level (RuneScape style) lives in skills/unlocks.mjs: this script writes its
+// planting and chopping rules for PMMO, the gates lsp_fixes enforces (pack/config/lemursaucepacket/skill_gates.json:
+// making things, brewing, drops, fishing treasure) and the skill guide in docs/skills.md. Brewing XP is lsp_fixes'
+// (per potion, scaled by what it takes to brew), not PMMO's BREW event, which can't tell one potion from another.
 
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
+import { BREW, BREW_XP, CHOP, CRAFT, DROPS, FISHING_TREASURE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL, QUEST_REQUIREMENTS, RANGED } from './unlocks.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = path.join(root, 'pack', 'kubejs', 'data')
@@ -64,7 +69,8 @@ const SKILLS = {
     cooking: ['Cooking', 0xe0ac46],
     smithing: ['Smithing', 0xe0ac46],
     crafting: ['Crafting', 0xe0ac46],
-    enchanting: ['Enchanting', 0xe0ac46]
+    enchanting: ['Enchanting', 0xe0ac46],
+    brewing: ['Brewing', 0xe0ac46]
   },
   support: {
     agility: ['Agility', 0x6fb7e8]
@@ -103,11 +109,10 @@ for (const [tier, level] of Object.entries(ARMOR_TIER)) {
   if (level <= 1) continue
   requirements.push([`${tier}_armor`, PIECES.map((p) => `minecraft:${tier}_${p}`), { WEAR: { defence: level } }, 'slowness'])
 }
+// Ranged gear (skills/unlocks.mjs RANGED): using it, and hitting with it.
+for (const { level, items } of RANGED) requirements.push([`ranged_${level}`, items, { USE: { ranged: level }, WEAPON: { ranged: level } }, 'weakness'])
 requirements.push(
-  ['crossbow', ['minecraft:crossbow'], { USE: { attack: 15 }, WEAPON: { attack: 15 } }, 'weakness'],
-  ['trident', ['minecraft:trident'], { USE: { attack: 40 }, WEAPON: { attack: 40 } }, 'weakness'],
   ['mace', ['minecraft:mace'], { WEAPON: { attack: 50 }, WEAR: { attack: 50 } }, 'weakness'],
-  ['potato_cannon', ['create:potato_cannon'], { USE: { attack: 20 } }],
   ['turtle_helmet', ['minecraft:turtle_helmet'], { WEAR: { defence: 20 } }, 'slowness'],
   ['elytra', ['minecraft:elytra'], { WEAR: { agility: 30 } }, 'slowness'],
   ['copper_diving_gear', ['create:copper_diving_helmet', 'create:copper_backtank', 'create:copper_diving_boots'], { WEAR: { defence: 5 } }, 'slowness'],
@@ -277,5 +282,64 @@ write(langFile, {
   ...Object.fromEntries(Object.entries(TYPE_NAMES).map(([type, name]) => [`pmmo.type.${type}`, name]))
 })
 
+// Farming plants and Woodcutting chops by level (skills/unlocks.mjs).
+for (const { level, blocks } of PLANT) write(path.join(rulesDir, 'blocks', `req_plant_${level}_${blocks[0].split(':')[1]}.json`), { override: false, isTagFor: blocks, requirements: { PLACE: { farming: level } } })
+for (const { level, blocks } of CHOP) write(path.join(rulesDir, 'blocks', `req_chop_${level}.json`), { override: false, isTagFor: blocks, requirements: { BREAK: { woodcutting: level } } })
+
+// What lsp_fixes enforces itself (skills package): making things, brewing, drops and fishing treasure.
+write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'), {
+  craft: CRAFT.map(({ skill, level, what, items }) => ({ skill, level, what, items })),
+  brew: BREW.map(({ level, item, what }) => ({ level, item, what })),
+  brewXp: BREW_XP,
+  // Every potion id the game has for each base: its longer (long_) and stronger (strong_) kinds take more.
+  potions: Object.fromEntries(
+    Object.entries(POTION_LEVEL).flatMap(([id, level]) => [
+      [`minecraft:${id}`, level],
+      [`minecraft:long_${id}`, Math.max(level, 30)],
+      [`minecraft:strong_${id}`, Math.max(level, 60)]
+    ])
+  ),
+  potionForms: POTION_FORM_LEVEL,
+  drops: DROPS,
+  fishingTreasure: FISHING_TREASURE
+})
+writeSkillGuide()
+
 const fileCount = requirements.length + ITEM_XP.length + BLOCK_XP.length
-console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files); level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
+console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files), ${PLANT.length + CHOP.length} planting/chopping rules, ${CRAFT.length} making gates, ${BREW.length} brewing gates; level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
+
+// ---------------------------------------------------------------- the wiki's skill guide
+
+/** docs/skills.md between its skill-guide markers: what each level of each skill unlocks, from skills/unlocks.mjs. */
+function writeSkillGuide() {
+  const file = path.join(root, 'docs', 'skills.md')
+  const START = '<!-- skill-guide: generated by skills/build.mjs from skills/unlocks.mjs -->'
+  const END = '<!-- /skill-guide -->'
+  const text = readFileSync(file, 'utf8')
+  const a = text.indexOf(START)
+  const b = text.indexOf(END)
+  if (a < 0 || b < a) {
+    console.warn('docs/skills.md has no skill-guide markers: the guide was not written')
+    return
+  }
+  const name = (skill) => (skill === 'combat' ? 'Combat' : skill.split('|').map((s) => s[0].toUpperCase() + s.slice(1)).join(' or '))
+  const table = (title, head, rows) => [`### ${title}`, '', `| Level | ${head} |`, '|---|---|', ...rows.sort((x, y) => x[0] - y[0]).map(([l, w]) => `| ${l} | ${w} |`), '']
+  const made = (skill) => CRAFT.filter((c) => c.skill === skill).map((c) => [c.level, c.what])
+  const lines = [START, '']
+  lines.push(...table('Crafting', 'Lets you make', made('crafting')))
+  lines.push(...table('Smithing', 'Lets you make', made('smithing')))
+  lines.push(...table('Cooking', 'Lets you make', made('cooking')))
+  lines.push(...table('Brewing', 'Lets you brew', [...BREW.map((x) => [x.level, `${x.what} (${x.item.replace('minecraft:', '').replace(/_/g, ' ')})`]), ...made('brewing').map(([l, w]) => [l, `${w} (crafting)`])]))
+  lines.push(...table('Farming', 'Lets you plant', PLANT.map((p) => [p.level, p.what])))
+  lines.push(...table('Woodcutting', 'Lets you chop', CHOP.map((c) => [c.level, c.what])))
+  lines.push(...table('Fishing', 'Lets you', [[FISHING_TREASURE, 'Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish)']]))
+  lines.push(...table('Ranged', 'Lets you use', RANGED.map((r) => [r.level, r.what])))
+  lines.push(...table('Combat level', 'Lets you', DROPS.filter((d) => d.skill === 'combat').map((d) => [d.level, `Get ${d.what.charAt(0).toLowerCase() + d.what.slice(1)} as drops`])))
+  lines.push('### Quest requirements', '', '| Quest | Needs |', '|---|---|')
+  for (const [quest, reqs] of Object.entries(QUEST_REQUIREMENTS)) {
+    const list = Object.entries(reqs).map(([s, l]) => `${name(s)} ${l}`)
+    lines.push(`| ${quest} | ${list.length ? list.join(', ') : 'Nothing'} |`)
+  }
+  lines.push('', END)
+  writeFileSync(file, text.slice(0, a) + lines.join('\n') + text.slice(b + END.length))
+}

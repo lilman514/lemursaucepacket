@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.11: Skills that unlock things",
+      "date": "2026-10-07",
+      "body": "Every skill now unlocks things on the way to 99, like a RuneScape skill guide: Crafting 30 makes diamond gear, Smithing 50 netherite, the bigger meals wait on Cooking, and Farming and Woodcutting gate the rarer crops and trees. Brewing is the fifteenth skill: each potion you take out of a stand trains it, each ingredient waits on a level, and Brewing 55 makes Eyes of Ender, so it's also the way to the Ender Dragon. Wither skeletons drop skulls only at combat level 75, treasure on the line needs Fishing 20, and crossbows and tridents moved to Ranged. Enchantments past their vanilla level also need the gear's own skill to use: Fishing for Lure, Mining for Fortune, Attack for Sharpness. Your combat level shows under your name. The bigger main quests ask for levels first (Dragon Slayer I: combat 40 and Brewing 55). Each gear set takes a hand-made part, and machines (the Crafter, Create's crafters, mixer and press) won't make anything gated. The Brewing Cape makes potions last half as long again.",
+      "url": "https://play.limas.ca/wiki/skills"
+    },
+    {
       "title": "1.10: Capes you can hold",
       "date": "2026-10-07",
       "body": "Capes are items now. When you earn one it lands in your bag: right-click it, or put it in the new Cape slot in the Curios panel (only someone who earned it can wear it). Any cape can hang on an armor stand: right-click the stand with it, sneak and right-click with an empty hand to take it back. ESC → Capes is your collection: every cape, how far along you are, each perk, and who makes another if you lose one (Odo the Tailor in Lemurton, 99,000 coins for a skill cape; Brakka at Kiln Hollow for the pit capes, or win again: every win hands one over). Also: the Infernal Cape is redrawn so it burns from the hem up, the Gold Coins look like vanilla's gold, and Lemurton's townsfolk pick up new dialogs by themselves.",

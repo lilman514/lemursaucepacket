@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:chorus_flower"
+  ],
+  "requirements": {
+    "PLACE": {
+      "farming": 60
+    }
+  }
+}

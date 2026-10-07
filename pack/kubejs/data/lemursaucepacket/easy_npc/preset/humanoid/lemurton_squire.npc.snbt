@@ -185,17 +185,34 @@
               Actions:[
                 {
                   Type:"COMMAND",
-                  Cmd:"/tag @initiator add q_sword_started"
-                },
-                {
-                  Type:"OPEN_NAMED_DIALOG",
-                  Cmd:"started"
+                  Cmd:"/lsp quest step @initiator knights_sword start @npc-uuid"
                 }
               ]
             },
             {
               Label:"ask_1",
               Name:"Not my problem",
+              Actions:[
+                {
+                  Type:"CLOSE_DIALOG"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          Label:"not_ready",
+          Name:"Not yet",
+          Priority:-1,
+          Texts:[
+            {
+              Text:"Brann won't forge for someone who has never swung a pick or a hammer. Come back when you have Mining 10 and Smithing 10."
+            }
+          ],
+          Buttons:[
+            {
+              Label:"not_ready_0",
+              Name:"I'll be back",
               Actions:[
                 {
                   Type:"CLOSE_DIALOG"

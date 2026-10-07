@@ -1,0 +1,110 @@
+{
+  "name": "Keybinds",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:tripwire_hook",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "These are the keys you start with. Most are each mod's own default; the pack moves a few so that the ones you use most don't clash. Change any of them in Settings → Controls → Key Binds. Its search box finds an action or a key."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Movement and actions",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)W$() - Walk Forwards - Minecraft$(br)$(bold)A$() - Strafe Left - Minecraft$(br)$(bold)S$() - Walk Backwards - Minecraft$(br)$(bold)D$() - Strafe Right - Minecraft$(br)$(bold)Space$() - Jump - Minecraft$(br)$(bold)Left Shift$() - Sneak - Minecraft$(br)$(bold)Left Control$() - Sprint - Minecraft$(br)$(bold)Left Button$() - Attack/Destroy - Minecraft$(br)$(bold)Right Button$() - Use Item/Place Block - Minecraft$(br)$(bold)Middle Button$() - Pick Block - Minecraft$(br)$(bold)R$() - Dragon Breath (riding a dragon) - Ice And Fire Community Edition"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)G$() - Dragon Strike (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)X$() - Dragon Down (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)F7$() - Change 3rd person camera for dragon (riding a dragon) - Ice And Fire Community Edition"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Inventory and items",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Q$() - Drop Selected Item - Minecraft$(br)$(bold)E$() - Open/Close Inventory (with your skills panel; also on the ESC menu) - Minecraft$(br)$(bold)F$() - Swap Item With Off Hand - Minecraft$(br)$(bold)1$() - Hotbar Slot 1 - Minecraft$(br)$(bold)2$() - Hotbar Slot 2 - Minecraft$(br)$(bold)3$() - Hotbar Slot 3 - Minecraft$(br)$(bold)4$() - Hotbar Slot 4 - Minecraft$(br)$(bold)5$() - Hotbar Slot 5 - Minecraft$(br)$(bold)6$() - Hotbar Slot 6 - Minecraft$(br)$(bold)7$() - Hotbar Slot 7 - Minecraft$(br)$(bold)8$() - Hotbar Slot 8 - Minecraft"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)9$() - Hotbar Slot 9 - Minecraft$(br)$(bold)G$() - Open/Close Curios Inventory - Curios API$(br)$(bold)B$() - Open Backpack (the one you're wearing; also on the ESC menu) - Sophisticated Backpacks$(br)$(bold)C$() - Run Inventory Interaction Upgrades - Sophisticated Backpacks$(br)$(bold)Left Shift$() - Research Relic Under Cursor - Relics$(br)$(bold)Left Alt$() - Active Abilities Menu - Relics$(br)$(bold)Left Shift$() - Scroll Tooltips - Legendary Tooltips$(br)$(bold)C$() - Save Hotbar Activator (in Creative mode) - Minecraft$(br)$(bold)X$() - Load Hotbar Activator (in Creative mode) - Minecraft"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)[$() - Transfer to Storage (in menus) - Sophisticated Core$(br)$(bold)]$() - Transfer to Inventory (in menus) - Sophisticated Core$(br)$(bold)Middle Button$() - Sort Storage/Backpack (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)ALT + X$() - Switch Upgrade in the 2nd Slot On/Off - Sophisticated Backpacks$(br)$(bold)ALT + Z$() - Switch Upgrade in the 1st Slot On/Off - Sophisticated Backpacks$(br)$(bold)CTRL + Left Button$() - Transfer one (in menus) - Inventory Essentials$(br)$(bold)SHIFT + Left Button$() - Bulk Drop out of Screen (in menus) - Inventory Essentials"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Chat, voice and team",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)T$() - Open Chat - Minecraft$(br)$(bold)Tab$() - List Players - Minecraft$(br)$(bold)/$() - Open Command - Minecraft$(br)$(bold)P$() - Social Interactions Screen - Minecraft$(br)$(bold)O$() - Mute Microphone - Simple Voice Chat$(br)$(bold)N$() - Disable Voice Chat - Simple Voice Chat$(br)$(bold)V$() - Voice Chat Menu (also on the ESC menu) - Simple Voice Chat$(br)$(bold);$() - Open Teams GUI (your team; also on the ESC menu) - FTB Teams"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Maps and waypoints",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Y$() - Minimap Settings - Xaero's Minimap$(br)$(bold)J$() - New Waypoint - Xaero's Minimap$(br)$(bold)U$() - Open Waypoint Screen (also on the ESC menu) - Xaero's Minimap$(br)$(bold)Keypad +$() - Quick Waypoint - Xaero's Minimap$(br)$(bold)M$() - Open World Map (also on the ESC menu) - Xaero's World Map$(br)$(bold)]$() - Open Settings - Xaero's World Map$(br)$(bold)Right Shift$() - Quick Manual Confirmation - Xaero's World Map"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Quests and skills",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)L$() - Advancements - Minecraft$(br)$(bold)`$() - Vein Mine Marker (vein mining is off on this server) - Project MMO$(br)$(bold)-$() - Toggle Break Speed Perks - Project MMO$(br)$(bold)H$() - Open Missions UI (this week's missions; also on the ESC menu) - Create Brassworks Missions$(br)$(bold)=$() - Zoom In (in the quest book) - FTB Quests$(br)$(bold)-$() - Zoom Out (in the quest book) - FTB Quests$(br)$(bold)0$() - Reset Zoom (in the quest book) - FTB Quests$(br)$(bold)Tab$() - Next Chapter (in the quest book) - FTB Quests"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Space$() - Recenter GUI (in the quest book) - FTB Quests$(br)$(bold)F1$() - See Extended Quest Info (in the quest book) - FTB Quests$(br)$(bold)Up Arrow$() - Move Selection / Scroll Up (in the quest book) - FTB Quests$(br)$(bold)Down Arrow$() - Move Selection / Scroll Down (in the quest book) - FTB Quests$(br)$(bold)Left Arrow$() - Move Selection / Scroll Left (in the quest book) - FTB Quests$(br)$(bold)Right Arrow$() - Move Selection / Scroll Right (in the quest book) - FTB Quests$(br)$(bold)SHIFT + Tab$() - Previous Chapter (in the quest book) - FTB Quests"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)CTRL + F$() - Search (in the quest book) - FTB Quests$(br)$(bold)CTRL + P$() - Player Preferences (in the quest book) - FTB Quests"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Create",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Left Control$() - Interact Through Contraptions - Create: Cyber Goggles$(br)$(bold)Left Control$() - Scroll Clipboard Page - Create: Cyber Goggles$(br)$(bold)Left Control$() - Correction Sublevel - Create: Cyber Goggles$(br)$(bold)Left Control$() - Handle Move Sublevel - Create: Cyber Goggles$(br)$(bold)Tab$() - Interact Opposite Block Face - Create: Cyber Goggles$(br)$(bold)\\$() - Open Config - Create: Cyber Goggles$(br)$(bold)Left Shift$() - Show Stress Network Info - Create: Cyber Goggles$(br)$(bold)Left Alt$() - Stock Request Quick Select All - Create: Cyber Goggles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Left Control$() - Toggle Item To Display - Create: Cyber Goggles$(br)$(bold)Tab$() - Physics Staff Rotate Mode - Create Simulated$(br)$(bold)Left Alt$() - Fill Copycat with Material - Create: Copycats+$(br)$(bold)Left Alt$() - Focus Schematic Overlay - Create$(br)$(bold)Left Shift$() - Shift Modifier - Create$(br)$(bold)Left Control$() - Ctrl Modifier - Create$(br)$(bold)Left Alt$() - Alt Modifier - Create$(br)$(bold)R$() - Show Route Overlay Options - Create Railways Navigator$(br)$(bold)Middle Button$() - Open Stock Request Quantity Settings Screen - Create: Cyber Goggles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Left Alt$() - Access Nearby Toolboxes (hold it near a Toolbox) - Create$(br)$(bold)W$() - Ponder (hold it over an item in a menu) - Ponder"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Recipes and info",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Keypad 0$() - Open Config - Jade$(br)$(bold)Keypad 1$() - Show Overlay - Jade$(br)$(bold)Keypad 2$() - Toggle Fluid - Jade$(br)$(bold)Keypad 3$() - Show Recipes - Jade$(br)$(bold)Keypad 4$() - Show Uses - Jade$(br)$(bold)Keypad 5$() - Narrate - Jade$(br)$(bold)Left Shift$() - Show Details - Jade$(br)$(bold)A$() - Add/Remove Bookmark (over an item in a menu) - Just Enough Items$(br)$(bold)R$() - Show Recipe (over an item in a menu) - Just Enough Items$(br)$(bold)U$() - Show Uses (over an item in a menu) - Just Enough Items"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Left Control$() - Show Bookmark Details (in menus) - Just Enough Items$(br)$(bold)Up Arrow$() - Previous Search (in JEI's search bar) - Just Enough Items$(br)$(bold)Down Arrow$() - Next Search (in JEI's search bar) - Just Enough Items$(br)$(bold)Backspace$() - Previous Recipe (in a recipe screen) - Just Enough Items$(br)$(bold)Page Up$() - Previous Recipe Page (in a recipe screen) - Just Enough Items$(br)$(bold)Page Down$() - Next Recipe Page (in a recipe screen) - Just Enough Items$(br)$(bold)Left Shift$() - Pause Recipe Ingredient Cycling (in a recipe screen) - Just Enough Items"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Escape$() - Close Recipes GUI (in a recipe screen) - Just Enough Items$(br)$(bold)Left Button$() - Show Recipe (over an item in a menu) - Just Enough Items$(br)$(bold)Right Button$() - Show Uses (over an item in a menu) - Just Enough Items$(br)$(bold)Right Button$() - Clear Search Filter (in JEI's search bar) - Just Enough Items$(br)$(bold)CTRL + O$() - Show/Hide JEI Overlays (in menus) - Just Enough Items$(br)$(bold)CTRL + F$() - Select Search Bar (in menus) - Just Enough Items$(br)$(bold)SHIFT + Page Up$() - Previous Recipe Category (in a recipe screen) - Just Enough Items"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)SHIFT + Page Down$() - Next Recipe Category (in a recipe screen) - Just Enough Items$(br)$(bold)SHIFT + Left Button$() - Craft Bookmarked Recipe (One) (over an item in a menu) - Just Enough Items$(br)$(bold)CTRL + Left Button$() - Craft Bookmarked Recipe (Many) (over an item in a menu) - Just Enough Items$(br)$(bold)SHIFT + Left Button$() - Quick Move Ghost Item (over an item in a menu) - Just Enough Items"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Screen and camera",
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Escape$() - Open the ESC menu (built into Minecraft, can't be changed) - Minecraft$(br)$(bold)F1$() - Hide the HUD (built into Minecraft, can't be changed) - Minecraft$(br)$(bold)F3$() - Show the debug screen (built into Minecraft, can't be changed) - Minecraft$(br)$(bold)F2$() - Take Screenshot - Minecraft$(br)$(bold)F5$() - Toggle Perspective - Minecraft$(br)$(bold)F11$() - Toggle Fullscreen - Minecraft$(br)$(bold)R$() - Reload Shaders - Iris$(br)$(bold)K$() - Toggle Shaders - Iris$(br)$(bold)I$() - Shaderpack Selection Screen - Iris$(br)$(bold)Z$() - Zoom - Just Zoom"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Left Arrow$() - Adjust Camera Left (in the over-the-shoulder view) - Shoulder Surfing Reloaded$(br)$(bold)Right Arrow$() - Adjust Camera Right (in the over-the-shoulder view) - Shoulder Surfing Reloaded$(br)$(bold)Up Arrow$() - Adjust Camera In (in the over-the-shoulder view) - Shoulder Surfing Reloaded$(br)$(bold)Down Arrow$() - Adjust Camera Out (in the over-the-shoulder view) - Shoulder Surfing Reloaded$(br)$(bold)Page Up$() - Adjust Camera Up (in the over-the-shoulder view) - Shoulder Surfing Reloaded"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Page Down$() - Adjust Camera Down (in the over-the-shoulder view) - Shoulder Surfing Reloaded"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sorting",
+      "text": "$(bold)Sorting$() (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:$(br2)$(li)The buttons at the top right of each half sort it (plain, in columns, in rows).$(br)$(li)$(bold)Move All$() (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to see the keys that include the hotbar or move only the kinds of items the other side already has.$(br)$(li)Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The ESC menu and the HUD layout",
+      "text": "The ESC menu's buttons press some of these keys for you, so the menu works even if you rebind them. The list above marks which ones.$(br2)$(bold)Edit HUD layout$() (Controls > LemurSaucePacket) has no key by default. The ESC menu's HUD Layout button and $(#e0ac46)/hudlayout$() open the same screen."
+    }
+  ]
+}
