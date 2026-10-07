@@ -11,7 +11,7 @@
     {
       "type": "patchouli:text",
       "title": "Home",
-      "text": "The Play button, the server's status and player list, and news from the pack's admins. When a pack update is out, the Play button says so and installs it before launching."
+      "text": "The Play button, the server's status and player list, and news from the pack's admins. When a pack update is out, the Play button says so and installs it before launching. The Website and Wiki buttons under the server's details open $(l:https://play.limas.ca)play.limas.ca$(/l) and this wiki."
     },
     {
       "type": "patchouli:text",

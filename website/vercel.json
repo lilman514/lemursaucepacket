@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/wiki", "destination": "https://lilman514.github.io/lemursaucepacket/wiki/", "permanent": false },
+    { "source": "/wiki/:page", "destination": "https://lilman514.github.io/lemursaucepacket/wiki/:page.html", "permanent": false },
+    { "source": "/download", "destination": "https://github.com/lilman514/lemursaucepacket/releases/latest", "permanent": false },
+    { "source": "/github", "destination": "https://github.com/lilman514/lemursaucepacket", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+    },
+    {
+      "source": "/og.jpg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}

@@ -48,7 +48,8 @@ It piggybacks on infrastructure that already exists instead of hosting everythin
 | `gear/gear.mjs` | **The pack's own gear**: sets, perks, weapons, tools, recipes, loot. `gear/build.mjs` writes the scripts, gates, "How to get" tooltips and JEI pages, and the wiki page |
 | `capes/capes.mjs` | **The capes**: unlock rules and perks. `capes/build.mjs` writes the config the scripts read and the wiki page |
 | `publish/sources.mjs` | **Where loot-only items come from**: scans the mod jars' loot tables (run it by hand after changing mods) and writes the "Found in" JEI pages and tooltips plus `docs/where-to-find.md` |
-| `docs/` | **The wiki** (GitBook layout). `publish/docs.mjs` renders it to `site/wiki/`; GitBook can sync it straight from the repo |
+| `docs/` | **The wiki** (GitBook layout: front matter, hints, captioned pictures). `publish/docs.mjs` renders it to `site/wiki/` and `publish/patchouli.mjs` to the in-game guide; GitBook syncs it straight from the repo (`.gitbook.yaml`) |
+| `website/` | **The website**, [play.limas.ca](https://play.limas.ca): static pages on Vercel, downloads straight from GitHub. See `website/README.md` |
 | `art/` | Generated art (title screen, loading screen, logo, quest emblems, icons, gear sprites) and the script that sizes it, plus the pixel widget kit |
 | `publish/feed.json` | Server address, description, news and links shown in the launcher |
 | `publish/publish.mjs` | Builds `site/` (launcher.json + .mrpack) from `pack/` |

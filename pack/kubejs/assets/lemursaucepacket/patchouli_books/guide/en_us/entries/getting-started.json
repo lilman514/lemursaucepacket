@@ -11,7 +11,7 @@
     {
       "type": "patchouli:text",
       "title": "1. Install the launcher",
-      "text": "Download the installer from the server's $(l:https://github.com/lilman514/lemursaucepacket/releases/latest)releases page$(/l) ($(#e0ac46)LemurSaucePacket-Setup-x.y.z.exe$()) and run it. It installs for your user only - no admin rights - and puts a shortcut on the desktop and in the Start menu."
+      "text": "Download the installer from $(l:https://play.limas.ca)play.limas.ca$(/l) or the server's $(l:https://github.com/lilman514/lemursaucepacket/releases/latest)releases page$(/l) ($(#e0ac46)LemurSaucePacket-Setup-x.y.z.exe$()) and run it. It installs for your user only - no admin rights - and puts a shortcut on the desktop and in the Start menu.$(br2)If Windows says $(bold)\"Windows protected your PC\"$(), click $(italic)More info$(), then $(italic)Run anyway$(). The installer isn't code-signed yet, so SmartScreen asks first."
     },
     {
       "type": "patchouli:text",
@@ -21,7 +21,7 @@
     {
       "type": "patchouli:text",
       "title": "3. Play",
-      "text": "Press $(bold)Play$() again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server.$(br2)The server's address is $(bold)mc.limas.ca$(). The launcher puts it in your multiplayer list for you, so you never have to type it."
+      "text": "Press $(bold)Play$() again. The first time, the launcher downloads Minecraft, Java, NeoForge and every mod (a few minutes on a normal connection). After that it checks for updates in a second or two and drops you straight onto the server.$(br2)The server's address is $(bold)mc.limas.ca$(). The launcher puts it in your multiplayer list for you, so you never have to type it.$(br2)The server keeps a whitelist. Ask an admin to add your Minecraft name before your first login."
     },
     {
       "type": "patchouli:image",
@@ -38,7 +38,11 @@
     {
       "type": "patchouli:text",
       "title": "What next",
-      "text": "$(li)Press $(bold)ESC$() in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)Open the quest book (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins.$(br)$(li)You start with the $(bold)LemurSaucePacket Guide$(), this wiki as a book. ESC → Guide (or $(#e0ac46)/guide$()) opens it anywhere; a book and a brass nugget craft another.$(br)$(li)Read $(l:lemursaucepacket:world)The world and its rules$(/l) before you build anything you'd miss."
+      "text": "$(li)Press $(bold)ESC$() in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)Open the quest book (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins.$(br)$(li)You start with the $(bold)LemurSaucePacket Guide$(), this wiki as a book. ESC → Guide (or $(#e0ac46)/guide$()) opens it anywhere; a book and a brass nugget craft another.$(br)$(li)Follow the $(bold)Compass to Lemurton$() you get on your first login, and talk to Mayor Thaddeus for the first quest. See $(l:le"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "mursaucepacket:lemurton)Lemurton$(/l).$(br)$(li)Read $(l:lemursaucepacket:world)The world and its rules$(/l) before you build anything you'd miss."
     }
   ]
 }

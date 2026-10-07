@@ -1,19 +1,36 @@
 # Table of contents
 
 * [LemurSaucePacket](README.md)
+
+## Start here
+
 * [Getting started](getting-started.md)
 * [The launcher](launcher.md)
+* [FAQ and troubleshooting](faq.md)
+* [Keys](keys.md)
+
+## The world
+
 * [The world and its rules](world.md)
+* [Lemurton](lemurton.md)
 * [Waystones](waystones.md)
 * [Coins, vendors and trading](economy.md)
-* [The ESC menu](esc-menu.md)
+* [Hearts, graves and elimination](lifesteal.md)
+
+## Adventure
+
 * [Quests](quests.md)
+* [Elvarg's Lair](elvarg.md)
+* [Where to find things](where-to-find.md)
+
+## Your character
+
 * [Skills](skills.md)
 * [Enchanting](enchanting.md)
 * [Gear](gear.md)
 * [Capes](capes.md)
-* [Hearts, graves and elimination](lifesteal.md)
-* [Where to find things](where-to-find.md)
-* [Keys](keys.md)
+
+## Reference
+
+* [The ESC menu](esc-menu.md)
 * [Mods in the pack](mods.md)
-* [FAQ and troubleshooting](faq.md)

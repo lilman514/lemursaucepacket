@@ -2,7 +2,7 @@
   "name": "Waystones",
   "category": "lemursaucepacket:wiki",
   "icon": "waystones:waystone",
-  "sortnum": 3,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",

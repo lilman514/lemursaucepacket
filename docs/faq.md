@@ -1,3 +1,9 @@
+---
+description: >-
+  Fixes for the usual problems: mismatched mods, crashes, low frames, voice chat, and where things are.
+icon: circle-question
+---
+
 # FAQ and troubleshooting
 
 **"Connection Lost — channel … missing".** Your mods and the server's disagree. Close the game, press Play in the launcher again (it re-syncs the pack), and if it still happens use *Repair & play* on the launcher's Settings page.

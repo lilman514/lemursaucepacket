@@ -2,7 +2,7 @@
   "name": "The ESC menu",
   "category": "lemursaucepacket:wiki",
   "icon": "create:brass_casing",
-  "sortnum": 5,
+  "sortnum": 16,
   "pages": [
     {
       "type": "patchouli:text",
@@ -11,7 +11,7 @@
     {
       "type": "patchouli:image",
       "images": [
-        "lemursaucepacket:textures/patchouli/esc-menu.png"
+        "lemursaucepacket:textures/patchouli/esc_menu.png"
       ],
       "title": "The ESC menu",
       "border": true

@@ -1,8 +1,8 @@
 {
   "name": "Coins, vendors and trading",
   "category": "lemursaucepacket:wiki",
-  "icon": "minecraft:paper",
-  "sortnum": 4,
+  "icon": "lemursaucepacket:gold_coins",
+  "sortnum": 7,
   "pages": [
     {
       "type": "patchouli:text",
@@ -11,24 +11,36 @@
     {
       "type": "patchouli:text",
       "title": "Gold Coins",
-      "text": "$(li)However many coins you have, they're $(bold)one stack$(). The slot shows the amount compactly ($(#e0ac46)2.3k$(), $(#e0ac46)45k$(), $(#e0ac46)1.2M$()) and the tooltip shows it exactly. The number is yellow below 100k, white up to 10M and green after that, as in RuneScape. The pile on the icon grows with the amount.$(br)$(li)Coins you pick up join the stack you already carry, even when your inventory is full.$(br)$(li)$(bold)Right-click$() a coin stack in your inventory to take half. Carrying coins, right-click a slot to put one down and left-click a coin stack to merge them.$(br)$(li)$(bold)Shift + right-cli"
+      "text": "$(li)However many coins you have, they're $(bold)one stack$(). The slot shows the amount compactly ($(#e0ac46)2.3k$(), $(#e0ac46)45k$(), $(#e0ac46)1.2M$()) and the tooltip shows it exactly. The number is yellow below 100k, white up to 10M and green after that, as in RuneScape. The pile on the icon grows with the amount.$(br)$(li)Coins you pick up join the stack you already carry, even when your inventory is full.$(br)$(li)$(bold)Right-click$() a coin stack in your inventory to take half. Carrying coins, right-click a slot to put one down and left-click a coin stack to merge them."
     },
     {
       "type": "patchouli:text",
-      "text": "ck$() a coin stack to take an exact amount: type $(#e0ac46)1500$(), $(#e0ac46)1,500$(), $(#e0ac46)1.5k$() or $(#e0ac46)2m$(). That's how you put a set amount in a chest.$(br)$(li)$(#e0ac46)/purse$() says how many coins you carry. Vendors and trades count the coins in your inventory only.$(br)$(li)$(bold)Coin Pouches$() are what missions pay. Right-click one to open the whole stack: 100 coins a pouch. Keep a few unopened, because mission rerolls are paid in pouches.$(br)$(li)Coins are never owned (see $(l:lemursaucepacket:lifesteal)Hearts and graves$(/l)), so they survive an elimination wherever they're kept."
+      "text": "$(li)$(bold)Shift + right-click$() a coin stack to take an exact amount: type $(#e0ac46)1500$(), $(#e0ac46)1,500$(), $(#e0ac46)1.5k$() or $(#e0ac46)2m$(). That's how you put a set amount in a chest.$(br)$(li)$(#e0ac46)/purse$() says how many coins you carry. Vendors and trades count the coins in your inventory only.$(br)$(li)$(bold)Coin Pouches$() are what missions pay. Right-click one to open the whole stack: 100 coins a pouch. Keep a few unopened, because mission rerolls are paid in pouches.$(br)$(li)Coins are never owned (see $(l:lemursaucepacket:lifesteal)Hearts and graves$(/l)), so they survive an eliminatio"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "n wherever they're kept."
     },
     {
       "type": "patchouli:text",
       "title": "Vendors",
-      "text": "The townsfolk of Lemurton (and later other towns) have a name and a yellow $(bold)CLICK$() over their heads."
+      "text": "The townsfolk of Lemurton (and later other towns) have a name and a yellow $(bold)CLICK$() over their heads.$(br2)$(li)$(bold)Talk first.$() The first time you right-click a vendor, they greet you. Right-click again for their shop. When a quest gives them something new to say, that plays once too, on its own click. The shop never opens on the same click as a talk."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/shop.png"
+      ],
+      "title": "A vendor's shop",
+      "border": true
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Talk first.$() The first time you right-click a vendor, they greet you. Right-click again for their shop. When a quest gives them something new to say, that plays once too, on its own click. The shop never opens on the same click as a talk.$(br)$(li)$(bold)Each vendor sells their own line$(): the baker bread and pies, the smith tools and weapons, the mason building blocks, the apothecary potions, and so on. Click a good to buy one lot, shift-click for a stack. The tooltip shows the price.$(br)$(li)$(bold)Every vendor buys everything.$() With a shop open, click something in your own inventory to sell i"
+      "text": "$(li)$(bold)Each vendor sells their own line$(): the baker bread and pies, the smith tools and weapons, the mason building blocks, the apothecary potions, and so on. Click a good to buy one lot, shift-click for a stack. The tooltip shows the price.$(br)$(li)$(bold)Every vendor buys everything.$() With a shop open, click something in your own inventory to sell it, or shift-click to sell every stack like it. Its tooltip says what it fetches. A big sale, or anything enchanted, named or rare, asks for a second click first. $(#e0ac46)/worth$() tells you what the item in your hand is worth."
     },
     {
       "type": "patchouli:text",
-      "text": "t, or shift-click to sell every stack like it. Its tooltip says what it fetches. A big sale, or anything enchanted, named or rare, asks for a second click first. $(#e0ac46)/worth$() tells you what the item in your hand is worth.$(br)$(li)$(bold)Sold the wrong thing?$() The hopper slot (Buyback) sells your last few sales back for what you were paid.$(br)$(li)The bottom row also has your $(bold)purse$(), $(bold)Talk to …$() (back to their dialog), and $(bold)Quests$(): where you are in any quest line that vendor is part of. A shopkeeper doubles as a quest journal."
+      "text": "$(li)$(bold)Sold the wrong thing?$() The hopper slot (Buyback) sells your last few sales back for what you were paid.$(br)$(li)The bottom row also has your $(bold)purse$(), $(bold)Talk to …$() (back to their dialog), and $(bold)Quests$(): where you are in any quest line that vendor is part of. A shopkeeper doubles as a quest journal."
     },
     {
       "type": "patchouli:text",
@@ -38,11 +50,11 @@
     {
       "type": "patchouli:text",
       "title": "Trading with other players",
-      "text": "1. $(#e0ac46)/trade <player>$(), or sneak and right-click them with an empty hand. They get a message with a $(bold)Click to trade$() button. Asking back opens the trade window for both of you. You need to be within about 24 blocks of each other. 2. Your offer is on the left, theirs on the right. Click things in your inventory to put them up, and click them in your offer to take them back. The $(bold)gold button$() sets how many coins you offer (right-click it to take them off). Offered coins are held while the trade is open, so they can't be spent meanwhile. 3. When you're both happy, click $(bold)Accept trade$("
+      "text": "1. $(#e0ac46)/trade <player>$(), or sneak and right-click them with an empty hand. They get a message with a $(bold)Click to trade$() button. Asking back opens the trade window for both of you. You need to be within about 24 blocks of each other.$(br)2. Your offer is on the left, theirs on the right. Click things in your inventory to put them up, and click them in your offer to take them back. The $(bold)gold button$() sets how many coins you offer (right-click it to take them off). Offered coins are held while the trade is open, so they can't be spent meanwhile.$(br)3. When you're both happy, click $(bold)Accept"
     },
     {
       "type": "patchouli:text",
-      "text": "). Any change to either offer resets both acceptances and starts a 3-second deal timer, so nobody can swap something at the last second. 4. When both have accepted, everything changes hands. If either of you closes the window, leaves, dies, changes dimension or walks off, the trade is cancelled and everything goes back to its owner."
+      "text": " trade$(). Any change to either offer resets both acceptances and starts a 3-second deal timer, so nobody can swap something at the last second.$(br)4. When both have accepted, everything changes hands. If either of you closes the window, leaves, dies, changes dimension or walks off, the trade is cancelled and everything goes back to its owner."
     },
     {
       "type": "patchouli:text",

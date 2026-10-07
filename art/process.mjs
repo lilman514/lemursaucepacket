@@ -584,8 +584,71 @@ async function pauseMenu() {
   console.log('ESC menu: lemursaucepacket_pause.txt, config/lemursaucepacket/hub_layout.json')
 }
 
+/**
+ * The website (website/, play.limas.ca): key art in widths for srcset, the logo, the mascot as favicons, every
+ * emblem, hub and skill icon, the gear and cape sheets, the social preview card, and the launcher's brass kit at
+ * half size (the page draws the frame at 52px and the button at 22px, so that is still 1.5-2x for sharp screens).
+ * WebP throughout: the site is served from Vercel, and every byte there counts.
+ */
+async function website() {
+  const WEB = 'website/assets'
+  const pic = (input) => sharp(input).webp({ quality: 78, effort: 6 })
+  for (const [file, name] of [['keyart-b.png', 'hero'], ['keyart-a.png', 'keyart']]) {
+    for (const width of [800, 1280, 1920, 2560]) await pic(source(file)).resize({ width }).toFile(target(`${WEB}/art/${name}-${width}.webp`))
+  }
+  // The card chat apps and search show for a link: the key art, darkened on the left under the logo.
+  const raw = await cleanAlpha(source('logo-a.png'))
+  const wordmark = await fromRaw(raw).extract(opaqueBounds(raw)).png().toBuffer()
+  const shade = Buffer.from(
+    '<svg width="1200" height="630"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">' +
+      '<stop offset="0" stop-color="#110e0b" stop-opacity="0.92"/><stop offset="0.55" stop-color="#110e0b" stop-opacity="0.55"/><stop offset="1" stop-color="#110e0b" stop-opacity="0"/>' +
+      '</linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/></svg>'
+  )
+  await sharp(source('keyart-b.png'))
+    .resize(1200, 630, { fit: 'cover' })
+    .composite([{ input: shade }, { input: await sharp(wordmark).resize({ width: 660 }).png().toBuffer(), left: 60, top: 200 }])
+    .jpeg({ quality: 84, mozjpeg: true })
+    .toFile(target('website/og.jpg'))
+  for (const width of [720, 1200]) await sharp(wordmark).resize({ width }).webp({ quality: 90, alphaQuality: 100, effort: 6 }).toFile(target(`${WEB}/logo-${width}.webp`))
+
+  const iconCells = async (file, names, dir, size) => {
+    const sheet = await cleanAlpha(source(file))
+    const cell = sheet.info.width / 4
+    for (const [row, rowNames] of names.entries()) {
+      for (const [col, name] of rowNames.entries()) {
+        const cut = await fromRaw(sheet).extract({ left: col * cell, top: row * cell, width: cell, height: cell }).raw().toBuffer({ resolveWithObject: true })
+        const raw = { data: cut.data, info: { ...cut.info, channels: 4 } }
+        await (await squareIcon(raw, size, 0.03)).webp({ quality: 88, alphaQuality: 100, effort: 6 }).toFile(target(`${WEB}/${dir}/${name}.webp`))
+        if (name === 'mascot') {
+          for (const s of [32, 180]) await (await squareIcon(raw, s, 0.02)).png({ palette: true, quality: 92, compressionLevel: 9 }).toFile(target(`${WEB}/mascot-${s}.png`))
+        }
+      }
+    }
+  }
+  await iconCells('emblems.png', EMBLEMS, 'emblems', 160)
+  await iconCells('hub-icons.png', HUB_ICONS, 'icons', 128)
+  await iconCells('skill-icons.png', SKILL_ICONS, 'skills', 128)
+  await (await squareIcon(await cleanAlpha(source('skill-enchanting.png')), 128, 0.03)).webp({ quality: 88, alphaQuality: 100 }).toFile(target(`${WEB}/skills/enchanting.webp`))
+  for (const file of ['gear-a.png', 'gear-b.png', 'capes-a.png', 'capes-b.png']) {
+    if (existsSync(source(file))) await sharp(source(file)).resize({ width: 1024 }).webp({ quality: 82, alphaQuality: 90, effort: 6 }).toFile(target(`${WEB}/art/${file.replace('.png', '.webp')}`))
+  }
+  // The same sheets on the wiki's Gear and Capes pages (GitBook and GitHub Pages), on the wiki's dark plate.
+  for (const [file, name] of [['gear-a.png', 'gear_sets'], ['capes-a.png', 'capes_sheet']]) {
+    await sharp(source(file)).resize({ width: 1024 }).flatten({ background: '#211e1c' }).jpeg({ quality: 84, mozjpeg: true }).toFile(target(`docs/images/${name}.jpg`))
+  }
+
+  const kit = `${LAUNCHER_ASSETS}/ui`
+  for (const [name, width] of [['frame', 600], ['button', 200], ['button-hover', 200], ['plaque', 360], ['ring', 200]]) {
+    await sharp(path.join(root, kit, `${name}.png`)).resize({ width }).webp({ quality: 86, alphaQuality: 100, effort: 6 }).toFile(target(`${WEB}/ui/${name}.webp`))
+  }
+  for (const name of ['plate-plain', 'panel', 'button', 'button-hover']) {
+    writeFileSync(target(`${WEB}/pixel/${name}.png`), readFileSync(path.join(root, LAUNCHER_ASSETS, 'pixel', `${name}.png`)))
+  }
+  console.log('website: key art, og.jpg, logo, favicons, emblem/hub/skill icons, gear and cape sheets, brass kit → website/assets')
+}
+
 // `node process.mjs` runs every step; naming steps runs only those, e.g. `node process.mjs launcherKit`.
-const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes }
+const steps = { backgrounds, logo, emblems, installerArt, questPanel, icons, launcherKit, pixelKit, pauseMenu, items, armorLayers, capes, website }
 const only = process.argv.slice(2)
 for (const name of only) if (!(name in steps)) throw new Error(`Unknown step "${name}". Steps: ${Object.keys(steps).join(', ')}`)
 for (const [name, step] of Object.entries(steps)) if (!only.length || only.includes(name)) await step()

@@ -1,3 +1,8 @@
+---
+description: Every mod in the pack, generated from its mod list.
+icon: puzzle-piece
+---
+
 # Mods in the pack
 
 179 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.

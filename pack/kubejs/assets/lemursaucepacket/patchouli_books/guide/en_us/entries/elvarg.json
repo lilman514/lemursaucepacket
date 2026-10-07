@@ -1,0 +1,62 @@
+{
+  "name": "Elvarg's Lair",
+  "category": "lemursaucepacket:wiki",
+  "icon": "iceandfire:dragon_skull_fire",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Elvarg is the fire dragon at the end of $(l:lemursaucepacket:quests)Dragon Slayer I$(/l). She doesn't fly about the world: she sleeps on her hoard on the isle of Crandor, and every party that goes up to fight her gets $(bold)its own copy of her lair$(). So she's always there for whoever needs the fight, and nobody can steal your kill."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting there",
+      "text": "1. Finish the steps before it: the Anti-dragon Shield from Mayor Thaddeus, and the three pieces of the map (see $(l:lemursaucepacket:quests)Quests$(/l)).$(br)2. Oziach puts the pieces together into the $(bold)Map to Crandor$(), a compass that points to the isle: to the memorial at the foot of Elvarg's hill.$(br)3. At the memorial, $(bold)touch its waystone$(), so you can come straight back after the fight, or after a bad one."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ned and his window",
+      "text": "$(bold)Ned$(), an old sailor, stands at the memorial. Right-click him and his window opens:"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "lemursaucepacket:textures/patchouli/event_window.png"
+      ],
+      "title": "Ned's window",
+      "border": true
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Fight alone$() takes you up straight away.$(br)$(li)$(bold)Open a co-op fight$() opens a lobby that others join from the same window. You see who has joined, and press $(bold)Begin$() when you're ready. Up to four of you, host included.$(br)$(li)*$(italic)Join $()someone$(italic)'s fight$()* appears for every co-op fight that's open at the memorial."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Only the host needs to be on the quest (with the Map to Crandor, and Elvarg not yet slain): helpers can come along whatever their own progress. A lobby closes after five minutes, or when its host leaves; members can leave it, and the host can call it off."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The fight",
+      "text": "The party arrives on her hilltop, in a clearing she has burnt for herself, facing her. A health bar for Elvarg sits at the top of the screen.$(br2)$(bold)Hold the Anti-dragon Shield.$() In either hand it lets through only a fifth of her breath, and her fire won't catch on you. Without it, her breath burns through armour fast."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)She has about $(bold)327 health$() and fights in the air and on the ground: breath from a distance, bites up close.$(br)$(li)You have $(bold)20 minutes$(). When time runs out, everyone still inside is taken back where they set out from.$(br)$(li)The lair has rules of its own: you can't break or place blocks, use buckets, blow anything up, or ender-pearl or chorus out of it. Anyone who strays too far from the hilltop, or falls off, is brought back, and so is she.$(br)$(li)$(#e0ac46)/instance leave$() takes you out early."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "When she falls",
+      "text": "Everyone in the fight with the map gets $(bold)Elvarg's Head$(). You then have $(bold)a minute and a half$() to loot her body before the party is taken back to where it set out from. Bring the head to Oziach to finish the quest and earn the right to wear dragon armour."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "If she gets you",
+      "text": "$(bold)Nothing drops and nothing goes into a grave.$() Everything you were carrying (inventory, armour, Curios slots) and your lifesteal Heart go to Ned at the memorial instead. A message in chat tells you so.$(br2)Back at the memorial, speak to Ned and press $(bold)Take back your things$(): your armour goes back on, the rest into your inventory, and anything that doesn't fit stays with him until you make room. Then try again."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Good to know",
+      "text": "$(li)If you log out during a fight, you're out of it; the next time you log in you're sent back to where you set out from.$(br)$(li)A server restart ends every fight in progress the same way.$(br)$(li)The lair is a copy: the real Crandor stays as it is, and the memorial keeps wild dragons away from itself."
+    }
+  ]
+}

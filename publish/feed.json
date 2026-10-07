@@ -32,8 +32,23 @@
       }
     ]
   },
-  "links": [],
+  "links": [
+    {
+      "label": "Website",
+      "url": "https://play.limas.ca"
+    },
+    {
+      "label": "Wiki",
+      "url": "https://play.limas.ca/wiki"
+    }
+  ],
   "news": [
+    {
+      "title": "A new world, and Elvarg's Lair",
+      "date": "2026-10-07",
+      "body": "The server starts over on a fresh world. Follow the compass you get to Lemurton, a short walk from spawn. Dragon Slayer I now ends in Elvarg's Lair: speak to Ned at the Crandor memorial and fight her alone or with up to three friends; if she gets you, Ned keeps your things. The pack also has a website now, play.limas.ca, with the wiki, a gallery and every update.",
+      "url": "https://play.limas.ca"
+    },
     {
       "title": "1.1: Gear, capes and the guide",
       "date": "2026-09-29",

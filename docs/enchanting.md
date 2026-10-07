@@ -1,3 +1,9 @@
+---
+description: >-
+  Enchanting is a skill: it decides how far every enchantment can go, and Hardness tomes let pickaxes break the harder blocks.
+icon: wand-magic-sparkles
+---
+
 # Enchanting
 
 Enchanting is its own skill. The enchanting table trains it, and the skill decides how far every enchantment can go: most enchantments now reach level 10, one step at a time as your Enchanting level rises.

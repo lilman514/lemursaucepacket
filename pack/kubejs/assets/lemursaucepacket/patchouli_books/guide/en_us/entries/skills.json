@@ -2,7 +2,7 @@
   "name": "Skills",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:experience_bottle",
-  "sortnum": 7,
+  "sortnum": 12,
   "pages": [
     {
       "type": "patchouli:text",
@@ -11,7 +11,7 @@
     {
       "type": "patchouli:image",
       "images": [
-        "lemursaucepacket:textures/patchouli/skills-panel.png"
+        "lemursaucepacket:textures/patchouli/inventory.png"
       ],
       "title": "The skills panel in the inventory",
       "border": true

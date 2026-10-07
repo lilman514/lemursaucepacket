@@ -1,12 +1,20 @@
+---
+description: >-
+  Fourteen RuneScape-style skills from 1 to 99: what trains them, what they unlock, and how the XP tracker works.
+icon: chart-line
+---
+
 # Skills
 
 Thirteen RuneScape-style skills, levels 1–99, with the RuneScape XP curve (level 99 is 13,034,431 XP). Every level makes you a little stronger; some items need a level before you can use them.
 
-![The skills panel in the inventory](images/skills-panel.png)
+![The skills panel in the inventory](images/inventory.jpg)
 
 Open your inventory (**E**, or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs.
 
 XP shows up as it comes in, in a small tracker at the top of the screen, just below the block info. Each skill that just gained XP gets a card with its icon, the XP so far (it keeps counting up while you work), its level and a bar towards the next one. When a gain takes you up a level, the card turns gold and says **Level N!** for a few seconds. Cards fade out a few seconds after the last XP. Move or hide the tracker in ESC → HUD Layout ("XP gains").
+
+<figure><img src="images/xp_tracker_cards.jpg" alt="The XP tracker with cards for Smithing, Mining and Crafting"><figcaption><p>The XP tracker: a card per skill, counting up as you work</p></figcaption></figure>
 
 ## The skills
 

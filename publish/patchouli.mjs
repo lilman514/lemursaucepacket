@@ -7,7 +7,10 @@
 // Pictures:  pack/kubejs/assets/lemursaucepacket/textures/patchouli/*.png (docs/images, padded to a square)
 //
 // Markdown → Patchouli: headings start a new page (title), paragraphs and lists become text pages, tables
-// become "cell — cell" lines, images become image pages, links to other docs pages become book links.
+// become "cell — cell" lines, plain markdown images (![..](images/..)) become image pages, links to other docs
+// pages become book links. The GitBook extras stay on the web: front matter, captioned <figure> pictures and other
+// HTML blocks are left out, and a {% hint %} keeps only its text. So a picture that should also be in the book is
+// written as a plain markdown image; the rest (most screenshots) as figures, which keeps the pack small.
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -42,7 +45,9 @@ function inline(text) {
     .replace(/\*\*([^*]+)\*\*/g, '$(bold)$1$()')
     .replace(/\*([^*]+)\*/g, '$(italic)$1$()')
     .replace(/`([^`]+)`/g, '$(#e0ac46)$1$()')
-    .replace(/\[([^\]]+)\]\(([a-z0-9-]+)\.md\)/g, (_, label, page) => `$(l:${NS}:${page})${label}$(/l)`)
+    // (a link to a heading on another page goes to that page: book entries have no anchors)
+    .replace(/\[([^\]]+)\]\(([a-z0-9-]+)\.md(?:#[^)]*)?\)/g, (_, label, page) => `$(l:${NS}:${page})${label}$(/l)`)
+    .replace(/\[([^\]]+)\]\(#[^)]*\)/g, '$1')
     .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, (_, label, url) => `$(l:${url})${label}$(/l)`)
     .replace(/—/g, '-')
 }
@@ -71,10 +76,21 @@ function convert(markdown, slug) {
     buffer = []
     pageTitle = null
   }
-  const lines = markdown.split(/\r?\n/)
+  // GitBook front matter (description, icon, cover) is for the web.
+  const lines = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').split(/\r?\n/)
   let i = 0
   while (i < lines.length) {
     const line = lines[i]
+    // GitBook tags ({% hint %} ... {% endhint %}): the text between them stays, as ordinary paragraphs.
+    if (/^{%.*%}\s*$/.test(line)) {
+      i++
+      continue
+    }
+    // HTML blocks (captioned pictures, the front page's cards) are for the web too.
+    if (/^</.test(line)) {
+      while (i < lines.length && lines[i].trim() !== '') i++
+      continue
+    }
     if (/^# /.test(line)) {
       title = line.slice(2).trim()
       i++
@@ -86,9 +102,11 @@ function convert(markdown, slug) {
       i++
       continue
     }
+    // A plain markdown picture is a book page too (a captioned <figure> is for the web, see above).
     const image = /^!\[([^\]]*)\]\(images\/([^)]+)\)/.exec(line)
     if (image) {
       flush()
+      BOOK_IMAGES.add(image[2])
       pages.push({ type: 'patchouli:image', images: [`${NS}:textures/patchouli/${image[2].replace(/\.[a-z]+$/, '')}.png`], title: image[1] || undefined, border: true })
       i++
       continue
@@ -114,13 +132,23 @@ function convert(markdown, slug) {
       buffer.push(items.join('$(br)'))
       continue
     }
+    // A numbered list keeps its numbers, one step a line.
+    if (/^\d+\. /.test(line)) {
+      const items = []
+      while (i < lines.length && /^\d+\. /.test(lines[i])) {
+        items.push(inline(lines[i]))
+        i++
+      }
+      buffer.push(items.join('$(br)'))
+      continue
+    }
     if (line.trim() === '') {
       i++
       continue
     }
     // A paragraph: consecutive non-empty lines.
     const para = []
-    while (i < lines.length && lines[i].trim() !== '' && !/^(#|!\[|\||[-*] )/.test(lines[i])) {
+    while (i < lines.length && lines[i].trim() !== '' && !/^(#|!\[|\||[-*] |\d+\. |<|{%)/.test(lines[i])) {
       para.push(lines[i].trim())
       i++
     }
@@ -130,11 +158,19 @@ function convert(markdown, slug) {
   return { title, pages }
 }
 
+/** The docs pictures the book's pages show (docs/images/<file>); only these become book textures. */
+const BOOK_IMAGES = new Set()
+
 async function images() {
   mkdirSync(imageDir, { recursive: true })
   const source = path.join(docsDir, 'images')
+  // Pictures the book no longer shows leave the pack (only where sharp can make the rest again).
+  if (sharp != null) {
+    const wanted = new Set([...BOOK_IMAGES].map((f) => f.replace(/\.[a-z]+$/, '.png')))
+    for (const old of readdirSync(imageDir)) if (!wanted.has(old)) rmSync(path.join(imageDir, old))
+  }
   let count = 0
-  for (const file of readdirSync(source)) {
+  for (const file of BOOK_IMAGES) {
     const target = path.join(imageDir, file.replace(/\.[a-z]+$/, '.png'))
     if (sharp == null) {
       if (!existsSync(target)) throw new Error(`guide book: ${target} is missing and sharp is not installed to make it (npm install in art/)`)
@@ -170,7 +206,7 @@ write(path.join(dataDir, 'book.json'), {
 })
 write(path.join(assetDir, 'categories', 'wiki.json'), { name: 'The wiki', description: 'The pages of the LemurSaucePacket wiki, in order.', icon: 'minecraft:writable_book', sortnum: 0 })
 
-const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', keys: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
+const icons = { 'getting-started': 'minecraft:oak_door', launcher: 'minecraft:compass', world: 'minecraft:grass_block', lemurton: 'minecraft:bell', elvarg: 'iceandfire:dragon_skull_fire', economy: 'lemursaucepacket:gold_coins', lifesteal: 'minecraft:red_dye', enchanting: 'minecraft:enchanting_table', 'where-to-find': 'minecraft:spyglass', waystones: 'waystones:waystone', 'esc-menu': 'create:brass_casing', quests: 'ftbquests:book', skills: 'minecraft:experience_bottle', gear: 'lemursaucepacket:brass_sabre', capes: 'minecraft:white_banner', keys: 'minecraft:tripwire_hook', mods: 'minecraft:chest', faq: 'minecraft:lantern' }
 let pageCount = 0
 for (const [index, page] of pagesInOrder.entries()) {
   const slug = page.file.replace(/\.md$/, '')

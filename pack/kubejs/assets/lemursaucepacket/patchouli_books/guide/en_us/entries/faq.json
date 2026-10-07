@@ -2,7 +2,7 @@
   "name": "FAQ and troubleshooting",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:lantern",
-  "sortnum": 15,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",

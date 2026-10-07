@@ -1,8 +1,14 @@
+---
+description: >-
+  A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+icon: bars
+---
+
 # The ESC menu
 
 Pressing ESC opens a riveted board with three panels.
 
-![The ESC menu](images/esc-menu.png)
+![The ESC menu](images/esc_menu.jpg)
 
 ## Adventure (left)
 
@@ -15,6 +21,10 @@ Pressing ESC opens a riveted board with three panels.
 | Capes | Your wardrobe: the [capes](capes.md) you've earned | `/capes` |
 
 Between the buttons: your coordinates, the time and the biome you're in.
+
+<figure><img src="images/missions.jpg" alt="The Brassworks Missions screen with a mission selected"><figcaption><p>This week's missions (Missions, or H)</p></figcaption></figure>
+
+<figure><img src="images/world_map.jpg" alt="Xaero's world map"><figcaption><p>The world map (Map, or M)</p></figcaption></figure>
 
 ## Game menu (middle)
 

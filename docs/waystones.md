@@ -1,3 +1,9 @@
+---
+description: >-
+  Standing stones you warp between: where to find them, how to take one home, and how to build your own.
+icon: location-dot
+---
+
 # Waystones
 
 Waystones are standing stones you can warp between. Right-click one to activate it. From then on you can warp to it from any other waystone, or with a warp stone or a scroll.
@@ -9,6 +15,8 @@ Waystones are standing stones you can warp between. Right-click one to activate 
 - **The wild.** Now and then one stands alone, a few hundred blocks from the next at the closest. Its look follows the biome: sandy in deserts, mossy in jungles and swamps, blackstone in the Nether and on volcanoes, end stone in the End.
 
 Waystones you've activated show on your minimap and world map, with their names. So do global waystones and sharestones. Ones you haven't found yet don't.
+
+<figure><img src="images/waystone_menu.jpg" alt="The waystone menu listing destinations"><figcaption><p>Right-click an activated waystone to pick where to go. Lemurton's is global: everyone has it from the start.</p></figcaption></figure>
 
 ## Taking one home
 

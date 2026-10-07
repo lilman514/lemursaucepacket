@@ -1,8 +1,16 @@
+---
+description: >-
+  The quest book is a road map, not a gate: thirty-three chapters, and RuneScape-style main quests up to Dragon Slayer I.
+icon: scroll
+cover: images/quest_book_landfall.jpg
+coverY: 0
+---
+
 # Quests
 
 The quest book (ESC → Quests) is a road map, not a gate: nothing is locked behind it except dragon armour, which waits on Dragon Slayer I as the rune platebody does in RuneScape. Every quest pays XP, coins and a roll on a reward crate, and the crate gets better as the quests get harder. Finish a chapter and its last quest hands out a prize worth the trip.
 
-![The quest book](images/quest-book.png)
+![The quest book](images/quest_book_landfall.jpg)
 
 **Ctrl + mouse wheel** zooms the quest map. Drag to pan. Click a quest to read it and to claim its rewards once it is done.
 
@@ -12,7 +20,9 @@ Thirty-three chapters. The Ages are the main road through Create; the Main Quest
 
 ## Main quests
 
-RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under **Main Quests**) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so.
+RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under **Main Quests**) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so. [Lemurton](lemurton.md) lists who is where.
+
+<figure><img src="images/quest_book_welcome.jpg" alt="The Welcome to Lemurton chapter in the quest book"><figcaption><p>Welcome to Lemurton, the first questline</p></figcaption></figure>
 
 | Quest | Given by | What it takes | Rewards |
 |---|---|---|---|
@@ -25,12 +35,16 @@ RuneScape style: Lemurton's people have troubles of their own, and a quest only 
 1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath, and her fire won't catch on you.
 2. Find the three pieces of the map: **Lucan the Jeweller** sells one for 10,000 coins, **Wizard Traiborn** (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the **Champions' Guild** gives the third for its trial (20 zombies and 10 skeletons).
 3. Oziach puts them together: the **Map to Crandor** is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the memorial at the foot of Elvarg's hill.
+<figure><img src="images/memorial_front.jpg" alt="The Crandor memorial with the dragon skull on its dais"><figcaption><p>The Crandor memorial</p></figcaption></figure>
+
 4. At the **Crandor memorial**, speak to **Ned**. His window takes you up to **Elvarg**, a fire dragon in her prime, in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back.
 5. Bring **Elvarg's Head** to Oziach.
 
 If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press *Take back your things*. Touch the memorial's waystone on your way up, so you can come straight back.
 
 Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.
+
+The fight itself, step by step: [Elvarg's Lair](elvarg.md).
 
 **The Ages** — one chapter per stage of progress:
 

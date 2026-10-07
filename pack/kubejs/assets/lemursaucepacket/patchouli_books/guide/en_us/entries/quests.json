@@ -2,7 +2,7 @@
   "name": "Quests",
   "category": "lemursaucepacket:wiki",
   "icon": "ftbquests:book",
-  "sortnum": 6,
+  "sortnum": 9,
   "pages": [
     {
       "type": "patchouli:text",
@@ -11,7 +11,7 @@
     {
       "type": "patchouli:image",
       "images": [
-        "lemursaucepacket:textures/patchouli/quest-book.png"
+        "lemursaucepacket:textures/patchouli/quest_book_landfall.png"
       ],
       "title": "The quest book",
       "border": true
@@ -28,7 +28,7 @@
     {
       "type": "patchouli:text",
       "title": "Main quests",
-      "text": "RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under $(bold)Main Quests$()) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so."
+      "text": "RuneScape style: Lemurton's people have troubles of their own, and a quest only appears in your book (under $(bold)Main Quests$()) once someone has given it to you. Its steps then show up one at a time as you go, and the rewards hand themselves over. Right-click everyone; the ones with a quest say so. $(l:lemursaucepacket:lemurton)Lemurton$(/l) lists who is where."
     },
     {
       "type": "patchouli:text",
@@ -40,15 +40,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "1. Get an $(bold)Anti-dragon Shield$() from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath, and her fire won't catch on you. 2. Find the three pieces of the map: $(bold)Lucan the Jeweller$() sells one for 10,000 coins, $(bold)Wizard Traiborn$() (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the $(bold)Champions' Guild$() gives the third for its trial (20 zombies and 10 skeletons). 3. Oziach puts them together: the $(bold)Map to Crandor$() is a compass that points to the isle (the nearest fire dragon roost to Lemurton), to the "
+      "text": "1. Get an $(bold)Anti-dragon Shield$() from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath, and her fire won't catch on you.$(br)2. Find the three pieces of the map: $(bold)Lucan the Jeweller$() sells one for 10,000 coins, $(bold)Wizard Traiborn$() (in his tower by the wall) trades one for a ghast tear, a blaze rod and an amethyst shard, and the $(bold)Champions' Guild$() gives the third for its trial (20 zombies and 10 skeletons).$(br)3. Oziach puts them together: the $(bold)Map to Crandor$() is a compass that points to the isle (the nearest fire dragon roost to Lemurton),"
     },
     {
       "type": "patchouli:text",
-      "text": "memorial at the foot of Elvarg's hill. 4. At the $(bold)Crandor memorial$(), speak to $(bold)Ned$(). His window takes you up to $(bold)Elvarg$(), a fire dragon in her prime, in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back. 5. Bring $(bold)Elvarg's Head$() to Oziach."
+      "text": " to the memorial at the foot of Elvarg's hill.$(br2)4. At the $(bold)Crandor memorial$(), speak to $(bold)Ned$(). His window takes you up to $(bold)Elvarg$(), a fire dragon in her prime, in a den of your own, so she's always there for whoever needs the fight. Fight her alone, or open a co-op fight that friends join from the same window, up to four of you (helpers don't need the quest). Everyone with the map in the fight gets her head when she falls, and there's a minute and a half to loot her before you're taken back.$(br)5. Bring $(bold)Elvarg's Head$() to Oziach."
     },
     {
       "type": "patchouli:text",
-      "text": "If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press $(italic)Take back your things$(). Touch the memorial's waystone on your way up, so you can come straight back.$(br2)Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.$(br2)$(bold)The Ages$() - one chapter per stage of progress:"
+      "text": "If Elvarg gets you, nothing drops and nothing goes into a grave: Ned keeps everything you had (and your lifesteal Heart) at the memorial. Speak to him and press $(italic)Take back your things$(). Touch the memorial's waystone on your way up, so you can come straight back.$(br2)Until then, dragonscale and dragonsteel armour can't be worn: it comes straight off again.$(br2)The fight itself, step by step: $(l:lemursaucepacket:elvarg)Elvarg's Lair$(/l).$(br2)$(bold)The Ages$() - one chapter per stage of progress:"
     },
     {
       "type": "patchouli:text",

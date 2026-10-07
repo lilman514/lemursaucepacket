@@ -1,8 +1,8 @@
 {
   "name": "Hearts, graves and elimination",
   "category": "lemursaucepacket:wiki",
-  "icon": "minecraft:paper",
-  "sortnum": 11,
+  "icon": "minecraft:red_dye",
+  "sortnum": 8,
   "pages": [
     {
       "type": "patchouli:text",
@@ -29,7 +29,7 @@
     {
       "type": "patchouli:text",
       "title": "The Heart item",
-      "text": "Right-click a Heart to use it: +1 heart, up to the limit above. The item is used up. A Heart says who it came from.$(br2)Every Heart carries a serial number. A serial can only be used once, so a duplicated Heart is worthless: the copy crumbles when you try to use it.$(br2)Hearts are never anyone's property (see [What is yours](#what-is-yours)), so a Heart you took stays yours even if its previous owner is eliminated."
+      "text": "Right-click a Heart to use it: +1 heart, up to the limit above. The item is used up. A Heart says who it came from.$(br2)Every Heart carries a serial number. A serial can only be used once, so a duplicated Heart is worthless: the copy crumbles when you try to use it.$(br2)Hearts are never anyone's property (see What is yours), so a Heart you took stays yours even if its previous owner is eliminated."
     },
     {
       "type": "patchouli:text",
@@ -43,7 +43,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "1. Deploy a $(bold)Compacted Diamond$() (4 diamonds, pressed). 2. Deploy a $(bold)Nether Star$() (kill the Wither). 3. Fill with $(bold)1,000 mB of Liquid Experience$() (Create Enchantment Industry). 4. Deploy a $(bold)Totem of Undying$() (raids). 5. Press.$(br2)The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart."
+      "text": "1. Deploy a $(bold)Compacted Diamond$() (4 diamonds, pressed).$(br)2. Deploy a $(bold)Nether Star$() (kill the Wither).$(br)3. Fill with $(bold)1,000 mB of Liquid Experience$() (Create Enchantment Industry).$(br)4. Deploy a $(bold)Totem of Undying$() (raids).$(br)5. Press.$(br2)The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart."
     },
     {
       "type": "patchouli:text",

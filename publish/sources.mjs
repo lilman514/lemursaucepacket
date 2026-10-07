@@ -767,6 +767,7 @@ for (const e of entries) {
   byMod.get(name).push(e)
 }
 const md = []
+md.push('---', 'description: >-', "  What you can't craft: relics and the other modded items that only come from chests, mobs, fishing or brushing.", 'icon: map', '---', '')
 md.push('# Where to find things')
 md.push('')
 md.push("JEI shows every recipe; this page (and the JEI info tab, the `i` button on an item) covers what you can't craft: the modded items that only turn up in structure chests, as mob drops, from fishing or from brushing suspicious sand. Vanilla items are left out, and so are plain block drops. Generated from the pack's mod jars by `publish/sources.mjs`, so it matches the installed versions.")

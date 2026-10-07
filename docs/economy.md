@@ -1,3 +1,11 @@
+---
+description: >-
+  One currency, Gold Coins: vendors who buy anything and sell their own goods, and trading between players.
+icon: coins
+cover: images/shop.jpg
+coverY: 0
+---
+
 # Coins, vendors and trading
 
 The server has one currency: **Gold Coins**. Quests pay them, missions pay Coin Pouches that open into them, and vendors in the towns pay them for anything you bring. You spend them at the vendors and on other players.
@@ -7,6 +15,8 @@ The server has one currency: **Gold Coins**. Quests pay them, missions pay Coin 
 - However many coins you have, they're **one stack**. The slot shows the amount compactly (`2.3k`, `45k`, `1.2M`) and the tooltip shows it exactly. The number is yellow below 100k, white up to 10M and green after that, as in RuneScape. The pile on the icon grows with the amount.
 - Coins you pick up join the stack you already carry, even when your inventory is full.
 - **Right-click** a coin stack in your inventory to take half. Carrying coins, right-click a slot to put one down and left-click a coin stack to merge them.
+<figure><img src="images/coins_tooltip.jpg" alt="A Gold Coins stack with its tooltip showing the exact amount"><figcaption><p>However many you have, coins are one stack</p></figcaption></figure>
+
 - **Shift + right-click** a coin stack to take an exact amount: type `1500`, `1,500`, `1.5k` or `2m`. That's how you put a set amount in a chest.
 - `/purse` says how many coins you carry. Vendors and trades count the coins in your inventory only.
 - **Coin Pouches** are what missions pay. Right-click one to open the whole stack: 100 coins a pouch. Keep a few unopened, because mission rerolls are paid in pouches.
@@ -17,8 +27,12 @@ The server has one currency: **Gold Coins**. Quests pay them, missions pay Coin 
 The townsfolk of Lemurton (and later other towns) have a name and a yellow **CLICK** over their heads.
 
 - **Talk first.** The first time you right-click a vendor, they greet you. Right-click again for their shop. When a quest gives them something new to say, that plays once too, on its own click. The shop never opens on the same click as a talk.
+![A vendor's shop](images/shop.jpg)
+
 - **Each vendor sells their own line**: the baker bread and pies, the smith tools and weapons, the mason building blocks, the apothecary potions, and so on. Click a good to buy one lot, shift-click for a stack. The tooltip shows the price.
 - **Every vendor buys everything.** With a shop open, click something in your own inventory to sell it, or shift-click to sell every stack like it. Its tooltip says what it fetches. A big sale, or anything enchanted, named or rare, asks for a second click first. `/worth` tells you what the item in your hand is worth.
+<figure><img src="images/shop_smith.jpg" alt="Brann the Smith's shop with a sword's price in its tooltip"><figcaption><p>Hover a good for its price; click to buy</p></figcaption></figure>
+
 - **Sold the wrong thing?** The hopper slot (Buyback) sells your last few sales back for what you were paid.
 - The bottom row also has your **purse**, **Talk to …** (back to their dialog), and **Quests**: where you are in any quest line that vendor is part of. A shopkeeper doubles as a quest journal.
 

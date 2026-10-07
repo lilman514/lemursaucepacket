@@ -1,0 +1,5 @@
+README.md
+tools
+*.src.png
+.env*
+.gitignore

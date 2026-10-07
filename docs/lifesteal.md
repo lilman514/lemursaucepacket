@@ -1,3 +1,9 @@
+---
+description: >-
+  Every player has a stock of hearts: a death costs one, anyone can pick it up, and running out means elimination.
+icon: heart
+---
+
 # Hearts, graves and elimination
 
 Every player has a stock of hearts. Dying costs one and drops it on the ground as an item. Anyone can pick it up and use it, including the person who killed you. Run out and you are eliminated: everything you ever placed and everything you own is erased. Graves are not free either: each one costs a Grave Essence.

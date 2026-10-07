@@ -1,0 +1,63 @@
+{
+  "name": "Lemurton",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:bell",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Lemurton$() is the realm's first city, built in the style of RuneScape's Varrock and Lumbridge. The server raises it the first time a new world starts, from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Finding it",
+      "text": "You don't wake up in the city: it stands a few minutes' walk from spawn (400 to 700 blocks), out of sight on purpose. Your first login hands you a $(bold)Compass to Lemurton$(), and a line in chat says how far it is and which way. Finding the city is the first quest.$(br2)Once you've been there, touch the $(bold)Lemurton waystone$() in the market square. It's a global waystone, so it's on everyone's list from the start, and from any other waystone (or with a warp stone or scroll) you can warp back. See $(l:lemursaucepacket:waystones)Waystones$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your first quest",
+      "text": "$(bold)Mayor Thaddeus$(), at the south edge of the market, gives the first quest, $(italic)Welcome to Lemurton$() (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market, then report back. The rewards hand themselves over as you go, and Bessa's shop shows where you are in it. The main quests start with Lemurton's people too: the Cook, Sir Vyvin's squire and the Champions' Guild, leading to Dragon Slayer I. See $(l:lemursaucepacket:quests)Quests$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The city",
+      "text": "$(li)$(bold)The market square$(), round a great tree in the middle of the city, with the waystone and the market stalls.$(br)$(li)$(bold)The cathedral$() to the north of the market, a church to the south-east, and a fountain square to the south.$(br)$(li)$(bold)Shops and houses$() along the ring streets, with cottages, farms, stables and wizard towers out towards the walls.$(br)$(li)$(bold)The walls:$() a curtain wall with round towers, some crenellated and some under conical roofs, a walkway you can climb up to and walk all the way round, and four gatehouses with guards."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "A safe zone",
+      "text": "Inside the walls nobody can break or place blocks, pour lava or water, or start fires. Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed). Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. Outside the walls the usual rules apply: PvP is on and nothing is claimed."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Who's who",
+      "text": "Everyone in Lemurton has their name over their head and a yellow $(bold)CLICK$() under it. Right-click to talk; for a vendor, right-click again for the shop. The townsfolk can't be hurt or pushed around."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Who - Where - What they do$()$(br)$(bold)Mayor Thaddeus$() - The south edge of the market - Gives the first quest, $(italic)Welcome to Lemurton$(), and the Anti-dragon Shield for Dragon Slayer I$(br)$(bold)Old Wren$() - Market stall - Fruit and vegetables$(br)$(bold)Bessa the Baker$() - Market stall - Bread, cake and pies; buying from her is a step of $(italic)Welcome to Lemurton$()$(br)$(bold)Imran the Gem Trader$() - Market stall - Gems and crystals$(br)$(bold)Saffi the Spice Merchant$() - Market stall - Seeds from the far south (Farmer's Delight crops), sugar and cocoa$(br)$(bold)Gil the Fishmonger$("
+    },
+    {
+      "type": "patchouli:text",
+      "text": ") - Market stall - Fish, cooked or raw$(br)$(bold)Maud the Weaver$() - Market stall - Wool in every colour, and string$(br)$(bold)Posy the Flower Seller$() - Market stall - Flowers and saplings$(br)$(bold)Ragnar the Butcher$() - Market stall - Meat$(br)$(bold)Brann the Smith$() - The smithy - Tools and weapons; forges the sword in $(italic)The Knight's Sword$()$(br)$(bold)Odo the Tailor$() - The tannery - Leather armour and saddles$(br)$(bold)Sister Agnes$() - The apothecary - Potions and brewing supplies$(br)$(bold)Hamish of the Docks$() - The fishing shop - Rods, line and bait$(br)$(bold)Gerta the Mason$() - Th"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "e builder's merchant - Stone, brick and timber by the stack$(br)$(bold)Lucan the Jeweller$() - The jeweller's - Gold and gems; sells a piece of the map to Crandor$(br)$(bold)Pip the Shopkeeper$() - The general store - A bit of everything$(br)$(bold)Cook$() - The butcher's shop on the ring street - $(italic)Cook's Assistant$()$(br)$(bold)Squire Asrol$() - The armourer's - $(italic)The Knight's Sword$()$(br)$(bold)Guildmaster Greaves$() - The Champions' Guild - Starts $(italic)Dragon Slayer I$() and runs the guild's trial$(br)$(bold)Oziach$() - The armoury on the ring street - Tells you how to reach Elvarg, and tak"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "es her head$(br)$(bold)Wizard Traiborn$() - His tower by the wall - Trades a piece of the map for a ghast tear, a blaze rod and an amethyst shard$(br)$(bold)City Guards$() - The four gatehouses - Keep the peace$(br)$(bold)Townsfolk$() - About the streets - Gossip$(br2)Every vendor buys anything you bring, whatever they sell themselves. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l) for how prices work, and $(l:lemursaucepacket:quests)Quests$(/l) for the questlines."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "By night",
+      "text": "Lanterns light the streets and the market after dark."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Other towns",
+      "text": "The world has more cities. Luki's Grand Capitals turns villages into $(bold)grand capitals$() in five styles (plains, desert, savanna, snowy and taiga), at least 1,100 blocks apart, so two of the same kind are never near each other. There are smaller villages too (Towns and Towers). Every town has a name of its own, which shows on screen as you walk in, and the names suit the land: a plains town might be Ashford or Kingsbury, a snowy one Frostheim, a desert one Al Kharzan. No two towns share a name.$(br2)A world that existed before the city came to the pack doesn't get one."
+    }
+  ]
+}

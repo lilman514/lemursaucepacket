@@ -2,7 +2,7 @@
   "name": "The world and its rules",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:grass_block",
-  "sortnum": 2,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
@@ -16,41 +16,16 @@
     {
       "type": "patchouli:text",
       "title": "Lemurton, the capital",
-      "text": "$(bold)Lemurton$() is a walled city in the style of RuneScape's Varrock and Lumbridge, built by the server the first time a new world starts. It isn't where you wake up: it stands a few minutes' walk away (400 to 700 blocks from spawn, out of sight), and your first login hands you a $(bold)Compass to Lemurton$(), with a line in chat saying how far and which way. Finding it is the first quest. It has:"
+      "text": "$(bold)Lemurton$() is a walled city in the style of RuneScape's Varrock and Lumbridge, built by the server the first time a new world starts. It isn't where you wake up: it stands a few minutes' walk away (400 to 700 blocks from spawn, out of sight), and your first login hands you a $(bold)Compass to Lemurton$(), with a line in chat saying how far and which way. Finding it is the first quest."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)a market square round a great tree, with the $(bold)Lemurton waystone$() (visible to everyone from the start);$(br)$(li)a cathedral, a church and a fountain square;$(br)$(li)shops and houses on the ring streets, and cottages, farms, stables and wizard towers by the walls;$(br)$(li)a curtain wall with round towers (some crenellated, some under conical roofs) and a walkway you can climb up to and walk round, and four gatehouses with guards;$(br)$(li)its people: Mayor Thaddeus at the south edge of the market, a trader at every market stall, a keeper in every shop, and townsfolk about the streets."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "The buildings are from $(l:https://modrinth.com/mod/lukis-grand-capitals)Luki's Grand Capitals$(/l) by Luki, which is in the pack."
+      "text": "Inside the walls are the market square with the $(bold)Lemurton waystone$(), a cathedral, shops on the ring streets, guards at four gatehouses, and more than thirty townsfolk who trade, talk and hand out quests. It's a $(bold)safe zone$(): nobody can build, break or fight there, and no monsters spawn. $(l:lemursaucepacket:lemurton)Lemurton$(/l) has the whole city: its streets, its people and where to find them."
     },
     {
       "type": "patchouli:text",
       "title": "Other towns",
-      "text": "The world has more cities: Luki's Grand Capitals turns its villages into $(bold)grand capitals$() in five styles (plains, desert, savanna, snowy and taiga), at least 1,100 blocks apart, so two of the same kind are never near each other. There are smaller villages too (Towns and Towers). Every town has a name of its own, which shows on screen as you walk in (Lemurton's too), and the names suit the land: a plains town might be Ashford or Kingsbury, a snowy one Frostheim, a desert one Al Kharzan. No two towns share a name."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "World spawn is never inside a town: if a new world would start you in one, the server moves spawn to clear land nearby."
-    },
-    {
-      "type": "patchouli:text",
-      "title": "Townsfolk, trade and quests",
-      "text": "Right-click anyone in Lemurton to talk to them: every townsperson has their name over their head, with a yellow $(bold)CLICK$() under it."
-    },
-    {
-      "type": "patchouli:text",
-      "text": "$(li)$(bold)Market traders and shopkeepers$() sell their own goods for Gold Coins, and every one of them buys anything you bring. The first right-click is their greeting; right-click again for the shop. The market has fruit and vegetables, bread and pies, gems, fish, seeds and spices, flowers and saplings, wool and meat. The shops on the ring streets have tools and weapons, leather armour and saddles, building blocks, fishing gear, potions and brewing supplies, gold and trinkets, and a general store. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Mayor Thaddeus$() gives the firs"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "t quest, $(italic)Welcome to Lemurton$() (the first chapter in the quest book): ask him for work, buy something from Bessa the Baker at the market, then report back. The rewards hand themselves over as you go, and Bessa's shop shows where you are in it.$(br)$(li)$(bold)The main quests$() start with Lemurton's people too: the Cook, Sir Vyvin's squire and the Champions' Guild, leading to Dragon Slayer I. They appear in your book only once you've been given them; see [Quests](quests.md#main-quests).$(br)$(li)The townsfolk can't be hurt or pushed around.$(br2)Lemurton is a $(bold)safe zone$():"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "$(li)Nobody can break or place blocks there, pour lava or water, or start fires.$(br)$(li)Players can't hurt each other, and hostile mobs don't spawn (any that wander in are removed).$(br)$(li)Doors, chests, waystones, shops and the townsfolk all work as usual.$(br2)Admins build there in creative mode. A world that existed before the city came to the pack doesn't get one."
+      "text": "The world has more cities: Luki's Grand Capitals turns its villages into $(bold)grand capitals$() in five styles (plains, desert, savanna, snowy and taiga), at least 1,100 blocks apart. There are smaller villages too (Towns and Towers). Every town has a name of its own, which shows on screen as you walk in. World spawn is never inside a town: if a new world would start you in one, the server moves spawn to clear land nearby."
     },
     {
       "type": "patchouli:text",

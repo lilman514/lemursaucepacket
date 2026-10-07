@@ -1,3 +1,9 @@
+---
+description: >-
+  The default keys, chosen so that nothing clashes, and how sorting works.
+icon: keyboard
+---
+
 # Keys
 
 The pack sets these defaults so nothing clashes. Change any of them in Settings → Controls.

@@ -2,7 +2,7 @@
   "name": "Keys",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:tripwire_hook",
-  "sortnum": 13,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",

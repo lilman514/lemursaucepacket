@@ -1,10 +1,20 @@
+---
+description: >-
+  The pack's own Create-made tools, weapons and armour sets: stats, set bonuses, skill levels and how to get each piece.
+icon: shield-halved
+---
+
 # Gear
+
+<figure><img src="images/gear_tooltip.jpg" alt="The Brass Sabre's tooltip: rarity, stats and the Attack level it needs"><figcaption><p>Every piece shows its rarity, stats and the skill level it needs</p></figcaption></figure>
 
 The pack's own tools, weapons and armour, made with Create and gated by [skills](skills.md). Every piece shows its stats and a "How to get" line in its tooltip, and JEI has the same "how to get" text on the item's information page (the `i` tab next to its recipes; press R on any item).
 
 Stats: **Damage**, **Attack Speed**, **Crit Chance** (added to the Strength/Ranged crit roll), **Crit Damage** (added to the 1.5× critical multiplier), **Defense**, **Toughness**, **Health**, **Speed**, **Luck**. Perks are named effects a piece has on its own; a **full set** bonus needs all four pieces; a **synergy** is a Relics item that makes a full set stronger.
 
 ## Armour sets
+
+<figure><img src="images/gear_sets.jpg" alt="Pixel art of four armour sets: Prospector, Aeronaut, Brass Duelist and Compacted Diamond"><figcaption><p>Prospector, Aeronaut, Brass Duelist and Compacted Diamond</p></figcaption></figure>
 
 ### Prospector's Set
 
