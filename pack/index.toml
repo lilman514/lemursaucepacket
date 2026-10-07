@@ -350,7 +350,7 @@ hash = "10b0af2fb4c92dbf9ef6d79c107b82aa34840cc0df37e1d8a09a3d2a78d10c65"
 
 [[files]]
 file = "config/pmmo-client.toml"
-hash = "d039a30fc523ca41d3dcf7459cc3c842328b4de3353a714c619d650bcbb67ce0"
+hash = "fb515ac13af274ab84521ed08b8a972dc45220f9298c53d88e7f52f49279d4cc"
 
 [[files]]
 file = "config/shouldersurfing-client.toml"
@@ -694,7 +694,7 @@ hash = "4cb0b08a346e348aeb87bb82133e7fb8c71cd2987e43a2661fcf147eaff3b6d1"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/skills.json"
-hash = "333a69644dee3f7807d0f8f8c0118949f9963156f2c44cf9c76d3aeb0b8c40c4"
+hash = "96cb84ea2ba5d522186301420ae6d7c0e6d39ed6afc60831ce4fd3cb3ba20afc"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/waystones.json"
@@ -3532,8 +3532,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.7.1.jar"
-hash = "12bf4879602f423776fc7010186c2db5556d0c30d314a40d7647422c5cfddfa9"
+file = "mods/lsp_fixes-1.7.2.jar"
+hash = "314353a1f72811e79282364a2413d0a1a63249e422d9c99796cfa603c04fcfed"
 
 [[files]]
 file = "mods/lukis-grand-capitals.pw.toml"

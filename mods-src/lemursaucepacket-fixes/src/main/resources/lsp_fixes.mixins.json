@@ -17,6 +17,8 @@
   ],
   "client": [
     "pmmo.SkillHudMixin",
+    "pmmo.GainHudMixin",
+    "pmmo.GainEntryAccessor",
     "pmmo.DetailScrollMixin",
     "pmmo.SkillsSidePanelMixin"
   ],

@@ -6,6 +6,8 @@ Thirteen RuneScape-style skills, levels 1–99, with the RuneScape XP curve (lev
 
 Open your inventory (**E**, or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs.
 
+XP shows up as it comes in, in a small tracker at the top of the screen, just below the block info. Each skill that just gained XP gets a card with its icon, the XP so far (it keeps counting up while you work), its level and a bar towards the next one. When a gain takes you up a level, the card turns gold and says **Level N!** for a few seconds. Cards fade out a few seconds after the last XP. Move or hide the tracker in ESC → HUD Layout ("XP gains").
+
 ## The skills
 
 | Group | Skill | Trained by | Each level gives |

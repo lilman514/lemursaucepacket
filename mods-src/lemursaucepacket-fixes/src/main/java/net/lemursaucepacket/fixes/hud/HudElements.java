@@ -571,7 +571,7 @@ public final class HudElements {
 
         private Box boxFor(double x, double y, int sw, int sh) {
             if (skills) return net.lemursaucepacket.fixes.pmmo.SkillHud.box(x, y, sw, sh);
-            return new Box((int) (sw * x), (int) (sh * y), skills ? 110 : 100, skills ? 3 + 14 * 9 : 3 + 5 * 9);
+            return net.lemursaucepacket.fixes.pmmo.GainHud.editorBox(x, y, sw, sh);
         }
 
         @Override
@@ -586,13 +586,27 @@ public final class HudElements {
 
         @Override
         public Box defaultBox(int sw, int sh) {
-            return boxFor(def(xValue), def(yValue), sw, sh);
+            return boxFor(defaultX(), defaultY(), sw, sh);
+        }
+
+        /**
+         * Project MMO's own defaults, except for the XP gains (kept by their top centre): the middle, just below Jade's
+         * panel and the boss bar, as the pack ships them in pmmo-client.toml.
+         */
+        private double defaultX() {
+            return skills ? def(xValue) : 0.5;
+        }
+
+        private double defaultY() {
+            return skills ? def(yValue) : 0.14;
         }
 
         @Override
         public void save(Box b, int sw, int sh) {
-            // (int)(size * fraction) must give back the same pixel, hence the half pixel.
-            double x = Math.max(0, Math.min(1, round4((b.x() + 0.5) / sw)));
+            // (int)(size * fraction) must give back the same pixel, hence the half pixel. The XP gains keep their
+            // top centre (GainHud), the skill list its top-left corner.
+            int anchor = skills ? b.x() : b.x() + b.w() / 2;
+            double x = Math.max(0, Math.min(1, round4((anchor + 0.5) / sw)));
             double y = Math.max(0, Math.min(1, round4((b.y() + 0.5) / sh)));
             write(x, y);
             remember(x, y);
@@ -600,7 +614,7 @@ public final class HudElements {
 
         @Override
         public void reset() {
-            write(xValue.getDefault(), yValue.getDefault());
+            write(skills ? xValue.getDefault() : defaultX(), skills ? yValue.getDefault() : defaultY());
             remember(-1, -1);
         }
 

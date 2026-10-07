@@ -53,11 +53,11 @@ public final class SkillHud {
         return cached;
     }
 
-    private static SkillData definition(String id) {
+    static SkillData definition(String id) {
         return Config.skills().skills().getOrDefault(id, SkillData.Builder.getDefault());
     }
 
-    private static Item icon(String id) {
+    static Item icon(String id) {
         return switch (id) {
             case "attack" -> Items.IRON_SWORD;
             case "strength" -> Items.IRON_AXE;

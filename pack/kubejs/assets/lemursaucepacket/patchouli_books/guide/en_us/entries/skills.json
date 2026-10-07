@@ -22,6 +22,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "XP shows up as it comes in, in a small tracker at the top of the screen, just below the block info. Each skill that just gained XP gets a card with its icon, the XP so far (it keeps counting up while you work), its level and a bar towards the next one. When a gain takes you up a level, the card turns gold and says $(bold)Level N!$() for a few seconds. Cards fade out a few seconds after the last XP. Move or hide the tracker in ESC → HUD Layout (\"XP gains\")."
+    },
+    {
+      "type": "patchouli:text",
       "title": "The skills",
       "text": "$(#b9a98a)Group - Skill - Trained by - Each level gives$()$(br)$(bold)Combat$() - Attack - Hitting things - +0.04 melee damage, +0.4 % bow damage; wields weapons$(br)$(bold)Combat$() - Strength - Hitting things - +0.3 % melee critical chance (1.5× damage)$(br)$(bold)Combat$() - Defence - Being hit while wearing armour - +0.02 armour; wears armour$(br)$(bold)Combat$() - Ranged - Arrows, tridents, rockets - +0.3 % ranged critical chance$(br)$(bold)Combat$() - Hitpoints - Any fight (slowly) - +0.2 max health (a heart per ten levels)$(br)$(bold)Gathering$() - Mining - Ores and stone - Faster mining; unlocks pickaxes$"
     },

@@ -1,6 +1,7 @@
 package net.lemursaucepacket.fixes.hud;
 
 import net.lemursaucepacket.fixes.hud.HudElement.Box;
+import net.lemursaucepacket.fixes.pmmo.GainHud;
 import net.lemursaucepacket.fixes.pmmo.SkillHud;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -14,6 +15,10 @@ final class HudPreview {
     static void render(GuiGraphics g, String id, Box b) {
         if (id.equals("pmmo_skills")) {
             SkillHud.renderPreview(g, b);
+            return;
+        }
+        if (id.equals("pmmo_gains")) {
+            GainHud.renderPreview(g, b);
             return;
         }
         g.pose().pushPose();
@@ -54,12 +59,6 @@ final class HudPreview {
                 text(g, "Kinetic Stats", 5, 4, 0xFFE0AC46);
                 text(g, "Speed: 64 RPM", 5, 15, 0xFFF1E4C2);
                 text(g, "Stress: 32 / 256su", 5, 26, 0xFF8DDBAA);
-            }
-            case "pmmo_gains" -> {
-                scale(g, b, 100, 48);
-                String[] gains = {"+24 Mining XP", "+12 Woodcutting XP", "+8 Crafting XP"};
-                int[] colors = {0xFF9EDAE5, 0xFF8CD879, 0xFFE0AC46};
-                for (int i = 0; i < gains.length; i++) text(g, gains[i], 0, 3 + i * 9, colors[i]);
             }
             case "ftb_pinned" -> {
                 scale(g, b, 168, 46);
