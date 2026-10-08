@@ -27,10 +27,25 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
+import { MODDED } from './modded.mjs'
 import {
-  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, PALETTE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL,
-  QUEST_REQUIREMENTS, RANGED, RELIC_WEAR, SKILL_INFO
+  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, MODDED_POTION_LEVEL, PALETTE, PLANT, POTION_FORM_LEVEL,
+  POTION_LEVEL, QUEST_REQUIREMENTS, RANGED, RELIC_WEAR, SKILL_INFO
 } from './unlocks.mjs'
+
+// The modded items' hold, use, wear and place gates (skills/modded.mjs) that Project MMO enforces. Relics and the
+// totem are in RELIC_WEAR already (their rule is written with the Climbing Boots').
+const relicItems = new Set(RELIC_WEAR.map((r) => r.item))
+const MODDED_RULES = MODDED.filter((g) => ['hold', 'use', 'wear', 'place'].includes(g.kind) && !g.items.every((i) => relicItems.has(i)))
+const slug = (g) => `modded_${g.kind}_${g.skill}_${g.level}_${g.items[0].split(':')[1].replace(/[^a-z0-9_]/g, '_')}`
+// How the guides word them: the in-game guide's kind, and "Wield silver swords" (ordinary phrases go lower case after
+// the verb; names stay as they are: "Wear Wildfire Crown").
+const RULE_KIND = { hold: 'wield', use: 'use', wear: 'wear', place: 'place' }
+const RULE_VERB = { hold: 'Wield', use: 'Use', wear: 'Wear', place: 'Place' }
+const ruleText = (g) => {
+  const p = g.what.replace(/ \(to (hit|chop) with\)/, '')
+  return `${RULE_VERB[g.kind]} ${/\s[A-Z]/.test(p) ? p : p.charAt(0).toLowerCase() + p.slice(1)}`
+}
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = path.join(root, 'pack', 'kubejs', 'data')
@@ -121,7 +136,11 @@ requirements.push(
   ['elytra', ['minecraft:elytra'], { WEAR: { agility: 30 } }, 'slowness'],
   ...RELIC_WEAR.map(({ item, skill, level }) => [`relic_${item.split(':')[1]}`, [item], { WEAR: { [skill]: level } }, 'slowness']),
   ['copper_diving_gear', ['create:copper_diving_helmet', 'create:copper_backtank', 'create:copper_diving_boots'], { WEAR: { defence: 5 } }, 'slowness'],
-  ['netherite_diving_gear', ['create:netherite_diving_helmet', 'create:netherite_backtank', 'create:netherite_diving_boots'], { WEAR: { defence: 50 } }, 'slowness']
+  ['netherite_diving_gear', ['create:netherite_diving_helmet', 'create:netherite_backtank', 'create:netherite_diving_boots'], { WEAR: { defence: 50 } }, 'slowness'],
+  // Modded weapons (hitting with them, and Weakness while held), tools and used items, and worn gear.
+  ...MODDED_RULES.filter((g) => g.kind === 'hold').map((g) => [slug(g), g.items, { WEAPON: { [g.skill]: g.level }, WEAR: { [g.skill]: g.level } }, 'weakness']),
+  ...MODDED_RULES.filter((g) => g.kind === 'use').map((g) => [slug(g), g.items, { TOOL: { [g.skill]: g.level }, USE: { [g.skill]: g.level } }]),
+  ...MODDED_RULES.filter((g) => g.kind === 'wear').map((g) => [slug(g), g.items, { WEAR: { [g.skill]: g.level } }, 'slowness'])
 )
 const PENALTY = { weakness: { 'minecraft:weakness': 2 }, slowness: { 'minecraft:slowness': 2 } }
 
@@ -289,7 +308,12 @@ write(langFile, {
 
 // Farming plants and Woodcutting chops by level (skills/unlocks.mjs).
 for (const { level, blocks } of PLANT) write(path.join(rulesDir, 'blocks', `req_plant_${level}_${blocks[0].split(':')[1]}.json`), { override: false, isTagFor: blocks, requirements: { PLACE: { farming: level } } })
-for (const { level, blocks } of CHOP) write(path.join(rulesDir, 'blocks', `req_chop_${level}.json`), { override: false, isTagFor: blocks, requirements: { BREAK: { woodcutting: level } } })
+// CHOP entries can share a level (a vanilla tree and a modded one): one file per level, every tree at it.
+const chopByLevel = new Map()
+for (const { level, blocks } of CHOP) chopByLevel.set(level, [...(chopByLevel.get(level) ?? []), ...blocks])
+for (const [level, blocks] of chopByLevel) write(path.join(rulesDir, 'blocks', `req_chop_${level}.json`), { override: false, isTagFor: blocks, requirements: { BREAK: { woodcutting: level } } })
+// Modded blocks only a level may place (waystones, cannons...).
+for (const g of MODDED_RULES.filter((x) => x.kind === 'place')) write(path.join(rulesDir, 'blocks', `req_${slug(g)}.json`), { override: false, isTagFor: g.items, requirements: { PLACE: { [g.skill]: g.level } } })
 
 // Construction's alternate recipes (skills/unlocks.mjs CONSTRUCTION_RECIPES): plain datapack recipes, gated by id.
 const recipeDir = path.join(dataDir, 'lemursaucepacket', 'recipe', 'construction')
@@ -320,11 +344,14 @@ write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'),
   brewXp: BREW_XP,
   // Every potion id the game has for each base: its longer (long_) and stronger (strong_) kinds take more.
   potions: Object.fromEntries(
-    Object.entries(POTION_LEVEL).flatMap(([id, level]) => [
-      [`minecraft:${id}`, level],
-      [`minecraft:long_${id}`, Math.max(level, 30)],
-      [`minecraft:strong_${id}`, Math.max(level, 60)]
-    ])
+    [...Object.entries(POTION_LEVEL).map(([id, level]) => [`minecraft:${id}`, level]), ...Object.entries(MODDED_POTION_LEVEL)].flatMap(([id, level]) => {
+      const [ns, name] = id.split(':')
+      return [
+        [id, level],
+        [`${ns}:long_${name}`, Math.max(level, 30)],
+        [`${ns}:strong_${name}`, Math.max(level, 60)]
+      ]
+    })
   ),
   potionForms: POTION_FORM_LEVEL,
   drops: DROPS,
@@ -357,7 +384,10 @@ function writeSkillGuide() {
   lines.push(...table('Crafting', 'Lets you make', made('crafting')))
   lines.push(...table('Smithing', 'Lets you make', made('smithing')))
   lines.push(...table('Cooking', 'Lets you make', made('cooking')))
-  lines.push(...table('Brewing', 'Lets you brew', [...BREW.map((x) => [x.level, `${x.what} (${x.item.replace('minecraft:', '').replace(/_/g, ' ')})`]), ...made('brewing').map(([l, w]) => [l, `${w} (crafting)`])]))
+  // An entry whose name already says what it's made with (the modded ones: "Potion of Reaching (crab claw)") keeps it.
+  const brewed = (x) => (/\)$/.test(x.what) ? x.what : `${x.what} (${x.item.replace(/^[a-z_]+:/, '').replace(/_/g, ' ')})`)
+  const crafted = (w) => (/\)$/.test(w) ? w : `${w} (crafting)`)
+  lines.push(...table('Brewing', 'Lets you brew', [...BREW.map((x) => [x.level, brewed(x)]), ...made('brewing').map(([l, w]) => [l, crafted(w)])]))
   lines.push(...table('Farming', 'Lets you plant', PLANT.map((p) => [p.level, p.what])))
   lines.push(...table('Woodcutting', 'Lets you chop', CHOP.map((c) => [c.level, c.what])))
   lines.push(...table('Fishing', 'Lets you', [[FISHING_TREASURE, 'Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish)']]))
@@ -366,6 +396,18 @@ function writeSkillGuide() {
   // Create's machines: every skill's milestones in one table, by level.
   lines.push('### Create machines', '', '| Level | Skill | Lets you make |', '|---|---|---|',
     ...CRAFT.filter((c) => c.machine).sort((x, y) => x.level - y.level || x.skill.localeCompare(y.skill)).map((c) => `| ${c.level} | ${name(c.skill)} | ${c.what} |`), '')
+  // Making gates on the other skills (Agility's scrolls, Construction's barbed wire...): the tables above cover the
+  // making skills only.
+  const MAKING = new Set(['crafting', 'smithing', 'cooking', 'brewing'])
+  lines.push('### Other skills: making', '', '| Level | Skill | Lets you make |', '|---|---|---|',
+    ...CRAFT.filter((c) => !c.machine && !MAKING.has(c.skill)).sort((x, y) => x.level - y.level || x.skill.localeCompare(y.skill)).map((c) => `| ${c.level} | ${name(c.skill)} | ${c.what} |`), '')
+  // Modded gear, relics and blocks with a level to wield, use, wear or place (skills/modded.mjs).
+  const using = [
+    ...MODDED_RULES.map((g) => [g.level, g.skill, ruleText(g)]),
+    ...RELIC_WEAR.map((r) => [r.level, r.skill, `${r.kind === 'use' ? 'Use' : r.item === 'minecraft:totem_of_undying' ? 'Hold' : 'Wear'} ${r.what}`])
+  ]
+  lines.push('### Gear, relics and blocks', '', '| Level | Skill | Lets you |', '|---|---|---|',
+    ...using.sort((x, y) => x[0] - y[0] || x[1].localeCompare(y[1])).map(([l, s, w]) => `| ${l} | ${name(s)} | ${w} |`), '')
   lines.push(...table('Construction', 'Lets you make', [
     ...CONSTRUCTION_RECIPES.map((r) => [r.level, r.what]),
     [PALETTE.level, "Use the Mason's Palette: as many of one decorative block as you like (see below)"]
@@ -405,7 +447,9 @@ function writeGuideData() {
   add('defence', 5, 'wear', 'Wear copper diving gear', 'create:copper_diving_helmet')
   add('defence', 50, 'wear', 'Wear netherite diving gear', 'create:netherite_diving_helmet')
   add('agility', 30, 'wear', 'Wear the elytra', 'minecraft:elytra')
-  for (const r of RELIC_WEAR) add(r.skill, r.level, 'wear', `Wear ${r.what}`, r.item)
+  for (const r of RELIC_WEAR) add(r.skill, r.level, r.kind === 'use' ? 'use' : 'wear', `${r.kind === 'use' ? 'Use' : r.item === 'minecraft:totem_of_undying' ? 'Hold' : 'Wear'} ${r.what}`, r.item)
+  // Modded gear and items (skills/modded.mjs): wielding, using, wearing and placing.
+  for (const g of MODDED_RULES) add(g.skill, g.level, RULE_KIND[g.kind], ruleText(g), g.items[0])
   for (const r of RANGED) add('ranged', r.level, 'use', r.what, r.items[0])
   // Making things, and Create's machines.
   const itemOf = (id) => (id.startsWith('#') ? 'minecraft:coast_armor_trim_smithing_template' : id)

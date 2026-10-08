@@ -134,6 +134,17 @@ const ICONS = {
   capes: 'emblems/banners.webp',
   hiscores: 'icons/statistics.webp',
   create: 'emblems/first_rotation.webp',
+  'create-tips': 'emblems/brass_age.webp',
+  redstone: 'icons/link.webp',
+  building: 'skills/construction.webp',
+  'good-to-know': 'icons/news.webp',
+  'inventory-tips': 'emblems/backpack_workshop.webp',
+  interface: 'icons/settings.webp',
+  travel: 'emblems/iron_roads.webp',
+  combat: 'skills/attack.webp',
+  social: 'icons/voice.webp',
+  farming: 'skills/farming.webp',
+  'tools-and-mining': 'skills/mining.webp',
   'trains-and-airships': 'emblems/skyward.webp',
   'esc-menu': 'icons/settings.webp',
   mods: 'icons/mods.webp'
@@ -206,7 +217,7 @@ const slug = (text) =>
   text
     .toLowerCase()
     .replace(/<[^>]+>/g, '')
-    .replace(/&[a-z]+;/g, '')
+    .replace(/&#?[a-z0-9]+;/g, '')
     .replace(/[^\p{L}\p{N}\s-]/gu, '')
     .trim()
     .replace(/\s+/g, '-')
@@ -329,6 +340,19 @@ function markdownToHtml(markdown, page, ctx) {
   return html
 }
 
+/**
+ * A FAQ page (front matter `faq: true`): each question, a ### heading, and its answer become a card that opens, under
+ * a filter box. The markdown stays plain headings, so the guide book gets a page per question.
+ */
+function faqCards(html) {
+  const cards = html.split(/(?=<h[23] id=")/).map((part) => {
+    const m = /^<h3 id="([^"]+)"><a class="anchor"[^>]*>#<\/a>([\s\S]*?)<\/h3>\s*/.exec(part)
+    return m ? `<details class="faq" id="${m[1]}"><summary>${m[2]}</summary><div class="faq-a">${part.slice(m[0].length)}</div></details>\n` : part
+  })
+  const tools = '<div class="faq-tools"><input type="search" class="faq-filter" placeholder="Filter the questions" aria-label="Filter the questions" autocomplete="off"><button type="button" class="faq-all">Open all</button></div><p class="faq-none" hidden>No question matches. Try the wiki search at the top left.</p>'
+  return tools + cards.join('')
+}
+
 // ---------------------------------------------------------------- the page
 
 const TOPNAV = [
@@ -435,6 +459,10 @@ function render(keybinds) {
     const withoutTitle = body.replace(/^#\s+.+\r?\n/m, '')
     let html = markdownToHtml(keyboard ? withoutTitle.replace(keyboard.region, '<!-- keyboard -->') : withoutTitle, page, ctx)
     if (keyboard) html = html.replace('<!-- keyboard -->', () => keyboard.html)
+    // Search reads the page before the FAQ's questions become cards (it finds them by their headings).
+    const faq = String(data.faq) === 'true'
+    const searchHtml = html
+    if (faq) html = faqCards(html)
     let isPortal = false
     if (page.file === 'README.md') {
       const p = portal(groups, frontMatters)
@@ -456,7 +484,7 @@ function render(keybinds) {
       crumbs: page.file === 'README.md' ? [{ text: 'The LemurSaucePacket wiki' }] : crumbs,
       html,
       nav: navHtml(groups, page),
-      toc: ctx.headings.filter((h) => h.depth === 2 || h.depth === 3),
+      toc: ctx.headings.filter((h) => h.depth === 2 || (h.depth === 3 && !faq)),
       prev: pages[i - 1],
       next: pages[i + 1],
       extraCss: keyboard ? keyboard.css : '',
@@ -469,7 +497,7 @@ function render(keybinds) {
     // Search: the page, each of its sections, and every atlas card on it.
     const url = htmlName(page.file)
     search.push({ t: title, g: page.group, s: '', x: data.description ?? '', u: url })
-    const parts = html.split(/(?=<h[23] id=")/)
+    const parts = searchHtml.split(/(?=<h[23] id=")/)
     for (const part of parts) {
       const m = /^<h([23]) id="([^"]+)">([\s\S]*?)<\/h\1>/.exec(part)
       if (!m) continue

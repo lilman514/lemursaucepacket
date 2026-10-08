@@ -1,0 +1,35 @@
+1.00  <>  [create-core.md|Server-specific systems] Machines won't make gated items  <>  [pack-systems.md|Server-specific systems] Machines won't make gated items
+1.00  <>  [create-core.md|Server-specific systems] Machines earn no skill XP  <>  [pack-systems.md|Server-specific systems] Machines earn no skill XP
+1.00  <>  [gameplay.md|Tools & mining] Ice and Fire axes fell trees too  <>  [pack-systems.md|Tools & mining] Ice and Fire axes fell trees too
+0.67  <>  [create-addons.md|Combat & PvP] Mounted Potato Cannon  <>  [create-core.md|Combat & PvP] Potato Cannon
+0.67  <>  [create-addons.md|Redstone] Redstone Link Wildcard  <>  [create-core.md|Redstone] Redstone Link
+0.67  <>  [create-addons.md|Redstone] Inverted Clutch and Inverted Gearshift  <>  [create-core.md|Redstone] Clutch and Gearshift
+0.67  <>  [create-addons.md|Create automation tips] Fan Catalysts  <>  [create-core.md|Create automation tips] Fan processing catalysts
+0.67  <>  [inventory-ui.md|Server-specific systems] Quest book basics  <>  [pack-systems.md|Server-specific systems] Quest book
+0.60  <>  [inventory-ui.md|Server-specific systems] Graves cost Grave Essence  <>  [pack-systems.md|Combat & PvP] Graves need Grave Essence
+0.50  <>  [create-addons.md|Inventory, sorting & storage] Backpacks on contraptions  <>  [inventory-ui.md|Inventory, sorting & storage] More than 3 backpacks
+0.50  <>  [create-addons.md|Building & decoration] Locked metal doors  <>  [gameplay.md|Redstone] Redstone-only metal doors
+0.50  <>  [create-addons.md|Movement & travel] Wheels  <>  [create-core.md|Create automation tips] Water wheels
+0.50  <>  [create-addons.md|Farming, food & animals] Liquid Fertilizer and rich soil  <>  [gameplay.md|Farming, food & animals] Rich soil
+0.50  <>  [create-addons.md|Create automation tips] Liquid Blaze Burner  <>  [create-core.md|Create automation tips] Blaze burner fuel
+0.50  <>  [create-addons.md|Create automation tips] Portable Energy Interface  <>  [create-core.md|Create automation tips] Portable Storage Interface
+0.50  <>  [create-addons.md|Create automation tips] XP from machines  <>  [create-core.md|Create automation tips] Funnels on machines
+0.50  <>  [create-core.md|Maps & navigation] Train map on the world map  <>  [travel-video.md|Maps & navigation] World map controls
+0.50  <>  [create-core.md|Redstone] Steam Whistle  <>  [gameplay.md|Farming, food & animals] Whistle
+0.50  <>  [gameplay.md|Building & decoration] Window Key  <>  [inventory-ui.md|Controls & keys] Shift + click outside the window
+0.50  <>  [gameplay.md|Building & decoration] Window Key  <>  [pack-systems.md|Chat & social] Trade window
+0.50  <>  [gameplay.md|Combat & PvP] Creaking and creaking heart  <>  [pack-systems.md|Server-specific systems] Make a new Heart
+0.50  <>  [gameplay.md|UI, HUD & settings] Food effect tooltips  <>  [inventory-ui.md|Farming, food & animals] Food values on tooltips
+0.50  <>  [inventory-ui.md|Inventory, sorting & storage] Move All  <>  [travel-video.md|Controls & keys] Move the camera
+0.50  <>  [inventory-ui.md|UI, HUD & settings] The Guide book  <>  [pack-systems.md|UI, HUD & settings] The Guide
+0.50  <>  [inventory-ui.md|UI, HUD & settings] Guide in a browser  <>  [pack-systems.md|UI, HUD & settings] The Guide
+0.50  <>  [inventory-ui.md|Server-specific systems] Quest book navigation extras  <>  [pack-systems.md|Server-specific systems] Quest book
+0.50  <>  [pack-systems.md|Server-specific systems] Capes  <>  [travel-video.md|UI, HUD & settings] Flowing capes
+0.45  <>  [gameplay.md|UI, HUD & settings] Don't open the PMMO glossary  <>  [pack-systems.md|UI, HUD & settings] Don't bind Project MMO's glossary
+0.43  <>  [gameplay.md|UI, HUD & settings] Level-up chat lists unlocks  <>  [pack-systems.md|Chat & social] Level-up chat lines
+0.41  <>  [gameplay.md|Create automation tips] Hopper-fed pots use the last opener's level  <>  [pack-systems.md|Server-specific systems] Last-user rule
+0.40  <>  [create-core.md|Movement & travel] Tracks through the Nether  <>  [pack-systems.md|Movement & travel] Trains through Nether portals
+0.40  <>  [gameplay.md|Tools & mining] Lumber Axe fells whole trees  <>  [pack-systems.md|Tools & mining] Lumber Axe
+0.32  <>  [gameplay.md|Tools & mining] Nether and mangrove trees  <>  [pack-systems.md|Farming, food & animals] Rarer trees need Woodcutting
+0.31  <>  [create-core.md|Controls & keys] Ponder Index  <>  [travel-video.md|Controls & keys] Just Zoom options
+0.31  <>  [create-core.md|Server-specific systems] Create-made items' worth  <>  [pack-systems.md|Server-specific systems] /worth and /purse

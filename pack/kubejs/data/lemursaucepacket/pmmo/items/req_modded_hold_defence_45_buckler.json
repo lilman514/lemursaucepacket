@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "piglinproliferation:buckler"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "defence": 45
+    },
+    "WEAR": {
+      "defence": 45
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

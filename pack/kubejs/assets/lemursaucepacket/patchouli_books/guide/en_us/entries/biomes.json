@@ -2,7 +2,7 @@
   "name": "Biomes",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:filled_map",
-  "sortnum": 7,
+  "sortnum": 15,
   "pages": [
     {
       "type": "patchouli:text",

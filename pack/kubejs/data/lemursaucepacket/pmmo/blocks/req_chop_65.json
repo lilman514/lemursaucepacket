@@ -1,0 +1,19 @@
+{
+  "override": false,
+  "isTagFor": [
+    "regions_unexplored:brimwood_log",
+    "regions_unexplored:brimwood_wood",
+    "regions_unexplored:stripped_brimwood_log",
+    "regions_unexplored:stripped_brimwood_wood",
+    "regions_unexplored:cobalt_log",
+    "regions_unexplored:cobalt_wood",
+    "regions_unexplored:stripped_cobalt_log",
+    "regions_unexplored:stripped_cobalt_wood",
+    "regions_unexplored:brimwood_log_magma"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 65
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "name": "Oceans, rivers and coasts",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:nautilus_shell",
-  "sortnum": 16,
+  "sortnum": 24,
   "pages": [
     {
       "type": "patchouli:text",

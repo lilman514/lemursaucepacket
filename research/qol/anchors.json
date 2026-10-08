@@ -1,0 +1,310 @@
+{
+ "biomes-caves.md": [
+  "caves-and-the-deep",
+  "the-biomes"
+ ],
+ "biomes-deserts.md": [
+  "deserts-badlands-and-canyons",
+  "the-biomes"
+ ],
+ "biomes-forests.md": [
+  "forests-and-taigas",
+  "the-biomes"
+ ],
+ "biomes-jungles.md": [
+  "jungles-and-rainforests",
+  "the-biomes"
+ ],
+ "biomes-mountains.md": [
+  "mountains-peaks-and-highlands",
+  "the-biomes"
+ ],
+ "biomes-oceans.md": [
+  "oceans-rivers-and-coasts",
+  "the-biomes"
+ ],
+ "biomes-plains.md": [
+  "plains-meadows-and-fields",
+  "the-biomes"
+ ],
+ "biomes-savannas.md": [
+  "savannas-steppes-and-shrublands",
+  "the-biomes"
+ ],
+ "biomes-snowy.md": [
+  "snowy-and-frozen-lands",
+  "the-biomes"
+ ],
+ "biomes-wetlands.md": [
+  "swamps-and-wetlands",
+  "the-biomes"
+ ],
+ "biomes.md": [
+  "biomes",
+  "how-to-read-a-biomes-card",
+  "the-overworlds-biomes",
+  "every-biome-a-to-z"
+ ],
+ "capes.md": [
+  "capes",
+  "skill-capes",
+  "quest-capes",
+  "achievement-capes",
+  "legendary-capes",
+  "the-owners-cape",
+  "lost-a-cape"
+ ],
+ "commands.md": [
+  "commands",
+  "you-and-your-progress",
+  "coins-and-trading",
+  "lifesteal",
+  "handy-vanilla-ones"
+ ],
+ "create.md": [
+  "create-basics",
+  "speed-and-stress",
+  "power",
+  "processing",
+  "brass",
+  "moving-things",
+  "making-things-by-themselves",
+  "milestones-your-skills-unlock",
+  "add-ons-in-the-pack"
+ ],
+ "creatures.md": [
+  "creatures",
+  "bosses",
+  "every-creature"
+ ],
+ "economy.md": [
+  "coins-vendors-and-trading",
+  "gold-coins",
+  "vendors",
+  "what-things-are-worth",
+  "trading-with-other-players",
+  "admins"
+ ],
+ "elvarg.md": [
+  "elvargs-lair",
+  "getting-there",
+  "ned-and-his-window",
+  "the-fight",
+  "when-she-falls",
+  "if-she-gets-you",
+  "good-to-know"
+ ],
+ "enchanting.md": [
+  "enchanting",
+  "how-it-works",
+  "caps-and-unlocks",
+  "telekinesis",
+  "hardness-what-your-pickaxe-can-break"
+ ],
+ "end.md": [
+  "the-end",
+  "getting-there",
+  "the-ender-dragon",
+  "the-outer-islands",
+  "the-biomes",
+  "its-structures"
+ ],
+ "esc-menu.md": [
+  "the-esc-menu",
+  "adventure-left",
+  "game-menu-middle",
+  "hud-layout",
+  "player-right"
+ ],
+ "faq.md": [
+  "faq-and-troubleshooting"
+ ],
+ "fight-pits.md": [
+  "the-fight-pits-and-the-inferno",
+  "kiln-hollow",
+  "getting-in",
+  "how-a-wave-fight-works",
+  "the-fight-pits",
+  "kiln-tok-jad",
+  "the-inferno",
+  "kiln-kal-zuk",
+  "the-capes",
+  "for-admins"
+ ],
+ "first-week.md": [
+  "your-first-week",
+  "day-one-find-lemurton",
+  "days-two-to-four-levels-and-coins",
+  "days-four-to-seven-create",
+  "after-that"
+ ],
+ "gear.md": [
+  "gear",
+  "armour-sets",
+  "prospectors-set",
+  "aeronauts-set",
+  "brass-duelist-set",
+  "compacted-diamond-set",
+  "compacted-netherite-set",
+  "single-pieces",
+  "weapons",
+  "tools",
+  "materials",
+  "loot-only-gear",
+  "relics"
+ ],
+ "getting-started.md": [
+  "getting-started",
+  "1-install-the-launcher",
+  "2-sign-in",
+  "3-play",
+  "what-next"
+ ],
+ "hiscores.md": [
+  "hiscores",
+  "in-game",
+  "how-the-ranking-works",
+  "whats-ranked",
+  "skills",
+  "activities",
+  "bosses",
+  "collections"
+ ],
+ "keybinds.md": [
+  "keybinds",
+  "every-keybind",
+  "movement-and-actions",
+  "inventory-and-items",
+  "chat-voice-and-team",
+  "maps-and-waypoints",
+  "quests-and-skills",
+  "create",
+  "recipes-and-info",
+  "screen-and-camera",
+  "replays",
+  "editing-and-cheats",
+  "not-bound-by-default",
+  "sorting",
+  "the-esc-menu-and-the-hud-layout"
+ ],
+ "launcher.md": [
+  "the-launcher",
+  "home",
+  "mods",
+  "settings",
+  "where-things-are",
+  "updates"
+ ],
+ "lemurton.md": [
+  "lemurton",
+  "finding-it",
+  "your-first-quest",
+  "the-city",
+  "a-safe-zone",
+  "whos-who",
+  "by-night",
+  "other-towns"
+ ],
+ "lifesteal.md": [
+  "hearts-graves-and-elimination",
+  "your-hearts",
+  "dying",
+  "the-heart-item",
+  "stealing-hearts",
+  "getting-hearts-back",
+  "graves-and-grave-essence",
+  "elimination",
+  "what-is-yours",
+  "the-compasses",
+  "rules-against-farming",
+  "commands"
+ ],
+ "mods.md": [
+  "mods-in-the-pack",
+  "on-the-server-and-every-client-137",
+  "client-only-47",
+  "server-only-0"
+ ],
+ "nether.md": [
+  "the-nether",
+  "getting-there",
+  "whats-there",
+  "the-biomes",
+  "its-structures"
+ ],
+ "quests.md": [
+  "quests",
+  "chapters",
+  "main-quests",
+  "how-rewards-scale",
+  "the-skills-chapter"
+ ],
+ "README.md": [
+  "lemursaucepacket",
+  "where-to-go-next"
+ ],
+ "skills.md": [
+  "skills",
+  "the-skills-screen",
+  "the-skills",
+  "combat-level",
+  "construction",
+  "using-gear",
+  "what-each-skill-unlocks",
+  "crafting",
+  "smithing",
+  "cooking",
+  "brewing",
+  "farming",
+  "woodcutting",
+  "fishing",
+  "ranged",
+  "combat-level",
+  "create-machines",
+  "other-skills-making",
+  "gear-relics-and-blocks",
+  "construction",
+  "quest-requirements",
+  "where-the-numbers-come-from"
+ ],
+ "structures.md": [
+  "structures-and-dungeons",
+  "every-structure"
+ ],
+ "SUMMARY.md": [
+  "table-of-contents",
+  "start-here",
+  "the-world",
+  "living-here",
+  "adventure",
+  "your-character",
+  "create-and-building",
+  "reference"
+ ],
+ "waystones.md": [
+  "waystones",
+  "where-to-find-them",
+  "taking-one-home",
+  "building-one",
+  "travelling"
+ ],
+ "where-to-find.md": [
+  "where-to-find-things",
+  "relics",
+  "farmers-delight",
+  "friendsfoes",
+  "illager-invasion",
+  "lemursaucepacket",
+  "lootr",
+  "naturalist",
+  "piglin-proliferation"
+ ],
+ "world.md": [
+  "the-world-and-its-rules",
+  "rules",
+  "lemurton-the-capital",
+  "other-towns",
+  "whats-different-from-vanilla",
+  "weekly-missions"
+ ]
+}

@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "illagerinvasion:platinum_infused_hatchet"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "strength": 40
+    },
+    "WEAR": {
+      "strength": 40
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

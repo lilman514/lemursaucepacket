@@ -12,8 +12,9 @@ const AT_SHOTS = /*SHOTS*/ [] /*END*/
 // arrive: ticks after landing before the viewpoint is chosen; settle: the least wait after moving the camera;
 // loaded: the share of chunks in reach that must be there before a shot (or `patience` ticks, whichever first);
 // distant: ticks more for Distant Horizons to fill in the land past the render distance (open-air views only), and
-// peek: also a shot halfway through that wait (`<name>_peek`), to see how far it gets.
-const AT_OPTS = /*OPTS*/ { arrive: 120, settle: 60, loaded: 0.97, patience: 900, timeout: 1200, locate: 3600, distant: 0, peek: false } /*END*/
+// peek: also a shot halfway through that wait (`<name>_peek`), to see how far it gets; borderless: the window fills
+// the screen without a frame (windowed fullscreen), so it keeps drawing behind other windows.
+const AT_OPTS = /*OPTS*/ { arrive: 120, settle: 60, loaded: 0.97, patience: 900, timeout: 1200, locate: 3600, distant: 0, peek: false, borderless: false } /*END*/
 // /locate looks 6400 blocks round where it's asked from: a rare biome not found from here is looked for again from these.
 const AT_ORIGINS = [
   [14000, 0],
@@ -23,7 +24,13 @@ const AT_ORIGINS = [
 const ATJ = {
   Screenshot: Java.loadClass('net.minecraft.client.Screenshot'),
   GLFW: Java.loadClass('org.lwjgl.glfw.GLFW'),
-  Heightmap: Java.loadClass('net.minecraft.world.level.levelgen.Heightmap$Types')
+  Heightmap: Java.loadClass('net.minecraft.world.level.levelgen.Heightmap$Types'),
+  // The keys (none bound to anything in the pack): Enter take the picture, F9 skip, F8 previous spot, Home start view.
+  KEY_SHOOT: 257,
+  KEY_SHOOT2: 335,
+  KEY_SKIP: 298,
+  KEY_PREV: 297,
+  KEY_BACK: 268
 }
 const atSay = (s) => console.info(`[atlas] ${s}`)
 const atCmd = (c) => Client.player.connection.sendCommand(c)
@@ -220,6 +227,33 @@ const atFrameLand = (shot, T, sea) => {
 }
 
 /**
+ * A viewpoint kept from an earlier session (prepare.mjs --spots): the camera where it stood, looking across the
+ * biome's middle as atFrameLand did. The distant land was pre-built round these spots.
+ */
+const atFrameKept = (shot) => {
+  let C = shot.cam
+  let M = shot.mid
+  let F = [M[0] + 0.8 * (M[0] - C[0]), 0, M[2] + 0.8 * (M[2] - C[2])]
+  let ty = shot.how === 'sea' ? 63 : Math.max(atGround(F[0], F[2]), Client.level.getMinBuildHeight() + 1)
+  let a = atLook(C[0], C[1] + 1.62, C[2], F[0], ty + 4, F[2])
+  return [C[0], C[1], C[2], a[0], Math.min(16, Math.max(6, a[1]))]
+}
+
+/** Windowed fullscreen: no frame, the size of the screen, at its corner. */
+const atBorderless = () => {
+  try {
+    let win = Client.getWindow().getWindow()
+    let mode = ATJ.GLFW.glfwGetVideoMode(ATJ.GLFW.glfwGetPrimaryMonitor())
+    ATJ.GLFW.glfwSetWindowAttrib(win, ATJ.GLFW.GLFW_DECORATED, ATJ.GLFW.GLFW_FALSE)
+    ATJ.GLFW.glfwSetWindowPos(win, 0, 0)
+    ATJ.GLFW.glfwSetWindowSize(win, mode.width(), mode.height())
+    atSay(`borderless window, ${mode.width()}x${mode.height()}`)
+  } catch (e) {
+    atSay(`couldn't make the window borderless: ${e}`)
+  }
+}
+
+/**
  * A viewpoint inside a cave biome (or the Nether): standing a little above the floor, looking along the open way
  * nearest `want` blocks long (a far wall in view; the longest view in the Nether is only fog).
  */
@@ -276,6 +310,52 @@ const atSkip = (shot, why) => {
   atPhaseTo('next')
 }
 
+// --- Shots taken by hand: the driver takes the camera to each spot and frames it; whoever is watching waits as long
+// as they like, adjusts the view (fly and look as usual in spectator mode) and presses Enter. The frame that's saved
+// has no keys reminder, no HUD and no minimap.
+let atOver = { title: '', line: '', hide: false }
+let atFrames = 0
+let atHideFrame = 0
+let atView = null
+let atOverFailed = false
+let atDown = {}
+const AT_KEYS_LINE = '[Enter] take the picture   [F9] skip   [F8] previous spot   [Home] back to the start view'
+
+NativeEvents.onEvent('net.neoforged.neoforge.client.event.RenderGuiEvent$Post', (e) => {
+  atFrames++
+  if (atOver.hide || (atOver.title === '' && atOver.line === '')) return
+  try {
+    let g = e.getGuiGraphics()
+    let font = Client.font
+    let w = g.guiWidth()
+    let rows = [atOver.title, atOver.line].filter((r) => r !== '')
+    rows.forEach((r, i) => {
+      let tw = font.width(r)
+      let x0 = Math.floor((w - tw) / 2)
+      let y0 = 6 + i * 14
+      g.fill(x0 - 5, y0 - 3, x0 + tw + 5, y0 + 10, -1442840576)
+      // By signature: drawString has int and float versions this script can't tell apart.
+      g['drawString(net.minecraft.client.gui.Font,java.lang.String,int,int,int,boolean)'](font, r, x0, y0, i === 0 ? 16769610 : 16777215, false)
+    })
+  } catch (err) {
+    if (!atOverFailed) {
+      atOverFailed = true
+      atSay(`overlay failed: ${err}`)
+    }
+  }
+})
+
+/** A fresh press of a key since the last tick (not while a menu or chat is open). */
+const atKey = (key) => {
+  let down = false
+  try {
+    down = ATJ.GLFW.glfwGetKey(Client.getWindow().getWindow(), key) === ATJ.GLFW.GLFW_PRESS
+  } catch (e) {}
+  let was = atDown[key] === true
+  atDown[key] = down
+  return down && !was && Client.screen == null
+}
+
 // The subject on the stage: the nearest living thing that isn't us.
 const atSubject = () => {
   let hit = null
@@ -305,6 +385,7 @@ ClientEvents.tick(() => {
     try {
       Client.options.fov().set(70)
     } catch (e) {}
+    if (AT_OPTS.borderless) atBorderless()
     atPhaseTo('next')
     return
   }
@@ -314,15 +395,23 @@ ClientEvents.tick(() => {
     shot = AT_SHOTS[atIndex]
     if (shot == null) {
       atSay(`all shots done: ${atStats.shot} taken, ${atStats.skipped.length} skipped (${atStats.skipped.join(', ')})`)
+      atOver.title = `All done: ${atStats.shot} pictures, ${atStats.skipped.length} skipped`
+      atOver.line = 'You can close the game.'
       atPhaseTo('done')
       return
     }
     atSay(`shot ${atIndex + 1}/${AT_SHOTS.length}: ${shot.kind} ${shot.id}`)
+    atOver.title = `${shot.id}   (${atIndex + 1} of ${AT_SHOTS.length})`
     atFound = null
     atFailed = ''
     atDim = shot.dim
     atCmd(shot.dark ? 'effect give @s minecraft:night_vision infinite 0 true' : 'effect clear @s')
-    if (shot.kind === 'biome') {
+    if (shot.kind === 'biome' && shot.cam) {
+      // A kept spot: straight there, no /locate.
+      atTarget = shot.cam
+      atTp(shot.dim, shot.cam[0], shot.cam[1], shot.cam[2], 90, 10)
+      atPhaseTo('travelling')
+    } else if (shot.kind === 'biome') {
       let from = shot.origin ? `positioned ${shot.origin[0]} 100 ${shot.origin[1]} ` : ''
       atCmd(`execute in ${shot.dim} ${from}run locate biome ${shot.id}`)
       atPhaseTo('locating')
@@ -334,6 +423,7 @@ ClientEvents.tick(() => {
     return
   }
   if (atPhase === 'locating') {
+    atOver.line = 'Finding it...'
     let gaveUp = atFailed || (t > AT_OPTS.locate ? 'no answer from /locate' : '')
     if (gaveUp) {
       // Rare: look again later from far away, after everything else.
@@ -355,23 +445,25 @@ ClientEvents.tick(() => {
     return
   }
   if (atPhase === 'travelling') {
+    atOver.line = 'On the way...'
     let here = Math.abs(Client.player.getX() - atTarget[0]) < 8 && Math.abs(Client.player.getZ() - atTarget[2]) < 8 && String(Client.level.dimension) === shot.dim
     if (here && atLoaded(atTarget[0], atTarget[2])) atPhaseTo('arriving')
     else if (t > AT_OPTS.timeout) atSkip(shot, 'never got there')
     return
   }
   if (atPhase === 'arriving') {
+    atOver.line = 'Arriving...'
     if (t < AT_OPTS.arrive) return
     let view = null
     try {
-      view = shot.how === 'cave' ? atFrameHollow(shot, atTarget, 30, 22, 12) : shot.how === 'nether' ? atFrameHollow(shot, atTarget, 30, 24, 18) : atFrameLand(shot, atTarget, shot.how === 'sea')
+      view = shot.cam ? atFrameKept(shot) : shot.how === 'cave' ? atFrameHollow(shot, atTarget, 30, 22, 12) : shot.how === 'nether' ? atFrameHollow(shot, atTarget, 30, 24, 18) : atFrameLand(shot, atTarget, shot.how === 'sea')
     } catch (e) {
       atSay(`${shot.id}: framing failed: ${e}`)
     }
     if (view == null) return atSkip(shot, 'no open view found')
     atTp(shot.dim, view[0], view[1], view[2], view[3], view[4])
-    atReadyAt = -1
-    atPhaseTo('settling')
+    atView = view
+    atPhaseTo('waiting')
     return
   }
   if (atPhase === 'stage') {
@@ -401,36 +493,48 @@ ClientEvents.tick(() => {
       let cy = e.getY() + h * 0.55 - 1.62
       let a = atLook(e.getX() + d * 0.35, cy + 1.62, e.getZ() + d, e.getX(), e.getY() + h * 0.5, e.getZ())
       atTp('minecraft:overworld', e.getX() + d * 0.35, cy, e.getZ() + d, a[0], a[1])
+      atView = [e.getX() + d * 0.35, cy, e.getZ() + d, a[0], a[1]]
       atSay(`${shot.id}: ${w.toFixed(1)} x ${h.toFixed(1)}, camera ${d.toFixed(1)} away`)
-      atPhaseTo('settling')
+      atPhaseTo('waiting')
     }
     return
   }
-  if (atPhase === 'settling') {
-    if (t < (shot.kind === 'biome' ? AT_OPTS.settle : 50)) return
-    // A landscape waits for the land in reach to arrive (most of it, or long enough), then a moment for its meshes.
-    if (shot.kind === 'biome') {
-      if (atReadyAt < 0) {
-        if (t % 20 !== 0) return
-        let share = atLoadedShare(Client.player.getX(), Client.player.getZ(), 10)
-        if (share < AT_OPTS.loaded && t < AT_OPTS.patience) return
-        atReadyAt = t
-        atSay(`${shot.id}: ${Math.round(share * 100)}% of the land in reach after ${t} ticks`)
-      }
-      if (t < atReadyAt + 60) return
-      let far = shot.how === 'surface' || shot.how === 'sea' ? AT_OPTS.distant : 0
-      if (far > 0 && AT_OPTS.peek && t === atReadyAt + 60 + Math.floor(far / 2)) atShoot(`${shot.name}_peek`)
-      if (t < atReadyAt + 60 + far) return
-    }
-    if (!atShoot(shot.name)) {
-      atSince += 20
+  if (atPhase === 'waiting') {
+    atOver.title = `${shot.id}   (${atIndex + 1} of ${AT_SHOTS.length})`
+    atOver.line = AT_KEYS_LINE
+    if (atKey(ATJ.KEY_SKIP)) return atSkip(shot, 'skipped by hand')
+    if (atKey(ATJ.KEY_PREV)) {
+      // Back one: the next spot taken is the one before this.
+      atSay(`${shot.id}: back to the spot before`)
+      atIndex = Math.max(-1, atIndex - 2)
+      atPhaseTo('next')
       return
     }
+    if (atKey(ATJ.KEY_BACK) && atView != null) atTp(shot.dim, atView[0], atView[1], atView[2], atView[3], atView[4])
+    if (!(atKey(ATJ.KEY_SHOOT) || atKey(ATJ.KEY_SHOOT2))) return
+    // Nothing but the view in the saved frame: hide the reminder and the HUD (minimap and all), let a few frames
+    // draw, then shoot.
+    atOver.hide = true
+    Client.options.hideGui = true
+    atHideFrame = atFrames
+    atPhaseTo('shooting')
+    return
+  }
+  if (atPhase === 'shooting') {
+    if (Client.screen != null || atFrames < atHideFrame + 3) return
+    if (!atShoot(shot.name)) {
+      atHideFrame = atFrames + 20
+      return
+    }
+    atOver.hide = false
+    atOver.line = 'Saved.'
     atPhaseTo('shot')
     return
   }
   if (atPhase === 'shot') {
-    if (t < 10) return
+    if (t < 20) return
+    atOver.title = ''
+    atOver.line = ''
     if (shot.kind === 'creature') atCmd('kill @e[tag=atlas_subject]')
     atPhaseTo('next')
   }

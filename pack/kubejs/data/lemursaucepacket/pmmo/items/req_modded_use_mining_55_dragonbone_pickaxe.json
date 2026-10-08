@@ -1,0 +1,15 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonbone_pickaxe",
+    "iceandfire:dragonbone_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 55
+    },
+    "USE": {
+      "mining": 55
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:totem_of_undying"
+  ],
+  "requirements": {
+    "WEAR": {
+      "hitpoints": 50
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

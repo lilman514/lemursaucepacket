@@ -2,7 +2,7 @@
   "name": "Swamps and wetlands",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:lily_pad",
-  "sortnum": 15,
+  "sortnum": 23,
   "pages": [
     {
       "type": "patchouli:text",

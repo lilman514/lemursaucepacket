@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "friendsandfoes:totem_of_freezing"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 40
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

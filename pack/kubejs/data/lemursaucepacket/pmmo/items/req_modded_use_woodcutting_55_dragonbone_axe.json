@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonbone_axe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 55
+    },
+    "USE": {
+      "woodcutting": 55
+    }
+  }
+}

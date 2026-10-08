@@ -11,6 +11,17 @@
 * [Keybinds](keybinds.md)
 * [Commands](commands.md)
 
+## Tips and tricks
+
+* [Good to know on this server](good-to-know.md)
+* [Inventory, sorting and storage](inventory-tips.md)
+* [Your screen: HUD, info and settings](interface.md)
+* [Getting around](travel.md)
+* [Combat and PvP: what to know](combat.md)
+* [Chat, voice and teams](social.md)
+* [Farming, food and animals](farming.md)
+* [Tools and mining](tools-and-mining.md)
+
 ## The world
 
 * [The world and its rules](world.md)
@@ -55,6 +66,9 @@
 ## Create and building
 
 * [Create basics](create.md)
+* [Create know-how](create-tips.md)
+* [Redstone, wired and wireless](redstone.md)
+* [Building and decorating](building.md)
 
 ## Reference
 

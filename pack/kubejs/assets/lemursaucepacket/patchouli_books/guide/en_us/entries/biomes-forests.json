@@ -2,7 +2,7 @@
   "name": "Forests and taigas",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:oak_sapling",
-  "sortnum": 8,
+  "sortnum": 16,
   "pages": [
     {
       "type": "patchouli:text",

@@ -58,16 +58,46 @@
      "icon": "minecraft:stone_sword"
     },
     {
+     "level": 5,
+     "kind": "wield",
+     "title": "Wield copper sword and axe",
+     "icon": "iceandfire:copper_sword"
+    },
+    {
+     "level": 5,
+     "kind": "wield",
+     "title": "Wield flint knives",
+     "icon": "farmersdelight:flint_knife"
+    },
+    {
      "level": 10,
      "kind": "wield",
      "title": "Wield gold swords and axes",
      "icon": "minecraft:golden_sword"
     },
     {
+     "level": 10,
+     "kind": "wield",
+     "title": "Wield golden knives",
+     "icon": "farmersdelight:golden_knife"
+    },
+    {
      "level": 15,
      "kind": "wield",
      "title": "Wield iron swords and axes",
      "icon": "minecraft:iron_sword"
+    },
+    {
+     "level": 15,
+     "kind": "wield",
+     "title": "Wield iron knives and the skillet",
+     "icon": "farmersdelight:iron_knife"
+    },
+    {
+     "level": 20,
+     "kind": "wield",
+     "title": "Wield silver sword and axe",
+     "icon": "iceandfire:silver_sword"
     },
     {
      "level": 25,
@@ -80,6 +110,18 @@
      "kind": "wield",
      "title": "Wield diamond swords and axes",
      "icon": "minecraft:diamond_sword"
+    },
+    {
+     "level": 30,
+     "kind": "wield",
+     "title": "Wield diamond knives",
+     "icon": "farmersdelight:diamond_knife"
+    },
+    {
+     "level": 40,
+     "kind": "wield",
+     "title": "Wield the extendo grip",
+     "icon": "create:extendo_grip"
     },
     {
      "level": 50,
@@ -95,6 +137,12 @@
     },
     {
      "level": 50,
+     "kind": "wield",
+     "title": "Wield netherite knives",
+     "icon": "farmersdelight:netherite_knife"
+    },
+    {
+     "level": 50,
      "kind": "quest",
      "title": "The Fight Pits (quest)",
      "icon": "ftbquests:book"
@@ -104,6 +152,24 @@
      "kind": "perk",
      "title": "+2.00 melee damage and +20% bow damage in all",
      "icon": null
+    },
+    {
+     "level": 55,
+     "kind": "wield",
+     "title": "Wield dragonbone sword and axe",
+     "icon": "iceandfire:dragonbone_sword"
+    },
+    {
+     "level": 60,
+     "kind": "wield",
+     "title": "Wield elemental dragonbone swords",
+     "icon": "iceandfire:dragonbone_sword_fire"
+    },
+    {
+     "level": 75,
+     "kind": "wield",
+     "title": "Wield dragonsteel swords and axes",
+     "icon": "iceandfire:dragonsteel_fire_sword"
     },
     {
      "level": 75,
@@ -142,10 +208,34 @@
      "icon": null
     },
     {
+     "level": 30,
+     "kind": "wear",
+     "title": "Wear the Hunting Belt",
+     "icon": "relics:hunting_belt"
+    },
+    {
+     "level": 40,
+     "kind": "wield",
+     "title": "Wield the Platinum Infused Hatchet",
+     "icon": "illagerinvasion:platinum_infused_hatchet"
+    },
+    {
      "level": 50,
      "kind": "perk",
      "title": "15% melee critical chance in all",
      "icon": null
+    },
+    {
+     "level": 55,
+     "kind": "wear",
+     "title": "Wear the Ring of the Seven Deadly Sins",
+     "icon": "relics:ring_of_the_seven_deadly_sins"
+    },
+    {
+     "level": 60,
+     "kind": "wear",
+     "title": "Wear the Midnight Mantle",
+     "icon": "relics:midnight_mantle"
     },
     {
      "level": 75,
@@ -178,6 +268,12 @@
      "icon": "create:copper_diving_helmet"
     },
     {
+     "level": 5,
+     "kind": "wear",
+     "title": "Wear copper armour",
+     "icon": "iceandfire:armor_copper_metal_helmet"
+    },
+    {
      "level": 10,
      "kind": "wear",
      "title": "Wear chainmail armour",
@@ -202,6 +298,18 @@
      "icon": "minecraft:turtle_helmet"
     },
     {
+     "level": 20,
+     "kind": "wear",
+     "title": "Wear silver armour",
+     "icon": "iceandfire:armor_silver_metal_helmet"
+    },
+    {
+     "level": 25,
+     "kind": "wear",
+     "title": "Wear the Piglin Mask",
+     "icon": "relics:piglin_mask"
+    },
+    {
      "level": 25,
      "kind": "perk",
      "title": "+0.50 armour in all",
@@ -214,6 +322,30 @@
      "icon": "minecraft:diamond_chestplate"
     },
     {
+     "level": 40,
+     "kind": "wear",
+     "title": "Wear the Totem of Freezing (held or in the charm slot)",
+     "icon": "friendsandfoes:totem_of_freezing"
+    },
+    {
+     "level": 45,
+     "kind": "wear",
+     "title": "Wear the Reflective Necklace",
+     "icon": "relics:reflective_necklace"
+    },
+    {
+     "level": 45,
+     "kind": "wear",
+     "title": "Wear the Wildfire Crown",
+     "icon": "friendsandfoes:wildfire_crown"
+    },
+    {
+     "level": 45,
+     "kind": "wield",
+     "title": "Wield bucklers",
+     "icon": "piglinproliferation:buckler"
+    },
+    {
      "level": 50,
      "kind": "wear",
      "title": "Wear netherite armour",
@@ -224,6 +356,12 @@
      "kind": "wear",
      "title": "Wear netherite diving gear",
      "icon": "create:netherite_diving_helmet"
+    },
+    {
+     "level": 50,
+     "kind": "use",
+     "title": "Use the Shield of Retaliation",
+     "icon": "relics:shield_of_retaliation"
     },
     {
      "level": 50,
@@ -280,6 +418,12 @@
      "icon": null
     },
     {
+     "level": 30,
+     "kind": "place",
+     "title": "Place mounted potato cannons",
+     "icon": "aeronautics:mounted_potato_cannon"
+    },
+    {
      "level": 40,
      "kind": "use",
      "title": "Tridents",
@@ -296,6 +440,12 @@
      "kind": "perk",
      "title": "15% ranged critical chance in all",
      "icon": null
+    },
+    {
+     "level": 55,
+     "kind": "use",
+     "title": "Use dragonbone bow",
+     "icon": "iceandfire:dragonbone_bow"
     },
     {
      "level": 75,
@@ -334,6 +484,24 @@
      "icon": null
     },
     {
+     "level": 35,
+     "kind": "wear",
+     "title": "Wear the Jellyfish Necklace",
+     "icon": "relics:jellyfish_necklace"
+    },
+    {
+     "level": 45,
+     "kind": "use",
+     "title": "Use the Sphere of Self-Sacrifice",
+     "icon": "relics:sphere_of_self_sacrifice"
+    },
+    {
+     "level": 50,
+     "kind": "wear",
+     "title": "Hold a totem of undying (to be saved by it)",
+     "icon": "minecraft:totem_of_undying"
+    },
+    {
      "level": 50,
      "kind": "quest",
      "title": "Dragon Slayer II (quest)",
@@ -350,6 +518,12 @@
      "kind": "perk",
      "title": "+10.0 max health in all (5.0 hearts)",
      "icon": null
+    },
+    {
+     "level": 70,
+     "kind": "wear",
+     "title": "Wear the Ghostly Mantle",
+     "icon": "relics:ghostly_mantle"
     },
     {
      "level": 75,
@@ -388,6 +562,12 @@
      "icon": "minecraft:stone_pickaxe"
     },
     {
+     "level": 5,
+     "kind": "use",
+     "title": "Use copper pickaxe and shovel",
+     "icon": "iceandfire:copper_pickaxe"
+    },
+    {
      "level": 10,
      "kind": "use",
      "title": "Mine with gold pickaxes and shovels",
@@ -412,6 +592,12 @@
      "icon": "create:mechanical_drill"
     },
     {
+     "level": 20,
+     "kind": "use",
+     "title": "Use silver pickaxe and shovel",
+     "icon": "iceandfire:silver_pickaxe"
+    },
+    {
      "level": 25,
      "kind": "perk",
      "title": "+12.5% mining speed in all",
@@ -422,6 +608,24 @@
      "kind": "use",
      "title": "Mine with diamond pickaxes and shovels",
      "icon": "minecraft:diamond_pickaxe"
+    },
+    {
+     "level": 35,
+     "kind": "make",
+     "title": "Ore vein finders and the vein atlas",
+     "icon": "createoreexcavation:vein_finder"
+    },
+    {
+     "level": 40,
+     "kind": "use",
+     "title": "Use the Lost Candle",
+     "icon": "illagerinvasion:lost_candle"
+    },
+    {
+     "level": 40,
+     "kind": "machine",
+     "title": "Borehead bearings and rock-cutting wheels",
+     "icon": "offroad:borehead_bearing"
     },
     {
      "level": 50,
@@ -442,6 +646,12 @@
      "icon": null
     },
     {
+     "level": 55,
+     "kind": "use",
+     "title": "Use dragonbone pickaxe and shovel",
+     "icon": "iceandfire:dragonbone_pickaxe"
+    },
+    {
      "level": 65,
      "kind": "machine",
      "title": "Diamond drill heads",
@@ -452,6 +662,12 @@
      "kind": "quest",
      "title": "Dragon Slayer II (quest)",
      "icon": "ftbquests:book"
+    },
+    {
+     "level": 75,
+     "kind": "use",
+     "title": "Use dragonsteel pickaxes and shovels",
+     "icon": "iceandfire:dragonsteel_fire_pickaxe"
     },
     {
      "level": 75,
@@ -490,10 +706,22 @@
      "icon": "minecraft:stone_axe"
     },
     {
+     "level": 5,
+     "kind": "use",
+     "title": "Use copper axe",
+     "icon": "iceandfire:copper_axe"
+    },
+    {
      "level": 10,
      "kind": "use",
      "title": "Chop with gold axes",
      "icon": "minecraft:golden_axe"
+    },
+    {
+     "level": 10,
+     "kind": "chop",
+     "title": "Chop pine trees",
+     "icon": "regions_unexplored:pine_log"
     },
     {
      "level": 15,
@@ -514,6 +742,30 @@
      "icon": "minecraft:jungle_log"
     },
     {
+     "level": 15,
+     "kind": "chop",
+     "title": "Chop palms and giant bamboo",
+     "icon": "regions_unexplored:palm_log"
+    },
+    {
+     "level": 20,
+     "kind": "use",
+     "title": "Use silver axe",
+     "icon": "iceandfire:silver_axe"
+    },
+    {
+     "level": 20,
+     "kind": "chop",
+     "title": "Chop joshua trees and larches",
+     "icon": "regions_unexplored:joshua_log"
+    },
+    {
+     "level": 25,
+     "kind": "chop",
+     "title": "Chop cypresses, ashen trees and bioshroom stems",
+     "icon": "regions_unexplored:cypress_log"
+    },
+    {
      "level": 25,
      "kind": "perk",
      "title": "+12.5% chopping speed in all",
@@ -532,16 +784,46 @@
      "icon": "minecraft:acacia_log"
     },
     {
+     "level": 30,
+     "kind": "chop",
+     "title": "Chop willows",
+     "icon": "regions_unexplored:willow_log"
+    },
+    {
      "level": 35,
      "kind": "chop",
      "title": "Chop dark oak trees",
      "icon": "minecraft:dark_oak_log"
     },
     {
+     "level": 35,
+     "kind": "chop",
+     "title": "Chop eucalyptus",
+     "icon": "regions_unexplored:eucalyptus_log"
+    },
+    {
+     "level": 40,
+     "kind": "chop",
+     "title": "Chop pale oaks",
+     "icon": "minecraft:pale_oak_log"
+    },
+    {
+     "level": 40,
+     "kind": "chop",
+     "title": "Chop magnolias, wisterias and baobabs",
+     "icon": "regions_unexplored:magnolia_log"
+    },
+    {
      "level": 45,
      "kind": "chop",
      "title": "Chop mangroves",
      "icon": "minecraft:mangrove_log"
+    },
+    {
+     "level": 45,
+     "kind": "chop",
+     "title": "Chop maples",
+     "icon": "regions_unexplored:maple_log"
     },
     {
      "level": 50,
@@ -551,9 +833,21 @@
     },
     {
      "level": 50,
+     "kind": "wear",
+     "title": "Wear the Leafy Mantle",
+     "icon": "relics:leafy_mantle"
+    },
+    {
+     "level": 50,
      "kind": "chop",
      "title": "Chop cherry trees",
      "icon": "minecraft:cherry_log"
+    },
+    {
+     "level": 50,
+     "kind": "chop",
+     "title": "Chop kapoks",
+     "icon": "regions_unexplored:kapok_log"
     },
     {
      "level": 50,
@@ -562,10 +856,40 @@
      "icon": null
     },
     {
+     "level": 55,
+     "kind": "use",
+     "title": "Use dragonbone axe",
+     "icon": "iceandfire:dragonbone_axe"
+    },
+    {
+     "level": 55,
+     "kind": "chop",
+     "title": "Chop socotras and blackwoods",
+     "icon": "regions_unexplored:socotra_log"
+    },
+    {
      "level": 60,
      "kind": "chop",
      "title": "Chop crimson and warped stems",
      "icon": "minecraft:crimson_stem"
+    },
+    {
+     "level": 65,
+     "kind": "chop",
+     "title": "Chop brimwood and cobalt (Nether)",
+     "icon": "regions_unexplored:brimwood_log"
+    },
+    {
+     "level": 70,
+     "kind": "chop",
+     "title": "Chop redwoods",
+     "icon": "regions_unexplored:redwood_log"
+    },
+    {
+     "level": 75,
+     "kind": "use",
+     "title": "Use dragonsteel axes",
+     "icon": "iceandfire:dragonsteel_fire_axe"
     },
     {
      "level": 75,
@@ -596,6 +920,12 @@
      "kind": "use",
      "title": "Farm with stone hoes",
      "icon": "minecraft:stone_hoe"
+    },
+    {
+     "level": 5,
+     "kind": "use",
+     "title": "Use copper hoe",
+     "icon": "iceandfire:copper_hoe"
     },
     {
      "level": 5,
@@ -641,6 +971,18 @@
     },
     {
      "level": 20,
+     "kind": "use",
+     "title": "Use silver hoe",
+     "icon": "iceandfire:silver_hoe"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Organic compost",
+     "icon": "farmersdelight:organic_compost"
+    },
+    {
+     "level": 20,
      "kind": "plant",
      "title": "Plant rice",
      "icon": "farmersdelight:rice"
@@ -662,6 +1004,12 @@
      "kind": "use",
      "title": "Farm with diamond hoes",
      "icon": "minecraft:diamond_hoe"
+    },
+    {
+     "level": 30,
+     "kind": "machine",
+     "title": "Sprinklers",
+     "icon": "sliceanddice:sprinkler"
     },
     {
      "level": 30,
@@ -688,10 +1036,28 @@
      "icon": null
     },
     {
+     "level": 55,
+     "kind": "use",
+     "title": "Use dragonbone hoe",
+     "icon": "iceandfire:dragonbone_hoe"
+    },
+    {
      "level": 60,
      "kind": "plant",
      "title": "Plant chorus flowers",
      "icon": "minecraft:chorus_flower"
+    },
+    {
+     "level": 70,
+     "kind": "use",
+     "title": "Use dragon eggs (placing one to hatch it)",
+     "icon": "iceandfire:dragonegg_amethyst"
+    },
+    {
+     "level": 75,
+     "kind": "use",
+     "title": "Use dragonsteel hoes",
+     "icon": "iceandfire:dragonsteel_fire_hoe"
     },
     {
      "level": 75,
@@ -748,6 +1114,24 @@
      "icon": "minecraft:pumpkin_pie"
     },
     {
+     "level": 15,
+     "kind": "make",
+     "title": "Smoking upgrade",
+     "icon": "sophisticatedbackpacks:smoking_upgrade"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Melon juice",
+     "icon": "farmersdelight:melon_juice"
+    },
+    {
+     "level": 20,
+     "kind": "wear",
+     "title": "Wear the Chef's Hat",
+     "icon": "relics:chef_hat"
+    },
+    {
      "level": 20,
      "kind": "make",
      "title": "Cake, rabbit stew, stews, rice dishes and rolls",
@@ -758,6 +1142,24 @@
      "kind": "machine",
      "title": "Encased fans (bulk smoking, blasting and washing)",
      "icon": "create:encased_fan"
+    },
+    {
+     "level": 25,
+     "kind": "machine",
+     "title": "Slicers",
+     "icon": "sliceanddice:slicer"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Feeding upgrade",
+     "icon": "sophisticatedbackpacks:feeding_upgrade"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Hot cocoa (cooking pot)",
+     "icon": "farmersdelight:hot_cocoa"
     },
     {
      "level": 30,
@@ -772,6 +1174,12 @@
      "icon": "farmersdelight:squid_ink_pasta"
     },
     {
+     "level": 40,
+     "kind": "make",
+     "title": "Auto-smoking and advanced feeding upgrades",
+     "icon": "sophisticatedbackpacks:auto_smoking_upgrade"
+    },
+    {
      "level": 45,
      "kind": "make",
      "title": "Golden apples",
@@ -782,6 +1190,18 @@
      "kind": "make",
      "title": "Farmer's Delight feasts",
      "icon": "farmersdelight:roast_chicken_block"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Gleaming salad (a feast)",
+     "icon": "farmersdelight:gleaming_salad_block"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Rice with dragon meat (cooking pot)",
+     "icon": "iceandfire:cooked_rice_with_fire_dragon_meat"
     },
     {
      "level": 99,
@@ -803,6 +1223,12 @@
     },
     {
      "level": 10,
+     "kind": "make",
+     "title": "Golden knives",
+     "icon": "farmersdelight:golden_knife"
+    },
+    {
+     "level": 10,
      "kind": "quest",
      "title": "The Knight's Sword (quest)",
      "icon": "ftbquests:book"
@@ -814,16 +1240,40 @@
      "icon": "minecraft:iron_sword"
     },
     {
+     "level": 15,
+     "kind": "make",
+     "title": "Smelting upgrade",
+     "icon": "sophisticatedbackpacks:smelting_upgrade"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Iron knives and the skillet",
+     "icon": "farmersdelight:iron_knife"
+    },
+    {
      "level": 20,
      "kind": "make",
      "title": "Anvils and hoppers",
      "icon": "minecraft:anvil"
     },
     {
+     "level": 20,
+     "kind": "make",
+     "title": "Silver tools, weapons and armour",
+     "icon": "iceandfire:silver_sword"
+    },
+    {
      "level": 25,
      "kind": "make",
      "title": "Prospector's Plating (for the Prospector set)",
      "icon": "lemursaucepacket:prospector_plating"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Blasting and anvil upgrades",
+     "icon": "sophisticatedbackpacks:blasting_upgrade"
     },
     {
      "level": 35,
@@ -838,16 +1288,58 @@
      "icon": "minecraft:coast_armor_trim_smithing_template"
     },
     {
+     "level": 40,
+     "kind": "make",
+     "title": "Auto-smelting upgrade",
+     "icon": "sophisticatedbackpacks:auto_smelting_upgrade"
+    },
+    {
      "level": 45,
      "kind": "make",
      "title": "Diamond Lattice (for the Compacted Diamond set)",
      "icon": "lemursaucepacket:diamond_lattice"
     },
     {
+     "level": 45,
+     "kind": "make",
+     "title": "Auto-blasting upgrade",
+     "icon": "sophisticatedbackpacks:auto_blasting_upgrade"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Platinum sheets (trim material)",
+     "icon": "illagerinvasion:platinum_sheet"
+    },
+    {
      "level": 50,
      "kind": "make",
      "title": "Netherite gear (the smithing table upgrade)",
      "icon": "minecraft:netherite_sword"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Smithing upgrade",
+     "icon": "sophisticatedbackpacks:smithing_upgrade"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Netherite knives (smithing table)",
+     "icon": "farmersdelight:netherite_knife"
+    },
+    {
+     "level": 55,
+     "kind": "make",
+     "title": "Netherite backpacks (smithing table)",
+     "icon": "sophisticatedbackpacks:netherite_backpack"
+    },
+    {
+     "level": 55,
+     "kind": "make",
+     "title": "Epic dragon seekers (smithing, a nether star)",
+     "icon": "iceandfire:epic_dragon_seeker"
     },
     {
      "level": 60,
@@ -869,9 +1361,27 @@
     },
     {
      "level": 70,
+     "kind": "machine",
+     "title": "Dragonforge cores",
+     "icon": "iceandfire:dragonforge_fire_core_disabled"
+    },
+    {
+     "level": 70,
+     "kind": "make",
+     "title": "Legendary dragon seekers (dragonsteel)",
+     "icon": "iceandfire:legendary_dragon_seeker"
+    },
+    {
+     "level": 70,
      "kind": "quest",
      "title": "Dragon Slayer II (quest)",
      "icon": "ftbquests:book"
+    },
+    {
+     "level": 80,
+     "kind": "make",
+     "title": "Dragonsteel tools, weapons and armour",
+     "icon": "iceandfire:dragonsteel_fire_sword"
     },
     {
      "level": 99,
@@ -892,16 +1402,46 @@
      "icon": "minecraft:leather_helmet"
     },
     {
+     "level": 5,
+     "kind": "make",
+     "title": "Pickup and filter upgrades",
+     "icon": "sophisticatedbackpacks:pickup_upgrade"
+    },
+    {
      "level": 10,
      "kind": "make",
      "title": "Bows",
      "icon": "minecraft:bow"
     },
     {
+     "level": 10,
+     "kind": "make",
+     "title": "Copper backpacks",
+     "icon": "sophisticatedbackpacks:copper_backpack"
+    },
+    {
+     "level": 10,
+     "kind": "make",
+     "title": "Bundles",
+     "icon": "minecraft:black_bundle"
+    },
+    {
      "level": 15,
      "kind": "make",
      "title": "Shields",
      "icon": "minecraft:shield"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Toolboxes",
+     "icon": "create:black_toolbox"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Crafting upgrade and the starter stack upgrade",
+     "icon": "sophisticatedbackpacks:crafting_upgrade"
     },
     {
      "level": 20,
@@ -916,6 +1456,48 @@
      "icon": "lsp_fixes:climbing_boots"
     },
     {
+     "level": 20,
+     "kind": "make",
+     "title": "Item vaults",
+     "icon": "create:item_vault"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Item silos (a vertical item vault)",
+     "icon": "create_connected:item_silo"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Shipping containers (dyed item vaults)",
+     "icon": "createdeco:black_shipping_container"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Iron backpacks",
+     "icon": "sophisticatedbackpacks:iron_backpack"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Restock, deposit and refill upgrades",
+     "icon": "sophisticatedbackpacks:restock_upgrade"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Mechanical arms",
+     "icon": "create:mechanical_arm"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Void, tool swapper, tank and stack tier 1 upgrades",
+     "icon": "sophisticatedbackpacks:void_upgrade"
+    },
+    {
      "level": 30,
      "kind": "make",
      "title": "Diamond tools, weapons and armour",
@@ -928,10 +1510,46 @@
      "icon": "create:mechanical_crafter"
     },
     {
+     "level": 30,
+     "kind": "make",
+     "title": "Pressing upgrades",
+     "icon": "createbackpackupgrades:pressing_upgrade"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Magnet, compacting and advanced pickup/filter upgrades",
+     "icon": "sophisticatedbackpacks:magnet_upgrade"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Diamond knives",
+     "icon": "farmersdelight:diamond_knife"
+    },
+    {
      "level": 35,
      "kind": "make",
      "title": "Aeronaut's Rigging (for the Aeronaut set)",
      "icon": "lemursaucepacket:aeronaut_rigging"
+    },
+    {
+     "level": 35,
+     "kind": "make",
+     "title": "Capacitors (and so electric motors, tesla coils and accumulators)",
+     "icon": "createaddition:capacitor"
+    },
+    {
+     "level": 35,
+     "kind": "make",
+     "title": "Mixing upgrades",
+     "icon": "createbackpackupgrades:mixing_upgrade"
+    },
+    {
+     "level": 35,
+     "kind": "make",
+     "title": "Gold backpacks",
+     "icon": "sophisticatedbackpacks:gold_backpack"
     },
     {
      "level": 40,
@@ -946,16 +1564,82 @@
      "icon": "lemursaucepacket:duelists_filigree"
     },
     {
+     "level": 40,
+     "kind": "make",
+     "title": "Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2",
+     "icon": "sophisticatedbackpacks:advanced_restock_upgrade"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Stock tickers, redstone requesters and factory gauges",
+     "icon": "create:stock_ticker"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Advanced magnet and advanced compacting upgrades",
+     "icon": "sophisticatedbackpacks:advanced_magnet_upgrade"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Dragon horns",
+     "icon": "iceandfire:dragon_horn"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Dragon seekers",
+     "icon": "iceandfire:dragon_seeker"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Horns of Sight",
+     "icon": "illagerinvasion:horn_of_sight"
+    },
+    {
      "level": 50,
      "kind": "make",
      "title": "Ender chests",
      "icon": "minecraft:ender_chest"
     },
     {
+     "level": 50,
+     "kind": "make",
+     "title": "Diamond backpacks",
+     "icon": "sophisticatedbackpacks:diamond_backpack"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Ender linkers",
+     "icon": "sophisticatedcore:ender_linker"
+    },
+    {
+     "level": 55,
+     "kind": "make",
+     "title": "Dragonbone tools, sword and bow",
+     "icon": "iceandfire:dragonbone_sword"
+    },
+    {
      "level": 60,
      "kind": "make",
      "title": "End crystals",
      "icon": "minecraft:end_crystal"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Flamed, iced and lightning dragonbone swords",
+     "icon": "iceandfire:dragonbone_sword_fire"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Dragonscale armour (all twelve colours)",
+     "icon": "iceandfire:armor_amethyst_boots"
     },
     {
      "level": 62,
@@ -968,6 +1652,12 @@
      "kind": "make",
      "title": "Shulker boxes",
      "icon": "minecraft:shulker_box"
+    },
+    {
+     "level": 65,
+     "kind": "make",
+     "title": "Summoning crystals",
+     "icon": "iceandfire:summoning_crystal_fire"
     },
     {
      "level": 70,
@@ -1000,6 +1690,24 @@
    "perLevel": "Enchantments reach further as you go",
    "unlocks": [
     {
+     "level": 20,
+     "kind": "machine",
+     "title": "Mechanical grindstones",
+     "icon": "create_enchantment_industry:mechanical_grindstone"
+    },
+    {
+     "level": 25,
+     "kind": "wear",
+     "title": "Wear the Experience Disperser",
+     "icon": "relics:experience_disperser"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Experience lanterns",
+     "icon": "create_enchantment_industry:experience_lantern"
+    },
+    {
      "level": 35,
      "kind": "machine",
      "title": "Blaze enchanters",
@@ -1012,10 +1720,22 @@
      "icon": "create_enchantment_industry:printer"
     },
     {
+     "level": 55,
+     "kind": "machine",
+     "title": "Blaze forgers",
+     "icon": "create_enchantment_industry:blaze_forger"
+    },
+    {
      "level": 60,
      "kind": "quest",
      "title": "Dragon Slayer II (quest)",
      "icon": "ftbquests:book"
+    },
+    {
+     "level": 65,
+     "kind": "make",
+     "title": "Imbuing tables",
+     "icon": "illagerinvasion:imbuing_table"
     },
     {
      "level": 99,
@@ -1091,15 +1811,39 @@
     },
     {
      "level": 40,
+     "kind": "make",
+     "title": "Alchemical fire pits (fire rings)",
+     "icon": "piglinproliferation:blackstone_fire_ring"
+    },
+    {
+     "level": 40,
      "kind": "brew",
      "title": "Regeneration",
      "icon": "minecraft:ghast_tear"
+    },
+    {
+     "level": 40,
+     "kind": "brew",
+     "title": "Potion of Berserking (goat horn)",
+     "icon": "minecraft:goat_horn"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Alchemy upgrade",
+     "icon": "sophisticatedbackpacks:alchemy_upgrade"
     },
     {
      "level": 45,
      "kind": "brew",
      "title": "Weakness, Harming, Slowness and Invisibility",
      "icon": "minecraft:fermented_spider_eye"
+    },
+    {
+     "level": 45,
+     "kind": "brew",
+     "title": "Potion of Reaching (crab claw)",
+     "icon": "friendsandfoes:crab_claw"
     },
     {
      "level": 50,
@@ -1124,6 +1868,12 @@
      "kind": "quest",
      "title": "Dragon Slayer I (quest)",
      "icon": "ftbquests:book"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Advanced alchemy upgrade",
+     "icon": "sophisticatedbackpacks:advanced_alchemy_upgrade"
     },
     {
      "level": 60,
@@ -1188,6 +1938,12 @@
     {
      "level": 10,
      "kind": "make",
+     "title": "Stonecutter upgrade",
+     "icon": "sophisticatedbackpacks:stonecutter_upgrade"
+    },
+    {
+     "level": 10,
+     "kind": "make",
      "title": "Mossy cobblestone by the eight: cobblestone round a moss block",
      "icon": "minecraft:mossy_cobblestone"
     },
@@ -1202,6 +1958,12 @@
      "kind": "make",
      "title": "Cracked stone bricks without a furnace: stone bricks round a flint",
      "icon": "minecraft:cracked_stone_bricks"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Barbed wire",
+     "icon": "createaddition:barbed_wire"
     },
     {
      "level": 25,
@@ -1226,6 +1988,12 @@
      "kind": "make",
      "title": "Chiseled stone bricks by the eight: stone bricks round an iron nugget",
      "icon": "minecraft:chiseled_stone_bricks"
+    },
+    {
+     "level": 40,
+     "kind": "use",
+     "title": "Use the wand of symmetry",
+     "icon": "create:wand_of_symmetry"
     },
     {
      "level": 40,
@@ -1300,10 +2068,34 @@
    "perLevel": "+0.01% speed and -0.5% fall damage a level (to 50%)",
    "unlocks": [
     {
+     "level": 20,
+     "kind": "wear",
+     "title": "Wear the Springy Boot",
+     "icon": "relics:springy_boot"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Return scrolls",
+     "icon": "waystones:return_scroll"
+    },
+    {
      "level": 25,
      "kind": "wear",
      "title": "Wear the Climbing Boots (a relic)",
      "icon": "lsp_fixes:climbing_boots"
+    },
+    {
+     "level": 25,
+     "kind": "use",
+     "title": "Use the Rider Flute",
+     "icon": "relics:rider_flute"
+    },
+    {
+     "level": 25,
+     "kind": "machine",
+     "title": "Elevator pulleys",
+     "icon": "create:elevator_pulley"
     },
     {
      "level": 25,
@@ -1318,10 +2110,76 @@
      "icon": "minecraft:elytra"
     },
     {
+     "level": 30,
+     "kind": "wear",
+     "title": "Wear the Cut Glass Boot",
+     "icon": "relics:cut_glass_boot"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Warp scrolls",
+     "icon": "waystones:warp_scroll"
+    },
+    {
+     "level": 35,
+     "kind": "wear",
+     "title": "Wear the Roller Skate",
+     "icon": "relics:roller_skate"
+    },
+    {
+     "level": 35,
+     "kind": "place",
+     "title": "Place portstones",
+     "icon": "waystones:black_portstone"
+    },
+    {
      "level": 35,
      "kind": "machine",
      "title": "Train stations and train controls",
      "icon": "create:track_station"
+    },
+    {
+     "level": 40,
+     "kind": "place",
+     "title": "Place warp plates",
+     "icon": "waystones:warp_plate"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Portal scrolls",
+     "icon": "waystones:portal_scroll"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Harnesses (to ride a happy ghast)",
+     "icon": "minecraft:black_harness"
+    },
+    {
+     "level": 45,
+     "kind": "wear",
+     "title": "Wear the Kinetic Belt",
+     "icon": "relics:kinetic_belt"
+    },
+    {
+     "level": 45,
+     "kind": "wear",
+     "title": "Wear the Totem of Illusion (held or in the charm slot)",
+     "icon": "friendsandfoes:totem_of_illusion"
+    },
+    {
+     "level": 45,
+     "kind": "place",
+     "title": "Place waystones (all ten styles)",
+     "icon": "waystones:blackstone_waystone"
+    },
+    {
+     "level": 50,
+     "kind": "use",
+     "title": "Use the warp stone",
+     "icon": "waystones:warp_stone"
     },
     {
      "level": 50,
@@ -1330,10 +2188,34 @@
      "icon": null
     },
     {
+     "level": 55,
+     "kind": "use",
+     "title": "Use the Chorus Staff",
+     "icon": "relics:chorus_staff"
+    },
+    {
+     "level": 55,
+     "kind": "place",
+     "title": "Place sharestones",
+     "icon": "waystones:black_sharestone"
+    },
+    {
+     "level": 60,
+     "kind": "use",
+     "title": "Use the Clot of Time",
+     "icon": "relics:clot_of_time"
+    },
+    {
      "level": 60,
      "kind": "quest",
      "title": "Dragon Slayer II (quest)",
      "icon": "ftbquests:book"
+    },
+    {
+     "level": 65,
+     "kind": "wear",
+     "title": "Wear the Glitchy Mantle",
+     "icon": "relics:glitchy_mantle"
     },
     {
      "level": 75,

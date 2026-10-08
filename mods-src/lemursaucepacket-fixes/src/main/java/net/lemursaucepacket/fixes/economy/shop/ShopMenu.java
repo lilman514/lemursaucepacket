@@ -30,6 +30,7 @@ public class ShopMenu extends ChestMenu {
     ShopMenu(int id, Inventory inventory, Container container, int rows, @Nullable Shops.Session session) {
         super(EconomyContent.SHOP_MENU.get(), id, inventory, container, rows);
         this.session = session;
+        net.lemursaucepacket.fixes.economy.LockedSlots.lock(this, rows * 9);
     }
 
     /** True for a slot in the player's own inventory (the bottom of the screen). */

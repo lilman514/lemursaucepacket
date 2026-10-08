@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:piglin_mask"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 25
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

@@ -2,7 +2,7 @@
   "name": "The End",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:ender_eye",
-  "sortnum": 19,
+  "sortnum": 27,
   "pages": [
     {
       "type": "patchouli:text",

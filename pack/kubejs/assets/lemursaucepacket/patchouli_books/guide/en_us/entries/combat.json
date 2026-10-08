@@ -1,0 +1,88 @@
+{
+  "name": "Combat and PvP: what to know",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "PvP is on everywhere outside the safe zones, and there are no land claims. A death costs a heart, and it drops where you fell for anyone to take (see $(l:lemursaucepacket:lifesteal)Hearts, graves and elimination$(/l)). This page covers what other players can see and do to you, and the tricks the mods add to a fight. The ones that cost the most come first."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Graves aren't locked",
+      "text": "Your grave opens for anyone, so get back to it first.$(br2)$(li)$(bold)Whoever breaks it gets your things.$() They go straight into the breaker's inventory, armour and all, and what doesn't fit drops. The $(l:lemursaucepacket:good-to-know)Latest Death waypoint and the Obituary$(/l) lead you back.$(br)$(li)$(bold)Your Heart isn't in it.$() It lies on the ground beside the grave, for anyone to pick up.$(br)$(li)$(bold)Others can see what's at stake.$() Looking at a grave shows whose it is, when they died and how many stacks it holds.$(br)$(li)$(bold)Only a player can break it.$() Explosions and mobs can't."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Taking things doesn't make them yours.$() An item belongs to whoever had it first ($(l:lemursaucepacket:lifesteal)What is yours$(/l)). Loot from a grave vanishes if its owner is eliminated, and their Seeker's Compass can lead them to it, and to you."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What others can see",
+      "text": "$(#b9a98a)What - Who sees it$()$(br)$(bold)What's in your chests$() - Anyone who looks at a chest, barrel, shulker box, vault or other container: Jade shows nine of its items, up to 54 while they hold Left Shift. Turning Jade off hides it on your own screen only$(br)$(bold)Your health, armour and effects$() - Anyone who looks at you (Jade)$(br)$(bold)Your name$() - Everyone nearby, through walls too, unless you sneak. Your combat level shows under it"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Where you are$() - Your party, on their minimap and as a marker in the world, even far away. Allies too, once both teams have marked each other. Nobody else: the maps have no radar$(br)$(bold)Your tracks and trains$() - Everyone: Create draws track networks and trains on the world map$(br)$(bold)A torch or lantern in your hand$() - Anyone nearby with dynamic lights on (the launcher's default): it lights up the ground around you on their screen$(br)$(bold)Your voice$() - Everyone within 48 blocks, 24 when you whisper ($(l:lemursaucepacket:social)Chat, voice and teams$(/l))"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)A waypoint you share$() - Everyone: sharing posts it in public chat$(br)$(bold)A death$() - Everyone: chat announces each kill by a player, with how many hearts the victim has left$(br2)The one store nobody else can open, or look into, is your $(bold)ender chest$(): every ender chest opens its user's own. Making one takes Crafting 50."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What others can do",
+      "text": "There are no claims, so nothing you build is locked to you.$(br2)$(li)$(bold)Pocket your machines.$() Sneak + right-click with a wrench takes any Create part straight into their inventory, and picks up a minecart contraption whole.$(br)$(li)$(bold)Use your toolbox.$() A placed toolbox serves anyone within 10 blocks who holds $(bold)Left Alt$().$(br)$(li)$(bold)Order from your stock network,$() unless you lock it ($(l:lemursaucepacket:good-to-know)Selling while you're away$(/l))."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Take over a machine.$() A right-click makes them its operator, and from then on it runs at their skill levels, not yours ($(l:lemursaucepacket:good-to-know)Machines run at a level$(/l)). Right-click it again yourself.$(br)$(li)$(bold)Take your waystone$() with a pickaxe ($(l:lemursaucepacket:waystones)Waystones$(/l)).$(br)$(li)$(bold)Ride off with your train or airship.$() Nothing ties them to you.$(br)$(li)$(bold)Push you into machines.$() Crushing wheels (4 damage a hit), saws, drills, rollers, fans blowing through fire or lava, and moving trains all hurt and kill."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Finish you any way they can.$() If a player hit you in the last few seconds, a death from a fall, lava or a machine counts as their kill: chat names them, and for 30 minutes they can't take another heart from you.$(br2)Build where you can keep an eye on things, and keep what you can't afford to lose on you or in your ender chest."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sharing your backpack",
+      "text": "Nobody else can open the backpack you're wearing: every backpack starts closed to other players. To let a teammate reach in:$(br2)1. Open your backpack ($(bold)B$()) and click its settings button ($(bold)Backpack Settings$()).$(br)2. Pick the $(bold)Player$() tab to cover all your backpacks, or the $(bold)Backpack$() tab for just this one.$(br)3. Click $(bold)Another player can NOT open$() so that it reads $(bold)Another player can open$().$(br2)Once it's on, anyone who right-clicks your back opens it, not just your team, and can take what's inside. Switch it back before you go anywhere risky."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Totems",
+      "text": "$(li)$(bold)Wear it in the charm slot.$() A Totem of Undying works from the Curios charm slot ($(bold)G$()), so your off-hand stays free. You have one charm slot, shared with the Experience Disperser; a Kinetic Belt or a Hunting Belt adds more.$(br)$(li)$(bold)It needs Hitpoints 50.$() Below that a Totem of Undying isn't used: you die, a heart goes, and chat says so with a ding (\"Your Totem of Undying didn't save you: it needs Hitpoints 50 (you have 32)\")."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Totems of Freezing and Illusion$() work from the charm slot too, when a hit takes you below half your health. Freezing freezes those around you; Illusion turns you invisible and leaves copies of you behind. $(l:lemursaucepacket:skills)Skills$(/l) lists the level each needs."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Relics in a fight",
+      "text": "$(li)$(bold)They wait for your level.$() A relic's abilities need the level $(l:lemursaucepacket:skills)Skills$(/l) lists for it. Below that its passive abilities do nothing and its active ones won't start, and chat tells you what it needs.$(br)$(li)$(bold)Open its pages.$() Hover a relic and hold $(bold)Left Shift$(). That's where you research and unlock its abilities; some also wait for the relic's own level."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Choose who an ability hits.$() Each ability has an $(bold)Ability Targeting$() bookmark: tick whether it affects you, hostile, neutral or peaceful mobs, tamed creatures, players on your own team (your party) and players on other teams. Set the harmful ones to spare your party.$(br)$(li)$(bold)Some cheat death.$() The Ghostly Mantle's Spectral Escape cancels a killing blow now and then and gives you a few seconds of immortal spectral flight. The Leafy Mantle's Gift of the Grove soaks one up with the leaves around you. A blow that doesn't kill you costs no heart."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Hitting harder",
+      "text": "$(li)$(bold)Crits come from skills.$() Strength is your chance of a critical hit in melee, Ranged with arrows, tridents and anything else you shoot or throw: 0.3 % a level (15 % at 50, about 30 % at 99), plus what your gear and cape add. A crit does 1.5× damage plus your gear's crit damage, with sparks and a sound.$(br)$(li)$(bold)They stack with jump crits.$() The skill crit is rolled on every hit, on top of vanilla's falling jump critical.$(br)$(li)$(bold)Gear above your level$() gives you Weakness (weapons) or Slowness (armour): see $(l:lemursaucepacket:skills)Using gear$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)What a fight trains.$() Each point of melee damage pays 4 Attack, 4 Strength and 1.33 Hitpoints XP; from a projectile, 4 Ranged, 2 Attack and 1.33 Hitpoints. Damage your armour soaks up pays 4 Defence, and damage you take pays 1 Hitpoints."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where you're safe",
+      "text": "$(li)$(bold)Lemurton$() and the $(bold)Kilnfolk's outpost$() at the Fight Pits are safe zones: nobody can hurt anyone inside ($(l:lemursaucepacket:lemurton)A safe zone$(/l)).$(br)$(li)$(bold)The Fight Pits and the Inferno:$() fall there and you're pulled out alive with everything you had ($(l:lemursaucepacket:fight-pits)The Fight Pits$(/l)).$(br)$(li)$(bold)Elvarg's Lair:$() what you carried, your Heart included, waits for you with Ned at the memorial ($(l:lemursaucepacket:elvarg)When she falls$(/l))."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Everywhere else PvP is on, and a party doesn't change that.$() Party members can still hurt each other."
+    }
+  ]
+}

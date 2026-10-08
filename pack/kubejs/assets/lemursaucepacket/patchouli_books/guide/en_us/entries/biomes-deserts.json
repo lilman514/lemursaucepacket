@@ -2,7 +2,7 @@
   "name": "Deserts, badlands and canyons",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:cactus",
-  "sortnum": 12,
+  "sortnum": 20,
   "pages": [
     {
       "type": "patchouli:text",

@@ -26,6 +26,13 @@
       "lemursaucepacket:lumber_axe"
     ],
     "denied": [
+      "iceandfire:copper_axe",
+      "iceandfire:dragonbone_axe",
+      "iceandfire:dragonsteel_fire_axe",
+      "iceandfire:dragonsteel_ice_axe",
+      "iceandfire:dragonsteel_lightning_axe",
+      "iceandfire:silver_axe",
+      "iceandfire:troll_weapon_axe",
       "minecraft:diamond_axe",
       "minecraft:golden_axe",
       "minecraft:iron_axe",
@@ -33,10 +40,10 @@
       "minecraft:stone_axe",
       "minecraft:wooden_axe"
     ],
-    "durabilityMode": "PERCENTAGE",
+    "durabilityMode": "NORMAL",
     "ignoreTools": false,
     "damageMultiplicand": 0.25,
-    "damageRounding": "ROUND",
+    "damageRounding": "ROUND_DOWN",
     "speedMultiplicand": 0,
     "forceToolUsage": false
   },

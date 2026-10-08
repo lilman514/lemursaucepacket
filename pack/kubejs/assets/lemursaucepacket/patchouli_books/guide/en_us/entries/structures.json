@@ -2,7 +2,7 @@
   "name": "Structures and dungeons",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:mossy_stone_bricks",
-  "sortnum": 20,
+  "sortnum": 28,
   "pages": [
     {
       "type": "patchouli:text",

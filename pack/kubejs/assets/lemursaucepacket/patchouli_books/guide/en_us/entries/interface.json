@@ -1,0 +1,119 @@
+{
+  "name": "Your screen: HUD, info and settings",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:item_frame",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Everything on your screen besides the world itself, and where to change it. Most of it can be moved, resized or hidden in ESC → HUD Layout."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What you're looking at",
+      "text": "The panel at the top of the screen (Jade) names the block, mob or player under your crosshair and the mod it comes from, and adds whatever matters about it:$(br2)$(#b9a98a)Look at - Jade shows$()$(br)$(bold)Any block$() - The tool that breaks it, and how far you've broken it$(br)$(bold)A chest, barrel or other container$() - Its first nine items; hold Left Shift for more$(br)$(bold)A furnace, smoker, blast furnace or brewing stand$() - What goes in, the fuel and what comes out$(br)$(bold)A crop or sapling$() - How far it has grown$(br)$(bold)A mob or player$() - Health, armour and status effects"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)An animal$() - Time to grow up or breed again, a pet's owner, a horse's speed and jump$(br)$(bold)Redstone$() - The power level, a repeater's delay, a comparator's mode$(br)$(bold)An enchanting table$() - The enchanting power its bookshelves give$(br)$(bold)A beehive, jukebox, note block or lectern$() - The bees and honey, the disc, the note, the book$(br)$(bold)A grave or a waystone$() - Whose grave it is; the waystone's name"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Its keys.$() Keypad 1 hides or shows the panel: press it if the panel has gone. Hold Left Shift for more detail. Keypad 0 opens Jade's settings, where you choose what it shows and how it looks. No keypad? Rebind them under Jade in Settings → Controls → Key Binds.$(br)$(li)$(bold)Everyone can look.$() Jade shows anyone what's in a container they look at, yours included, and hiding the panel only hides it on your own screen. See $(l:lemursaucepacket:combat)Combat and PvP$(/l).$(br)$(li)$(bold)Move or resize it$() in HUD Layout (below)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)The last line of every item's tooltip names the mod it comes from."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Goggle info, always on",
+      "text": "$(li)$(bold)No goggles needed.$() Create: Cyber Goggles (on by default; it's one of the optional mods on the launcher's Mods tab) gives you the Engineer's Goggles readout, in every game mode. Look at any Create block for its speed, stress, contents and settings, and keep your helmet slot for armour. The numbers on a block's value panel show without a wrench, too.$(br)$(li)$(bold)A whole network's stress.$() Hold Left Shift while you look at a kinetic block for the stress of the whole network it's on."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Its settings.$() Press \\ for Cyber Goggles' settings. Leave the options marked \"May be considered cheating on server\" as they are.$(br)$(li)$(bold)Careful with the wrench.$() Holding a wrench, a left-click on a Create part dismantles it at once. If that catches you out, turn off $(bold)Left Click Fast Dismantle$() under Misc → Wrench in those settings.$(br)$(li)The goggle info moves and resizes in HUD Layout. Create itself: $(l:lemursaucepacket:create)Create basics$(/l) and $(l:lemursaucepacket:create-tips)Create tips$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your HUD layout",
+      "text": "$(li)$(bold)Move and resize.$() ESC → $(bold)HUD Layout$() (or $(#e0ac46)/hudlayout$()) moves and resizes the parts other mods draw: the minimap, Jade, the voice chat icons, the goggle info, the XP gains, pinned quests, status effects and boss bars. Drag a box, roll the wheel over it to resize it, press $(bold)H$() to hide or show it, then $(bold)Save$(). Everything else about it is in $(l:lemursaucepacket:esc-menu)The ESC menu$(/l).$(br)$(li)$(bold)Hide it all.$() F1 hides the HUD until you press it again."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The minimap$() has its own settings on $(bold)Y$(). How the maps and waypoints work: $(l:lemursaucepacket:travel)Getting around$(/l).$(br)$(li)$(bold)Skill XP$() shows on cards under the block info: $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Inventory buttons.$() The small buttons at the top left of your inventory open the quest book and your team screen. Right-click the gear beside them to edit them."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Reading tooltips",
+      "text": "$(li)$(bold)Rarity and stats.$() An item's name is coloured by its rarity, its stats come under it, and the bold last line repeats its rarity and type. Hold $(bold)Shift$() for the details: which skills it trains, how to get it, set bonuses.$(br)$(li)$(bold)Skill levels.$() A red $(bold)❣ Requires$() line names a skill level the item waits for; it turns green with a tick once you have it. A \"Making it needs\" line names the level it takes to make one. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Enchantments$() each carry a short grey line saying what they do."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Advanced tooltips.$() F3 + H adds item ids, durability and whose item it is ($(l:lemursaucepacket:lifesteal)What is yours$(/l)). With them on, Shift also lists the item's tags and Alt its data.$(br)$(li)$(bold)Status effects.$() Click an active effect in your inventory for its page in JEI: what it does and what gives it.$(br)$(li)$(bold)What's inside.$() Shulker boxes, ender chests and backpacks preview their contents: see $(l:lemursaucepacket:inventory-tips)Inventory, sorting and storage$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Video settings",
+      "text": "ESC → $(bold)Settings$() → $(bold)Video Settings$() opens Sodium's options, with a search box and a page for each mod that adds settings: Sodium, Sodium Extra, Iris and more.$(br2)$(li)$(bold)FPS counter.$() Video Settings → Sodium Extra → $(bold)Show FPS$() (off by default). $(bold)Show FPS Extended$() adds the average and the lows, $(bold)Show Coordinates$() adds your position, and $(bold)Overlay Corner$() moves it from the top left.$(br)$(li)$(bold)Pop-ups.$() Sodium Extra's $(bold)Toasts$() switches turn off advancement, recipe, system and tutorial pop-ups."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Name tags.$() Sodium Extra can hide player name tags, on your own screen only.$(br)$(li)$(bold)Signs far away look blank.$() Their text only draws within 16 blocks; raise $(bold)Sign Text Render Distance$() on the Better Block Entities page."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "More frames per second",
+      "text": "The big ones:$(br2)1. $(bold)Render distance$(), in Video Settings.$(br)2. $(bold)Distant Horizons' distance$(), or switch it off (below).$(br)3. $(bold)Shaders off$() with K, or the $(bold)Lite$() preset on the launcher's Settings page.$(br)4. $(bold)More memory$(), on the launcher's Settings page.$(br)5. With shaders on, a lower $(bold)Max Shadow Distance$() in Video Settings; some shader packs set their own."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "6. In a big Create base, Nowheel's $(bold)Tick culling$() and $(bold)Distance culling$() (Mods → Nowheel → Config), both off by default. If a machine stops moving on screen, turn tick culling off again.$(br2)$(bold)In the background the game slows itself down$() (Dynamic FPS): 1 frame a second and a quarter of the volume when you alt-tab, nothing at all while it's minimised, 60 frames with the mouse over the window. It's back to full speed the moment you click in. Bind $(bold)Disable Dynamic FPS (Toggle)$() to keep it at full speed in the background, for recording or for watching a farm on a second screen."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Distant Horizons",
+      "text": "Distant Horizons draws the land past your render distance as simpler scenery, 128 chunks (2,048 blocks) out by default. The server builds it and sends it to you.$(br2)$(li)$(bold)Its settings.$() The small Distant Horizons button beside the FOV slider (ESC → Settings). There: $(bold)Enable Rendering$() (off saves the most frames), $(bold)Quality Preset$() (1 Minimum to 5 Extreme), $(bold)CPU Load$() (1 Minimal Impact to 5 I Paid For The Whole CPU) and $(bold)Show LOD Gen/Import Progress$(). Its distance is $(bold)LOD Chunk Render Distance Radius$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)It fills in bit by bit.$() After a long warp or a fast flight you may see gaps on the horizon for a while, until the land arrives.$(br)$(li)$(bold)It's scenery.$() Out there you see the land and what's built on it, not mobs, players or moving machines.$(br)$(li)$(bold)No fog.$() It switches Minecraft's own fog off.$(br)$(li)$(bold)Disk space.$() It keeps a copy of the far land in the game folder, in $(#e0ac46)Distant_Horizons_server_data$(), which grows as you explore.$(br)$(li)$(bold)With shaders.$() All three of the pack's shader packs draw the far land too."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Shaders",
+      "text": "$(li)$(bold)Off by default.$() Pick $(bold)Lite$(), $(bold)Balanced$() or $(bold)Fancy$() on the launcher's Settings page ($(l:lemursaucepacket:launcher)The launcher$(/l)), or switch them in game: $(bold)K$() turns shaders on and off, $(bold)I$() opens the shader pack list and $(bold)R$() reloads them.$(br)$(li)$(bold)A pack's options.$() In the list, pick a pack and press $(bold)Apply$(); $(bold)Shader Pack Settings...$() holds its own options. Hold Shift and click $(bold)Reset$() there to put them all back.$(br)$(li)$(bold)Something looks wrong?$() Press K to see it without shaders."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Screenshots",
+      "text": "$(li)$(bold)F2$() saves one. The launcher's $(bold)Settings → Files & repair → Screenshots$() opens the folder.$(br)$(li)$(bold)Clean shots.$() F1 hides the HUD; HUD Layout can hide single parts instead.$(br)$(li)$(bold)Zoom.$() Hold $(bold)Z$() to zoom in four times; roll the wheel while you hold it to zoom further or back out, and it remembers where you left it. Just Zoom adds a button for its options to the ESC menu.$(br)$(li)$(bold)Shaders for the shot.$() K on, F2, K off.$(br)$(li)$(bold)Wide views.$() Raise Distant Horizons' distance and quality, then wait in one place while the far land fills in."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The world map as a picture.$() On the world map (M), right-click → $(bold)Export Map as PNG$(): the whole map, or an area you've selected."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Replays and recordings",
+      "text": "$(li)$(bold)Recording is off.$() ReForgedPlay (Replay Mod) is installed but records nothing until you switch it on: Mods → ReForgedPlay → Config → Recording → $(bold)Record Server$(). From then on each session records itself, with an indicator on screen, and when you leave it asks you to name the replay.$(br)$(li)$(bold)Watch and edit$() in the Replay Viewer, from its button on the title screen. Its keys only work in the viewer: see $(l:lemursaucepacket:keybinds)Keybinds$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Rendering a video needs FFmpeg$() installed on your computer. Without it the render stops with \"To render a video, you need to have ffmpeg installed\".$(br)$(li)$(bold)Where they go.$() Replays are saved in the game folder's $(#e0ac46)replay_recordings$(), rendered videos in $(#e0ac46)replay_videos$(). The launcher's $(bold)Settings → Files & repair$() opens the game folder.$(br)$(li)$(bold)Turn Record Server off again$() when you're done: replays get big.$(br)$(li)$(bold)Airships play back too.$() Ships and other moving builds move in replays made with this pack."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Voice.$() The voice chat menu (V) has a record button that saves voice chat to the game folder's $(#e0ac46)voicechat_recordings$(). The server allows it, so others can record what you say, too. See $(l:lemursaucepacket:social)Chat, voice and teams$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "When the screen acts up",
+      "text": "$(#b9a98a)What happens - What to do$()$(br)$(bold)The panel at the top is gone$() - Press Keypad 1 (Jade)$(br)$(bold)JEI's item list is gone$() - Press Ctrl + O$(br)$(bold)The game drops to 1 frame a second$() - It's in the background: click into the window$(br)$(bold)There are gaps in the far land$() - Wait: it fills in$(br)$(bold)Signs far away look blank$() - Their text draws within 16 blocks (Better Block Entities page in Video Settings)$(br)$(bold)Create machines or moving builds draw wrongly$() - Type $(#e0ac46)/create clearRenderBuffers$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Something looks wrong with shaders on$() - Press K to check without them$(br)$(bold)A menu bar appears on the title or ESC screen$() - Ctrl + Alt + C hides it again$(br)$(bold)The game crashed$() - A Crash Assistant window shows what went wrong; $(bold)Upload all...$() puts the logs online and gives you a link to pass on. See the $(l:lemursaucepacket:faq)FAQ$(/l)$(br2)$(bold)Don't bind Project MMO's Open Glossary.$() It has no key on purpose: in this pack it crashes the game. Your inventory's skills panel (E) and ESC → Skills show the same."
+    }
+  ]
+}

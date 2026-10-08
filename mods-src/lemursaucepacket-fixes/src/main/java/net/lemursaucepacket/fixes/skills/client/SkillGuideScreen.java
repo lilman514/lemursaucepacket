@@ -386,7 +386,7 @@ public final class SkillGuideScreen extends Screen {
 
     private static int kindColour(String kind) {
         return switch (kind) {
-            case "wield", "wear", "use" -> 0xFF9DBEE0;
+            case "wield", "wear", "use", "place" -> 0xFF9DBEE0;
             case "make" -> 0xFFE0AC46;
             case "machine" -> 0xFFD9925A;
             case "plant", "chop", "catch" -> 0xFF8FC44A;

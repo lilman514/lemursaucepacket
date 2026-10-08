@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:copper_sword",
+    "iceandfire:copper_axe"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 5
+    },
+    "WEAR": {
+      "attack": 5
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

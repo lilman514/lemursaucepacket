@@ -41,7 +41,7 @@ Skills level up as you use them: mining, chopping, farming, fishing, cooking, cr
 Every stage of progress runs through Create. A first factory is a water wheel, some shafts and cogwheels, and a millstone; then a mechanical press for iron sheets, and a mixer over a blaze burner for **brass**. See [Create basics](create.md).
 
 - **The Knight's Sword** (Mining 10, Smithing 10) is the second main quest, and it's built around Create: Brann the Smith wants a brass ingot, a precision mechanism and two iron ingots.
-- **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters at Farming 15, mechanical crafters at Crafting 30. Anyone can use a machine a friend made. See the table in [Skills](skills.md#create-machines).
+- **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters at Farming 15, mechanical crafters at Crafting 30. Anyone can use a machine a friend made, but it makes things at the levels of whoever last placed or right-clicked it. See the table in [Skills](skills.md#create-machines).
 
 ## After that
 

@@ -4,7 +4,9 @@
 // 420 px wide, twice that on a high-density screen). wiki/render.mjs puts them on the cards instead of the paintings.
 // Uses sharp from art/ (npm install there).
 //
-//   node wiki/photos/collect.mjs --instance <headless>/instance [--dry]
+//   node wiki/photos/collect.mjs --instance <headless>/instance [--dry] [--out <folder>]
+//
+// --out writes the pictures to <folder>/<biomes|creatures>/ instead, to look them over before they replace the wiki's.
 
 import { existsSync, mkdirSync, readdirSync, statSync } from 'node:fs'
 import path from 'node:path'
@@ -22,13 +24,14 @@ if (!shotsDir || !existsSync(shotsDir)) {
   process.exit(1)
 }
 const dry = process.argv.includes('--dry')
+const outRoot = arg('out') ? path.resolve(arg('out')) : path.join(root, 'docs', 'images', 'atlas')
 const sharp = (await import('../../art/node_modules/sharp/lib/index.js')).default
 const KINDS = { b: 'biomes', c: 'creatures', s: 'structures' }
 
 let done = 0
 for (const file of readdirSync(shotsDir).filter((f) => /^atlas_[bcs]_.+\.png$/.test(f) && !f.endsWith('_peek.png')).sort()) {
   const m = /^atlas_([bcs])_(.+)\.png$/.exec(file)
-  const outDir = path.join(root, 'docs', 'images', 'atlas', KINDS[m[1]])
+  const outDir = path.join(outRoot, KINDS[m[1]])
   const out = path.join(outDir, `${m[2]}.webp`)
   const img = sharp(path.join(shotsDir, file))
   const { width, height } = await img.metadata()
@@ -46,7 +49,7 @@ for (const file of readdirSync(shotsDir).filter((f) => /^atlas_[bcs]_.+\.png$/.t
 }
 let bytes = 0
 for (const kind of Object.values(KINDS)) {
-  const dir = path.join(root, 'docs', 'images', 'atlas', kind)
+  const dir = path.join(outRoot, kind)
   if (existsSync(dir)) for (const f of readdirSync(dir)) bytes += statSync(path.join(dir, f)).size
 }
-console.log(`collect: ${done} pictures${dry ? ' (dry run)' : ''}; docs/images/atlas holds ${(bytes / 1e6).toFixed(1)} MB`)
+console.log(`collect: ${done} pictures${dry ? ' (dry run)' : ''}; ${path.relative(root, outRoot) || outRoot} holds ${(bytes / 1e6).toFixed(1)} MB`)

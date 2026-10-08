@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:silver_axe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "woodcutting": 20
+    },
+    "USE": {
+      "woodcutting": 20
+    }
+  }
+}

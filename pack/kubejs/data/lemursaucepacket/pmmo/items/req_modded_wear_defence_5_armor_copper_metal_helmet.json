@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:armor_copper_metal_helmet",
+    "iceandfire:armor_copper_metal_chestplate",
+    "iceandfire:armor_copper_metal_leggings",
+    "iceandfire:armor_copper_metal_boots"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 5
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

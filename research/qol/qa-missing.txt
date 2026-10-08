@@ -1,0 +1,1193 @@
+
+## [create-addons.md] Physics Staff and its Tab key  (words: physics,staff)
+  keybinds.md:126 | Tab | Physics Staff Rotate Mode | Create Simulated |
+  keybinds.md:269 | Create: Cyber Goggles | Preview Filter, Show Honey Glue, Show Super Glue, Use Physics Staff, Use Schematic |
+
+## [create-addons.md] Contraption camera on ships  (words: contraption,camera,ships)
+  lifesteal.md:84 - **Every block you ever placed is removed**, in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched.
+
+## [create-addons.md] Route overlay options (R)  (words: route,overlay)
+  keybinds.md:132 | R | Show Route Overlay Options | Create Railways Navigator |
+
+## [create-addons.md] Fill every part of a copycat (Left Alt)  (words: fill,part,copycat)
+  keybinds.md:127 | Left Alt | Fill Copycat with Material | Create: Copycats+ |
+
+## [create-addons.md] Item Silo  (words: silo)
+  skills.md:113 | 20 | Item silos (a vertical item vault) |
+
+## [create-addons.md] Shipping Containers  (words: shipping,containers)
+  skills.md:114 | 20 | Shipping containers (dyed item vaults) |
+
+## [create-addons.md] Experience Hatch: bank your levels  (words: experience,hatch,bank,levels)
+  gear.md:163 The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with **G**). Shift over one in a menu for it
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+
+## [create-addons.md] Pressing Upgrade  (words: pressing,upgrade)
+  skills.md:120 | 30 | Pressing upgrades |
+
+## [create-addons.md] Mixing Upgrade  (words: mixing,upgrade)
+  skills.md:125 | 35 | Mixing upgrades |
+
+## [create-addons.md] Copycats: copy any block's look  (words: copycats,copy,block's,look)
+  create.md:91 | **Copycats+** | Copycat blocks that take the look of any block |
+  keybinds.md:127 | Left Alt | Fill Copycat with Material | Create: Copycats+ |
+
+## [create-addons.md] Create Deco metal sets  (words: create,deco,metal,sets)
+  create.md:55 - **Mechanical crafters** craft any recipe, laid out in a grid of them. They need **Crafting 30** to make, and make the pack's gear sets and
+  create.md:89 | **Create Deco** | Bricks, metal blocks, lamps, doors and windows for building |
+  gear.md:3 The pack's own Create-made tools, weapons and armour sets: stats, set bonuses, skill levels and how to get each piece.
+  skills.md:59 Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobbl
+  skills.md:63 - **The Mason's Palette** comes with the Construction Cape at 99. Right-click the air to open it and choose a block, then right-click to pla
+  skills.md:413 | 15 | Macaw's roofs, windows, paths, bridges, stairs, fences, lights, doors and furniture, and Create Deco |
+
+## [create-addons.md] Create Deco bricks  (words: create,deco,bricks)
+  create.md:89 | **Create Deco** | Bricks, metal blocks, lamps, doors and windows for building |
+  skills.md:59 Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobbl
+  skills.md:62 - **Decorative blocks in bulk.** Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay
+  skills.md:63 - **The Mason's Palette** comes with the Construction Cape at 99. Right-click the air to open it and choose a block, then right-click to pla
+  skills.md:413 | 15 | Macaw's roofs, windows, paths, bridges, stairs, fences, lights, doors and furniture, and Create Deco |
+  skills.md:414 | 10 | Fancy stone and glass: chiseled, cracked, mossy, cut, smooth, polished and tiled kinds, quartz, prismarine, purpur, end stone bricks,
+
+## [create-addons.md] Locked metal doors  (words: locked,metal,doors)
+  create.md:89 | **Create Deco** | Bricks, metal blocks, lamps, doors and windows for building |
+
+## [create-addons.md] Physics Assembler: making a ship  (words: physics,assembler,making,ship)
+  create.md:84 | **Create Aeronautics** | Airships and other moving builds: lift them with envelopes, push them with propellers, and assemble them with a p
+  quests.md:75 | Skyward | Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation | Maiden
+
+## [create-addons.md] Honey Glue  (words: honey,glue)
+  keybinds.md:269 | Create: Cyber Goggles | Preview Filter, Show Honey Glue, Show Super Glue, Use Physics Staff, Use Schematic |
+
+## [create-addons.md] Ships stay live in flight  (words: ships,stay,live,flight)
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  gear.md:44 Mobility for people who live on airships and rooftops.
+  lifesteal.md:84 - **Every block you ever placed is removed**, in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched.
+
+## [create-addons.md] Hot air lift  (words: lift)
+  create.md:84 | **Create Aeronautics** | Airships and other moving builds: lift them with envelopes, push them with propellers, and assemble them with a p
+
+## [create-addons.md] Shafts through a balloon  (words: shafts,through,balloon)
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  first-week.md:41 Every stage of progress runs through Create. A first factory is a water wheel, some shafts and cogwheels, and a millstone; then a mechanical
+
+## [create-addons.md] Levitite  (words: levitite)
+  quests.md:75 | Skyward | Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation | Maiden
+
+## [create-addons.md] Propellers  (words: propellers)
+  create.md:84 | **Create Aeronautics** | Airships and other moving builds: lift them with envelopes, push them with propellers, and assemble them with a p
+  quests.md:75 | Skyward | Create Aeronautics and Simulated: propellers, envelopes, levitite, the physics assembler, the helm, docking, navigation | Maiden
+
+## [create-addons.md] Wheels  (words: wheels)
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  create.md:20 - Cogwheels of different sizes change speed: a big one turning a small one doubles it.
+  create.md:38 | Crushing wheels | A pair of them crush ore into crushed ore (more ingots per ore), stone into gravel | Made in mechanical crafters |
+  create.md:55 - **Mechanical crafters** craft any recipe, laid out in a grid of them. They need **Crafting 30** to make, and make the pack's gear sets and
+  create.md:56 - **Sequenced assembly** builds an item in steps on a belt: a deployer, a press and a saw each do their part. The **precision mechanism** is
+  create.md:88 | **Create: Connected** | Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators |
+
+## [create-addons.md] Waystones on ships  (words: waystones,ships)
+  commands.md:43 There are no teleport commands: travel is by [waystones](waystones.md), trains, airships, horses and happy ghasts. Admins have more commands
+
+## [create-addons.md] Navigator: route search  (words: navigator,route,search)
+  create.md:90 | **Create: Railways Navigator** | Plans routes across the train network for you |
+  keybinds.md:132 | R | Show Route Overlay Options | Create Railways Navigator |
+
+## [create-addons.md] Route overlay and alerts  (words: route,overlay,alerts)
+  keybinds.md:132 | R | Show Route Overlay Options | Create Railways Navigator |
+
+## [create-addons.md] Train Station Clock  (words: train,station,clock)
+  create.md:72 | 35 | Agility | Train station and train controls |
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  quests.md:84 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory 
+  skills.md:299 | 35 | Agility | Train stations and train controls |
+  structures.md:18 | **Create: Structures Arise** and **Let The Adventure Begin** | Create-themed ruins, airships, train stations, mines, windmills and an oil 
+  structures.md:138 | Lost train station | Create: Structures Arise | Most of the Overworld (185 biomes) |
+
+## [create-addons.md] Mounted Potato Cannon  (words: mounted,potato,cannon)
+  skills.md:76 | 20 | — | Turtle helmet | Crossbows, potato cannon | — |
+  skills.md:276 | 20 | Crossbows and the potato cannon |
+  skills.md:350 | 30 | Ranged | Place mounted potato cannons |
+
+## [create-addons.md] Tesla Coil  (words: tesla,coil)
+  skills.md:124 | 35 | Capacitors (and so electric motors, tesla coils and accumulators) |
+
+## [create-addons.md] Barbed Wire  (words: barbed,wire)
+  skills.md:317 | 25 | Construction | Barbed wire |
+
+## [create-addons.md] Fragile Fluid Tank  (words: fragile,fluid,tank)
+  create.md:30 | Steam engine | A fluid tank of water over blaze burners, with engines on its sides | Big power. Steam engines need **Smithing 35** to make
+  structures.md:92 | Fluid tank | Create: Structures Arise | Most of the Overworld (185 biomes) |
+
+## [create-addons.md] Slicer  (words: slicer)
+  skills.md:295 | 25 | Cooking | Slicers |
+
+## [create-addons.md] Sprinkler  (words: sprinkler)
+  skills.md:298 | 30 | Farming | Sprinklers |
+
+## [create-addons.md] Liquid Fertilizer and rich soil  (words: liquid,fertilizer,rich,soil)
+  quests.md:106 | Homestead | Farmer's Delight basics, new crops, rich soil, breeding | The happy ghast |
+
+## [create-addons.md] Cooking pots by machine  (words: cooking,pots,machine)
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:93 - **Brewing stands and cooking pots** that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for wo
+
+## [create-addons.md] Blaze burners cook  (words: blaze,burners,cook)
+  create.md:30 | Steam engine | A fluid tank of water over blaze burners, with engines on its sides | Big power. Steam engines need **Smithing 35** to make
+  quests.md:72 | Brass Age | Blaze burners, mixing, brass, precision, sturdy sheets, arms, crafters, steam | A rotation speed controller |
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+
+## [create-addons.md] Cutting boards by machine  (words: cutting,boards,machine)
+  first-week.md:44 - **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters a
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+
+## [create-addons.md] Sequenced Pulse Generator  (words: sequenced,pulse,generator)
+  create.md:88 | **Create: Connected** | Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators |
+
+## [create-addons.md] Redstone Link Wildcard  (words: redstone,link,wildcard)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [create-addons.md] Inverted Clutch and Inverted Gearshift  (words: inverted,clutch,gearshift)
+  create.md:21 - A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.
+
+## [create-addons.md] 6-way Gearbox  (words: gearbox)
+  create.md:21 - A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.
+  create.md:88 | **Create: Connected** | Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators |
+
+## [create-addons.md] Crank Wheel  (words: crank,wheel)
+  create.md:88 | **Create: Connected** | Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators |
+
+## [create-addons.md] Dragon's Breath as a fluid  (words: dragon's,breath,fluid)
+  elvarg.md:17 2. Oziach gives you **Dragon Slayer II**. Bring **Wizard Traiborn** the two bottles of dragon's breath and eight blaze powder, and he scries
+  quests.md:41 1. Get an **Anti-dragon Shield** from Mayor Thaddeus. Held in either hand, it lets through only a fifth of a dragon's breath (hers, and Elva
+  quests.md:52 1. No map shows Crandor any more, but **Wizard Traiborn** can scry it with two bottles of **dragon's breath** and eight **blaze powder**. Hi
+  quests.md:97 | Beyond the Dragon | Gateways, chorus, end cities, shulkers, dragon's breath, Nullscape biomes, the End castle | Respawn the dragon |
+
+## [create-addons.md] Alternator  (words: alternator)
+  create.md:85 | **Create Crafts & Additions** | Electricity: alternators, electric motors, accumulators and wires |
+
+## [create-addons.md] Electric Motor  (words: electric,motor)
+  create.md:85 | **Create Crafts & Additions** | Electricity: alternators, electric motors, accumulators and wires |
+  skills.md:124 | 35 | Capacitors (and so electric motors, tesla coils and accumulators) |
+
+## [create-addons.md] Accumulator  (words: accumulator)
+  create.md:85 | **Create Crafts & Additions** | Electricity: alternators, electric motors, accumulators and wires |
+  skills.md:124 | 35 | Capacitors (and so electric motors, tesla coils and accumulators) |
+
+## [create-addons.md] Liquid Blaze Burner  (words: liquid,blaze,burner)
+  create.md:30 | Steam engine | A fluid tank of water over blaze burners, with engines on its sides | Big power. Steam engines need **Smithing 35** to make
+  create.md:41 | Mechanical mixer | Over a basin, mixes: over a blaze burner it makes brass | |
+  create.md:47 Brass is the turning point: most of Create's better parts need it. Mix **copper** and **zinc** in a basin under a mechanical mixer, with a *
+  create.md:86 | **Create Enchantment Industry** | Liquid experience, the blaze enchanter and the printer |
+  first-week.md:41 Every stage of progress runs through Create. A first factory is a water wheel, some shafts and cogwheels, and a millstone; then a mechanical
+  gear.md:137 | Prospector's Pickaxe | Ores come out already smelted | Mining 30 | Mechanical crafting from iron sheets, a blaze burner and copper. |
+
+## [create-addons.md] Tesla coil charging  (words: tesla,coil,charging)
+  skills.md:124 | 35 | Capacitors (and so electric motors, tesla coils and accumulators) |
+
+## [create-addons.md] Liquid Experience units  (words: liquid,experience,units)
+  create.md:86 | **Create Enchantment Industry** | Liquid experience, the blaze enchanter and the printer |
+  lifesteal.md:58 3. Fill with **1,000 mB of Liquid Experience** (Create Enchantment Industry).
+
+## [create-addons.md] Blaze Upgrade template  (words: blaze,upgrade,template)
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+  skills.md:171 | 60 | Copying the netherite upgrade template |
+
+## [create-addons.md] Blaze Enchanter  (words: blaze,enchanter)
+  create.md:73 | 35 | Enchanting | Blaze enchanter |
+  create.md:86 | **Create Enchantment Industry** | Liquid experience, the blaze enchanter and the printer |
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:300 | 35 | Enchanting | Blaze enchanters |
+
+## [create-addons.md] Blaze Forger  (words: blaze,forger)
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+  skills.md:305 | 55 | Enchanting | Blaze forgers |
+
+## [create-addons.md] Printer  (words: printer)
+  create.md:74 | 50 | Enchanting | Printer |
+  create.md:86 | **Create Enchantment Industry** | Liquid experience, the blaze enchanter and the printer |
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:303 | 50 | Enchanting | Printers (they copy enchanted books) |
+
+## [create-addons.md] Experience Lantern  (words: experience,lantern)
+  skills.md:318 | 25 | Enchanting | Experience lanterns |
+
+## [create-addons.md] XP from machines  (words: machines)
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+  create.md:22 - Most processing machines need a minimum speed. If one won't work, check its speed first.
+  create.md:61 Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.
+  create.md:77 The full list is in [Skills](skills.md#create-machines).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+
+## [create-addons.md] Ore Vein Finder  (words: vein,finder)
+  create.md:83 | **Create Ore Excavation** | Ore veins that never run out: find one with a vein finder, drill it with a drilling machine |
+  first-week.md:50 - **Ore veins** never run out: find one with a vein finder and drill it with Create Ore Excavation's drilling machine (its drill heads need 
+  skills.md:320 | 35 | Mining | Ore vein finders and the vein atlas |
+
+## [create-addons.md] Drilling Machine  (words: drilling,machine)
+  create.md:83 | **Create Ore Excavation** | Ore veins that never run out: find one with a vein finder, drill it with a drilling machine |
+  first-week.md:50 - **Ore veins** never run out: find one with a vein finder and drill it with Create Ore Excavation's drilling machine (its drill heads need 
+  skills.md:304 | 50 | Mining | Drill heads for the ore vein drilling machine |
+
+## [create-addons.md] Drill heads  (words: drill,heads)
+  create.md:75 | 50, 65, 80 | Mining | Ore vein drill heads: iron, diamond, netherite |
+  first-week.md:50 - **Ore veins** never run out: find one with a vein finder and drill it with Create Ore Excavation's drilling machine (its drill heads need 
+  skills.md:304 | 50 | Mining | Drill heads for the ore vein drilling machine |
+  skills.md:306 | 65 | Mining | Diamond drill heads |
+  skills.md:308 | 80 | Mining | Netherite drill heads |
+
+## [create-addons.md] Ore Vein Atlas  (words: vein,atlas)
+  skills.md:320 | 35 | Mining | Ore vein finders and the vein atlas |
+
+## [create-addons.md] Borehead tunnel bore  (words: borehead,tunnel,bore)
+  skills.md:302 | 40 | Mining | Borehead bearings and rock-cutting wheels |
+
+## [create-addons.md] Create ruins as early supplies  (words: create,ruins,early,supplies)
+  create.md:92 | **Create: Structures Arise** and **Let The Adventure Begin** | Create-themed ruins to find (see [Structures and dungeons](structures.md)) 
+  lifesteal.md:54 **A new Heart** is a Create sequenced assembly on a **Heart of the Sea** (buried treasure only, one per treasure; treasure maps come from sh
+  quests.md:73 | Banners of the Overworld | Outposts, raids, the Illager fort and Invoker, Create ruins | Raise your banner |
+  structures.md:3 Nearly four hundred structures from twenty mods: dungeons, castles, towers, taverns, villages and ruins, what's in
+  structures.md:18 | **Create: Structures Arise** and **Let The Adventure Begin** | Create-themed ruins, airships, train stations, mines, windmills and an oil 
+  structures.md:56 | Cave Ruins | Create: Let The Adventure Begin | Most of the Overworld (150 biomes) |
+
+## [create-addons.md] Navigator units and overlay  (words: navigator,units,overlay)
+  keybinds.md:132 | R | Show Route Overlay Options | Create Railways Navigator |
+
+## [create-core.md] Ponder tags: what works with what  (words: ponder,tags,works)
+  create.md:13 Hold **W** over any Create item to **Ponder** it: an animated lesson that shows how it works. The tooltip says *Hold [W] to Ponder*. JEI's *
+
+## [create-core.md] Block Rotation Menu  (words: rotation)
+  keybinds.md:271 | Create | Open Block Rotation Menu |
+  quests.md:71 | First Rotation | Water and wind power, presses, fans, belts, saws, drills, zinc, ore veins | 32 andesite casing |
+  quests.md:72 | Brass Age | Blaze burners, mixing, brass, precision, sturdy sheets, arms, crafters, steam | A rotation speed controller |
+  quests.md:89 | Grand Kitchen | Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotation, a netherite knife | Mast
+
+## [create-core.md] Value boxes on blocks  (words: boxes)
+  create.md:88 | **Create: Connected** | Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators |
+  end.md:28 Through the gateway that opens when she dies are the outer islands: vanilla's highlands, midlands and barrens, and Nullscape's void barrens,
+  esc-menu.md:47 Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shift to place one freely. Arrow keys nudge the box you clicked
+  keybinds.md:134 | Left Alt | Access Nearby Toolboxes (hold it near a Toolbox) | Create |
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+  skills.md:108 | 15 | Toolboxes |
+
+## [create-core.md] Interact Opposite Block Face  (words: interact,opposite,face)
+  keybinds.md:121 | Tab | Interact Opposite Block Face | Create: Cyber Goggles |
+
+## [create-core.md] Interact Through Contraptions  (words: interact,through,contraptions)
+  keybinds.md:117 | Left Control | Interact Through Contraptions | Create: Cyber Goggles |
+
+## [create-core.md] Preview Filter  (words: preview,filter)
+  keybinds.md:269 | Create: Cyber Goggles | Preview Filter, Show Honey Glue, Show Super Glue, Use Physics Staff, Use Schematic |
+
+## [create-core.md] Item Vault  (words: vault)
+  lifesteal.md:85 - **Every item that is yours is deleted**, wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box,
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+  skills.md:112 | 20 | Item vaults |
+  skills.md:113 | 20 | Item silos (a vertical item vault) |
+  skills.md:114 | 20 | Shipping containers (dyed item vaults) |
+
+## [create-core.md] Item Hatch  (words: hatch)
+  quests.md:87 | Arcane Works | Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experi
+  skills.md:360 | 40 | Strength | Wield Platinum Infused Hatchet |
+  skills.md:385 | 70 | Farming | Use dragon eggs (placing one to hatch it) |
+  world.md:36 - **Dragons:** Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their h
+
+## [create-core.md] Toolbox  (words: toolbox)
+  keybinds.md:134 | Left Alt | Access Nearby Toolboxes (hold it near a Toolbox) | Create |
+  skills.md:108 | 15 | Toolboxes |
+
+## [create-core.md] Crafting Blueprint  (words: crafting,blueprint)
+  skills.md:87 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking 
+
+## [create-core.md] Schematic Table  (words: schematic,table)
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+
+## [create-core.md] Schematicannon  (words: schematicannon)
+  create.md:70 | 30 | Construction | Schematicannon |
+  gear.md:139 | Builder's Wand | Right-click a block face to extend it with matching blocks from your inventory (up to 32) | Crafting 30 | Mechanical craf
+  lifesteal.md:84 - **Every block you ever placed is removed**, in every dimension, even in chunks nobody has visited since. Blocks you broke are not touched.
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:296 | 30 | Construction | Schematicannons |
+
+## [create-core.md] Wand of Symmetry  (words: wand,symmetry)
+  skills.md:357 | 40 | Construction | Use the wand of symmetry |
+
+## [create-core.md] Create's stone palette  (words: create's,stone,palette)
+  create.md:47 Brass is the turning point: most of Create's better parts need it. Mix **copper** and **zinc** in a basin under a mechanical mixer, with a *
+  first-week.md:44 - **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters a
+  skills.md:63 - **The Mason's Palette** comes with the Construction Cape at 99. Right-click the air to open it and choose a block, then right-click to pla
+  skills.md:65 <figure><img src="images/masons_palette.jpg" alt="The Mason's Palette's picker: block categories down the left, the Stone category's blocks 
+  skills.md:67 - **Why it can't be farmed.** What the palette places drops nothing when broken, and stays put: pistons and Create's contraptions won't move
+  skills.md:414 | 10 | Fancy stone and glass: chiseled, cracked, mossy, cut, smooth, polished and tiled kinds, quartz, prismarine, purpur, end stone bricks,
+
+## [create-core.md] Renewable decorative stone  (words: renewable,decorative,stone)
+  skills.md:62 - **Decorative blocks in bulk.** Construction unlocks recipes of its own at the crafting table: ten stone bricks from eight stone and a clay
+
+## [create-core.md] Hostile mobs take seats  (words: hostile,mobs,take,seats)
+  lemurton.md:46 Inside the walls nobody can break or place blocks, pour lava or water, or start fires. Players can't hurt each other, and hostile mobs don't
+
+## [create-core.md] Laying train track  (words: laying,train,track)
+  quests.md:84 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory 
+
+## [create-core.md] Tracks through the Nether  (words: tracks,through,nether)
+  nether.md:55 | Brass bastion | Create: Structures Arise | Throughout the Nether |
+  nether.md:56 | Citadel | Friends & Foes | Throughout the Nether |
+  nether.md:57 | Dark castle | Create: Structures Arise | Throughout the Nether |
+  nether.md:58 | Dead lord's house | Create: Structures Arise | Throughout the Nether |
+  nether.md:59 | Fortress | YUNG's Better Nether Fortresses | Throughout the Nether |
+  nether.md:60 | Fortress Tower | Structory: Towers | Throughout the Nether |
+
+## [create-core.md] Conductors  (words: conductors)
+  quests.md:84 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory 
+
+## [create-core.md] Train Signals  (words: train,signals)
+  quests.md:84 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory 
+
+## [create-core.md] Station door control  (words: station,door,control)
+  create.md:72 | 35 | Agility | Train station and train controls |
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  skills.md:299 | 35 | Agility | Train stations and train controls |
+
+## [create-core.md] Chain conveyor zip-line  (words: chain,conveyor,zip-line)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [create-core.md] Diving gear  (words: diving,gear)
+  skills.md:73 | 5 | Stone swords, axes | Copper diving gear | — | Stone tools |
+  skills.md:79 | 50 | Netherite, mace | Netherite, netherite diving gear | — | Netherite |
+
+## [create-core.md] Backtank air  (words: backtank)
+  enchanting.md:57 | Capacity | III | X | IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 | Enchanting | more backtank air per level |
+
+## [create-core.md] Train map on the world map  (words: train,world)
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  structures.md:138 | Lost train station | Create: Structures Arise | Most of the Overworld (185 biomes) |
+  structures.md:145 | Mine train | Create: Structures Arise | Most of the Overworld (185 biomes) |
+
+## [create-core.md] Train colours and station icons  (words: train,colours,station,icons)
+  create.md:72 | 35 | Agility | Train station and train controls |
+  faq.md:28 **What do the colours on an item's tooltip mean?** The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gol
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  quests.md:84 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory 
+  skills.md:299 | 35 | Agility | Train stations and train controls |
+  structures.md:18 | **Create: Structures Arise** and **Let The Adventure Begin** | Create-themed ruins, airships, train stations, mines, windmills and an oil 
+
+## [create-core.md] Station markers on vanilla maps  (words: station,markers,vanilla,maps)
+  lifesteal.md:54 **A new Heart** is a Create sequenced assembly on a **Heart of the Sea** (buried treasure only, one per treasure; treasure maps come from sh
+
+## [create-core.md] Potato Cannon  (words: potato,cannon)
+  skills.md:76 | 20 | — | Turtle helmet | Crossbows, potato cannon | — |
+  skills.md:276 | 20 | Crossbows and the potato cannon |
+  skills.md:350 | 30 | Ranged | Place mounted potato cannons |
+
+## [create-core.md] Trains run you over  (words: trains)
+  commands.md:43 There are no teleport commands: travel is by [waystones](waystones.md), trains, airships, horses and happy ghasts. Admins have more commands
+  enchanting.md:9 Enchanting is its own skill. The enchanting table trains it, and the skill decides how far every enchantment can go: most enchantments now r
+  esc-menu.md:61 | Skills | Every skill and your level: hover one for what trains it and what it unlocks next, click it for what every level unlocks ([more](
+  faq.md:28 **What do the colours on an item's tooltip mean?** The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gol
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  README.md:3 A Create survival server that plays like RuneScape: factories, trains and airships, sixteen skills to 99, quests
+
+## [create-core.md] Cyber Goggles cheat-flagged options  (words: cyber,goggles,cheat-flagged)
+  keybinds.md:117 | Left Control | Interact Through Contraptions | Create: Cyber Goggles |
+  keybinds.md:118 | Left Control | Scroll Clipboard Page | Create: Cyber Goggles |
+  keybinds.md:119 | Left Control | Correction Sublevel | Create: Cyber Goggles |
+  keybinds.md:120 | Left Control | Handle Move Sublevel | Create: Cyber Goggles |
+  keybinds.md:121 | Tab | Interact Opposite Block Face | Create: Cyber Goggles |
+  keybinds.md:122 | \ | Open Config | Create: Cyber Goggles |
+
+## [create-core.md] Mechanical Harvester  (words: mechanical,harvester)
+  create.md:67 | 15 | Farming | Mechanical harvester and plough |
+  first-week.md:44 - **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters a
+  gear.md:138 | Harvester's Scythe | Right-click: harvests and replants a 5x5 of ripe crops | Farming 30 | Mechanical crafting from iron sheets, a mechani
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:289 | 15 | Farming | Mechanical harvesters and ploughs |
+
+## [create-core.md] Mechanical Plough  (words: mechanical,plough)
+  create.md:67 | 15 | Farming | Mechanical harvester and plough |
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+  skills.md:289 | 15 | Farming | Mechanical harvesters and ploughs |
+
+## [create-core.md] Spout foods  (words: spout,foods)
+  quests.md:89 | Grand Kitchen | Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotation, a netherite knife | Mast
+
+## [create-core.md] Honey from bees  (words: honey,bees)
+  biomes-plains.md:9 Flat and open, with good sight lines and room to build: most bases start on plains. Villages favour them, horses and donkeys graze on them, 
+
+## [create-core.md] Redstone Link  (words: redstone,link)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [create-core.md] Rose Quartz Lamp  (words: rose,quartz,lamp)
+  lifesteal.md:113 | From | A compass, 3 ender pearls, 4 polished rose quartz, a brass sheet |
+
+## [create-core.md] Machines that stop on redstone  (words: machines,stop,redstone)
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+  create.md:21 - A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.
+  skills.md:59 Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobbl
+  skills.md:417 | 0 | The ground as you found it (dirt, sand, gravel, natural stone, logs, leaves, plants, ores), storage blocks, machines and anything with
+  world.md:39 - **Hard blocks need Hardness:** a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted fr
+
+## [create-core.md] Crafter start pulse  (words: crafter,start,pulse)
+  waystones.md:30 It's meant to be hard. Everything starts with **warp dust**: an ender pearl and an amethyst shard in a basin, mixed over a blaze burner, mak
+
+## [create-core.md] Stress grows with speed  (words: stress,grows,speed)
+  create.md:16 ## Speed and stress
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+
+## [create-core.md] Encasing shafts and cogs  (words: encasing,shafts,cogs)
+  quests.md:124 | 2 Engineer | 60 | 240 | Engineer's Crate | Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases |
+
+## [create-core.md] Belts  (words: belts)
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+  quests.md:71 | First Rotation | Water and wind power, presses, fans, belts, saws, drills, zinc, ore veins | 32 andesite casing |
+  quests.md:124 | 2 Engineer | 60 | 240 | Engineer's Crate | Cogs, shafts, casing, sheets, belts, funnels, zinc, upgrade bases |
+
+## [create-core.md] Andesite vs brass funnel  (words: andesite,brass,funnel)
+  gear.md:38 **How to get:** Mechanical crafting from brass casings, andesite alloy and a lamp.
+  gear.md:148 | Prospector's Plating | A crafting table (Smithing 25): brass sheets, andesite alloy and an iron ingot make two. |
+
+## [create-core.md] Chutes  (words: chutes)
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+
+## [create-core.md] List Filter  (words: filter)
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+  keybinds.md:161 | Right Button | Clear Search Filter (in JEI's search bar) | Just Enough Items |
+  keybinds.md:269 | Create: Cyber Goggles | Preview Filter, Show Honey Glue, Show Super Glue, Use Physics Staff, Use Schematic |
+  skills.md:103 | 5 | Pickup and filter upgrades |
+  skills.md:121 | 30 | Magnet, compacting and advanced pickup/filter upgrades |
+
+## [create-core.md] Fans move mobs and items  (words: fans,move,mobs)
+  lemurton.md:46 Inside the walls nobody can break or place blocks, pour lava or water, or start fires. Players can't hurt each other, and hostile mobs don't
+
+## [create-core.md] Movement modes  (words: movement)
+  keybinds.md:15 ### Movement and actions
+
+## [create-core.md] Bearings  (words: bearings)
+  skills.md:302 | 40 | Mining | Borehead bearings and rock-cutting wheels |
+
+## [create-core.md] Stock Links  (words: stock,links)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [create-core.md] Frogports and chain conveyors  (words: frogports,chain,conveyors)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [create-core.md] Factory Gauge restocking  (words: factory,gauge,restocking)
+  quests.md:83 | Factory Floor | Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler | Factory gauges order
+  skills.md:130 | 45 | Stock tickers, redstone requesters and factory gauges |
+
+## [create-core.md] Factory Gauge recipes  (words: factory,gauge,recipes)
+  quests.md:83 | Factory Floor | Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler | Factory gauges order
+  skills.md:130 | 45 | Stock tickers, redstone requesters and factory gauges |
+
+## [create-core.md] Redstone Requester  (words: redstone,requester)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+  skills.md:130 | 45 | Stock tickers, redstone requesters and factory gauges |
+
+## [create-core.md] Experience Nuggets  (words: experience,nuggets)
+  lifesteal.md:70 - **Recipe:** 1 soul sand, 1 bone block and 2 experience nuggets, mixed in a basin over a **blaze burner**, make 2. That means a trip to the
+
+## [create-core.md] Extendo Grip  (words: extendo,grip)
+  skills.md:356 | 40 | Attack | Wield the extendo grip |
+
+## [create-core.md] Goggle info without goggles  (words: goggle,without,goggles)
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+  gear.md:50 | Aeronaut's Goggles | — |
+  keybinds.md:117 | Left Control | Interact Through Contraptions | Create: Cyber Goggles |
+  keybinds.md:118 | Left Control | Scroll Clipboard Page | Create: Cyber Goggles |
+  keybinds.md:119 | Left Control | Correction Sublevel | Create: Cyber Goggles |
+  keybinds.md:120 | Left Control | Handle Move Sublevel | Create: Cyber Goggles |
+
+## [create-core.md] Network stress at a glance  (words: network,stress,glance)
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+  keybinds.md:123 | Left Shift | Show Stress Network Info | Create: Cyber Goggles |
+
+## [create-core.md] Item info overlay  (words: overlay)
+  keybinds.md:128 | Left Alt | Focus Schematic Overlay | Create |
+  keybinds.md:132 | R | Show Route Overlay Options | Create Railways Navigator |
+  keybinds.md:142 | Keypad 1 | Show Overlay | Jade |
+  keybinds.md:162 | CTRL + O | Show/Hide JEI Overlays (in menus) | Just Enough Items |
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [create-core.md] Cyber Goggles config  (words: cyber,goggles,config)
+  keybinds.md:117 | Left Control | Interact Through Contraptions | Create: Cyber Goggles |
+  keybinds.md:118 | Left Control | Scroll Clipboard Page | Create: Cyber Goggles |
+  keybinds.md:119 | Left Control | Correction Sublevel | Create: Cyber Goggles |
+  keybinds.md:120 | Left Control | Handle Move Sublevel | Create: Cyber Goggles |
+  keybinds.md:121 | Tab | Interact Opposite Block Face | Create: Cyber Goggles |
+  keybinds.md:122 | \ | Open Config | Create: Cyber Goggles |
+
+## [create-core.md] Ponder settings  (words: ponder)
+  create.md:13 Hold **W** over any Create item to **Ponder** it: an animated lesson that shows how it works. The tooltip says *Hold [W] to Ponder*. JEI's *
+  keybinds.md:135 | W | Ponder (hold it over an item in a menu) | Ponder |
+
+## [create-core.md] Create in JEI  (words: create)
+  create.md:3 Create from the first water wheel to brass and automation: power, processing, moving things, the milestones your
+  create.md:8 # Create basics
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  create.md:13 Hold **W** over any Create item to **Ponder** it: an animated lesson that shows how it works. The tooltip says *Hold [W] to Ponder*. JEI's *
+  create.md:47 Brass is the turning point: most of Create's better parts need it. Mix **copper** and **zinc** in a basin under a mechanical mixer, with a *
+  create.md:55 - **Mechanical crafters** craft any recipe, laid out in a grid of them. They need **Crafting 30** to make, and make the pack's gear sets and
+
+## [create-core.md] JEI extras from Cyber Goggles  (words: extras,cyber,goggles)
+  keybinds.md:117 | Left Control | Interact Through Contraptions | Create: Cyber Goggles |
+  keybinds.md:118 | Left Control | Scroll Clipboard Page | Create: Cyber Goggles |
+  keybinds.md:119 | Left Control | Correction Sublevel | Create: Cyber Goggles |
+  keybinds.md:120 | Left Control | Handle Move Sublevel | Create: Cyber Goggles |
+  keybinds.md:121 | Tab | Interact Opposite Block Face | Create: Cyber Goggles |
+  keybinds.md:122 | \ | Open Config | Create: Cyber Goggles |
+
+## [create-core.md] Machines earn no skill XP  (words: machines,earn,skill)
+  capes.md:3 Capes you earn and wear in their own slot: one for every skill at 99, for finished chapters and for real feats. Hang
+  create.md:61 Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.
+  create.md:77 The full list is in [Skills](skills.md#create-machines).
+  first-week.md:44 - **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters a
+  first-week.md:52 - Every skill at 99 earns its **cape**, and the [hiscores](hiscores.md) show how you stack up.
+  hiscores.md:48 | Capes earned | Capes of every kind: skill, quest and feat capes |
+
+## [create-core.md] Machine placements pay no Construction XP  (words: machine,placements,construction)
+  skills.md:59 Construction is building. Every block you place pays XP once it has stood for a minute, and the fancier the block, the more it pays: a cobbl
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+  skills.md:88 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, 
+
+## [create-core.md] Table cloth shops  (words: table,cloth,shops)
+  lemurton.md:32 - **Shops and houses** along the ring streets, with cottages, farms, stables and wizard towers out towards the walls.
+  quests.md:109 | Coin & Commerce | Gold Coins, selling and buying at vendors, trading, table-cloth shops | 10,000 coins |
+  README.md:36 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-targe
+
+## [inventory-ui.md] Ctrl + Shift + click: move every stack of a kind  (words: ctrl,move,stack,kind)
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  keybinds.md:289 - **Move All** (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to 
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] Space + click: move everything  (words: space,move,everything)
+  esc-menu.md:47 Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shift to place one freely. Arrow keys nudge the box you clicked
+  keybinds.md:289 - **Move All** (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to 
+
+## [inventory-ui.md] Space + click an armour piece  (words: space,armour,piece)
+  gear.md:3 The pack's own Create-made tools, weapons and armour sets: stats, set bonuses, skill levels and how to get each piece.
+  gear.md:11 The pack's own tools, weapons and armour, made with Create and gated by [skills](skills.md). Every piece shows its stats and a "How to get" 
+  gear.md:17 <figure><img src="images/gear_sets.jpg" alt="Every armour set's pieces as their icons in game, and the two single pieces"><figcaption><p>The
+  gear.md:19 <figure><img src="images/armor_icons.jpg" alt="Every armour piece in an inventory, a Compacted Netherite set worn"><figcaption><p>Every set'
+  gear.md:63 Fighting armour: every piece sharpens your criticals.
+  nether.md:17 Bring fire resistance if you can brew it, a stack of blocks to bridge lava, and gold armour (one piece is enough) so piglins leave you alone
+
+## [inventory-ui.md] Ctrl + Shift + Q: drop a whole kind  (words: ctrl,drop,whole,kind)
+  lifesteal.md:93 An item becomes yours the first time it enters your inventory. That is the whole rule. It stays yours forever, even if you give it away, sel
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] Restock / Dump keys  (words: restock,dump)
+  keybinds.md:261 | Inventory Essentials | Restock Container, Restock Inventory, Dump to Container |
+
+## [inventory-ui.md] Middle-click sorts backpacks only  (words: middle-click,sorts,backpacks,only)
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] IPN keys are not in Controls  (words: controls)
+  create.md:72 | 35 | Agility | Train station and train controls |
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+  keybinds.md:9 These are the keys you start with. Most are each mod's own default; the pack moves a few so that the ones you use most don't clash. Change a
+  keybinds.md:296 **Edit HUD layout** (Controls > LemurSaucePacket) has no key by default. The ESC menu's HUD Layout button and `/hudlayout` open the same scr
+  skills.md:299 | 35 | Agility | Train stations and train controls |
+
+## [inventory-ui.md] Ctrl + click on hotbar or armour slots  (words: ctrl,hotbar,armour,slots)
+  elvarg.md:60 **Nothing drops and nothing goes into a grave.** Everything you were carrying (inventory, armour, Curios slots) and your lifesteal Heart go 
+
+## [inventory-ui.md] Controller support  (words: controller,support)
+  launcher.md:19 The full list of mods with a link to each one's Modrinth page. Mods marked **Optional** are client-side extras you can switch off (first-per
+
+## [inventory-ui.md] Sort with R  (words: sort)
+  keybinds.md:3 Every key you start with, what it does and which mod it comes from, and how sorting works.
+  keybinds.md:61 | Middle Button | Sort Storage/Backpack (in a backpack or storage screen) | Sophisticated Core |
+  keybinds.md:284 ## Sorting
+  keybinds.md:286 **Sorting** (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:
+  keybinds.md:288 - The buttons at the top right of each half sort it (plain, in columns, in rows).
+  lifesteal.md:98 - Ownership is written on the item, so items owned by different people do not stack together. Sorting an inventory merges the ones that matc
+
+## [inventory-ui.md] A chest gets one set of sort buttons  (words: chest,gets,sort)
+  keybinds.md:286 **Sorting** (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:
+  structures.md:10 The world is full of places to explore: nearly four hundred kinds of structure from twenty mods, on top of vanilla's. **Loot chests are your
+  world.md:34 - **Structures:** When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests
+
+## [inventory-ui.md] Throw All  (words: throw)
+  end.md:15 2. **A stronghold.** Dragon Slayer I's three pieces make a **Map to the Stronghold**, which points at one; thrown eyes of ender lead to it t
+  fight-pits.md:70 | **Kiln-Zek** | A big blaze | Throws fire that Fire Resistance doesn't stop |
+  fight-pits.md:82 * **Slam**: he rises, and a ring of fire burns round where you stand. **Get out of the ring** before he comes down. Inside it, more than hal
+
+## [inventory-ui.md] Gear sets (switched off)  (words: gear,sets)
+  create.md:55 - **Mechanical crafters** craft any recipe, laid out in a grid of them. They need **Crafting 30** to make, and make the pack's gear sets and
+  gear.md:17 <figure><img src="images/gear_sets.jpg" alt="Every armour set's pieces as their icons in game, and the two single pieces"><figcaption><p>The
+  quests.md:110 | The Armory | The pack's own gear: tools, weapons, armour sets | The Compacted Netherite set |
+
+## [inventory-ui.md] Curios slots  (words: curios,slots)
+  elvarg.md:60 **Nothing drops and nothing goes into a grave.** Everything you were carrying (inventory, armour, Curios slots) and your lifesteal Heart go 
+  gear.md:163 The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with **G**). Shift over one in a menu for it
+
+## [inventory-ui.md] One Back slot for backpack or mantle  (words: back,slot,backpack,mantle)
+  economy.md:36 - **Sold the wrong thing?** The hopper slot (Buyback) sells your last few sales back for what you were paid.
+  economy.md:43 Vendors won't buy coins, Coin Pouches, Hearts, backpacks or full containers (empty a shulker box first).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+  esc-menu.md:31 Every normal pause-menu button: Back to Game, Settings, Mods, Advancements, Statistics, Player Reporting, Give Feedback, Report Bugs, Discon
+  esc-menu.md:62 | Backpack | The backpack you're wearing | B |
+
+## [inventory-ui.md] Backpack tiers and recipes  (words: backpack,tiers,recipes)
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  quests.md:105 | Backpack Workshop | Backpack tiers by Create age, upgrades, stack upgrades | The netherite backpack |
+
+## [inventory-ui.md] More than 3 backpacks  (words: backpacks)
+  economy.md:43 Vendors won't buy coins, Coin Pouches, Hearts, backpacks or full containers (empty a shulker box first).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  keybinds.md:52 | B | Open Backpack (the one you're wearing; also on the ESC menu) | Sophisticated Backpacks |
+  keybinds.md:53 | C | Run Inventory Interaction Upgrades | Sophisticated Backpacks |
+  keybinds.md:62 | ALT + Z | Switch Upgrade in the 1st Slot On/Off | Sophisticated Backpacks |
+  keybinds.md:63 | ALT + X | Switch Upgrade in the 2nd Slot On/Off | Sophisticated Backpacks |
+
+## [inventory-ui.md] Open any backpack  (words: backpack)
+  economy.md:43 Vendors won't buy coins, Coin Pouches, Hearts, backpacks or full containers (empty a shulker box first).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+  esc-menu.md:62 | Backpack | The backpack you're wearing | B |
+  getting-started.md:43 - Press **ESC** in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See [The ESC menu
+  keybinds.md:52 | B | Open Backpack (the one you're wearing; also on the ESC menu) | Sophisticated Backpacks |
+
+## [inventory-ui.md] Backpack contents in the tooltip  (words: backpack,contents,tooltip)
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] Search box  (words: search)
+  keybinds.md:9 These are the keys you start with. Most are each mod's own default; the pack moves a few so that the ones you use most don't clash. Change a
+  keybinds.md:54 | Left Shift | Research Relic Under Cursor | Relics |
+  keybinds.md:110 | CTRL + F | Search (in the quest book) | FTB Quests |
+  keybinds.md:152 | Up Arrow | Previous Search (in JEI's search bar) | Just Enough Items |
+  keybinds.md:153 | Down Arrow | Next Search (in JEI's search bar) | Just Enough Items |
+  keybinds.md:161 | Right Button | Clear Search Filter (in JEI's search bar) | Just Enough Items |
+
+## [inventory-ui.md] [ and ] transfer  (words: transfer)
+  keybinds.md:59 | [ | Transfer to Storage (in menus) | Sophisticated Core |
+  keybinds.md:60 | ] | Transfer to Inventory (in menus) | Sophisticated Core |
+  keybinds.md:64 | CTRL + Left Button | Transfer one (in menus) | Inventory Essentials |
+
+## [inventory-ui.md] What's allowed on this server  (words: what's,allowed,server)
+  commands.md:52 | `/seed` | Not allowed here: the world's seed is the server's secret |
+
+## [inventory-ui.md] Stack upgrades  (words: stack,upgrades)
+  quests.md:105 | Backpack Workshop | Backpack tiers by Create age, upgrades, stack upgrades | The netherite backpack |
+  skills.md:118 | 25 | Void, tool swapper, tank and stack tier 1 upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Pickup upgrade  (words: pickup,upgrade)
+  skills.md:103 | 5 | Pickup and filter upgrades |
+  skills.md:121 | 30 | Magnet, compacting and advanced pickup/filter upgrades |
+
+## [inventory-ui.md] Magnet upgrade  (words: magnet,upgrade)
+  skills.md:121 | 30 | Magnet, compacting and advanced pickup/filter upgrades |
+  skills.md:131 | 45 | Advanced magnet and advanced compacting upgrades |
+
+## [inventory-ui.md] Deposit and Restock upgrades  (words: deposit,restock,upgrades)
+  skills.md:116 | 20 | Restock, deposit and refill upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Refill upgrade  (words: refill,upgrade)
+  skills.md:116 | 20 | Restock, deposit and refill upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Compacting upgrade  (words: compacting,upgrade)
+  skills.md:121 | 30 | Magnet, compacting and advanced pickup/filter upgrades |
+  skills.md:131 | 45 | Advanced magnet and advanced compacting upgrades |
+
+## [inventory-ui.md] Void upgrade  (words: void,upgrade)
+  skills.md:118 | 25 | Void, tool swapper, tank and stack tier 1 upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Crafting upgrade  (words: crafting,upgrade)
+  skills.md:109 | 15 | Crafting upgrade and the starter stack upgrade |
+  skills.md:215 | 45 | Alchemy upgrade (crafting) |
+  skills.md:220 | 60 | Advanced alchemy upgrade (crafting) |
+
+## [inventory-ui.md] Anvil and Smithing upgrades  (words: anvil,smithing,upgrades)
+  skills.md:44 | Artisan | Smithing | Smelting metals, smithing gear | Recipes: gold, iron and netherite gear, anvils |
+  skills.md:160 | 25 | Blasting and anvil upgrades |
+
+## [inventory-ui.md] Tank and Experience Pump upgrades  (words: tank,experience,pump,upgrades)
+  skills.md:118 | 25 | Void, tool swapper, tank and stack tier 1 upgrades |
+
+## [inventory-ui.md] Backpack settings  (words: backpack)
+  economy.md:43 Vendors won't buy coins, Coin Pouches, Hearts, backpacks or full containers (empty a shulker box first).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+  esc-menu.md:62 | Backpack | The backpack you're wearing | B |
+  getting-started.md:43 - Press **ESC** in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See [The ESC menu
+  keybinds.md:52 | B | Open Backpack (the one you're wearing; also on the ESC menu) | Sophisticated Backpacks |
+
+## [inventory-ui.md] Item Display  (words: display)
+  keybinds.md:125 | Left Control | Toggle Item To Display | Create: Cyber Goggles |
+
+## [inventory-ui.md] Ender Linker  (words: ender,linker)
+  skills.md:137 | 50 | Ender linkers |
+
+## [inventory-ui.md] Others can open the backpack on your back  (words: backpack,back)
+  economy.md:43 Vendors won't buy coins, Coin Pouches, Hearts, backpacks or full containers (empty a shulker box first).
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+  esc-menu.md:62 | Backpack | The backpack you're wearing | B |
+  getting-started.md:43 - Press **ESC** in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See [The ESC menu
+  keybinds.md:52 | B | Open Backpack (the one you're wearing; also on the ESC menu) | Sophisticated Backpacks |
+
+## [inventory-ui.md] Health, armour and effects at a glance  (words: health,armour,effects,glance)
+  fight-pits.md:81 * **Fire volley**: flames gather in his maw. **Raise your shield toward him** (it has to be up a moment before he fires). If it isn't, about
+  gear.md:13 Stats: **Damage**, **Attack Speed**, **Crit Chance** (added to the Strength/Ranged crit roll), **Crit Damage** (added to the 1.5× critical m
+  lifesteal.md:13 Your hearts are the full hearts of your own health bar: 10 to start, plus one per ten levels of [Hitpoints](skills.md), plus any Hearts you 
+
+## [inventory-ui.md] Alchemy upgrade  (words: alchemy,upgrade)
+  skills.md:215 | 45 | Alchemy upgrade (crafting) |
+  skills.md:220 | 60 | Advanced alchemy upgrade (crafting) |
+
+## [inventory-ui.md] Armour swapped before it breaks  (words: armour,swapped,before,breaks)
+  elvarg.md:55 Everyone in the fight with the map gets **Elvarg's Head**. You then have **a minute and a half** to loot her body before the party is taken 
+  fight-pits.md:81 * **Fire volley**: flames gather in his maw. **Raise your shield toward him** (it has to be up a moment before he fires). If it isn't, about
+  gear.md:165 - **Climbing Boots** (feet slot): step up full blocks without jumping, and each ledge stepped up gives a moment of extra speed. Made at a cr
+  keybinds.md:290 - Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks.
+  world.md:39 - **Hard blocks need Hardness:** a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted fr
+
+## [inventory-ui.md] Feeding upgrade  (words: feeding,upgrade)
+  skills.md:186 | 25 | Feeding upgrade |
+  skills.md:190 | 40 | Auto-smoking and advanced feeding upgrades |
+
+## [inventory-ui.md] Villager trade bookmarks  (words: villager,trade,bookmarks)
+  enchanting.md:74 **Telekinesis** (one level, on mining tools and weapons): Blocks you break and mobs you kill drop straight into your inventory (at your feet
+
+## [inventory-ui.md] Where ores generate  (words: ores,generate)
+  hiscores.md:37 <!-- hiscores: generated by hiscores/build.mjs from hiscores/hiscores.mjs -->
+
+## [inventory-ui.md] Right tool and break progress  (words: tool,break,progress)
+  enchanting.md:39 | Unbreaking | III | X | IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 | Enchanting | tools last (level+1)x |
+  enchanting.md:74 **Telekinesis** (one level, on mining tools and weapons): Blocks you break and mobs you kill drop straight into your inventory (at your feet
+  keybinds.md:290 - Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks.
+  skills.md:14 Your inventory (**E**) has a skills panel on the left: every skill, its level and progress. Hover a row for the XP to the next level; click 
+
+## [inventory-ui.md] Tool swap details  (words: tool,swap,details)
+  faq.md:28 **What do the colours on an item's tooltip mean?** The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gol
+  keybinds.md:262 | Sophisticated Backpacks | Swap tool based on current block/entity, Switch Upgrade in the 3rd Slot On/Off, Switch Upgrade in the 4th Slot O
+  keybinds.md:290 - Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks.
+  skills.md:118 | 25 | Void, tool swapper, tank and stack tier 1 upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Let a tool break on purpose  (words: tool,break,purpose)
+  enchanting.md:39 | Unbreaking | III | X | IV at 15, V at 29, VI at 43, VII at 57, VIII at 71, IX at 85, X at 99 | Enchanting | tools last (level+1)x |
+  enchanting.md:74 **Telekinesis** (one level, on mining tools and weapons): Blocks you break and mobs you kill drop straight into your inventory (at your feet
+  keybinds.md:290 - Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks.
+
+## [inventory-ui.md] Tool Swapper upgrade  (words: tool,swapper,upgrade)
+  keybinds.md:262 | Sophisticated Backpacks | Swap tool based on current block/entity, Switch Upgrade in the 3rd Slot On/Off, Switch Upgrade in the 4th Slot O
+  quests.md:126 | 4 Master | 400 | 1,280 | Master's Cache | Enchanted books, relics, warp and portal scrolls, mechanical arms, gear tools, advanced backpack
+  skills.md:118 | 25 | Void, tool swapper, tank and stack tier 1 upgrades |
+  skills.md:129 | 40 | Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2 |
+
+## [inventory-ui.md] Stonecutter upgrade  (words: stonecutter,upgrade)
+  skills.md:314 | 10 | Construction | Stonecutter upgrade |
+
+## [inventory-ui.md] Placed backpack as machine storage  (words: placed,backpack,machine,storage)
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  keybinds.md:61 | Middle Button | Sort Storage/Backpack (in a backpack or storage screen) | Sophisticated Core |
+  lifesteal.md:66 When you die with a **Grave Essence** in your inventory, hotbar, off-hand or directly inside a backpack you carry, a grave is placed where y
+  lifesteal.md:85 - **Every item that is yours is deleted**, wherever it is: in your inventory, in any chest, machine, vault, backpack, bundle or shulker box,
+  quests.md:125 | 3 Artisan | 150 | 480 | Artisan's Crate | Brass, precision mechanisms, sturdy sheets, machines, backpack upgrades, warp scrolls, feasts |
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] Create details in Jade  (words: create,details,jade)
+  keybinds.md:147 | Left Shift | Show Details | Jade |
+
+## [inventory-ui.md] Linked backpack as a drop-off  (words: linked,backpack,drop-off)
+  quests.md:88 | The Warehouse | Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades | 32 vaults,
+
+## [inventory-ui.md] IPN button editor  (words: editor)
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  keybinds.md:241 | CTRL + T | Open Reward Table Editor (editing quests) | FTB Quests |
+
+## [inventory-ui.md] Fill the crafting grid  (words: fill,crafting,grid)
+  create.md:55 - **Mechanical crafters** craft any recipe, laid out in a grid of them. They need **Crafting 30** to make, and make the pack's gear sets and
+  skills.md:87 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking 
+  skills.md:91 <figure><img src="images/skill_gate.jpg" alt="A crafting table with a mechanical drill's recipe: the drill sits in the result slot, and its 
+
+## [inventory-ui.md] Set filters from JEI  (words: filters)
+  create.md:51 Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arm
+
+## [inventory-ui.md] JEI settings file  (words: file)
+  faq.md:22 **Where are my screenshots?** Launcher → Settings → Files & repair → Screenshots.
+  keybinds.md:286 **Sorting** (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:
+  launcher.md:33 - **Files & repair:** opens the game, screenshots and logs folders. *Repair & play* re-checks every file and re-downloads anything damaged.
+  launcher.md:37 Everything lives in `%APPDATA%\LemurSaucePacket`: `instance` is the game folder (screenshots, logs, options), `minecraft` and `runtime` are 
+  README.md:36 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-targe
+
+## [inventory-ui.md] Status effect pages  (words: status,effect,pages)
+  esc-menu.md:45 - status effects and boss bars
+
+## [inventory-ui.md] Jade settings  (words: jade)
+  esc-menu.md:40 - Jade (the block and mob info at the top)
+  esc-menu.md:49 To resize a box, drag its corner handle, roll the mouse wheel over it, or click it and press **+** or **-**: from half its mod's size to two
+  keybinds.md:141 | Keypad 0 | Open Config | Jade |
+  keybinds.md:142 | Keypad 1 | Show Overlay | Jade |
+  keybinds.md:143 | Keypad 2 | Toggle Fluid | Jade |
+  keybinds.md:144 | Keypad 3 | Show Recipes | Jade |
+
+## [inventory-ui.md] Machine contents at a glance  (words: machine,contents,glance)
+  skills.md:61 - **Saving blocks.** Each Construction level adds a 0.1 % chance that a block you place goes back in your bag (almost 10 % at 99). A block t
+
+## [inventory-ui.md] Guide book navigation  (words: guide,book,navigation)
+  commands.md:23 | `/guide` | Open the LemurSaucePacket Guide, this wiki as a book |
+  esc-menu.md:65 | Guide | This wiki, in a browser inside the game; **Open in browser** opens it in yours | `/guide` (the book) |
+  faq.md:19 **The Guide button shows a blank page.** The Guide is this wiki in a browser inside the game. The browser fetches its engine once, a few hun
+  getting-started.md:45 - You start with the **LemurSaucePacket Guide**, this wiki as a book. ESC → Guide (or `/guide`) opens it anywhere; a book and a brass nugget
+  lifesteal.md:100 Some things are never owned: Hearts, coins, the guide book, the quest book and obituaries.
+
+## [inventory-ui.md] Menu editor bar  (words: editor)
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  keybinds.md:241 | CTRL + T | Open Reward Table Editor (editing quests) | FTB Quests |
+
+## [inventory-ui.md] Invite players  (words: invite)
+  esc-menu.md:63 | Team | FTB Teams: invite friends, share quest progress | ; |
+
+## [inventory-ui.md] Team chat  (words: team,chat)
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+  getting-started.md:43 - Press **ESC** in-game: the menu is a hub for the map, quests, missions, skills, your backpack, your team and voice chat. See [The ESC menu
+  keybinds.md:67 ### Chat, voice and team
+
+## [inventory-ui.md] Open party  (words: party)
+  elvarg.md:12 Elvarg is the fire dragon at the end of [Dragon Slayer II](quests.md#main-quests), the quest Oziach gives you after you slay the Ender Drago
+  elvarg.md:38 The party arrives on her hilltop, in a clearing she has burnt for herself, facing her. A health bar for Elvarg sits at the top of the screen
+  elvarg.md:55 Everyone in the fight with the map gets **Elvarg's Head**. You then have **a minute and a half** to loot her body before the party is taken 
+
+## [inventory-ui.md] Anyone can break your grave  (words: anyone,break,grave)
+  elvarg.md:48 - The lair has rules of its own: you can't break or place blocks, use buckets, blow anything up, or ender-pearl or chorus out of it. Anyone 
+  lifesteal.md:9 Every player has a stock of hearts. Dying costs one and drops it on the ground as an item. Anyone can pick it up and use it, including the p
+  lifesteal.md:28 When you die you lose one heart of maximum health and a **Heart** drops where you fell. If a grave is placed (see below), the Heart is never
+
+## [inventory-ui.md] Breaking a loot chest  (words: breaking,loot,chest)
+  enchanting.md:90 **Found it before you can mine it?** Loot chests, witches and other players' chests hand these out early. You can carry them, keep them in a
+  gear.md:163 The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with **G**). Shift over one in a menu for it
+  lifesteal.md:71 - **Loot:** a few turn up in dungeon chests (Dungeons Arise, YUNG's dungeons and strongholds) and ancient cities.
+  quests.md:95 | Cartographer | Waypoints and maps, Lootr chests, When Dungeons Arise, Structory towers, Towers of the Wild, Dungeons and Taverns, Regions 
+  structures.md:10 The world is full of places to explore: nearly four hundred kinds of structure from twenty mods, on top of vanilla's. **Loot chests are your
+  where-to-find.md:13 Relics never appear in recipes: the mod rolls them into loot chests that match each relic's theme (any chest for some, only nether- or villa
+
+## [inventory-ui.md] Centennial Trophy  (words: centennial,trophy)
+  where-to-find.md:76 | Centennial Trophy | Lootr: Trophy reward |
+
+## [inventory-ui.md] Pin quests to the HUD  (words: quests)
+  economy.md:11 The server has one currency: **Gold Coins**. Quests pay them, missions pay Coin Pouches that open into them, and vendors in the towns pay th
+  economy.md:37 - The bottom row also has your **purse**, **Talk to …** (back to their dialog), and **Quests**: where you are in any quest line that vendor 
+  elvarg.md:12 Elvarg is the fire dragon at the end of [Dragon Slayer II](quests.md#main-quests), the quest Oziach gives you after you slay the Ender Drago
+  elvarg.md:16 1. Finish **Dragon Slayer I**: the Ender Dragon (see [Quests](quests.md#main-quests)). Keep the Anti-dragon Shield the mayor gave you for it
+  end.md:24 Her fight is Dragon Slayer I's last step: everyone on the quest who is near her when she falls gets her head for Oziach. Destroy the end cry
+  esc-menu.md:3 A hub for the map, quests, missions, skills, your backpack, your team, capes and voice chat, with every vanilla button kept.
+
+## [inventory-ui.md] Item tasks don't take items  (words: tasks,don't,take)
+  quests.md:55 2. At the **Crandor memorial**, speak to **Ned**. His window takes you up to **Elvarg** in a den of your own, so she's always there for whoe
+  skills.md:87 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking 
+
+## [inventory-ui.md] Quest notifications and tracker settings  (words: quest,notifications,tracker)
+  keybinds.md:268 | FTB Quests | Open Quests, Pinned Quest Tracker Visibility |
+
+## [inventory-ui.md] Quest book navigation extras  (words: quest,book,navigation,extras)
+  capes.md:53 Finish a chapter of the quest book (its last quest hands the cape over).
+  capes.md:91 | Completionist Cape *(animated)* | Every chapter of the quest book finished. | +10% speed |
+  esc-menu.md:18 | Quests | The quest book | — |
+  fight-pits.md:41 Three main quests, one after another (they show up in your book under **Main Quests** once someone gives them to you; see [Quests](quests.md
+  fight-pits.md:45 * the **Ashen Trial**: 15 blazes, 15 magma cubes and 8 wither skeletons, in the Nether (the quest book counts them);
+  first-week.md:24 - [ ] **Open the quest book** (ESC → Quests). The first chapter, *Landfall*, is the tutorial and pays coins too.
+
+## [inventory-ui.md] Shops ignore the inventory mods  (words: shops,ignore,inventory)
+  README.md:36 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-targe
+
+## [pack-systems.md] Debug key list  (words: debug)
+  keybinds.md:176 | F3 | Show the debug screen (built into Minecraft, can't be changed) | Minecraft |
+
+## [pack-systems.md] Trains through Nether portals  (words: trains,through,nether,portals)
+  nether.md:14 Build a portal: a frame of obsidian four wide and five tall, lit with flint and steel. Obsidian needs **Hardness III** on your pickaxe to mi
+  nether.md:55 | Brass bastion | Create: Structures Arise | Throughout the Nether |
+  nether.md:56 | Citadel | Friends & Foes | Throughout the Nether |
+  nether.md:57 | Dark castle | Create: Structures Arise | Throughout the Nether |
+  nether.md:58 | Dead lord's house | Create: Structures Arise | Throughout the Nether |
+  nether.md:59 | Fortress | YUNG's Better Nether Fortresses | Throughout the Nether |
+
+## [pack-systems.md] Trial chamber vaults  (words: trial,chamber,vaults)
+  structures.md:225 | Trial Chambers | Vanilla | Most of the Overworld (202 biomes) |
+
+## [pack-systems.md] Ice and Fire axes fell trees too  (words: fire,axes,fell,trees)
+  skills.md:40 | Gathering | Woodcutting | Logs | Faster chopping; axes, and the rarer trees |
+
+## [pack-systems.md] Heart events in chat  (words: heart,events,chat)
+  elvarg.md:60 **Nothing drops and nothing goes into a grave.** Everything you were carrying (inventory, armour, Curios slots) and your lifesteal Heart go 
+  lifesteal.md:140 | `/lsp lifesteal log [lines]` | Admin: recent heart events |
+
+## [pack-systems.md] Machines earn no skill XP  (words: machines,earn,skill)
+  capes.md:3 Capes you earn and wear in their own slot: one for every skill at 99, for finished chapters and for real feats. Hang
+  create.md:61 Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.
+  create.md:77 The full list is in [Skills](skills.md#create-machines).
+  first-week.md:44 - **Create's machines unlock with skills**, a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters a
+  first-week.md:52 - Every skill at 99 earns its **cape**, and the [hiscores](hiscores.md) show how you stack up.
+  hiscores.md:48 | Capes earned | Capes of every kind: skill, quest and feat capes |
+
+## [travel-video.md] The shoulder view is the third F5 press  (words: shoulder,view,third,press)
+  keybinds.md:184 | Left Arrow | Adjust Camera Left (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:185 | Right Arrow | Adjust Camera Right (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:186 | Up Arrow | Adjust Camera In (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:187 | Down Arrow | Adjust Camera Out (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:188 | Page Up | Adjust Camera Up (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:189 | Page Down | Adjust Camera Down (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+
+## [travel-video.md] Swap shoulder and free look need a key  (words: swap,shoulder,free,look,need)
+  keybinds.md:277 | Shoulder Surfing Reloaded | Swap Shoulder, Toggle First Person, Toggle Third Person (Front), Toggle Third Person (Back), Free Look, Toggle
+
+## [travel-video.md] Shoulder Surfing settings  (words: shoulder,surfing)
+  keybinds.md:184 | Left Arrow | Adjust Camera Left (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:185 | Right Arrow | Adjust Camera Right (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:186 | Up Arrow | Adjust Camera In (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:187 | Down Arrow | Adjust Camera Out (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:188 | Page Up | Adjust Camera Up (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:189 | Page Down | Adjust Camera Down (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+
+## [travel-video.md] Just Zoom options  (words: zoom)
+  keybinds.md:99 | = | Zoom In (in the quest book) | FTB Quests |
+  keybinds.md:100 | - | Zoom Out (in the quest book) | FTB Quests |
+  keybinds.md:101 | 0 | Reset Zoom (in the quest book) | FTB Quests |
+  keybinds.md:183 | Z | Zoom | Just Zoom |
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+  keybinds.md:265 | Xaero's World Map | Toggle Chunk Claims, Open Server Settings, Zoom In (alternative), Zoom Out (alternative), Toggle Dimension |
+
+## [travel-video.md] Auto walk settings  (words: auto,walk)
+  keybinds.md:26 | ` | Toggle Auto Walk (press it again, or walk backwards, to stop) | Duper's AutoWalk |
+  keybinds.md:260 | Duper's AutoWalk | Open Configuration |
+
+## [travel-video.md] Your own name, favourite and group  (words: name,favourite,group)
+  hiscores.md:21 Each table shows the top ten and where you are. Click a name for that player's hiscores, a group to see its tables, or **On the website** to
+
+## [travel-video.md] Name and edit a waystone  (words: name,edit,waystone)
+  waystones.md:17 Waystones you've activated show on your minimap and world map, with their names. So do global waystones and sharestones. Ones you haven't fo
+  waystones.md:24 - With **Silk Touch** it keeps its name, and everyone who activated it can still warp to it. Without, it becomes a fresh waystone of your ow
+
+## [travel-video.md] Who can see your waystone  (words: waystone)
+  biomes-mountains.md:9 Tectonic makes the mountains here much taller and steeper than vanilla's, and Terralith adds cliffs, spires, highlands and volcanoes to them
+  commands.md:43 There are no teleport commands: travel is by [waystones](waystones.md), trains, airships, horses and happy ghasts. Admins have more commands
+  elvarg.md:18 3. At the memorial, **touch its waystone**, so you can come straight back after the fight, or after a bad one.
+  elvarg.md:20 <figure><img src="images/memorial_front.jpg" alt="The Crandor memorial: a stone dais with a dragon skull, braziers and a waystone"><figcapti
+  faq.md:21 **How do I get home fast?** A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with
+  fight-pits.md:24 The Kilnfolk's outpost stands in the volcanic lands nearest Lemurton (a volcanic crater or peak, or failing those basalt cliffs, an ashen sa
+
+## [travel-video.md] How long warping takes  (words: long,warping,takes)
+  capes.md:16 - **Your collection:** ESC → Capes, or `/capes`. Every cape there is: the ones you have, how to earn the rest (with how far along you are), 
+
+## [travel-video.md] Warp plate clicks  (words: warp,plate,clicks)
+  skills.md:355 | 40 | Agility | Place warp plates |
+  waystones.md:38 | Warp plate | Mechanical crafters | A dormant shard, a precision mechanism, 3 warp dust, 4 stone bricks |
+  waystones.md:56 | Warp plate | The plate it's paired with (pair two with an attuned shard) | Nothing |
+
+## [travel-video.md] Pairing warp plates: one way per shard  (words: pairing,warp,plates,shard)
+  skills.md:355 | 40 | Agility | Place warp plates |
+  waystones.md:30 It's meant to be hard. Everything starts with **warp dust**: an ender pearl and an amethyst shard in a basin, mixed over a blaze burner, mak
+  waystones.md:34 | Warp stone | Mechanical crafters | A precision mechanism, 4 warp dust, 4 amethyst shards |
+  waystones.md:38 | Warp plate | Mechanical crafters | A dormant shard, a precision mechanism, 3 warp dust, 4 stone bricks |
+  waystones.md:39 | Dormant shard | Basin and press | 2 warp dust, flint |
+  waystones.md:56 | Warp plate | The plate it's paired with (pair two with an attuned shard) | Nothing |
+
+## [travel-video.md] Warp plate speed  (words: warp,plate,speed)
+  skills.md:355 | 40 | Agility | Place warp plates |
+  waystones.md:38 | Warp plate | Mechanical crafters | A dormant shard, a precision mechanism, 3 warp dust, 4 stone bricks |
+  waystones.md:56 | Warp plate | The plate it's paired with (pair two with an attuned shard) | Nothing |
+
+## [travel-video.md] Waystones on airships  (words: waystones,airships)
+  commands.md:43 There are no teleport commands: travel is by [waystones](waystones.md), trains, airships, horses and happy ghasts. Admins have more commands
+
+## [travel-video.md] Teammates don't show either  (words: teammates,don't,either)
+  lemurton.md:18 You don't wake up in the city: it stands a few minutes' walk from spawn (usually 400 to 700 blocks), out of sight on purpose, in open green 
+
+## [travel-video.md] Make a waypoint  (words: waypoint)
+  esc-menu.md:20 | Waypoints | Your Xaero waypoints | U |
+  keybinds.md:80 ### Maps and waypoints
+  keybinds.md:85 | J | New Waypoint | Xaero's Minimap |
+  keybinds.md:86 | U | Open Waypoint Screen (also on the ESC menu) | Xaero's Minimap |
+  keybinds.md:87 | Keypad + | Quick Waypoint | Xaero's Minimap |
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] Quick temporary waypoint  (words: quick,temporary,waypoint)
+  keybinds.md:87 | Keypad + | Quick Waypoint | Xaero's Minimap |
+
+## [travel-video.md] Waypoint list  (words: waypoint)
+  esc-menu.md:20 | Waypoints | Your Xaero waypoints | U |
+  keybinds.md:80 ### Maps and waypoints
+  keybinds.md:85 | J | New Waypoint | Xaero's Minimap |
+  keybinds.md:86 | U | Open Waypoint Screen (also on the ESC menu) | Xaero's Minimap |
+  keybinds.md:87 | Keypad + | Quick Waypoint | Xaero's Minimap |
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] Teleport buttons don't work here  (words: teleport,don't,work)
+  lemurton.md:46 Inside the walls nobody can break or place blocks, pour lava or water, or start fires. Players can't hurt each other, and hostile mobs don't
+  world.md:15 - **Waystones, but no teleport commands.** Waystones stand in villages, on towers and at shrines. Activate one and you can warp back to it l
+
+## [travel-video.md] Waypoints in the world  (words: waypoints,world)
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+  quests.md:95 | Cartographer | Waypoints and maps, Lootr chests, When Dungeons Arise, Structory towers, Towers of the Wild, Dungeons and Taverns, Regions 
+
+## [travel-video.md] World map controls  (words: world,controls)
+  first-week.md:51 - **Trains** (Agility 35 for stations and controls) and **airships** carry you and your goods across the world.
+
+## [travel-video.md] Waypoint keys on the map  (words: waypoint)
+  esc-menu.md:20 | Waypoints | Your Xaero waypoints | U |
+  keybinds.md:80 ### Maps and waypoints
+  keybinds.md:85 | J | New Waypoint | Xaero's Minimap |
+  keybinds.md:86 | U | Open Waypoint Screen (also on the ESC menu) | Xaero's Minimap |
+  keybinds.md:87 | Keypad + | Quick Waypoint | Xaero's Minimap |
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] The map only shows where you've been  (words: only,you've,been)
+  lemurton.md:20 Once you've been there, touch the **Lemurton waystone** in the market square. It's a global waystone, so it's on everyone's list from the st
+
+## [travel-video.md] Minimap settings  (words: minimap)
+  esc-menu.md:39 - the minimap
+  esc-menu.md:49 To resize a box, drag its corner handle, roll the mouse wheel over it, or click it and press **+** or **-**: from half its mod's size to two
+  faq.md:26 **Can I add my own mods?** Client-side ones (minimap tweaks and the like): yes, through the launcher's Mods tab if they're listed as optiona
+  getting-started.md:49 <figure><img src="images/hud_market.jpg" alt="The game screen in Lemurton: hotbar, hearts, minimap and block info"><figcaption><p>Your scree
+  keybinds.md:84 | Y | Minimap Settings | Xaero's Minimap |
+  keybinds.md:85 | J | New Waypoint | Xaero's Minimap |
+
+## [travel-video.md] Info under the minimap  (words: minimap)
+  esc-menu.md:39 - the minimap
+  esc-menu.md:49 To resize a box, drag its corner handle, roll the mouse wheel over it, or click it and press **+** or **-**: from half its mod's size to two
+  faq.md:26 **Can I add my own mods?** Client-side ones (minimap tweaks and the like): yes, through the launcher's Mods tab if they're listed as optiona
+  getting-started.md:49 <figure><img src="images/hud_market.jpg" alt="The game screen in Lemurton: hotbar, hearts, minimap and block info"><figcaption><p>Your scree
+  keybinds.md:84 | Y | Minimap Settings | Xaero's Minimap |
+  keybinds.md:85 | J | New Waypoint | Xaero's Minimap |
+
+## [travel-video.md] Enlarge the minimap  (words: enlarge,minimap)
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] Chunk grid  (words: chunk,grid)
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] Light overlay  (words: light,overlay)
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+
+## [travel-video.md] Slime chunks won't work  (words: slime,chunks,won't,work)
+  create.md:22 - Most processing machines need a minimum speed. If one won't work, check its speed first.
+  keybinds.md:264 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, 
+  skills.md:93 - **Brewing stands and cooking pots** that hoppers feed work at the level of whoever last opened them. An ingredient you aren't ready for wo
+
+## [travel-video.md] Aiming in the shoulder view  (words: aiming,shoulder,view)
+  keybinds.md:184 | Left Arrow | Adjust Camera Left (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:185 | Right Arrow | Adjust Camera Right (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:186 | Up Arrow | Adjust Camera In (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:187 | Down Arrow | Adjust Camera Out (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:188 | Page Up | Adjust Camera Up (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+  keybinds.md:189 | Page Down | Adjust Camera Down (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
+
+## [travel-video.md] Torches give you away  (words: torches,give,away)
+  lifesteal.md:93 An item becomes yours the first time it enters your inventory. That is the whole rule. It stays yours forever, even if you give it away, sel
+
+## [travel-video.md] Redstone switch for a warp plate  (words: redstone,switch,warp,plate)
+  skills.md:355 | 40 | Agility | Place warp plates |
+  waystones.md:38 | Warp plate | Mechanical crafters | A dormant shard, a precision mechanism, 3 warp dust, 4 stone bricks |
+  waystones.md:56 | Warp plate | The plate it's paired with (pair two with an attuned shard) | Nothing |
+
+## [travel-video.md] Warp plates carry items and mobs  (words: warp,plates,carry,mobs)
+  skills.md:355 | 40 | Agility | Place warp plates |
+  waystones.md:58 | Epitaph | Carry one when you die, and you can warp back to where you fell, once | Nothing |
+  waystones.md:62 A warp takes you and any animal on your lead, not freight. Trains and airships still carry the goods.
+
+## [travel-video.md] Dynamic light settings  (words: dynamic,light)
+  keybinds.md:274 | LambDynamicLights | Toggle First-Person Lighting |
+
+## [travel-video.md] FPS counter  (words: counter)
+  keybinds.md:204 | J | Roll Counterclockwise (in the replay viewer) | Replay Mod |
+
+## [travel-video.md] Hide name tags for yourself  (words: hide,name,tags,yourself)
+  skills.md:270 | 20 | Land treasure: enchanted books and gear, name tags, saddles, nautilus shells (below it, treasure comes up as a fish) |
+
+## [travel-video.md] See your own body  (words: body)
+  economy.md:49 3. When you're both happy, click **Accept trade**. Any change to either offer resets both acceptances and starts a 3-second deal timer, so n
+  elvarg.md:12 Elvarg is the fire dragon at the end of [Dragon Slayer II](quests.md#main-quests), the quest Oziach gives you after you slay the Ender Drago
+  elvarg.md:55 Everyone in the fight with the map gets **Elvarg's Head**. You then have **a minute and a half** to loot her body before the party is taken 
+  fight-pits.md:19 Both are solo and instanced: every run gets a pit of its own, so nobody can join in or steal it. **If you fall, you're pulled out alive with
+  first-week.md:25 - [ ] **Find a place to live** outside the walls: Lemurton is a safe zone where nobody can build. PvP is on everywhere else and there are no
+  lemurton.md:46 Inside the walls nobody can break or place blocks, pour lava or water, or start fires. Players can't hurt each other, and hostile mobs don't
+
+## [travel-video.md] Voice icons  (words: voice,icons)
+  keybinds.md:263 | Simple Voice Chat | Push to Talk, Whisper, Hide Voice Chat Icons, Voice Chat Settings, Group Management, Toggle Recording, Adjust Volumes 
+
+## [travel-video.md] Voice groups  (words: voice,groups)
+  esc-menu.md:64 | Voice | Voice chat settings, groups and your microphone | V |
+
+## [travel-video.md] Turn one player down  (words: turn)
+  biomes.md:23 - **Creatures** and **Structures.** Only the ones that make the biome worth a visit: zombies and dungeons turn up nearly everywhere, so they
+  create.md:10 Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. **Something makes things turn** (a w
+  create.md:18 Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on
+  create.md:20 - Cogwheels of different sizes change speed: a big one turning a small one doubles it.
+  create.md:21 - A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.
+  create.md:31 | Hand crank | Turn it yourself | For testing |
+
+## [travel-video.md] Hide voice icons  (words: hide,voice,icons)
+  keybinds.md:263 | Simple Voice Chat | Push to Talk, Whisper, Hide Voice Chat Icons, Voice Chat Settings, Group Management, Toggle Recording, Adjust Volumes 
+
+## [travel-video.md] Heads in chat  (words: heads,chat)
+  esc-menu.md:41 - the voice chat icon and the voice group heads
+
+## [travel-video.md] Far land is built by the server  (words: land,built,server)
+  biomes-deserts.md:9 Hot and dry: it never rains here. Deserts hold cacti, dead bushes, husks (zombies that make you hungry), camels and armadillos, and desert t
+  economy.md:55 - `/lsp values get <item>` and `/lsp values top`: the value table. It's rebuilt on `/reload`, from `data/*/lsp_economy/*.json` (the pack's c
+  end.md:10 The End is where Dragon Slayer I ends: the Ender Dragon on her island, rebuilt by YUNG's Better End Island. Past her, Nullscape remakes the 
+  fight-pits.md:132 * `/lsp kiln where`: where Kiln Hollow is (or its land, before it's built); `/lsp kiln goto <player>`; `/lsp kiln pass <player>`.
+  lemurton.md:12 **Lemurton** is the realm's first city, built in the style of RuneScape's Varrock and Lumbridge. The server raises it the first time a new w
+  world.md:20 **Lemurton** is a walled city in the style of RuneScape's Varrock and Lumbridge, built by the server the first time a new world starts. It i
+
+## [travel-video.md] spark  (words: spark)
+  enchanting.md:4 icon: wand-magic-sparkles
+
+## [travel-video.md] Where video settings are  (words: video)
+  faq.md:17 **My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders ar
+  faq.md:24 **How do I record a video?** ReForgedPlay (Replay Mod) is installed but records nothing until you turn it on: Mods → ReForgedPlay → Config →
+
+## [travel-video.md] Distant Horizons settings  (words: distant,horizons)
+  faq.md:17 **My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders ar
+
+## [travel-video.md] Far land fills in while you stay  (words: land,fills,while,stay)
+  elvarg.md:16 1. Finish **Dragon Slayer I**: the Ender Dragon (see [Quests](quests.md#main-quests)). Keep the Anti-dragon Shield the mayor gave you for it
+  esc-menu.md:53 The editor hides the live HUD and shows sample content inside each part while you place it. Drag to move, press **H** or use **Show/Hide** t
+  faq.md:19 **The Guide button shows a blank page.** The Guide is this wiki in a browser inside the game. The browser fetches its engine once, a few hun
+  lifesteal.md:79 - **Wait for a revive.** Leave the server or stay on the death screen. A friend can bring you back: they hold a Heart and run `/revive <your
+  quests.md:48 While you're on her island, catch some of her breath in glass bottles: Dragon Slayer II needs two.
+
+## [travel-video.md] What Distant Horizons costs  (words: distant,horizons,costs)
+  faq.md:17 **My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders ar
+
+## [travel-video.md] Shaders and far land  (words: shaders,land)
+  faq.md:17 **My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders ar
+
+## [travel-video.md] Shader pack screen  (words: shader,pack)
+  keybinds.md:182 | I | Shaderpack Selection Screen | Iris |
+  launcher.md:29 - **Shaders** (Graphics): Off, **Lite** (MakeUp Ultra Fast, for any PC), **Balanced** (Complementary Reimagined, keeps the Minecraft look) o
+
+## [travel-video.md] The game slows when you look away  (words: game,slows,look,away)
+  launcher.md:29 - **Shaders** (Graphics): Off, **Lite** (MakeUp Ultra Fast, for any PC), **Balanced** (Complementary Reimagined, keeps the Minecraft look) o
+
+## [travel-video.md] Nothing to set  (words: nothing)
+  economy.md:41 Prices come from what something is made of. Raw materials have a set value: a wheat is 1 coin, an iron ingot 10, a diamond 150. Things stone
+  elvarg.md:4 friends; if she gets you, nothing drops and nothing is lost.
+  elvarg.md:60 **Nothing drops and nothing goes into a grave.** Everything you were carrying (inventory, armour, Curios slots) and your lifesteal Heart go 
+  end.md:19 Bring blocks to bridge the void, a stack of ender pearls, a bow, and slow falling if you can brew it. The void is a long way down, and nothi
+  faq.md:24 **How do I record a video?** ReForgedPlay (Replay Mod) is installed but records nothing until you turn it on: Mods → ReForgedPlay → Config →
+  fight-pits.md:4 Infernal Cape. You fight alone, in a pit of your own, and nothing is lost if you fall.
+
+## [travel-video.md] Voice recording  (words: voice,recording)
+  keybinds.md:263 | Simple Voice Chat | Push to Talk, Whisper, Hide Voice Chat Icons, Voice Chat Settings, Group Management, Toggle Recording, Adjust Volumes 
+
+## [travel-video.md] Map as an image  (words: image)
+  capes.md:10 <figure><img src="images/capes_sheet.webp" alt="Every cape's design as its texture in game, with its name; the legendary ones move as they d
+  capes.md:18 <figure><img src="images/capes_collection.jpg" alt="The Capes screen: every cape by kind with how many are earned, and the chosen cape's pic
+  capes.md:20 <figure><img src="images/capes_slot.jpg" alt="The inventory with the Curios panel open: the Infernal Cape in the Cape slot, and an Agility C
+  capes.md:22 <figure><img src="images/capes_stands.jpg" alt="Five armor stands in Lemurton's square, each in a gear set with a cape hung on its back"><fi
+  capes.md:30 <figure><img src="images/capes_skill.jpg" alt="The skill capes as worn in game"><figcaption><p>The skill capes, worn</p></figcaption></figur
+  capes.md:55 <figure><img src="images/capes_quest.jpg" alt="The quest capes as worn in game"><figcaption><p>The quest capes, worn</p></figcaption></figur

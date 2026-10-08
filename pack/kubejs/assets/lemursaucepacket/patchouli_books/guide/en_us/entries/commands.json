@@ -19,7 +19,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)$(#e0ac46)/skills$()$() - The skills screen: every skill and your level. $(l:lemursaucepacket:skills)More$(/l)$(br)$(bold)$(#e0ac46)/skills <skill>$()$() - That skill's guide: what every level unlocks"
+      "text": "$(bold)$(#e0ac46)/skills$()$() - The skills screen: every skill and your level. $(l:lemursaucepacket:skills)More$(/l)$(br)$(bold)$(#e0ac46)/skills <skill>$()$() - That skill's guide: what every level unlocks$(br)$(bold)$(#e0ac46)/fallingtree toggle$()$() - Switch the Lumber Axe's whole-tree felling off or on for yourself"
     },
     {
       "type": "patchouli:text",

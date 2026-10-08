@@ -1,0 +1,19 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonsteel_fire_pickaxe",
+    "iceandfire:dragonsteel_ice_pickaxe",
+    "iceandfire:dragonsteel_lightning_pickaxe",
+    "iceandfire:dragonsteel_fire_shovel",
+    "iceandfire:dragonsteel_ice_shovel",
+    "iceandfire:dragonsteel_lightning_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 75
+    },
+    "USE": {
+      "mining": 75
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:silver_sword",
+    "iceandfire:silver_axe"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 20
+    },
+    "WEAR": {
+      "attack": 20
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

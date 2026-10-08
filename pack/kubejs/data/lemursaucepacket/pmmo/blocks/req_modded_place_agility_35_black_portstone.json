@@ -1,0 +1,26 @@
+{
+  "override": false,
+  "isTagFor": [
+    "waystones:black_portstone",
+    "waystones:blue_portstone",
+    "waystones:brown_portstone",
+    "waystones:cyan_portstone",
+    "waystones:gray_portstone",
+    "waystones:green_portstone",
+    "waystones:light_blue_portstone",
+    "waystones:light_gray_portstone",
+    "waystones:lime_portstone",
+    "waystones:magenta_portstone",
+    "waystones:orange_portstone",
+    "waystones:pink_portstone",
+    "waystones:purple_portstone",
+    "waystones:red_portstone",
+    "waystones:white_portstone",
+    "waystones:yellow_portstone"
+  ],
+  "requirements": {
+    "PLACE": {
+      "agility": 35
+    }
+  }
+}

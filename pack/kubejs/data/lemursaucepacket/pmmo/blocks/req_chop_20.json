@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "regions_unexplored:joshua_log",
+    "regions_unexplored:joshua_wood",
+    "regions_unexplored:stripped_joshua_log",
+    "regions_unexplored:stripped_joshua_wood",
+    "regions_unexplored:larch_log",
+    "regions_unexplored:larch_wood",
+    "regions_unexplored:stripped_larch_log",
+    "regions_unexplored:stripped_larch_wood"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 20
+    }
+  }
+}

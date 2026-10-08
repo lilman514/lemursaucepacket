@@ -2,7 +2,7 @@
   "name": "Quests",
   "category": "lemursaucepacket:wiki",
   "icon": "ftbquests:book",
-  "sortnum": 26,
+  "sortnum": 34,
   "pages": [
     {
       "type": "patchouli:text",

@@ -66,7 +66,9 @@ const WHERE_BY_NAME = [
   [/^key\.shouldersurfing\.adjust_camera_/, 'in the over-the-shoulder view'],
   [/^create\.keyinfo\.toolbelt$/, 'hold it near a Toolbox'],
   [/^key\.ponder\.ponder$/, 'hold it over an item in a menu', 'menu'],
-  [/^key\.replaymod\.(?!settings$)/, 'in the replay viewer']
+  [/^key\.replaymod\.(?!settings$)/, 'in the replay viewer'],
+  // Their conflict context says any menu, but they only act in Sophisticated's own screens (tryCallTransferToStorage).
+  [/^key\.sophisticatedcore\.transfer_to_(storage|inventory)$/, 'in a backpack or storage screen']
 ]
 const WHERE_BY_CATEGORY = {
   'ftbquests.gui': 'in the quest book',

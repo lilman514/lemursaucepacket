@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:reflective_necklace"
+  ],
+  "requirements": {
+    "WEAR": {
+      "defence": 45
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

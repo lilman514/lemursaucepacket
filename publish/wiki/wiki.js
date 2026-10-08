@@ -272,4 +272,45 @@
     input?.addEventListener('input', apply)
     apply()
   })
+
+  // ------------------------------------------------------------- the FAQ
+  // Questions are cards that open (docs.mjs faqCards): a link to one opens it, the filter keeps the ones that match
+  // (opened, so the answer shows) and hides groups left empty, and one button opens or closes them all.
+  const faqs = $$('details.faq')
+  if (faqs.length) {
+    const openTarget = () => {
+      const id = decodeURIComponent(location.hash.slice(1))
+      const d = id && document.getElementById(id)
+      if (d && d.matches('details.faq')) {
+        d.open = true
+        d.scrollIntoView({ block: 'start', behavior: 'instant' })
+      }
+    }
+    openTarget()
+    window.addEventListener('hashchange', openTarget)
+    const filter = $('.faq-filter')
+    const all = $('.faq-all')
+    const none = $('.faq-none')
+    filter?.addEventListener('input', () => {
+      const q = filter.value.trim().toLowerCase()
+      let shown = 0
+      for (const d of faqs) {
+        const hit = !q || d.textContent.toLowerCase().includes(q)
+        d.hidden = !hit
+        if (hit) shown++
+        if (q && hit) d.open = true
+      }
+      for (const h of $$('.wk-article h2')) {
+        let any = false
+        for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) if (n.matches('details.faq') && !n.hidden) any = true
+        h.hidden = !any
+      }
+      if (none) none.hidden = shown > 0
+    })
+    all?.addEventListener('click', () => {
+      const open = faqs.some((d) => !d.open)
+      faqs.forEach((d) => (d.open = open))
+      all.textContent = open ? 'Close all' : 'Open all'
+    })
+  }
 })()

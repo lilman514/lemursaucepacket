@@ -1,0 +1,84 @@
+{
+  "name": "Chat, voice and teams",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:goat_horn",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Voice chat here is proximity voice: whoever is near hears you, friend or foe. Groups make talk private. Parties come in two kinds: a team shares quests and your place on the map, a skill party shares skill XP."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Setting up voice",
+      "text": "Press $(bold)V$(). The first time, a setup guide opens: pick your microphone, your speaker and how you talk. Until you finish it, your screen says \"Press V to set up\".$(br2)$(#b9a98a)How you talk - What to know$()$(br)$(bold)Push to Talk$() - Hold a key while you speak. It has no key until you pick one, in the guide or in Controls → Key Binds → Voice Chat → Push to Talk$(br)$(bold)Voice Activation$() - The mic opens when you speak; the guide's microphone test checks it hears you. You start muted when the guide closes: press $(bold)O$() to unmute"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Skipped the guide?$() You're on Push to Talk with no key, so nobody hears you until you bind one.$(br)$(li)$(bold)No microphone?$() You can still listen. Voice chat is optional in the launcher's Mods tab, on by default.$(br)$(li)$(bold)Nothing works?$() See the $(l:lemursaucepacket:faq)FAQ$(/l): voice needs UDP."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Who hears you",
+      "text": "$(li)$(bold)Everyone within 48 blocks,$() enemies too. Voices come from where the speaker stands.$(br)$(li)$(bold)Whisper$() carries 24 blocks. Its key is unbound: bind $(bold)Whisper$() in Controls. With Push to Talk, holding Whisper opens your mic too.$(br)$(li)$(bold)O$() mutes your mic when you use Voice Activation. With Push to Talk there's nothing to mute: just let go.$(br)$(li)$(bold)N$() switches voice chat off: you hear nobody and nobody hears you.$(br)$(li)$(bold)A group changes who hears you:$() see below."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)You can be recorded.$() The server allows voice recording, so anyone who hears you can keep it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Private groups",
+      "text": "Open $(bold)V$() and click $(bold)Group$() (the Group Management key is unbound, since $(bold)G$() opens your Curios slots). Type a name, add a password if you like, pick a type and click $(bold)Create Group$().$(br2)$(#b9a98a)Type - Outsiders hear you - You hear outsiders$()$(br)$(bold)Normal$() - No - Yes$(br)$(bold)Open$() - Yes - Yes$(br)$(bold)Isolated$() - No - No"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)For private talk,$() make it Isolated, with a password.$(br)$(li)$(bold)Joining.$() Others pick your group in V → Group and type the password. Or invite them: $(#e0ac46)/voicechat invite <player>$(), or the invite button in Social Interactions ($(bold)P$()). They click $(bold)ACCEPT$() in chat, which lets them in without the password.$(br)$(li)$(bold)Commands.$() $(#e0ac46)/voicechat join <group> [password]$() and $(#e0ac46)/voicechat leave$(), or leave from the group screen."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)In a group,$() members' heads show at the top left, outlined while they talk; move them with $(l:lemursaucepacket:esc-menu)HUD Layout$(/l). Players outside see a group icon next to your head: they can tell you're in one, but not what you say."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Voice settings",
+      "text": "$(bold)V → Settings$() has the rest:$(br2)$(li)$(bold)Activation:$() the method, and the voice activation threshold, automatic or set by hand.$(br)$(li)$(bold)Tests:$() the microphone test lets you hear yourself; the speaker test plays a sound.$(br)$(li)$(bold)Noise suppression$() and $(bold)automatic gain$() are on. Keep gain on, so everyone hears you at the same volume.$(br)$(li)$(bold)3D audio:$() Normal, Reduced or Off.$(br)$(li)$(bold)Adjust Volumes:$() search for a player and drag their slider. 0 % mutes them for you only; past 100 % makes them louder. Its key is unbound."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Icons$() by names and on your screen show who's talking or whispering, a muted mic, voice switched off, and \"not connected\" (no voice mod, or blocked by a firewall). Hide them with the button in the V menu; move yours with HUD Layout."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Chat",
+      "text": "$(li)$(bold)T$() opens chat and $(bold)/$() starts a command; $(#e0ac46)/msg <player> <message>$() is private. See $(l:lemursaucepacket:commands)Commands$(/l).$(br)$(li)$(bold)Heads in chat.$() Each message shows its sender's head (Chat Heads, optional in the launcher).$(br)$(li)$(bold)Heart news goes to everyone:$() who took a heart from whom and how many they have left, who used whose Heart, who brought whom back, and who lost their last heart."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Sharing a waypoint$() ($(bold)U$(), pick it, $(bold)Share$()) posts it in public chat for everyone to add. Never share your base. The $(bold)Teleport$() button doesn't work here: there are no teleport commands.$(br)$(li)$(bold)Hide someone's chat$() in Social Interactions ($(bold)P$()). It hides it for you only.$(br)$(li)$(bold)Trading$() goes through $(#e0ac46)/trade$(): see $(l:lemursaucepacket:economy)Trading with other players$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Two kinds of party",
+      "text": "They're separate, so make both with your friends.$(br2)$(#b9a98a)Party - Start one with - It shares$()$(br)$(bold)Team (FTB Teams)$() - $(bold);$() or ESC → Team - Quests, and where you are on the map$(br)$(bold)Skill party (Project MMO)$() - $(#e0ac46)/pmmo party create <name>$() - Skill XP, within 50 blocks$(br2)Neither stops PvP: party members can still hurt each other."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your team",
+      "text": "$(li)$(bold)The team screen:$() $(bold);$() (semicolon), ESC → $(bold)Team$(), or $(bold)My Team$() in your inventory.$(br)$(li)$(bold)Create a Party$() and give it a name (a description and colour if you like). The owner and officers invite with $(bold)Invite Player(s)$(); the player gets $(bold)Accept$() and $(bold)Decline$() buttons in chat.$(br)$(li)$(bold)Quests are shared:$() everyone gets the quest and can claim its rewards ($(l:lemursaucepacket:quests)Quests$(/l)).$(br)$(li)$(bold)You see each other.$() Party members show on each other's minimap and as a marker in the world, even far away."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Team chat.$() The chat toggle in the team screen sends what you type to your party until you toggle it back. $(#e0ac46)/ftbteams msg <text>$() sends one message.$(br)$(li)$(bold)Allies.$() $(bold)Manage Allies$() marks players as your team's allies. Once two teams have marked each other, their players show on each other's maps too. Allies share nothing else."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Running it.$() The owner can promote members to officer, demote them, kick them or hand over ownership, and has to hand it over before leaving. $(bold)Leave Party$() and $(bold)Disband Party$() are in the same screen. $(bold)Free to Join$(), in the team's properties, lets anyone join without an invite.$(br)$(li)$(bold)Relics$() count your party as your own team when you choose who an ability hits ($(l:lemursaucepacket:combat)Relics in a fight$(/l)).$(br)$(li)$(bold)Commands:$() $(#e0ac46)/ftbteams party create <name>$(), $(#e0ac46)/ftbteams party invite <player>$(), $(#e0ac46)/ftbteams party leave$()."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Skill party",
+      "text": "$(li)$(#e0ac46)/pmmo party create <name>$(), then $(#e0ac46)/pmmo party invite <player>$(): they accept in chat. $(#e0ac46)/pmmo party list$() shows who's in; $(#e0ac46)/pmmo party leave$() leaves.$(br)$(li)$(bold)Everyone in it within 50 blocks gets the skill XP any of you earns, in full,$() so training side by side pays each of you. Brewing and Construction XP isn't shared.$(br)$(li)It's a different party from your team, so being in one doesn't put you in the other."
+    }
+  ]
+}

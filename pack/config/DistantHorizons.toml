@@ -1,6 +1,6 @@
 # LemurSaucePacket: Distant Horizons as the pack ships it. Only what the pack changes is here; everything else is
 # Distant Horizons' own default (some, like its thread count, are worked out for each computer). Players can change
-# all of it in Video Settings > Distant Horizons. The server reads the [server] part.
+# all of it with the Distant Horizons button beside the FOV slider in Settings. The server reads the [server] part.
 _version = 5
 
 [client]

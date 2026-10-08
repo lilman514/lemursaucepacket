@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "regions_unexplored:socotra_log",
+    "regions_unexplored:socotra_wood",
+    "regions_unexplored:stripped_socotra_log",
+    "regions_unexplored:stripped_socotra_wood",
+    "regions_unexplored:blackwood_log",
+    "regions_unexplored:blackwood_wood",
+    "regions_unexplored:stripped_blackwood_log",
+    "regions_unexplored:stripped_blackwood_wood"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 55
+    }
+  }
+}

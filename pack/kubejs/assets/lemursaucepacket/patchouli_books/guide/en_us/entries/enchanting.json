@@ -2,7 +2,7 @@
   "name": "Enchanting",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:enchanting_table",
-  "sortnum": 31,
+  "sortnum": 39,
   "pages": [
     {
       "type": "patchouli:text",
@@ -82,11 +82,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Tier - Mining - Breaks - Tome recipe$()$(br)$(bold)I$() - 10 - iron ore, zinc ore, lapis ore - andesite, copper ingot, book (crafting table)$(br)$(bold)II$() - 20 - gold ore, redstone ore - iron sheet, lapis lazuli, book (mechanical crafting)$(br)$(bold)III$() - 30 - diamond ore, emerald ore, obsidian, crying obsidian - golden sheet, redstone, book (mechanical crafting)$(br)$(bold)IV$() - 40 - ancient debris - diamond, precision mechanism, iron sheet, book (mechanical crafting)$(br)$(bold)V$() - 50 - reinforced deepslate, budding amethyst - sturdy sheet, diamond, book (mechanical crafting)"
+      "text": "$(#b9a98a)Tier - Mining - Breaks - Tome recipe$()$(br)$(bold)I$() - 10 - iron ore, zinc ore, lapis ore - andesite, copper ingot, book (crafting table)$(br)$(bold)II$() - 20 - gold ore, redstone ore, silver ore, deepslate silver ore - iron sheet, lapis lazuli, book (mechanical crafting)$(br)$(bold)III$() - 30 - diamond ore, emerald ore, obsidian, crying obsidian, cobalt obsidian, sapphire ore - golden sheet, redstone, book (mechanical crafting)$(br)$(bold)IV$() - 40 - ancient debris - diamond, precision mechanism, iron sheet, book (mechanical crafting)"
     },
     {
       "type": "patchouli:text",
-      "text": "Create drills, saws and rollers break blocks up to tier II, deployers with a pickaxe too; obsidian, diamonds and beyond are yours to dig. Obsidian can still be cast in place with lava and water and ruined portals still work; what needs Hardness is obsidian as an item."
+      "text": "$(bold)V$() - 50 - reinforced deepslate, budding amethyst - sturdy sheet, diamond, book (mechanical crafting)$(br2)Create drills, saws and rollers break blocks up to tier II, deployers with a pickaxe too; obsidian, diamonds and beyond are yours to dig. Obsidian can still be cast in place with lava and water and ruined portals still work; what needs Hardness is obsidian as an item."
     },
     {
       "type": "patchouli:text",

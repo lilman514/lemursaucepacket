@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonbone_hoe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "farming": 55
+    },
+    "USE": {
+      "farming": 55
+    }
+  }
+}

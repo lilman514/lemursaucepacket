@@ -1,0 +1,14 @@
+{
+  "ignoredMenuClasses": [
+    "net.lemursaucepacket.fixes.economy.shop.ShopMenu",
+    "net.lemursaucepacket.fixes.economy.trade.TradeMenu"
+  ],
+  "ignoredScreenClasses": [
+    "net.lemursaucepacket.fixes.economy.client.ShopScreens$Shop",
+    "net.lemursaucepacket.fixes.economy.client.ShopScreens$Trade"
+  ],
+  "ignoredMenuTypes": [
+    "lsp_fixes:shop",
+    "lsp_fixes:trade"
+  ]
+}

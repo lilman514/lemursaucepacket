@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:clot_of_time"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 60
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

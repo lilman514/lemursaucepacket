@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:ghostly_mantle"
+  ],
+  "requirements": {
+    "WEAR": {
+      "hitpoints": 70
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:wand_of_symmetry"
+  ],
+  "requirements": {
+    "TOOL": {
+      "construction": 40
+    },
+    "USE": {
+      "construction": 40
+    }
+  }
+}

@@ -28,6 +28,9 @@ import net.neoforged.neoforge.event.brewing.PlayerBrewedPotionEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.entity.player.ItemFishedEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -52,6 +55,11 @@ public final class SkillsModule {
     /** On Farmer's Delight cooking pots: who last used one and their Cooking level then. */
     public static final Supplier<AttachmentType<Gates.User>> COOK = ATTACHMENTS.register("cook",
             () -> AttachmentType.builder(() -> new Gates.User(net.minecraft.Util.NIL_UUID, 0)).serialize(Gates.User.CODEC).build());
+    /** On machines (Create's, the Crafter, placed backpacks): who placed or last used one, and their levels then. */
+    public static final Supplier<AttachmentType<Operators.Operator>> OPERATOR = ATTACHMENTS.register("operator",
+            () -> AttachmentType.builder(() -> Operators.Operator.NONE).serialize(Operators.Operator.CODEC).build());
+    /** The operator attachment's id, as it's saved in a block entity's data (and so in a contraption's). */
+    public static final String OPERATOR_ID = LspFixes.MOD_ID + ":operator";
 
     private static Field potOfMenu;
 
@@ -60,11 +68,23 @@ public final class SkillsModule {
         NeoForge.EVENT_BUS.addListener((PlayerBrewedPotionEvent e) -> Gates.onBrewed(e));
         NeoForge.EVENT_BUS.addListener((LivingDropsEvent e) -> Gates.onDrops(e));
         NeoForge.EVENT_BUS.addListener((ItemFishedEvent e) -> Gates.onFished(e));
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.entity.living.LivingUseTotemEvent e) -> Gates.onTotem(e));
         NeoForge.EVENT_BUS.addListener((PlayerContainerEvent.Open e) -> remember(e.getContainer(), e.getEntity()));
         NeoForge.EVENT_BUS.addListener((ServerStartedEvent e) -> selfCheck());
         NeoForge.EVENT_BUS.addListener((ServerTickEvent.Post e) -> {
             if (e.getServer().getTickCount() % 100 == 31) showCombatLevels(e.getServer());
+            // Who carries which backpack (its upgrades work at that player's level), once a second.
+            if (e.getServer().getTickCount() % 20 == 7 && ModList.get().isLoaded("sophisticatedcore"))
+                for (ServerPlayer p : e.getServer().getPlayerList().getPlayers()) net.lemursaucepacket.fixes.compat.BackpackCarriers.scan(p);
         });
+        // Machines run at their operator's level: whoever placed them, or last right-clicked them.
+        NeoForge.EVENT_BUS.addListener((BlockEvent.EntityPlaceEvent e) -> {
+            if (e.getEntity() instanceof ServerPlayer p && Operators.isMachine(e.getLevel().getBlockEntity(e.getPos()))) Operators.set(e.getLevel().getBlockEntity(e.getPos()), p);
+        });
+        NeoForge.EVENT_BUS.addListener((PlayerInteractEvent.RightClickBlock e) -> {
+            if (e.getEntity() instanceof ServerPlayer p && Operators.isMachine(e.getLevel().getBlockEntity(e.getPos()))) Operators.set(e.getLevel().getBlockEntity(e.getPos()), p);
+        });
+        NeoForge.EVENT_BUS.addListener((PlayerEvent.PlayerLoggedOutEvent e) -> GateNotice.forget(e.getEntity().getUUID()));
         if (FMLEnvironment.dist.isClient()) net.lemursaucepacket.fixes.skills.client.SkillsClient.init(modBus);
     }
 
@@ -96,10 +116,19 @@ public final class SkillsModule {
                 {"cooking pot slot", "neoforge", "net.neoforged.neoforge.items.SlotItemHandler"},
                 {"cooking pot", "farmersdelight", "vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity"},
                 {"mechanical crafters", "create", "com.simibubi.create.content.kinetics.crafter.RecipeGridHandler"},
+                {"mechanical crafters' operators", "create", "com.simibubi.create.content.kinetics.crafter.MechanicalCrafterBlockEntity"},
                 {"basins", "create", "com.simibubi.create.content.processing.basin.BasinRecipe"},
+                {"spouts", "create", "com.simibubi.create.content.fluids.spout.FillingBySpout"},
+                {"spouts' operators", "create", "com.simibubi.create.content.fluids.spout.SpoutBlockEntity"},
+                {"relic abilities", "relics", "it.hurts.sskirillss.relics.api.relics.data.AbilityData"},
+                {"backpack upgrades", "sophisticatedcore", "net.p3pp3rf1y.sophisticatedcore.upgrades.UpgradeWrapperBase"},
+                {"backpack pickup (Hardness)", "sophisticatedcore", "net.p3pp3rf1y.sophisticatedcore.util.InventoryHelper"},
+                {"placed backpacks' operators", "sophisticatedbackpacks", "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackBlockEntity"},
                 {"crafting blueprint", "create", "com.simibubi.create.content.equipment.blueprint.BlueprintEntity"},
                 {"airships carry free blocks", "sable", "dev.ryanhcode.sable.api.SubLevelAssemblyHelper"},
                 {"drills spare free blocks", "create", "com.simibubi.create.foundation.utility.BlockHelper"},
+                {"drills and saws", "create", "com.simibubi.create.content.kinetics.base.BlockBreakingKineticBlockEntity"},
+                {"drills and saws on contraptions", "create", "com.simibubi.create.content.kinetics.base.BlockBreakingMovementBehaviour"},
         };
         List<String> in = new ArrayList<>(), missing = new ArrayList<>();
         for (String[] g : gates) {
@@ -117,6 +146,8 @@ public final class SkillsModule {
             }
             (found ? in : missing).add(g[0]);
         }
+        // Friends & Foes' totems are hooked by the mixin plugin, not a named handler (LspFixesMixinPlugin).
+        if (ModList.get().isLoaded("friendsandfoes")) ("true".equals(System.getProperty("lsp_fixes.friendsAndFoesTotemsGated")) ? in : missing).add("Friends & Foes totems");
         if (missing.isEmpty()) LOGGER.info("Skill gates in: {}", String.join(", ", in));
         else LOGGER.error("Skill gates MISSING: {} (in: {})", String.join(", ", missing), String.join(", ", in));
     }

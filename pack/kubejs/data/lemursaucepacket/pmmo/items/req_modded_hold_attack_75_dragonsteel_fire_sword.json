@@ -1,0 +1,22 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonsteel_fire_sword",
+    "iceandfire:dragonsteel_ice_sword",
+    "iceandfire:dragonsteel_lightning_sword",
+    "iceandfire:dragonsteel_fire_axe",
+    "iceandfire:dragonsteel_ice_axe",
+    "iceandfire:dragonsteel_lightning_axe"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 75
+    },
+    "WEAR": {
+      "attack": 75
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

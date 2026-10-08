@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "farmersdelight:flint_knife"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 5
+    },
+    "WEAR": {
+      "attack": 5
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

@@ -2,7 +2,7 @@
   "name": "Caves and the deep",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:pointed_dripstone",
-  "sortnum": 17,
+  "sortnum": 25,
   "pages": [
     {
       "type": "patchouli:text",

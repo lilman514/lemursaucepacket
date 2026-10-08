@@ -2,7 +2,7 @@
   "name": "Coins, vendors and trading",
   "category": "lemursaucepacket:wiki",
   "icon": "lemursaucepacket:gold_coins",
-  "sortnum": 24,
+  "sortnum": 32,
   "pages": [
     {
       "type": "patchouli:text",

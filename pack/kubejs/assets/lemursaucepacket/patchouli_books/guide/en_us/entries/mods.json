@@ -2,7 +2,7 @@
   "name": "Mods in the pack",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:chest",
-  "sortnum": 37,
+  "sortnum": 48,
   "pages": [
     {
       "type": "patchouli:text",

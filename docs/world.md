@@ -11,7 +11,7 @@ coverY: 0
 ## Rules
 
 - **PvP is on** and there are **no land claims**. Pick your spot with care, keep valuables close, and settle things like adults.
-- **Die and your items wait in a grave** where you fell. Only you can open it (a teammate can with your permission).
+- **Die and your items wait in a grave** where you fell. It isn't locked to you: whoever breaks it gets its items, so go straight back. A **Latest Death** waypoint on your minimap and world map points the way.
 - **Waystones, but no teleport commands.** Waystones stand in villages, on towers and at shrines. Activate one and you can warp back to it later, and you can take found ones home. See [Waystones](waystones.md). Everyday travel is by train, airship, horse and happy ghast, so the rail network still matters. Nether portals are linked properly (a portal always leads back where it came from).
 - **The launcher decides the mods.** Your own extras go in its Mods tab.
 
@@ -32,14 +32,14 @@ The world has more cities: Luki's Grand Capitals turns its villages into **grand
 - **Create is the spine.** Every stage of progress runs through Create machines; other mods feed it (ore veins, crops) or give it a reason to exist (structures, an economy, airships).
 - **Terrain:** Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.
 - **Structures:** When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests are per player (Lootr), so nobody gets beaten to one.
-- **Ore veins:** Create Ore Excavation adds infinite veins you find with a prospector and drill with Create machines.
+- **Ore veins:** Create Ore Excavation adds infinite veins you find with an Ore Vein Finder and drill with Create machines.
 - **Dragons:** Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their hoards. They can't break blocks. Their eggs hatch into dragons you can raise and ride; their scales, bones and blood make the best gear in the realm, but dragon armour can only be worn after Dragon Slayer II. Ice and Fire's other creatures and structures aren't in the pack.
 - **Economy:** Gold Coins, one stack however many you have. Quests and missions pay them, vendors buy anything for them and sell their own goods, and `/trade` swaps items and coins with other players. See [Coins, vendors and trading](economy.md).
 - **Skills:** RuneScape-style levels gate weapons, tools and armour and make you stronger. See [Skills](skills.md).
 - **Hard blocks need Hardness:** a pickaxe tier alone doesn't break the good stuff. Iron needs a Hardness I tome on your pickaxe (crafted from andesite, copper and a book), gold and redstone Hardness II (or a Mechanical Drill on a contraption, which breaks up to tier II), diamonds and obsidian Hardness III, ancient debris IV, with Mining levels to match. Found some before you can mine it? You can keep it in a chest or drop it, but recipes, machines and other containers refuse it until your Mining level is there. Early obsidian for a table or a portal comes from ruined-portal and bastion chests, or from casting lava with water where you want it. See [Enchanting](enchanting.md).
 - **Maps:** Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.
-- **Voice:** proximity voice chat. Press **V** for its settings; **O** mutes your microphone.
+- **Voice:** proximity voice chat. Press **V** to set it up: push to talk has no key until you pick one, and voice activation starts muted (**O** unmutes). See [Chat, voice and teams](social.md).
 
 ## Weekly missions
 
-Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or **H**). They pay Coin Pouches (right-click one: 100 coins; rerolls cost pouches) and quest XP.
+Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or **H**). They pay Coin Pouches (right-click one: 100 coins; rerolls cost pouches).

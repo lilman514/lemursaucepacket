@@ -682,7 +682,7 @@
 				}
 			]
 			x: 11.5d
-			y: 3.7d
+			y: 2.1d
 		}
 		{
 			dependencies: ["672B8B2ACFEC0D47"]
@@ -725,49 +725,7 @@
 				}
 			]
 			x: 11.5d
-			y: 2.1d
-		}
-		{
-			dependencies: ["7A8548237DEB6F6E"]
-			icon: {
-				id: "createoreexcavation:vein_finder"
-			}
-			id: "737EFC7F3D6819BC"
-			rewards: [
-				{
-					id: "3D89F44ADE8BE963"
-					type: "xp"
-					xp: 150
-				}
-				{
-					id: "3169E04247A2C05B"
-					item: {
-						components: {
-							"lsp_fixes:coin_amount": 480
-						}
-						count: 1
-						id: "lsp_fixes:gold_coins"
-					}
-					type: "item"
-				}
-				{
-					id: "4609DEF79221A59E"
-					table_id: 3642704314676522423L
-					type: "random"
-				}
-			]
-			tasks: [
-				{
-					id: "5482547F3133893C"
-					item: {
-						count: 1
-						id: "createoreexcavation:vein_finder"
-					}
-					type: "item"
-				}
-			]
-			x: 13.8d
-			y: 2.1d
+			y: 3.7d
 		}
 		{
 			dependencies: ["696E2ECE05FA8FF3", "1E136B8C0850A837", "65362757C5786E54"]
@@ -836,7 +794,7 @@
 				}
 			]
 			x: 13.8d
-			y: 4.9d
+			y: 4.35d
 		}
 	]
 }

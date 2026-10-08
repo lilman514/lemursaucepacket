@@ -494,10 +494,10 @@ function fallingTreeConfig() {
       tools: {
         allowed: [`${NAMESPACE}:lumber_axe`],
         denied: otherAxes(),
-        durabilityMode: 'PERCENTAGE',
+        durabilityMode: 'NORMAL',
         ignoreTools: false,
         damageMultiplicand: 0.25,
-        damageRounding: 'ROUND',
+        damageRounding: 'ROUND_DOWN',
         speedMultiplicand: 0,
         // true would let logs be broken ONLY with the allowed tools: no fists, no ordinary axes. The allowed list
         // alone is what keeps whole-tree felling to the Lumber Axe.

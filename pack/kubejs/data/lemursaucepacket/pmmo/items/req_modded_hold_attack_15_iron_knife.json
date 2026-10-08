@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "farmersdelight:iron_knife",
+    "farmersdelight:skillet"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 15
+    },
+    "WEAR": {
+      "attack": 15
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

@@ -2,7 +2,7 @@
   "name": "Hearts, graves and elimination",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:red_dye",
-  "sortnum": 25,
+  "sortnum": 33,
   "pages": [
     {
       "type": "patchouli:text",
@@ -39,11 +39,11 @@
     {
       "type": "patchouli:text",
       "title": "Getting hearts back",
-      "text": "$(li)Walk back and pick up your own Heart. If nobody took it, it is still there.$(br)$(li)Train Hitpoints. Every ten levels adds a heart, up to level 99.$(br)$(li)Make a new one. This is meant to be very hard and it can never be automated end to end.$(br2)$(bold)A new Heart$() is a Create sequenced assembly on a $(bold)Heart of the Sea$() (buried treasure only, one per treasure; treasure maps come from shipwrecks and ocean ruins). Over five stations:"
+      "text": "$(li)Walk back and pick up your own Heart. If nobody took it, it is still there.$(br)$(li)Train Hitpoints. Every ten levels adds a heart, up to level 99.$(br)$(li)Make a new one. This is meant to be very hard and it can never be automated end to end.$(br2)$(bold)A new Heart$() is a Create sequenced assembly on a $(bold)Heart of the Sea$() (from buried treasure, one per chest, with treasure maps from shipwrecks and ocean ruins; and now and then from the chests of the tall ocean towers). Over five stations:"
     },
     {
       "type": "patchouli:text",
-      "text": "1. Deploy a $(bold)Compacted Diamond$() (4 diamonds, pressed).$(br)2. Deploy a $(bold)Nether Star$() (kill the Wither).$(br)3. Fill with $(bold)1,000 mB of Liquid Experience$() (Create Enchantment Industry).$(br)4. Deploy a $(bold)Totem of Undying$() (raids).$(br)5. Press.$(br2)The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart."
+      "text": "1. Deploy a $(bold)Compacted Diamond$() (4 diamonds, pressed).$(br)2. Deploy a $(bold)Nether Star$() (kill the Wither).$(br)3. Fill with $(bold)1,000 mB of Liquid Experience$() (Create Enchantment Industry).$(br)4. Deploy a $(bold)Totem of Undying$() (raids).$(br)5. Press.$(br2)The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart. Ocean towers are the best bet: about one chest in six holds one, and every player loots their own copy of each chest."
     },
     {
       "type": "patchouli:text",

@@ -52,6 +52,14 @@ public final class SkillGates {
     private static final Map<Item, Integer> POTION_FORMS = new HashMap<>();
     private static int fishingTreasure = 0;
     private static double xpBase = 8, xpPerLevel = 2.2;
+    /** Every skill some gate asks for (what a machine's operator snapshot keeps). */
+    private static final java.util.Set<String> SKILLS = new java.util.TreeSet<>(List.of("brewing", "cooking"));
+
+    /** The skills the gates ask for. */
+    public static java.util.Set<String> skills() {
+        ensureLoaded();
+        return SKILLS;
+    }
 
     private static synchronized void ensureLoaded() {
         if (loaded) return;
@@ -101,6 +109,8 @@ public final class SkillGates {
                 xpBase = root.getAsJsonObject("brewXp").get("base").getAsDouble();
                 xpPerLevel = root.getAsJsonObject("brewXp").get("perLevel").getAsDouble();
             }
+            for (Map<?, Need> m : List.of(CRAFT, CRAFT_TAGS, BREW, WEAR, RECIPES)) for (Need n : m.values()) SKILLS.addAll(List.of(n.skill().split("\\|")));
+            for (Drop d : DROPS) SKILLS.add(d.need().skill());
             SkillsModule.LOGGER.info("Skill gates: {} made items (+{} tags), {} recipes, {} worn items, {} brewing ingredients, {} drops, {} potions, fishing treasure at {}",
                     CRAFT.size(), CRAFT_TAGS.size(), RECIPES.size(), WEAR.size(), BREW.size(), DROPS.size(), POTIONS.size(), fishingTreasure);
         } catch (Exception ex) {

@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:chorus_staff"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 55
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

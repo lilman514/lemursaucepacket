@@ -4,7 +4,13 @@
     "minecraft:jungle_log",
     "minecraft:jungle_wood",
     "minecraft:stripped_jungle_log",
-    "minecraft:stripped_jungle_wood"
+    "minecraft:stripped_jungle_wood",
+    "regions_unexplored:palm_log",
+    "regions_unexplored:palm_wood",
+    "regions_unexplored:stripped_palm_log",
+    "regions_unexplored:stripped_palm_wood",
+    "regions_unexplored:bamboo_log",
+    "regions_unexplored:stripped_bamboo_log"
   ],
   "requirements": {
     "BREAK": {

@@ -1,0 +1,17 @@
+{
+  "override": false,
+  "isTagFor": [
+    "create:extendo_grip"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 40
+    },
+    "WEAR": {
+      "attack": 40
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

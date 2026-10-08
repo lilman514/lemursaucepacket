@@ -2,7 +2,7 @@
   "name": "Skills",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:experience_bottle",
-  "sortnum": 30,
+  "sortnum": 38,
   "pages": [
     {
       "type": "patchouli:text",
@@ -96,7 +96,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Machines.$() The Crafter and Create's mechanical crafters, mixer and press have nobody to ask, so they won't make anything on these lists or use a recipe that waits on a level, and the mixer won't brew with an ingredient past Brewing 1. Those you make yourself."
+      "text": "$(li)$(bold)Machines.$() The Crafter and Create's mechanical crafters, basins (with their mixer or press) and spouts work at the skill levels of the player who last placed or right-clicked them. If that player doesn't have the level an item or recipe on these lists needs, the machine won't make it (and a mixer won't brew with an ingredient past their Brewing), and they get a chat message with a ding saying which. Drills and saws are held to the same levels: they won't break a block past their operator's level (a log past their Woodcutting chop level stays standing). On a moving contraption, a drill or saw keeps"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "the operator it had when the contraption was put together. Right-click a machine to make it run at your levels. A machine nobody has placed or clicked makes nothing gated.$(br)$(li)$(bold)Backpacks, relics and totems.$() A backpack upgrade only works once you have the level it takes to make it; a backpack set down as a block works at the levels of whoever last placed or opened it. A relic's abilities wait for the level it needs to wear, and a Totem of Undying only saves you at Hitpoints 50. Each tells you in chat, with a ding, what's missing."
     },
     {
       "type": "patchouli:text",
@@ -105,30 +109,50 @@
     {
       "type": "patchouli:text",
       "title": "Crafting",
-      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Leather armour$(br)$(bold)10$() - Bows$(br)$(bold)15$() - Shields$(br)$(bold)20$() - Crossbows$(br)$(bold)20$() - Climbing Boots (a relic: step up full blocks)$(br)$(bold)30$() - Diamond tools, weapons and armour$(br)$(bold)35$() - Aeronaut's Rigging (for the Aeronaut set)$(br)$(bold)40$() - Enchanting tables$(br)$(bold)40$() - Duelist's Filigree (for the Brass Duelist set)$(br)$(bold)50$() - Ender chests$(br)$(bold)60$() - End crystals$(br)$(bold)65$() - Shulker boxes$(br)$(bold)70$() - Conduits$(br)$(bold)75$() - Beacons"
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Leather armour$(br)$(bold)5$() - Pickup and filter upgrades$(br)$(bold)10$() - Bows$(br)$(bold)10$() - Copper backpacks$(br)$(bold)10$() - Bundles$(br)$(bold)15$() - Shields$(br)$(bold)15$() - Toolboxes$(br)$(bold)15$() - Crafting upgrade and the starter stack upgrade$(br)$(bold)20$() - Crossbows$(br)$(bold)20$() - Climbing Boots (a relic: step up full blocks)$(br)$(bold)20$() - Item vaults$(br)$(bold)20$() - Item silos (a vertical item vault)$(br)$(bold)20$() - Shipping containers (dyed item vaults)$(br)$(bold)20$() - Iron backpacks"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)80$() - Respawn anchors and lodestones"
+      "text": "$(bold)20$() - Restock, deposit and refill upgrades$(br)$(bold)25$() - Mechanical arms$(br)$(bold)25$() - Void, tool swapper, tank and stack tier 1 upgrades$(br)$(bold)30$() - Diamond tools, weapons and armour$(br)$(bold)30$() - Pressing upgrades$(br)$(bold)30$() - Magnet, compacting and advanced pickup/filter upgrades$(br)$(bold)30$() - Diamond knives$(br)$(bold)35$() - Aeronaut's Rigging (for the Aeronaut set)$(br)$(bold)35$() - Capacitors (and so electric motors, tesla coils and accumulators)$(br)$(bold)35$() - Mixing upgrades$(br)$(bold)35$() - Gold backpacks$(br)$(bold)40$() - Enchanting tables"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)40$() - Duelist's Filigree (for the Brass Duelist set)$(br)$(bold)40$() - Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2$(br)$(bold)45$() - Stock tickers, redstone requesters and factory gauges$(br)$(bold)45$() - Advanced magnet and advanced compacting upgrades$(br)$(bold)45$() - Dragon horns$(br)$(bold)45$() - Dragon seekers$(br)$(bold)45$() - Horns of Sight$(br)$(bold)50$() - Ender chests$(br)$(bold)50$() - Diamond backpacks$(br)$(bold)50$() - Ender linkers$(br)$(bold)55$() - Dragonbone tools, sword and bow$(br)$(bold)60$() - End crystals"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)60$() - Flamed, iced and lightning dragonbone swords$(br)$(bold)60$() - Dragonscale armour (all twelve colours)$(br)$(bold)65$() - Shulker boxes$(br)$(bold)65$() - Summoning crystals$(br)$(bold)70$() - Conduits$(br)$(bold)75$() - Beacons$(br)$(bold)80$() - Respawn anchors and lodestones"
     },
     {
       "type": "patchouli:text",
       "title": "Smithing",
-      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)10$() - Golden tools, weapons and armour$(br)$(bold)15$() - Iron tools, weapons and armour$(br)$(bold)20$() - Anvils and hoppers$(br)$(bold)25$() - Prospector's Plating (for the Prospector set)$(br)$(bold)40$() - Copying armour trim templates$(br)$(bold)45$() - Diamond Lattice (for the Compacted Diamond set)$(br)$(bold)50$() - Netherite gear (the smithing table upgrade)$(br)$(bold)60$() - Copying the netherite upgrade template$(br)$(bold)65$() - Compacted netherite armour$(br)$(bold)70$() - Maces"
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)10$() - Golden tools, weapons and armour$(br)$(bold)10$() - Golden knives$(br)$(bold)15$() - Iron tools, weapons and armour$(br)$(bold)15$() - Smelting upgrade$(br)$(bold)15$() - Iron knives and the skillet$(br)$(bold)20$() - Anvils and hoppers$(br)$(bold)20$() - Silver tools, weapons and armour$(br)$(bold)25$() - Prospector's Plating (for the Prospector set)$(br)$(bold)25$() - Blasting and anvil upgrades$(br)$(bold)40$() - Copying armour trim templates$(br)$(bold)40$() - Auto-smelting upgrade$(br)$(bold)45$() - Diamond Lattice (for the Compacted Diamond set)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)45$() - Auto-blasting upgrade$(br)$(bold)45$() - Platinum sheets (trim material)$(br)$(bold)50$() - Netherite gear (the smithing table upgrade)$(br)$(bold)50$() - Smithing upgrade$(br)$(bold)50$() - Netherite knives (smithing table)$(br)$(bold)55$() - Netherite backpacks (smithing table)$(br)$(bold)55$() - Epic dragon seekers (smithing, a nether star)$(br)$(bold)60$() - Copying the netherite upgrade template$(br)$(bold)65$() - Compacted netherite armour$(br)$(bold)70$() - Maces$(br)$(bold)70$() - Legendary dragon seekers (dragonsteel)$(br)$(bold)80$() - Dragonsteel tools, weapons and armour"
     },
     {
       "type": "patchouli:text",
       "title": "Cooking",
-      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Beetroot soup, sandwiches and salads$(br)$(bold)10$() - Pumpkin pie, hamburgers, wraps and Farmer's Delight soups$(br)$(bold)20$() - Cake, rabbit stew, stews, rice dishes and rolls$(br)$(bold)30$() - Golden carrots, pies, pasta and plated meals$(br)$(bold)40$() - Squid ink pasta, glow berry custard and nether salad$(br)$(bold)45$() - Golden apples$(br)$(bold)50$() - Farmer's Delight feasts"
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Beetroot soup, sandwiches and salads$(br)$(bold)10$() - Pumpkin pie, hamburgers, wraps and Farmer's Delight soups$(br)$(bold)15$() - Smoking upgrade$(br)$(bold)15$() - Melon juice$(br)$(bold)20$() - Cake, rabbit stew, stews, rice dishes and rolls$(br)$(bold)25$() - Feeding upgrade$(br)$(bold)25$() - Hot cocoa (cooking pot)$(br)$(bold)30$() - Golden carrots, pies, pasta and plated meals$(br)$(bold)40$() - Squid ink pasta, glow berry custard and nether salad$(br)$(bold)40$() - Auto-smoking and advanced feeding upgrades$(br)$(bold)45$() - Golden apples"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)50$() - Farmer's Delight feasts$(br)$(bold)50$() - Gleaming salad (a feast)$(br)$(bold)60$() - Rice with dragon meat (cooking pot)"
     },
     {
       "type": "patchouli:text",
       "title": "Brewing",
-      "text": "$(#b9a98a)Level - Lets you brew$()$(br)$(bold)1$() - Awkward potions, the base of nearly all others (nether wart)$(br)$(bold)5$() - Swiftness (sugar)$(br)$(bold)10$() - Night Vision (golden carrot)$(br)$(bold)15$() - Leaping (rabbit foot)$(br)$(bold)20$() - Fire Resistance (magma cream)$(br)$(bold)25$() - Healing (glistering melon slice)$(br)$(bold)25$() - Poison (spider eye)$(br)$(bold)30$() - Water Breathing (pufferfish)$(br)$(bold)30$() - Longer potions (redstone)$(br)$(bold)35$() - Strength (blaze powder)$(br)$(bold)40$() - Regeneration (ghast tear)"
+      "text": "$(#b9a98a)Level - Lets you brew$()$(br)$(bold)1$() - Awkward potions, the base of nearly all others (nether wart)$(br)$(bold)5$() - Swiftness (sugar)$(br)$(bold)10$() - Night Vision (golden carrot)$(br)$(bold)15$() - Leaping (rabbit foot)$(br)$(bold)20$() - Fire Resistance (magma cream)$(br)$(bold)25$() - Healing (glistering melon slice)$(br)$(bold)25$() - Poison (spider eye)$(br)$(bold)30$() - Water Breathing (pufferfish)$(br)$(bold)30$() - Longer potions (redstone)$(br)$(bold)35$() - Strength (blaze powder)$(br)$(bold)40$() - Regeneration (ghast tear)$(br)$(bold)40$() - Potion of Berserking (goat horn)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)45$() - Weakness, Harming, Slowness and Invisibility (fermented spider eye)$(br)$(bold)50$() - Splash potions (gunpowder)$(br)$(bold)50$() - Slow Falling (phantom membrane)$(br)$(bold)55$() - Eyes of ender (crafting)$(br)$(bold)60$() - Stronger potions (glowstone dust)$(br)$(bold)65$() - Turtle Master (turtle helmet)$(br)$(bold)70$() - Lingering potions (dragon breath)$(br)$(bold)80$() - Wind Charging (breeze rod)$(br)$(bold)80$() - Weaving (cobweb)$(br)$(bold)80$() - Oozing (slime block)$(br)$(bold)80$() - Infested (stone)"
+      "text": "$(bold)40$() - Alchemical fire pits (fire rings)$(br)$(bold)45$() - Weakness, Harming, Slowness and Invisibility (fermented spider eye)$(br)$(bold)45$() - Potion of Reaching (crab claw)$(br)$(bold)45$() - Alchemy upgrade (crafting)$(br)$(bold)50$() - Splash potions (gunpowder)$(br)$(bold)50$() - Slow Falling (phantom membrane)$(br)$(bold)55$() - Eyes of ender (crafting)$(br)$(bold)60$() - Stronger potions (glowstone dust)$(br)$(bold)60$() - Advanced alchemy upgrade (crafting)$(br)$(bold)65$() - Turtle Master (turtle helmet)$(br)$(bold)70$() - Lingering potions (dragon breath)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)80$() - Wind Charging (breeze rod)$(br)$(bold)80$() - Weaving (cobweb)$(br)$(bold)80$() - Oozing (slime block)$(br)$(bold)80$() - Infested (stone)"
     },
     {
       "type": "patchouli:text",
@@ -138,7 +162,11 @@
     {
       "type": "patchouli:text",
       "title": "Woodcutting",
-      "text": "$(#b9a98a)Level - Lets you chop$()$(br)$(bold)15$() - Jungle trees$(br)$(bold)30$() - Acacia trees$(br)$(bold)35$() - Dark oak trees$(br)$(bold)45$() - Mangroves$(br)$(bold)50$() - Cherry trees$(br)$(bold)60$() - Crimson and warped stems"
+      "text": "$(#b9a98a)Level - Lets you chop$()$(br)$(bold)10$() - Pine trees$(br)$(bold)15$() - Jungle trees$(br)$(bold)15$() - Palms and giant bamboo$(br)$(bold)20$() - Joshua trees and larches$(br)$(bold)25$() - Cypresses, ashen trees and bioshroom stems$(br)$(bold)30$() - Acacia trees$(br)$(bold)30$() - Willows$(br)$(bold)35$() - Dark oak trees$(br)$(bold)35$() - Eucalyptus$(br)$(bold)40$() - Pale oaks$(br)$(bold)40$() - Magnolias, wisterias and baobabs$(br)$(bold)45$() - Mangroves$(br)$(bold)45$() - Maples$(br)$(bold)50$() - Cherry trees$(br)$(bold)50$() - Kapoks$(br)$(bold)55$() - Socotras and blackwoods"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)60$() - Crimson and warped stems$(br)$(bold)65$() - Brimwood and cobalt (Nether)$(br)$(bold)70$() - Redwoods"
     },
     {
       "type": "patchouli:text",
@@ -158,11 +186,41 @@
     {
       "type": "patchouli:text",
       "title": "Create machines",
-      "text": "$(#b9a98a)Level - Skill - Lets you make$()$(br)$(bold)15$() - Farming - Mechanical harvesters and ploughs$(br)$(bold)15$() - Mining - Mechanical drills$(br)$(bold)15$() - Woodcutting - Mechanical saws$(br)$(bold)20$() - Cooking - Encased fans (bulk smoking, blasting and washing)$(br)$(bold)30$() - Construction - Schematicannons$(br)$(bold)30$() - Crafting - Mechanical crafters$(br)$(bold)35$() - Agility - Train stations and train controls$(br)$(bold)35$() - Enchanting - Blaze enchanters$(br)$(bold)35$() - Smithing - Steam engines$(br)$(bold)50$() - Enchanting - Printers (they copy enchanted books)"
+      "text": "$(#b9a98a)Level - Skill - Lets you make$()$(br)$(bold)15$() - Farming - Mechanical harvesters and ploughs$(br)$(bold)15$() - Mining - Mechanical drills$(br)$(bold)15$() - Woodcutting - Mechanical saws$(br)$(bold)20$() - Cooking - Encased fans (bulk smoking, blasting and washing)$(br)$(bold)20$() - Enchanting - Mechanical grindstones$(br)$(bold)25$() - Agility - Elevator pulleys$(br)$(bold)25$() - Cooking - Slicers$(br)$(bold)30$() - Construction - Schematicannons$(br)$(bold)30$() - Crafting - Mechanical crafters$(br)$(bold)30$() - Farming - Sprinklers$(br)$(bold)35$() - Agility - Train stations and train controls"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)50$() - Mining - Drill heads for the ore vein drilling machine$(br)$(bold)65$() - Mining - Diamond drill heads$(br)$(bold)80$() - Mining - Netherite drill heads"
+      "text": "$(bold)35$() - Enchanting - Blaze enchanters$(br)$(bold)35$() - Smithing - Steam engines$(br)$(bold)40$() - Mining - Borehead bearings and rock-cutting wheels$(br)$(bold)50$() - Enchanting - Printers (they copy enchanted books)$(br)$(bold)50$() - Mining - Drill heads for the ore vein drilling machine$(br)$(bold)55$() - Enchanting - Blaze forgers$(br)$(bold)65$() - Mining - Diamond drill heads$(br)$(bold)70$() - Smithing - Dragonforge cores$(br)$(bold)80$() - Mining - Netherite drill heads"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Other skills: making",
+      "text": "$(#b9a98a)Level - Skill - Lets you make$()$(br)$(bold)10$() - Construction - Stonecutter upgrade$(br)$(bold)20$() - Agility - Return scrolls$(br)$(bold)20$() - Farming - Organic compost$(br)$(bold)25$() - Construction - Barbed wire$(br)$(bold)25$() - Enchanting - Experience lanterns$(br)$(bold)30$() - Agility - Warp scrolls$(br)$(bold)35$() - Mining - Ore vein finders and the vein atlas$(br)$(bold)40$() - Agility - Portal scrolls$(br)$(bold)40$() - Agility - Harnesses (to ride a happy ghast)$(br)$(bold)65$() - Enchanting - Imbuing tables"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Gear, relics and blocks",
+      "text": "$(#b9a98a)Level - Skill - Lets you$()$(br)$(bold)5$() - Attack - Wield copper sword and axe$(br)$(bold)5$() - Attack - Wield flint knives$(br)$(bold)5$() - Defence - Wear copper armour$(br)$(bold)5$() - Farming - Use copper hoe$(br)$(bold)5$() - Mining - Use copper pickaxe and shovel$(br)$(bold)5$() - Woodcutting - Use copper axe$(br)$(bold)10$() - Attack - Wield golden knives$(br)$(bold)15$() - Attack - Wield iron knives and the skillet$(br)$(bold)20$() - Agility - Wear the Springy Boot$(br)$(bold)20$() - Attack - Wield silver sword and axe$(br)$(bold)20$() - Cooking - Wear the Chef's Hat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)20$() - Defence - Wear silver armour$(br)$(bold)20$() - Farming - Use silver hoe$(br)$(bold)20$() - Mining - Use silver pickaxe and shovel$(br)$(bold)20$() - Woodcutting - Use silver axe$(br)$(bold)25$() - Agility - Wear the Climbing Boots (a relic)$(br)$(bold)25$() - Agility - Use the Rider Flute$(br)$(bold)25$() - Defence - Wear the Piglin Mask$(br)$(bold)25$() - Enchanting - Wear the Experience Disperser$(br)$(bold)30$() - Agility - Wear the Cut Glass Boot$(br)$(bold)30$() - Attack - Wield diamond knives$(br)$(bold)30$() - Ranged - Place mounted potato cannons"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)30$() - Strength - Wear the Hunting Belt$(br)$(bold)35$() - Agility - Place portstones$(br)$(bold)35$() - Agility - Wear the Roller Skate$(br)$(bold)35$() - Hitpoints - Wear the Jellyfish Necklace$(br)$(bold)40$() - Agility - Place warp plates$(br)$(bold)40$() - Attack - Wield the extendo grip$(br)$(bold)40$() - Construction - Use the wand of symmetry$(br)$(bold)40$() - Defence - Wear the Totem of Freezing (held or in the charm slot)$(br)$(bold)40$() - Mining - Use the Lost Candle$(br)$(bold)40$() - Strength - Wield the Platinum Infused Hatchet$(br)$(bold)45$() - Agility - Place waystones (all ten styles)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)45$() - Agility - Wear the Kinetic Belt$(br)$(bold)45$() - Agility - Wear the Totem of Illusion (held or in the charm slot)$(br)$(bold)45$() - Defence - Wear the Wildfire Crown$(br)$(bold)45$() - Defence - Wield bucklers$(br)$(bold)45$() - Defence - Wear the Reflective Necklace$(br)$(bold)45$() - Hitpoints - Use the Sphere of Self-Sacrifice$(br)$(bold)50$() - Agility - Use the warp stone$(br)$(bold)50$() - Attack - Wield netherite knives$(br)$(bold)50$() - Defence - Use the Shield of Retaliation$(br)$(bold)50$() - Hitpoints - Hold a totem of undying (to be saved by it)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)50$() - Woodcutting - Wear the Leafy Mantle$(br)$(bold)55$() - Agility - Place sharestones$(br)$(bold)55$() - Agility - Use the Chorus Staff$(br)$(bold)55$() - Attack - Wield dragonbone sword and axe$(br)$(bold)55$() - Farming - Use dragonbone hoe$(br)$(bold)55$() - Mining - Use dragonbone pickaxe and shovel$(br)$(bold)55$() - Ranged - Use dragonbone bow$(br)$(bold)55$() - Strength - Wear the Ring of the Seven Deadly Sins$(br)$(bold)55$() - Woodcutting - Use dragonbone axe$(br)$(bold)60$() - Agility - Use the Clot of Time$(br)$(bold)60$() - Attack - Wield elemental dragonbone swords"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)60$() - Strength - Wear the Midnight Mantle$(br)$(bold)65$() - Agility - Wear the Glitchy Mantle$(br)$(bold)70$() - Farming - Use dragon eggs (placing one to hatch it)$(br)$(bold)70$() - Hitpoints - Wear the Ghostly Mantle$(br)$(bold)75$() - Attack - Wield dragonsteel swords and axes$(br)$(bold)75$() - Farming - Use dragonsteel hoes$(br)$(bold)75$() - Mining - Use dragonsteel pickaxes and shovels$(br)$(bold)75$() - Woodcutting - Use dragonsteel axes"
     },
     {
       "type": "patchouli:text",

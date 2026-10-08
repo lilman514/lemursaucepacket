@@ -807,13 +807,17 @@
       ],
       "2": [
         "#c:ores/gold",
-        "#c:ores/redstone"
+        "#c:ores/redstone",
+        "iceandfire:silver_ore",
+        "iceandfire:deepslate_silver_ore"
       ],
       "3": [
         "#c:ores/diamond",
         "#c:ores/emerald",
         "minecraft:obsidian",
-        "minecraft:crying_obsidian"
+        "minecraft:crying_obsidian",
+        "regions_unexplored:cobalt_obsidian",
+        "iceandfire:sapphire_ore"
       ],
       "4": [
         "#c:ores/netherite_scrap"
@@ -841,14 +845,24 @@
         "#c:ores/gold",
         "#c:ores/redstone",
         "minecraft:redstone",
-        "minecraft:redstone_block"
+        "minecraft:redstone_block",
+        "iceandfire:silver_ore",
+        "iceandfire:deepslate_silver_ore",
+        "iceandfire:raw_silver",
+        "iceandfire:raw_silver_block",
+        "createoreexcavation:raw_redstone"
       ],
       "3": [
         "minecraft:diamond",
         "minecraft:diamond_block",
         "#c:ores/diamond",
         "minecraft:obsidian",
-        "minecraft:crying_obsidian"
+        "minecraft:crying_obsidian",
+        "regions_unexplored:cobalt_obsidian",
+        "iceandfire:sapphire_ore",
+        "iceandfire:sapphire_gem",
+        "iceandfire:sapphire_block",
+        "createoreexcavation:raw_diamond"
       ],
       "4": [
         "minecraft:ancient_debris",

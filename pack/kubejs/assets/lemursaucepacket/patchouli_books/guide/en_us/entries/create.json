@@ -2,7 +2,7 @@
   "name": "Create basics",
   "category": "lemursaucepacket:wiki",
   "icon": "create:cogwheel",
-  "sortnum": 35,
+  "sortnum": 43,
   "pages": [
     {
       "type": "patchouli:text",
@@ -11,25 +11,25 @@
     {
       "type": "patchouli:text",
       "title": "Speed and stress",
-      "text": "Turning has two numbers. $(bold)Speed$() (RPM) is how fast: faster machines work faster. $(bold)Stress$() (SU) is how hard: every machine puts a load on the network, every power source supplies so much, and if the load is more than the supply, the whole network stops. Engineer's goggles show both when you look at a part."
+      "text": "Turning has two numbers. $(bold)Speed$() (RPM) is how fast: faster machines work faster. $(bold)Stress$() (SU) is how hard: every machine puts a load on the network, every power source supplies so much, and if the load is more than the supply, the whole network stops. Look at a part to see both: here you don't even need the Engineer's goggles on, the readout is always there."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)Cogwheels of different sizes change speed: a big one turning a small one doubles it.$(br)$(li)A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.$(br)$(li)Most processing machines need a minimum speed. If one won't work, check its speed first."
+      "text": "$(li)Cogwheels of different sizes change speed: a big one turning a small one doubles it.$(br)$(li)A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.$(br)$(li)Slow machines still work, just slower. A few need a minimum: the mechanical mixer, a display board, Slice & Dice's slicer and the Drilling Machine need 30 RPM, and the alternator 32. If a whole network stops, it's overstressed: check its stress."
     },
     {
       "type": "patchouli:text",
       "title": "Power",
-      "text": "$(#b9a98a)Source - How - Notes$()$(br)$(bold)Water wheel$() - Place it in flowing water (or water falling past it) - The first power anyone builds. The large one gives more$(br)$(bold)Windmill$() - Sails or wool round a windmill bearing, then right-click the bearing to start it - Needs room; more sails, more power$(br)$(bold)Steam engine$() - A fluid tank of water over blaze burners, with engines on its sides - Big power. Steam engines need $(bold)Smithing 35$() to make$(br)$(bold)Hand crank$() - Turn it yourself - For testing"
+      "text": "$(#b9a98a)Source - How - Notes$()$(br)$(bold)Water wheel$() - Place it in flowing water (or water falling past it) - The first power anyone builds. The large one gives more$(br)$(bold)Windmill$() - At least 8 sails (or super-glued wool) round a windmill bearing, then right-click the bearing to start it - Needs room; more sails, more power$(br)$(bold)Steam engine$() - A fluid tank of water over blaze burners, with engines on its sides - Big power. Steam engines need $(bold)Smithing 35$() to make$(br)$(bold)Hand crank$() - Turn it yourself - For testing"
     },
     {
       "type": "patchouli:text",
       "title": "Processing",
-      "text": "$(#b9a98a)Machine - What it does - Skill$()$(br)$(bold)Millstone$() - Grinds: wheat into flour, flowers into dyes, gravel into flint$(br)$(bold)Crushing wheels$() - A pair of them crush ore into crushed ore (more ingots per ore), stone into gravel - Made in mechanical crafters$(br)$(bold)Encased fan$() - Blows through lava (blasting), fire (smoking), water (washing) or soul fire (haunting) to process items in bulk - $(bold)Cooking 20$()$(br)$(bold)Mechanical press$() - Presses ingots into sheets; over a basin, compacts$(br)$(bold)Mechanical mixer$() - Over a basin, mixes: over a blaze burner it makes brass"
+      "text": "$(#b9a98a)Machine - What it does - Skill$()$(br)$(bold)Millstone$() - Grinds: wheat into flour, flowers into dyes, gravel into flint$(br)$(bold)Crushing wheels$() - A pair of them crush raw ore into crushed ore one for one, often with an experience nugget, and stone into gravel. Only ore blocks mined with Silk Touch crush into extra - Made in mechanical crafters$(br)$(bold)Encased fan$() - Blows through lava (blasting), fire (smoking), water (washing) or soul fire (haunting) to process items in bulk - $(bold)Cooking 20$()$(br)$(bold)Mechanical press$() - Presses ingots into sheets; over a basin, compacts"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Mechanical saw$() - Cuts logs into planks, and stone like a stonecutter - $(bold)Woodcutting 15$()$(br)$(bold)Mechanical drill$() - Breaks the block in front of it (up to Hardness tier II on a contraption) - $(bold)Mining 15$()"
+      "text": "$(bold)Mechanical mixer$() - Over a basin, mixes: over a blaze burner it makes brass$(br)$(bold)Mechanical saw$() - Cuts logs into planks, and stone like a stonecutter - $(bold)Woodcutting 15$()$(br)$(bold)Mechanical drill$() - Breaks the block in front of it, up to Hardness tier II, standing still or on a contraption - $(bold)Mining 15$()"
     },
     {
       "type": "patchouli:text",
@@ -39,7 +39,7 @@
     {
       "type": "patchouli:text",
       "title": "Moving things",
-      "text": "Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; $(bold)mechanical arms$() move items from anywhere to anywhere in reach. Smart funnels and filters choose which items go where."
+      "text": "Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; $(bold)mechanical arms$() move items from anywhere to anywhere in reach. Brass funnels and filters choose which items go where."
     },
     {
       "type": "patchouli:text",
@@ -49,11 +49,15 @@
     {
       "type": "patchouli:text",
       "title": "Milestones your skills unlock",
-      "text": "Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.$(br2)$(#b9a98a)Level - Skill - Machine$()$(br)$(bold)15$() - Mining - Mechanical drill$(br)$(bold)15$() - Woodcutting - Mechanical saw$(br)$(bold)15$() - Farming - Mechanical harvester and plough$(br)$(bold)20$() - Cooking - Encased fan$(br)$(bold)30$() - Crafting - Mechanical crafter$(br)$(bold)30$() - Construction - Schematicannon$(br)$(bold)35$() - Smithing - Steam engine$(br)$(bold)35$() - Agility - Train station and train controls$(br)$(bold)35$() - Enchanting - Blaze enchanter"
+      "text": "Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see $(l:lemursaucepacket:skills)Skills$(/l))."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)50$() - Enchanting - Printer$(br)$(bold)50, 65, 80$() - Mining - Ore vein drill heads: iron, diamond, netherite$(br2)The full list is in $(l:lemursaucepacket:skills)Skills$(/l)."
+      "text": "$(#b9a98a)Level - Skill - Machine$()$(br)$(bold)15$() - Mining - Mechanical drill$(br)$(bold)15$() - Woodcutting - Mechanical saw$(br)$(bold)15$() - Farming - Mechanical harvester and plough$(br)$(bold)20$() - Cooking - Encased fan$(br)$(bold)30$() - Crafting - Mechanical crafter$(br)$(bold)30$() - Construction - Schematicannon$(br)$(bold)35$() - Smithing - Steam engine$(br)$(bold)35$() - Agility - Train station and train controls$(br)$(bold)35$() - Enchanting - Blaze enchanter$(br)$(bold)50$() - Enchanting - Printer$(br)$(bold)50, 65, 80$() - Mining - Ore vein drill heads: iron, diamond, netherite"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The full list is in $(l:lemursaucepacket:skills)Skills$(/l)."
     },
     {
       "type": "patchouli:text",

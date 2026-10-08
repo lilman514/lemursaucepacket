@@ -19,6 +19,26 @@
     {
       "id": "minecraft:crying_obsidian",
       "required": false
+    },
+    {
+      "id": "regions_unexplored:cobalt_obsidian",
+      "required": false
+    },
+    {
+      "id": "iceandfire:sapphire_ore",
+      "required": false
+    },
+    {
+      "id": "iceandfire:sapphire_gem",
+      "required": false
+    },
+    {
+      "id": "iceandfire:sapphire_block",
+      "required": false
+    },
+    {
+      "id": "createoreexcavation:raw_diamond",
+      "required": false
     }
   ]
 }

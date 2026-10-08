@@ -44,9 +44,15 @@
   ],
   "news": [
     {
+      "title": "1.15.0: Every item in the progression, machines at your level, and a wiki you can lean on",
+      "date": "2026-10-08",
+      "body": "Every modded item now has a place in the skill progression: 147 new gates over 496 items, from backpack upgrades to Ice and Fire's gear. Create's machines (mechanical crafters, basins, spouts, drills and saws), the Crafter and backpacks set down as blocks work at the levels of whoever last placed or right-clicked them: right-click yours once so they run at your levels. Backpack upgrades, relic abilities and the Totem of Undying (Hitpoints 50) wait for their level too, and a chat message with a ding tells you what's missing. The wiki has a new FAQ, new tips pages and 111 new biome photos, and its wrong lines are fixed (graves are not locked to their owner). Backpacks now start closed to other players (switch \"Another player can open\" on to share one), and the Gold Coins have a lemur on them. Also: Ice and Fire's axes no longer fell whole trees, the vein finder is easier to make (its quest moved to the Factory Floor), and vendor shops and trading are fixed.",
+      "url": "https://play.limas.ca/wiki/faq"
+    },
+    {
       "title": "1.14.3: Far land builds faster",
       "date": "2026-10-08",
-      "body": "The server builds the land beyond your render distance (Distant Horizons) with a lot less work: it was working out the same biomes over and over at the edge of every patch of land it built. It is also building all the land within 10,000 blocks of spawn ahead of time, so far land there shows up right away.",
+      "body": "The server builds the land beyond your render distance (Distant Horizons) with a lot less work: it was working out the same biomes over and over at the edge of every patch of land it built.",
       "url": "https://play.limas.ca/wiki/faq"
     },
     {

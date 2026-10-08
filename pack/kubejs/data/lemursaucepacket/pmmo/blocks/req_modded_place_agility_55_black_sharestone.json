@@ -1,0 +1,25 @@
+{
+  "override": false,
+  "isTagFor": [
+    "waystones:black_sharestone",
+    "waystones:blue_sharestone",
+    "waystones:brown_sharestone",
+    "waystones:cyan_sharestone",
+    "waystones:gray_sharestone",
+    "waystones:green_sharestone",
+    "waystones:light_blue_sharestone",
+    "waystones:light_gray_sharestone",
+    "waystones:lime_sharestone",
+    "waystones:magenta_sharestone",
+    "waystones:orange_sharestone",
+    "waystones:pink_sharestone",
+    "waystones:purple_sharestone",
+    "waystones:red_sharestone",
+    "waystones:yellow_sharestone"
+  ],
+  "requirements": {
+    "PLACE": {
+      "agility": 55
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "waystones:warp_plate"
+  ],
+  "requirements": {
+    "PLACE": {
+      "agility": 40
+    }
+  }
+}

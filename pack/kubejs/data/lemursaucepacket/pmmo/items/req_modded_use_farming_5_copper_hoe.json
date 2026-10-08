@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:copper_hoe"
+  ],
+  "requirements": {
+    "TOOL": {
+      "farming": 5
+    },
+    "USE": {
+      "farming": 5
+    }
+  }
+}

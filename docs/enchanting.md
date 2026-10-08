@@ -80,8 +80,8 @@ Some blocks need more than a pickaxe tier. A **Hardness** tome is applied to a p
 | Tier | Mining | Breaks | Tome recipe |
 |---|---|---|---|
 | I | 10 | iron ore, zinc ore, lapis ore | andesite, copper ingot, book (crafting table) |
-| II | 20 | gold ore, redstone ore | iron sheet, lapis lazuli, book (mechanical crafting) |
-| III | 30 | diamond ore, emerald ore, obsidian, crying obsidian | golden sheet, redstone, book (mechanical crafting) |
+| II | 20 | gold ore, redstone ore, silver ore, deepslate silver ore | iron sheet, lapis lazuli, book (mechanical crafting) |
+| III | 30 | diamond ore, emerald ore, obsidian, crying obsidian, cobalt obsidian, sapphire ore | golden sheet, redstone, book (mechanical crafting) |
 | IV | 40 | ancient debris | diamond, precision mechanism, iron sheet, book (mechanical crafting) |
 | V | 50 | reinforced deepslate, budding amethyst | sturdy sheet, diamond, book (mechanical crafting) |
 

@@ -63,7 +63,6 @@ public final class HardnessUseGate {
     private static long checkedAt; // 0, never Long.MIN_VALUE: "now - checkedAt" must not overflow
     private static long loadedMtime = -1;
     private static boolean levelErrorLogged;
-    private static final Map<UUID, Long> LAST_MESSAGE = new HashMap<>();
 
     private HardnessUseGate() {
     }
@@ -112,19 +111,39 @@ public final class HardnessUseGate {
         }
     }
 
-    /** Refuse the click: put the client back in sync (it may have predicted the move) and say why, at most once every two seconds. */
+    /** Refuse the click: put the client back in sync (it may have predicted the move) and say why (chat and a ding). */
     public static void refuse(AbstractContainerMenu menu, Player player, ItemStack what) {
         if (player.level().isClientSide()) return;
         menu.sendAllDataToRemote();
-        long now = System.currentTimeMillis();
-        Long last = LAST_MESSAGE.get(player.getUUID());
-        if (last != null && now - last < MESSAGE_MS) return;
-        LAST_MESSAGE.put(player.getUUID(), now);
+        net.lemursaucepacket.fixes.skills.GateNotice.tell(player, "hardness:" + what.getItem(), "You need " + needs(what, player) + " to use " + what.getHoverName().getString()
+                + " there: it can only go in a chest until then.", MESSAGE_MS);
+    }
+
+    /** Whether the player's Mining level lets them use this material (anything ungated, always). */
+    public static boolean mayUse(Player player, ItemStack stack) {
+        Settings s = settings();
+        return s == null || tierOf(stack, s) <= unlocked(player, s);
+    }
+
+    /** A backpack's pickup upgrade left this material on the ground for the normal pickup: says why, once a minute per item. */
+    public static void tellBackpack(Player player, ItemStack what) {
+        net.lemursaucepacket.fixes.skills.GateNotice.tell(player, "hardness-backpack:" + what.getItem(), "Your backpack can't take " + what.getHoverName().getString()
+                + " until you have " + needs(what, player) + ".", 60_000);
+    }
+
+    /** "Mining 20 (Hardness II, you have 12)". */
+    private static String needs(ItemStack what, Player player) {
         Settings s = settings();
         int tier = s == null ? 0 : tierOf(what, s);
         int level = s != null && tier > 0 && tier < s.unlock.length ? s.unlock[tier] : 0;
         String roman = tier > 0 && tier < ROMAN.length ? ROMAN[tier] : String.valueOf(tier);
-        player.displayClientMessage(Component.literal("§cNeeds Mining " + level + " to use " + what.getHoverName().getString() + " there (Hardness " + roman + ")"), true);
+        long have;
+        try {
+            have = APIUtils.getLevel("mining", player);
+        } catch (RuntimeException e) {
+            have = 0;
+        }
+        return "Mining " + level + " (Hardness " + roman + ", you have " + have + ")";
     }
 
     /** The tier the player's Mining level unlocks. */

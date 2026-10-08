@@ -6,6 +6,11 @@
 //   - the quest requirements' wording (the requirements themselves are on the quest steps in npcs/quests.mjs).
 // Levels are 1-99. "combat" is the combat level (lsp_fixes skills/CombatLevel): RuneScape's formula over Attack,
 // Strength, Defence, Hitpoints and Ranged, which tops out at 113 here (no Prayer or Magic).
+// The modded items' gates live in skills/modded.mjs and join the tables below (CRAFT, CHOP, BREW, RELIC_WEAR); its
+// hold, use, wear and place gates become Project MMO rules in skills/build.mjs.
+
+import { MODDED } from './modded.mjs'
+const modded = (kind) => MODDED.filter((g) => g.kind === kind)
 
 /** What trains each skill and what every level of it gives, for the in-game skill screens (and the wiki's table). */
 export const SKILL_INFO = {
@@ -40,7 +45,13 @@ const fd = (...ids) => ids.map((id) => `farmersdelight:${id}`)
  * Project MMO slows anyone who wears one early, and the relic's ability waits for the level too. Making them is in
  * CRAFT.
  */
-export const RELIC_WEAR = [{ item: 'lsp_fixes:climbing_boots', skill: 'agility', level: 25, what: 'the Climbing Boots (a relic)' }]
+export const RELIC_WEAR = [
+  { item: 'lsp_fixes:climbing_boots', skill: 'agility', level: 25, what: 'the Climbing Boots (a relic)' },
+  // Relics' own relics, the totem of undying and Friends & Foes' totems (skills/modded.mjs): worn, held or used, each
+  // needs its level to work (lsp_fixes: relic abilities, LivingUseTotemEvent, and the hook in Friends & Foes' totem code).
+  ...MODDED.filter((g) => g.mod === 'relics' || g.items.includes('minecraft:totem_of_undying') || g.items.some((i) => /^friendsandfoes:totem_of_/.test(i))).flatMap(({ kind, skill, level, what, items }) =>
+    items.map((item) => ({ item, skill, level, kind: kind === 'use' ? 'use' : 'wear', what: item.startsWith('relics:') ? `the ${what}` : item === 'minecraft:totem_of_undying' ? 'a totem of undying (to be saved by it)' : what })))
+]
 
 export const CRAFT = [
   // Crafting: leather, bows, the fine and magical things.
@@ -96,7 +107,9 @@ export const CRAFT = [
   { skill: 'enchanting', level: 50, machine: true, what: 'Printers (they copy enchanted books)', items: ['create_enchantment_industry:printer'] },
   { skill: 'mining', level: 50, machine: true, what: 'Drill heads for the ore vein drilling machine', items: ['createoreexcavation:drill'] },
   { skill: 'mining', level: 65, machine: true, what: 'Diamond drill heads', items: ['createoreexcavation:diamond_drill'] },
-  { skill: 'mining', level: 80, machine: true, what: 'Netherite drill heads', items: ['createoreexcavation:netherite_drill'] }
+  { skill: 'mining', level: 80, machine: true, what: 'Netherite drill heads', items: ['createoreexcavation:netherite_drill'] },
+  // The modded items' making gates (skills/modded.mjs).
+  ...modded('craft').map(({ skill, level, machine, what, items }) => ({ skill, level, ...(machine ? { machine } : {}), what, items }))
 ]
 
 /** Brewing: what each ingredient brews and the level it needs (manual or by hopper: a stand brews at the level of whoever last used it). */
@@ -121,8 +134,12 @@ export const BREW = [
   { level: 80, item: 'minecraft:breeze_rod', what: 'Wind Charging' },
   { level: 80, item: 'minecraft:cobweb', what: 'Weaving' },
   { level: 80, item: 'minecraft:slime_block', what: 'Oozing' },
-  { level: 80, item: 'minecraft:stone', what: 'Infested' }
+  { level: 80, item: 'minecraft:stone', what: 'Infested' },
+  // Modded brewing ingredients (skills/modded.mjs): Friends & Foes' crab claw, Illager Invasion's goat horn.
+  ...modded('brew').map(({ level, items, what }) => ({ level, item: items[0], what }))
 ]
+/** Modded potions' levels (their ids carry their own namespace), for Brewing XP like POTION_LEVEL's. */
+export const MODDED_POTION_LEVEL = { 'friendsandfoes:reaching': 45, 'illagerinvasion:berserking': 40 }
 /**
  * The level each potion takes to brew (for its XP): its own ingredient's level, at least 30 for a longer one (redstone)
  * and 60 for a stronger one (glowstone); a splash potion is at least 50 and a lingering one 70.
@@ -166,7 +183,9 @@ export const CHOP = [
   { level: 35, what: 'Dark oak trees', blocks: woods('dark_oak') },
   { level: 45, what: 'Mangroves', blocks: woods('mangrove') },
   { level: 50, what: 'Cherry trees', blocks: woods('cherry') },
-  { level: 60, what: 'Crimson and warped stems', blocks: stems('crimson', 'warped') }
+  { level: 60, what: 'Crimson and warped stems', blocks: stems('crimson', 'warped') },
+  // Modded trees (skills/modded.mjs): Regions Unexplored's and the pale oak.
+  ...modded('chop').map(({ level, what, items }) => ({ level, what, blocks: items }))
 ]
 
 /** Gear moved from Attack to Ranged (skills/build.mjs writes the Project MMO rules). */

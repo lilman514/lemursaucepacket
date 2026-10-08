@@ -2,7 +2,7 @@
   "name": "The Nether",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:netherrack",
-  "sortnum": 18,
+  "sortnum": 26,
   "pages": [
     {
       "type": "patchouli:text",

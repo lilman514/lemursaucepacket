@@ -1,0 +1,11 @@
+{
+  "override": false,
+  "isTagFor": [
+    "aeronautics:mounted_potato_cannon"
+  ],
+  "requirements": {
+    "PLACE": {
+      "ranged": 30
+    }
+  }
+}

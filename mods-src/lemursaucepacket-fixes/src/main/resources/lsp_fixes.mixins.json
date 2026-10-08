@@ -30,7 +30,19 @@
     "sable.SableCarryFreeBlocksMixin",
     "create.DrillFreeBlockMixin",
     "distanthorizons.ChunkyAccessorMixin",
-    "distanthorizons.GenRegionBiomeMixin"
+    "distanthorizons.GenRegionBiomeMixin",
+    "lithostitched.InStructurePredicateMixin",
+    "relics.AbilityDataMixin",
+    "create.MechanicalCrafterOperatorMixin",
+    "create.SpoutGateMixin",
+    "create.SpoutOperatorMixin",
+    "create.BreakerGateMixin",
+    "create.MovingBreakerGateMixin",
+    "sophisticatedcore.UpgradeEnabledMixin",
+    "sophisticatedcore.PickupHardnessMixin",
+    "sophisticatedbackpacks.PlacedBackpackOperatorMixin",
+    "sophisticatedbackpacks.BackpackClosedByDefaultMixin",
+    "friendsandfoes.FriendsAndFoesTotemHookMixin"
   ],
   "client": [
     "CapeSkinMixin",

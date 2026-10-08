@@ -2,7 +2,7 @@
   "name": "Elvarg's Lair",
   "category": "lemursaucepacket:wiki",
   "icon": "iceandfire:dragon_skull_fire",
-  "sortnum": 27,
+  "sortnum": 35,
   "pages": [
     {
       "type": "patchouli:text",

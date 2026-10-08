@@ -23,6 +23,7 @@ Nearly everything here has a button as well (ESC opens the hub: see [The ESC men
 | `/guide` | Open the LemurSaucePacket Guide, this wiki as a book |
 | `/skills` | The skills screen: every skill and your level. [More](skills.md#the-skills-screen) |
 | `/skills <skill>` | That skill's guide: what every level unlocks |
+| `/fallingtree toggle` | Switch the Lumber Axe's whole-tree felling off or on for yourself |
 
 ## Coins and trading
 

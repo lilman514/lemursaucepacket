@@ -59,4 +59,4 @@ JEI (R on an item) shows every recipe.
 
 Global waystones (an admin sets them) show for everyone and cost nothing to warp to.
 
-A warp takes you and any animal on your lead, not freight. Trains and airships still carry the goods.
+A waystone warp takes you and any animal on your lead, not freight. A warp plate is different: it sends whatever stands on it, dropped items too. For bulk, trains and airships still carry the goods.

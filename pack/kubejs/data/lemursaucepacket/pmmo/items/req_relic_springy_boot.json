@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:springy_boot"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 20
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

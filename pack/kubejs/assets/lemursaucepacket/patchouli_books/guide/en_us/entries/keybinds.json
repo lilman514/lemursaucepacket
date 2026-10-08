@@ -28,7 +28,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)[$() - Transfer to Storage (in menus) - Sophisticated Core$(br)$(bold)]$() - Transfer to Inventory (in menus) - Sophisticated Core$(br)$(bold)Middle Button$() - Sort Storage/Backpack (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)ALT + Z$() - Switch Upgrade in the 1st Slot On/Off - Sophisticated Backpacks$(br)$(bold)ALT + X$() - Switch Upgrade in the 2nd Slot On/Off - Sophisticated Backpacks$(br)$(bold)CTRL + Left Button$() - Transfer one (in menus) - Inventory Essentials$(br)$(bold)SHIFT + Left Button$() - Bulk Drop out of Screen (in menus) - Inventory Essentials"
+      "text": "$(bold)[$() - Transfer to Storage (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)]$() - Transfer to Inventory (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)Middle Button$() - Sort Storage/Backpack (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)ALT + Z$() - Switch Upgrade in the 1st Slot On/Off - Sophisticated Backpacks$(br)$(bold)ALT + X$() - Switch Upgrade in the 2nd Slot On/Off - Sophisticated Backpacks$(br)$(bold)CTRL + Left Button$() - Transfer one (in menus) - Inventory Essentials"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)SHIFT + Left Button$() - Bulk Drop out of Screen (in menus) - Inventory Essentials"
     },
     {
       "type": "patchouli:text",
@@ -112,7 +116,11 @@
     {
       "type": "patchouli:text",
       "title": "Sorting",
-      "text": "$(bold)Sorting$() (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:$(br2)$(li)The buttons at the top right of each half sort it (plain, in columns, in rows).$(br)$(li)$(bold)Move All$() (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to see the keys that include the hotbar or move only the kinds of items the other side already has.$(br)$(li)Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks."
+      "text": "$(bold)Sorting$() (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:$(br2)$(li)The buttons at the top right of the container sort it (plain, in columns, in rows). $(bold)R$() sorts whichever side is under the mouse, your inventory included.$(br)$(li)$(bold)Move All$() (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to see the keys that include the hotbar or move only the kinds of items the other side already has."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks."
     },
     {
       "type": "patchouli:text",

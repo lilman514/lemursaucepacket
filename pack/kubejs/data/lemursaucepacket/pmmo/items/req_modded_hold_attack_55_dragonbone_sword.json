@@ -1,0 +1,18 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonbone_sword",
+    "iceandfire:dragonbone_axe"
+  ],
+  "requirements": {
+    "WEAPON": {
+      "attack": 55
+    },
+    "WEAR": {
+      "attack": 55
+    }
+  },
+  "negative_effect": {
+    "minecraft:weakness": 2
+  }
+}

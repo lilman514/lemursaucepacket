@@ -1,0 +1,215 @@
+{
+  "name": "Inventory, sorting and storage",
+  "category": "lemursaucepacket:wiki",
+  "icon": "sophisticatedbackpacks:backpack",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Several mods make every inventory screen quicker than vanilla: your inventory, chests, barrels, shulker boxes and backpacks. The tricks below work in nearly all of them. Every key is also on $(l:lemursaucepacket:keybinds)Keybinds$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Move items fast",
+      "text": "$(li)$(bold)Paint one item per slot.$() Pick up a stack, hold the right button and sweep over slots: each gets one item, and passing a slot again adds another. It's the quickest way to lay out a crafting grid.$(br)$(li)$(bold)Gather a kind.$() Pick up a stack, hold the left button and sweep: every stack of the same item you pass joins the one on your cursor.$(br)$(li)$(bold)Shift-click in one sweep.$() Hold Shift, hold the left button and sweep over slots: each one is shift-clicked to the other side. Holding a stack, the same sweep moves only that item."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Move every stack of a kind.$() Ctrl + Shift + click a stack: all of that item moves to the other side, all the cobblestone out of a chest at once.$(br)$(li)$(bold)Move everything.$() Hold Space and click any item: the whole inventory it's in moves to the other side. Space + right-click moves one of each item.$(br)$(li)$(bold)Move one.$() Ctrl + click moves a single item.$(br)$(li)$(bold)Use the wheel.$() Over a stack, roll the wheel down to send its items to the other side one at a time, or up to pull more of that item in."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Drop a whole kind.$() Ctrl + Shift + Q over a slot drops every stack of that item. Holding a stack, Shift + click outside the window drops it and every stack like it. Careful near lava, and near other players.$(br2)Two mods move items with the wheel: Mouse Tweaks and Inventory Profiles Next (IPN). If the wheel moves things the wrong way for you, switch one off: $(bold)Wheel Tweak$() in Mods → Mouse Tweaks → Config, or $(bold)Enable Item Scrolling$() in IPN's settings (hold R and press C). Mouse Tweaks can also be switched off on the launcher's Mods page."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "In a vendor's shop and the $(#e0ac46)/trade$() window all of this is off on purpose: there a click buys, sells or offers. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sort and keep things put",
+      "text": "Sorting comes from Inventory Profiles Next (IPN). Its keys live in its own settings, not in Controls: see the table below.$(br2)$(li)$(bold)Sort with R.$() In any inventory screen, R sorts the side your mouse is over, the chest or your own inventory. Over an item R also opens its recipes, so point at an empty slot.$(br)$(li)$(bold)Sort buttons.$() An open chest, barrel or shulker box has small buttons at its top right: sort, sort in columns and sort in rows. Roll the wheel over one to change what it sorts by (name, ID, count and more). Only the container gets them; sort your own half with R."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Move All.$() The arrow button empties the container into your inventory, or your inventory into it. Your hotbar stays put. Hold a key as you click it to change what moves (see below).$(br)$(li)$(bold)Lock a slot.$() Hold Left Alt and click a slot in your inventory or hotbar. Sorting, Move All and Shift + click leave a locked slot alone, items you pick up don't fill it while it's empty, and out of menus Q won't throw a tool or weapon from a locked hotbar slot. Locks are kept per server."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Auto Refill.$() When a hotbar stack runs out, more of the same comes up from your inventory. A tool or a piece of armour about to break (10 durability left) is swapped for a spare. Hold Left Alt while you use a tool to let it break instead.$(br)$(li)$(bold)A slot that stopped refilling.$() Ctrl + click on a hotbar or armour slot is also IPN's switch for that slot's Auto Refill, and the pack hides the small marks that show which slots refill. Ctrl + click it again, or press Left Ctrl + R in game for the slot in your hand."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Keep crafting.$() The green tick under the crafting arrow, in your inventory and at a crafting table, refills the grid from your inventory after each craft, so you can keep taking the result. Untick it to stop. Its tooltip names the key that crafts until the ingredients run out.$(br)$(li)$(bold)Spot the same item.$() Hover an item and every slot holding the same lights up.$(br)$(li)$(bold)Rename a whole kind.$() At an anvil, tick $(bold)Bulk Rename$() to rename every stack of that item you carry."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Hold while you click Move All - What moves$()$(br)$(bold)Nothing$() - Everything$(br)$(bold)Left Shift$() - Only the items the other side already has$(br)$(bold)Left Alt$() - Your hotbar too$(br)$(bold)Left Ctrl$() - Only the kind of item under the mouse$(br)$(bold)Caps Lock$() - Only enough to top up the stacks already there"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "IPN's keys",
+      "text": "Hold R and press the second key. Change any of them on the Hotkeys page of IPN's settings.$(br2)$(#b9a98a)Keys - What they do$()$(br)$(bold)R$() - Sort the side under the mouse$(br)$(bold)R + C$() - IPN's settings$(br)$(bold)R + T$() - Move All, like the arrow button$(br)$(bold)R + M$() - Throw All: throws items from the side under the mouse onto the floor (hold Left Shift for all of them). Easy to press by mistake$(br)$(bold)R + G$() - IPN's button layout editor$(br)$(bold)Left Alt + click$() - Lock or unlock a slot$(br)$(bold)Ctrl + click a hotbar or armour slot$() - Switch its Auto Refill off or on"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Left Ctrl + R, no screen open$() - The same for the slot in your hand$(br)$(bold)Wheel over a stack$() - IPN's own scrolling: hold Left Shift for the whole stack, Z to leave one behind, X to spread it over free slots, C to throw it out, Left Ctrl to pause"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Find any recipe",
+      "text": "JEI is the item list down the right of every inventory screen. Hover an item in any menu and press $(bold)R$() for its recipes or $(bold)U$() for what it's used in; left- and right-click in JEI's list do the same."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Fill the grid.$() On a recipe page, the $(bold)+$() button beside the recipe moves the ingredients from your inventory into the open grid: your inventory's 2×2, a crafting table, a backpack's crafting upgrade or Create's crafting blueprint. Shift + click it to fill as many sets as you have. If you're short of something, its tooltip says $(italic)Missing Items$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Bookmark what you're after.$() Press A over an item to pin it to the list on the left (A again takes it off). Press A over a recipe's result to bookmark the recipe itself. Bookmarked and craftable recipes are listed first, and a bookmarked recipe's tooltip shows the keys to craft it once or many times.$(br)$(li)$(bold)Set a filter without the item.$() Drag an item from JEI's list onto a backpack upgrade's filter slot, or into a Create filter's screen."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Where it comes from.$() The $(bold)i$() tab on an item's page says how to get it ($(l:lemursaucepacket:where-to-find)Where to find things$(/l)). An ore also has a $(bold)World Generation$() page: the heights and biomes it turns up in ($(l:lemursaucepacket:tools-and-mining)Tools and mining$(/l)).$(br)$(li)$(bold)JEI vanished?$() Ctrl + O brings it back."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Search tricks",
+      "text": "Click the search bar at the bottom right (or press Ctrl + F) and type. Plain words match item names and tooltip text. Right-click the bar to clear it; the Up and Down arrows bring back earlier searches. These narrow it down:$(br2)$(li)$(#e0ac46)@create$(): items from one mod$(br)$(li)$(#e0ac46)#c:ingots$(): items with a tag$(br)$(li)$(#e0ac46)$heals$(): tooltip text only$(br)$(li)$(#e0ac46)-stairs$(): leave those out$(br)$(li)$(#e0ac46)oak|birch$(): either word$(br)$(li)$(#e0ac46)\"iron ore\"$(): the exact phrase"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your backpack",
+      "text": "Backpacks carry far more than your inventory, and their upgrades pick up, sort, feed and craft for you. Here they don't turn up in loot chests or on mobs: you make them, and the quest book's reward crates hand out upgrades. The $(bold)Backpack Workshop$() chapter of the $(l:lemursaucepacket:quests)quest book$(/l) walks through it all."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Tiers",
+      "text": "A leather backpack is 4 string, 4 leather and a chest. Each better tier is the one below it in the middle of a crafting grid, ringed with its Create age's parts, and keeps its contents and upgrades.$(br2)$(#b9a98a)Tier - Ring it with - Slots - Upgrade slots - Needs$()$(br)$(bold)Leather$() - (4 string, 4 leather, a chest) - 18 - 1 - -$(br)$(bold)Copper$() - 6 copper sheets, 2 andesite alloy - 27 - 1 - Crafting 10$(br)$(bold)Iron$() - 6 iron sheets, 2 andesite casings - 36 - 2 - Crafting 20$(br)$(bold)Gold$() - 6 golden sheets, 2 brass casings - 54 - 2 - Crafting 35"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Diamond$() - 6 diamonds, 2 precision mechanisms - 72 - 3 - Crafting 50$(br)$(bold)Netherite$() - At a smithing table: a netherite upgrade template and a netherite ingot - 90 - 4 - Smithing 55"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Wear it",
+      "text": "$(li)$(bold)Wear it to make it work.$() Put it in the $(bold)Back$() slot (G opens your Curios slots) or in the chest armour slot. Only a backpack you wear runs the upgrades that work by themselves, such as pickup, magnet, feeding and the furnaces. Others you carry are plain storage.$(br)$(li)$(bold)Open it.$() B opens the backpack you wear (so does ESC → Backpack). Right-click one in your hand, or hover any backpack in an inventory screen and press B."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The Back slot is shared.$() The Relics mantles (Midnight, Leafy, Glitchy and Ghostly) go there too. With a mantle on, wear your backpack in the chest slot, or its upgrades stop.$(br)$(li)$(bold)Three at most.$() Carry a fourth backpack and you get Slowness, a level for each extra one."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Set it down.$() Sneak + right-click a block with the backpack in your hand to place it; on a chest, its deposit and restock upgrades run instead. Right-click it to open it, and sneak + right-click it with an empty hand to pick it up. Broken, it keeps everything inside. Hoppers and funnels can fill and empty a placed backpack, and a comparator reads how full it is."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)When you die.$() A Grave Essence inside a backpack you carry still counts for your grave ($(l:lemursaucepacket:lifesteal)Hearts, graves and elimination$(/l)). Graves aren't locked to their owner: whoever breaks yours gets what's in it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Your backpack is closed to other players.$() Every backpack starts with $(bold)Another player can NOT open$(), so right-clicking your back opens nothing. To let a teammate reach in, switch $(bold)Another player can open$() on in the backpack's settings (the settings button in the backpack screen); on the $(bold)Player$() tab it covers all your backpacks. While it's on, anyone who right-clicks your back can take what's inside, so switch it off again afterwards. See $(l:lemursaucepacket:combat)Combat and PvP$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Upgrades",
+      "text": "Upgrades go in the backpack's upgrade slots. Each one adds a tab at the side with its filter and options, and most have an ON/OFF switch; Alt + Z and Alt + X switch the upgrades in the first two slots on and off. Most are made on an Upgrade Base (4 string, 4 iron ingots and a leather), and an advanced one from the basic one. JEI shows every recipe."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Upgrades follow your skills.$() An upgrade only works once you have the level it takes to make it: the level after its name below, also on its tooltip. Until then it sits idle, and a chat message with a ding says what it needs. One from a quest crate or a friend waits for your level too. A backpack set down as a block works at the levels of whoever last placed or opened it. Stack and tank upgrades always work."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Pickup$() (Crafting 5; advanced 30). Items you pick up go straight into the backpack, and a placed backpack takes items that touch it. Its filter allows or blocks a list; the advanced one can also match by mod or tag, or take only what the backpack already holds.$(br)$(li)$(bold)Magnet$() (Crafting 30; advanced 45). Pulls dropped items within 3 blocks into the backpack (the advanced one 4), with the same filters."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Deposit and restock$() (Crafting 20; advanced 40). Sneak + right-click a chest with the backpack in your hand, or wear it, look at the chest and press C. Deposit puts the filtered items in the chest, and can be set to only what the chest already holds; restock takes them out into the backpack.$(br)$(li)$(bold)Refill$() (Crafting 20; advanced 40). Keeps the items in its filter topped up in your inventory, so torches, food and blocks never run out. The advanced one lets you choose the slot, and middle-click (pick block) takes a block from the backpack."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Feeding$() (Cooking 25; advanced 40). Eats food from the backpack when you get hungry. Its filter decides which foods.$(br)$(li)$(bold)Crafting$() (Crafting 15). A crafting grid in a tab that keeps its items when you close it. JEI's + button fills it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Upgrade - What it does - Needs$()$(br)$(bold)Stack$() - More of each item per slot: starter ×1.5, tier 1 ×2, tier 2 ×4. Tier 2 is 4 gold blocks and 4 brass casings around a tier 1 - Crafting 15, 25, 40$(br)$(bold)Compacting$() - Turns items into their compact form as they come in, nuggets into ingots and ingots into blocks (2×2 recipes; advanced, 3×3 too) - Crafting 30; advanced 45$(br)$(bold)Void$() - Deletes the items in its filter as they come in: cobblestone, gravel, rotten flesh - Crafting 25; advanced 40"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tool swapper$() - Left-click a block or mob and the right tool from the backpack swaps into your hand - Crafting 25; advanced 40$(br)$(bold)Filter$() - Decides what hoppers and pipes may put into or take out of a placed backpack - Crafting 5; advanced 30$(br)$(bold)Smelting, smoking, blasting$() - A furnace in a tab. The auto kinds take fuel and items from the backpack by filter and put the results back - Smithing 15, Cooking 15, Smithing 25; auto: Smithing 40, Cooking 40, Smithing 45"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Anvil, smithing, stonecutter$() - The station in a tab, no block needed - Smithing 25, Smithing 50, Construction 10$(br)$(bold)Pressing, mixing$() - Create's press and mixer in a tab. Pressing needs no rotation. Mixing heats with its own blaze burner (give it fuel) and takes fluid from a tank upgrade - Crafting 30, 35$(br)$(bold)Alchemy$() - Uses potions, effect foods and milk buckets from the backpack by itself - Brewing 45; advanced 60$(br)$(bold)Tank$() - Turns part of the backpack's slots into a fluid tank, 4,000 mB a row; those slots must be empty - Crafting 25"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Experience pump$() - Stores your experience in a tank upgrade. It doesn't mend here - -$(br)$(bold)Jukebox$() - Plays music discs - -$(br)$(bold)Everlasting$() - The backpack can't be destroyed or despawn, and won't fall into the void - -$(br2)$(bold)Ender Linker$() (Crafting 50): right-click a backpack with it, or craft the two together, then right-click an empty backpack with the linker to join it. Linked backpacks share one inventory."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Server limits",
+      "text": "$(li)One stack upgrade per backpack, tier 2 (×4) at most: tiers 3, 4 and Omega are switched off.$(br)$(li)One furnace upgrade (smelting, smoking, blasting or an auto one), one jukebox, one tool swapper and one everlasting per backpack, and two tanks at most.$(br)$(li)Switched off: inception (backpacks inside backpacks), the pumps, the battery, the mob catchers and infinity.$(br)$(li)No shulker boxes or other item containers inside a backpack, and no backpack inside a shulker box or bundle."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Materials past your Mining level's Hardness don't go in: a pickup upgrade leaves them to your normal pickup and tells you why. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "In the backpack screen",
+      "text": "$(li)$(bold)Search.$() Type in its search box to show only matching slots; start with @ to search by mod.$(br)$(li)$(bold)Sort.$() Middle-click, or press its sort button; the button beside it switches between by name, by mod, by count and by tags.$(br)$(li)$(bold)Move what it already holds.$() The [ key moves the items the backpack already has from your inventory into it, and ] moves them back out; hold Shift to move everything. The two arrow buttons do the same. Both keys only work in a backpack screen."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Dye it.$() Craft it with dyes: dyes to the left of the backpack colour the main cloth, to the right the trim, above or below it both. Right-click a water cauldron with it to wash it.$(br2)The settings button opens $(bold)Backpack Settings$():"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Setting - What it does$()$(br)$(bold)Another player can open$() - Off by default. On, anyone can open it from your back (see above)$(br)$(bold)Memory$() - Slots you pick remember their item and only take that item, so sorting and pickups keep things in place$(br)$(bold)No Sort$() - Slots that sorting leaves alone$(br)$(bold)Item Display$() - Shows one slot's item on the backpack, a label for a placed one$(br)$(bold)Player and Backpack tabs$() - Player settings cover all your backpacks; Backpack overrides them for this one"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Save and load$() - Keeps these settings in numbered slots (scroll to pick one) to load on another backpack"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Peek inside containers",
+      "text": "$(li)$(bold)Shulker boxes.$() Hover one and hold Left Shift for a preview of what's inside; add Left Alt for the full layout, and hold Left Ctrl to keep the preview still. The tooltip lists these keys.$(br)$(li)$(bold)Your ender chest.$() An ender chest's tooltip previews your own ender chest.$(br)$(li)$(bold)Backpacks.$() Their tooltip names the key that lists their contents and upgrades.$(br)$(li)$(bold)Bundles.$() String over leather makes one (Crafting 10). In a menu, right-click items into it; roll the wheel over it to choose an item, then right-click to take that one out."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Curios slots",
+      "text": "$(li)$(bold)G$() (or the small button by your character in the inventory) opens the Curios panel: Head, Necklace, Back, Cape, two Hands, Ring, Belt, Charm and two Feet.$(br)$(li)$(bold)Back$() takes a backpack or a Relics mantle, not both. $(bold)Cape$() takes your earned cape ($(l:lemursaucepacket:capes)Capes$(/l)). The rest take relics ($(l:lemursaucepacket:gear)Gear$(/l)) and other trinkets.$(br)$(li)$(bold)Head$() takes Engineer's Goggles, so you can wear goggles and a helmet together. You may not need them at all: see $(l:lemursaucepacket:interface)Your screen$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)The eye on a slot hides that item on your character without taking it off."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "More storage",
+      "text": "$(#b9a98a)Storage - Good to know$()$(br)$(bold)Create's item vaults, toolboxes, item hatches and stock network$() - See $(l:lemursaucepacket:create-tips)Create tips$(/l)$(br)$(bold)Shulker box$() - Keeps its contents when broken. Crafting 65 to make. Can't go in a backpack$(br)$(bold)Ender chest$() - The same contents, yours alone, in every ender chest. Crafting 50 to make$(br)$(bold)Farmer's Delight cabinet$() - 27 slots, like a barrel$(br)$(bold)Macaw's drawers, wardrobes, kitchen cabinets, drawer and cupboard counters$() - 27 slots each"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Crates and bales$() - Nine carrots, potatoes, beetroots, cabbages, tomatoes or onions make a crate; nine rice a bag; nine rice panicles or nine straw a bale. Each crafts back into nine"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "When something looks odd",
+      "text": "$(#b9a98a)What you see - Why, and what to do$()$(br)$(bold)Two stacks of the same item won't merge$() - They belong to different players. Sorting merges the ones that match. See $(l:lemursaucepacket:lifesteal)What is yours$(/l)$(br)$(bold)An ore won't go into a backpack, hopper or machine$() - Its Hardness is past your Mining level. A chest, barrel or shulker box takes it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)$(br)$(bold)A backpack upgrade does nothing$() - Wear the backpack (Back or chest slot), and check you have the upgrade's level"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)A hotbar slot stopped refilling$() - Ctrl + click it in your inventory (or press Left Ctrl + R in game) to switch its Auto Refill back on$(br)$(bold)Your half of a chest has no sort buttons$() - Only the container gets them. Press R over your half$(br)$(bold)The wheel moves items the wrong way$() - Two mods use it: switch one off (see Move items fast)$(br)$(bold)The inventory tricks don't work in a shop$() - On purpose: every click there buys or sells$(br)$(bold)You're walking slowly$() - You carry more than three backpacks"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)All your coins sit in one stack$() - Coins always do. Shift + right-click the stack to take an exact amount. See $(l:lemursaucepacket:economy)Gold Coins$(/l)$(br)$(bold)JEI's item list is gone$() - Press Ctrl + O"
+    }
+  ]
+}

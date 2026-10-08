@@ -23,6 +23,26 @@
     {
       "id": "minecraft:redstone_block",
       "required": false
+    },
+    {
+      "id": "iceandfire:silver_ore",
+      "required": false
+    },
+    {
+      "id": "iceandfire:deepslate_silver_ore",
+      "required": false
+    },
+    {
+      "id": "iceandfire:raw_silver",
+      "required": false
+    },
+    {
+      "id": "iceandfire:raw_silver_block",
+      "required": false
+    },
+    {
+      "id": "createoreexcavation:raw_redstone",
+      "required": false
     }
   ]
 }

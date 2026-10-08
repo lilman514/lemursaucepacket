@@ -1,0 +1,78 @@
+{
+ "Controls & keys": {
+  "rows": 71,
+  "missing": 62,
+  "partial": 1
+ },
+ "Inventory, sorting & storage": {
+  "rows": 88,
+  "missing": 76,
+  "partial": 1
+ },
+ "Building & decoration": {
+  "rows": 69,
+  "missing": 61,
+  "partial": 2
+ },
+ "Movement & travel": {
+  "rows": 95,
+  "missing": 85,
+  "partial": 0
+ },
+ "Maps & navigation": {
+  "rows": 45,
+  "missing": 39,
+  "partial": 0
+ },
+ "Combat & PvP": {
+  "rows": 63,
+  "missing": 52,
+  "partial": 3
+ },
+ "Farming, food & animals": {
+  "rows": 76,
+  "missing": 72,
+  "partial": 0
+ },
+ "Redstone": {
+  "rows": 74,
+  "missing": 72,
+  "partial": 1
+ },
+ "Create automation tips": {
+  "rows": 118,
+  "missing": 100,
+  "partial": 15
+ },
+ "Tools & mining": {
+  "rows": 58,
+  "missing": 44,
+  "partial": 2
+ },
+ "UI, HUD & settings": {
+  "rows": 74,
+  "missing": 60,
+  "partial": 2
+ },
+ "Chat & social": {
+  "rows": 21,
+  "missing": 18,
+  "partial": 0
+ },
+ "Server-specific systems": {
+  "rows": 62,
+  "missing": 34,
+  "partial": 1
+ },
+ "Performance & video settings": {
+  "rows": 28,
+  "missing": 25,
+  "partial": 0
+ },
+ "Recording & screenshots": {
+  "rows": 13,
+  "missing": 11,
+  "partial": 0
+ }
+}
+total rows 955 missing 811 partial 28 mods lines 193

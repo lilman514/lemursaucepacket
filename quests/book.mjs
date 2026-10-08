@@ -1402,18 +1402,6 @@ export default {
           tasks: [{ item: 'create:raw_zinc', count: 16 }]
         },
         {
-          key: 'veins',
-          title: 'Prospector',
-          after: ['zinc'],
-          tier: 3,
-          desc: [
-            'Deep under the world lie ore veins that never run dry. A vein finder points at the nearest one; a drilling machine on top mines it forever.',
-            '',
-            tip('No diamond, emerald or netherite veins: those you still dig for.')
-          ],
-          tasks: [{ item: 'createoreexcavation:vein_finder' }]
-        },
-        {
           key: 'andesite_age',
           title: '&aThe Andesite Age',
           subtitle: 'Casing up',
@@ -2313,6 +2301,18 @@ export default {
           desc: ['Put drills, saws or harvesters on a contraption and run it: a tree farm, a quarry or a crop field that works itself.'],
           tasks: [{ advancement: 'create:contraption_actors', title: 'Run a contraption with drills, saws or harvesters' }],
           icon: 'create:mechanical_saw'
+        },
+        {
+          key: 'veins',
+          title: 'Prospector',
+          after: ['actors'],
+          tier: 3,
+          desc: [
+            'Deep under the world lie ore veins that never run dry. A vein finder points at the nearest one; a drilling machine on top mines it forever.',
+            '',
+            tip("The vein finder needs Mining 35 to make, the drilling machine's drill head Mining 50. No diamond, emerald or netherite veins: those you still dig for.")
+          ],
+          tasks: [{ item: 'createoreexcavation:vein_finder' }]
         },
         {
           key: 'compacting',

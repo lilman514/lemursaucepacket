@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:jellyfish_necklace"
+  ],
+  "requirements": {
+    "WEAR": {
+      "hitpoints": 35
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

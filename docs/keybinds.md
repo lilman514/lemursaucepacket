@@ -56,8 +56,8 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | Left Shift | Scroll Tooltips | Legendary Tooltips |
 | C | Save Hotbar Activator (in Creative mode) | Minecraft |
 | X | Load Hotbar Activator (in Creative mode) | Minecraft |
-| [ | Transfer to Storage (in menus) | Sophisticated Core |
-| ] | Transfer to Inventory (in menus) | Sophisticated Core |
+| [ | Transfer to Storage (in a backpack or storage screen) | Sophisticated Core |
+| ] | Transfer to Inventory (in a backpack or storage screen) | Sophisticated Core |
 | Middle Button | Sort Storage/Backpack (in a backpack or storage screen) | Sophisticated Core |
 | ALT + Z | Switch Upgrade in the 1st Slot On/Off | Sophisticated Backpacks |
 | ALT + X | Switch Upgrade in the 2nd Slot On/Off | Sophisticated Backpacks |
@@ -285,7 +285,7 @@ These have no key until you give them one in Key Binds.
 
 **Sorting** (Inventory Profiles Next) works in your inventory and in every chest, barrel and shulker box:
 
-- The buttons at the top right of each half sort it (plain, in columns, in rows).
+- The buttons at the top right of the container sort it (plain, in columns, in rows). **R** sorts whichever side is under the mouse, your inventory included.
 - **Move All** (the arrow) takes everything out of the container, or puts your inventory into it. Your hotbar stays put. Hover the arrow to see the keys that include the hotbar or move only the kinds of items the other side already has.
 - Auto Refill tops up a hotbar stack that runs out and swaps a tool for a spare before it breaks.
 

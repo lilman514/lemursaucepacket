@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:dragonbone_bow"
+  ],
+  "requirements": {
+    "TOOL": {
+      "ranged": 55
+    },
+    "USE": {
+      "ranged": 55
+    }
+  }
+}

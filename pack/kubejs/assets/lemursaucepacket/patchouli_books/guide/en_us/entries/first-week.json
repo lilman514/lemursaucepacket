@@ -37,7 +37,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)The Knight's Sword$() (Mining 10, Smithing 10) is the second main quest, and it's built around Create: Brann the Smith wants a brass ingot, a precision mechanism and two iron ingots.$(br)$(li)$(bold)Create's machines unlock with skills$(), a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters at Farming 15, mechanical crafters at Crafting 30. Anyone can use a machine a friend made. See the table in $(l:lemursaucepacket:skills)Skills$(/l)."
+      "text": "$(li)$(bold)The Knight's Sword$() (Mining 10, Smithing 10) is the second main quest, and it's built around Create: Brann the Smith wants a brass ingot, a precision mechanism and two iron ingots.$(br)$(li)$(bold)Create's machines unlock with skills$(), a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters at Farming 15, mechanical crafters at Crafting 30. Anyone can use a machine a friend made, but it makes things at the levels of whoever last placed or right-clicked it. See the table in $(l:lemursaucepacket:skills)Skills$(/l)."
     },
     {
       "type": "patchouli:text",

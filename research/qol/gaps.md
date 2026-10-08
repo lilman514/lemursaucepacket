@@ -1,0 +1,58 @@
+## Wiki statements that are wrong, and pack issues found on the way
+
+Not guide content, but found while checking the docs against the jars and configs. The first list should be fixed in the wiki; the second is for the owner.
+
+**Wiki statements that don't match the pack**
+
+1. `world.md` (Rules): "Only you can open [your grave] (a teammate can with your permission)". The GraveStone config on the scratch and the live server has `only_owners_can_break = false`: anyone who breaks a grave gets its items.
+2. `create.md#speed-and-stress`: "Most processing machines need a minimum speed". In Create 6.0.10 only the mechanical mixer (and the display board) need 30 RPM; everything else just runs slower.
+3. `create.md#processing`: crushing wheels give "more ingots per ore". Raw ore crushes 1:1 (plus a 75% XP nugget, and a washing byproduct); only silk-touched ore blocks give extra.
+4. `lifesteal.md#getting-hearts-back`: the Heart of the Sea is "buried treasure only" and "the bottleneck". Towers of the Wild ocean towers' chests can roll one too (`ocean_tower_chest`: 4-8 rolls, weight 2 of 68, about a 1-in-6 chance per chest), and Lootr gives every player their own copy of each chest.
+5. `waystones.md#travelling`: "A warp takes you and any animal on your lead, not freight". True for waystones; warp plates send any entity standing on them, dropped items included (from the jar, not tested in game).
+6. `keybinds.md#sorting`: "The buttons at the top right of each half sort it". IPN's default ("Show 2 Sets of Sort Buttons" off) puts them on the container half only; R sorts the side under the mouse (check in game).
+7. `keybinds.md`: `[` and `]` "Transfer to Storage/Inventory (in menus)" only work in backpack screens. The unbound list leaves out ModernFix "Open config screen", Entity Culling "Debug toggle culling" and Iris "Wireframe".
+8. `faq.md` and the pack's `DistantHorizons.toml` comment: "Video Settings > Distant Horizons". Distant Horizons 3.3.3 for NeoForge adds a small button beside the FOV slider on the Settings screen instead (from the jar; check in game).
+9. `PACK_DESIGN.md`: "F5 gives an over-the-shoulder camera" (it's the third F5 press, since `replace_default_perspective` is false), and Balance > Travel still says "no waystones".
+
+**Pack issues for the owner (not for the guide)**
+
+1. **Possible duplication in vendor shops and /trade (unverified, read from the jars).** Inventory Essentials' Ctrl + click and Space + right-click run on the server through `Slot.set` and `ServerPlayer.addItem`, which skips the shop and trade menus' own click handling; `ShopScreens` opts out IPN and Mouse Tweaks but not Inventory Essentials. Ctrl + clicking a vendor good shown with a count above 1, or the other player's offered stack in `/trade`, may hand out copies. Fix: make those display slots refuse pickup (`mayPickup` false) or exclude the two menus from Inventory Essentials.
+2. **Ice and Fire axes fell whole trees.** FallingTree allows every `#minecraft:axes` item that isn't denied; `gear/build.mjs` builds the deny list from an old registry dump without Ice and Fire, so its copper (3 copper ingots + 2 sticks), silver, dragonbone and dragonsteel axes all fell trees, the copper one with no skill requirement in the released pack (the uncommitted gating work adds Woodcutting 5). Add them to `tools.denied`.
+3. **`fallingtree.json` uses two values FallingTree doesn't accept** (`durabilityMode: PERCENTAGE`, `damageRounding: ROUND`): the servers rewrote them to `NORMAL` and `ROUND_DOWN` (1 durability per 4 logs; a worn Lumber Axe can break mid-tree).
+4. **Heart of the Sea from ocean towers** (see wiki item 4): a second, per-player source for the lifesteal Heart recipe.
+5. **The Ore Vein Finder recipe** needs an eye of ender (Brewing 55 to craft) and a redstone ore block (Silk Touch, and Mining 20 to use it as a material), while the First Rotation chapter's Prospector quest asks for one early.
+6. **Create saws (and drills) break logs without a player**, so they may fell trees the owner's Woodcutting chop levels would stop by hand (unverified).
+7. **Crash Assistant** has no pack config, so its crash window shows the placeholder support text ("example Discord", help link CHANGE_ME).
+8. **Both defaults that cost players items in PvP are mod defaults**, not pack choices: `allowOpeningOtherPlayerBackpacks = true` with each backpack's "Another player can open" on, and GraveStone's `only_owners_can_break = false`. If they aren't intended, flip them; if they are, the guide must say so (gaps 1 and 2 below).
+
+The docs were checked against the working tree on 2026-10-08 around 13:40. It held uncommitted gating work: `docs/skills.md` gained gate tables that name many modded items (backpacks and their upgrades, vaults, toolboxes, arms, dragon gear, relics, waystones, harnesses, modded woods) and `docs/enchanting.md` gained Ice and Fire ores. A gate table only names an item and its level, so those entries stay MISSING here; the gating itself (for example Agility levels to place waystones or use a warp stone) will need a line in the guide once it ships.
+
+## Biggest gaps
+
+The 25 most valuable entries no wiki page explains, in priority order. Each is one entry (or a tight group of rows) from the tables above.
+
+1. **Anyone can open the backpack on your back.** Right-clicking a player's back opens their worn backpack, because the server allows it and every backpack starts on "Another player can open"; switch it off in the backpack's settings (Player context covers all your backpacks). (Combat & PvP; Sophisticated Backpacks)
+2. **Graves aren't owner-locked.** Whoever breaks your grave gets your items, so race back; world.md currently says the opposite. (Server-specific systems; GraveStone)
+3. **Finding your grave and Heart.** Each death leaves a "Latest Death" skull waypoint on the minimap and world map, and the grave hands you an Obituary with the coordinates and every item you had. (Maps & navigation, Server-specific systems; Xaero's Minimap, GraveStone)
+4. **How not to waste skill XP.** Create's machines (drills, saws, harvesters, crafters, deployers) earn nobody skill XP, and re-breaking blocks you placed pays none (they show a red outline): train by hand on fresh ground. (Server-specific systems, Tools & mining; Project MMO)
+5. **Voice chat setup, range and privacy.** The first V press runs a setup guide; push to talk has no key until you set one, and voice activation starts muted (O unmutes). Your voice carries 48 blocks (whisper 24) to enemies too; an Isolated group with a password keeps talk private. (Chat & social; Simple Voice Chat)
+6. **The Create wrench.** Right-click rotates a part; sneak + right-click pockets it instantly (also vanilla redstone, rails, hoppers). With no claims anyone can do that to your machines, so build where you can watch them. (Controls & keys, Server-specific systems; Create)
+7. **Value boxes, filter slots and the clipboard.** Hold right-click on a block's panel to set numbers and modes, right-click a filter slot with an item (a ghost copy), use List and Attribute filters, and copy one block's settings to another with a clipboard. (Controls & keys, Create automation tips; Create)
+8. **Goggle info is always on.** Cyber Goggles shows Engineer's Goggles readouts without wearing them, and Left Shift on any kinetic block shows the whole network's stress. (UI, HUD & settings; Create: Cyber Goggles)
+9. **Moving items: funnels and arms.** A funnel placed normally pulls from the block it's on, sneak-placed it inserts; andesite moves one item, brass a filtered stack; funnels never link two containers directly. A mechanical arm's targets are clicked before it is placed. (Create automation tips; Create)
+10. **Stress and speed facts, and two wrong lines in create.md.** Load is stress impact x RPM; only the mixer needs 30 RPM; raw ore crushes 1:1 (the bonus comes from washing or ore blocks). (Create automation tips; Create)
+11. **Wear the backpack to make it work.** Only the backpack in the Curios Back slot runs its upgrades, Relics mantles take the same slot, and a 4th backpack slows you. Tiers are crafted from the Create age's parts. (Inventory, sorting & storage; Sophisticated Backpacks)
+12. **Backpack upgrades and this server's limits.** Pickup, magnet (3/4 blocks), deposit and restock (sneak + right-click a chest, or C), refill, feeding and crafting upgrades; one stack upgrade up to x4, no inception, pump, battery or infinity. (Inventory, sorting & storage; Sophisticated Backpacks)
+13. **Inventory drags and bulk moves.** Mouse Tweaks: right-drag paints one item per slot, left-drag gathers, shift-drag and the scroll wheel move stacks. Inventory Essentials: Ctrl + Shift + click moves every stack of a kind, Space + click moves everything. (Controls & keys; Mouse Tweaks, Inventory Essentials)
+14. **IPN's own keys aren't in Controls.** R sorts the side under the mouse, R + C opens IPN's settings and hotkeys, Left Alt + click locks a slot so sorting, Move All and Q leave it alone. (Inventory, sorting & storage; Inventory Profiles Next)
+15. **JEI search and recipe filling.** `@mod`, `#tag`, `$tooltip`, `-exclude` and `a|b` in the search bar; the [+] on a recipe fills your crafting grid (or a backpack's crafting upgrade) from your inventory. (UI, HUD & settings; JEI)
+16. **Where ores generate.** R or U on an ore opens JEI WorldGen's page: its heights, biomes and vein sizes. (Tools & mining; JEI / REI / EMI WorldGen)
+17. **Jade shows everyone what's in your chests.** Looking at a container shows its first nine items to any player. Hiding the panel only hides it on your own screen. (Combat & PvP; Jade)
+18. **Waypoints.** J makes a waypoint, Keypad + a temporary one; Share posts it to everyone in public chat (never share your base), and the Teleport buttons fail because players have no /tp. (Maps & navigation; Xaero's Minimap and World Map)
+19. **The happy ghast.** A dried ghast (8 ghast tears round a soul sand, or found) placed in water grows into a ghastling, then a happy ghast; a harness lets up to 4 ride it, and it holds still as a flying platform. The wiki calls it a travel option but never explains it. (Movement & travel; Vanilla Backport)
+20. **Farmer's Delight kitchen basics.** Knives give straw, the cutting board turns food and logs into ingredients, the cooking pot needs heat underneath and a container for its meal, and Nourishment and Comfort are why meals beat raw food. (Farming, food & animals; Farmer's Delight)
+21. **Trains end to end.** Laying track, assembling a train on bogeys, W/S/A/D driving, schedules and conductors, signals, and portals that kick riders (send freight unmanned). (Movement & travel; Create)
+22. **Airships.** Glue the build (honey glue) with a Physics Assembler in it and drag its lever; the hot-air burner runs on a redstone signal with no fuel, a steering wheel and throttle lever fly it, and disassembly needs it landed and stopped. (Movement & travel; Create Aeronautics / Simulated)
+23. **Selling while you're offline, and locking your stock network.** Table-cloth shops on a stock network sell to other players for Gold Coins; the lock in the Stock Keeper screen stops others ordering from your network. (Server-specific systems; Create)
+24. **Weekly missions.** Six missions a week, reset Sunday 00:00 UTC; a finished mission pays only when you press Claim Reward; the first two rerolls a week are free, then 2, 4, 6... pouches. (Server-specific systems; Create: Brassworks Missions)
+25. **Totems work from the Curios charm slot.** A Totem of Undying (or Freezing, or Illusion) in the charm slot saves you without taking your off-hand: a heart kept on a lifesteal server. (Combat & PvP; Friends&Foes, Curios)

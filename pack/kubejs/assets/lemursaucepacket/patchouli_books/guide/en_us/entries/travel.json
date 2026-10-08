@@ -1,0 +1,278 @@
+{
+  "name": "Getting around",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:map",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "There are no teleport commands on this server: no $(#e0ac46)/tp$(), $(#e0ac46)/home$() or $(#e0ac46)/spawn$(). You walk, ride, fly or warp. $(bold)Waystones$() jump you between places you've already been, $(bold)trains$() run regular routes and carry the freight, $(bold)airships$() and $(bold)happy ghasts$() fly, and horses and your own legs do the rest. Your minimap and world map show the way."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Several things on this page wait on a skill level, most of them on $(bold)Agility$(): train stations and train controls take Agility 35 to make, the elytra Agility 30 to wear. An item's tooltip says in red what it needs. See $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Your maps",
+      "text": "The $(bold)minimap$() sits at the top left of your screen, with your coordinates under it. $(bold)M$() opens the $(bold)world map$() (it's on the ESC menu too).$(br2)$(li)$(bold)Fair play.$() Neither map shows mobs, dropped items or other players, and neither has a cave view: the server switches those off for everyone. The one exception is your team: players in your FTB Teams party, and in teams you've both marked as allies, show on each other's maps ($(l:lemursaucepacket:social)Your team$(/l)). To meet anyone else, send a waypoint or your coordinates."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)They draw what you've seen.$() A map fills in the land you've been near and is saved on your own PC. Land you haven't visited stays blank."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The minimap",
+      "text": "$(bold)Y$() opens its settings: its size, a square or round map, $(bold)Lock Minimap North$() (an arrow turns instead of the map), zoom and colours. Its $(bold)Info Display Manager$() picks the lines under it. Coordinates are on; you can add the biome, the time, the light level, chunk coordinates and $(bold)Overworld Coordinates$(), which in the Nether shows where you'd be in the Overworld."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Move or resize it with ESC → $(bold)HUD Layout$().$(br)$(li)$(bold)Enlarge Minimap$() has no key here (its Z is zoom): give it one in Key Binds to hold up a bigger map.$(br)$(li)$(bold)Toggle Chunk Grid$() (no key either) draws chunk borders on it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The world map",
+      "text": "$(li)$(bold)Drag$() to move it, $(bold)scroll$() to zoom. The cursor's coordinates and biome show on screen: handy for finding a biome from the $(l:lemursaucepacket:biomes)Biomes$(/l) pages.$(br)$(li)$(bold)Right-click$() a spot to make a waypoint there, set a temporary one, share the spot in chat, or export the map as a picture.$(br)$(li)$(bold)Right-click a waypoint$() on it to edit, hide, delete or share it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Trains show up live.$() Create draws every track network and train on the world map (the $(bold)Train network overlay$() button switches it). Hover a train for its name, its owner, its next stop and any trouble: waiting at a signal, derailed, no conductor. Everyone sees every train, yours too."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Waypoints",
+      "text": "$(bold)J$() makes a waypoint where you stand. (Xaero's own key is B, which here opens your backpack.) Give it a name, the letters it shows on the map, a colour and a type:$(br2)$(#b9a98a)Type - What it does$()$(br)$(bold)Enabled$() - A normal waypoint$(br)$(bold)Disabled$() - Kept, but hidden$(br)$(bold)Temporary$() - Gone when you leave the server$(br)$(bold)Destination$() - Deletes itself when you reach it"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Keypad +$() drops a temporary waypoint at your feet without opening anything.$(br)$(li)$(bold)U$() (or ESC → Waypoints) lists them all: sort, filter, edit, hide or delete them. Waypoints also show in the world, with their distance.$(br)$(li)Waystones you've activated show as waypoints by themselves.$(br2)The waypoint list's $(bold)Teleport$() button and the world map's $(bold)Teleport Here$() send a $(#e0ac46)/tp$() command, and players don't have one here. They do nothing: use a waystone."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sharing a waypoint",
+      "text": "$(bold)Share$() (in the list, or right-click a waypoint on the world map) posts it in public chat, for everyone: anyone can click $(bold)[Add]$() to save it. There's no team-only share. On a PvP server with no claims, never share your base that way. Send the coordinates to a friend with $(#e0ac46)/msg$() instead."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where you died",
+      "text": "Every death leaves a skull waypoint, $(bold)Latest Death$(), on your minimap and world map: that's where your grave is, and the Heart you dropped. Older ones stay as $(bold)Old Death$(), and a death waypoint deletes itself once you're within 4 blocks of it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Go straight back. A grave isn't locked, and whoever breaks it gets what's in it; without a Grave Essence there's no grave at all, and your things lie on the ground. A grave also hands you an $(bold)Obituary$() with the exact spot, and the $(bold)Lost Item Compass$() points to anything of yours lying on the ground anywhere. $(l:lemursaucepacket:good-to-know)After you die$(/l) has the rest."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Compasses and finders",
+      "text": "$(#b9a98a)Item - Points to - How you get it$()$(br)$(bold)Compass to Lemurton$() - The capital - Your first login ($(l:lemursaucepacket:lemurton)Lemurton$(/l))$(br)$(bold)Map to the Stronghold$() - The stronghold nearest Lemurton - Dragon Slayer I ($(l:lemursaucepacket:quests)Quests$(/l))$(br)$(bold)Map to Crandor$() - Elvarg's isle - Dragon Slayer II ($(l:lemursaucepacket:elvarg)Elvarg's Lair$(/l))$(br)$(bold)Lost Item and Seeker's Compass$() - Your own items - Mechanical crafters ($(l:lemursaucepacket:lifesteal)the compasses$(/l))"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Traveler's Compass$() - A Nether structure (a fortress, bastion or ruined portal), named in its tooltip - Barter gold with a Piglin Traveler in the Nether$(br)$(bold)Dragon Seeker$() - The nearest dragon within 150 blocks (the Epic and Legendary ones reach 200 and 300) - A dragon skull over 2 netherite ingots"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Waystones",
+      "text": "Right-click a waystone to activate it. From then on you can warp to it from any other waystone, or with a warp stone or a scroll, for a few XP points. Lemurton's is global: everyone has it from the start. Waystones stand in villages, on top of tall towers and at shrines, and you can take found ones home. $(l:lemursaucepacket:waystones)Waystones$(/l) has the rest: where they are, what each warp item does, and how to build your own."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)A warp plate moves anything.$() A waystone takes you and the animals on your lead. A warp plate sends whatever stands on it to its paired plate: players, mobs and dropped items too.$(br)$(li)$(bold)On a ship.$() A waystone or warp plate built on an airship works, and travels with it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "On foot and horseback",
+      "text": "$(li)$(bold)Auto walk.$() The key left of $(bold)1$() (under Esc) walks you forward. Press it again, or $(bold)S$(), to stop. An icon at the bottom right shows it's on.$(br)$(li)$(bold)Agility.$() Every level makes you a little faster and softens your falls. See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Boots.$() The $(bold)Climbing Boots$() step up whole blocks and give a burst of speed on each ledge; the $(bold)Aeronaut's Boots$() take away fall damage. See $(l:lemursaucepacket:gear)Gear$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Horses.$() Saddles and leads are craftable: a saddle is 3 leather and an iron ingot (leather on top, then leather, iron, leather), and 5 string make 2 leads. Odo the Tailor in Lemurton sells both.$(br)$(li)$(bold)Naturalist's animals.$() Elephants (five cakes tame one; give it a saddle, and a chest to carry things), giraffes (tame them with apples or hay), ostriches (seeds tame them; then saddle one) and zebras (tamed like a horse; they carry a chest too) can all be ridden. Most live on the savanna."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Your dragon.$() A dragon you raised carries you once it's reached stage 3: right-click it with an empty hand. $(bold)Space$() takes off, $(bold)X$() comes down, $(bold)R$() uses its breath, $(bold)G$() strikes, $(bold)F7$() changes the camera."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Under water and in lava.$() Create's copper diving helmet and backtank let you breathe under water, and the diving boots let you walk the sea floor. A full backtank holds 15 minutes of air, and each level of Capacity adds 5 ($(l:lemursaucepacket:enchanting)Enchanting$(/l)). The netherite set, worn whole, makes you immune to fire and lava and lets you walk lava lakes. Copper diving gear takes Defence 5, netherite Defence 50."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Nether shortcuts.$() Each block in the Nether is eight in the Overworld, and a portal here always leads back to the one you came through. Turn on $(bold)Overworld Coordinates$() under the minimap to see where you'd come out."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The happy ghast",
+      "text": "A happy ghast is a big, gentle ghast that up to four players can ride, flying wherever the rider looks. It's the easiest way to fly before you have an airship. The quest book's $(bold)Homestead$() chapter ends with one."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Raising one",
+      "text": "1. $(bold)Get a dried ghast.$() Craft one from 8 ghast tears round a soul sand, find one in a Nether fossil in a soul sand valley, or barter for one with piglins.$(br)2. $(bold)Soak it.$() Place it in water, so the water fills its block. It drinks the water in stages, about 17 minutes in all while you're near enough for the chunk to stay loaded, then hatches into a $(bold)ghastling$(). Taken out of the water, it dries out again.$(br)3. $(bold)Let it grow.$() A ghastling grows into a happy ghast in about 20 minutes. Snowballs are its food: feeding it some speeds that up."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Riding it",
+      "text": "$(li)$(bold)Harness it.$() A harness is 3 leather over glass, wool and glass; the wool sets its colour. Right-click a grown happy ghast with it, then right-click it again to climb on. Shears take the harness off.$(br)$(li)$(bold)Fly it.$() The first rider steers: $(bold)W$() flies the way you look (look up to climb, down to dive), $(bold)S$() backs off slowly, $(bold)Space$() rises. Sneak to get off.$(br)$(li)$(bold)Stand on it.$() It holds still while someone stands on top of it: a flying scaffold for building up high."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The elytra",
+      "text": "Wearing an elytra takes $(bold)Agility 30$(). Look for one on an end ship among the End's outer islands ($(l:lemursaucepacket:end)The End$(/l)); the quest book's Skills chapter also gives one for an Agility milestone ($(l:lemursaucepacket:quests)Quests$(/l)). Firework rockets push you along in flight."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Relics that move you",
+      "text": "Relics turn up in loot chests ($(l:lemursaucepacket:where-to-find)Where to find things$(/l)) and go in your Curios slots ($(bold)G$()). Hold $(bold)Shift$() over one in a menu for its page: what it does, and how to unlock its abilities."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(#b9a98a)Relic - What it does$()$(br)$(bold)Springy Boot$() - Sneak and jump to spring away from where you look. You bounce until you stop, with no fall damage; hold jump or sneak before you land to stop bouncing$(br)$(bold)Kinetic Belt$() - Hold jump in the air to glide: less gravity, more momentum, softer landings$(br)$(bold)Roller Skate$() - Keep running and your speed builds for 5 seconds; the ground gets slippery as it does$(br)$(bold)Cut Glass Boot$() - Held, it's a bucket for several liquids (Shift + scroll picks one). Worn, you walk on any liquid it holds, slowly at first"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chorus Staff$() - Use it to blink a few blocks forward. It holds a few charges that refill over time$(br)$(bold)Clot of Time$() - Hold right-click to run back along the path you just took$(br)$(bold)Glitchy Mantle$() - Walk on air as if it were floor. Stand still too long and you fall; hold sneak to drop down safely$(br)$(bold)Leafy Mantle$() - Move through leaves freely, land on them without fall damage, heal while in foliage$(br)$(bold)Rider Flute$() - Right-click your tamed mount to put it in the flute, right-click again to let it out, and again to call it back. Sneak + right-click lets it go for good"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The mantles go in your Back slot, the same one a worn backpack needs."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Trains",
+      "text": "Trains move you and your goods across the world on lines you lay, and they keep running when nobody is near. The quest book's $(bold)Iron Roads$() and $(bold)Railway Company$() chapters walk you through it ($(l:lemursaucepacket:quests)Quests$(/l)), and most parts have a Ponder scene (hold $(bold)W$() over one). Train stations and train controls take $(bold)Agility 35$() to make."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Laying track",
+      "text": "$(li)Right-click a placed track (or place one), then place or click a second point: the track between is laid in one go, straight, curved or sloped, up to 32 blocks at a time. Turns go up to 90 degrees, and a slope can't make an S-bend.$(br)$(li)Hold $(bold)Sprint$() while you connect for the widest bend that fits.$(br)$(li)Blocks in your off hand are paved under the track as it's laid."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Building a train",
+      "text": "1. Right-click the track with a $(bold)Train Station$() to select it, then place the station beside the track. Open the station and switch to $(bold)Assembly Mode$().$(br)2. Right-click the highlighted track with $(bold)Train Casing$() to make a bogey; click it again to change the design. Break the block on top to remove one.$(br)3. Build each carriage on one or two bogeys and glue it together with $(bold)Super Glue$() (click two corners to glue the box between them).$(br)4. Put a $(bold)Train Controls$() block on board, facing forward. A second one facing back lets the train leave a station either way."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "5. In the station screen, press $(bold)Assemble Train$().$(br2)A train can't be built on a curve or a diagonal, its front bogey has to sit at the station's marker, and it can have up to 20 bogeys. Fuel in a chest or barrel on board (anything a furnace burns) makes it faster: up to 40 blocks a second instead of 28. Fuel in a vault isn't burned."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Driving",
+      "text": "Right-click the train controls to drive:$(br2)$(#b9a98a)Key - Does$()$(br)$(bold)W, S$() - Speed up, brake$(br)$(bold)A, D$() - Pick the branch at a junction$(br)$(bold)Mouse wheel$() - Set your top speed$(br)$(bold)Space (hold)$() - Stop at the station ahead$(br)$(bold)Sprint$() - Blow the train's whistles$(br)$(bold)Sneak, or click again$() - Let go$(br2)A driven train goes at three quarters of a scheduled one's speed. A train only turns back into blocks at a station, with all its carriages lined up: use the station screen."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Schedules and conductors",
+      "text": "Right-click a $(bold)Train Schedule$() to write one. Each step is an action:$(br2)$(li)$(bold)Travel to Station.$() An asterisk is a wildcard, and the train takes the nearest free match: $(#e0ac46)Mine, Platform *$() goes to whichever platform is open.$(br)$(li)$(bold)Limit Max Speed$(), $(bold)Update Title$() (what displays show for the train), and $(bold)Deliver Package$() and $(bold)Retrieve Package$() (for postboxes)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each action can wait on conditions before the train moves on: a delay, a time of day, how much cargo it holds, cargo sitting idle, players seated, the station powered by redstone, a redstone link, or the chunk unloading. Switch on $(bold)Loop Forever$() to repeat the list."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Then give the schedule to a $(bold)conductor$(): any mob, or a blaze burner, sitting in front of the train controls. To seat a mob, lead it on a lead to the seat there and right-click the seat. Then right-click the conductor with the schedule. Right-click it with an empty hand to take the schedule back. Or put the schedule in a $(bold)station$(): it copies itself to every train that stops there, and the item stays put."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Signals",
+      "text": "Select a track with a $(bold)Train Signal$(), then place the signal beside the line. Signals cut the line into sections, and a scheduled train won't enter a section another train is in. Trains never pass a signal from behind, unless a second signal faces the other way. A wrench turns a signal into a brass one, which only lets a train in if it can leave the section straight away: it keeps junctions clear. Signals only hold back scheduled trains, not ones a player drives."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)A redstone signal turns a train signal red, and a red signal gives a comparator output.$(br)$(li)A $(bold)Train Observer$() (select a track, place it beside) pulses when a train passes; it can filter by cargo.$(br)$(li)A station gives a comparator signal while a train is in it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Through the Nether",
+      "text": "Lay track up against a Nether portal and Create tries to lay the matching track on the other side: trains then run between the two worlds, and every block of track in the Nether covers eight in the Overworld. Riding through a portal on a train is still buggy, so send freight across unmanned and walk through yourself."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Keeping trains running",
+      "text": "$(li)$(bold)They run without you.$() Scheduled trains keep going in chunks nobody is in, stopping at stations and red signals. Drills and other machines on board stop working there.$(br)$(li)$(bold)They run you over.$() A moving train hurts the players and mobs in its way.$(br)$(li)$(bold)Moving one.$() Right-click a train with a wrench, then click a track nearby to move it there: the fix for a derailed train. Not while it's moving.$(br)$(li)$(bold)On the map.$() Your trains show live on the world map, and so does everyone else's (see the world map)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Paper maps.$() Right-click a station with a map for a labelled marker on it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Finding a route",
+      "text": "The $(bold)Navigator$() (Create: Railways Navigator, made in mechanical crafters) plans trips across every line on the server. Right-click it, pick two stations (a button fills in the one nearest you) and it lists the departures, changes, platforms and live delays. Choose a route to pin it to your screen: it tells you the next stop and warns you of delays, and $(bold)R$() opens the overlay's options. $(bold)Advanced displays$(), set up with a wrench, make destination boards for trains, platform boards for stations and passenger screens inside carriages."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Airships",
+      "text": "Create Aeronautics turns a build into a flying ship with real physics: it has weight, rides on its balloons and propellers, and stays solid to walk on. The quest book's $(bold)Skyward$() chapter takes you through your first ($(l:lemursaucepacket:quests)Quests$(/l)), and most parts have a Ponder scene (hold $(bold)W$() over one)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Making a ship",
+      "text": "1. Build the ship with a $(bold)Physics Assembler$() in it (a lever over an andesite casing between two andesite alloy).$(br)2. Glue the build into one piece with $(bold)Super Glue$() or $(bold)Honey Glue$(). Blocks that only touch at an edge count as joined.$(br)3. Hold right-click on the assembler's lever and drag it. The build lifts free as one moving body."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Honey Glue$() (a spout fills an iron sheet with 500 mB of honey) is made for ships. Click two corners to glue the box between them, $(bold)Ctrl + scroll$() to grow or shrink it, and hold $(bold)Alt$() to put a corner in mid-air. It only sticks to ships, not to Create's ordinary contraptions. On assembly it takes in any Super Glue it overlaps, but not the other way round."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lift",
+      "text": "$(li)$(bold)Hot air.$() $(bold)Hot Air Envelopes$() (2 wool and 2 sticks make 4) build a balloon. It has to be airtight: a gap leaks. A $(bold)Hot Air Burner$() under it burns no fuel: it fills the balloon while it gets a redstone signal, harder the stronger the signal, up to the most you set on its panel. Several burners can share a balloon, and blocks inside it take up room. Goggles show a balloon's volume and lift.$(br)$(li)$(bold)Shafts through a balloon.$() Right-click a shaft with an envelope to wrap it: the balloon stays airtight and the shaft still turns."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Steam.$() A $(bold)Steam Vent$() (a gold sheet on a copper block) fills the balloon from a boiler instead. It needs heat, water and boiler room, like a steam engine.$(br)$(li)$(bold)Levitite.$() Enough of it keeps a ship up with no other lift, though it can't make it climb, and it drags at low speed. Crush end stone into powder, then mix 4 powder, 2 zinc nuggets and 500 mB of water in a heated basin. Pour the blend where you want the block and heat it: flint and steel, or a torch, campfire, magma block or lit blaze burner beside it. The whole pool crystallizes. Clay, mud, packed mud and coarse dirt"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "make moulds that break away as it sets, and soul fire makes pink Pearlescent Levitite.$(br)$(li)$(bold)Finding a height.$() Lift weakens as you climb, so a ship settles where its lift matches its weight. Turn the burners up or down to climb or sink. Heavy blocks need more lift: with goggles on, a block's tooltip shows its weight."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Thrust and steering",
+      "text": "$(li)$(bold)Propellers.$() A $(bold)Propeller Bearing$() (a wooden slab over an iron sheet over a brass casing) turns whatever is glued in front of it into a propeller, if it has at least 2 sail-like blocks; more sails push harder. Reverse its rotation, or use a wrench, to reverse the thrust. Thrust falls off as the ship speeds up. Andesite and wooden propellers are one-block props.$(br)$(li)$(bold)Power on board.$() A $(bold)Portable Engine$() burns furnace fuel for rotation, no boiler needed. A blaze cake superheats it for more."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Steering wheel.$() Hold right-click on it and move the mouse to turn it; sneak to snap to 45 degrees. It puts out rotation for bearings or wheels (set those bearings not to disassemble), and a comparator reads its angle.$(br)$(li)$(bold)Throttle lever.$() Right-click and drag it for a redstone signal from 0 to 15 (a wrench inverts it). Run it to the burners for lift, or to an analog transmission for propeller speed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Wheels.$() A $(bold)Wheel Mount$() with a $(bold)Tire$() on its front (dried kelp round a shaft) drives on the ground. Redstone from the top brakes it; from a side, it steers that way."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Landing",
+      "text": "Any Physics Assembler on the ship turns it back into blocks: hold and drag its lever. It won't in mid-air (\"Too far from the ground\"), while the ship moves faster than about 5 blocks a second or is spinning, or if it can't line the ship up with the block grid. Land, stop, then drag."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Life aboard",
+      "text": "$(li)$(bold)Everything keeps working.$() Walk the deck, open chests, run machines. A ship with a player on it never unloads, and others see it from up to 320 blocks away.$(br)$(li)$(bold)Anyone can take it.$() There are no claims: anyone who gets aboard can steer it, or land it and take it apart with any assembler on it. Breaking hull blocks can split a ship in flight, and the loose part falls. Guard it, or hide it.$(br)$(li)$(bold)Merging.$() Click a face on each of two ships with a $(bold)slime ball$() (within 4 blocks) to join them into one."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Docking.$() A pair of $(bold)Docking Connectors$(), powered with redstone, lock two ships together while each stays its own ship. Items, fluids and electricity then pass between them.$(br)$(li)$(bold)Getting about.$() $(bold)Handles$(): hold right-click to swing round one, or sneak to drag the ship by it. $(bold)Ropes$(): a Rope Coupling ties a Rope Winch to a Rope Connector, up to 40 blocks apart; right-click a rope holding a wrench to slide down it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Finding the way.$() A $(bold)Navigation Table$() with a compass, a recovery compass or an explorer map in it gives a redstone signal toward the target, strongest when you face it. A $(bold)Contraption Diagram$() right-clicked on a ship shows the forces acting on it.$(br)$(li)$(bold)Shaders.$() Aeronautics has known drawing problems with Iris shaders. If a ship looks wrong, press $(bold)K$() to turn shaders off."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lifts and launchers",
+      "text": "$(#b9a98a)Build - What it does$()$(br)$(bold)Elevator$() - Build a cabin, put a pair of Redstone Contacts facing each other with one glued to the cabin, and a powered Elevator Pulley above. Right-click the pulley to assemble it. Each contact in that column becomes a floor: a redstone pulse calls the cabin there, and Contraption Controls in the cabin pick a floor. Sliding doors on the cabin open and close by themselves"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Weighted Ejector$() - Sneak + right-click with it to pick the landing spot (up to 32 blocks away, any height, but not off to the side), then place it and give it rotation. Anyone who steps on it is thrown there: mind the landing$(br)$(bold)Encased fan$() - Pushes or pulls players and mobs up to 20 blocks. Pointed up, it's a lift$(br)$(bold)Belts$() - Carry you while they run. Diving boots make you ignore them$(br)$(bold)Chain conveyor$() - Right-click its chain holding a wrench to ride along it; at a junction, look at the chain you want"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Seats$() - Right-click to sit, Shift to stand. A seat on a train or ship keeps you aboard. Hostile mobs that wander past an empty seat sit down in it$(br)$(bold)Safety net$() - Landing on a Farmer's Delight safety net bounces you and cancels the fall damage. Don't sneak as you land: you'd take the fall in full"
+    }
+  ]
+}

@@ -37,6 +37,22 @@ public final class Levels {
         return Math.max(1, (int) Math.floor(base + Math.max(melee, ranged)));
     }
 
+    /** Project MMO's requirement to break the block at a position (the pack's chop levels on logs): skill → level. */
+    public static java.util.Map<String, Integer> toBreak(net.minecraft.world.level.Level level, net.minecraft.core.BlockPos pos) {
+        if (!PMMO) return java.util.Map.of();
+        try {
+            java.util.Map<String, Long> req = harmonised.pmmo.api.APIUtils.getRequirementMap(pos, level, harmonised.pmmo.api.enums.ReqType.BREAK);
+            if (req == null || req.isEmpty()) return java.util.Map.of();
+            java.util.Map<String, Integer> out = new java.util.HashMap<>();
+            req.forEach((skill, lv) -> {
+                if (lv != null && lv > 0) out.put(skill, (int) Math.min(Integer.MAX_VALUE, lv));
+            });
+            return out;
+        } catch (RuntimeException | NoClassDefFoundError e) {
+            return java.util.Map.of();
+        }
+    }
+
     /** Project MMO XP, for what lsp_fixes awards itself (Brewing). */
     public static void addXp(Player player, String skill, long xp) {
         if (!PMMO || xp <= 0) return;

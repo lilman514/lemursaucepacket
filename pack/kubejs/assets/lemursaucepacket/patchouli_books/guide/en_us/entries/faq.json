@@ -6,31 +6,88 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)\"Connection Lost - channel … missing\".$() Your mods and the server's disagree. Close the game, press Play in the launcher again (it re-syncs the pack), and if it still happens use $(italic)Repair & play$() on the launcher's Settings page.$(br2)$(bold)The game crashed.$() The launcher shows the last lines of the crash on its Home page and can open the crash-reports folder. Send the newest crash report to an admin.$(br2)$(bold)I can't use an item (\"You need … level\").$() Skills gate items; see $(l:lemursaucepacket:skills)Skills$(/l). Train the skill or use a lower tier."
+      "title": "\"Connection lost: channel missing\"",
+      "text": "Your mods and the server's don't match. Close the game and press $(bold)Play$() in the launcher again: it re-syncs the pack first. If it still happens, use $(bold)Repair & play$() on the launcher's Settings page."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Voice chat isn't working.$() Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.$(br2)$(bold)My frames are low.$() Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on, press $(bold)K$() in game to switch them off, or pick $(bold)Lite$() under the launcher's Settings, Graphics. Distant Horizons draws the land beyond your render distance, 2,048 blocks out; turn its distance down, or it off, in Video Settings →"
+      "title": "Can I add my own mods?",
+      "text": "Only the optional ones listed in the launcher's $(bold)Mods$() tab (minimap tweaks and the like). Anything else breaks the sync with the server."
     },
     {
       "type": "patchouli:text",
-      "text": "Distant Horizons.$(br2)$(bold)The Guide button shows a blank page.$() The Guide is this wiki in a browser inside the game. The browser fetches its engine once, a few hundred megabytes, in the background the first time the game starts; until it's ready the page stays blank. $(bold)Open in browser$() opens the wiki in your own browser meanwhile, and $(#e0ac46)/guide$() is the book version."
+      "title": "Where are my screenshots?",
+      "text": "Launcher → $(bold)Settings$() → $(bold)Files & repair$() → $(bold)Screenshots$()."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)How do I get home fast?$() A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See $(l:lemursaucepacket:waystones)Waystones$(/l). $(bold)Where are my screenshots?$() Launcher → Settings → Files & repair → Screenshots."
+      "title": "The Guide shows a blank page",
+      "text": "The Guide is this wiki, in a browser inside the game. The first time the game starts, that browser downloads its engine (a few hundred megabytes) in the background, and the page stays blank until it's ready. Meanwhile $(bold)Open in browser$() shows the wiki in your own browser, and $(#e0ac46)/guide$() opens the book version."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)How do I record a video?$() ReForgedPlay (Replay Mod) is installed but records nothing until you turn it on: Mods → ReForgedPlay → Config → Recording, then $(bold)Record Server$(). From then on every session is saved, and the circling-arrows button at the top right of the title screen's panel opens the Replay Viewer to edit and render them. Its keys (keyframes, play and pause) only work in the viewer. Turn $(bold)Record Server$() off again when you're done: replays get big."
+      "title": "The game crashed",
+      "text": "The launcher shows the last lines of the crash on its $(bold)Home$() page and can open the crash-reports folder. Send the newest crash report to an admin."
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Can I add my own mods?$() Client-side ones (minimap tweaks and the like): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server.$(br2)$(bold)What do the colours on an item's tooltip mean?$() The name is coloured by rarity (white common, green uncommon, blue rare, purple epic, gold legendary), stats are listed under it, and the bold last line repeats the rarity and what the item is. A red \"❣ Requires\" line means a skill isn't high enough yet; it turns green with a tick when it is. Hold Shift over an item for the details: which skills it"
+      "title": "My frames are low",
+      "text": "$(li)$(bold)Render distance.$() Lower it in $(bold)Settings → Video Settings$().$(br)$(li)$(bold)Memory.$() Give the game more on the launcher's $(bold)Settings$() page.$(br)$(li)$(bold)Shaders.$() They're off by default. If you turned them on, press $(bold)K$() in game to switch them off, or pick $(bold)Lite$() under the launcher's $(bold)Settings → Graphics$().$(br)$(li)$(bold)Distant Horizons.$() It draws the land past your render distance, 2,048 blocks out. Turn its distance down, or switch it off, with the small Distant Horizons button beside the FOV slider in $(bold)Settings$()."
     },
     {
       "type": "patchouli:text",
-      "text": "trains, how to get it, and set bonuses."
+      "title": "Why can't I use this item?",
+      "text": "Skills gate items. A red \"❣ Requires\" line on the tooltip names the skill and the level; it turns green with a tick once you have it. Train that skill, or use a lower tier. See $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What do tooltip colours mean?",
+      "text": "The name's colour is its rarity: white common, green uncommon, blue rare, purple epic, gold legendary. Stats come under it, and the bold last line repeats the rarity and what the item is. Hold $(bold)Shift$() over an item for the details: which skills it trains, how to get it, and set bonuses."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Why am I getting no skill XP?",
+      "text": "$(li)$(bold)Blocks you placed pay you nothing$() when you break them again (someone else's still pay, and fully grown crops always do). Train on fresh ground.$(br)$(li)$(bold)Machines earn nobody XP.$() A Create drill or saw does the work, so nobody gets the Mining or Woodcutting for it.$(br)$(li)See $(l:lemursaucepacket:skills)Skills$(/l) for what pays what."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Why won't my machine make it?",
+      "text": "Create machines (mechanical crafters, basins with their mixer or press, spouts) and the Crafter work at the skill levels of the player who last placed or right-clicked them. If that player doesn't have the level a recipe needs, the machine won't make it, and they get a chat message with a ding naming the skill. Drills and saws work the same way: they leave a block past their operator's level standing (a contraption's keep the operator they had when it was put together). Right-click the machine to make it run at your levels."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Why did my backpack upgrade stop?",
+      "text": "A backpack upgrade only works once you have the level it takes to make it; until then a chat message with a ding tells you which. A backpack set down as a block works at the levels of whoever last placed or opened it."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Why didn't my totem save me?",
+      "text": "A Totem of Undying only works at $(bold)Hitpoints 50$() or higher, and a chat message tells you when it didn't. Relics are the same: an ability waits for the level it needs. See $(l:lemursaucepacket:lifesteal)Hearts, graves and elimination$(/l) for what dying costs."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Can players open my backpack?",
+      "text": "Not unless you let them. Every backpack starts on $(bold)Another player can NOT open$(), so right-clicking your back gets nobody into it. To share one with a teammate, switch $(bold)Another player can open$() on in that backpack's settings (the Player tab covers all your backpacks). See $(l:lemursaucepacket:combat)Combat and PvP$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Can someone take my grave?",
+      "text": "Yes. Graves aren't locked to their owner: whoever breaks yours gets its items. A $(bold)Latest Death$() waypoint on your minimap and world map points the way back, so go straight there. See $(l:lemursaucepacket:lifesteal)Hearts, graves and elimination$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How do I get home fast?",
+      "text": "Use a waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone or with a scroll. See $(l:lemursaucepacket:waystones)Waystones$(/l) and $(l:lemursaucepacket:travel)Getting around$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Voice chat isn't working",
+      "text": "Press $(bold)V$(): the first time, a setup guide picks your microphone and how you talk. $(bold)Push to talk$() has no key until you choose one (in the guide, or Controls → Key Binds → Voice Chat), and $(bold)voice activation$() starts muted: press $(bold)O$() to unmute. Voice chat needs UDP, so behind a strict firewall ask the host to check the voice port. More in $(l:lemursaucepacket:social)Chat, voice and teams$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How do I record a video?",
+      "text": "ReForgedPlay (Replay Mod) is installed but records nothing until you turn it on: $(bold)Mods → ReForgedPlay → Config → Recording$(), then $(bold)Record Server$(). From then on every session is saved, and the circling-arrows button at the top right of the title screen's panel opens the Replay Viewer to edit and render them. Its keys (keyframes, play and pause) only work in the viewer. Turn $(bold)Record Server$() off again when you're done: replays get big."
     }
   ]
 }

@@ -2,7 +2,7 @@
   "name": "Jungles and rainforests",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:jungle_sapling",
-  "sortnum": 13,
+  "sortnum": 21,
   "pages": [
     {
       "type": "patchouli:text",

@@ -1,0 +1,109 @@
+{
+  "name": "Tools and mining",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:iron_pickaxe",
+  "sortnum": 13,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mining and chopping run on your $(l:lemursaucepacket:skills)skills$(/l): better tools, harder ores and rarer trees each wait on a level. This page is the how-to: whole trees from one chop, finding ore, the ore veins that never run out, and the tools and machines that save you time."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What your tools need",
+      "text": "$(li)$(bold)A level to use them.$() Pickaxes and shovels need Mining, axes need Woodcutting and hoes need Farming: stone tools at 5, golden at 10, iron at 15, diamond at 30, netherite at 50 ($(l:lemursaucepacket:skills)Skills$(/l)). A red \"❣ Requires\" line on the tooltip names the skill and the level; it turns green with a tick once you have it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Hardness for harder ores.$() A better pickaxe isn't enough here: harder blocks need a Hardness tome on the pickaxe and a Mining level. Iron, zinc and lapis take Hardness I (Mining 10), gold and redstone II (20), diamonds, emeralds and obsidian III (30), ancient debris IV (40). The tomes are on $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Woodcutting for rarer trees.$() Oak, birch and spruce come down for anyone. Jungle trees need Woodcutting 15, cherry 50, redwoods 70; without the level the log won't break. Every tree's level is in $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting the XP",
+      "text": "$(li)$(bold)Fresh ground only.$() Breaking a block you placed yourself pays no skill XP, so pulling up your own blocks and putting them back earns nothing. Train on what the world made.$(br)$(li)$(bold)Machines earn nobody XP.$() When a Create drill, saw or harvester does the work, nobody gets the Mining, Woodcutting or Farming for it. Tools that break many blocks at once (the Lumber Axe, the Excavator's Pickaxe, the Harvester's Scythe) do pay, for every block.$(br)$(li)$(bold)Hold Shift$() over a block in your inventory: its tooltip lists the XP it pays to break. Iron ore pays 25 Mining, a log 12 Woodcutting."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)No vein mining.$() Project MMO's vein miner is switched off."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Felling trees",
+      "text": "The $(bold)Lumber Axe$() (Woodcutting 30; made in mechanical crafters, see $(l:lemursaucepacket:gear)Gear$(/l)) brings a whole tree down from one log. Every other axe chops one log at a time.$(br2)$(li)$(bold)Sneak$() to chop a single log.$(br)$(li)$(bold)Everything lands where you cut.$() The logs drop at the block you broke, and the leaves around the tree break at once, so saplings and apples fall too. Leaves you placed yourself stay."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Durability.$() Felling costs about one point of durability for every four logs. A worn axe fells as many logs as it has durability for, then breaks: mend it before a big tree.$(br)$(li)$(bold)Giant trees don't fall.$() A tree of more than 200 logs is too big. A message above your hotbar says so, and you chop it log by log.$(br)$(li)$(bold)One kind of log at a time.$() Only logs of the kind you cut come down. Crimson and warped trees bring their wart blocks with them, mangroves their roots."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Mind your builds.$() To the axe, logs with leaves beside the top one are a tree. Sneak when you take apart anything built of logs.$(br)$(li)$(bold)Turn it off$() for yourself with $(#e0ac46)/fallingtree toggle$(), and back on the same way.$(br)$(li)$(bold)A mechanical saw$() (Woodcutting 15 to make) fells a whole tree when it cuts the bottom log. On a moving contraption it cuts every tree it runs into. It works at the Woodcutting level of whoever placed it or last right-clicked it: a tree past that level stays standing."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Finding ore",
+      "text": "$(li)$(bold)Where an ore generates.$() Press $(bold)U$() over an ore in JEI (or $(bold)R$() over what it drops, like raw iron) and open the $(bold)World Generation$() tab. It shows the heights the ore generates at, the biomes (click for the full list), how big its clusters are and how many a chunk gets, and what it drops with Fortune or Silk Touch. It reads this server's real world generation.$(br)$(li)$(bold)Which tool a block takes.$() Look at a block: the block info at the top of your screen (Jade) shows the tool that harvests it. Hardness comes on top of that."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Create's coloured stones.$() Crimsite, veridium, asurine and ochrum come in big striped bands underground, between about Y −30 and 70. They're stone, so any pickaxe takes them without Hardness, and crushing wheels turn them into crushed ore now and then:$(br2)$(#b9a98a)Stone - Each block crushes into$()$(br)$(bold)Veridium$() - Crushed copper 80 % of the time, and a copper nugget 80 %$(br)$(bold)Crimsite$() - Crushed iron 40 %, and an iron nugget 40 %$(br)$(bold)Asurine$() - Crushed zinc 30 %, and a zinc nugget 30 %$(br)$(bold)Ochrum$() - Crushed gold 20 %, and a gold nugget 20 %"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The Lost Candle$() (from Labyrinth chests; Mining 40 to use). Right-click a block with it: if coal, copper, iron, gold or diamond ore is within 8 blocks, it rings and names the ore. It works every 3 seconds.$(br)$(li)$(bold)Light as you go.$() A torch, lantern or other light in either hand lights the area around you. It's on your screen only: the real light level doesn't change, so monsters still spawn wherever you haven't placed torches. A torch held underwater goes dark."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Desert temples$() give you Mining Fatigue while you're inside, until someone slays the temple's Pharaoh. Then the curse lifts for good."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ore veins that never run out",
+      "text": "Create Ore Excavation hides ore veins underground that never run out: find one with an $(bold)Ore Vein Finder$(), then drill it with a $(bold)Drilling Machine$(). A vein fills one chunk, and any number of machines can share it.$(br2)$(#b9a98a)Where - Veins$()$(br)$(bold)Overworld$() - Coal, copper, iron, gold, zinc, lapis, redstone, and water (for the Fluid Well Extractor)$(br)$(bold)Nether$() - Quartz, glowstone and gold nuggets"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "There are no diamond, emerald or netherite veins in this pack. Veins are rare: expect one of each kind in every 2,000 by 2,000 blocks or so, water veins four times as often and Nether gold a quarter as often."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Ore Vein Finder",
+      "text": "$(li)$(bold)Right-click$() with it, anywhere. It reports a vein in the chunk you're in (\"Found in Chunk\"), in one next to it (\"Found nearby\"), or traces of one farther off, with a rough distance (\"Found traces of: Raw Iron (~300 blocks away)\"). Use it again as you walk: the distance tells you whether you're getting closer. It works every 5 seconds.$(br)$(li)$(bold)Making one$() takes Mining 35, an eye of ender, an amethyst shard, a redstone ore block and two sticks. Eyes of ender need Brewing 55 to craft, and a redstone ore block needs Silk Touch and Mining 20, so a team or a trade helps."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The Ore Vein Atlas$() (Mining 35: a chest, an amethyst shard, a map and a book and quill) keeps a record of veins. Click a finished Sample Drill or a running Drilling Machine with it. In the atlas, set a target vein, or exclude and hide others; with the atlas in your inventory, the finder reports only your target.$(br)$(li)$(bold)A Sample Drill$() reads a vein you've found. Place it on the spot with a Copper Backtank (with air in it) on top, click it to start, and when it has finished one cycle, click it with the atlas."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Drilling Machine",
+      "text": "$(li)$(bold)Build it$() in mechanical crafters (brass blocks and sheets, casings, a mechanical drill, precision mechanisms, sturdy sheets and more; JEI has the recipe). It places as one big machine, which has to stand on solid ground over the vein.$(br)$(li)$(bold)Run it.$() Put a drill head in, turn its rotation input at 30 RPM or more, and take the ore out of its IO block with a funnel or a chute. Faster rotation drills faster, and the head never wears out.$(br)$(li)$(bold)The Iron Drill head$() (Mining 50 to make) drills every vein in this pack. None of them needs the diamond or netherite head."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Water veins$() take the Fluid Well Extractor instead: endless water for your pipes.$(br)$(li)$(bold)Hold W$() over the machine, the finder or the sample drill for its Ponder lesson.$(br)$(li)$(bold)Hardness still counts.$() Raw ore from a vein is gated like ore you dig. Below the Mining level its tier needs, you can carry it and keep it in a chest, but recipes, machines and other containers won't take it from you. Funnels, chutes and belts still move it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Tool helpers",
+      "text": "$(#b9a98a)Tool - What it does$()$(br)$(bold)Excavator's Pickaxe (Mining 40)$() - Mines a 3 by 3: a wall in front of you, or a floor or ceiling when you look steeply up or down (more than 60°). Sneak to mine a single block. It only takes blocks a pickaxe mines.$(br)$(bold)Prospector's Pickaxe (Mining 30)$() - Ores come out already smelted$(br)$(bold)Telekinesis$() - An enchantment: what you break drops straight into your inventory ($(l:lemursaucepacket:enchanting)Enchanting$(/l))"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tool Swapper upgrade (Crafting 25)$() - In the backpack you wear: left-click a block or a mob with the wrong tool and it swaps the right one into your hand$(br)$(bold)A spare tool$() - When a tool breaks, a matching one from your inventory takes its place$(br)$(bold)Extendo Grip (Attack 40 to hold)$() - In your off-hand: 3 more blocks of reach, 5 with one in each hand. With a backtank on, it uses air instead of durability.$(br)$(bold)Nuggets of Experience$() - Crushing raw ore in Create often gives one. Right-click it for experience, for the enchanting table and the anvil."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mining by machine",
+      "text": "$(li)$(bold)Mechanical drill$() (Mining 15 to make). It breaks the block in front of it, faster the faster it turns. On a moving contraption (a piston, bearing, gantry, minecart or train) it mines whatever it runs into, and what it digs goes into the contraption's chests."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Borehead Bearing$() (Mining 40, with its Rock Cutting Wheels): a tunnel bore. The wheels break blocks all around themselves and attach without glue. What they dig goes into a storage block on the bore, and the bore stops when that's full. It spins at a quarter of the speed you give it, and the more it cuts at once, the slower it goes: use more than one bearing.$(br)$(li)$(bold)How hard machines dig.$() Create's drills, saws and rollers, and deployers holding a pickaxe, break blocks up to Hardness II: gold and redstone yes, diamonds and obsidian no ($(l:lemursaucepacket:enchanting)Enchanting$(/l))."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Whose levels.$() A drill or saw works at the levels of its operator: whoever placed it or last right-clicked it. On a contraption, it keeps the operator it had when the contraption was put together. A log past the operator's Woodcutting stays standing. See $(l:lemursaucepacket:good-to-know)Good to know$(/l).$(br)$(li)$(bold)No XP.$() Machines pay nobody skill XP, so level Mining by hand first."
+    }
+  ]
+}

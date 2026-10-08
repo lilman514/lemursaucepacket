@@ -43,7 +43,6 @@ import net.neoforged.neoforge.event.entity.player.ItemFishedEvent;
 public final class Gates {
     /** The player whose click a menu is handling: the brewing stand's ingredient slot only knows the item. */
     public static final ThreadLocal<Player> CLICKING = new ThreadLocal<>();
-    private static final Map<UUID, Long> LAST_TOLD = new HashMap<>();
     private static final String BREWED = "lsp_brewed";
 
     /**
@@ -67,9 +66,85 @@ public final class Gates {
         return false;
     }
 
-    /** Whether a machine with nobody to ask (the Crafter, Create's mechanical crafter) may make this: only if it isn't gated. */
+    /** Whether a machine with nobody to ask may make this: only if it isn't gated. */
     public static boolean machineMayMake(ItemStack result) {
-        return SkillGates.craft(result) == null;
+        return machineMayMake(null, result);
+    }
+
+    /**
+     * Whether a machine may make this: anything ungated, and a gated item at its operator's level (whoever placed it or
+     * last right-clicked it: {@link Operators}). Tells the operator why not.
+     */
+    public static boolean machineMayMake(@javax.annotation.Nullable BlockEntity machine, ItemStack result) {
+        SkillGates.Need need = SkillGates.craft(result);
+        if (need == null) return true;
+        if (machine != null && Operators.has(machine, need)) return true;
+        Operators.refuse(machine, need, result, "make");
+        return false;
+    }
+
+    /**
+     * Whether a drill or saw may break a block for its operator: Project MMO's break requirement for it (the chop levels
+     * on logs) against the operator's levels, as a player's own hands would be held to it. A machine with no operator
+     * breaks nothing that waits on a level. Tells the operator why not.
+     *
+     * @param machine the machine's name ("Mechanical Saw"), for the message
+     * @param at      where the machine is (a contraption's: where the actor is now)
+     * @param verb    what it does to the block ("cut", "break")
+     */
+    public static boolean breakerMayBreak(Level level, net.minecraft.core.BlockPos pos, net.minecraft.world.level.block.state.BlockState state,
+                                          @javax.annotation.Nullable Operators.Operator operator, String machine, net.minecraft.core.BlockPos at, String verb) {
+        Map<String, Integer> req = Levels.toBreak(level, pos);
+        if (req.isEmpty()) return true;
+        for (Map.Entry<String, Integer> e : req.entrySet()) {
+            if (Operators.level(operator, level.getServer(), e.getKey()) >= e.getValue()) continue;
+            String block = state.getBlock().getName().getString();
+            Operators.refuse(operator, level.getServer(), machine, at, new SkillGates.Need(e.getKey(), e.getValue(), block), block, verb);
+            return false;
+        }
+        return true;
+    }
+
+    private static final ResourceLocation FF_FREEZING = ResourceLocation.fromNamespaceAndPath("friendsandfoes", "totem_of_freezing");
+    private static final ResourceLocation FF_ILLUSION = ResourceLocation.fromNamespaceAndPath("friendsandfoes", "totem_of_illusion");
+
+    /**
+     * Whether Friends & Foes may fire the totem this player would use (its Totem of Freezing or Illusion, from a hand or
+     * the charm slot, in that order, as it looks): only at the totem's wear level (skill_gates.json "wear"). Friends &
+     * Foes runs its own check on every hit, so the notice is kept to every two minutes. Called from the code
+     * LspFixesMixinPlugin puts at the top of Friends & Foes' totem handler.
+     */
+    public static boolean friendsAndFoesTotemReady(Player player) {
+        if (player.level().isClientSide()) return true;
+        ItemStack totem = friendsAndFoesTotem(player);
+        if (totem.isEmpty()) return true;
+        SkillGates.Need need = SkillGates.wear(totem);
+        if (need == null) return true;
+        int have = Levels.of(player, need.skill());
+        if (have >= need.level()) return true;
+        GateNotice.tell(player, "ff-totem:" + BuiltInRegistries.ITEM.getKey(totem.getItem()),
+                "Your " + totem.getHoverName().getString() + " won't work until you have " + GateNotice.needs(need, have) + ".", 120_000);
+        return false;
+    }
+
+    private static ItemStack friendsAndFoesTotem(Player player) {
+        for (ItemStack hand : new ItemStack[] {player.getMainHandItem(), player.getOffhandItem()}) if (isFriendsAndFoesTotem(hand)) return hand;
+        try {
+            var curios = top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(player);
+            if (curios.isPresent()) {
+                var equipped = curios.get().getEquippedCurios();
+                for (int i = 0; i < equipped.getSlots(); i++) if (isFriendsAndFoesTotem(equipped.getStackInSlot(i))) return equipped.getStackInSlot(i);
+            }
+        } catch (RuntimeException | LinkageError e) {
+            // no Curios: the hands are all there is
+        }
+        return ItemStack.EMPTY;
+    }
+
+    private static boolean isFriendsAndFoesTotem(ItemStack stack) {
+        if (stack.isEmpty()) return false;
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(stack.getItem());
+        return FF_FREEZING.equals(id) || FF_ILLUSION.equals(id);
     }
 
     /** Whether this player may use this recipe (Construction's alternate recipes); says why not. */
@@ -81,32 +156,42 @@ public final class Gates {
         return false;
     }
 
-    /** Machines never use a recipe that waits on a level. */
+    /** A machine with nobody to ask never uses a recipe that waits on a level. */
     public static boolean machineMayUseRecipe(ResourceLocation recipe) {
-        return SkillGates.recipe(recipe) == null;
+        return machineMayUseRecipe(null, recipe);
+    }
+
+    /** A recipe that waits on a level (Construction's alternate recipes) runs in a machine at its operator's level. */
+    public static boolean machineMayUseRecipe(@javax.annotation.Nullable BlockEntity machine, ResourceLocation recipe) {
+        SkillGates.Need need = SkillGates.recipe(recipe);
+        return need == null || machine != null && Operators.has(machine, need);
     }
 
     private static final ResourceLocation CREATE_POTION = ResourceLocation.fromNamespaceAndPath("create", "potion");
     private static final Map<Class<?>, Optional<Method>> FLUID_RESULTS = new ConcurrentHashMap<>();
 
     /**
-     * Whether a basin may run this recipe (Create's mixer and press, and what other mods cook in one): not if it makes a
-     * gated item, and not a potion brewed with an ingredient past Brewing 1. Nobody's level is asked: a machine only
-     * makes what anyone could.
+     * Whether a basin may run this recipe (Create's mixer and press, and what other mods cook in one): a gated item, or a
+     * potion brewed with a gated ingredient, only at the basin's operator's level ({@link Operators}).
      */
-    public static boolean basinMayRun(Level level, Recipe<?> recipe) {
+    public static boolean basinMayRun(BlockEntity basin, Recipe<?> recipe) {
+        if (basin.getLevel() == null) return true;
         ItemStack out;
         try {
-            out = recipe.getResultItem(level.registryAccess());
+            out = recipe.getResultItem(basin.getLevel().registryAccess());
         } catch (RuntimeException e) {
             out = ItemStack.EMPTY;
         }
-        if (out != null && !out.isEmpty() && !machineMayMake(out)) return false;
+        if (out != null && !out.isEmpty() && !machineMayMake(basin, out)) return false;
         if (!makesPotion(recipe)) return true;
+        int brewing = Operators.level(basin, "brewing");
         for (Ingredient ingredient : recipe.getIngredients()) {
             for (ItemStack s : ingredient.getItems()) {
                 SkillGates.Need need = SkillGates.brew(s);
-                if (need != null && need.level() > 1) return false;
+                if (need != null && need.level() > 1 && brewing < need.level()) {
+                    Operators.refuse(basin, need, s, "brew with");
+                    return false;
+                }
             }
         }
         return true;
@@ -234,6 +319,19 @@ public final class Gates {
         }
     }
 
+    /**
+     * A totem of undying (or another held item with a "wear" gate that saves its holder) only saves a player with its
+     * level (skill_gates.json "wear": Hitpoints 50 for the totem). Below it the totem stays in the hand, unused.
+     */
+    static void onTotem(net.neoforged.neoforge.event.entity.living.LivingUseTotemEvent e) {
+        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        SkillGates.Need need = SkillGates.wear(e.getTotem());
+        if (need == null || Levels.of(p, need.skill()) >= need.level()) return;
+        e.setCanceled(true);
+        GateNotice.tell(p, "totem:" + e.getTotem().getItem(), "Your " + e.getTotem().getHoverName().getString() + " didn't save you: it needs "
+                + GateNotice.needs(need, Levels.of(p, need.skill())) + ".", 1_000);
+    }
+
     /** Below the Fishing level for treasure, treasure on the line comes up as a cod. */
     static void onFished(ItemFishedEvent e) {
         slipTreasure(e.getEntity(), e.getDrops());
@@ -266,14 +364,10 @@ public final class Gates {
 
     // ---------------------------------------------------------------- telling
 
-    /** A red line over the hotbar, at most once a second, from the server only. */
+    /** A chat line and a ding (GateNotice), the same one at most every few seconds, from the server only. */
     static void tell(Player p, String message) {
         if (p.level().isClientSide()) return;
-        long now = p.level().getGameTime();
-        Long last = LAST_TOLD.get(p.getUUID());
-        if (last != null && now - last < 20) return;
-        LAST_TOLD.put(p.getUUID(), now);
-        p.displayClientMessage(Component.literal(message).withStyle(ChatFormatting.RED), true);
+        GateNotice.tell(p, message, message, 4_000);
     }
 
     private Gates() {

@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:ring_of_the_seven_deadly_sins"
+  ],
+  "requirements": {
+    "WEAR": {
+      "strength": 55
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

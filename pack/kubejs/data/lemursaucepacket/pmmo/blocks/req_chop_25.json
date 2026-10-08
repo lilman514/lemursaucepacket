@@ -1,0 +1,32 @@
+{
+  "override": false,
+  "isTagFor": [
+    "regions_unexplored:cypress_log",
+    "regions_unexplored:cypress_wood",
+    "regions_unexplored:stripped_cypress_log",
+    "regions_unexplored:stripped_cypress_wood",
+    "regions_unexplored:ashen_log",
+    "regions_unexplored:ashen_wood",
+    "regions_unexplored:blue_bioshroom_stem",
+    "regions_unexplored:blue_bioshroom_hyphae",
+    "regions_unexplored:stripped_blue_bioshroom_stem",
+    "regions_unexplored:stripped_blue_bioshroom_hyphae",
+    "regions_unexplored:green_bioshroom_stem",
+    "regions_unexplored:green_bioshroom_hyphae",
+    "regions_unexplored:stripped_green_bioshroom_stem",
+    "regions_unexplored:stripped_green_bioshroom_hyphae",
+    "regions_unexplored:pink_bioshroom_stem",
+    "regions_unexplored:pink_bioshroom_hyphae",
+    "regions_unexplored:stripped_pink_bioshroom_stem",
+    "regions_unexplored:stripped_pink_bioshroom_hyphae",
+    "regions_unexplored:yellow_bioshroom_stem",
+    "regions_unexplored:yellow_bioshroom_hyphae",
+    "regions_unexplored:stripped_yellow_bioshroom_stem",
+    "regions_unexplored:stripped_yellow_bioshroom_hyphae"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 25
+    }
+  }
+}

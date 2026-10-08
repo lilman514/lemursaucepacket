@@ -51,7 +51,7 @@ PvP is on. Kill a player, pick up the Heart they dropped, use it. Hearts move be
 - Train Hitpoints. Every ten levels adds a heart, up to level 99.
 - Make a new one. This is meant to be very hard and it can never be automated end to end.
 
-**A new Heart** is a Create sequenced assembly on a **Heart of the Sea** (buried treasure only, one per treasure; treasure maps come from shipwrecks and ocean ruins). Over five stations:
+**A new Heart** is a Create sequenced assembly on a **Heart of the Sea** (from buried treasure, one per chest, with treasure maps from shipwrecks and ocean ruins; and now and then from the chests of the tall ocean towers). Over five stations:
 
 1. Deploy a **Compacted Diamond** (4 diamonds, pressed).
 2. Deploy a **Nether Star** (kill the Wither).
@@ -59,7 +59,7 @@ PvP is on. Kill a player, pick up the Heart they dropped, use it. Hearts move be
 4. Deploy a **Totem of Undying** (raids).
 5. Press.
 
-The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart.
+The Heart of the Sea is the bottleneck. There is no farm for it: you find one, you make one Heart. Ocean towers are the best bet: about one chest in six holds one, and every player loots their own copy of each chest.
 
 ## Graves and Grave Essence
 

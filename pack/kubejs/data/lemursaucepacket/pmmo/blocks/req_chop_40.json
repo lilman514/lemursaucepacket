@@ -1,0 +1,26 @@
+{
+  "override": false,
+  "isTagFor": [
+    "minecraft:pale_oak_log",
+    "minecraft:pale_oak_wood",
+    "minecraft:stripped_pale_oak_log",
+    "minecraft:stripped_pale_oak_wood",
+    "regions_unexplored:magnolia_log",
+    "regions_unexplored:magnolia_wood",
+    "regions_unexplored:stripped_magnolia_log",
+    "regions_unexplored:stripped_magnolia_wood",
+    "regions_unexplored:wisteria_log",
+    "regions_unexplored:wisteria_wood",
+    "regions_unexplored:stripped_wisteria_log",
+    "regions_unexplored:stripped_wisteria_wood",
+    "regions_unexplored:baobab_log",
+    "regions_unexplored:baobab_wood",
+    "regions_unexplored:stripped_baobab_log",
+    "regions_unexplored:stripped_baobab_wood"
+  ],
+  "requirements": {
+    "BREAK": {
+      "woodcutting": 40
+    }
+  }
+}

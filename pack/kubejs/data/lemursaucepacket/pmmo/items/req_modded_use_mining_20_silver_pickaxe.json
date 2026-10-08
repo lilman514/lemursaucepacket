@@ -1,0 +1,15 @@
+{
+  "override": false,
+  "isTagFor": [
+    "iceandfire:silver_pickaxe",
+    "iceandfire:silver_shovel"
+  ],
+  "requirements": {
+    "TOOL": {
+      "mining": 20
+    },
+    "USE": {
+      "mining": 20
+    }
+  }
+}

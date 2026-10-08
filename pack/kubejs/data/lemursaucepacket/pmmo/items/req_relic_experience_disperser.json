@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:experience_disperser"
+  ],
+  "requirements": {
+    "WEAR": {
+      "enchanting": 25
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

@@ -21,3 +21,6 @@ structures/raw-import2/
 structures/.external/
 structures/baked/
 structures/previews/
+
+# Raw third-party material behind research/ (mod lang files, Modrinth texts, upstream sources, jar scans): kept locally only.
+research/.local/

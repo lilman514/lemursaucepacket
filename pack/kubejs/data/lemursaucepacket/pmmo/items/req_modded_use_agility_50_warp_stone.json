@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "waystones:warp_stone"
+  ],
+  "requirements": {
+    "TOOL": {
+      "agility": 50
+    },
+    "USE": {
+      "agility": 50
+    }
+  }
+}

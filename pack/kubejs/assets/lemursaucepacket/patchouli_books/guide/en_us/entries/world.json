@@ -2,12 +2,12 @@
   "name": "The world and its rules",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:grass_block",
-  "sortnum": 6,
+  "sortnum": 14,
   "pages": [
     {
       "type": "patchouli:text",
       "title": "Rules",
-      "text": "$(li)$(bold)PvP is on$() and there are $(bold)no land claims$(). Pick your spot with care, keep valuables close, and settle things like adults.$(br)$(li)$(bold)Die and your items wait in a grave$() where you fell. Only you can open it (a teammate can with your permission)."
+      "text": "$(li)$(bold)PvP is on$() and there are $(bold)no land claims$(). Pick your spot with care, keep valuables close, and settle things like adults.$(br)$(li)$(bold)Die and your items wait in a grave$() where you fell. It isn't locked to you: whoever breaks it gets its items, so go straight back. A $(bold)Latest Death$() waypoint on your minimap and world map points the way."
     },
     {
       "type": "patchouli:text",
@@ -34,7 +34,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find with a prospector and drill with Create machines.$(br)$(li)$(bold)Dragons:$() Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their hoards. They can't break blocks. Their eggs hatch into dragons you can raise and ride; their scales, bones and blood make the best gear in the realm, but dragon armour can only be worn after Dragon Slayer II. Ice and Fire's other creatures and structures aren't in the pack."
+      "text": "$(li)$(bold)Ore veins:$() Create Ore Excavation adds infinite veins you find with an Ore Vein Finder and drill with Create machines.$(br)$(li)$(bold)Dragons:$() Ice and Fire's fire, ice and lightning dragons live in caves and roosts at least 1,000 blocks from spawn, sleeping on their hoards. They can't break blocks. Their eggs hatch into dragons you can raise and ride; their scales, bones and blood make the best gear in the realm, but dragon armour can only be worn after Dragon Slayer II. Ice and Fire's other creatures and structures aren't in the pack."
     },
     {
       "type": "patchouli:text",
@@ -46,12 +46,12 @@
     },
     {
       "type": "patchouli:text",
-      "text": "casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() for its settings; $(bold)O$() mutes your microphone."
+      "text": "casting lava with water where you want it. See $(l:lemursaucepacket:enchanting)Enchanting$(/l).$(br)$(li)$(bold)Maps:$() Xaero's minimap and world map, without mob radar or cave maps (fair play). Waystones you've activated show on both.$(br)$(li)$(bold)Voice:$() proximity voice chat. Press $(bold)V$() to set it up: push to talk has no key until you pick one, and voice activation starts muted ($(bold)O$() unmutes). See $(l:lemursaucepacket:social)Chat, voice and teams$(/l)."
     },
     {
       "type": "patchouli:text",
       "title": "Weekly missions",
-      "text": "Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or $(bold)H$()). They pay Coin Pouches (right-click one: 100 coins; rerolls cost pouches) and quest XP."
+      "text": "Brassworks Missions posts a set of Create-flavoured missions every week (ESC → Missions, or $(bold)H$()). They pay Coin Pouches (right-click one: 100 coins; rerolls cost pouches)."
     }
   ]
 }

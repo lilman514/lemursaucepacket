@@ -1025,6 +1025,127 @@ img {
   margin-right: 16px;
 }
 
+/* The FAQ (front matter faq: true): each question a card that opens, a filter over them */
+
+.faq-tools {
+  position: sticky;
+  top: calc(var(--topbar) + 8px);
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(20, 17, 14, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.faq-tools input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-deep);
+  color: var(--text);
+  font: 500 14.5px/1.2 var(--body);
+}
+
+.faq-tools input:focus {
+  border-color: var(--brass);
+  outline: none;
+}
+
+.faq-tools button {
+  padding: 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  color: var(--text);
+  font: 600 13px/1.2 var(--body);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.faq-tools button:hover {
+  border-color: var(--brass);
+  color: var(--brass-hi);
+}
+
+.faq-none {
+  color: var(--text-3);
+}
+
+.wk-article h2 + details.faq {
+  margin-top: 4px;
+}
+
+.wk-article details.faq {
+  margin: 0 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  transition: border-color 0.15s, background 0.15s;
+  scroll-margin-top: calc(var(--topbar) + 76px);
+}
+
+.wk-article details.faq:hover {
+  border-color: var(--brass-dark);
+}
+
+.wk-article details.faq[open] {
+  border-color: var(--brass-dark);
+  background: var(--card-hi);
+}
+
+.wk-article details.faq > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px 13px 18px;
+  font-size: 1.02em;
+  line-height: 1.35;
+}
+
+.wk-article details.faq > summary::before {
+  content: none;
+}
+
+.wk-article details.faq > summary::after {
+  content: '';
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin-left: auto;
+  border-right: 2px solid var(--brass);
+  border-bottom: 2px solid var(--brass);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.15s;
+}
+
+.wk-article details.faq[open] > summary::after {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.wk-article details.faq > summary:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: -2px;
+  border-radius: 10px;
+}
+
+.wk-article details.faq > .faq-a {
+  margin: 0 18px;
+  padding: 12px 0 4px;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+
+.wk-article details.faq > .faq-a > :last-child {
+  margin-bottom: 14px;
+}
+
 /* cards (GitBook cards tables, and the front page) */
 
 .cards {

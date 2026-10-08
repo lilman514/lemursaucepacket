@@ -15,18 +15,18 @@ Hold **W** over any Create item to **Ponder** it: an animated lesson that shows 
 
 ## Speed and stress
 
-Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on the network, every power source supplies so much, and if the load is more than the supply, the whole network stops. Engineer's goggles show both when you look at a part.
+Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faster. **Stress** (SU) is how hard: every machine puts a load on the network, every power source supplies so much, and if the load is more than the supply, the whole network stops. Look at a part to see both: here you don't even need the Engineer's goggles on, the readout is always there.
 
 - Cogwheels of different sizes change speed: a big one turning a small one doubles it.
 - A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.
-- Most processing machines need a minimum speed. If one won't work, check its speed first.
+- Slow machines still work, just slower. A few need a minimum: the mechanical mixer, a display board, Slice & Dice's slicer and the Drilling Machine need 30 RPM, and the alternator 32. If a whole network stops, it's overstressed: check its stress.
 
 ## Power
 
 | Source | How | Notes |
 |---|---|---|
 | Water wheel | Place it in flowing water (or water falling past it) | The first power anyone builds. The large one gives more |
-| Windmill | Sails or wool round a windmill bearing, then right-click the bearing to start it | Needs room; more sails, more power |
+| Windmill | At least 8 sails (or super-glued wool) round a windmill bearing, then right-click the bearing to start it | Needs room; more sails, more power |
 | Steam engine | A fluid tank of water over blaze burners, with engines on its sides | Big power. Steam engines need **Smithing 35** to make |
 | Hand crank | Turn it yourself | For testing |
 
@@ -35,12 +35,12 @@ Turning has two numbers. **Speed** (RPM) is how fast: faster machines work faste
 | Machine | What it does | Skill |
 |---|---|---|
 | Millstone | Grinds: wheat into flour, flowers into dyes, gravel into flint | |
-| Crushing wheels | A pair of them crush ore into crushed ore (more ingots per ore), stone into gravel | Made in mechanical crafters |
+| Crushing wheels | A pair of them crush raw ore into crushed ore one for one, often with an experience nugget, and stone into gravel. Only ore blocks mined with Silk Touch crush into extra | Made in mechanical crafters |
 | Encased fan | Blows through lava (blasting), fire (smoking), water (washing) or soul fire (haunting) to process items in bulk | **Cooking 20** |
 | Mechanical press | Presses ingots into sheets; over a basin, compacts | |
 | Mechanical mixer | Over a basin, mixes: over a blaze burner it makes brass | |
 | Mechanical saw | Cuts logs into planks, and stone like a stonecutter | **Woodcutting 15** |
-| Mechanical drill | Breaks the block in front of it (up to Hardness tier II on a contraption) | **Mining 15** |
+| Mechanical drill | Breaks the block in front of it, up to Hardness tier II, standing still or on a contraption | **Mining 15** |
 
 ## Brass
 
@@ -48,7 +48,7 @@ Brass is the turning point: most of Create's better parts need it. Mix **copper*
 
 ## Moving things
 
-Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arms** move items from anywhere to anywhere in reach. Smart funnels and filters choose which items go where.
+Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; **mechanical arms** move items from anywhere to anywhere in reach. Brass funnels and filters choose which items go where.
 
 ## Making things by themselves
 
@@ -58,7 +58,7 @@ Belts carry items; chutes drop them; funnels put them in and take them out; depo
 
 ## Milestones your skills unlock
 
-Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.
+Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see [Skills](skills.md#what-each-skill-unlocks)).
 
 | Level | Skill | Machine |
 |---|---|---|

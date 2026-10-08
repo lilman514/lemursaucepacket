@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "friendsandfoes:totem_of_illusion"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 45
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

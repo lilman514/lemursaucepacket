@@ -2,7 +2,7 @@
   "name": "Creatures",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:bone",
-  "sortnum": 21,
+  "sortnum": 29,
   "pages": [
     {
       "type": "patchouli:text",

@@ -25,6 +25,7 @@ public class TradeMenu extends ChestMenu {
     TradeMenu(int id, Inventory inventory, Container container, @Nullable Trades.Side side) {
         super(EconomyContent.TRADE_MENU.get(), id, inventory, container, 6);
         this.side = side;
+        net.lemursaucepacket.fixes.economy.LockedSlots.lock(this, 54);
     }
 
     @Override

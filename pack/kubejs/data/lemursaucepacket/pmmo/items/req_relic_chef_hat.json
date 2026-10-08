@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:chef_hat"
+  ],
+  "requirements": {
+    "WEAR": {
+      "cooking": 20
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

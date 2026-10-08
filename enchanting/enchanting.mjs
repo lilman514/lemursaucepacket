@@ -130,10 +130,12 @@ export const HARDNESS = {
   /** Blocks per tier: block ids and block tags (tags may be missing, they are optional entries). */
   tiers: {
     1: ['#c:ores/iron', '#c:ores/zinc', '#c:ores/lapis'],
-    2: ['#c:ores/gold', '#c:ores/redstone'],
+    // Ice and Fire's silver (only in ice dragon dens: its world ore is off) is as rare as gold.
+    2: ['#c:ores/gold', '#c:ores/redstone', 'iceandfire:silver_ore', 'iceandfire:deepslate_silver_ore'],
     // Obsidian sits with diamond: an enchanting table, an ender chest and Create's sturdy sheets all need it, so
-    // tier IV would have pushed enchanting itself behind Mining 40.
-    3: ['#c:ores/diamond', '#c:ores/emerald', 'minecraft:obsidian', 'minecraft:crying_obsidian'],
+    // tier IV would have pushed enchanting itself behind Mining 40. Regions Unexplored's cobalt obsidian counts as
+    // obsidian in recipes (#c:obsidians), and Ice and Fire's sapphire (ice dragon dens) is a diamond-tier gem.
+    3: ['#c:ores/diamond', '#c:ores/emerald', 'minecraft:obsidian', 'minecraft:crying_obsidian', 'regions_unexplored:cobalt_obsidian', 'iceandfire:sapphire_ore'],
     4: ['#c:ores/netherite_scrap'],
     5: ['minecraft:reinforced_deepslate', 'minecraft:budding_amethyst']
   },
@@ -149,8 +151,12 @@ export const HARDNESS = {
    */
   materials: {
     1: ['#c:raw_materials/iron', '#c:raw_materials/zinc', '#c:storage_blocks/raw_iron', '#c:storage_blocks/raw_zinc', '#c:ores/iron', '#c:ores/zinc', '#c:ores/lapis', 'minecraft:lapis_lazuli', 'minecraft:lapis_block'],
-    2: ['#c:raw_materials/gold', '#c:storage_blocks/raw_gold', '#c:ores/gold', '#c:ores/redstone', 'minecraft:redstone', 'minecraft:redstone_block'],
-    3: ['minecraft:diamond', 'minecraft:diamond_block', '#c:ores/diamond', 'minecraft:obsidian', 'minecraft:crying_obsidian'],
+    // Modded raw materials from the same ground: Ice and Fire's silver, Ore Excavation's raw redstone (its veins mill
+    // and crush into redstone; the machines that drill them stay exempt) and raw diamond, Ice and Fire's sapphire.
+    2: ['#c:raw_materials/gold', '#c:storage_blocks/raw_gold', '#c:ores/gold', '#c:ores/redstone', 'minecraft:redstone', 'minecraft:redstone_block',
+      'iceandfire:silver_ore', 'iceandfire:deepslate_silver_ore', 'iceandfire:raw_silver', 'iceandfire:raw_silver_block', 'createoreexcavation:raw_redstone'],
+    3: ['minecraft:diamond', 'minecraft:diamond_block', '#c:ores/diamond', 'minecraft:obsidian', 'minecraft:crying_obsidian',
+      'regions_unexplored:cobalt_obsidian', 'iceandfire:sapphire_ore', 'iceandfire:sapphire_gem', 'iceandfire:sapphire_block', 'createoreexcavation:raw_diamond'],
     4: ['minecraft:ancient_debris', '#c:ores/netherite_scrap'],
     5: ['minecraft:reinforced_deepslate', 'minecraft:budding_amethyst']
   },

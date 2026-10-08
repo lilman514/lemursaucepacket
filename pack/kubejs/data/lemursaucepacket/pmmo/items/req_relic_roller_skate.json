@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "relics:roller_skate"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 35
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}
