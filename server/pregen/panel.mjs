@@ -11,10 +11,11 @@
 //
 //   node server/pregen/panel.mjs [--open] [--server C:\LemurSaucePacket-Server] [--port 8790]
 //        [--dim minecraft:overworld] [--x 0] [--z 0] [--radius 625] [--fast <logical CPUs>] [--gentle 12]
+//        [--jobs spots.json]   (a list of areas, [{ "name", "dim", "x", "z", "radius" }], built one after another)
 //
 // or double-click panel.cmd. Keep its window open while the pre-build runs: it is what pauses it for players.
 
-import { execFile } from 'node:child_process'
+import { execFile, spawn } from 'node:child_process'
 import fs from 'node:fs'
 import http from 'node:http'
 import os from 'node:os'
@@ -29,13 +30,15 @@ const arg = (name, fallback) => {
 }
 const SERVER = arg('server', 'C:\\LemurSaucePacket-Server')
 const PORT = Number(arg('port', '8790'))
-const JOB = { dim: arg('dim', 'minecraft:overworld'), x: Number(arg('x', '0')), z: Number(arg('z', '0')), radius: Number(arg('radius', '625')) }
+// One area, or with --jobs a JSON list of them ([{ name, dim, x, z, radius }]), built one after another.
+const JOBS = arg('jobs', null)
+  ? JSON.parse(fs.readFileSync(arg('jobs'), 'utf8'))
+  : [{ name: '', dim: arg('dim', 'minecraft:overworld'), x: Number(arg('x', '0')), z: Number(arg('z', '0')), radius: Number(arg('radius', '625')) }]
 // Distant Horizons' own thread count on this PC is 12 (half the logical CPUs); the pre-build gets all of them.
 const FAST = Number(arg('fast', String(os.cpus().length)))
 const GENTLE = Number(arg('gentle', '12'))
 const LOG = path.join(SERVER, 'logs', 'latest.log')
 const STATE_FILE = path.join(SERVER, 'pregen-panel.json')
-const START = `dh pregen start ${JOB.dim} ${JOB.x} ${JOB.z} ${JOB.radius}`
 
 // ---- what happened (shown on the page and in this window) ----
 
@@ -52,11 +55,13 @@ function note(text) {
 function loadState() {
   try {
     const saved = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'))
-    if (JSON.stringify(saved.job) === JSON.stringify(JOB)) return saved
+    if (JSON.stringify(saved.jobs) === JSON.stringify(JOBS)) return saved
   } catch {}
-  return { job: JOB, paused: false, done: false, best: 0, builtMs: 0 }
+  return { jobs: JOBS, index: 0, paused: false, done: false, best: 0, builtMs: 0 }
 }
 const state = loadState()
+const job = () => JOBS[Math.min(state.index, JOBS.length - 1)]
+const startCommand = () => `dh pregen start ${job().dim} ${job().x} ${job().z} ${job().radius}`
 function save() {
   try {
     fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + '\n')
@@ -86,7 +91,10 @@ function parse(line) {
   }
   if (/Starting pregen/.test(line)) run.pregen = 'running'
   if (/Pregen is cancelled/.test(line)) run.pregen = 'stopped'
-  if (/Pregen is complete/.test(line)) run.pregen = 'complete'
+  if (/Pregen is complete/.test(line)) {
+    run.pregen = 'complete'
+    run.completeAt = line.slice(0, 26)
+  }
   m = line.match(/threading\.numberOfThreads\] to \[(\d+)\]/)
   if (m) run.threads = Number(m[1])
 }
@@ -132,8 +140,46 @@ function powershell(script, args) {
     })
   })
 }
+// One PowerShell stays open to type commands (console.ps1 -Serve): starting one per command took a second or two,
+// which added up between short areas. It answers each line with one line, in order.
+let sender = null
+let waiting = []
+function typeLine(command) {
+  if (!sender) {
+    let buffer = ''
+    sender = spawn('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', path.join(here, 'console.ps1'), '-ServerDir', SERVER, '-Serve'], { windowsHide: true })
+    sender.stdout.setEncoding('utf8')
+    sender.stdout.on('data', (chunk) => {
+      buffer += chunk
+      let end
+      while ((end = buffer.indexOf('\n')) >= 0) {
+        const line = buffer.slice(0, end).trim()
+        buffer = buffer.slice(end + 1)
+        const answer = waiting.shift()
+        if (answer) answer(line)
+      }
+    })
+    const lost = (why) => {
+      sender = null
+      for (const answer of waiting.splice(0)) answer(why)
+    }
+    sender.on('exit', () => lost('the command sender stopped'))
+    // A sender that can't start (out of memory, say) must not take the panel down with it.
+    sender.on('error', (e) => lost(`couldn't start the command sender: ${e.message}`))
+    sender.stdin.on('error', () => {})
+  }
+  return new Promise((resolve) => {
+    if (!sender) return resolve("couldn't start the command sender")
+    waiting.push(resolve)
+    sender.stdin.write(command + '\n')
+    // A sender that stops answering is replaced (answers are matched in order, so it can't just skip one).
+    setTimeout(() => {
+      if (waiting.includes(resolve) && sender) sender.kill()
+    }, 30000)
+  })
+}
 async function send(command) {
-  note(`Server: ${command} (${await powershell('console.ps1', ['-ServerDir', SERVER, '-Command', command])})`)
+  note(`Server: ${command} (${await typeLine(command)})`)
 }
 async function priority(level) {
   run.priority = level
@@ -149,7 +195,7 @@ let lastThreads = 0
 let lastTick = Date.now()
 
 // Distant Horizons rounds the radius up to its 4-chunk sections; a progress line with another radius is another job.
-const ours = () => run.progress && Math.abs(run.progress.of - JOB.radius) <= 4
+const ours = () => run.progress && Math.abs(run.progress.of - job().radius) <= 4
 const catchingUp = () => run.pregen === 'running' && ours() && run.progress.percent < state.best - 0.2
 const wantsToBuild = () => !state.done && run.up && !state.paused && run.players.size === 0
 
@@ -177,13 +223,25 @@ async function step() {
     }
     lastTick = now
     if (state.done) return
-    if (run.pregen === 'complete' && ours()) {
-      state.done = true
-      state.best = 100
-      save()
-      note('Done: the pre-build is complete')
-      await gentle()
-      return
+    // Each "Pregen is complete" counts once (by its time in the log), so a restarted panel doesn't skip an area.
+    if (run.pregen === 'complete' && ours() && run.completeAt !== state.lastCompleteAt) {
+      state.lastCompleteAt = run.completeAt
+      if (state.index < JOBS.length - 1) {
+        note(JOBS.length > 1 ? `Spot ${state.index + 1} of ${JOBS.length} done${job().name ? ` (${job().name})` : ''}` : 'Area done')
+        state.index++
+        state.best = 0
+        run.pregen = 'idle'
+        run.samples = []
+        lastStart = 0
+        save()
+      } else {
+        state.done = true
+        state.best = 100
+        save()
+        note('Done: the pre-build is complete')
+        await gentle()
+        return
+      }
     }
     if (!run.up) return
     if (wantsToBuild()) {
@@ -195,7 +253,7 @@ async function step() {
             await send(`dh config threading.numberOfThreads ${FAST}`)
           }
           if (run.priority !== 'BelowNormal') await priority('BelowNormal')
-          await send(START)
+          await send(startCommand())
         }
       } else {
         // The server can be too busy to answer for a few seconds; ask again until it confirms.
@@ -233,8 +291,11 @@ function duration(ms) {
 }
 function status() {
   const p = ours() ? run.progress : null
-  const percent = state.done ? 100 : Math.max(state.best, p ? p.percent : 0)
-  const total = Math.pow(2 * (p ? p.of : JOB.radius), 2)
+  const many = JOBS.length > 1
+  // This area's share, and with several areas the whole list's (areas count equally).
+  const area = state.done ? 100 : Math.max(state.best, p ? p.percent : 0)
+  const percent = state.done ? 100 : many ? ((state.index + area / 100) / JOBS.length) * 100 : area
+  const total = Math.pow(2 * (p ? p.of : job().radius), 2)
   let rate = null
   if (run.samples.length > 1) {
     const a = run.samples[0]
@@ -244,14 +305,20 @@ function status() {
   let key
   let text
   const players = [...run.players]
+  const where = many ? ` spot ${state.index + 1} of ${JOBS.length}${job().name ? `: ${job().name}` : ''}` : ''
   if (state.done) [key, text] = ['done', 'Done: everything is built']
   else if (!run.up) [key, text] = ['waiting', 'Waiting for the server to start']
   else if (state.paused) [key, text] = ['paused', run.pregen === 'running' ? 'Pausing…' : 'Paused by you']
   else if (players.length) [key, text] = ['paused', `Paused while ${players.join(', ')} ${players.length === 1 ? 'is' : 'are'} on the server`]
-  else if (run.pregen !== 'running') [key, text] = ['running', 'Starting…']
+  else if (run.pregen !== 'running') [key, text] = ['running', `Starting${where}…`]
   else if (catchingUp()) [key, text] = ['running', 'Catching up to where it stopped']
-  else [key, text] = ['running', 'Building']
+  else [key, text] = ['running', `Building${where}`]
   const building = key === 'running' && run.pregen === 'running' && !catchingUp()
+  // With several areas, time left comes from the average time an area has taken so far (overlapping areas go faster,
+  // so it tends to run long); with one, from the current speed.
+  let eta = null
+  if (many && state.index > 0 && !state.done) eta = duration((state.builtMs / (state.index + area / 100)) * (JOBS.length - state.index - area / 100))
+  else if (building && rate > 0) eta = duration((((100 - area) / 100) * total * 1000) / rate)
   return {
     key,
     text,
@@ -259,10 +326,14 @@ function status() {
     paused: state.paused,
     done: state.done,
     rate: building ? rate : null,
-    eta: building && rate > 0 ? duration((((100 - percent) / 100) * total * 1000) / rate) : null,
+    eta,
+    etaLabel: many && state.index === 0 ? 'left on this spot' : many ? 'left for all spots' : 'left at this speed',
     reach: p ? Math.round(p.radius * 16) : null,
+    reachLabel: many ? 'out from this spot' : 'built out so far',
     builtFor: duration(state.builtMs),
-    subtitle: `Everything within ${(JOB.radius * 16).toLocaleString('en-US')} blocks of ${JOB.x}, ${JOB.z} in ${DIMENSIONS[JOB.dim] || JOB.dim}`,
+    subtitle: many
+      ? `${JOBS.length} spots, ${(job().radius * 16).toLocaleString('en-US')} blocks around each`
+      : `Everything within ${(job().radius * 16).toLocaleString('en-US')} blocks of ${job().x}, ${job().z} in ${DIMENSIONS[job().dim] || job().dim}`,
     note: `Pauses by itself while anyone is on the server and carries on when they leave. While it builds it uses all ${FAST} threads with the server at below-normal priority, so your own programs come first. Keep the panel's window open.`,
     events: events.slice(0, 12),
   }
@@ -316,7 +387,7 @@ const PAGE = `<!doctype html>
   <div class="bar"><div class="fill" id="fill"></div><div class="pct" id="pct">0%</div></div>
   <div class="stats">
     <div class="stat"><b id="rate">–</b><span>chunks a second</span></div>
-    <div class="stat"><b id="eta">–</b><span>left at this speed</span></div>
+    <div class="stat"><b id="eta">–</b><span id="etaLabel">left at this speed</span></div>
     <div class="stat"><b id="reach">–</b><span id="reachLabel">built out so far</span></div>
   </div>
   <button id="button" disabled>Pause</button>
@@ -335,8 +406,9 @@ const PAGE = `<!doctype html>
     $('pct').textContent = s.percent.toFixed(1) + '%'
     $('rate').textContent = s.rate == null ? '–' : s.rate.toLocaleString('en-US')
     $('eta').textContent = s.eta || '–'
+    $('etaLabel').textContent = s.etaLabel
     $('reach').textContent = s.reach == null ? '–' : s.reach.toLocaleString('en-US') + ' blocks'
-    $('reachLabel').textContent = 'built out so far · ' + s.builtFor + ' building'
+    $('reachLabel').textContent = s.reachLabel + ' · ' + s.builtFor + ' building'
     $('button').textContent = s.paused ? 'Resume' : 'Pause'
     $('button').disabled = s.done
     $('note').textContent = s.note
@@ -413,9 +485,13 @@ server.listen(PORT, '127.0.0.1', () => {
     }, 4500)
   }
   step()
-  setInterval(step, 3000)
+  setInterval(step, 1000)
 })
+// Anything unexpected is noted and the panel carries on: it is what keeps the pre-build going.
+process.on('uncaughtException', (e) => note(`Error: ${e.message}`))
+process.on('unhandledRejection', (e) => note(`Error: ${e && e.message ? e.message : e}`))
 for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => {
   save()
+  if (sender) sender.kill()
   process.exit(0)
 })

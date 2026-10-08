@@ -1,9 +1,8 @@
-# Types ONE command + Enter into the LemurSaucePacket server's console window (the start.bat window), as an admin
+# Types a command + Enter into the LemurSaucePacket server's console window (the start.bat window), as an admin
 # would type it there. Used by panel.mjs. It never stops the server: "stop", "end" and "restart" are refused.
-# Prints "pid <n>: sent <k> events" on success.
-param([Parameter(Mandatory = $true)][string]$Command, [string]$ServerDir = 'C:\LemurSaucePacket-Server')
-$c = $Command.Trim()
-if ($c -eq '' -or $c -match '^/?(stop|end|restart)\b') { Write-Output "refused: '$Command'"; exit 2 }
+# One command: -Command "...", prints "pid <n>: sent <k> events". With -Serve it stays open and types each line it
+# reads on its input, answering each with one line (panel.mjs keeps one open: starting PowerShell takes a second or two).
+param([string]$Command = '', [string]$ServerDir = 'C:\LemurSaucePacket-Server', [switch]$Serve)
 $code = @'
 using System;
 using System.Runtime.InteropServices;
@@ -49,7 +48,25 @@ public static class LspConsole {
 }
 '@
 Add-Type -TypeDefinition $code
-# The server's java runs from its own folder (its command line is relative, so match the executable's path).
-$proc = Get-CimInstance Win32_Process -Filter "Name='java.exe'" | Where-Object { $_.ExecutablePath -and $_.ExecutablePath -like "$ServerDir\*" } | Select-Object -First 1
-if (-not $proc) { Write-Output "no server running from $ServerDir"; exit 1 }
-Write-Output ("pid {0}: {1}" -f $proc.ProcessId, [LspConsole]::Send([uint32]$proc.ProcessId, $c + "`r"))
+
+function Send-Line([string]$line) {
+  $c = $line.Trim()
+  if ($c -eq '' -or $c -match '^/?(stop|end|restart)\b') { return "refused: '$line'" }
+  # The server's java runs from its own folder (its command line is relative, so match the executable's path).
+  $proc = Get-CimInstance Win32_Process -Filter "Name='java.exe'" | Where-Object { $_.ExecutablePath -and $_.ExecutablePath -like "$ServerDir\*" } | Select-Object -First 1
+  if (-not $proc) { return "no server running from $ServerDir" }
+  return ("pid {0}: {1}" -f $proc.ProcessId, [LspConsole]::Send([uint32]$proc.ProcessId, $c + "`r"))
+}
+
+if ($Serve) {
+  $in = [Console]::In
+  while ($null -ne ($line = $in.ReadLine())) {
+    [Console]::Out.WriteLine((Send-Line $line))
+    [Console]::Out.Flush()
+  }
+  exit 0
+}
+$result = Send-Line $Command
+Write-Output $result
+if ($result -like 'refused*') { exit 2 }
+if ($result -like 'no server*') { exit 1 }
