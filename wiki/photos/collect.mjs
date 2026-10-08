@@ -26,7 +26,7 @@ const sharp = (await import('../../art/node_modules/sharp/lib/index.js')).defaul
 const KINDS = { b: 'biomes', c: 'creatures', s: 'structures' }
 
 let done = 0
-for (const file of readdirSync(shotsDir).filter((f) => /^atlas_[bcs]_.+\.png$/.test(f)).sort()) {
+for (const file of readdirSync(shotsDir).filter((f) => /^atlas_[bcs]_.+\.png$/.test(f) && !f.endsWith('_peek.png')).sort()) {
   const m = /^atlas_([bcs])_(.+)\.png$/.exec(file)
   const outDir = path.join(root, 'docs', 'images', 'atlas', KINDS[m[1]])
   const out = path.join(outDir, `${m[2]}.webp`)

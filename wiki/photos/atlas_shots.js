@@ -10,8 +10,10 @@
 
 const AT_SHOTS = /*SHOTS*/ [] /*END*/
 // arrive: ticks after landing before the viewpoint is chosen; settle: the least wait after moving the camera;
-// loaded: the share of chunks in reach that must be there before a shot (or `patience` ticks, whichever first).
-const AT_OPTS = /*OPTS*/ { arrive: 120, settle: 60, loaded: 0.97, patience: 900, timeout: 1200, locate: 3600 } /*END*/
+// loaded: the share of chunks in reach that must be there before a shot (or `patience` ticks, whichever first);
+// distant: ticks more for Distant Horizons to fill in the land past the render distance (open-air views only), and
+// peek: also a shot halfway through that wait (`<name>_peek`), to see how far it gets.
+const AT_OPTS = /*OPTS*/ { arrive: 120, settle: 60, loaded: 0.97, patience: 900, timeout: 1200, locate: 3600, distant: 0, peek: false } /*END*/
 // /locate looks 6400 blocks round where it's asked from: a rare biome not found from here is looked for again from these.
 const AT_ORIGINS = [
   [14000, 0],
@@ -373,6 +375,9 @@ ClientEvents.tick(() => {
         atSay(`${shot.id}: ${Math.round(share * 100)}% of the land in reach after ${t} ticks`)
       }
       if (t < atReadyAt + 60) return
+      let far = shot.how === 'surface' || shot.how === 'sea' ? AT_OPTS.distant : 0
+      if (far > 0 && AT_OPTS.peek && t === atReadyAt + 60 + Math.floor(far / 2)) atShoot(`${shot.name}_peek`)
+      if (t < atReadyAt + 60 + far) return
     }
     if (!atShoot(shot.name)) {
       atSince += 20

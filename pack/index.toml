@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "6a42c5951fc16ec2c9fd68c0ddae249ad4f1fafaf71e5881228cc5a272bb735f"
+hash = "ca1adc180ef388dcf171d5a1214209b012f7b9cacbd8f06d8811f4094dc2bedd"
 
 [[files]]
 file = "config/brassworksmissions-server.toml"

@@ -4,6 +4,10 @@
 // runs, joined to a scratch server as an op.
 //
 //   node wiki/photos/prepare.mjs --instance <headless>/instance [--kinds biomes,creatures] [--only id,id] [--missing]
+//                                [--distant <ticks>] [--peek]
+//
+// --distant gives Distant Horizons that much longer at each open-air biome shot (atlas-run.sh turns it up for the
+// session); --peek also shoots halfway through that wait, to judge how long it needs.
 //
 // --missing leaves out everything docs/images/atlas already has a picture of, so a second session only fills gaps.
 
@@ -54,9 +58,12 @@ if (kinds.includes('creatures')) {
 }
 
 const template = readFileSync(path.join(root, 'wiki', 'photos', 'atlas_shots.js'), 'utf8')
-const script = template.replace(/\/\*SHOTS\*\/[\s\S]*?\/\*END\*\//, `/*SHOTS*/ ${JSON.stringify(shots)} /*END*/`)
+const distant = Number(arg('distant', '0'))
+let script = template.replace(/\/\*SHOTS\*\/[\s\S]*?\/\*END\*\//, `/*SHOTS*/ ${JSON.stringify(shots)} /*END*/`)
+script = script.replace(/(\/\*OPTS\*\/[\s\S]*?)distant: \d+, peek: (true|false)/, `$1distant: ${distant}, peek: ${process.argv.includes('--peek')}`)
 const out = path.join(instance, 'kubejs', 'client_scripts', 'zz_atlas_shots.js')
 mkdirSync(path.dirname(out), { recursive: true })
 writeFileSync(out, script)
-const minutes = Math.round((shots.filter((s) => s.kind === 'biome').length * 22 + shots.filter((s) => s.kind === 'creature').length * 8) / 60)
+const open = shots.filter((s) => s.kind === 'biome' && (s.how === 'surface' || s.how === 'sea')).length
+const minutes = Math.round((shots.filter((s) => s.kind === 'biome').length * 22 + open * (distant / 20) + shots.filter((s) => s.kind === 'creature').length * 8) / 60)
 console.log(`prepare: ${shots.length} shots (${shots.filter((s) => s.kind === 'biome').length} biomes, ${shots.filter((s) => s.kind === 'creature').length} creatures) → ${out}, about ${minutes} minutes`)
