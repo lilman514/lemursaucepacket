@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.14.3: Far land builds faster",
+      "date": "2026-10-08",
+      "body": "The server builds the land beyond your render distance (Distant Horizons) with a lot less work: it was working out the same biomes over and over at the edge of every patch of land it built. It is also building all the land within 10,000 blocks of spawn ahead of time, so far land there shows up right away.",
+      "url": "https://play.limas.ca/wiki/faq"
+    },
+    {
       "title": "1.14.2: Photos for the wiki's atlas",
       "date": "2026-10-08",
       "body": "The wiki's atlas has photos now, taken in game: 207 of the pack's 227 biomes and all 119 creatures. Biomes nobody could find in the photo world, or that didn't photograph well, keep their painted cards for now. Distant Horizons is back on its own default way of building far land: 1.14.1's change didn't help and only made it slower to fill in.",

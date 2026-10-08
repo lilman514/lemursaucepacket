@@ -4306,8 +4306,8 @@ hash = "0d3683a8c533e1fb67bf0b1668089a322fc5f594f9610d441657378ab4f64383"
 metafile = true
 
 [[files]]
-file = "mods/lsp_fixes-1.15.0.jar"
-hash = "6a864424ef4e41fc3afb107b65db7d8109903dd07d83d072317e8749a25c4e32"
+file = "mods/lsp_fixes-1.15.1.jar"
+hash = "af39cc172df5d405dee1d010832beb6a1cadc2a6294db4434a18b64e357c6c26"
 
 [[files]]
 file = "mods/lsp_instances-1.1.0.jar"

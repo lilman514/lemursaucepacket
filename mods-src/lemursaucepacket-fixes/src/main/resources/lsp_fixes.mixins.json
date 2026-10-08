@@ -29,7 +29,8 @@
     "farmersdelight.CookingPotGateMixin",
     "sable.SableCarryFreeBlocksMixin",
     "create.DrillFreeBlockMixin",
-    "distanthorizons.ChunkyAccessorMixin"
+    "distanthorizons.ChunkyAccessorMixin",
+    "distanthorizons.GenRegionBiomeMixin"
   ],
   "client": [
     "CapeSkinMixin",
