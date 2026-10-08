@@ -63,6 +63,14 @@ NativeEvents.onEvent('net.neoforged.neoforge.client.event.ClientChatReceivedEven
 })
 
 const atGround = (x, z) => Client.level.getHeight(ATJ.Heightmap.MOTION_BLOCKING, Math.floor(x), Math.floor(z))
+/** Whether the top of a column is water (or another fluid): the heightmap stops at the surface of the sea. */
+const atWet = (x, g, z) => {
+  try {
+    return !Client.level.getFluidState(new BlockPos(Math.floor(x), g - 1, Math.floor(z))).isEmpty()
+  } catch (e) {
+    return false
+  }
+}
 const atLoaded = (x, z) => {
   try {
     return Client.level.getChunkSource().hasChunk(Math.floor(x) >> 4, Math.floor(z) >> 4)
@@ -120,6 +128,7 @@ const atTp = (dim, x, y, z, yaw, pitch) => atCmd(`execute in ${dim} run tp @s ${
 const atFrameLand = (shot, T, sea) => {
   let min = Client.level.getMinBuildHeight()
   let pts = []
+  let grid = []
   // A wide look round (the land in reach is loaded by now): /locate gives the biome's nearest edge, not its middle.
   for (let dx = -160; dx <= 160; dx += 10) {
     for (let dz = -160; dz <= 160; dz += 10) {
@@ -128,8 +137,16 @@ const atFrameLand = (shot, T, sea) => {
       if (!atLoaded(x, z)) continue
       let g = atGround(x, z)
       if (g <= min + 1) continue
-      if (atBiome(x, g - 1, z) === shot.id) pts.push([x, g, z])
+      let mine = atBiome(x, g - 1, z) === shot.id
+      let wet = atWet(x, g, z)
+      grid.push([x, g, z, mine, wet])
+      if (mine) pts.push([x, g, z, wet])
     }
+  }
+  // A land biome is framed round its land: a coastal strip or an island's middle can lie out at sea.
+  if (!sea) {
+    let dry = pts.filter((p) => !p[3])
+    if (dry.length >= 3) pts = dry
   }
   let M = [T[0], atGround(T[0], T[2]), T[2]]
   let spread = 24
@@ -147,9 +164,35 @@ const atFrameLand = (shot, T, sea) => {
     spread = sd / pts.length
   }
   let dist = Math.max(28, Math.min(64, spread * 1.3))
-  let C = [M[0] + dist, 0, M[2]]
+  // From whichever of eight sides sees the most of the biome's land and the least water (a sea biome is looked at
+  // from the east, as before: the sea is the subject).
+  let dir = [1, 0]
+  if (!sea) {
+    let bestScore = -1e9
+    for (let k = 0; k < 8; k++) {
+      let ux = Math.cos((k * Math.PI) / 4)
+      let uz = Math.sin((k * Math.PI) / 4)
+      let cx = M[0] + dist * ux
+      let cz = M[2] + dist * uz
+      let score = 0
+      grid.forEach((p) => {
+        let vx = p[0] - cx
+        let vz = p[2] - cz
+        let along = -(vx * ux + vz * uz)
+        if (along < 8 || along > 220) return
+        if (Math.abs(vx * uz - vz * ux) > along * 0.75) return
+        if (p[4]) score -= 1
+        else if (p[3]) score += 2
+      })
+      if (score > bestScore) {
+        bestScore = score
+        dir = [ux, uz]
+      }
+    }
+  }
+  let C = [M[0] + dist * dir[0], 0, M[2] + dist * dir[1]]
   // Look across the biome, at a point past its middle, rather than down at the ground in front.
-  let F = [M[0] - dist * 0.8, 0, M[2]]
+  let F = [M[0] - dist * 0.8 * dir[0], 0, M[2] - dist * 0.8 * dir[1]]
   let ty = sea ? 63 : Math.max(atGround(F[0], F[2]), min + 1)
   let near = -1e9
   for (let ox = -3; ox <= 3; ox += 3) for (let oz = -3; oz <= 3; oz += 3) near = Math.max(near, atGround(C[0] + ox, C[2] + oz))

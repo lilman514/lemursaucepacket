@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.14.2: Photos for the wiki's atlas",
+      "date": "2026-10-08",
+      "body": "The wiki's atlas has photos now, taken in game: 207 of the pack's 227 biomes and all 119 creatures. Biomes nobody could find in the photo world, or that didn't photograph well, keep their painted cards for now. Distant Horizons is back on its own default way of building far land: 1.14.1's change didn't help and only made it slower to fill in.",
+      "url": "https://play.limas.ca/wiki/biomes"
+    },
+    {
       "title": "1.14: A skills screen, the wiki in game, distant land and Climbing Boots",
       "date": "2026-10-07",
       "body": "ESC → Skills (or /skills) opens a skills screen of its own, like RuneScape's skills tab: every skill with its level and progress, your total level, combat level and total XP. Hover a skill for what trains it, what each level gives and what it unlocks next; click it, or a skill in the inventory's panel, for its guide: every level that unlocks something, down a track lit to your level, with the XP to the next unlock. The Guide button opens this wiki in a browser inside the game (it fetches its engine once, the first time the game starts). Distant Horizons draws the land beyond your render distance, 2,048 blocks out (Video Settings → Distant Horizons). Auto walk is on the ` key (walk backwards to stop). The HUD Layout editor resizes as well as moves: drag a box's corner, roll the wheel over it or press + and -. A new relic, the Climbing Boots, steps you up full blocks without jumping: Crafting 20 to make, Agility 25 to wear. A new world's capital now suits the land it's built in (sand in a desert, snow on snowy plains) and eases into the hills around it. ReForgedPlay (Replay Mod) is installed for making videos; it records nothing until you turn it on.",

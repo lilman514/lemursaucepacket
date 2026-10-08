@@ -13,11 +13,6 @@ _version = 5
 		enableAutoUpdater = false
 
 [common]
-	[common.worldGenerator]
-		# Real chunks only. Distant Horizons' quick surface pass gets Tectonic's and Terralith's terrain wrong, which
-		# left slabs of land floating above the horizon until the real chunks replaced them. (The server's setting is
-		# the one that counts in multiplayer.)
-		generatorPlan = "CHUNKS_ONLY"
 	[common.logging.warning]
 		# Chunky (the server's pre-generator), Replay Mod and the pack's garbage collector each set off a chat warning
 		# on every start otherwise.
