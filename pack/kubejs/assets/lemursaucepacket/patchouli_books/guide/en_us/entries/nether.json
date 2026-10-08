@@ -34,15 +34,15 @@
     {
       "type": "patchouli:text",
       "title": "Its structures",
-      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Bastion remnant$() - Vanilla - The Nether$(br)$(bold)Brass bastion$() - Create: Structures Arise - The Nether$(br)$(bold)Citadel$() - Friends & Foes - The Nether$(br)$(bold)Dark castle$() - Create: Structures Arise - The Nether$(br)$(bold)Dead lord's house$() - Create: Structures Arise - The Nether$(br)$(bold)Fortress$() - YUNG's Better Nether Fortresses - The Nether$(br)$(bold)Fortress Tower$() - Structory: Towers - The Nether$(br)$(bold)Hamlet$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether$() - Towers of the Wild - The Nether"
+      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Bastion remnant$() - Vanilla - Most of the Nether (7 of 9 biomes)$(br)$(bold)Brass bastion$() - Create: Structures Arise - Throughout the Nether$(br)$(bold)Citadel$() - Friends & Foes - Throughout the Nether$(br)$(bold)Dark castle$() - Create: Structures Arise - Throughout the Nether$(br)$(bold)Dead lord's house$() - Create: Structures Arise - Throughout the Nether$(br)$(bold)Fortress$() - YUNG's Better Nether Fortresses - Throughout the Nether$(br)$(bold)Fortress Tower$() - Structory: Towers - Throughout the Nether"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Nether Fossil$() - Vanilla - The Nether$(br)$(bold)Nether Keep$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether Port$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether skeleton camps$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether skeleton towers$() - Dungeons and Taverns - The Nether$(br)$(bold)Obsidian temple$() - Create: Structures Arise - The Nether$(br)$(bold)Piglin Camp$() - Dungeons and Taverns - The Nether$(br)$(bold)Piglin Donjon$() - Dungeons and Taverns - The Nether$(br)$(bold)Piglin Outstation$() - Dungeons and Taverns - The Nether"
+      "text": "$(bold)Hamlet$() - Dungeons and Taverns - Most of the Nether (7 of 9 biomes)$(br)$(bold)Nether Fossil$() - Vanilla - The Nether$(br)$(bold)Nether Keep$() - Dungeons and Taverns - Throughout the Nether$(br)$(bold)Nether Port$() - Dungeons and Taverns - Throughout the Nether$(br)$(bold)Nether skeleton camps$() - Dungeons and Taverns - Most of the Nether (6 of 9 biomes)$(br)$(bold)Nether skeleton towers$() - Dungeons and Taverns - Most of the Nether (6 of 9 biomes)$(br)$(bold)Nether tower$() - Towers of the Wild - Throughout the Nether$(br)$(bold)Obsidian temple$() - Create: Structures Arise - Throughout the Nether"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Piglin traveller camps$() - Piglin Proliferation - The Nether$(br)$(bold)Small Nether Dungeon$() - YUNG's Better Dungeons - The Nether$(br)$(bold)Strange Outpost$() - Structory: Towers - The Nether$(br)$(bold)Warped Outpost$() - Structory: Towers - The Nether"
+      "text": "$(bold)Piglin Camp$() - Dungeons and Taverns - Most of the Nether (7 of 9 biomes)$(br)$(bold)Piglin Donjon$() - Dungeons and Taverns - Most of the Nether (7 of 9 biomes)$(br)$(bold)Piglin Outstation$() - Dungeons and Taverns - Most of the Nether (7 of 9 biomes)$(br)$(bold)Piglin traveller camps$() - Piglin Proliferation - The Nether$(br)$(bold)Small Nether Dungeon$() - YUNG's Better Dungeons - Throughout the Nether$(br)$(bold)Strange Outpost$() - Structory: Towers - The Nether$(br)$(bold)Warped Outpost$() - Structory: Towers - The Nether"
     }
   ]
 }

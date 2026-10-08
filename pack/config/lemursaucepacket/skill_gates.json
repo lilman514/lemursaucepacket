@@ -37,6 +37,14 @@
     },
     {
       "skill": "crafting",
+      "level": 20,
+      "what": "Climbing Boots (a relic: step up full blocks)",
+      "items": [
+        "lsp_fixes:climbing_boots"
+      ]
+    },
+    {
+      "skill": "crafting",
       "level": 30,
       "what": "Diamond tools, weapons and armour",
       "items": [
@@ -444,6 +452,14 @@
       "items": [
         "createoreexcavation:netherite_drill"
       ]
+    }
+  ],
+  "wear": [
+    {
+      "item": "lsp_fixes:climbing_boots",
+      "skill": "agility",
+      "level": 25,
+      "what": "the Climbing Boots (a relic)"
     }
   ],
   "recipes": [

@@ -1,0 +1,13 @@
+name = "Aeronautics Replay"
+filename = "aeronautics_replay-1.0.4.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/KD2QrWTM/versions/tTmUhGBg/aeronautics_replay-1.0.4.jar"
+hash-format = "sha512"
+hash = "eae18610143541147a10d21813b33e0d5e409be2a14095f0716b69e37953657dbe50a63c8ebf38f3f5930e25224e5758e72458595ec3acf79d23093a00d32443"
+
+[update]
+[update.modrinth]
+mod-id = "KD2QrWTM"
+version = "tTmUhGBg"

@@ -2,21 +2,28 @@ package net.lemursaucepacket.fixes.hub;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import net.lemursaucepacket.fixes.zone.SafeZones;
 import net.minecraft.commands.arguments.blocks.BlockStateParser;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.QuartPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -28,22 +35,29 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnorePr
 import net.minecraft.world.level.levelgen.structure.templatesystem.JigsawReplacementProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.neoforged.neoforge.common.Tags;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Builds the capital from {@link HubPlan}, a little each server tick: picks a dry, flat site a short way from world
- * spawn (out of sight, a few minutes' walk), clear of the towns the world will generate (from the noise and the
- * structure sets, so nothing is generated for the search), loads the chunks, flattens the ground with a blended edge,
- * paves the streets, places every building, sets up the waystone and the lodestone the travellers' compass points
- * at, and makes the city a safe zone.
+ * spawn (out of sight, a few minutes' walk) in the kind of land a plains city belongs in, clear of the towns the world
+ * will generate (from the noise and the structure sets, so nothing is generated for the search), loads the chunks,
+ * reads what the land there is made of (sand, snow, podzol...) and lays the city out in that {@link CityStyle},
+ * levels the ground and eases it back into the land around (gently, unevenly, in the land's own ground), paves the
+ * streets, places every building, sets up the waystone and the lodestone the travellers' compass points at, and makes
+ * the city a safe zone.
  */
 public final class HubBuilder {
     static final Logger LOGGER = LoggerFactory.getLogger("lsp_fixes/hub");
     private static final long BUDGET_NANOS = 20_000_000L; // per tick (doubled while nobody is online)
     private static final int FLAGS = Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE;
 
-    enum Phase { FIND, LOAD, TERRAIN, PAVE, PLACE, BLOCKS, COMMANDS, FINISH, DONE, FAILED }
+    enum Phase { FIND, LOAD, SURVEY, TERRAIN, PAVE, PLACE, BLOCKS, COMMANDS, FINISH, DONE, FAILED }
+    /** The widest the slope from the city back to the land gets (where the land lies far above or below it). */
+    private static final int MAX_BLEND = 56;
+    /** What a site in the wrong kind of land (desert, snow, sea, jungle...) costs, all of it unsuited. */
+    private static final double UNSUITED = 90;
 
     private final MinecraftServer server;
     private final ServerLevel level;
@@ -57,6 +71,9 @@ public final class HubBuilder {
     private final List<long[]> forced = new ArrayList<>();
     private final BlockPos requested;
     private long started = System.currentTimeMillis();
+    private CityStyle style = CityStyle.PLAINS;
+    /** Where along the city's edge the slope back to the land is wider or narrower (so it isn't a neat ring). */
+    private final double[] edgePhase = {random.nextDouble() * 2 * Math.PI, random.nextDouble() * 2 * Math.PI, random.nextDouble() * 2 * Math.PI};
 
     /** @param at null to search near world spawn, or a fixed centre (the admin's /lsp hub build here). */
     HubBuilder(MinecraftServer server, HubPlan plan, BlockPos at) {
@@ -92,6 +109,7 @@ public final class HubBuilder {
                     case LOAD -> {
                         if (!loaded()) return false;
                     }
+                    case SURVEY -> survey();
                     case TERRAIN -> terrainStep();
                     case PAVE -> paveStep();
                     case PLACE -> placeStep();
@@ -116,7 +134,7 @@ public final class HubBuilder {
     // ---------------------------------------------------------------- site
 
     private int side() {
-        return 2 * (plan.flatRadius() + plan.blend()) + 1;
+        return 2 * (plan.flatRadius() + MAX_BLEND) + 1;
     }
 
     /** Search state: candidate centres for the current ring, and the best site so far. */
@@ -172,7 +190,7 @@ public final class HubBuilder {
         baseY = bestGround;
         LOGGER.info("City site: {} (score {}, ground y {})", centre.toShortString(), String.format("%.1f", bestScore), baseY);
         // Keep every chunk of the site loaded while we work.
-        int reach = plan.flatRadius() + plan.blend() + 16;
+        int reach = plan.flatRadius() + MAX_BLEND + 16;
         for (int cx = (centre.getX() - reach) >> 4; cx <= (centre.getX() + reach) >> 4; cx++)
             for (int cz = (centre.getZ() - reach) >> 4; cz <= (centre.getZ() + reach) >> 4; cz++) {
                 level.setChunkForced(cx, cz, true);
@@ -196,7 +214,10 @@ public final class HubBuilder {
     private void score(ChunkGenerator gen, RandomState rs, int sea, BlockPos spawn, int cx, int cz) {
         int half = plan.flatRadius();
         List<Integer> heights = new ArrayList<>();
+        List<Integer> levelAt = new ArrayList<>();
+        Climate.Sampler sampler = rs.sampler();
         int water = 0;
+        int unsuited = 0;
         int samples = 0;
         for (int i = -2; i <= 2; i++)
             for (int k = -2; k <= 2; k++) {
@@ -206,21 +227,38 @@ public final class HubBuilder {
                 int top = gen.getBaseHeight(x, z, Heightmap.Types.WORLD_SURFACE_WG, level, rs);
                 samples++;
                 if (top > floor + 1) water++;
+                if (!suits(gen.getBiomeSource().getNoiseBiome(QuartPos.fromBlock(x), QuartPos.fromBlock(floor), QuartPos.fromBlock(z), sampler))) unsuited++;
                 heights.add(floor);
+                // The city's level: the edge counts twice (the walls meet the land there), so a city on a rise
+                // isn't left standing on a plinth above the land around it.
+                levelAt.add(floor);
+                if (Math.abs(i) == 2 || Math.abs(k) == 2) levelAt.add(floor);
             }
-        heights.sort(Integer::compare);
         double mean = heights.stream().mapToInt(Integer::intValue).average().orElse(sea);
         double var = heights.stream().mapToDouble(h -> (h - mean) * (h - mean)).average().orElse(0);
-        int median = heights.get(heights.size() / 2);
+        levelAt.sort(Integer::compare);
+        int median = levelAt.get(levelAt.size() / 2);
         double wet = water / (double) samples;
         double away = Math.max(0, Math.hypot(cx - spawn.getX(), cz - spawn.getZ()) - plan.minDistance());
-        double score = Math.sqrt(var) + wet * 200 + (wet > 0.12 ? 500 : 0) + away / 64.0
+        double score = Math.sqrt(var) + wet * 200 + (wet > 0.12 ? 500 : 0) + away / 64.0 + UNSUITED * unsuited / samples
                 + (median < sea + 2 ? 60 : 0) + Math.max(0, median - sea - 30) + townPenalty(cx, cz);
         if (score < bestScore) {
             bestScore = score;
             bestSite = new BlockPos(cx, median, cz);
             bestGround = Math.max(median, sea + 2);
         }
+    }
+
+    /**
+     * Land a plains city belongs in: temperate and green, not desert or badlands, snow, sea or river, jungle, swamp or
+     * mushroom isle. (It can still end up elsewhere when nothing suits within reach; {@link #survey} then dresses it
+     * for the land it's in.)
+     */
+    static boolean suits(Holder<Biome> b) {
+        float t = b.value().getBaseTemperature();
+        if (t < 0.15f || t > 1.2f || !b.value().hasPrecipitation()) return false;
+        return !(b.is(BiomeTags.IS_OCEAN) || b.is(BiomeTags.IS_DEEP_OCEAN) || b.is(BiomeTags.IS_RIVER) || b.is(BiomeTags.IS_BEACH) || b.is(BiomeTags.IS_JUNGLE)
+                || b.is(Tags.Biomes.IS_SWAMP) || b.is(Tags.Biomes.IS_MUSHROOM) || b.is(Tags.Biomes.IS_DESERT) || b.is(Tags.Biomes.IS_SNOWY));
     }
 
     /**
@@ -245,9 +283,45 @@ public final class HubBuilder {
                 return false;
             }
         }
-        phase = Phase.TERRAIN;
+        phase = Phase.SURVEY;
         cursor = 0;
         return true;
+    }
+
+    /**
+     * What the land under the city is made of, from one column in six each way: sand, red sand, snow, mycelium, or
+     * grass in a taiga, swamp or jungle. The most common decides the {@link CityStyle} the city is laid out in.
+     */
+    private void survey() {
+        int r = plan.flatRadius();
+        Map<String, Integer> counts = new HashMap<>();
+        BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos();
+        for (int dx = -r; dx <= r; dx += 6)
+            for (int dz = -r; dz <= r; dz += 6) {
+                int x = centre.getX() + dx;
+                int z = centre.getZ() + dz;
+                int y = level.getHeight(Heightmap.Types.WORLD_SURFACE, x, z) - 1;
+                boolean snow = false;
+                while (y > level.getMinBuildHeight() && !ground(level.getBlockState(p.set(x, y, z)))) {
+                    if (level.getBlockState(p).is(Blocks.SNOW)) snow = true;
+                    y--;
+                }
+                BlockState s = level.getBlockState(p.set(x, y, z));
+                Holder<Biome> b = level.getBiome(p.set(x, y + 1, z));
+                String kind = snow || s.is(Blocks.SNOW_BLOCK) || s.is(Blocks.POWDER_SNOW) ? "snowy"
+                        : s.is(Blocks.RED_SAND) || s.is(BlockTags.TERRACOTTA) ? "badlands"
+                        : s.is(BlockTags.SAND) || s.is(Blocks.SANDSTONE) ? "desert"
+                        : s.is(Blocks.MYCELIUM) ? "mushroom"
+                        : s.is(Blocks.PODZOL) || b.is(BiomeTags.IS_TAIGA) ? "taiga"
+                        : s.is(Blocks.MUD) || b.is(Tags.Biomes.IS_SWAMP) ? "swamp"
+                        : b.is(BiomeTags.IS_JUNGLE) ? "jungle" : "plains";
+                counts.merge(kind, 1, Integer::sum);
+            }
+        String kind = counts.entrySet().stream().max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("plains");
+        style = CityStyle.of(kind);
+        LOGGER.info("The land under the city: {}; laying it out in the {} style", counts, style.label());
+        phase = Phase.TERRAIN;
+        cursor = 0;
     }
 
     // ---------------------------------------------------------------- terrain
@@ -257,7 +331,22 @@ public final class HubBuilder {
         return s.is(BlockTags.DIRT) || s.is(BlockTags.BASE_STONE_OVERWORLD) || s.is(BlockTags.SAND) || s.is(Blocks.GRAVEL) || s.is(BlockTags.TERRACOTTA) || s.is(Blocks.CLAY) || s.is(Blocks.SANDSTONE) || s.is(Blocks.SNOW_BLOCK) || s.is(Blocks.PACKED_ICE);
     }
 
-    /** One column: flat at baseY inside the city, easing back to the natural ground across the blend ring. */
+    /** A block the land is topped with (grass, sand, podzol, snow...), as opposed to bare rock. */
+    private static boolean topsoil(BlockState s) {
+        return s.is(BlockTags.DIRT) || s.is(BlockTags.SAND) || s.is(Blocks.GRAVEL) || s.is(BlockTags.TERRACOTTA) || s.is(Blocks.SNOW_BLOCK) || s.is(Blocks.CLAY) || s.is(Blocks.SANDSTONE) || s.is(Blocks.RED_SANDSTONE);
+    }
+
+    /** 0 to 1 round the city's edge, smooth: where the slope back to the land is narrower or wider. */
+    private double edge(double angle) {
+        return 0.5 + 0.25 * Math.sin(3 * angle + edgePhase[0]) + 0.15 * Math.sin(5 * angle + edgePhase[1]) + 0.1 * Math.sin(8 * angle + edgePhase[2]);
+    }
+
+    /**
+     * One column: flat at baseY inside the city, easing back to the land outside it. The way back is round at the
+     * corners, never steeper than about one block in three (so it reaches further where the land lies far above or
+     * below the city), and wider or narrower along the edge, and it is laid in the land's own ground, so the city
+     * sits in the land rather than on a plinth.
+     */
     private void terrainStep() {
         int side = side();
         if (cursor >= side * side) {
@@ -265,7 +354,7 @@ public final class HubBuilder {
             cursor = 0;
             return;
         }
-        int reach = plan.flatRadius() + plan.blend();
+        int reach = plan.flatRadius() + MAX_BLEND;
         int dx = cursor % side - reach;
         int dz = cursor / side - reach;
         cursor++;
@@ -276,30 +365,44 @@ public final class HubBuilder {
         int natural = top;
         BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(x, top, z);
         while (natural > level.getMinBuildHeight() && !ground(level.getBlockState(p.setY(natural)))) natural--;
-        int d = Math.max(Math.abs(dx), Math.abs(dz));
+        // How far outside the city's square this column is, measured round the corners (0 inside).
+        int ox = Math.max(0, Math.abs(dx) - plan.flatRadius());
+        int oz = Math.max(0, Math.abs(dz) - plan.flatRadius());
+        double d = Math.sqrt(ox * ox + oz * oz);
         int target;
-        if (d <= plan.flatRadius()) target = baseY;
+        if (d == 0) target = baseY;
         else {
-            double t = (d - plan.flatRadius()) / (double) plan.blend();
+            double width = Math.min(MAX_BLEND, Math.max(plan.blend(), Math.abs(natural - baseY) * 3.0)) * (0.75 + 0.5 * edge(Math.atan2(dz, dx)));
+            if (d >= width) return; // the land here is left as it is
+            double t = d / width;
             t = t * t * (3 - 2 * t);
             target = (int) Math.round(baseY + (natural - baseY) * t);
         }
-        // Inside the city, and wherever the blend lowers the ground, everything above the new surface goes. Where the
-        // blend keeps or raises it (natural ground at or under the new surface), trees and plants stay.
-        boolean clear = d <= plan.flatRadius() || natural > target;
+        // The ground this column is topped with carries on over its new surface (sand in a desert, grass in a
+        // meadow); inside the city, or where the land here is bare rock, the city's style decides.
+        BlockState naturalTop = level.getBlockState(p.setY(natural));
+        BlockState naturalUnder = level.getBlockState(p.setY(natural - 1));
+        boolean snowed = level.getBlockState(p.setY(natural + 1)).is(Blocks.SNOW);
+        BlockState surface = d > 0 && topsoil(naturalTop) ? naturalTop : style.cover();
+        BlockState under = d > 0 && topsoil(naturalUnder) ? naturalUnder : style.under();
+        // Inside the city, and wherever the slope lowers the ground, everything above the new surface goes. Where the
+        // slope keeps or raises it (natural ground at or under the new surface), trees and plants stay.
+        boolean clear = d == 0 || natural > target;
         if (clear)
             for (int y = Math.max(top, target + 1); y > target; y--) {
                 BlockState s = level.getBlockState(p.setY(y));
                 if (!s.isAir()) level.setBlock(p, Blocks.AIR.defaultBlockState(), FLAGS);
             }
         if (!clear && natural == target) return; // already the right height: leave its own ground and plants
-        // Fill down to real ground (rivers, ponds, dips), at most 24 blocks; grass on top, dirt, then stone.
-        level.setBlock(p.setY(target), Blocks.GRASS_BLOCK.defaultBlockState(), FLAGS);
+        // Fill down to real ground (rivers, ponds, dips), at most 24 blocks: the topsoil, its subsoil, then rock.
+        level.setBlock(p.setY(target), surface, FLAGS);
         for (int y = target - 1; y >= target - 24; y--) {
             BlockState s = level.getBlockState(p.setY(y));
             if (ground(s) && y < target - 3) break;
-            if (!ground(s)) level.setBlock(p, (y >= target - 3 ? Blocks.DIRT : Blocks.STONE).defaultBlockState(), FLAGS);
+            if (!ground(s)) level.setBlock(p, y >= target - 3 ? under : style.deep(), FLAGS);
         }
+        // Snow settles back where it lay (inside the city, the paving lays it).
+        if (d > 0 && snowed && level.getBlockState(p.setY(target + 1)).isAir()) level.setBlock(p, Blocks.SNOW.defaultBlockState(), FLAGS);
     }
 
     // ---------------------------------------------------------------- streets, buildings, single blocks
@@ -315,8 +418,14 @@ public final class HubBuilder {
             return;
         }
         HubPlan.Paving pv = plan.paving().get(cursor++);
+        // In the city's style: its grass becomes this land's ground, and snow lies on it where the land is snowy.
         List<BlockState> states = new ArrayList<>();
-        for (String s : pv.states()) states.add(parse(s));
+        List<Boolean> soil = new ArrayList<>();
+        for (String s : pv.states()) {
+            BlockState planned = parse(s);
+            states.add(style.swap(planned));
+            soil.add(style.ground(planned));
+        }
         int total = pv.weights().stream().mapToInt(Integer::intValue).sum();
         BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos();
         for (int x = Math.min(pv.x1(), pv.x2()); x <= Math.max(pv.x1(), pv.x2()); x++)
@@ -326,6 +435,11 @@ public final class HubBuilder {
                 while (roll >= pv.weights().get(i)) roll -= pv.weights().get(i++);
                 p.set(centre.getX() + x, baseY + pv.y(), centre.getZ() + z);
                 level.setBlock(p, states.get(i), FLAGS);
+                // Snow on the ground between the streets; none on the streets (a street paves over earlier snow).
+                BlockState above = level.getBlockState(p.move(0, 1, 0));
+                if (soil.get(i) && style.snow()) {
+                    if (above.isAir()) level.setBlock(p, Blocks.SNOW.defaultBlockState(), FLAGS);
+                } else if (above.is(Blocks.SNOW)) level.setBlock(p, Blocks.AIR.defaultBlockState(), FLAGS);
             }
     }
 
@@ -356,7 +470,7 @@ public final class HubBuilder {
             return;
         }
         HubPlan.Single b = plan.blocks().get(cursor++);
-        level.setBlock(new BlockPos(centre.getX() + b.x(), baseY + b.y(), centre.getZ() + b.z()), parse(b.state()), Block.UPDATE_ALL);
+        level.setBlock(new BlockPos(centre.getX() + b.x(), baseY + b.y(), centre.getZ() + b.z()), style.swap(parse(b.state())), Block.UPDATE_ALL);
     }
 
     /** One plan command (trees from vanilla features and the like), run as the server from the city's centre. */
@@ -365,10 +479,26 @@ public final class HubBuilder {
             phase = Phase.FINISH;
             return;
         }
-        String cmd = plan.commands().get(cursor++);
+        String cmd = trees(plan.commands().get(cursor++));
+        if (cmd.isEmpty()) return;
         net.minecraft.commands.CommandSourceStack source = server.createCommandSourceStack().withLevel(level)
                 .withPosition(net.minecraft.world.phys.Vec3.atBottomCenterOf(centre)).withPermission(4).withSuppressedOutput();
         server.getCommands().performPrefixedCommand(source, cmd);
+    }
+
+    /**
+     * A plan command in the city's style: "place feature minecraft:oak ..." plants this land's tree instead (a palm,
+     * a spruce...), or nothing. A tree this pack's mods don't have stays as planned.
+     */
+    private String trees(String cmd) {
+        if (!cmd.startsWith("place feature ")) return cmd;
+        String[] parts = cmd.split(" ", 4);
+        String swap = style.trees().get(parts[2]);
+        if (swap == null) return cmd;
+        if (swap.isEmpty()) return "";
+        ResourceLocation id = ResourceLocation.tryParse(swap);
+        if (id == null || !server.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).containsKey(id)) return cmd;
+        return "place feature " + swap + (parts.length > 3 ? " " + parts[3] : "");
     }
 
     // ---------------------------------------------------------------- finishing

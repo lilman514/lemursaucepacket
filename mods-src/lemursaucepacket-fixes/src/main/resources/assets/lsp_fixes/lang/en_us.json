@@ -3,5 +3,11 @@
   "key.lsp_fixes.hud_layout": "Edit HUD layout",
   "item.lsp_fixes.gold_coins": "Gold Coins",
   "item.lsp_fixes.coin_pouch": "Coin Pouch",
-  "item.lsp_fixes.masons_palette": "Mason's Palette"
+  "item.lsp_fixes.masons_palette": "Mason's Palette",
+  "item.lsp_fixes.climbing_boots": "Climbing Boots",
+  "relics.description.climbing_boots.description": "Fur-lined leather with steel crampons under the soles, made for the mountain roads. A ledge that would stop anyone else is just the next step.",
+  "relics.description.climbing_boots.ability.foothold": "Foothold",
+  "relics.description.climbing_boots.ability.foothold.description": "Steps the wearer up ledges up to %1$s blocks high without jumping. Each ledge stepped up gives %2$s%% more speed for two seconds.",
+  "relics.description.climbing_boots.ability.foothold.experience_source.climbing": "+1 experience point for each ledge stepped up",
+  "relics.description.climbing_boots.ability.foothold.statistic.ledges_climbed": "Ledges Stepped Up"
 }

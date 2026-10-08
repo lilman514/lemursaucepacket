@@ -1,5 +1,5 @@
 {
-	"dumped": "2026-10-07",
+	"dumped": "2026-10-08",
 	"minecraft": "1.21.1",
 	"neoforge": "21.1.252",
 	"modifiers": {
@@ -12,8 +12,10 @@
 		"lambdynlights": "LambDynamicLights",
 		"create_cyber_goggles": "Create: Cyber Goggles",
 		"modernfix": "ModernFix",
+		"replaymod": "Replay Mod",
 		"iris": "Iris",
 		"lsp_fixes": "LemurSaucePacket Fixes",
+		"duperautowalk": "Duper's AutoWalk",
 		"curios": "Curios API",
 		"pmmo": "Project MMO",
 		"dynamic_fps": "Dynamic FPS",
@@ -717,6 +719,204 @@
 			"ownerNamespace": "modernfix"
 		},
 		{
+			"name": "key.replaymod.playeroverview",
+			"title": "Player Overview",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.b",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.lighting",
+			"title": "Toggle Lighting",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.z",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.quickmode",
+			"title": "Quick Mode",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.q",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.settings",
+			"title": "ReplayMod Settings",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.unknown",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.marker",
+			"title": "Add Event Marker",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.m",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.thumbnail",
+			"title": "Capture Thumbnail",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.n",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.playpause",
+			"title": "Play/Pause Replay",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.p",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.rollclockwise",
+			"title": "Roll Clockwise",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.l",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.rollcounterclockwise",
+			"title": "Roll Counterclockwise",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.j",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.resettilt",
+			"title": "Reset Camera Tilt",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.k",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.pathpreview",
+			"title": "Toggle Path Preview",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.h",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.keyframerepository",
+			"title": "Open Keyframe Presets",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.x",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.clearkeyframes",
+			"title": "Clear Keyframes",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.c",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.synctimeline",
+			"title": "Synchronize Timeline",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.v",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.positionkeyframe",
+			"title": "Position/Spectator Keyframe",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.i",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.positiononlykeyframe",
+			"title": "Position Keyframe",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.unknown",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.timekeyframe",
+			"title": "Time Keyframe",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.o",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
+			"name": "key.replaymod.bothkeyframes",
+			"title": "Position/Spectator + Time Keyframe",
+			"category": "replaymod.title",
+			"categoryTitle": "Replay Mod",
+			"key": "key.keyboard.unknown",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "replaymod_lang",
+			"ownerNamespace": "replaymod"
+		},
+		{
 			"name": "iris.keybind.reload",
 			"title": "Reload Shaders",
 			"category": "iris.keybinds",
@@ -770,6 +970,28 @@
 			"context": "UNIVERSAL",
 			"owner": "mod/lsp_fixes",
 			"ownerNamespace": "lsp_fixes"
+		},
+		{
+			"name": "key.duperautowalk.autowalk",
+			"title": "Toggle Auto Walk",
+			"category": "key.category",
+			"categoryTitle": "key.category",
+			"key": "key.keyboard.z",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "mod/duperautowalk",
+			"ownerNamespace": "duperautowalk"
+		},
+		{
+			"name": "key.duperautowalk.config",
+			"title": "Open Configuration",
+			"category": "key.category",
+			"categoryTitle": "key.category",
+			"key": "key.keyboard.o",
+			"modifier": "NONE",
+			"context": "UNIVERSAL",
+			"owner": "mod/duperautowalk",
+			"ownerNamespace": "duperautowalk"
 		},
 		{
 			"name": "key.curios.open.desc",
@@ -2125,8 +2347,30 @@
 			"ownerNamespace": "sophisticatedbackpacks"
 		},
 		{
-			"name": "key.sophisticatedbackpacks.toggle_upgrade_5",
-			"title": "Switch Upgrade in the 5th Slot On/Off",
+			"name": "key.sophisticatedbackpacks.toggle_upgrade_1",
+			"title": "Switch Upgrade in the 1st Slot On/Off",
+			"category": "key.category.sophisticatedbackpacks.main",
+			"categoryTitle": "Sophisticated Backpacks",
+			"key": "key.keyboard.z",
+			"modifier": "ALT",
+			"context": "UNIVERSAL",
+			"owner": "mod/sophisticatedbackpacks",
+			"ownerNamespace": "sophisticatedbackpacks"
+		},
+		{
+			"name": "key.sophisticatedbackpacks.toggle_upgrade_2",
+			"title": "Switch Upgrade in the 2nd Slot On/Off",
+			"category": "key.category.sophisticatedbackpacks.main",
+			"categoryTitle": "Sophisticated Backpacks",
+			"key": "key.keyboard.x",
+			"modifier": "ALT",
+			"context": "UNIVERSAL",
+			"owner": "mod/sophisticatedbackpacks",
+			"ownerNamespace": "sophisticatedbackpacks"
+		},
+		{
+			"name": "key.sophisticatedbackpacks.toggle_upgrade_3",
+			"title": "Switch Upgrade in the 3rd Slot On/Off",
 			"category": "key.category.sophisticatedbackpacks.main",
 			"categoryTitle": "Sophisticated Backpacks",
 			"key": "key.keyboard.unknown",
@@ -2147,34 +2391,12 @@
 			"ownerNamespace": "sophisticatedbackpacks"
 		},
 		{
-			"name": "key.sophisticatedbackpacks.toggle_upgrade_3",
-			"title": "Switch Upgrade in the 3rd Slot On/Off",
+			"name": "key.sophisticatedbackpacks.toggle_upgrade_5",
+			"title": "Switch Upgrade in the 5th Slot On/Off",
 			"category": "key.category.sophisticatedbackpacks.main",
 			"categoryTitle": "Sophisticated Backpacks",
 			"key": "key.keyboard.unknown",
 			"modifier": "NONE",
-			"context": "UNIVERSAL",
-			"owner": "mod/sophisticatedbackpacks",
-			"ownerNamespace": "sophisticatedbackpacks"
-		},
-		{
-			"name": "key.sophisticatedbackpacks.toggle_upgrade_2",
-			"title": "Switch Upgrade in the 2nd Slot On/Off",
-			"category": "key.category.sophisticatedbackpacks.main",
-			"categoryTitle": "Sophisticated Backpacks",
-			"key": "key.keyboard.x",
-			"modifier": "ALT",
-			"context": "UNIVERSAL",
-			"owner": "mod/sophisticatedbackpacks",
-			"ownerNamespace": "sophisticatedbackpacks"
-		},
-		{
-			"name": "key.sophisticatedbackpacks.toggle_upgrade_1",
-			"title": "Switch Upgrade in the 1st Slot On/Off",
-			"category": "key.category.sophisticatedbackpacks.main",
-			"categoryTitle": "Sophisticated Backpacks",
-			"key": "key.keyboard.z",
-			"modifier": "ALT",
 			"context": "UNIVERSAL",
 			"owner": "mod/sophisticatedbackpacks",
 			"ownerNamespace": "sophisticatedbackpacks"

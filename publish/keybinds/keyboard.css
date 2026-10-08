@@ -4,7 +4,7 @@
    palette validator: worst touching pair 15.9 for normal vision, 6.9 for colour blindness). Groups that never touch
    share a hue family; the key's panel and the chips name every group, so colour is never the only cue. */
 .g-move{--g:#9085e9}.g-items{--g:#c2477a}.g-social{--g:#9a9a2a}.g-maps{--g:#008300}.g-quests{--g:#a855f7}
-.g-create{--g:#c98500}.g-recipes{--g:#d0607a}.g-screen{--g:#1a9fb0}.g-admin,.g-other{--g:#8a8178}
+.g-create{--g:#c98500}.g-recipes{--g:#d0607a}.g-screen{--g:#1a9fb0}.g-replay{--g:#5b7fd6}.g-admin,.g-other{--g:#8a8178}
 .kb-bar,.kb-help,.kb-info{display:none}.kb.is-live .kb-bar,.kb.is-live .kb-help,.kb.is-live .kb-info{display:block}
 .kb-say{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .kb-find{display:block;width:100%;max-width:420px;margin:0 0 10px;padding:8px 12px;border:1px solid var(--edge);border-radius:6px;background:#141210;color:var(--text);font:15px/1.4 'Segoe UI',system-ui,sans-serif}

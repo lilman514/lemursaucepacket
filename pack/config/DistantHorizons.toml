@@ -1,0 +1,32 @@
+# LemurSaucePacket: Distant Horizons as the pack ships it. Only what the pack changes is here; everything else is
+# Distant Horizons' own default (some, like its thread count, are worked out for each computer). Players can change
+# all of it in Video Settings > Distant Horizons. The server reads the [server] part.
+_version = 5
+
+[client]
+	[client.advanced.graphics.quality]
+		# 128 chunks (2,048 blocks) of distant land: half Distant Horizons' default, easier on most computers and on
+		# the server, which builds the land nobody has been to yet.
+		lodChunkRenderDistanceRadius = 128
+	[client.advanced.autoUpdater]
+		# The pack picks the version, which has to match the server's.
+		enableAutoUpdater = false
+
+[common]
+	[common.logging.warning]
+		# Chunky (the server's pre-generator), Replay Mod and the pack's garbage collector each set off a chat warning
+		# on every start otherwise.
+		showModCompatibilityWarningsOnStartup = false
+		showReplayWarningOnStartup = false
+		showGarbageCollectorWarning = false
+
+[server]
+	# The server runs on a home computer and connection: distant land is built and sent more gently than Distant
+	# Horizons' defaults (20 requests a second each, 4,096 chunks out, 500 KB/s a player with no overall cap).
+	generationRequestRateLimit = 10
+	maxGenerationRequestDistance = 256
+	realTimeUpdateDistanceRadiusInChunks = 128
+	maxSyncOnLoadRequestDistance = 256
+	playerBandwidthLimit = 250
+	globalBandwidthLimit = 1000
+	enableAdaptiveTransferSpeed = true

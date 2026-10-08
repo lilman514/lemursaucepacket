@@ -8,6 +8,7 @@ import harmonised.pmmo.config.Config;
 import harmonised.pmmo.config.codecs.SkillData;
 import harmonised.pmmo.core.Core;
 import harmonised.pmmo.storage.Experience;
+import net.lemursaucepacket.fixes.hud.HudConfig;
 import net.lemursaucepacket.fixes.hud.HudElement.Box;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -53,11 +54,11 @@ public final class SkillHud {
         return cached;
     }
 
-    static SkillData definition(String id) {
+    public static SkillData definition(String id) {
         return Config.skills().skills().getOrDefault(id, SkillData.Builder.getDefault());
     }
 
-    static Item icon(String id) {
+    public static Item icon(String id) {
         return switch (id) {
             case "attack" -> Items.IRON_SWORD;
             case "strength" -> Items.IRON_AXE;
@@ -83,7 +84,9 @@ public final class SkillHud {
 
     public static Box box(double x, double y, int sw, int sh) {
         int fullHeight = panelHeight();
-        float scale = Math.min(1F, Math.min(Math.max(1, sw - 4) / (float) WIDTH, Math.max(1, sh - 44) / (float) fullHeight));
+        // The size set in the HUD editor, shrunk if the panel wouldn't fit the screen.
+        float size = HudConfig.PMMO_SKILLS_SCALE.get().floatValue();
+        float scale = Math.min(size, Math.min(Math.max(1, sw - 4) / (float) WIDTH, Math.max(1, sh - 44) / (float) fullHeight));
         int w = (int) Math.ceil(WIDTH * scale), h = (int) Math.ceil(fullHeight * scale);
         return new Box(Math.clamp((int) (sw * x), 0, Math.max(0, sw - w)),
                 Math.clamp((int) (sh * y), 0, Math.max(0, sh - h)), w, h);

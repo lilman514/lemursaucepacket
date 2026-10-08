@@ -1,0 +1,15 @@
+type = custom_gui_screens
+
+custom_gui {
+  identifier = lsp_guide
+  title = LemurSaucePacket Guide
+  allow_esc = true
+  pause_game = false
+  popup_mode = false
+  popup_mode_background_overlay = true
+  transparent_world_background = false
+  transparent_world_background_overlay = true
+}
+
+overridden_screens {
+}

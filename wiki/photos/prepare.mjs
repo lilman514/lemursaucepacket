@@ -39,7 +39,7 @@ if (kinds.includes('biomes')) {
     if (!wanted('biomes', b.id)) continue
     const path_ = b.id.split(':')[1]
     const how = b.dimension === 'nether' ? 'nether' : b.dimension === 'end' ? 'end' : b.category === 'caves' ? 'cave' : b.category === 'oceans' && !/river|beach|shore|coast/.test(path_) ? 'sea' : 'surface'
-    shots.push({ kind: 'biome', id: b.id, name: `b_${key(b.id)}`, dim: DIMS[b.dimension], how, dark: how === 'cave', lift: b.category === 'mountains' ? 18 : b.category === 'plains' ? 8 : 10 })
+    shots.push({ kind: 'biome', id: b.id, name: `b_${key(b.id)}`, dim: DIMS[b.dimension], how, dark: how === 'cave', lift: b.category === 'mountains' || b.category === 'snowy' && /peak|slope|mountain/.test(path_) ? 18 : b.category === 'forests' || b.category === 'jungles' ? 14 : 10 })
   }
 }
 if (kinds.includes('creatures')) {

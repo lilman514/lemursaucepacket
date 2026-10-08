@@ -7,6 +7,26 @@
 // Levels are 1-99. "combat" is the combat level (lsp_fixes skills/CombatLevel): RuneScape's formula over Attack,
 // Strength, Defence, Hitpoints and Ranged, which tops out at 113 here (no Prayer or Magic).
 
+/** What trains each skill and what every level of it gives, for the in-game skill screens (and the wiki's table). */
+export const SKILL_INFO = {
+  attack: { trainedBy: 'Hitting things', perLevel: '+0.04 melee damage and +0.4% bow damage a level' },
+  strength: { trainedBy: 'Hitting things', perLevel: '+0.3% melee critical chance a level (1.5x damage)' },
+  defence: { trainedBy: 'Being hit while wearing armour', perLevel: '+0.02 armour a level' },
+  ranged: { trainedBy: 'Arrows, tridents and rockets', perLevel: '+0.3% ranged critical chance a level' },
+  hitpoints: { trainedBy: 'Any fight (slowly)', perLevel: '+0.2 max health a level: a heart every ten levels' },
+  mining: { trainedBy: 'Mining ores and stone', perLevel: 'Faster mining every level' },
+  woodcutting: { trainedBy: 'Chopping logs', perLevel: 'Faster chopping every level' },
+  farming: { trainedBy: 'Harvesting crops', perLevel: 'Faster tilling every level' },
+  fishing: { trainedBy: 'Catching fish', perLevel: 'Better catches as you go' },
+  cooking: { trainedBy: 'Cooking food', perLevel: 'New recipes as you go' },
+  smithing: { trainedBy: 'Smelting metals and smithing gear', perLevel: 'New recipes as you go' },
+  crafting: { trainedBy: 'Crafting', perLevel: 'New recipes as you go' },
+  enchanting: { trainedBy: 'The enchanting table', perLevel: 'Enchantments reach further as you go' },
+  brewing: { trainedBy: 'Brewing potions', perLevel: 'New potions as you go' },
+  construction: { trainedBy: 'Building', perLevel: '+0.1% chance a block you place is not used up, a level' },
+  agility: { trainedBy: 'Moving, sprinting and swimming', perLevel: '+0.01% speed and -0.5% fall damage a level (to 50%)' }
+}
+
 const pieces = (tier) => ['helmet', 'chestplate', 'leggings', 'boots'].map((p) => `minecraft:${tier}_${p}`)
 const tools = (tier) => ['sword', 'pickaxe', 'axe', 'shovel', 'hoe'].map((t) => `minecraft:${tier}_${t}`)
 const fd = (...ids) => ids.map((id) => `farmersdelight:${id}`)
@@ -15,12 +35,20 @@ const fd = (...ids) => ids.map((id) => `farmersdelight:${id}`)
  * Making things: the item a crafting grid, a smithing table or a cooking pot would hand you. Anything not listed is free.
  * Create's mechanical crafters have no player to ask, so they refuse what's listed here: you make those yourself.
  */
+/**
+ * The pack's own relics (lsp_fixes, for the Relics mod's slots): the level wearing each needs. As with armour,
+ * Project MMO slows anyone who wears one early, and the relic's ability waits for the level too. Making them is in
+ * CRAFT.
+ */
+export const RELIC_WEAR = [{ item: 'lsp_fixes:climbing_boots', skill: 'agility', level: 25, what: 'the Climbing Boots (a relic)' }]
+
 export const CRAFT = [
   // Crafting: leather, bows, the fine and magical things.
   { skill: 'crafting', level: 5, what: 'Leather armour', items: pieces('leather') },
   { skill: 'crafting', level: 10, what: 'Bows', items: ['minecraft:bow'] },
   { skill: 'crafting', level: 15, what: 'Shields', items: ['minecraft:shield'] },
   { skill: 'crafting', level: 20, what: 'Crossbows', items: ['minecraft:crossbow'] },
+  { skill: 'crafting', level: 20, what: 'Climbing Boots (a relic: step up full blocks)', items: ['lsp_fixes:climbing_boots'] },
   { skill: 'crafting', level: 30, what: 'Diamond tools, weapons and armour', items: [...tools('diamond'), ...pieces('diamond')] },
   { skill: 'crafting', level: 40, what: 'Enchanting tables', items: ['minecraft:enchanting_table'] },
   { skill: 'crafting', level: 50, what: 'Ender chests', items: ['minecraft:ender_chest'] },

@@ -29,6 +29,12 @@ public final class HudConfig {
     public static final ModConfigSpec.BooleanValue GOGGLES_VISIBLE;
     public static final ModConfigSpec.IntValue PMMO_SKILLS_VISIBLE;
     public static final ModConfigSpec.IntValue PMMO_GAINS_VISIBLE;
+    /** Sizes this mod applies itself (1 = the part's normal size). */
+    public static final ModConfigSpec.DoubleValue EFFECTS_SCALE;
+    public static final ModConfigSpec.DoubleValue BOSS_SCALE;
+    public static final ModConfigSpec.DoubleValue GOGGLES_SCALE;
+    public static final ModConfigSpec.DoubleValue PMMO_GAIN_SCALE;
+    public static final ModConfigSpec.DoubleValue PMMO_SKILLS_SCALE;
 
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
@@ -44,6 +50,13 @@ public final class HudConfig {
         EFFECTS_Y = b.comment("Status effect icons, pixels down from vanilla's place.").defineInRange("effectsY", 0, -10000, 10000);
         BOSS_BAR_X = b.comment("Boss bars, pixels right of the centre (negative: left).").defineInRange("bossBarX", 0, -10000, 10000);
         BOSS_BAR_Y = b.comment("Boss bars, pixels down from vanilla's place.").defineInRange("bossBarY", 0, -10000, 10000);
+        b.pop();
+        b.comment("Sizes of the parts this mod draws or scales itself (1 = normal). The others keep theirs in their own mod's config.").push("scale");
+        EFFECTS_SCALE = b.defineInRange("effects", 1.0, 0.5, 2.5);
+        BOSS_SCALE = b.defineInRange("bossBar", 1.0, 0.5, 2.5);
+        GOGGLES_SCALE = b.defineInRange("createGoggles", 1.0, 0.5, 2.5);
+        PMMO_GAIN_SCALE = b.defineInRange("pmmoGainList", 1.0, 0.5, 2.5);
+        PMMO_SKILLS_SCALE = b.defineInRange("pmmoSkillList", 1.0, 0.5, 2.5);
         b.pop();
         b.comment("Copies of positions saved into Project MMO's pmmo-client.toml, which the pack ships. If a pack update",
                 "replaces that file, these are written back when you join a world. -1 means the editor never moved it.").push("remember");

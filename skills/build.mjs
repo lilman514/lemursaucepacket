@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
 import {
   BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, PALETTE, PLANT, POTION_FORM_LEVEL, POTION_LEVEL,
-  QUEST_REQUIREMENTS, RANGED
+  QUEST_REQUIREMENTS, RANGED, RELIC_WEAR, SKILL_INFO
 } from './unlocks.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -119,6 +119,7 @@ requirements.push(
   ['mace', ['minecraft:mace'], { WEAPON: { attack: 50 }, WEAR: { attack: 50 } }, 'weakness'],
   ['turtle_helmet', ['minecraft:turtle_helmet'], { WEAR: { defence: 20 } }, 'slowness'],
   ['elytra', ['minecraft:elytra'], { WEAR: { agility: 30 } }, 'slowness'],
+  ...RELIC_WEAR.map(({ item, skill, level }) => [`relic_${item.split(':')[1]}`, [item], { WEAR: { [skill]: level } }, 'slowness']),
   ['copper_diving_gear', ['create:copper_diving_helmet', 'create:copper_backtank', 'create:copper_diving_boots'], { WEAR: { defence: 5 } }, 'slowness'],
   ['netherite_diving_gear', ['create:netherite_diving_helmet', 'create:netherite_backtank', 'create:netherite_diving_boots'], { WEAR: { defence: 50 } }, 'slowness']
 )
@@ -307,6 +308,7 @@ for (const r of CONSTRUCTION_RECIPES) {
 // treasure, recipes only a level may use, and Construction's XP, saving perk and palette.
 write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'), {
   craft: CRAFT.map(({ skill, level, what, items }) => ({ skill, level, what, items })),
+  wear: RELIC_WEAR,
   recipes: CONSTRUCTION_RECIPES.map(({ id, level, what }) => ({ id: `lemursaucepacket:construction/${id}`, skill: 'construction', level, what })),
   construction: {
     xp: CONSTRUCTION_XP.map(({ xp, what, match }) => ({ xp, what, match })),
@@ -329,6 +331,7 @@ write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'),
   fishingTreasure: FISHING_TREASURE
 })
 writeSkillGuide()
+writeGuideData()
 
 const fileCount = requirements.length + ITEM_XP.length + BLOCK_XP.length
 console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files), ${PLANT.length + CHOP.length} planting/chopping rules, ${CRAFT.length} making gates, ${BREW.length} brewing gates, ${CONSTRUCTION_RECIPES.length} Construction recipes, ${PALETTE.categories.length} palette categories; level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
@@ -376,4 +379,73 @@ function writeSkillGuide() {
   }
   lines.push('', END)
   writeFileSync(file, text.slice(0, a) + lines.join('\n') + text.slice(b + END.length))
+}
+
+// ---------------------------------------------------------------- the in-game skill guide
+
+/**
+ * pack/kubejs/assets/lemursaucepacket/skill_guide.json, for lsp_fixes' skill screens (ESC > Skills, or a skill in the
+ * inventory): every skill's unlocks by level, each with an item to show, from the same tables as the wiki's guide.
+ */
+function writeGuideData() {
+  const out = {}
+  const add = (skill, level, kind, title, icon) => (out[skill] ??= []).push({ level, kind, title, icon })
+  const tierName = (t) => (t === 'golden' ? 'gold' : t)
+  // Gear tiers (Project MMO's rules above): what you can wield, wear and use.
+  for (const [tier, level] of Object.entries(TIER)) {
+    if (level <= 1 || tier === 'chainmail') continue
+    add('attack', level, 'wield', `Wield ${tierName(tier)} swords and axes`, `minecraft:${tier}_sword`)
+    add('mining', level, 'use', `Mine with ${tierName(tier)} pickaxes and shovels`, `minecraft:${tier}_pickaxe`)
+    add('woodcutting', level, 'use', `Chop with ${tierName(tier)} axes`, `minecraft:${tier}_axe`)
+    add('farming', level, 'use', `Farm with ${tierName(tier)} hoes`, `minecraft:${tier}_hoe`)
+  }
+  for (const [tier, level] of Object.entries(ARMOR_TIER)) if (level > 1) add('defence', level, 'wear', `Wear ${tierName(tier)} armour`, `minecraft:${tier}_chestplate`)
+  add('attack', 50, 'wield', 'Wield the mace', 'minecraft:mace')
+  add('defence', 20, 'wear', 'Wear the turtle shell', 'minecraft:turtle_helmet')
+  add('defence', 5, 'wear', 'Wear copper diving gear', 'create:copper_diving_helmet')
+  add('defence', 50, 'wear', 'Wear netherite diving gear', 'create:netherite_diving_helmet')
+  add('agility', 30, 'wear', 'Wear the elytra', 'minecraft:elytra')
+  for (const r of RELIC_WEAR) add(r.skill, r.level, 'wear', `Wear ${r.what}`, r.item)
+  for (const r of RANGED) add('ranged', r.level, 'use', r.what, r.items[0])
+  // Making things, and Create's machines.
+  const itemOf = (id) => (id.startsWith('#') ? 'minecraft:coast_armor_trim_smithing_template' : id)
+  for (const c of CRAFT) add(c.skill, c.level, c.machine ? 'machine' : 'make', c.what, itemOf(c.items[0]))
+  // Growing, chopping, brewing, fishing.
+  const SEEDS = {
+    'minecraft:beetroots': 'minecraft:beetroot_seeds', 'farmersdelight:cabbages': 'farmersdelight:cabbage_seeds', 'farmersdelight:budding_tomatoes': 'farmersdelight:tomato_seeds',
+    'minecraft:pumpkin_stem': 'minecraft:pumpkin_seeds', 'farmersdelight:rice': 'farmersdelight:rice', 'minecraft:cocoa': 'minecraft:cocoa_beans', 'minecraft:nether_wart': 'minecraft:nether_wart',
+    'minecraft:torchflower_crop': 'minecraft:torchflower_seeds', 'minecraft:chorus_flower': 'minecraft:chorus_flower'
+  }
+  for (const p of PLANT) add('farming', p.level, 'plant', `Plant ${p.what.charAt(0).toLowerCase()}${p.what.slice(1)}`, SEEDS[p.blocks[0]] ?? p.blocks[0])
+  for (const c of CHOP) add('woodcutting', c.level, 'chop', `Chop ${c.what.charAt(0).toLowerCase()}${c.what.slice(1)}`, c.blocks[0])
+  for (const b of BREW) add('brewing', b.level, 'brew', b.what, b.item)
+  add('fishing', FISHING_TREASURE, 'catch', 'Land treasure: enchanted books and gear, name tags, saddles, nautilus shells', 'minecraft:nautilus_shell')
+  // Construction.
+  for (const r of CONSTRUCTION_RECIPES) add('construction', r.level, 'make', r.what, r.result)
+  add('construction', PALETTE.level, 'perk', "The Mason's Palette: as many of one decorative block as you like", 'lsp_fixes:masons_palette')
+  // The main quests' requirements ("attack|ranged": either), and every skill's cape at 99.
+  for (const [quest, reqs] of Object.entries(QUEST_REQUIREMENTS))
+    for (const [skills, level] of Object.entries(reqs))
+      for (const skill of skills.split('|')) if (SKILL_INFO[skill]) add(skill, level, 'quest', `${quest} (quest)`, 'ftbquests:book')
+  for (const skill of Object.keys(SKILL_INFO)) add(skill, 99, 'cape', `The ${skill.charAt(0).toUpperCase()}${skill.slice(1)} Cape`, `lemursaucepacket:${skill}_cape`)
+  // What the every-level gains add up to on the way (shown with the skill's own icon).
+  const pct = (x) => `${Math.round(x * 1000) / 10}%`
+  for (const L of [25, 50, 75, 99]) {
+    add('attack', L, 'perk', `+${(PER_LEVEL.attackDamage * L).toFixed(2)} melee damage and +${pct(PER_LEVEL.rangedDamage * L)} bow damage in all`, null)
+    add('strength', L, 'perk', `${pct(0.003 * L)} melee critical chance in all`, null)
+    add('defence', L, 'perk', `+${(PER_LEVEL.armor * L).toFixed(2)} armour in all`, null)
+    add('ranged', L, 'perk', `${pct(0.003 * L)} ranged critical chance in all`, null)
+    add('hitpoints', L, 'perk', `+${(PER_LEVEL.maxHealth * L).toFixed(1)} max health in all (${(PER_LEVEL.maxHealth * L / 2).toFixed(1)} hearts)`, null)
+    add('agility', L, 'perk', `+${pct(PER_LEVEL.moveSpeed * L * 10)} speed and ${pct(Math.min(0.5, PER_LEVEL.fallReduce * L))} less fall damage in all`, null)
+    for (const skill of ['mining', 'woodcutting', 'farming']) add(skill, L, 'perk', `+${pct(PER_LEVEL.dig * L)} ${skill === 'farming' ? 'tilling' : skill === 'mining' ? 'mining' : 'chopping'} speed in all`, null)
+    add('construction', L, 'perk', `${pct(CONSTRUCTION_SAVE_PER_LEVEL * L)} chance a placed block isn't used up`, null)
+  }
+  // The groups, as Project MMO's skill types (the skills screen's columns), each with its colour.
+  const groups = Object.entries(SKILLS).map(([id, members]) => ({ id, name: TYPE_NAMES[id], color: Object.values(members)[0][1], skills: Object.keys(members) }))
+  const skills = {}
+  for (const [skill, info] of Object.entries(SKILL_INFO)) skills[skill] = { ...info, unlocks: (out[skill] ?? []).sort((a, b) => a.level - b.level) }
+  const file = path.join(root, 'pack', 'kubejs', 'assets', 'lemursaucepacket', 'skill_guide.json')
+  mkdirSync(path.dirname(file), { recursive: true })
+  writeFileSync(file, JSON.stringify({ comment: 'Written by skills/build.mjs from skills/unlocks.mjs: do not edit by hand.', groups, skills }, null, 1) + '\n')
+  console.log(`skills: the in-game guide lists ${Object.values(skills).reduce((n, x) => n + x.unlocks.length, 0)} unlocks over ${Object.keys(skills).length} skills`)
 }

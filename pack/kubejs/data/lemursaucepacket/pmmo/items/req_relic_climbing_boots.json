@@ -1,0 +1,14 @@
+{
+  "override": false,
+  "isTagFor": [
+    "lsp_fixes:climbing_boots"
+  ],
+  "requirements": {
+    "WEAR": {
+      "agility": 25
+    }
+  },
+  "negative_effect": {
+    "minecraft:slowness": 2
+  }
+}

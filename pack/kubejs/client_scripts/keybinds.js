@@ -4,7 +4,7 @@
 // version this moves a key only if it's still on the default that clashes (e.g. Project MMO's glossary on P,
 // which is also Social Interactions): anything a player rebound themselves is left alone.
 // The ESC menu's buttons press some of these keys (config/fancymenu/customization/lemursaucepacket_pause.txt).
-const KEYBIND_RULES_VERSION = 3
+const KEYBIND_RULES_VERSION = 4
 const KEYBIND_RULES = [
   // [keybind, only if currently on, move to]
   // Iris (always installed since 1.2.6) opens its shader pack screen with O, which is the pack's mute key.
@@ -29,7 +29,12 @@ const KEYBIND_RULES = [
   ['key.voice_chat_group', 'key.keyboard.g', 'key.keyboard.unknown'], // G is Curios
   ['gui.xaero_enlarge_map', 'key.keyboard.z', 'key.keyboard.unknown'], // Z is zoom
   ['key.shouldersurfing.swap_shoulder', 'key.keyboard.u', 'key.keyboard.unknown'], // U is waypoints
-  ['key.shouldersurfing.free_look', 'key.keyboard.left.alt', 'key.keyboard.unknown']
+  ['key.shouldersurfing.free_look', 'key.keyboard.left.alt', 'key.keyboard.unknown'],
+  // Auto-walk (Duper's Auto Walk, 1.14.0) comes on Z, the zoom key, and its settings on O, the mute key. It takes `,
+  // where Project MMO's vein mine marker sat (vein mining is off in this pack); its settings are in the mods list.
+  ['key.pmmo.vein', 'key.keyboard.grave.accent', 'key.keyboard.unknown'],
+  ['key.duperautowalk.autowalk', 'key.keyboard.z', 'key.keyboard.grave.accent'],
+  ['key.duperautowalk.config', 'key.keyboard.o', 'key.keyboard.unknown']
 ]
 const KEYBIND_MARKER = 'config/lemursaucepacket/keybinds.json'
 

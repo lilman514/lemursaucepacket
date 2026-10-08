@@ -11,16 +11,16 @@
     {
       "type": "patchouli:text",
       "title": "Movement and actions",
-      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)W$() - Walk Forwards - Minecraft$(br)$(bold)A$() - Strafe Left - Minecraft$(br)$(bold)S$() - Walk Backwards - Minecraft$(br)$(bold)D$() - Strafe Right - Minecraft$(br)$(bold)Space$() - Jump - Minecraft$(br)$(bold)Left Shift$() - Sneak - Minecraft$(br)$(bold)Left Control$() - Sprint - Minecraft$(br)$(bold)Left Button$() - Attack/Destroy - Minecraft$(br)$(bold)Right Button$() - Use Item/Place Block - Minecraft$(br)$(bold)Middle Button$() - Pick Block - Minecraft$(br)$(bold)R$() - Dragon Breath (riding a dragon) - Ice And Fire Community Edition"
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)W$() - Walk Forwards - Minecraft$(br)$(bold)A$() - Strafe Left - Minecraft$(br)$(bold)S$() - Walk Backwards - Minecraft$(br)$(bold)D$() - Strafe Right - Minecraft$(br)$(bold)Space$() - Jump - Minecraft$(br)$(bold)Left Shift$() - Sneak - Minecraft$(br)$(bold)Left Control$() - Sprint - Minecraft$(br)$(bold)`$() - Toggle Auto Walk (press it again, or walk backwards, to stop) - Duper's AutoWalk$(br)$(bold)Left Button$() - Attack/Destroy - Minecraft$(br)$(bold)Right Button$() - Use Item/Place Block - Minecraft$(br)$(bold)Middle Button$() - Pick Block - Minecraft"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)G$() - Dragon Strike (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)X$() - Dragon Down (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)F7$() - Change 3rd person camera for dragon (riding a dragon) - Ice And Fire Community Edition"
+      "text": "$(bold)R$() - Dragon Breath (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)G$() - Dragon Strike (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)X$() - Dragon Down (riding a dragon) - Ice And Fire Community Edition$(br)$(bold)F7$() - Change 3rd person camera for dragon (riding a dragon) - Ice And Fire Community Edition"
     },
     {
       "type": "patchouli:text",
       "title": "Inventory and items",
-      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Q$() - Drop Selected Item - Minecraft$(br)$(bold)E$() - Open/Close Inventory (with your skills panel; also on the ESC menu) - Minecraft$(br)$(bold)F$() - Swap Item With Off Hand - Minecraft$(br)$(bold)1$() - Hotbar Slot 1 - Minecraft$(br)$(bold)2$() - Hotbar Slot 2 - Minecraft$(br)$(bold)3$() - Hotbar Slot 3 - Minecraft$(br)$(bold)4$() - Hotbar Slot 4 - Minecraft$(br)$(bold)5$() - Hotbar Slot 5 - Minecraft$(br)$(bold)6$() - Hotbar Slot 6 - Minecraft$(br)$(bold)7$() - Hotbar Slot 7 - Minecraft$(br)$(bold)8$() - Hotbar Slot 8 - Minecraft"
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)Q$() - Drop Selected Item - Minecraft$(br)$(bold)E$() - Open/Close Inventory (with your skills panel: click a skill for what every level unlocks) - Minecraft$(br)$(bold)F$() - Swap Item With Off Hand - Minecraft$(br)$(bold)1$() - Hotbar Slot 1 - Minecraft$(br)$(bold)2$() - Hotbar Slot 2 - Minecraft$(br)$(bold)3$() - Hotbar Slot 3 - Minecraft$(br)$(bold)4$() - Hotbar Slot 4 - Minecraft$(br)$(bold)5$() - Hotbar Slot 5 - Minecraft$(br)$(bold)6$() - Hotbar Slot 6 - Minecraft$(br)$(bold)7$() - Hotbar Slot 7 - Minecraft$(br)$(bold)8$() - Hotbar Slot 8 - Minecraft"
     },
     {
       "type": "patchouli:text",
@@ -28,7 +28,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)[$() - Transfer to Storage (in menus) - Sophisticated Core$(br)$(bold)]$() - Transfer to Inventory (in menus) - Sophisticated Core$(br)$(bold)Middle Button$() - Sort Storage/Backpack (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)ALT + X$() - Switch Upgrade in the 2nd Slot On/Off - Sophisticated Backpacks$(br)$(bold)ALT + Z$() - Switch Upgrade in the 1st Slot On/Off - Sophisticated Backpacks$(br)$(bold)CTRL + Left Button$() - Transfer one (in menus) - Inventory Essentials$(br)$(bold)SHIFT + Left Button$() - Bulk Drop out of Screen (in menus) - Inventory Essentials"
+      "text": "$(bold)[$() - Transfer to Storage (in menus) - Sophisticated Core$(br)$(bold)]$() - Transfer to Inventory (in menus) - Sophisticated Core$(br)$(bold)Middle Button$() - Sort Storage/Backpack (in a backpack or storage screen) - Sophisticated Core$(br)$(bold)ALT + Z$() - Switch Upgrade in the 1st Slot On/Off - Sophisticated Backpacks$(br)$(bold)ALT + X$() - Switch Upgrade in the 2nd Slot On/Off - Sophisticated Backpacks$(br)$(bold)CTRL + Left Button$() - Transfer one (in menus) - Inventory Essentials$(br)$(bold)SHIFT + Left Button$() - Bulk Drop out of Screen (in menus) - Inventory Essentials"
     },
     {
       "type": "patchouli:text",
@@ -43,15 +43,15 @@
     {
       "type": "patchouli:text",
       "title": "Quests and skills",
-      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)L$() - Advancements - Minecraft$(br)$(bold)`$() - Vein Mine Marker (vein mining is off on this server) - Project MMO$(br)$(bold)-$() - Toggle Break Speed Perks - Project MMO$(br)$(bold)H$() - Open Missions UI (this week's missions; also on the ESC menu) - Create Brassworks Missions$(br)$(bold)=$() - Zoom In (in the quest book) - FTB Quests$(br)$(bold)-$() - Zoom Out (in the quest book) - FTB Quests$(br)$(bold)0$() - Reset Zoom (in the quest book) - FTB Quests$(br)$(bold)Tab$() - Next Chapter (in the quest book) - FTB Quests"
+      "text": "$(#b9a98a)Key - Action - Mod$()$(br)$(bold)L$() - Advancements - Minecraft$(br)$(bold)-$() - Toggle Break Speed Perks - Project MMO$(br)$(bold)H$() - Open Missions UI (this week's missions; also on the ESC menu) - Create Brassworks Missions$(br)$(bold)=$() - Zoom In (in the quest book) - FTB Quests$(br)$(bold)-$() - Zoom Out (in the quest book) - FTB Quests$(br)$(bold)0$() - Reset Zoom (in the quest book) - FTB Quests$(br)$(bold)Tab$() - Next Chapter (in the quest book) - FTB Quests$(br)$(bold)Space$() - Recenter GUI (in the quest book) - FTB Quests"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Space$() - Recenter GUI (in the quest book) - FTB Quests$(br)$(bold)F1$() - See Extended Quest Info (in the quest book) - FTB Quests$(br)$(bold)Up Arrow$() - Move Selection / Scroll Up (in the quest book) - FTB Quests$(br)$(bold)Down Arrow$() - Move Selection / Scroll Down (in the quest book) - FTB Quests$(br)$(bold)Left Arrow$() - Move Selection / Scroll Left (in the quest book) - FTB Quests$(br)$(bold)Right Arrow$() - Move Selection / Scroll Right (in the quest book) - FTB Quests$(br)$(bold)SHIFT + Tab$() - Previous Chapter (in the quest book) - FTB Quests"
+      "text": "$(bold)F1$() - See Extended Quest Info (in the quest book) - FTB Quests$(br)$(bold)Up Arrow$() - Move Selection / Scroll Up (in the quest book) - FTB Quests$(br)$(bold)Down Arrow$() - Move Selection / Scroll Down (in the quest book) - FTB Quests$(br)$(bold)Left Arrow$() - Move Selection / Scroll Left (in the quest book) - FTB Quests$(br)$(bold)Right Arrow$() - Move Selection / Scroll Right (in the quest book) - FTB Quests$(br)$(bold)SHIFT + Tab$() - Previous Chapter (in the quest book) - FTB Quests$(br)$(bold)CTRL + F$() - Search (in the quest book) - FTB Quests"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)CTRL + F$() - Search (in the quest book) - FTB Quests$(br)$(bold)CTRL + P$() - Player Preferences (in the quest book) - FTB Quests"
+      "text": "$(bold)CTRL + P$() - Player Preferences (in the quest book) - FTB Quests"
     },
     {
       "type": "patchouli:text",
@@ -95,6 +95,19 @@
     {
       "type": "patchouli:text",
       "text": "$(bold)Page Down$() - Adjust Camera Down (in the over-the-shoulder view) - Shoulder Surfing Reloaded"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Replays",
+      "text": "ReForgedPlay's keys only work in the replay viewer (Replay Viewer, on the title screen), so they share keys with everyday ones.$(br2)$(#b9a98a)Key - Action - Mod$()$(br)$(bold)B$() - Player Overview (in the replay viewer) - Replay Mod$(br)$(bold)Z$() - Toggle Lighting (in the replay viewer) - Replay Mod$(br)$(bold)Q$() - Quick Mode (in the replay viewer) - Replay Mod$(br)$(bold)M$() - Add Event Marker (in the replay viewer) - Replay Mod$(br)$(bold)N$() - Capture Thumbnail (in the replay viewer) - Replay Mod$(br)$(bold)P$() - Play/Pause Replay (in the replay viewer) - Replay Mod"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)L$() - Roll Clockwise (in the replay viewer) - Replay Mod$(br)$(bold)J$() - Roll Counterclockwise (in the replay viewer) - Replay Mod$(br)$(bold)K$() - Reset Camera Tilt (in the replay viewer) - Replay Mod$(br)$(bold)H$() - Toggle Path Preview (in the replay viewer) - Replay Mod$(br)$(bold)X$() - Open Keyframe Presets (in the replay viewer) - Replay Mod$(br)$(bold)C$() - Clear Keyframes (in the replay viewer) - Replay Mod$(br)$(bold)V$() - Synchronize Timeline (in the replay viewer) - Replay Mod$(br)$(bold)I$() - Position/Spectator Keyframe (in the replay viewer) - Replay Mod"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)O$() - Time Keyframe (in the replay viewer) - Replay Mod"
     },
     {
       "type": "patchouli:text",

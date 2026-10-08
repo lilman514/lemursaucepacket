@@ -29,11 +29,15 @@
     {
       "type": "patchouli:text",
       "title": "HUD Layout",
-      "text": "Moves the parts of your screen that other mods draw. The game stays visible behind a light shade, with a brass box over each part:$(br2)$(li)the minimap$(br)$(li)Jade (the block and mob info at the top)$(br)$(li)the voice chat icon and the voice group heads$(br)$(li)Create's goggle info$(br)$(li)Project MMO's XP gains and skill list$(br)$(li)pinned quests$(br)$(li)status effects and boss bars"
+      "text": "Moves and resizes the parts of your screen that other mods draw. The game stays visible behind a light shade, with a brass box over each part:$(br2)$(li)the minimap$(br)$(li)Jade (the block and mob info at the top)$(br)$(li)the voice chat icon and the voice group heads$(br)$(li)Create's goggle info$(br)$(li)Project MMO's XP gains and skill list$(br)$(li)pinned quests$(br)$(li)status effects and boss bars"
     },
     {
       "type": "patchouli:text",
-      "text": "Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shift to place one freely. Arrow keys nudge the box you clicked. Right-click a box, or click it and press $(bold)Reset$(), to put it back where its mod puts it; $(bold)Reset all$() does every box. $(bold)Save$() applies the new layout at once, $(bold)Cancel$() (or Esc) leaves everything as it was.$(br2)Pinned quests can only sit at an edge or a corner, so that box jumps to the nearest one when you let go. A box marked \"(off)\" belongs to something that's switched off in its mod; you can still move it."
+      "text": "Drag a box to move it. Boxes snap to the screen edges and centre lines; hold Shift to place one freely. Arrow keys nudge the box you clicked. Right-click a box, or click it and press $(bold)Reset$(), to put it back where its mod puts it; $(bold)Reset all$() does every box. $(bold)Save$() applies the new layout at once, $(bold)Cancel$() (or Esc) leaves everything as it was."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "To resize a box, drag its corner handle, roll the mouse wheel over it, or click it and press $(bold)+$() or $(bold)-$(): from half its mod's size to two and a half times it, in 5% steps (Jade to twice). Its tooltip shows the size. The minimap keeps its own size setting (Xaero's UI scale, in its settings).$(br2)Pinned quests can only sit at an edge or a corner, so that box jumps to the nearest one when you let go. A box marked \"(off)\" belongs to something that's switched off in its mod; you can still move it."
     },
     {
       "type": "patchouli:text",
@@ -42,7 +46,11 @@
     {
       "type": "patchouli:text",
       "title": "Player (right)",
-      "text": "Your character as you look right now, then:$(br2)$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Skills$() - Your inventory, whose skills panel lists every skill and level - E$(br)$(bold)Backpack$() - The backpack you're wearing - B$(br)$(bold)Team$() - FTB Teams: invite friends, share quest progress - ;$(br)$(bold)Voice$() - Voice chat settings, groups and your microphone - V$(br)$(bold)Guide$() - This wiki as an in-game book - $(#e0ac46)/guide$()"
+      "text": "Your character as you look right now, then:$(br2)$(#b9a98a)Button - Opens - Key$()$(br)$(bold)Skills$() - Every skill and your level: hover one for what trains it and what it unlocks next, click it for what every level unlocks ($(l:lemursaucepacket:skills)more$(/l)) - $(#e0ac46)/skills$()$(br)$(bold)Backpack$() - The backpack you're wearing - B$(br)$(bold)Team$() - FTB Teams: invite friends, share quest progress - ;$(br)$(bold)Voice$() - Voice chat settings, groups and your microphone - V"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Guide$() - This wiki, in a browser inside the game; $(bold)Open in browser$() opens it in yours - $(#e0ac46)/guide$() (the book)"
     }
   ]
 }

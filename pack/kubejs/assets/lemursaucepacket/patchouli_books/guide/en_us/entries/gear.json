@@ -68,7 +68,20 @@
     {
       "type": "patchouli:text",
       "title": "Loot-only gear",
-      "text": "Some pieces never have a recipe:$(br2)$(li)$(bold)Ember Crown$(): 12% per chest in nether bridge, bastion treasure.$(br)$(li)$(bold)Stormcaller's Sabre$(): 6% per chest in pillager outpost, dungeons_arise structures.$(br)$(li)$(bold)Duelist's Pattern$(): 25% per chest in dungeons_arise structures, stronghold library, ancient city.$(br2)Generated from $(#e0ac46)gear/gear.mjs$(), so this page matches the game."
+      "text": "Some pieces never have a recipe:$(br2)$(li)$(bold)Ember Crown$(): 12% per chest in nether bridge, bastion treasure.$(br)$(li)$(bold)Stormcaller's Sabre$(): 6% per chest in pillager outpost, dungeons_arise structures.$(br)$(li)$(bold)Duelist's Pattern$(): 25% per chest in dungeons_arise structures, stronghold library, ancient city."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Relics",
+      "text": "The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with $(bold)G$()). Shift over one in a menu for its page: its abilities, which you unlock there with a few clicks, how it gains experience, and what its levels raise. The pack makes one of its own:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Climbing Boots$() (feet slot): step up full blocks without jumping, and each ledge stepped up gives a moment of extra speed. Made at a crafting table from leather boots, two string, two flint and two iron ingots at Crafting 20; wearing them needs Agility 25 (before that they do nothing, and Project MMO slows you as it does for armour you aren't ready for). Their ability, Foothold, starts at 1.05 to 1.1 blocks; the relic levels from the ledges it climbs, and its points raise the step to 1.25 blocks and the speed from about 5% to 20%."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Generated from $(#e0ac46)gear/gear.mjs$(), so this page matches the game."
     }
   ]
 }

@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.14: A skills screen, the wiki in game, distant land and Climbing Boots",
+      "date": "2026-10-07",
+      "body": "ESC → Skills (or /skills) opens a skills screen of its own, like RuneScape's skills tab: every skill with its level and progress, your total level, combat level and total XP. Hover a skill for what trains it, what each level gives and what it unlocks next; click it, or a skill in the inventory's panel, for its guide: every level that unlocks something, down a track lit to your level, with the XP to the next unlock. The Guide button opens this wiki in a browser inside the game (it fetches its engine once, the first time the game starts). Distant Horizons draws the land beyond your render distance, 2,048 blocks out (Video Settings → Distant Horizons). Auto walk is on the ` key (walk backwards to stop). The HUD Layout editor resizes as well as moves: drag a box's corner, roll the wheel over it or press + and -. A new relic, the Climbing Boots, steps you up full blocks without jumping: Crafting 20 to make, Agility 25 to wear. A new world's capital now suits the land it's built in (sand in a desert, snow on snowy plains) and eases into the hills around it. ReForgedPlay (Replay Mod) is installed for making videos; it records nothing until you turn it on.",
+      "url": "https://play.limas.ca/wiki/skills"
+    },
+    {
       "title": "1.13: Hiscores, and Create's machines join the skills",
       "date": "2026-10-07",
       "body": "The hiscores: /hiscores ranks everyone on the server RuneScape-style, by every skill, total and combat level, quest points, capes, the collection log, monsters slain, bosses (Elvarg, Kiln-Tok-Jad, Kiln-Kal-Zuk, the Ender Dragon, the Wither, the Warden and more) and collections (music discs, armour trims, pottery sherds, relics, mob heads). /hiscores player <name> shows anyone's. Create's machines now wait on the skill they take over: Mining 15 for mechanical drills, Woodcutting 15 for saws, Farming 15 for harvesters and ploughs, Cooking 20 for encased fans, Crafting 30 for mechanical crafters, Construction 30 for the schematicannon, Smithing 35 for steam engines, Agility 35 for train stations and controls, Enchanting 35 for the blaze enchanter and 50 for the printer, and Mining 50 and up for the ore vein drill heads. Anyone can use a machine someone else made. Construction's saving perk now only ever saves building blocks: never storage blocks, copper, coin stacks or anything that holds items.",

@@ -1,0 +1,80 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = lsp_guide
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1790000000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+element {
+  element_type = browser
+  instance_identifier = lsp_guide_browser_1
+  url = https://lilman514.github.io/lemursaucepacket/wiki/index.html?ingame=1
+  interactable = true
+  hide_video_controls = false
+  loop_videos = false
+  mute_media = false
+  anchor_point = top-left
+  x = 0
+  y = 0
+  width = 400
+  height = 240
+  stretch_x = true
+  stretch_y = true
+  stay_on_screen = false
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lsp_guide_close_2
+  anchor_point = top-right
+  x = -46
+  y = 3
+  width = 42
+  height = 16
+  label = Close
+  description = Back to the game (Esc)
+  buttonaction = closegui%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = lsp_guide_browser_button_3
+  anchor_point = top-right
+  x = -136
+  y = 3
+  width = 86
+  height = 16
+  label = Open in browser
+  description = The wiki in your own web browser
+  buttonaction = openlink;https://lilman514.github.io/lemursaucepacket/wiki/%btnaction_splitter_fm%
+  stay_on_screen = true
+}
+
+element {
+  element_type = cursor
+  instance_identifier = lsp_guide_cursor_4
+  source = [source:local]/config/fancymenu/assets/lemursaucepacket/ui/cursor.png
+  hotspot_x = 0
+  hotspot_y = 0
+  editor_preview_mode = false
+  anchor_point = top-left
+  x = 0
+  y = 0
+  width = 400
+  height = 240
+  stretch_x = true
+  stretch_y = true
+  stay_on_screen = false
+}

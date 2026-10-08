@@ -71,10 +71,14 @@ final class HudPreview {
                 text(g, "Build a Water Wheel", 19, 36, 0xFFDDDDDD);
             }
             case "effects" -> {
+                // Vanilla's 25-pixel icons, at the box's size.
+                float s = b.h() / 50F;
+                g.pose().scale(s, s, 1);
+                int w = Math.round(b.w() / s);
                 var textures = Minecraft.getInstance().getMobEffectTextures();
                 var effects = java.util.List.of(MobEffects.MOVEMENT_SPEED, MobEffects.DIG_SPEED, MobEffects.WEAKNESS);
                 for (int i = 0; i < effects.size(); i++) {
-                    int x = b.w() - (i == 2 ? 25 : (i + 1) * 25), y = i == 2 ? 26 : 0;
+                    int x = w - (i == 2 ? 25 : (i + 1) * 25), y = i == 2 ? 26 : 0;
                     g.fill(x, y, x + 24, y + 24, 0xB0404040);
                     g.renderOutline(x, y, 24, 24, 0xFF909090);
                     g.blit(x + 3, y + 3, 0, 18, 18, textures.get(effects.get(i)));

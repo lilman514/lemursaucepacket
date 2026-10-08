@@ -9,7 +9,14 @@
 // Rhino (KubeJS 2101): only top-level `const`; `let` everywhere else.
 
 const AT_SHOTS = /*SHOTS*/ [] /*END*/
-const AT_OPTS = /*OPTS*/ { arrive: 160, settle: 110, timeout: 600 } /*END*/
+// arrive: ticks after landing before the viewpoint is chosen; settle: the least wait after moving the camera;
+// loaded: the share of chunks in reach that must be there before a shot (or `patience` ticks, whichever first).
+const AT_OPTS = /*OPTS*/ { arrive: 120, settle: 60, loaded: 0.97, patience: 900, timeout: 1200, locate: 3600 } /*END*/
+// /locate looks 6400 blocks round where it's asked from: a rare biome not found from here is looked for again from these.
+const AT_ORIGINS = [
+  [14000, 0],
+  [-14000, 0]
+]
 
 const ATJ = {
   Screenshot: Java.loadClass('net.minecraft.client.Screenshot'),
@@ -36,15 +43,18 @@ const atPhaseTo = (p) => {
   atSince = atTicks
 }
 
-// /locate answers in chat: "The nearest X is at [x, y, z] (n blocks away)", or "Could not find ...".
+// /locate answers in chat: "The nearest <id> is at [x, y, z] (n blocks away)", or 'Could not find a biome of type
+// "<id>" ...'. Only an answer naming this shot's biome counts: a slow search can answer during the next shot.
 NativeEvents.onEvent('net.neoforged.neoforge.client.event.ClientChatReceivedEvent$System', (e) => {
   if (atPhase !== 'locating') return
+  let shot = AT_SHOTS[atIndex]
   let s = ''
   try {
     s = String(e.getMessage().getString())
   } catch (err) {
     return
   }
+  if (shot == null || s.indexOf(shot.id) < 0) return
   let m = /\[(-?\d+), (-?\d+|~), (-?\d+)\]/.exec(s)
   if (m) atFound = [Number(m[1]), m[2] === '~' ? null : Number(m[2]), Number(m[3])]
   else if (/could not find|unknown|incorrect|invalid/i.test(s)) atFailed = s
@@ -58,6 +68,25 @@ const atLoaded = (x, z) => {
     return true
   }
 }
+/** The share of the chunks within `r` chunks of x z that the client has. */
+const atLoadedShare = (x, z, r) => {
+  let cx = Math.floor(x) >> 4
+  let cz = Math.floor(z) >> 4
+  let n = 0
+  let have = 0
+  for (let dx = -r; dx <= r; dx++) {
+    for (let dz = -r; dz <= r; dz++) {
+      n++
+      try {
+        if (Client.level.getChunkSource().hasChunk(cx + dx, cz + dz)) have++
+      } catch (e) {
+        have++
+      }
+    }
+  }
+  return have / n
+}
+let atReadyAt = -1
 const atBiome = (x, y, z) => {
   try {
     return String(Client.level.getBiome(new BlockPos(Math.floor(x), Math.floor(y), Math.floor(z))).unwrapKey().get().location())
@@ -65,9 +94,11 @@ const atBiome = (x, y, z) => {
     return ''
   }
 }
-const atAir = (x, y, z) => {
+/** Whether the eye passes through (air, plants, vines, water): what a view can see past. */
+const atOpen = (x, y, z) => {
   try {
-    return Client.level.getBlockState(new BlockPos(Math.floor(x), Math.floor(y), Math.floor(z))).isAir()
+    let st = Client.level.getBlockState(new BlockPos(Math.floor(x), Math.floor(y), Math.floor(z)))
+    return st.isAir() || !st.isSolid()
   } catch (e) {
     return false
   }
@@ -87,8 +118,9 @@ const atTp = (dim, x, y, z, yaw, pitch) => atCmd(`execute in ${dim} run tp @s ${
 const atFrameLand = (shot, T, sea) => {
   let min = Client.level.getMinBuildHeight()
   let pts = []
-  for (let dx = -96; dx <= 96; dx += 8) {
-    for (let dz = -96; dz <= 96; dz += 8) {
+  // A wide look round (the land in reach is loaded by now): /locate gives the biome's nearest edge, not its middle.
+  for (let dx = -160; dx <= 160; dx += 10) {
+    for (let dz = -160; dz <= 160; dz += 10) {
       let x = T[0] + dx
       let z = T[2] + dz
       if (!atLoaded(x, z)) continue
@@ -112,51 +144,70 @@ const atFrameLand = (shot, T, sea) => {
     pts.forEach((p) => (sd += Math.sqrt((p[0] - M[0]) * (p[0] - M[0]) + (p[2] - M[2]) * (p[2] - M[2]))))
     spread = sd / pts.length
   }
-  let dist = Math.max(22, Math.min(64, spread * 1.3))
+  let dist = Math.max(28, Math.min(64, spread * 1.3))
   let C = [M[0] + dist, 0, M[2]]
-  let ty = (sea ? 63 : M[1]) + 3
-  let cy = sea ? 70 : Math.max(atGround(C[0], C[2]), M[1]) + (shot.lift || 10)
-  // Lift the camera until the line to the target clears every hill between.
+  // Look across the biome, at a point past its middle, rather than down at the ground in front.
+  let F = [M[0] - dist * 0.8, 0, M[2]]
+  let ty = sea ? 63 : Math.max(atGround(F[0], F[2]), min + 1)
+  let near = -1e9
+  for (let ox = -3; ox <= 3; ox += 3) for (let oz = -3; oz <= 3; oz += 3) near = Math.max(near, atGround(C[0] + ox, C[2] + oz))
+  let cy = sea ? 70 : Math.max(near, M[1]) + (shot.lift || 10)
+  // Lift the camera until the line to the middle clears every hill between.
   for (let pass = 0; pass < 3; pass++) {
     for (let k = 1; k < 20; k++) {
       let f = k / 20
       let need = atGround(C[0] + (M[0] - C[0]) * f, C[2] + (M[2] - C[2]) * f) + 2
-      let line = cy + (ty - cy) * f
+      let line = cy + (M[1] + 2 - cy) * f
       if (line < need) cy += (need - line) / (1 - f)
     }
   }
-  cy = Math.min(cy, Math.max(atGround(C[0], C[2]), M[1]) + 70)
-  let a = atLook(C[0], cy + 1.62, C[2], M[0], ty + 4, M[2])
+  cy = Math.min(cy, Math.max(near, M[1]) + 70)
+  // Clear of the land round the camera too (hills, peaks, a forest's crowns), so it looks out over the land rather
+  // than into a hillside or a canopy.
+  let high = shot.lift >= 18
+  let r = high ? 40 : shot.lift >= 14 ? 32 : 24
+  let around = -1e9
+  for (let ox = -r; ox <= r; ox += 8) for (let oz = -r; oz <= r; oz += 8) around = Math.max(around, atGround(C[0] + ox, C[2] + oz))
+  if (!sea) cy = Math.max(cy, around + (high ? 12 : 6))
+  let a = atLook(C[0], cy + 1.62, C[2], F[0], ty + 4, F[2])
   atSay(`${shot.id}: ${pts.length} spots of it near ${T[0]} ${T[2]}, middle ${M[0].toFixed(0)} ${M[1]} ${M[2].toFixed(0)}, camera ${C[0].toFixed(0)} ${cy.toFixed(0)} ${C[2].toFixed(0)}`)
-  return [C[0], cy, C[2], a[0], Math.max(a[1], 4)]
+  return [C[0], cy, C[2], a[0], Math.min(16, Math.max(6, a[1]))]
 }
 
-/** A viewpoint inside a cave biome (or the Nether): the open spot with the longest straight view. */
-const atFrameHollow = (shot, T, radius) => {
+/**
+ * A viewpoint inside a cave biome (or the Nether): standing a little above the floor, looking along the open way
+ * nearest `want` blocks long (a far wall in view; the longest view in the Nether is only fog).
+ */
+const atFrameHollow = (shot, T, radius, want, pitch) => {
   let y0 = T[1] != null ? T[1] : 40
   let best = null
-  let bestRun = -1
-  for (let dy = -Math.floor(radius / 2); dy <= Math.floor(radius / 2) && bestRun < 36; dy += 3) {
-    for (let dx = -radius; dx <= radius && bestRun < 36; dx += 3) {
-      for (let dz = -radius; dz <= radius && bestRun < 36; dz += 3) {
+  let bestScore = -1e9
+  for (let dy = -Math.floor(radius / 2); dy <= Math.floor(radius / 2); dy += 3) {
+    for (let dx = -radius; dx <= radius; dx += 3) {
+      for (let dz = -radius; dz <= radius; dz += 3) {
+        if (bestScore >= 9) break
         let x = T[0] + dx
         let y = y0 + dy
         let z = T[2] + dz
-        if (!atAir(x, y, z) || !atAir(x, y + 1, z) || !atAir(x, y - 1, z)) continue
+        if (!atOpen(x, y, z) || !atOpen(x, y + 1, z)) continue
+        let f = 1
+        while (f <= 4 && atOpen(x, y - f, z)) f++
+        if (f > 4) continue
         if (atBiome(x, y, z) !== shot.id) continue
         for (let k = 0; k < 8; k++) {
           let a = (k * Math.PI) / 4
           let n = 1
-          while (n < 40 && atAir(x - Math.sin(a) * n, y, z + Math.cos(a) * n)) n++
-          if (n > bestRun) {
-            bestRun = n
-            best = [x + 0.5, y - 1.2, z + 0.5, (a * 180) / Math.PI, 10]
+          while (n < 48 && atOpen(x - Math.sin(a) * n, y + 1, z + Math.cos(a) * n)) n++
+          let score = 10 - Math.abs(n - want) / 2
+          if (score > bestScore) {
+            bestScore = score
+            best = [x + 0.5, y - f + 2, z + 0.5, (a * 180) / Math.PI, pitch]
           }
         }
       }
     }
   }
-  atSay(`${shot.id}: best open view ${bestRun} blocks${best ? ` at ${best[0].toFixed(0)} ${best[1].toFixed(0)} ${best[2].toFixed(0)}` : ''}`)
+  atSay(`${shot.id}: view score ${bestScore.toFixed(1)}${best ? ` at ${best[0].toFixed(0)} ${best[1].toFixed(0)} ${best[2].toFixed(0)}` : ''}`)
   return best
 }
 
@@ -167,6 +218,9 @@ const atShoot = (name) => {
     atSay(`the window was minimised before ${name}: restored it, shooting a second later`)
     return false
   }
+  try {
+    Client.getToasts().clear()
+  } catch (e) {}
   ATJ.Screenshot.grab(Client.gameDirectory, `atlas_${name}.png`, Client.getMainRenderTarget(), (m) => atSay(`${name}: ${m.getString()}`))
   atStats.shot++
   return true
@@ -224,7 +278,8 @@ ClientEvents.tick(() => {
     atDim = shot.dim
     atCmd(shot.dark ? 'effect give @s minecraft:night_vision infinite 0 true' : 'effect clear @s')
     if (shot.kind === 'biome') {
-      atCmd(`execute in ${shot.dim} run locate biome ${shot.id}`)
+      let from = shot.origin ? `positioned ${shot.origin[0]} 100 ${shot.origin[1]} ` : ''
+      atCmd(`execute in ${shot.dim} ${from}run locate biome ${shot.id}`)
       atPhaseTo('locating')
     } else {
       // To the stage first: its chunk has to be loaded before anything can be built there.
@@ -234,15 +289,24 @@ ClientEvents.tick(() => {
     return
   }
   if (atPhase === 'locating') {
-    if (atFailed) return atSkip(shot, atFailed)
+    let gaveUp = atFailed || (t > AT_OPTS.locate ? 'no answer from /locate' : '')
+    if (gaveUp) {
+      // Rare: look again later from far away, after everything else.
+      let tries = shot.tries || 0
+      if (tries < AT_ORIGINS.length) {
+        AT_SHOTS.push({ kind: shot.kind, id: shot.id, name: shot.name, dim: shot.dim, how: shot.how, dark: shot.dark, lift: shot.lift, tries: tries + 1, origin: AT_ORIGINS[tries] })
+        atSay(`${shot.id}: ${gaveUp}; will look again from ${AT_ORIGINS[tries].join(' ')} at the end`)
+        atPhaseTo('next')
+        return
+      }
+      return atSkip(shot, gaveUp)
+    }
     if (atFound) {
       atTarget = atFound
       let hollow = shot.how === 'cave' || shot.how === 'nether'
       atTp(shot.dim, atTarget[0] + 0.5, hollow && atTarget[1] != null ? atTarget[1] : shot.how === 'end' ? 110 : 200, atTarget[2] + 0.5, 90, 30)
       atPhaseTo('travelling')
-      return
     }
-    if (t > AT_OPTS.timeout) atSkip(shot, 'no answer from /locate')
     return
   }
   if (atPhase === 'travelling') {
@@ -255,12 +319,13 @@ ClientEvents.tick(() => {
     if (t < AT_OPTS.arrive) return
     let view = null
     try {
-      view = shot.how === 'cave' ? atFrameHollow(shot, atTarget, 18) : shot.how === 'nether' ? atFrameHollow(shot, atTarget, 27) : atFrameLand(shot, atTarget, shot.how === 'sea')
+      view = shot.how === 'cave' ? atFrameHollow(shot, atTarget, 30, 22, 12) : shot.how === 'nether' ? atFrameHollow(shot, atTarget, 30, 24, 18) : atFrameLand(shot, atTarget, shot.how === 'sea')
     } catch (e) {
       atSay(`${shot.id}: framing failed: ${e}`)
     }
     if (view == null) return atSkip(shot, 'no open view found')
     atTp(shot.dim, view[0], view[1], view[2], view[3], view[4])
+    atReadyAt = -1
     atPhaseTo('settling')
     return
   }
@@ -269,18 +334,17 @@ ClientEvents.tick(() => {
     let y = AT_STAGE[1]
     let z = AT_STAGE[2]
     if (t === 40) {
-      // A grass floor (or the creature's own ground), with a glass tank of water for anything that swims.
-      atCmd('kill @e[tag=atlas_subject]')
+      // A bare stage: its own floor (grass, or netherrack or end stone), nothing else standing on it, no snow falling.
+      atCmd(`execute in minecraft:overworld positioned ${x} ${y} ${z} run kill @e[type=!minecraft:player,distance=..20]`)
+      atCmd('weather clear')
       atCmd(`execute in minecraft:overworld run fill ${x - 6} ${y - 1} ${z - 6} ${x + 6} ${y + 4} ${z + 6} minecraft:air`)
       atCmd(`execute in minecraft:overworld run fill ${x - 6} ${y - 1} ${z - 6} ${x + 6} ${y - 1} ${z + 6} ${shot.floor || 'minecraft:grass_block'}`)
-      if (shot.water) {
-        atCmd(`execute in minecraft:overworld run fill ${x - 3} ${y} ${z - 3} ${x + 3} ${y + 4} ${z + 3} minecraft:glass`)
-        atCmd(`execute in minecraft:overworld run fill ${x - 2} ${y} ${z - 2} ${x + 2} ${y + 4} ${z + 2} minecraft:water`)
-      }
     }
     if (t === 50) {
-      // Turned to the south-east, three-quarters on to the camera.
-      atCmd(`execute in minecraft:overworld run summon ${shot.id} ${x + 0.5} ${y + (shot.water ? 1.5 : 0)} ${z + 0.5} {NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,Silent:1b,Tags:["atlas_subject"],Rotation:[-45f,0f]}`)
+      // Turned to the south-east, three-quarters on to the camera. Swimmers hang in the air like specimens (water and
+      // glass between them and the camera only blur them).
+      let swim = shot.water ? ',NoGravity:1b' : ''
+      atCmd(`execute in minecraft:overworld run summon ${shot.id} ${x + 0.5} ${y + (shot.water ? 0.8 : 0)} ${z + 0.5} {NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,Silent:1b${swim},Tags:["atlas_subject"],Rotation:[-45f,0f]}`)
     }
     if (t === 90) {
       let e = atSubject()
@@ -288,7 +352,7 @@ ClientEvents.tick(() => {
       // Back far enough that the whole of it fits, the camera at its middle.
       let h = Number(e.getBbHeight())
       let w = Number(e.getBbWidth())
-      let d = Math.max(2.8, Math.max(h * 1.9, w * 2.2) + 1.2)
+      let d = Math.max(1.8, Math.max(h, w) * 1.6 + 0.8)
       let cy = e.getY() + h * 0.55 - 1.62
       let a = atLook(e.getX() + d * 0.35, cy + 1.62, e.getZ() + d, e.getX(), e.getY() + h * 0.5, e.getZ())
       atTp('minecraft:overworld', e.getX() + d * 0.35, cy, e.getZ() + d, a[0], a[1])
@@ -299,6 +363,17 @@ ClientEvents.tick(() => {
   }
   if (atPhase === 'settling') {
     if (t < (shot.kind === 'biome' ? AT_OPTS.settle : 50)) return
+    // A landscape waits for the land in reach to arrive (most of it, or long enough), then a moment for its meshes.
+    if (shot.kind === 'biome') {
+      if (atReadyAt < 0) {
+        if (t % 20 !== 0) return
+        let share = atLoadedShare(Client.player.getX(), Client.player.getZ(), 10)
+        if (share < AT_OPTS.loaded && t < AT_OPTS.patience) return
+        atReadyAt = t
+        atSay(`${shot.id}: ${Math.round(share * 100)}% of the land in reach after ${t} ticks`)
+      }
+      if (t < atReadyAt + 60) return
+    }
     if (!atShoot(shot.name)) {
       atSince += 20
       return

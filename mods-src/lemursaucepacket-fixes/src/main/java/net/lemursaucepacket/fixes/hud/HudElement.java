@@ -81,4 +81,38 @@ public abstract class HudElement {
     public void setShown(boolean shown) throws Exception {
         HudVisibility.save(id, shown);
     }
+
+    // ---- size (the editor's corner handle, mouse wheel and +/-)
+
+    /** Whether its size can be changed in the editor: its mod has a size setting, or this mod scales it. */
+    public boolean resizable() {
+        return false;
+    }
+
+    /** Its size now, 1 being its mod's own default. */
+    public double scale() {
+        return 1;
+    }
+
+    /** The size its mod starts at. */
+    public double defaultScale() {
+        return 1;
+    }
+
+    /** Sets its size in the mod's settings (in memory): the editor calls this, then {@link #save} for the position. */
+    public void setScale(double scale) throws Exception {
+    }
+
+    public double minScale() {
+        return 0.5;
+    }
+
+    public double maxScale() {
+        return 2.5;
+    }
+
+    /** Where its size is kept, when that isn't the editor (shown in the tooltip). */
+    public String sizeHint() {
+        return null;
+    }
 }

@@ -15,6 +15,7 @@ import harmonised.pmmo.client.events.ClientTickHandler;
 import harmonised.pmmo.config.codecs.SkillData;
 import harmonised.pmmo.core.Core;
 import harmonised.pmmo.storage.Experience;
+import net.lemursaucepacket.fixes.hud.HudConfig;
 import net.lemursaucepacket.fixes.hud.HudElement.Box;
 import net.lemursaucepacket.fixes.mixin.pmmo.GainEntryAccessor;
 import net.minecraft.client.Minecraft;
@@ -136,14 +137,31 @@ public final class GainHud {
                     m.alpha, m.y, fade(now, m.bumped, PULSE), fade(now, m.levelled, FLASH)));
         }
         Box at = box(x, y, g.guiWidth(), g.guiHeight(), Math.max(1, cards.size()));
-        draw(g, at.x(), at.y(), cards);
+        scaled(g, at, () -> draw(g, at.x(), at.y(), cards));
     }
 
-    /** The stack's place: Project MMO's offset is its top centre. */
+    /** Draws at the size set in the HUD editor, round the stack's top-left corner. */
+    private static void scaled(GuiGraphics g, Box at, Runnable draw) {
+        float s = HudConfig.PMMO_GAIN_SCALE.get().floatValue();
+        if (s == 1) {
+            draw.run();
+            return;
+        }
+        g.pose().pushPose();
+        g.pose().translate(at.x(), at.y(), 0);
+        g.pose().scale(s, s, 1);
+        g.pose().translate(-at.x(), -at.y(), 0);
+        draw.run();
+        g.pose().popPose();
+    }
+
+    /** The stack's place, at its size: Project MMO's offset is its top centre. */
     public static Box box(double x, double y, int sw, int sh, int rows) {
-        int h = rows * ROW + (rows - 1) * GAP;
-        return new Box(Math.clamp((int) (sw * x) - WIDTH / 2, 0, Math.max(0, sw - WIDTH)),
-                Math.clamp((int) (sh * y), 0, Math.max(0, sh - h)), WIDTH, h);
+        double s = HudConfig.PMMO_GAIN_SCALE.get();
+        int w = (int) Math.round(WIDTH * s);
+        int h = (int) Math.round((rows * ROW + (rows - 1) * GAP) * s);
+        return new Box(Math.clamp((int) (sw * x) - w / 2, 0, Math.max(0, sw - w)),
+                Math.clamp((int) (sh * y), 0, Math.max(0, sh - h)), w, h);
     }
 
     /** The HUD editor's box: room for three cards. */
@@ -151,7 +169,18 @@ public final class GainHud {
         return box(x, y, sw, sh, PREVIEW_ROWS);
     }
 
+    /** The HUD editor's sample, drawn to fill its box (which the editor sizes). */
     public static void renderPreview(GuiGraphics g, Box box) {
+        float s = box.w() / (float) WIDTH;
+        g.pose().pushPose();
+        g.pose().translate(box.x(), box.y(), 0);
+        g.pose().scale(s, s, 1);
+        g.pose().translate(-box.x(), -box.y(), 0);
+        preview(g, box);
+        g.pose().popPose();
+    }
+
+    private static void preview(GuiGraphics g, Box box) {
         draw(g, box.x(), box.y(), List.of(
                 new Card("mining", name("mining"), color("mining"), 24, 12, 0.45F, false, 1, 0, 0, 0),
                 new Card("woodcutting", name("woodcutting"), color("woodcutting"), 12, 8, 0.7F, false, 1, ROW + GAP, 0, 0),

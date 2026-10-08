@@ -22,3 +22,6 @@ key_key.hide_icons:key.keyboard.unknown
 key_key.brassworksmissions.track_missions_ui:key.keyboard.unknown
 key_key.inventoryessentials.sort_inventory:key.keyboard.unknown
 key_key.ftbteams.open_gui:key.keyboard.semicolon
+key_key.pmmo.vein:key.keyboard.unknown
+key_key.duperautowalk.autowalk:key.keyboard.grave.accent
+key_key.duperautowalk.config:key.keyboard.unknown

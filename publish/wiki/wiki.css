@@ -1839,6 +1839,19 @@ img {
   }
 }
 
+/* ---------------------------------------------------------------- in the game (the ESC menu's Guide) */
+
+/* The game's own buttons (Close, Open in browser) sit over the top bar's right; nothing here leaves for the website. */
+.ingame .topnav,
+.ingame .wk-side .back {
+  display: none;
+}
+
+.ingame,
+.ingame * {
+  cursor: url('cursor.png') 0 0, default !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

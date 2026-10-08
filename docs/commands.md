@@ -21,6 +21,8 @@ Nearly everything here has a button as well (ESC opens the hub: see [The ESC men
 | `/capes off` | Take your cape off (it goes back in your bag) |
 | `/hearts` | Your hearts, and where each one came from. [More](lifesteal.md) |
 | `/guide` | Open the LemurSaucePacket Guide, this wiki as a book |
+| `/skills` | The skills screen: every skill and your level. [More](skills.md#the-skills-screen) |
+| `/skills <skill>` | That skill's guide: what every level unlocks |
 
 ## Coins and trading
 

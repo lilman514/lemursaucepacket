@@ -39,7 +39,7 @@
     {
       "type": "patchouli:text",
       "title": "Its structures",
-      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Aviary$() - When Dungeons Arise - The End$(br)$(bold)Dragon Skeleton$() - Nullscape - The End$(br)$(bold)End$() - Towers of the Wild - The End$(br)$(bold)End Castle$() - Dungeons and Taverns - The End$(br)$(bold)End City$() - Vanilla - The End$(br)$(bold)End Lighthouse$() - Dungeons and Taverns - The End$(br)$(bold)End Ship$() - Dungeons and Taverns - The End$(br)$(bold)End Tower$() - Structory: Towers - The End$(br)$(bold)The Rift$() - Nullscape - The End"
+      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Aviary$() - When Dungeons Arise - The End$(br)$(bold)Dragon Skeleton$() - Nullscape - The End$(br)$(bold)End Castle$() - Dungeons and Taverns - Throughout the End$(br)$(bold)End City$() - Vanilla - Most of the End (5 of 8 biomes)$(br)$(bold)End Lighthouse$() - Dungeons and Taverns - Most of the End (5 of 8 biomes)$(br)$(bold)End Ship$() - Dungeons and Taverns - Most of the End (5 of 8 biomes)$(br)$(bold)End tower$() - Towers of the Wild - The End$(br)$(bold)End Tower$() - Structory: Towers - Throughout the End$(br)$(bold)The Rift$() - Nullscape - The End"
     }
   ]
 }

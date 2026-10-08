@@ -224,8 +224,8 @@ element {
   width = 84
   height = 20
   label = Skills
-  description = Your skills and levels, in the inventory (E). Item tooltips show what each level unlocks.
-  buttonaction = closegui%btnaction_splitter_fm%mimic_keybind;key.inventory%btnaction_splitter_fm%
+  description = Every skill and your levels: hover one for what it gives, click it for what every level unlocks (/skills)
+  buttonaction = opengui;net.lemursaucepacket.fixes.skills.client.SkillsScreen%btnaction_splitter_fm%
   stay_on_screen = true
 }
 element {
@@ -320,8 +320,8 @@ element {
   width = 84
   height = 20
   label = Guide
-  description = The in-game wiki: everything about the pack (/guide)
-  buttonaction = closegui%btnaction_splitter_fm%sendmessage;/guide%btnaction_splitter_fm%
+  description = The wiki, right here in the game: everything about the pack (the book version: /guide)
+  buttonaction = opengui;lsp_guide%btnaction_splitter_fm%
   stay_on_screen = true
 }
 element {

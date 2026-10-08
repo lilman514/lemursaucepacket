@@ -327,7 +327,7 @@
 	quest.1C3DEAB1B1B968EA.title: "&aFarming 50"
 	quest.1C430C2485626FE3.quest_desc: ["A mechanical saw cuts logs into planks on a belt, fells trees on a contraption, and is a part of the Lumber Axe."]
 	quest.1C430C2485626FE3.title: "Cutting Edge"
-	quest.1C82F5FAFD7A4EFA.quest_desc: ["Reach &eCooking 50&r. Cooking gives XP from every meal.", "", "&eUnlocked on the way:&r", "• 30: golden carrots, pies, pasta and plated meals", "• 40: squid ink pasta, glow berry custard and nether salad", "• 45: golden apples", "• 50: farmer's Delight feasts"]
+	quest.1C82F5FAFD7A4EFA.quest_desc: ["Reach &eCooking 50&r. Cooking gives XP from every meal.", "", "&eUnlocked on the way:&r", "• 30: golden carrots, pies, pasta and plated meals", "• 40: squid ink pasta, glow berry custard and nether salad", "• 45: golden apples", "• 50: Farmer's Delight feasts"]
 	quest.1C82F5FAFD7A4EFA.title: "&6Cooking 50"
 	quest.1C8C064C0C2008FC.quest_desc: ["Run a line from your base to another player's, with a station at each end.", "", "&cNote:&r trains can cross Nether portals, but riding through one is still buggy. Send freight across unmanned.", "", "&eChapter prize:&r railway casing for the next carriage, a warp stone and the Iron Roads Cape."]
 	quest.1C8C064C0C2008FC.title: "Connect Two Towns"
@@ -379,7 +379,7 @@
 	quest.23D0C909F4F34B0D.title: "Warp Stone"
 	quest.24A74A9AE03817A1.quest_desc: ["Wake it on purpose, and win. Bring the whole server.", "", "&eChapter prize:&r a totem, a relic and two rolls on the Legend's Hoard."]
 	quest.24A74A9AE03817A1.title: "&cThe Warden"
-	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour; mechanical crafters", "• 35: aeronaut's Rigging (for the Aeronaut set)", "• 40: enchanting tables; duelist's Filigree (for the Brass Duelist set)", "• 50: ender chests"]
+	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour; mechanical crafters", "• 35: Aeronaut's Rigging (for the Aeronaut set)", "• 40: enchanting tables; Duelist's Filigree (for the Brass Duelist set)", "• 50: ender chests"]
 	quest.25B714A6FCD8983E.title: "&6Crafting 50"
 	quest.26C3A5928BAFE1CB.quest_desc: ["Run a pair of crushing wheels at maximum speed. Everything that goes in comes out doubled."]
 	quest.26C3A5928BAFE1CB.title: "Crushing It"
@@ -620,7 +620,7 @@
 	quest.4770AD480EA5A376.title: "All Aboard!"
 	quest.4787851D06C5AD77.quest_desc: ["Silk touch a few sculk blocks. Without it they only give XP."]
 	quest.4787851D06C5AD77.title: "Sculk"
-	quest.479B0A9CB73D5AF9.quest_desc: ["Reach &eSmithing 25&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 15: iron tools, weapons and armour", "• 20: anvils and hoppers", "• 25: prospector's Plating (for the Prospector set)"]
+	quest.479B0A9CB73D5AF9.quest_desc: ["Reach &eSmithing 25&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 15: iron tools, weapons and armour", "• 20: anvils and hoppers", "• 25: Prospector's Plating (for the Prospector set)"]
 	quest.479B0A9CB73D5AF9.title: "&6Smithing 25"
 	quest.47AEF3DD86EEE0B5.quest_desc: ["Brann learned his craft in the dwarven halls. Ask him at the smithy on the ring street."]
 	quest.47AEF3DD86EEE0B5.title: "Brann the Smith"
@@ -973,7 +973,7 @@
 	quest.7535D89CEF267AFC.quest_desc: ["A rotation speed controller lets one network run machines at exactly the speed you choose.", "", "&eChapter prize:&r precision mechanisms, brass casing and the Brass Age Cape."]
 	quest.7535D89CEF267AFC.quest_subtitle: "Controlled speed"
 	quest.7535D89CEF267AFC.title: "&aThe Brass Age"
-	quest.757A2973CCB44D1B.quest_desc: ["Reach &eSmithing 50&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 35: steam engines", "• 40: copying armour trim templates", "• 45: diamond Lattice (for the Compacted Diamond set)", "• 50: netherite gear (the smithing table upgrade)"]
+	quest.757A2973CCB44D1B.quest_desc: ["Reach &eSmithing 50&r. Smithing gives XP from ingots and gear.", "", "&eUnlocked on the way:&r", "• 35: steam engines", "• 40: copying armour trim templates", "• 45: Diamond Lattice (for the Compacted Diamond set)", "• 50: netherite gear (the smithing table upgrade)"]
 	quest.757A2973CCB44D1B.title: "&6Smithing 50"
 	quest.757CBF5DBDB08000.quest_desc: ["Sir Vyvin will never know.", "", "&eRewards:&r 1 quest point, 8,000 Smithing XP, coins."]
 	quest.757CBF5DBDB08000.quest_subtitle: "The Knight's Sword"
@@ -1009,7 +1009,7 @@
 	quest.7A7CCAA827C344C6.title: "What the Scrying Needs"
 	quest.7A8548237DEB6F6E.quest_desc: ["Zinc hides in the middle and lower layers. Press &eR&r on zinc ore in JEI to see the heights it spawns at.", "Zinc ore needs &eHardness I&r on your pickaxe (a crafting-table tome, Mining 10). Drill contraptions and the chests of Create ruins give raw zinc too, and Mining 10 is what lets a machine take it. You will need a lot of it for brass."]
 	quest.7A8548237DEB6F6E.title: "Zinc Hunt"
-	quest.7AD39FF2D6EF980B.quest_desc: ["Reach &eCrafting 25&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 15: shields", "• 20: crossbows"]
+	quest.7AD39FF2D6EF980B.quest_desc: ["Reach &eCrafting 25&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 15: shields", "• 20: crossbows; Climbing Boots (a relic: step up full blocks)"]
 	quest.7AD39FF2D6EF980B.title: "&6Crafting 25"
 	quest.7AE1DF02F7AD3701.quest_desc: ["Give Elder Ashka the Infernal Key. She also wants you strong enough: &eDefence 80, Hitpoints 80, and Attack or Ranged 80&r.", "", "&eRewards:&r 2 quest points, the way into the Inferno, coins."]
 	quest.7AE1DF02F7AD3701.quest_subtitle: "Ashes of the Kiln"

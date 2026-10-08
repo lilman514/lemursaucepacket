@@ -16,6 +16,7 @@ import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { CRIT_MULTIPLIER, LOOT, MATERIALS, MATERIAL_ITEMS, NAMESPACE, PIECES, RECIPES, SETS, TOOLS, WEAPONS } from './gear.mjs'
+import { CRAFT, RELIC_WEAR } from '../skills/unlocks.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const out = (rel, text) => {
@@ -559,6 +560,18 @@ function docsPage() {
   for (const m of MATERIAL_ITEMS) lines.push(`| ${m.name} | ${m.howToGet} |`)
   lines.push('', '## Loot-only gear', '', 'Some pieces never have a recipe:', '')
   for (const l of LOOT) lines.push(`- **${[...armour, ...WEAPONS, ...MATERIAL_ITEMS].find((x) => x.id === l.item)?.name}**: ${Math.round(l.chance * 100)}% per chest in ${l.tables.map((t) => (t.startsWith('#') ? `${t.slice(1)} structures` : t.split('/').pop().replace(/_/g, ' '))).join(', ')}.`)
+  // The pack's own relics (lsp_fixes, for the Relics mod): their levels come from skills/unlocks.mjs.
+  const boots = 'lsp_fixes:climbing_boots'
+  const make = CRAFT.find((c) => c.items.includes(boots))
+  const wear = RELIC_WEAR.find((w) => w.item === boots)
+  lines.push(
+    '',
+    '## Relics',
+    '',
+    "The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with **G**). Shift over one in a menu for its page: its abilities, which you unlock there with a few clicks, how it gains experience, and what its levels raise. The pack makes one of its own:",
+    '',
+    `- **Climbing Boots** (feet slot): step up full blocks without jumping, and each ledge stepped up gives a moment of extra speed. Made at a crafting table from leather boots, two string, two flint and two iron ingots${make ? ` at ${req(make)}` : ''}; wearing them needs ${wear ? req(wear) : 'nothing'} (before that they do nothing, and Project MMO slows you as it does for armour you aren't ready for). Their ability, Foothold, starts at 1.05 to 1.1 blocks; the relic levels from the ledges it climbs, and its points raise the step to 1.25 blocks and the speed from about 5% to 20%.`
+  )
   lines.push('', 'Generated from `gear/gear.mjs`, so this page matches the game.', '')
   return lines.join('\n')
 }

@@ -11,11 +11,21 @@ Sixteen RuneScape-style skills, levels 1–99, on RuneScape's XP curve (level 99
 
 ![The skills panel in the inventory](images/inventory.jpg)
 
-Open your inventory (**E**, or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs, to use it or to make it.
+Your inventory (**E**) has a skills panel on the left: every skill, its level and progress. Hover a row for the XP to the next level; click it for that skill's guide (below). Item tooltips show the level an item needs, to use it or to make it.
 
 XP shows up as it comes in, in a small tracker at the top of the screen, just below the block info. Each skill that just gained XP gets a card with its icon, the XP so far (it keeps counting up while you work), its level and a bar towards the next one. When a gain takes you up a level, the card turns gold and says **Level N!** for a few seconds. Cards fade out a few seconds after the last XP. Move or hide the tracker in ESC → HUD Layout ("XP gains").
 
 <figure><img src="images/xp_tracker_cards.jpg" alt="The XP tracker with cards for Smithing, Mining and Crafting"><figcaption><p>The XP tracker: a card per skill, counting up as you work</p></figcaption></figure>
+
+## The skills screen
+
+ESC → **Skills** (or `/skills`) shows every skill in its group, Combat, Gathering, Artisan and Support, as RuneScape's skills tab does: its level and a bar towards the next, with your total level, combat level and total XP. Hover a skill for its XP, the XP to the next level, what trains it, what every level gives and what it unlocks next.
+
+<figure><img src="images/skills_screen.jpg" alt="The skills screen: sixteen skills in four columns, with a tooltip over Mining"><figcaption><p>ESC → Skills, hovering Mining</p></figcaption></figure>
+
+Click a skill, here or in the inventory's panel, for its guide: every level that unlocks something, down a track lit as far as you've got. Each unlock shows its item and what sort of thing it is (wield, wear, use, make, machine, plant, chop, brew, catch, perk, quest or cape); hover one for what that means and how much XP it is away. A marker shows your level and the XP to the next unlock. The strip along the bottom, or the arrow keys, switches skill, and `/skills mining` opens a skill's guide straight away.
+
+<figure><img src="images/skill_guide.jpg" alt="Mining's guide: levels 15 to 75 down a track, lit to level 42, with the next unlock at 50 picked out"><figcaption><p>Mining's guide at level 42</p></figcaption></figure>
 
 ## The skills
 
@@ -93,6 +103,7 @@ Like a RuneScape skill guide: the level each thing needs.
 | 10 | Bows |
 | 15 | Shields |
 | 20 | Crossbows |
+| 20 | Climbing Boots (a relic: step up full blocks) |
 | 30 | Diamond tools, weapons and armour |
 | 35 | Aeronaut's Rigging (for the Aeronaut set) |
 | 40 | Enchanting tables |

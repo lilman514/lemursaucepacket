@@ -65,7 +65,7 @@ public final class SkillsModule {
         NeoForge.EVENT_BUS.addListener((ServerTickEvent.Post e) -> {
             if (e.getServer().getTickCount() % 100 == 31) showCombatLevels(e.getServer());
         });
-        if (FMLEnvironment.dist.isClient()) net.lemursaucepacket.fixes.skills.client.SkillsClient.init();
+        if (FMLEnvironment.dist.isClient()) net.lemursaucepacket.fixes.skills.client.SkillsClient.init(modBus);
     }
 
     /** A brewing stand or cooking pot remembers who opened it, and their level, for when hoppers feed it. */

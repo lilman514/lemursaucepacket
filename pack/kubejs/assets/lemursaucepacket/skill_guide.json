@@ -1,0 +1,1359 @@
+{
+ "comment": "Written by skills/build.mjs from skills/unlocks.mjs: do not edit by hand.",
+ "groups": [
+  {
+   "id": "combat",
+   "name": "Combat",
+   "color": 15229498,
+   "skills": [
+    "attack",
+    "strength",
+    "defence",
+    "ranged",
+    "hitpoints"
+   ]
+  },
+  {
+   "id": "gathering",
+   "name": "Gathering",
+   "color": 9421898,
+   "skills": [
+    "mining",
+    "woodcutting",
+    "farming",
+    "fishing"
+   ]
+  },
+  {
+   "id": "artisan",
+   "name": "Artisan",
+   "color": 14724166,
+   "skills": [
+    "cooking",
+    "smithing",
+    "crafting",
+    "enchanting",
+    "brewing",
+    "construction"
+   ]
+  },
+  {
+   "id": "support",
+   "name": "Support",
+   "color": 7321576,
+   "skills": [
+    "agility"
+   ]
+  }
+ ],
+ "skills": {
+  "attack": {
+   "trainedBy": "Hitting things",
+   "perLevel": "+0.04 melee damage and +0.4% bow damage a level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "wield",
+     "title": "Wield stone swords and axes",
+     "icon": "minecraft:stone_sword"
+    },
+    {
+     "level": 10,
+     "kind": "wield",
+     "title": "Wield gold swords and axes",
+     "icon": "minecraft:golden_sword"
+    },
+    {
+     "level": 15,
+     "kind": "wield",
+     "title": "Wield iron swords and axes",
+     "icon": "minecraft:iron_sword"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+1.00 melee damage and +10% bow damage in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "wield",
+     "title": "Wield diamond swords and axes",
+     "icon": "minecraft:diamond_sword"
+    },
+    {
+     "level": 50,
+     "kind": "wield",
+     "title": "Wield netherite swords and axes",
+     "icon": "minecraft:netherite_sword"
+    },
+    {
+     "level": 50,
+     "kind": "wield",
+     "title": "Wield the mace",
+     "icon": "minecraft:mace"
+    },
+    {
+     "level": 50,
+     "kind": "quest",
+     "title": "The Fight Pits (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+2.00 melee damage and +20% bow damage in all",
+     "icon": null
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+3.00 melee damage and +30% bow damage in all",
+     "icon": null
+    },
+    {
+     "level": 80,
+     "kind": "quest",
+     "title": "Ashes of the Kiln (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Attack Cape",
+     "icon": "lemursaucepacket:attack_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+3.96 melee damage and +39.6% bow damage in all",
+     "icon": null
+    }
+   ]
+  },
+  "strength": {
+   "trainedBy": "Hitting things",
+   "perLevel": "+0.3% melee critical chance a level (1.5x damage)",
+   "unlocks": [
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "7.5% melee critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "15% melee critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "22.5% melee critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Strength Cape",
+     "icon": "lemursaucepacket:strength_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "29.7% melee critical chance in all",
+     "icon": null
+    }
+   ]
+  },
+  "defence": {
+   "trainedBy": "Being hit while wearing armour",
+   "perLevel": "+0.02 armour a level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "wear",
+     "title": "Wear copper diving gear",
+     "icon": "create:copper_diving_helmet"
+    },
+    {
+     "level": 10,
+     "kind": "wear",
+     "title": "Wear chainmail armour",
+     "icon": "minecraft:chainmail_chestplate"
+    },
+    {
+     "level": 10,
+     "kind": "wear",
+     "title": "Wear gold armour",
+     "icon": "minecraft:golden_chestplate"
+    },
+    {
+     "level": 15,
+     "kind": "wear",
+     "title": "Wear iron armour",
+     "icon": "minecraft:iron_chestplate"
+    },
+    {
+     "level": 20,
+     "kind": "wear",
+     "title": "Wear the turtle shell",
+     "icon": "minecraft:turtle_helmet"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+0.50 armour in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "wear",
+     "title": "Wear diamond armour",
+     "icon": "minecraft:diamond_chestplate"
+    },
+    {
+     "level": 50,
+     "kind": "wear",
+     "title": "Wear netherite armour",
+     "icon": "minecraft:netherite_chestplate"
+    },
+    {
+     "level": 50,
+     "kind": "wear",
+     "title": "Wear netherite diving gear",
+     "icon": "create:netherite_diving_helmet"
+    },
+    {
+     "level": 50,
+     "kind": "quest",
+     "title": "The Fight Pits (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+1.00 armour in all",
+     "icon": null
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+1.50 armour in all",
+     "icon": null
+    },
+    {
+     "level": 80,
+     "kind": "quest",
+     "title": "Ashes of the Kiln (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Defence Cape",
+     "icon": "lemursaucepacket:defence_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+1.98 armour in all",
+     "icon": null
+    }
+   ]
+  },
+  "ranged": {
+   "trainedBy": "Arrows, tridents and rockets",
+   "perLevel": "+0.3% ranged critical chance a level",
+   "unlocks": [
+    {
+     "level": 20,
+     "kind": "use",
+     "title": "Crossbows and the potato cannon",
+     "icon": "minecraft:crossbow"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "7.5% ranged critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 40,
+     "kind": "use",
+     "title": "Tridents",
+     "icon": "minecraft:trident"
+    },
+    {
+     "level": 50,
+     "kind": "quest",
+     "title": "The Fight Pits (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "15% ranged critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "22.5% ranged critical chance in all",
+     "icon": null
+    },
+    {
+     "level": 80,
+     "kind": "quest",
+     "title": "Ashes of the Kiln (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Ranged Cape",
+     "icon": "lemursaucepacket:ranged_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "29.7% ranged critical chance in all",
+     "icon": null
+    }
+   ]
+  },
+  "hitpoints": {
+   "trainedBy": "Any fight (slowly)",
+   "perLevel": "+0.2 max health a level: a heart every ten levels",
+   "unlocks": [
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+5.0 max health in all (2.5 hearts)",
+     "icon": null
+    },
+    {
+     "level": 50,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 50,
+     "kind": "quest",
+     "title": "The Fight Pits (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+10.0 max health in all (5.0 hearts)",
+     "icon": null
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+15.0 max health in all (7.5 hearts)",
+     "icon": null
+    },
+    {
+     "level": 80,
+     "kind": "quest",
+     "title": "Ashes of the Kiln (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Hitpoints Cape",
+     "icon": "lemursaucepacket:hitpoints_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+19.8 max health in all (9.9 hearts)",
+     "icon": null
+    }
+   ]
+  },
+  "mining": {
+   "trainedBy": "Mining ores and stone",
+   "perLevel": "Faster mining every level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "use",
+     "title": "Mine with stone pickaxes and shovels",
+     "icon": "minecraft:stone_pickaxe"
+    },
+    {
+     "level": 10,
+     "kind": "use",
+     "title": "Mine with gold pickaxes and shovels",
+     "icon": "minecraft:golden_pickaxe"
+    },
+    {
+     "level": 10,
+     "kind": "quest",
+     "title": "The Knight's Sword (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 15,
+     "kind": "use",
+     "title": "Mine with iron pickaxes and shovels",
+     "icon": "minecraft:iron_pickaxe"
+    },
+    {
+     "level": 15,
+     "kind": "machine",
+     "title": "Mechanical drills",
+     "icon": "create:mechanical_drill"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+12.5% mining speed in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "use",
+     "title": "Mine with diamond pickaxes and shovels",
+     "icon": "minecraft:diamond_pickaxe"
+    },
+    {
+     "level": 50,
+     "kind": "use",
+     "title": "Mine with netherite pickaxes and shovels",
+     "icon": "minecraft:netherite_pickaxe"
+    },
+    {
+     "level": 50,
+     "kind": "machine",
+     "title": "Drill heads for the ore vein drilling machine",
+     "icon": "createoreexcavation:drill"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+25% mining speed in all",
+     "icon": null
+    },
+    {
+     "level": 65,
+     "kind": "machine",
+     "title": "Diamond drill heads",
+     "icon": "createoreexcavation:diamond_drill"
+    },
+    {
+     "level": 68,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+37.5% mining speed in all",
+     "icon": null
+    },
+    {
+     "level": 80,
+     "kind": "machine",
+     "title": "Netherite drill heads",
+     "icon": "createoreexcavation:netherite_drill"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Mining Cape",
+     "icon": "lemursaucepacket:mining_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+49.5% mining speed in all",
+     "icon": null
+    }
+   ]
+  },
+  "woodcutting": {
+   "trainedBy": "Chopping logs",
+   "perLevel": "Faster chopping every level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "use",
+     "title": "Chop with stone axes",
+     "icon": "minecraft:stone_axe"
+    },
+    {
+     "level": 10,
+     "kind": "use",
+     "title": "Chop with gold axes",
+     "icon": "minecraft:golden_axe"
+    },
+    {
+     "level": 15,
+     "kind": "use",
+     "title": "Chop with iron axes",
+     "icon": "minecraft:iron_axe"
+    },
+    {
+     "level": 15,
+     "kind": "machine",
+     "title": "Mechanical saws",
+     "icon": "create:mechanical_saw"
+    },
+    {
+     "level": 15,
+     "kind": "chop",
+     "title": "Chop jungle trees",
+     "icon": "minecraft:jungle_log"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+12.5% chopping speed in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "use",
+     "title": "Chop with diamond axes",
+     "icon": "minecraft:diamond_axe"
+    },
+    {
+     "level": 30,
+     "kind": "chop",
+     "title": "Chop acacia trees",
+     "icon": "minecraft:acacia_log"
+    },
+    {
+     "level": 35,
+     "kind": "chop",
+     "title": "Chop dark oak trees",
+     "icon": "minecraft:dark_oak_log"
+    },
+    {
+     "level": 45,
+     "kind": "chop",
+     "title": "Chop mangroves",
+     "icon": "minecraft:mangrove_log"
+    },
+    {
+     "level": 50,
+     "kind": "use",
+     "title": "Chop with netherite axes",
+     "icon": "minecraft:netherite_axe"
+    },
+    {
+     "level": 50,
+     "kind": "chop",
+     "title": "Chop cherry trees",
+     "icon": "minecraft:cherry_log"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+25% chopping speed in all",
+     "icon": null
+    },
+    {
+     "level": 60,
+     "kind": "chop",
+     "title": "Chop crimson and warped stems",
+     "icon": "minecraft:crimson_stem"
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+37.5% chopping speed in all",
+     "icon": null
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Woodcutting Cape",
+     "icon": "lemursaucepacket:woodcutting_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+49.5% chopping speed in all",
+     "icon": null
+    }
+   ]
+  },
+  "farming": {
+   "trainedBy": "Harvesting crops",
+   "perLevel": "Faster tilling every level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "use",
+     "title": "Farm with stone hoes",
+     "icon": "minecraft:stone_hoe"
+    },
+    {
+     "level": 5,
+     "kind": "plant",
+     "title": "Plant beetroot",
+     "icon": "minecraft:beetroot_seeds"
+    },
+    {
+     "level": 5,
+     "kind": "plant",
+     "title": "Plant cabbages and onions",
+     "icon": "farmersdelight:cabbage_seeds"
+    },
+    {
+     "level": 10,
+     "kind": "use",
+     "title": "Farm with gold hoes",
+     "icon": "minecraft:golden_hoe"
+    },
+    {
+     "level": 10,
+     "kind": "plant",
+     "title": "Plant tomatoes and sweet berries",
+     "icon": "farmersdelight:tomato_seeds"
+    },
+    {
+     "level": 15,
+     "kind": "use",
+     "title": "Farm with iron hoes",
+     "icon": "minecraft:iron_hoe"
+    },
+    {
+     "level": 15,
+     "kind": "machine",
+     "title": "Mechanical harvesters and ploughs",
+     "icon": "create:mechanical_harvester"
+    },
+    {
+     "level": 15,
+     "kind": "plant",
+     "title": "Plant pumpkins and melons",
+     "icon": "minecraft:pumpkin_seeds"
+    },
+    {
+     "level": 20,
+     "kind": "plant",
+     "title": "Plant rice",
+     "icon": "farmersdelight:rice"
+    },
+    {
+     "level": 25,
+     "kind": "plant",
+     "title": "Plant cocoa",
+     "icon": "minecraft:cocoa_beans"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+12.5% tilling speed in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "use",
+     "title": "Farm with diamond hoes",
+     "icon": "minecraft:diamond_hoe"
+    },
+    {
+     "level": 30,
+     "kind": "plant",
+     "title": "Plant nether wart",
+     "icon": "minecraft:nether_wart"
+    },
+    {
+     "level": 40,
+     "kind": "plant",
+     "title": "Plant torchflowers and pitcher plants",
+     "icon": "minecraft:torchflower_seeds"
+    },
+    {
+     "level": 50,
+     "kind": "use",
+     "title": "Farm with netherite hoes",
+     "icon": "minecraft:netherite_hoe"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+25% tilling speed in all",
+     "icon": null
+    },
+    {
+     "level": 60,
+     "kind": "plant",
+     "title": "Plant chorus flowers",
+     "icon": "minecraft:chorus_flower"
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+37.5% tilling speed in all",
+     "icon": null
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Farming Cape",
+     "icon": "lemursaucepacket:farming_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+49.5% tilling speed in all",
+     "icon": null
+    }
+   ]
+  },
+  "fishing": {
+   "trainedBy": "Catching fish",
+   "perLevel": "Better catches as you go",
+   "unlocks": [
+    {
+     "level": 20,
+     "kind": "catch",
+     "title": "Land treasure: enchanted books and gear, name tags, saddles, nautilus shells",
+     "icon": "minecraft:nautilus_shell"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Fishing Cape",
+     "icon": "lemursaucepacket:fishing_cape"
+    }
+   ]
+  },
+  "cooking": {
+   "trainedBy": "Cooking food",
+   "perLevel": "New recipes as you go",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "make",
+     "title": "Beetroot soup, sandwiches and salads",
+     "icon": "minecraft:beetroot_soup"
+    },
+    {
+     "level": 10,
+     "kind": "make",
+     "title": "Pumpkin pie, hamburgers, wraps and Farmer's Delight soups",
+     "icon": "minecraft:pumpkin_pie"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Cake, rabbit stew, stews, rice dishes and rolls",
+     "icon": "minecraft:cake"
+    },
+    {
+     "level": 20,
+     "kind": "machine",
+     "title": "Encased fans (bulk smoking, blasting and washing)",
+     "icon": "create:encased_fan"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Golden carrots, pies, pasta and plated meals",
+     "icon": "minecraft:golden_carrot"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Squid ink pasta, glow berry custard and nether salad",
+     "icon": "farmersdelight:squid_ink_pasta"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Golden apples",
+     "icon": "minecraft:golden_apple"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Farmer's Delight feasts",
+     "icon": "farmersdelight:roast_chicken_block"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Cooking Cape",
+     "icon": "lemursaucepacket:cooking_cape"
+    }
+   ]
+  },
+  "smithing": {
+   "trainedBy": "Smelting metals and smithing gear",
+   "perLevel": "New recipes as you go",
+   "unlocks": [
+    {
+     "level": 10,
+     "kind": "make",
+     "title": "Golden tools, weapons and armour",
+     "icon": "minecraft:golden_sword"
+    },
+    {
+     "level": 10,
+     "kind": "quest",
+     "title": "The Knight's Sword (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Iron tools, weapons and armour",
+     "icon": "minecraft:iron_sword"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Anvils and hoppers",
+     "icon": "minecraft:anvil"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Prospector's Plating (for the Prospector set)",
+     "icon": "lemursaucepacket:prospector_plating"
+    },
+    {
+     "level": 35,
+     "kind": "machine",
+     "title": "Steam engines",
+     "icon": "create:steam_engine"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Copying armour trim templates",
+     "icon": "minecraft:coast_armor_trim_smithing_template"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Diamond Lattice (for the Compacted Diamond set)",
+     "icon": "lemursaucepacket:diamond_lattice"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Netherite gear (the smithing table upgrade)",
+     "icon": "minecraft:netherite_sword"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Copying the netherite upgrade template",
+     "icon": "minecraft:netherite_upgrade_smithing_template"
+    },
+    {
+     "level": 65,
+     "kind": "make",
+     "title": "Compacted netherite armour",
+     "icon": "lemursaucepacket:compacted_netherite_helmet"
+    },
+    {
+     "level": 70,
+     "kind": "make",
+     "title": "Maces",
+     "icon": "minecraft:mace"
+    },
+    {
+     "level": 70,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Smithing Cape",
+     "icon": "lemursaucepacket:smithing_cape"
+    }
+   ]
+  },
+  "crafting": {
+   "trainedBy": "Crafting",
+   "perLevel": "New recipes as you go",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "make",
+     "title": "Leather armour",
+     "icon": "minecraft:leather_helmet"
+    },
+    {
+     "level": 10,
+     "kind": "make",
+     "title": "Bows",
+     "icon": "minecraft:bow"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Shields",
+     "icon": "minecraft:shield"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Crossbows",
+     "icon": "minecraft:crossbow"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Climbing Boots (a relic: step up full blocks)",
+     "icon": "lsp_fixes:climbing_boots"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Diamond tools, weapons and armour",
+     "icon": "minecraft:diamond_sword"
+    },
+    {
+     "level": 30,
+     "kind": "machine",
+     "title": "Mechanical crafters",
+     "icon": "create:mechanical_crafter"
+    },
+    {
+     "level": 35,
+     "kind": "make",
+     "title": "Aeronaut's Rigging (for the Aeronaut set)",
+     "icon": "lemursaucepacket:aeronaut_rigging"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Enchanting tables",
+     "icon": "minecraft:enchanting_table"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Duelist's Filigree (for the Brass Duelist set)",
+     "icon": "lemursaucepacket:duelists_filigree"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Ender chests",
+     "icon": "minecraft:ender_chest"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "End crystals",
+     "icon": "minecraft:end_crystal"
+    },
+    {
+     "level": 62,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 65,
+     "kind": "make",
+     "title": "Shulker boxes",
+     "icon": "minecraft:shulker_box"
+    },
+    {
+     "level": 70,
+     "kind": "make",
+     "title": "Conduits",
+     "icon": "minecraft:conduit"
+    },
+    {
+     "level": 75,
+     "kind": "make",
+     "title": "Beacons",
+     "icon": "minecraft:beacon"
+    },
+    {
+     "level": 80,
+     "kind": "make",
+     "title": "Respawn anchors and lodestones",
+     "icon": "minecraft:respawn_anchor"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Crafting Cape",
+     "icon": "lemursaucepacket:crafting_cape"
+    }
+   ]
+  },
+  "enchanting": {
+   "trainedBy": "The enchanting table",
+   "perLevel": "Enchantments reach further as you go",
+   "unlocks": [
+    {
+     "level": 35,
+     "kind": "machine",
+     "title": "Blaze enchanters",
+     "icon": "create_enchantment_industry:blaze_enchanter"
+    },
+    {
+     "level": 50,
+     "kind": "machine",
+     "title": "Printers (they copy enchanted books)",
+     "icon": "create_enchantment_industry:printer"
+    },
+    {
+     "level": 60,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Enchanting Cape",
+     "icon": "lemursaucepacket:enchanting_cape"
+    }
+   ]
+  },
+  "brewing": {
+   "trainedBy": "Brewing potions",
+   "perLevel": "New potions as you go",
+   "unlocks": [
+    {
+     "level": 1,
+     "kind": "brew",
+     "title": "Awkward potions, the base of nearly all others",
+     "icon": "minecraft:nether_wart"
+    },
+    {
+     "level": 5,
+     "kind": "brew",
+     "title": "Swiftness",
+     "icon": "minecraft:sugar"
+    },
+    {
+     "level": 10,
+     "kind": "brew",
+     "title": "Night Vision",
+     "icon": "minecraft:golden_carrot"
+    },
+    {
+     "level": 15,
+     "kind": "brew",
+     "title": "Leaping",
+     "icon": "minecraft:rabbit_foot"
+    },
+    {
+     "level": 20,
+     "kind": "brew",
+     "title": "Fire Resistance",
+     "icon": "minecraft:magma_cream"
+    },
+    {
+     "level": 25,
+     "kind": "brew",
+     "title": "Healing",
+     "icon": "minecraft:glistering_melon_slice"
+    },
+    {
+     "level": 25,
+     "kind": "brew",
+     "title": "Poison",
+     "icon": "minecraft:spider_eye"
+    },
+    {
+     "level": 30,
+     "kind": "brew",
+     "title": "Water Breathing",
+     "icon": "minecraft:pufferfish"
+    },
+    {
+     "level": 30,
+     "kind": "brew",
+     "title": "Longer potions",
+     "icon": "minecraft:redstone"
+    },
+    {
+     "level": 35,
+     "kind": "brew",
+     "title": "Strength",
+     "icon": "minecraft:blaze_powder"
+    },
+    {
+     "level": 40,
+     "kind": "brew",
+     "title": "Regeneration",
+     "icon": "minecraft:ghast_tear"
+    },
+    {
+     "level": 45,
+     "kind": "brew",
+     "title": "Weakness, Harming, Slowness and Invisibility",
+     "icon": "minecraft:fermented_spider_eye"
+    },
+    {
+     "level": 50,
+     "kind": "brew",
+     "title": "Splash potions",
+     "icon": "minecraft:gunpowder"
+    },
+    {
+     "level": 50,
+     "kind": "brew",
+     "title": "Slow Falling",
+     "icon": "minecraft:phantom_membrane"
+    },
+    {
+     "level": 55,
+     "kind": "make",
+     "title": "Eyes of ender",
+     "icon": "minecraft:ender_eye"
+    },
+    {
+     "level": 55,
+     "kind": "quest",
+     "title": "Dragon Slayer I (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 60,
+     "kind": "brew",
+     "title": "Stronger potions",
+     "icon": "minecraft:glowstone_dust"
+    },
+    {
+     "level": 65,
+     "kind": "brew",
+     "title": "Turtle Master",
+     "icon": "minecraft:turtle_helmet"
+    },
+    {
+     "level": 70,
+     "kind": "brew",
+     "title": "Lingering potions",
+     "icon": "minecraft:dragon_breath"
+    },
+    {
+     "level": 80,
+     "kind": "brew",
+     "title": "Wind Charging",
+     "icon": "minecraft:breeze_rod"
+    },
+    {
+     "level": 80,
+     "kind": "brew",
+     "title": "Weaving",
+     "icon": "minecraft:cobweb"
+    },
+    {
+     "level": 80,
+     "kind": "brew",
+     "title": "Oozing",
+     "icon": "minecraft:slime_block"
+    },
+    {
+     "level": 80,
+     "kind": "brew",
+     "title": "Infested",
+     "icon": "minecraft:stone"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Brewing Cape",
+     "icon": "lemursaucepacket:brewing_cape"
+    }
+   ]
+  },
+  "construction": {
+   "trainedBy": "Building",
+   "perLevel": "+0.1% chance a block you place is not used up, a level",
+   "unlocks": [
+    {
+     "level": 5,
+     "kind": "make",
+     "title": "Ten stone bricks from eight stone and a clay ball",
+     "icon": "minecraft:stone_bricks"
+    },
+    {
+     "level": 10,
+     "kind": "make",
+     "title": "Mossy cobblestone by the eight: cobblestone round a moss block",
+     "icon": "minecraft:mossy_cobblestone"
+    },
+    {
+     "level": 15,
+     "kind": "make",
+     "title": "Mossy stone bricks by the eight: stone bricks round a moss block",
+     "icon": "minecraft:mossy_stone_bricks"
+    },
+    {
+     "level": 20,
+     "kind": "make",
+     "title": "Cracked stone bricks without a furnace: stone bricks round a flint",
+     "icon": "minecraft:cracked_stone_bricks"
+    },
+    {
+     "level": 25,
+     "kind": "make",
+     "title": "Smooth stone without a furnace: stone round a sand",
+     "icon": "minecraft:smooth_stone"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "2.5% chance a placed block isn't used up",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "machine",
+     "title": "Schematicannons",
+     "icon": "create:schematicannon"
+    },
+    {
+     "level": 30,
+     "kind": "make",
+     "title": "Chiseled stone bricks by the eight: stone bricks round an iron nugget",
+     "icon": "minecraft:chiseled_stone_bricks"
+    },
+    {
+     "level": 40,
+     "kind": "make",
+     "title": "Cracked deepslate bricks without a furnace",
+     "icon": "minecraft:cracked_deepslate_bricks"
+    },
+    {
+     "level": 45,
+     "kind": "make",
+     "title": "Cracked deepslate tiles without a furnace",
+     "icon": "minecraft:cracked_deepslate_tiles"
+    },
+    {
+     "level": 50,
+     "kind": "make",
+     "title": "Cracked nether bricks without a furnace",
+     "icon": "minecraft:cracked_nether_bricks"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "5% chance a placed block isn't used up",
+     "icon": null
+    },
+    {
+     "level": 55,
+     "kind": "make",
+     "title": "Cracked polished blackstone bricks without a furnace",
+     "icon": "minecraft:cracked_polished_blackstone_bricks"
+    },
+    {
+     "level": 60,
+     "kind": "make",
+     "title": "Eight stone brick stairs from six stone bricks and a clay ball",
+     "icon": "minecraft:stone_brick_stairs"
+    },
+    {
+     "level": 70,
+     "kind": "make",
+     "title": "A lantern from four iron nuggets, four glass panes and a torch",
+     "icon": "minecraft:lantern"
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "7.5% chance a placed block isn't used up",
+     "icon": null
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "The Mason's Palette: as many of one decorative block as you like",
+     "icon": "lsp_fixes:masons_palette"
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Construction Cape",
+     "icon": "lemursaucepacket:construction_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "9.9% chance a placed block isn't used up",
+     "icon": null
+    }
+   ]
+  },
+  "agility": {
+   "trainedBy": "Moving, sprinting and swimming",
+   "perLevel": "+0.01% speed and -0.5% fall damage a level (to 50%)",
+   "unlocks": [
+    {
+     "level": 25,
+     "kind": "wear",
+     "title": "Wear the Climbing Boots (a relic)",
+     "icon": "lsp_fixes:climbing_boots"
+    },
+    {
+     "level": 25,
+     "kind": "perk",
+     "title": "+2.5% speed and 12.5% less fall damage in all",
+     "icon": null
+    },
+    {
+     "level": 30,
+     "kind": "wear",
+     "title": "Wear the elytra",
+     "icon": "minecraft:elytra"
+    },
+    {
+     "level": 35,
+     "kind": "machine",
+     "title": "Train stations and train controls",
+     "icon": "create:track_station"
+    },
+    {
+     "level": 50,
+     "kind": "perk",
+     "title": "+5% speed and 25% less fall damage in all",
+     "icon": null
+    },
+    {
+     "level": 60,
+     "kind": "quest",
+     "title": "Dragon Slayer II (quest)",
+     "icon": "ftbquests:book"
+    },
+    {
+     "level": 75,
+     "kind": "perk",
+     "title": "+7.5% speed and 37.5% less fall damage in all",
+     "icon": null
+    },
+    {
+     "level": 99,
+     "kind": "cape",
+     "title": "The Agility Cape",
+     "icon": "lemursaucepacket:agility_cape"
+    },
+    {
+     "level": 99,
+     "kind": "perk",
+     "title": "+9.9% speed and 49.5% less fall damage in all",
+     "icon": null
+    }
+   ]
+  }
+ }
+}

@@ -28,15 +28,18 @@
     "create.BlueprintGateMixin",
     "farmersdelight.CookingPotGateMixin",
     "sable.SableCarryFreeBlocksMixin",
-    "create.DrillFreeBlockMixin"
+    "create.DrillFreeBlockMixin",
+    "distanthorizons.ChunkyAccessorMixin"
   ],
   "client": [
     "CapeSkinMixin",
+    "KeyMappingSameMixin",
     "pmmo.SkillHudMixin",
     "pmmo.GainHudMixin",
     "pmmo.GainEntryAccessor",
     "pmmo.DetailScrollMixin",
-    "pmmo.SkillsSidePanelMixin"
+    "pmmo.SkillsSidePanelMixin",
+    "pmmo.PlayerSkillWidgetMixin"
   ],
   "overwrites": {
     "requireAnnotations": true

@@ -21,6 +21,7 @@ import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import sharp from 'sharp'
 import { unzipSync } from 'fflate'
+import { buildRelicCards } from './relic-cards.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const ITEM_DIR = path.join(root, 'pack/kubejs/assets/lemursaucepacket/textures/item')
@@ -850,6 +851,18 @@ const SPRITES = [
     pause: 206
   },
 
+  {
+    // The Climbing Boots (a relic: Crafting to make, Agility to wear): fur-lined leather, a brass strap and buckle,
+    // steel toes and crampon spikes under the soles.
+    id: 'climbing_boots',
+    kind: 'mod',
+    base: 'iron_boots',
+    ramps: { a: 'leather' },
+    legend: { F: 'fleece', B: 'brass', K: 'brass@5', S: 'steel', s: 'steel@4' },
+    paint: ['', '', '', '....FFF..FFF....', '...FFFF..FFFF...', '', '...BBKB..BKBB...', '', '', '', '.S............S.', '.S............S.', '.SSSS......SSSS.', '..s.s......s.s..'],
+    pause: 220
+  },
+
   // ------------------------------------------------ Relics effect icons Relics 0.12.8 forgot
   {
     id: 'flight',
@@ -1021,6 +1034,7 @@ export async function buildItems({ preview } = {}) {
     firstFrames.push({ id: s.id, rgba: toRgba(cells) })
   }
   console.log(`items: ${SPRITES.filter((s) => s.kind !== 'effect').length} item sprites (16x16, Relics style), ${SPRITES.filter((s) => s.kind === 'effect').length} Relics effect icons`)
+  await buildRelicCards()
   await buildCompasses(vanilla, firstFrames)
   if (preview) await writePreview(preview, firstFrames)
 }

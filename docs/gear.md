@@ -158,4 +158,10 @@ Some pieces never have a recipe:
 - **Stormcaller's Sabre**: 6% per chest in pillager outpost, dungeons_arise structures.
 - **Duelist's Pattern**: 25% per chest in dungeons_arise structures, stronghold library, ancient city.
 
+## Relics
+
+The Relics mod's relics turn up in loot chests and go in their own slots (open the Curios panel with **G**). Shift over one in a menu for its page: its abilities, which you unlock there with a few clicks, how it gains experience, and what its levels raise. The pack makes one of its own:
+
+- **Climbing Boots** (feet slot): step up full blocks without jumping, and each ledge stepped up gives a moment of extra speed. Made at a crafting table from leather boots, two string, two flint and two iron ingots at Crafting 20; wearing them needs Agility 25 (before that they do nothing, and Project MMO slows you as it does for armour you aren't ready for). Their ability, Foothold, starts at 1.05 to 1.1 blocks; the relic levels from the ledges it climbs, and its points raise the step to 1.25 blocks and the speed from about 5% to 20%.
+
 Generated from `gear/gear.mjs`, so this page matches the game.

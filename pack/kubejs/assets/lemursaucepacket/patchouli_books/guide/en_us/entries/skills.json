@@ -18,11 +18,20 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Open your inventory ($(bold)E$(), or ESC → Skills): the panel on the left lists every skill, its level and progress. Hover a row for the XP to the next level. Item tooltips show the level an item needs, to use it or to make it."
+      "text": "Your inventory ($(bold)E$()) has a skills panel on the left: every skill, its level and progress. Hover a row for the XP to the next level; click it for that skill's guide (below). Item tooltips show the level an item needs, to use it or to make it."
     },
     {
       "type": "patchouli:text",
       "text": "XP shows up as it comes in, in a small tracker at the top of the screen, just below the block info. Each skill that just gained XP gets a card with its icon, the XP so far (it keeps counting up while you work), its level and a bar towards the next one. When a gain takes you up a level, the card turns gold and says $(bold)Level N!$() for a few seconds. Cards fade out a few seconds after the last XP. Move or hide the tracker in ESC → HUD Layout (\"XP gains\")."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The skills screen",
+      "text": "ESC → $(bold)Skills$() (or $(#e0ac46)/skills$()) shows every skill in its group, Combat, Gathering, Artisan and Support, as RuneScape's skills tab does: its level and a bar towards the next, with your total level, combat level and total XP. Hover a skill for its XP, the XP to the next level, what trains it, what every level gives and what it unlocks next."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Click a skill, here or in the inventory's panel, for its guide: every level that unlocks something, down a track lit as far as you've got. Each unlock shows its item and what sort of thing it is (wield, wear, use, make, machine, plant, chop, brew, catch, perk, quest or cape); hover one for what that means and how much XP it is away. A marker shows your level and the XP to the next unlock. The strip along the bottom, or the arrow keys, switches skill, and $(#e0ac46)/skills mining$() opens a skill's guide straight away."
     },
     {
       "type": "patchouli:text",
@@ -96,7 +105,11 @@
     {
       "type": "patchouli:text",
       "title": "Crafting",
-      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Leather armour$(br)$(bold)10$() - Bows$(br)$(bold)15$() - Shields$(br)$(bold)20$() - Crossbows$(br)$(bold)30$() - Diamond tools, weapons and armour$(br)$(bold)35$() - Aeronaut's Rigging (for the Aeronaut set)$(br)$(bold)40$() - Enchanting tables$(br)$(bold)40$() - Duelist's Filigree (for the Brass Duelist set)$(br)$(bold)50$() - Ender chests$(br)$(bold)60$() - End crystals$(br)$(bold)65$() - Shulker boxes$(br)$(bold)70$() - Conduits$(br)$(bold)75$() - Beacons$(br)$(bold)80$() - Respawn anchors and lodestones"
+      "text": "$(#b9a98a)Level - Lets you make$()$(br)$(bold)5$() - Leather armour$(br)$(bold)10$() - Bows$(br)$(bold)15$() - Shields$(br)$(bold)20$() - Crossbows$(br)$(bold)20$() - Climbing Boots (a relic: step up full blocks)$(br)$(bold)30$() - Diamond tools, weapons and armour$(br)$(bold)35$() - Aeronaut's Rigging (for the Aeronaut set)$(br)$(bold)40$() - Enchanting tables$(br)$(bold)40$() - Duelist's Filigree (for the Brass Duelist set)$(br)$(bold)50$() - Ender chests$(br)$(bold)60$() - End crystals$(br)$(bold)65$() - Shulker boxes$(br)$(bold)70$() - Conduits$(br)$(bold)75$() - Beacons"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)80$() - Respawn anchors and lodestones"
     },
     {
       "type": "patchouli:text",

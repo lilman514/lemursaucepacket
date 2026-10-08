@@ -23,6 +23,7 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | Space | Jump | Minecraft |
 | Left Shift | Sneak | Minecraft |
 | Left Control | Sprint | Minecraft |
+| ` | Toggle Auto Walk (press it again, or walk backwards, to stop) | Duper's AutoWalk |
 | Left Button | Attack/Destroy | Minecraft |
 | Right Button | Use Item/Place Block | Minecraft |
 | Middle Button | Pick Block | Minecraft |
@@ -36,7 +37,7 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | Key | Action | Mod |
 |---|---|---|
 | Q | Drop Selected Item | Minecraft |
-| E | Open/Close Inventory (with your skills panel; also on the ESC menu) | Minecraft |
+| E | Open/Close Inventory (with your skills panel: click a skill for what every level unlocks) | Minecraft |
 | F | Swap Item With Off Hand | Minecraft |
 | 1 | Hotbar Slot 1 | Minecraft |
 | 2 | Hotbar Slot 2 | Minecraft |
@@ -58,8 +59,8 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | [ | Transfer to Storage (in menus) | Sophisticated Core |
 | ] | Transfer to Inventory (in menus) | Sophisticated Core |
 | Middle Button | Sort Storage/Backpack (in a backpack or storage screen) | Sophisticated Core |
-| ALT + X | Switch Upgrade in the 2nd Slot On/Off | Sophisticated Backpacks |
 | ALT + Z | Switch Upgrade in the 1st Slot On/Off | Sophisticated Backpacks |
+| ALT + X | Switch Upgrade in the 2nd Slot On/Off | Sophisticated Backpacks |
 | CTRL + Left Button | Transfer one (in menus) | Inventory Essentials |
 | SHIFT + Left Button | Bulk Drop out of Screen (in menus) | Inventory Essentials |
 
@@ -93,7 +94,6 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | Key | Action | Mod |
 |---|---|---|
 | L | Advancements | Minecraft |
-| ` | Vein Mine Marker (vein mining is off on this server) | Project MMO |
 | - | Toggle Break Speed Perks | Project MMO |
 | H | Open Missions UI (this week's missions; also on the ESC menu) | Create Brassworks Missions |
 | = | Zoom In (in the quest book) | FTB Quests |
@@ -188,6 +188,28 @@ These are the keys you start with. Most are each mod's own default; the pack mov
 | Page Up | Adjust Camera Up (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
 | Page Down | Adjust Camera Down (in the over-the-shoulder view) | Shoulder Surfing Reloaded |
 
+### Replays
+
+ReForgedPlay's keys only work in the replay viewer (Replay Viewer, on the title screen), so they share keys with everyday ones.
+
+| Key | Action | Mod |
+|---|---|---|
+| B | Player Overview (in the replay viewer) | Replay Mod |
+| Z | Toggle Lighting (in the replay viewer) | Replay Mod |
+| Q | Quick Mode (in the replay viewer) | Replay Mod |
+| M | Add Event Marker (in the replay viewer) | Replay Mod |
+| N | Capture Thumbnail (in the replay viewer) | Replay Mod |
+| P | Play/Pause Replay (in the replay viewer) | Replay Mod |
+| L | Roll Clockwise (in the replay viewer) | Replay Mod |
+| J | Roll Counterclockwise (in the replay viewer) | Replay Mod |
+| K | Reset Camera Tilt (in the replay viewer) | Replay Mod |
+| H | Toggle Path Preview (in the replay viewer) | Replay Mod |
+| X | Open Keyframe Presets (in the replay viewer) | Replay Mod |
+| C | Clear Keyframes (in the replay viewer) | Replay Mod |
+| V | Synchronize Timeline (in the replay viewer) | Replay Mod |
+| I | Position/Spectator Keyframe (in the replay viewer) | Replay Mod |
+| O | Time Keyframe (in the replay viewer) | Replay Mod |
+
 <!-- book:skip -->
 
 ### Editing and cheats
@@ -235,8 +257,9 @@ These have no key until you give them one in Key Binds.
 
 | Mod | Actions |
 |---|---|
+| Duper's AutoWalk | Open Configuration |
 | Inventory Essentials | Restock Container, Restock Inventory, Dump to Container |
-| Sophisticated Backpacks | Swap tool based on current block/entity, Switch Upgrade in the 5th Slot On/Off, Switch Upgrade in the 4th Slot On/Off, Switch Upgrade in the 3rd Slot On/Off |
+| Sophisticated Backpacks | Swap tool based on current block/entity, Switch Upgrade in the 3rd Slot On/Off, Switch Upgrade in the 4th Slot On/Off, Switch Upgrade in the 5th Slot On/Off |
 | Simple Voice Chat | Push to Talk, Whisper, Hide Voice Chat Icons, Voice Chat Settings, Group Management, Toggle Recording, Adjust Volumes |
 | Xaero's Minimap | Minimap Server Settings, Zoom In Minimap, Zoom Out Minimap, Enlarge Minimap, Toggle Minimap, Toggle In-World Waypoints, Toggle On-Map Waypoints, Toggle Slime Chunks, Toggle Chunk Grid, Switch Waypoint Set, Toggle All WP Sets Render, Toggle Light Overlay, Toggle Entity Radar, Reverse Radar Render Order, Toggle Manual Cave Mode, "List Players" Alternative, Toggle Tracked Players On Map, Toggle Tracked Players In World |
 | Xaero's World Map | Toggle Chunk Claims, Open Server Settings, Zoom In (alternative), Zoom Out (alternative), Toggle Dimension |
@@ -252,6 +275,7 @@ These have no key until you give them one in Key Binds.
 | LemurSaucePacket Fixes | Edit HUD layout |
 | Dynamic FPS | Force Unfocused Mode (Toggle), Disable Dynamic FPS (Toggle) |
 | Shoulder Surfing Reloaded | Swap Shoulder, Toggle First Person, Toggle Third Person (Front), Toggle Third Person (Back), Free Look, Toggle Camera Coupling, Toggle X-Offset Presets, Toggle Y-Offset Presets, Toggle Z-Offset Presets, Enter First Person, Enter Third Person (Front), Enter Third Person (Back), Enter Shoulder Surfing |
+| Replay Mod | ReplayMod Settings, Position Keyframe, Position/Spectator + Time Keyframe |
 
 <!-- book:end -->
 

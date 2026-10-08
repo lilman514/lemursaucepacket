@@ -15,8 +15,9 @@ import org.lwjgl.glfw.GLFW;
 /**
  * The HUD layout editor: the game view behind a light shade, with representative sample content in each
  * movable HUD part. The live HUD is suppressed while this screen is open.
- * Drag to move (edges and centre lines snap; Shift places freely), right-click or Reset for the mod's default,
- * arrow keys nudge the selected box. Save writes every changed part into its own mod's settings.
+ * Drag to move (edges and centre lines snap; Shift places freely), drag a box's corner handle, roll the mouse wheel
+ * over it or press + and - to resize it, right-click or Reset for the mod's default, arrow keys nudge the selected
+ * box. Save writes every changed part's place and size into its own mod's settings.
  *
  * <p>Public with a no-argument constructor so FancyMenu's {@code opengui} action can open it from the ESC menu.
  */
@@ -33,6 +34,9 @@ public final class HudLayoutScreen extends Screen {
     private static final int GREY = 0xFF7D7367;
     private static final int SNAP = 4;
 
+    /** The corner handle that resizes a box (GUI pixels). */
+    private static final int HANDLE = 5;
+
     private static final class Entry {
         final HudElement element;
         Box box;
@@ -40,11 +44,24 @@ public final class HudLayoutScreen extends Screen {
         boolean reset;
         final boolean initiallyShown;
         boolean shown;
+        /** Its size (1 = its mod's normal size) and whether the editor changed it. */
+        double scale;
+        boolean scaled;
 
         Entry(HudElement element, Box box) {
             this.element = element;
             this.box = box;
             this.initiallyShown = this.shown = element.shown();
+            this.scale = element.scale();
+        }
+
+        boolean resizable() {
+            return element.resizable();
+        }
+
+        /** The handle at the box's bottom-right corner, inside it. */
+        boolean onHandle(double x, double y) {
+            return resizable() && x >= box.right() - HANDLE - 1 && x < box.right() + 2 && y >= box.bottom() - HANDLE - 1 && y < box.bottom() + 2;
         }
     }
 
@@ -53,6 +70,10 @@ public final class HudLayoutScreen extends Screen {
     private int builtH = -1;
     private Entry dragging;
     private Entry selected;
+    /** A box being resized by its corner: where the drag started, its box and size then. */
+    private Entry resizing;
+    private Box resizeFrom;
+    private double resizeScale;
     private double grabX;
     private double grabY;
     private boolean guideX;
@@ -119,7 +140,7 @@ public final class HudLayoutScreen extends Screen {
         if (entries.isEmpty()) {
             g.drawCenteredString(font, Component.literal("No movable HUD parts found (see the log)."), width / 2, height / 2 - 4, PARCHMENT);
         }
-        Component hint = Component.literal("Drag: move  |  H: show/hide  |  Right-click: reset");
+        Component hint = Component.literal("Drag: move  |  Corner, wheel or +/-: resize  |  H: show/hide  |  Right-click: reset");
         int hintW = font.width(hint);
         g.fill(width / 2 - hintW / 2 - 3, height - 36, width / 2 + hintW / 2 + 3, height - 25, IRON);
         g.drawCenteredString(font, hint, width / 2, height - 34, PARCHMENT);
@@ -132,12 +153,18 @@ public final class HudLayoutScreen extends Screen {
         int edge = e == selected || e == dragging ? BRASS_HI : hovered ? BRASS : shown ? BRASS_DARK : GREY;
         g.renderOutline(b.x(), b.y(), b.w(), b.h(), edge);
         if (e == selected) g.renderOutline(b.x() - 1, b.y() - 1, b.w() + 2, b.h() + 2, BRASS_DARK);
-        String label = e.element.name() + (shown ? "" : " (hidden)") + (e.moved || e.reset || e.shown != e.initiallyShown ? " *" : "");
+        String size = e.resizable() && Math.abs(e.scale - 1) > 0.001 ? " " + Math.round(e.scale * 100) + "%" : "";
+        String label = e.element.name() + size + (shown ? "" : " (hidden)") + (e.moved || e.reset || e.scaled || e.shown != e.initiallyShown ? " *" : "");
         if (shown) {
             HudPreview.render(g, e.element.id(), b);
             g.renderOutline(b.x(), b.y(), b.w(), b.h(), edge);
-            if (e != selected && !hovered) return;
         }
+        // The resize handle on the box in hand: a brass corner.
+        if ((e == selected || hovered || e == resizing) && e.resizable()) {
+            g.fill(b.right() - HANDLE, b.bottom() - HANDLE, b.right(), b.bottom(), e == resizing ? BRASS_HI : BRASS);
+            g.renderOutline(b.right() - HANDLE - 1, b.bottom() - HANDLE - 1, HANDLE + 2, HANDLE + 2, BRASS_DARK);
+        }
+        if (shown && e != selected && !hovered) return;
         int textW = font.width(label);
         int color = shown ? PARCHMENT : GREY;
         if (!shown && textW + 4 <= b.w() && b.h() >= 11) {
@@ -155,13 +182,16 @@ public final class HudLayoutScreen extends Screen {
     public void render(GuiGraphics g, int mouseX, int mouseY, float partialTick) {
         updateResetButton();
         super.render(g, mouseX, mouseY, partialTick);
-        if (dragging != null) return;
+        if (dragging != null || resizing != null) return;
         Entry hovered = entryAt(mouseX, mouseY);
         if (hovered != null && !overWidget(mouseX, mouseY)) {
             List<Component> lines = new ArrayList<>();
             lines.add(Component.literal(hovered.element.name()).withStyle(ChatFormatting.GOLD));
             lines.add(Component.literal("Select, then " + (hovered.shown ? "Hide" : "Show") + " or press H.").withStyle(ChatFormatting.GRAY));
             lines.add(Component.literal("Shift: move freely. Arrows: nudge.").withStyle(ChatFormatting.GRAY));
+            if (hovered.resizable())
+                lines.add(Component.literal("Size " + Math.round(hovered.scale * 100) + "%: drag the corner, roll the wheel or press + and -.").withStyle(ChatFormatting.GRAY));
+            else if (hovered.element.sizeHint() != null) lines.add(Component.literal(hovered.element.sizeHint()).withStyle(ChatFormatting.GRAY));
             if (!hovered.shown) lines.add(Component.literal("Hidden after saving. You can still move and select it here.").withStyle(ChatFormatting.GRAY));
             g.renderComponentTooltip(font, lines, mouseX, mouseY);
         }
@@ -199,6 +229,17 @@ public final class HudLayoutScreen extends Screen {
     @Override
     public boolean mouseClicked(double x, double y, int button) {
         if (super.mouseClicked(x, y, button)) return true;
+        // The corner handle of the box in hand (or under the mouse) resizes it.
+        if (button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
+            Entry h = selected != null && selected.onHandle(x, y) ? selected : null;
+            if (h == null) for (Entry c : entries) if (c.onHandle(x, y)) h = c;
+            if (h != null) {
+                selected = resizing = h;
+                resizeFrom = h.box;
+                resizeScale = h.scale;
+                return true;
+            }
+        }
         Entry e = entryAt(x, y);
         if (e == null) {
             selected = null;
@@ -218,6 +259,13 @@ public final class HudLayoutScreen extends Screen {
 
     @Override
     public boolean mouseDragged(double x, double y, int button, double dx, double dy) {
+        if (resizing != null && button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
+            // The corner follows the mouse, the top-left stays put; the box keeps its shape.
+            double fx = (x - resizeFrom.x()) / Math.max(1, resizeFrom.w());
+            double fy = (y - resizeFrom.y()) / Math.max(1, resizeFrom.h());
+            resize(resizing, resizeScale * Math.max(fx, fy), resizeFrom, resizeScale, false);
+            return true;
+        }
         if (dragging != null && button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
             moveTo(dragging, x - grabX, y - grabY, !hasShiftDown());
             return true;
@@ -227,6 +275,11 @@ public final class HudLayoutScreen extends Screen {
 
     @Override
     public boolean mouseReleased(double x, double y, int button) {
+        if (resizing != null && button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
+            settle(resizing);
+            resizing = null;
+            return true;
+        }
         if (dragging != null && button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
             settle(dragging);
             dragging = null;
@@ -236,10 +289,27 @@ public final class HudLayoutScreen extends Screen {
     }
 
     @Override
+    public boolean mouseScrolled(double x, double y, double scrollX, double scrollY) {
+        Entry e = entryAt(x, y);
+        if (e == null || !e.resizable() || scrollY == 0 || dragging != null || resizing != null) return super.mouseScrolled(x, y, scrollX, scrollY);
+        selected = e;
+        resize(e, e.scale * (scrollY > 0 ? 1.1 : 1 / 1.1), e.box, e.scale, true);
+        settle(e);
+        return true;
+    }
+
+    @Override
     public boolean keyPressed(int key, int scanCode, int modifiers) {
         if (selected != null && dragging == null) {
             if (key == GLFW.GLFW_KEY_H) {
                 toggleSelected();
+                return true;
+            }
+            boolean bigger = key == GLFW.GLFW_KEY_EQUAL || key == GLFW.GLFW_KEY_KP_ADD;
+            boolean smaller = key == GLFW.GLFW_KEY_MINUS || key == GLFW.GLFW_KEY_KP_SUBTRACT;
+            if ((bigger || smaller) && selected.resizable()) {
+                resize(selected, selected.scale * (bigger ? 1.1 : 1 / 1.1), selected.box, selected.scale, true);
+                settle(selected);
                 return true;
             }
             int step = hasShiftDown() ? 10 : 1;
@@ -279,6 +349,22 @@ public final class HudLayoutScreen extends Screen {
         e.reset = false;
     }
 
+    /**
+     * A new size, in 5% steps within the part's limits: the box grows from its top-left (dragging the corner) or round
+     * its middle (wheel, keys), from the box it had at the size it had.
+     */
+    private void resize(Entry e, double scale, Box from, double fromScale, boolean aroundMiddle) {
+        double s = Math.max(e.element.minScale(), Math.min(e.element.maxScale(), Math.round(scale * 20) / 20.0));
+        double k = s / Math.max(0.01, fromScale);
+        int w = Math.max(4, (int) Math.round(from.w() * k));
+        int h = Math.max(4, (int) Math.round(from.h() * k));
+        Box b = aroundMiddle ? new Box(from.centerX() - w / 2, from.centerY() - h / 2, w, h) : new Box(from.x(), from.y(), w, h);
+        e.box = keepOnScreen(b);
+        e.scaled = Math.abs(s - e.element.scale()) > 0.001 || e.scaled;
+        e.scale = s;
+        e.reset = false;
+    }
+
     /** Some mods can only store certain places (FTB Quests: eight edges); show where it will really go. */
     private void settle(Entry e) {
         try {
@@ -290,9 +376,17 @@ public final class HudLayoutScreen extends Screen {
 
     private void toDefault(Entry e) {
         try {
-            e.box = keepOnScreen(e.element.defaultBox(width, height));
+            // The default place at the default size (defaultBox measures the part at its current size).
+            Box d = e.element.defaultBox(width, height);
+            if (e.resizable()) {
+                double k = e.element.defaultScale() / Math.max(0.01, e.element.scale());
+                d = new Box(d.x(), d.y(), Math.max(4, (int) Math.round(d.w() * k)), Math.max(4, (int) Math.round(d.h() * k)));
+                e.scale = e.element.defaultScale();
+            }
+            e.box = keepOnScreen(d);
             e.reset = true;
             e.moved = false;
+            e.scaled = false;
         } catch (Throwable t) {
             HudElements.warnOnce(e.element.name(), t);
         }
@@ -323,13 +417,17 @@ public final class HudLayoutScreen extends Screen {
         List<String> failed = new ArrayList<>();
         int saved = 0;
         for (Entry e : entries) {
-            if (!e.moved && !e.reset && e.shown == e.initiallyShown) continue;
+            if (!e.moved && !e.reset && !e.scaled && e.shown == e.initiallyShown) continue;
             try {
                 if (e.reset) e.element.reset();
-                else if (e.moved) e.element.save(e.box, width, height);
+                else {
+                    // The size first: where a part is kept can depend on how big it is.
+                    if (e.scaled) e.element.setScale(e.scale);
+                    if (e.moved || e.scaled) e.element.save(e.box, width, height);
+                }
                 if (e.shown != e.initiallyShown) e.element.setShown(e.shown);
                 saved++;
-                HudElements.LOGGER.info("HUD layout: {} {} in {}", e.element.name(), e.reset ? "reset" : "moved to " + e.box.x() + "," + e.box.y(), e.element.where());
+                HudElements.LOGGER.info("HUD layout: {} {} in {}", e.element.name(), e.reset ? "reset" : "at " + e.box.x() + "," + e.box.y() + (e.scaled ? ", size " + Math.round(e.scale * 100) + "%" : ""), e.element.where());
             } catch (Throwable t) {
                 failed.add(e.element.name());
                 HudElements.LOGGER.warn("HUD layout: could not save {} ({})", e.element.name(), e.element.where(), t);

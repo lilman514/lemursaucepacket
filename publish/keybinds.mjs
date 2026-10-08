@@ -37,6 +37,7 @@ const GROUPS = [
   { id: 'create', title: 'Create' },
   { id: 'recipes', title: 'Recipes and info' },
   { id: 'screen', title: 'Screen and camera' },
+  { id: 'replay', title: 'Replays', about: "ReForgedPlay's keys only work in the replay viewer (Replay Viewer, on the title screen), so they share keys with everyday ones." },
   { id: 'admin', title: 'Editing and cheats', about: "Editing quests and JEI's cheat mode only work for admins. JEI's edit mode hides items from your own item list." },
   { id: 'other', title: 'Other' }
 ]
@@ -51,7 +52,8 @@ const GROUP_BY_MOD = {
   brassworksmissions: 'quests', ftbquests: 'quests', pmmo: 'quests',
   copycats: 'create', create: 'create', create_cyber_goggles: 'create', createrailwaysnavigator: 'create', ponder: 'create', simulated: 'create',
   jade: 'recipes', jei: 'recipes', kubejs: 'recipes',
-  entityculling: 'screen', iris: 'screen', justzoom: 'screen', lsp_fixes: 'screen', modernfix: 'screen', shouldersurfing: 'screen'
+  entityculling: 'screen', iris: 'screen', justzoom: 'screen', lsp_fixes: 'screen', modernfix: 'screen', shouldersurfing: 'screen',
+  duperautowalk: 'move', replaymod: 'replay'
 }
 // (Ice and Fire's dragon keys sit in Gameplay, Dynamic FPS and LambDynamicLights in Miscellaneous, Legendary Tooltips in Inventory.)
 const GROUP_BY_CATEGORY = { 'key.categories.movement': 'move', 'key.categories.gameplay': 'move', 'key.categories.inventory': 'items', 'key.categories.creative': 'items', 'key.categories.multiplayer': 'social', 'key.categories.misc': 'screen' }
@@ -63,7 +65,8 @@ const WHERE_BY_NAME = [
   [/^key\.(save|load)ToolbarActivator$/, 'in Creative mode'],
   [/^key\.shouldersurfing\.adjust_camera_/, 'in the over-the-shoulder view'],
   [/^create\.keyinfo\.toolbelt$/, 'hold it near a Toolbox'],
-  [/^key\.ponder\.ponder$/, 'hold it over an item in a menu', 'menu']
+  [/^key\.ponder\.ponder$/, 'hold it over an item in a menu', 'menu'],
+  [/^key\.replaymod\.(?!settings$)/, 'in the replay viewer']
 ]
 const WHERE_BY_CATEGORY = {
   'ftbquests.gui': 'in the quest book',
@@ -86,11 +89,11 @@ const WHERE_BY_CONTEXT = {
 
 /** A few words more on what an action does in this pack. */
 const NOTES = {
-  'key.inventory': 'with your skills panel',
+  'key.inventory': 'with your skills panel: click a skill for what every level unlocks',
   'key.sophisticatedbackpacks.open_backpack': "the one you're wearing",
   'key.brassworksmissions.open_missions_ui': "this week's missions",
   'key.ftbteams.open_gui': 'your team',
-  'key.pmmo.vein': 'vein mining is off on this server'
+  'key.duperautowalk.autowalk': 'press it again, or walk backwards, to stop'
 }
 
 /** The action that colours a key, where the rules (fewest conditions first, then Minecraft's own) would pick a less useful one. */
@@ -99,7 +102,7 @@ const PRIMARY = { 'key.keyboard.r': 'iris.keybind.reload' }
 /** Unbound key mappings the page doesn't suggest binding. */
 const NOT_LISTED = new Set([
   'key.pmmo.openMenu', // the glossary crashes with Sodium in this pack (keybinds.js); the inventory's skills panel is the skills screen
-  'key.pmmo.showVein', 'key.pmmo.addVein', 'key.pmmo.subVein', 'key.pmmo.cyclevein', // vein mining is off
+  'key.pmmo.showVein', 'key.pmmo.addVein', 'key.pmmo.subVein', 'key.pmmo.cyclevein', 'key.pmmo.vein', // vein mining is off
   'key.inventoryessentials.sort_inventory', // Inventory Profiles Next does the sorting
   'key.kubejs.kubedex', 'key.jei.copy.recipe.id', 'key.entityculling.toggle', 'iris.keybind.wireframe', 'key.modernfix.config' // tools for pack makers
 ])

@@ -14,10 +14,14 @@ icon: circle-question
 
 **Voice chat isn't working.** Press V and check your microphone; O toggles mute. Voice needs UDP; if you're behind a strict firewall, ask the host to check the voice port.
 
-**My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on, press **K** in game to switch them off, or pick **Lite** under the launcher's Settings, Graphics.
+**My frames are low.** Lower the render distance in Video Settings, or give the game more memory on the launcher's Settings page. Shaders are off by default; if you turned them on, press **K** in game to switch them off, or pick **Lite** under the launcher's Settings, Graphics. Distant Horizons draws the land beyond your render distance, 2,048 blocks out; turn its distance down, or it off, in Video Settings → Distant Horizons.
+
+**The Guide button shows a blank page.** The Guide is this wiki in a browser inside the game. The browser fetches its engine once, a few hundred megabytes, in the background the first time the game starts; until it's ready the page stays blank. **Open in browser** opens the wiki in your own browser meanwhile, and `/guide` is the book version.
 
 **How do I get home fast?** A waystone. Activate one at home (take a found one, or build one), then warp there from any other waystone, with a warp stone, or with a scroll. See [Waystones](waystones.md).
 **Where are my screenshots?** Launcher → Settings → Files & repair → Screenshots.
+
+**How do I record a video?** ReForgedPlay (Replay Mod) is installed but records nothing until you turn it on: Mods → ReForgedPlay → Config → Recording, then **Record Server**. From then on every session is saved, and the circling-arrows button at the top right of the title screen's panel opens the Replay Viewer to edit and render them. Its keys (keyframes, play and pause) only work in the viewer. Turn **Record Server** off again when you're done: replays get big.
 
 **Can I add my own mods?** Client-side ones (minimap tweaks and the like): yes, through the launcher's Mods tab if they're listed as optional. Anything else would break the sync with the server.
 

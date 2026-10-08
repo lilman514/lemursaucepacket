@@ -353,7 +353,8 @@ const SKILLS = [
   const add = (skillId, level, what) => {
     const skill = SKILLS.find((x) => x.id === skillId)
     if (!skill) return
-    const text = what.charAt(0).toLowerCase() + what.slice(1)
+    // "Leather armour" reads "leather armour" mid-list; a name ("Climbing Boots", "Aeronaut's Rigging") keeps its capitals.
+    const text = /^\S+\s+[A-Z]/.test(what) ? what : what.charAt(0).toLowerCase() + what.slice(1)
     skill.unlocks[level] = skill.unlocks[level] ? `${skill.unlocks[level]}; ${text}` : text
   }
   for (const c of CRAFT) add(c.skill, c.level, c.skill === 'brewing' ? `making ${c.what.toLowerCase()}` : c.what)

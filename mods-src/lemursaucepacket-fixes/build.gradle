@@ -77,6 +77,9 @@ dependencies {
     compileOnly "maven.modrinth:TyCTlI4b:${sophisticatedbackpacks_modrinth_version}"
     compileOnly "maven.modrinth:nmoqTijg:${sophisticatedcore_modrinth_version}"
     compileOnly "maven.modrinth:vvuO3ImH:${curios_modrinth_version}"
+    // Relics: the pack's own relics (the Climbing Boots) extend its classes. Compile-only; registered only with the mod.
+    compileOnly "maven.modrinth:OCJRPujW:${relics_modrinth_version}"
+    compileOnly "maven.modrinth:RH2KUdKJ:${octolib_modrinth_version}"
     // Economy: saved mission rewards from the Numismatics days load as Coin Pouches. Compile-only; applies only with the mod.
     compileOnly "maven.modrinth:uUhZpyjI:${brassworks_modrinth_version}"
     // The shop and trade screens tell these to keep their click automation away (annotations only).

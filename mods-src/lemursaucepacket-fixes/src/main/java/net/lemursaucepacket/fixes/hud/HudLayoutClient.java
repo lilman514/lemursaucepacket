@@ -30,6 +30,9 @@ public final class HudLayoutClient {
     private static boolean openNextTick;
     private static boolean effectsPushed;
     private static boolean bossPushed;
+    private static boolean gogglesPushed;
+    private static net.neoforged.neoforge.common.ModConfigSpec.ConfigValue<?> gogglesX, gogglesY;
+    private static boolean gogglesBroken;
 
     public static void init(IEventBus modBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.CLIENT, HudConfig.SPEC);
@@ -69,16 +72,39 @@ public final class HudLayoutClient {
         }
     }
 
-    // ---- vanilla parts: a translate around the layer. LOWEST priority, so it only runs when no other
-    // listener cancelled the layer (a cancelled Pre gets no Post, which would leave the pose pushed).
+    // ---- vanilla parts (and Create's goggle overlay): a translate and scale around the layer. LOWEST priority, so it
+    // only runs when no other listener cancelled the layer (a cancelled Pre gets no Post, which would leave the pose
+    // pushed).
 
     private static void onLayerPre(RenderGuiLayerEvent.Pre event) {
         if (Minecraft.getInstance().screen instanceof HudLayoutScreen) {
             event.setCanceled(true);
             return;
         }
-        if (event.getName().toString().equals("create:goggle_info") && !HudConfig.GOGGLES_VISIBLE.get()) {
-            event.setCanceled(true);
+        if (event.getName().toString().equals("create:goggle_info")) {
+            if (!HudConfig.GOGGLES_VISIBLE.get()) {
+                event.setCanceled(true);
+                return;
+            }
+            // Its size round the point Create draws it from: the screen's middle plus its configured offset.
+            double s = HudConfig.GOGGLES_SCALE.get();
+            if (s == 1 || gogglesBroken) return;
+            try {
+                if (gogglesX == null) {
+                    gogglesX = Reflect.configValue("create-client.toml", "client.goggleOverlay.overlayOffsetX");
+                    gogglesY = Reflect.configValue("create-client.toml", "client.goggleOverlay.overlayOffsetY");
+                }
+                int ax = event.getGuiGraphics().guiWidth() / 2 + ((Number) gogglesX.get()).intValue();
+                int ay = event.getGuiGraphics().guiHeight() / 2 + ((Number) gogglesY.get()).intValue();
+                event.getGuiGraphics().pose().pushPose();
+                event.getGuiGraphics().pose().translate(ax, ay, 0);
+                event.getGuiGraphics().pose().scale((float) s, (float) s, 1);
+                event.getGuiGraphics().pose().translate(-ax, -ay, 0);
+                gogglesPushed = true;
+            } catch (Throwable t) {
+                gogglesBroken = true;
+                HudElements.warnOnce("Create goggle size", t);
+            }
             return;
         }
         if (event.getName().equals(VanillaGuiLayers.EFFECTS)) {
@@ -90,14 +116,17 @@ public final class HudLayoutClient {
             int cols = HudElements.VanillaEffects.columns();
             if (cols == 0) return;
             int sw = event.getGuiGraphics().guiWidth(), sh = event.getGuiGraphics().guiHeight();
-            int x = HudConfig.EFFECTS_X.get(), y = HudConfig.EFFECTS_Y.get();
+            double s = HudConfig.EFFECTS_SCALE.get();
+            // Where the (scaled) icons go, kept on screen; vanilla draws them from (sw - 25 per column, 1).
+            HudElement.Box b = HudElements.VanillaEffects.boxFor(HudConfig.EFFECTS_X.get(), HudConfig.EFFECTS_Y.get(), cols, sw, s);
+            int left = Math.max(0, Math.min(sw - b.w(), b.x()));
+            int top = Math.max(0, Math.min(sh - b.h(), b.y()));
             int vanillaLeft = sw - 25 * cols;
-            int dx = x < 0 ? x + 1 : x - vanillaLeft;
-            dx = Math.max(-vanillaLeft, Math.min(0, dx));
-            int dy = Math.max(-1, Math.min(sh - 52, y));
-            if (dx == 0 && dy == 0) return;
+            if (s == 1 && left == vanillaLeft && top == 1) return;
             event.getGuiGraphics().pose().pushPose();
-            event.getGuiGraphics().pose().translate(dx, dy, 0);
+            event.getGuiGraphics().pose().translate(left, top, 0);
+            event.getGuiGraphics().pose().scale((float) s, (float) s, 1);
+            event.getGuiGraphics().pose().translate(-vanillaLeft, -1, 0);
             effectsPushed = true;
         } else if (event.getName().equals(VanillaGuiLayers.BOSS_OVERLAY)) {
             if (!HudConfig.BOSS_VISIBLE.get()) {
@@ -106,18 +135,25 @@ public final class HudLayoutClient {
                 return;
             }
             int sw = event.getGuiGraphics().guiWidth(), sh = event.getGuiGraphics().guiHeight();
-            int room = sw / 2 - 91;
+            double s = HudConfig.BOSS_SCALE.get();
+            // Kept by its top centre; vanilla draws it from (sw / 2, 3).
+            int room = Math.max(0, sw / 2 - (int) Math.round(91 * s));
             int dx = Math.max(-room, Math.min(room, HudConfig.BOSS_BAR_X.get()));
-            int dy = Math.max(-3, Math.min(sh - 20, HudConfig.BOSS_BAR_Y.get()));
-            if (dx == 0 && dy == 0) return;
+            int dy = Math.max(-3, Math.min(sh - (int) Math.round(20 * s), HudConfig.BOSS_BAR_Y.get()));
+            if (s == 1 && dx == 0 && dy == 0) return;
             event.getGuiGraphics().pose().pushPose();
-            event.getGuiGraphics().pose().translate(dx, dy, 0);
+            event.getGuiGraphics().pose().translate(sw / 2 + dx, 3 + dy, 0);
+            event.getGuiGraphics().pose().scale((float) s, (float) s, 1);
+            event.getGuiGraphics().pose().translate(-(sw / 2), -3, 0);
             bossPushed = true;
         }
     }
 
     private static void onLayerPost(RenderGuiLayerEvent.Post event) {
-        if (effectsPushed && event.getName().equals(VanillaGuiLayers.EFFECTS)) {
+        if (gogglesPushed && event.getName().toString().equals("create:goggle_info")) {
+            gogglesPushed = false;
+            event.getGuiGraphics().pose().popPose();
+        } else if (effectsPushed && event.getName().equals(VanillaGuiLayers.EFFECTS)) {
             effectsPushed = false;
             event.getGuiGraphics().pose().popPose();
             quietXaeroPushBoxes("POTION_EFFECTS_PUSH_BOX", "POTION_EFFECTS_SHIFT_PUSH_BOX");

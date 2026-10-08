@@ -1,10 +1,20 @@
 // The LemurSaucePacket wiki's page behaviour (publish/docs.mjs writes it to site/wiki/assets): search over every page
 // (search.json, loaded on first use; "/" or Ctrl+K to focus), the mobile contents drawer, "On this page" following the
-// reading position, the picture viewer, copy buttons on commands, tabs, and the atlas pages' filters.
+// reading position, the picture viewer, copy buttons on commands, tabs, and the atlas pages' filters. In the game
+// (the ESC menu's Guide opens the wiki in FancyMenu's browser with ?ingame), it also dresses itself for the game.
 ;(() => {
   const $ = (sel, root = document) => root.querySelector(sel)
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)]
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
+
+  // ------------------------------------------------------------- in the game
+  // ?ingame on the first page, remembered for the visit: the pixel cursor, and no links that leave for the website.
+  let ingame = new URLSearchParams(location.search).has('ingame')
+  try {
+    if (ingame) sessionStorage.setItem('lsp-ingame', '1')
+    else ingame = sessionStorage.getItem('lsp-ingame') === '1'
+  } catch (e) {}
+  if (ingame) document.documentElement.classList.add('ingame')
 
   // ------------------------------------------------------------- the contents drawer (narrow screens)
   const toggle = $('.menu-toggle')

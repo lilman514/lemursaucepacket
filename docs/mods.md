@@ -5,9 +5,9 @@ icon: puzzle-piece
 
 # Mods in the pack
 
-178 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+184 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
-## On the server and every client (135)
+## On the server and every client (137)
 
 - [AppleSkin](https://modrinth.com/project/EsAfCjCV)
 - [Architectury API](https://modrinth.com/project/lhGA9TYQ)
@@ -39,6 +39,7 @@ icon: puzzle-piece
 - [Creeper Overhaul](https://modrinth.com/project/MI1LWe93)
 - [Cristel Lib](https://modrinth.com/project/cl223EMc)
 - [Curios API](https://modrinth.com/project/vvuO3ImH)
+- [Distant Horizons](https://modrinth.com/project/uCdwusMi)
 - [DragonLib](https://modrinth.com/project/sbIsGaOV)
 - [Dungeons and Taverns](https://modrinth.com/project/tpehi7ww)
 - [Easy NPC: Config UI](https://modrinth.com/project/uTGjf7vA)
@@ -106,6 +107,7 @@ icon: puzzle-piece
 - [Rhino](https://modrinth.com/project/sk9knFPE)
 - [Sable](https://modrinth.com/project/T9PomCSv)
 - [Sable Assembly Fix](https://modrinth.com/project/EGcZ28rZ)
+- [Sable Replay Compat](https://modrinth.com/project/n5DHyhc5)
 - [ShatterLib | OctoLib](https://modrinth.com/project/RH2KUdKJ)
 - [Shulker Box Tooltip](https://modrinth.com/project/2M01OLQq)
 - [Simple Voice Chat](https://modrinth.com/project/9eGKb6K1)
@@ -145,13 +147,14 @@ icon: puzzle-piece
 - [YUNG's Bridges](https://modrinth.com/project/Ht4BfYp6)
 - [YUNG's Extras](https://modrinth.com/project/ZYgyPyfq)
 
-## Client only (43)
+## Client only (47)
 
 Visuals, sound, performance and interface. The ones marked optional in the launcher's Mods tab can be switched off.
 
 - [[EMF] Entity Model Features](https://modrinth.com/project/4I1XuqiY)
 - [[ETF] Entity Texture Features](https://modrinth.com/project/BVzZfTc1)
 - [3D Skin Layers](https://modrinth.com/project/zV5r3pPn)
+- [Aeronautics Replay](https://modrinth.com/project/KD2QrWTM)
 - [AmbientSounds](https://modrinth.com/project/fM515JnW)
 - [BadOptimizations](https://modrinth.com/project/g96Z4WVZ)
 - [Better Block Entities](https://modrinth.com/project/ONZm0H7Y)
@@ -163,6 +166,7 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 - [Create: Cyber Goggles](https://modrinth.com/project/TlQAWQCY)
 - [Create: Nowheel](https://modrinth.com/project/c47YxuuI)
 - [Drippy Loading Screen](https://modrinth.com/project/v3CYg2V9)
+- [Duper's Auto Walk](https://modrinth.com/project/TdmWJlQa)
 - [Dynamic FPS](https://modrinth.com/project/LQ3K71Q1)
 - [Entity Culling](https://modrinth.com/project/NNAgCjsB)
 - [Falling Leaves (NeoForge/Forge)](https://modrinth.com/project/2JAUNCL4)
@@ -184,6 +188,8 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 - [Particle Rain](https://modrinth.com/project/nrikgvxm)
 - [Prism](https://modrinth.com/project/1OE8wbN0)
 - [Reese's Sodium Options](https://modrinth.com/project/Bh37bMuy)
+- ReForgedPlay [replay mod on (neo)forge]
+- [Rinku](https://modrinth.com/project/bQhBuv7x)
 - [Searchables](https://modrinth.com/project/fuuu3xnx)
 - [Shoulder Surfing Reloaded](https://modrinth.com/project/kepjj2sy)
 - [Sodium](https://modrinth.com/project/AANobbMI)

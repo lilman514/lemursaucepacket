@@ -66,6 +66,10 @@ public final class HudElements {
         return Math.round(v * 10000.0) / 10000.0;
     }
 
+    private static double round2(double v) {
+        return Math.round(v * 100.0) / 100.0;
+    }
+
     // ---------------------------------------------------------------- Xaero's Minimap
 
     /**
@@ -171,6 +175,11 @@ public final class HudElements {
         public String where() {
             return "config/xaerohud.txt (module xaerominimap:minimap: x, y, centered, fromRight, fromBottom)";
         }
+
+        @Override
+        public String sizeHint() {
+            return "Size: Xaero's own minimap settings (UI scale)";
+        }
     }
 
     // ---------------------------------------------------------------- Jade
@@ -182,6 +191,7 @@ public final class HudElements {
      */
     static final class Jade extends HudElement {
         private final Method get, getOverlay, posX, posY, anchorX, anchorY, scale, tryFlip;
+        private Method setScaleM;
         private final Method setPosX, setPosY, setAnchorX, setAnchorY;
         private final Object jsonConfig;
         private final Method save;
@@ -204,6 +214,11 @@ public final class HudElements {
             setPosY = overlay.getMethod("setOverlayPosY", float.class);
             setAnchorX = overlay.getMethod("setAnchorX", float.class);
             setAnchorY = overlay.getMethod("setAnchorY", float.class);
+            try {
+                setScaleM = overlay.getMethod("setOverlayScale", float.class);
+            } catch (NoSuchMethodException e) {
+                setScaleM = null; // then only its position can be changed here
+            }
             jsonConfig = Reflect.staticField("snownee.jade.Jade", "CONFIG");
             save = Reflect.cls("snownee.jade.util.JsonConfig").getMethod("save");
             Object holder = null;
@@ -296,7 +311,32 @@ public final class HudElements {
 
         @Override
         public void reset() throws Exception {
+            if (setScaleM != null) setScaleM.invoke(overlay(), 1.0F);
             write(0.5F, 1.0F, 0.5F, 0.0F); // Jade's defaults (WailaConfig.ConfigOverlay codec)
+        }
+
+        @Override
+        public boolean resizable() {
+            return setScaleM != null;
+        }
+
+        @Override
+        public double scale() {
+            try {
+                return f(scale, overlay());
+            } catch (Exception e) {
+                return 1;
+            }
+        }
+
+        @Override
+        public void setScale(double s) throws Exception {
+            setScaleM.invoke(overlay(), (float) round2(s));
+        }
+
+        @Override
+        public double maxScale() {
+            return 2;
         }
 
         @Override
@@ -399,8 +439,28 @@ public final class HudElements {
 
         @Override
         public void reset() throws Exception {
+            put("hudIconScale", defaultValue("hudIconScale"));
             put("hudIconPosX", defaultValue("hudIconPosX"));
             put("hudIconPosY", defaultValue("hudIconPosY"));
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            try {
+                return ((Number) value("hudIconScale")).doubleValue();
+            } catch (Exception e) {
+                return 1;
+            }
+        }
+
+        @Override
+        public void setScale(double s) throws Exception {
+            put("hudIconScale", round2(s));
         }
 
         @Override
@@ -461,8 +521,28 @@ public final class HudElements {
 
         @Override
         public void reset() throws Exception {
+            put("groupHudIconScale", defaultValue("groupHudIconScale"));
             put("groupPlayerIconPosX", defaultValue("groupPlayerIconPosX"));
             put("groupPlayerIconPosY", defaultValue("groupPlayerIconPosY"));
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            try {
+                return ((Number) value("groupHudIconScale")).doubleValue();
+            } catch (Exception e) {
+                return 1;
+            }
+        }
+
+        @Override
+        public void setScale(double s) throws Exception {
+            put("groupHudIconScale", round2(s));
         }
 
         @Override
@@ -521,7 +601,8 @@ public final class HudElements {
         }
 
         private static Box boxFor(double ox, double oy, int sw, int sh) {
-            return new Box(sw / 2 + (int) ox, sh / 2 + (int) oy, 120, 36);
+            double s = HudConfig.GOGGLES_SCALE.get();
+            return new Box(sw / 2 + (int) ox, sh / 2 + (int) oy, (int) Math.round(120 * s), (int) Math.round(36 * s));
         }
 
         @Override
@@ -541,7 +622,25 @@ public final class HudElements {
 
         @Override
         public void reset() {
+            HudConfig.GOGGLES_SCALE.set(1.0);
+            HudConfig.SPEC.save();
             write(xValue.getDefault(), yValue.getDefault());
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            return HudConfig.GOGGLES_SCALE.get();
+        }
+
+        @Override
+        public void setScale(double s) {
+            HudConfig.GOGGLES_SCALE.set(round2(s));
+            HudConfig.SPEC.save();
         }
     }
 
@@ -614,8 +713,25 @@ public final class HudElements {
 
         @Override
         public void reset() {
+            setScale(1);
             write(skills ? xValue.getDefault() : defaultX(), skills ? yValue.getDefault() : defaultY());
             remember(-1, -1);
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            return (skills ? HudConfig.PMMO_SKILLS_SCALE : HudConfig.PMMO_GAIN_SCALE).get();
+        }
+
+        @Override
+        public void setScale(double s) {
+            (skills ? HudConfig.PMMO_SKILLS_SCALE : HudConfig.PMMO_GAIN_SCALE).set(round2(s));
+            HudConfig.SPEC.save();
         }
 
         private void remember(double x, double y) {
@@ -758,7 +874,27 @@ public final class HudElements {
 
         @Override
         public void reset() throws Exception {
+            set.invoke(scale, 1.0);
             write("RIGHT", 2, 2);
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            try {
+                return ((Number) get.invoke(scale)).doubleValue();
+            } catch (Exception e) {
+                return 1;
+            }
+        }
+
+        @Override
+        public void setScale(double s) throws Exception {
+            set.invoke(scale, round2(s));
         }
 
         @Override
@@ -788,20 +924,36 @@ public final class HudElements {
             return Math.max(good, bad);
         }
 
-        static Box boxFor(int x, int y, int cols, int sw) {
-            int w = 25 * cols;
+        /** Its place at a size: the left edge, or the right edge for negative x (as vanilla anchors them). */
+        static Box boxFor(int x, int y, int cols, int sw, double s) {
+            int w = (int) Math.round(25 * cols * s);
             int left = x >= 0 ? x : sw + x + 1 - w;
-            return new Box(left, 1 + y, w, 50);
+            return new Box(left, 1 + y, w, (int) Math.round(50 * s));
         }
 
         @Override
         public Box box(int sw, int sh) {
-            return boxFor(HudConfig.EFFECTS_X.get(), HudConfig.EFFECTS_Y.get(), Math.max(3, columns()), sw);
+            return boxFor(HudConfig.EFFECTS_X.get(), HudConfig.EFFECTS_Y.get(), Math.max(3, columns()), sw, HudConfig.EFFECTS_SCALE.get());
         }
 
         @Override
         public Box defaultBox(int sw, int sh) {
-            return boxFor(-1, 0, Math.max(3, columns()), sw);
+            return boxFor(-1, 0, Math.max(3, columns()), sw, HudConfig.EFFECTS_SCALE.get());
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            return HudConfig.EFFECTS_SCALE.get();
+        }
+
+        @Override
+        public void setScale(double s) {
+            HudConfig.EFFECTS_SCALE.set(round2(s));
         }
 
         @Override
@@ -815,6 +967,7 @@ public final class HudElements {
         public void reset() {
             HudConfig.EFFECTS_X.set(-1);
             HudConfig.EFFECTS_Y.set(0);
+            HudConfig.EFFECTS_SCALE.set(1.0);
             HudConfig.SPEC.save();
         }
 
@@ -830,23 +983,25 @@ public final class HudElements {
             super("boss_bar", "Boss bar");
         }
 
-        static Box boxFor(int dx, int dy, int sw) {
-            return new Box(sw / 2 - 91 + dx, 3 + dy, 182, 16);
+        /** Its place at a size, kept by its top centre (dx from the screen's middle). */
+        static Box boxFor(int dx, int dy, int sw, double s) {
+            int w = (int) Math.round(182 * s);
+            return new Box(sw / 2 + dx - w / 2, 3 + dy, w, (int) Math.round(16 * s));
         }
 
         @Override
         public Box box(int sw, int sh) {
-            return boxFor(HudConfig.BOSS_BAR_X.get(), HudConfig.BOSS_BAR_Y.get(), sw);
+            return boxFor(HudConfig.BOSS_BAR_X.get(), HudConfig.BOSS_BAR_Y.get(), sw, HudConfig.BOSS_SCALE.get());
         }
 
         @Override
         public Box defaultBox(int sw, int sh) {
-            return boxFor(0, 0, sw);
+            return boxFor(0, 0, sw, HudConfig.BOSS_SCALE.get());
         }
 
         @Override
         public void save(Box b, int sw, int sh) {
-            HudConfig.BOSS_BAR_X.set(b.x() - (sw / 2 - 91));
+            HudConfig.BOSS_BAR_X.set(b.centerX() - sw / 2);
             HudConfig.BOSS_BAR_Y.set(b.y() - 3);
             HudConfig.SPEC.save();
         }
@@ -855,7 +1010,23 @@ public final class HudElements {
         public void reset() {
             HudConfig.BOSS_BAR_X.set(0);
             HudConfig.BOSS_BAR_Y.set(0);
+            HudConfig.BOSS_SCALE.set(1.0);
             HudConfig.SPEC.save();
+        }
+
+        @Override
+        public boolean resizable() {
+            return true;
+        }
+
+        @Override
+        public double scale() {
+            return HudConfig.BOSS_SCALE.get();
+        }
+
+        @Override
+        public void setScale(double s) {
+            HudConfig.BOSS_SCALE.set(round2(s));
         }
 
         @Override
