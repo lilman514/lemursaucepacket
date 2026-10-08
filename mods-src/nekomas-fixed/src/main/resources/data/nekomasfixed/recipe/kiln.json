@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:mud_bricks"
+    },
+    "D": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nekomasfixed:kiln"
+  }
+}

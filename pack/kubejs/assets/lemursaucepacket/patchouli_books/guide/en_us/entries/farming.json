@@ -95,7 +95,11 @@
     {
       "type": "patchouli:text",
       "title": "Farms that run themselves",
-      "text": "Machines earn nobody skill XP. Level Farming by hand (or with the scythe), then let the machines take over.$(br2)$(li)$(bold)Mechanical Harvester$() (Farming 15 to make). On a moving contraption (a piston, bearing, gantry, minecart or train), it harvests fully grown crops and replants them, and leaves young ones alone. The harvest goes into the contraption's chests.$(br)$(li)$(bold)Mechanical Plough$() (Farming 15). On a contraption it tills dirt into farmland and breaks loose plants and torches in its way. It throws mobs out of its way without hurting them."
+      "text": "A harvester pays the Farming for each crop it reaps to everyone within 16 blocks of it, and an XP Bank keeps a share while nobody's near ($(l:lemursaucepacket:create-tips)Machine XP$(/l)). Crops you planted pay once they're fully grown."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Mechanical Harvester$() (Farming 15 to make). On a moving contraption (a piston, bearing, gantry, minecart or train), it harvests fully grown crops and replants them, and leaves young ones alone. The harvest goes into the contraption's chests.$(br)$(li)$(bold)Mechanical Plough$() (Farming 15). On a contraption it tills dirt into farmland and breaks loose plants and torches in its way. It throws mobs out of its way without hurting them."
     },
     {
       "type": "patchouli:text",

@@ -1,12 +1,14 @@
 package net.lemursaucepacket.fixes.mixin.create;
 
 import net.lemursaucepacket.fixes.skills.Gates;
+import net.lemursaucepacket.fixes.skills.MachineXp;
 import net.lemursaucepacket.fixes.skills.Operators;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Coerce;
@@ -24,6 +26,18 @@ public abstract class MechanicalCrafterGateMixin {
     private static void lsp$skillGate(Level level, @Coerce Object items, CallbackInfoReturnable<ItemStack> cir) {
         ItemStack result = cir.getReturnValue();
         if (result != null && !result.isEmpty() && !level.isClientSide() && !Gates.machineMayMake(Operators.current(), result)) cir.setReturnValue(null);
+    }
+
+    /**
+     * Machine XP: a finished craft pays the crafter's players what making it by hand would (skills.MachineXp). After the
+     * gate above, which returns early when it refuses.
+     */
+    @Inject(method = "tryToApplyRecipe", at = @At("RETURN"), remap = false)
+    private static void lsp$machineXp(Level level, @Coerce Object items, CallbackInfoReturnable<ItemStack> cir) {
+        ItemStack result = cir.getReturnValue();
+        BlockEntity crafter = Operators.current();
+        if (result == null || result.isEmpty() || level.isClientSide() || crafter == null) return;
+        MachineXp.made(level, crafter.getBlockPos(), "mechanical_crafter", result);
     }
 
     /** A recipe that waits on a level (Construction's alternate recipes) is one the grid may use at its operator's level. */

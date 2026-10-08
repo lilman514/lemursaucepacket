@@ -22,7 +22,7 @@ import net.minecraft.world.phys.Vec3;
 public final class MovingBreakers {
     private static final ThreadLocal<Object> CURRENT = new ThreadLocal<>();
     private static volatile Class<?> contextClass;
-    private static Field blockEntityData, state, position;
+    private static Field blockEntityData, state, position, world;
     private static boolean failed;
 
     private MovingBreakers() {
@@ -60,6 +60,7 @@ public final class MovingBreakers {
             blockEntityData = type.getField("blockEntityData");
             state = type.getField("state");
             position = type.getField("position");
+            world = type.getField("world");
             contextClass = type;
             return true;
         } catch (NoSuchFieldException e) {
@@ -67,6 +68,32 @@ public final class MovingBreakers {
             failed = true;
             return false;
         }
+    }
+
+    /**
+     * An actor on a contraption starts its work (a drill or saw's tickBreaker, a harvester's visit): machine XP pays the
+     * players near where it is now (skills.MachineXp). Always paired with {@link #workEnds}.
+     */
+    public static void workStarts(Object context) {
+        Level level = null;
+        BlockPos at = null;
+        String machine = "machine";
+        if (context != null && fields(context)) {
+            try {
+                level = (Level) world.get(context);
+                Vec3 v = (Vec3) position.get(context);
+                BlockState actor = (BlockState) state.get(context);
+                if (v != null) at = BlockPos.containing(v);
+                if (actor != null) machine = actor.getBlock().getDescriptionId();
+            } catch (ReflectiveOperationException | ClassCastException e) {
+                level = null;
+            }
+        }
+        net.lemursaucepacket.fixes.skills.MachineXp.enter(level, at, machine);
+    }
+
+    public static void workEnds() {
+        net.lemursaucepacket.fixes.skills.MachineXp.leave();
     }
 
     @Nullable

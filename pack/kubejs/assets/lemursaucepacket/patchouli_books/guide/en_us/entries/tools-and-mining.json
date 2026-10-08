@@ -20,11 +20,11 @@
     {
       "type": "patchouli:text",
       "title": "Getting the XP",
-      "text": "$(li)$(bold)Fresh ground only.$() Breaking a block you placed yourself pays no skill XP, so pulling up your own blocks and putting them back earns nothing. Train on what the world made.$(br)$(li)$(bold)Machines earn nobody XP.$() When a Create drill, saw or harvester does the work, nobody gets the Mining, Woodcutting or Farming for it. Tools that break many blocks at once (the Lumber Axe, the Excavator's Pickaxe, the Harvester's Scythe) do pay, for every block.$(br)$(li)$(bold)Hold Shift$() over a block in your inventory: its tooltip lists the XP it pays to break. Iron ore pays 25 Mining, a log 12 Woodcutting."
+      "text": "$(li)$(bold)Fresh ground only.$() Breaking a block you placed yourself pays no skill XP, so pulling up your own blocks and putting them back earns nothing. Train on what the world made.$(br)$(li)$(bold)Machines pay whoever is near.$() When a Create drill, saw or harvester does the work, every player within 16 blocks of it gets the Mining, Woodcutting or Farming, as if they'd done it by hand ($(l:lemursaucepacket:create-tips)Machine XP$(/l)). A cobblestone generator's blocks pay a machine a tenth. Tools that break many blocks at once (the Lumber Axe, the Excavator's Pickaxe, the Harvester's Scythe) pay too, for"
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)No vein mining.$() Project MMO's vein miner is switched off."
+      "text": "every block.$(br)$(li)$(bold)Hold Shift$() over a block in your inventory: its tooltip lists the XP it pays to break. Iron ore pays 25 Mining, a log 12 Woodcutting.$(br)$(li)$(bold)No vein mining.$() Project MMO's vein miner is switched off."
     },
     {
       "type": "patchouli:text",
@@ -103,7 +103,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Whose levels.$() A drill or saw works at the levels of its operator: whoever placed it or last right-clicked it. On a contraption, it keeps the operator it had when the contraption was put together. A log past the operator's Woodcutting stays standing. See $(l:lemursaucepacket:good-to-know)Good to know$(/l).$(br)$(li)$(bold)No XP.$() Machines pay nobody skill XP, so level Mining by hand first."
+      "text": "$(li)$(bold)Whose levels.$() A drill or saw works at the levels of its operator: whoever placed it or last right-clicked it. On a contraption, it keeps the operator it had when the contraption was put together. A log past the operator's Woodcutting stays standing. See $(l:lemursaucepacket:good-to-know)Good to know$(/l).$(br)$(li)$(bold)XP for whoever is near.$() A drill pays its Mining to every player within 16 blocks of it. Build an $(l:lemursaucepacket:create-tips)XP Bank$(/l) by your drills to keep a share while you're away."
     }
   ]
 }

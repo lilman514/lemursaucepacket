@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "carpet",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    [
+      {
+        "item": "nekomasfixed:amber_carpet"
+      },
+      {
+        "item": "nekomasfixed:aqua_carpet"
+      },
+      {
+        "item": "nekomasfixed:indigo_carpet"
+      },
+      {
+        "item": "nekomasfixed:maroon_carpet"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:lime_carpet"
+  }
+}

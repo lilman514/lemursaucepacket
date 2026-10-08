@@ -100,7 +100,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "the operator it had when the contraption was put together. Right-click a machine to make it run at your levels. A machine nobody has placed or clicked makes nothing gated.$(br)$(li)$(bold)Backpacks, relics and totems.$() A backpack upgrade only works once you have the level it takes to make it; a backpack set down as a block works at the levels of whoever last placed or opened it. A relic's abilities wait for the level it needs to wear, and a Totem of Undying only saves you at Hitpoints 50. Each tells you in chat, with a ding, what's missing."
+      "text": "the operator it had when the contraption was put together. Right-click a machine to make it run at your levels. A machine nobody has placed or clicked makes nothing gated. Whoever its operator is, its work pays XP to every player within 16 blocks of it ($(l:lemursaucepacket:create-tips)Machine XP$(/l))."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Backpacks, relics and totems.$() A backpack upgrade only works once you have the level it takes to make it; a backpack set down as a block works at the levels of whoever last placed or opened it. A relic's abilities wait for the level it needs to wear, and a Totem of Undying only saves you at Hitpoints 50. Each tells you in chat, with a ding, what's missing."
     },
     {
       "type": "patchouli:text",
@@ -190,7 +194,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)35$() - Enchanting - Blaze enchanters$(br)$(bold)35$() - Smithing - Steam engines$(br)$(bold)40$() - Mining - Borehead bearings and rock-cutting wheels$(br)$(bold)50$() - Enchanting - Printers (they copy enchanted books)$(br)$(bold)50$() - Mining - Drill heads for the ore vein drilling machine$(br)$(bold)55$() - Enchanting - Blaze forgers$(br)$(bold)65$() - Mining - Diamond drill heads$(br)$(bold)70$() - Smithing - Dragonforge cores$(br)$(bold)80$() - Mining - Netherite drill heads"
+      "text": "$(bold)35$() - Enchanting - Blaze enchanters$(br)$(bold)35$() - Smithing - Steam engines$(br)$(bold)40$() - Crafting - XP Banks (keep 10% of the XP machines earn while nobody is near)$(br)$(bold)40$() - Mining - Borehead bearings and rock-cutting wheels$(br)$(bold)50$() - Enchanting - Printers (they copy enchanted books)$(br)$(bold)50$() - Mining - Drill heads for the ore vein drilling machine$(br)$(bold)55$() - Enchanting - Blaze forgers$(br)$(bold)60$() - Crafting - Tier II XP Bank upgrades (the bank keeps 25%)$(br)$(bold)65$() - Mining - Diamond drill heads$(br)$(bold)70$() - Smithing - Dragonforge cores"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)80$() - Crafting - Tier III XP Bank upgrades (the bank keeps 50%)$(br)$(bold)80$() - Mining - Netherite drill heads"
     },
     {
       "type": "patchouli:text",

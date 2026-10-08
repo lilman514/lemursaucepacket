@@ -52,8 +52,12 @@ The name's colour is its rarity: white common, green uncommon, blue rare, purple
 ### Why am I getting no skill XP?
 
 - **Blocks you placed pay you nothing** when you break them again (someone else's still pay, and fully grown crops always do). Train on fresh ground.
-- **Machines earn nobody XP.** A Create drill or saw does the work, so nobody gets the Mining or Woodcutting for it.
+- **Machines pay only whoever is near.** A Create machine's work pays every player within 16 blocks of it. With nobody near, the XP is lost, unless an [XP Bank](create-tips.md#the-xp-bank) is in reach. A block lava and water made pays a machine a tenth.
 - See [Skills](skills.md) for what pays what.
+
+### Do machines give XP?
+
+Yes, to whoever is near. When a drill, saw, harvester, mechanical crafter, Crafter, basin or fan does a skill's work, every player within 16 blocks of it gets the XP the same work pays by hand, each of them all of it. A block someone placed pays nothing, and one lava and water made (a cobblestone generator's) pays a tenth. To keep some of it while you're away, build an [XP Bank](create-tips.md#the-xp-bank) within 8 blocks of the machines: it keeps 10%, 25% or 50% by tier, and you take it at the tier you could make yourself.
 
 ### Why won't my machine make it?
 

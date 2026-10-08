@@ -18,7 +18,7 @@ Mining and chopping run on your [skills](skills.md): better tools, harder ores a
 ## Getting the XP
 
 - **Fresh ground only.** Breaking a block you placed yourself pays no skill XP, so pulling up your own blocks and putting them back earns nothing. Train on what the world made.
-- **Machines earn nobody XP.** When a Create drill, saw or harvester does the work, nobody gets the Mining, Woodcutting or Farming for it. Tools that break many blocks at once (the Lumber Axe, the Excavator's Pickaxe, the Harvester's Scythe) do pay, for every block.
+- **Machines pay whoever is near.** When a Create drill, saw or harvester does the work, every player within 16 blocks of it gets the Mining, Woodcutting or Farming, as if they'd done it by hand ([Machine XP](create-tips.md#machine-xp)). A cobblestone generator's blocks pay a machine a tenth. Tools that break many blocks at once (the Lumber Axe, the Excavator's Pickaxe, the Harvester's Scythe) pay too, for every block.
 - **Hold Shift** over a block in your inventory: its tooltip lists the XP it pays to break. Iron ore pays 25 Mining, a log 12 Woodcutting.
 - **No vein mining.** Project MMO's vein miner is switched off.
 
@@ -97,4 +97,4 @@ There are no diamond, emerald or netherite veins in this pack. Veins are rare: e
 - **Borehead Bearing** (Mining 40, with its Rock Cutting Wheels): a tunnel bore. The wheels break blocks all around themselves and attach without glue. What they dig goes into a storage block on the bore, and the bore stops when that's full. It spins at a quarter of the speed you give it, and the more it cuts at once, the slower it goes: use more than one bearing.
 - **How hard machines dig.** Create's drills, saws and rollers, and deployers holding a pickaxe, break blocks up to Hardness II: gold and redstone yes, diamonds and obsidian no ([Enchanting](enchanting.md#hardness-what-your-pickaxe-can-break)).
 - **Whose levels.** A drill or saw works at the levels of its operator: whoever placed it or last right-clicked it. On a contraption, it keeps the operator it had when the contraption was put together. A log past the operator's Woodcutting stays standing. See [Good to know](good-to-know.md#machines-run-at-a-level).
-- **No XP.** Machines pay nobody skill XP, so level Mining by hand first.
+- **XP for whoever is near.** A drill pays its Mining to every player within 16 blocks of it. Build an [XP Bank](create-tips.md#the-xp-bank) by your drills to keep a share while you're away.

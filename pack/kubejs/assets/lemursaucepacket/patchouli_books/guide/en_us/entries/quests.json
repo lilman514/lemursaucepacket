@@ -84,15 +84,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Factory Floor$() - Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler - Factory gauges ordering their own ingredients$(br)$(bold)Railway Company$() - Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory - Grand Central: a station where three lines meet$(br)$(bold)The Foundry$() - Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving - Four compacted netherite"
+      "text": "$(#b9a98a)Chapter - What it covers - Ends with$()$(br)$(bold)Factory Floor$() - Fan processing, harvesters, machine XP and the XP Bank with its upgrades, compacting, automated assembly, arms with ten targets, a level 8 boiler - Factory gauges ordering their own ingredients$(br)$(bold)Railway Company$() - Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory - Grand Central: a station where three lines meet"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)The Enchanter$() - The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes - A book of Sharpness X$(br)$(bold)Arcane Works$() - Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experience - A blaze enchanter used a thousand times$(br)$(bold)The Warehouse$() - Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades - 32 vaults, stock-linked"
+      "text": "$(bold)The Foundry$() - Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving - Four compacted netherite$(br)$(bold)The Enchanter$() - The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes - A book of Sharpness X$(br)$(bold)Arcane Works$() - Create: Enchantment Industry: grindstones, experience hatches, blaze enchanters, printers, forgers, templates, super experience - A blaze enchanter used a thousand times"
     },
     {
       "type": "patchouli:text",
-      "text": "$(bold)Grand Kitchen$() - Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotation, a netherite knife - Master Chef: every meal eaten$(br2)$(bold)Expeditions$() - places to go and things to hunt:"
+      "text": "$(bold)The Warehouse$() - Vaults, sorting lines, chain conveyors, frogports, stock links, redstone requesters, Create backpack upgrades - 32 vaults, stock-linked$(br)$(bold)Grand Kitchen$() - Farmer's Delight from skillet to feast: compost, rice, chocolate, the spout foods, crop rotation, a netherite knife - Master Chef: every meal eaten$(br2)$(bold)Expeditions$() - places to go and things to hunt:"
     },
     {
       "type": "patchouli:text",

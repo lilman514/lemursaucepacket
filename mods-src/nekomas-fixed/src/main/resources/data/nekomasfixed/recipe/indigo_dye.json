@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "indigo_dye",
+  "ingredients": [
+    {
+      "item": "minecraft:pitcher_plant"
+    },
+    {
+      "item": "minecraft:pitcher_plant"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "nekomasfixed:indigo_dye"
+  }
+}

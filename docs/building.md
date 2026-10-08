@@ -115,6 +115,7 @@ Macaw's adds roofs, windows, doors, trapdoors, fences and walls, bridges, stairs
 | Vanilla Backport | Pale oak (from the Pale Garden), resin bricks (smelt resin clumps), sulfur and cinnabar stone, leaf litter (smelt any leaves), wildflowers, firefly bushes, cactus flowers, dry grass |
 | Farmer's Delight | Canvas signs (dye one at a crafting table for a coloured background), canvas rugs, tatami mats, straw bales |
 | Create Aeronautics | Envelopes, a balloon cloth: right-click them with dye to paint them, and a fan blowing through water washes them white again |
+| [Nekoma's Fixed](nekomas-fixed.md) | Amber, aqua, indigo and maroon versions of every dyed block (wool, terracotta, concrete, glass, candles, beds, shulker boxes), dyed bricks in all 20 colours, seventeen new froglights, a torch that burns under water, and a kiln that fires building blocks twice as fast as a furnace |
 
 ## Keeping it safe
 

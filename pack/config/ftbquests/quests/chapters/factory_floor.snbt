@@ -9,6 +9,15 @@
 	id: "5B239B708EA7A969"
 	images: [
 		{
+			height: 0.1d
+			id: "37716D870402E59D"
+			image: "lemursaucepacket:textures/quests/blank.png"
+			rotation: 0.0d
+			width: 0.1d
+			x: 11.0d
+			y: -2.85d
+		}
+		{
 			height: 2.9872340425531916d
 			id: "2106E24A0F482020"
 			image: "lemursaucepacket:textures/quests/panel.png"
@@ -19,8 +28,8 @@
 			text_shadow: true
 			text_v_align: "start"
 			width: 7.276595744680851d
-			x: 4.7d
-			y: -1.3d
+			x: 11.0d
+			y: -0.9d
 		}
 	]
 	order_index: 16
@@ -62,7 +71,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.85d
+			y: 3.45d
 		}
 		{
 			dependencies: ["67D26D8597BBF139"]
@@ -102,7 +111,7 @@
 				}
 			]
 			x: 2.3d
-			y: 1.95d
+			y: 4.25d
 		}
 		{
 			dependencies: ["67D26D8597BBF139"]
@@ -153,7 +162,7 @@
 				}
 			]
 			x: 2.3d
-			y: 3.8d
+			y: 2.65d
 		}
 		{
 			dependencies: ["35B1ED5D4808E247"]
@@ -193,7 +202,7 @@
 				}
 			]
 			x: 4.6d
-			y: 3.9d
+			y: 2.65d
 		}
 		{
 			dependencies: ["05AF0691B8749B54"]
@@ -235,7 +244,171 @@
 				}
 			]
 			x: 6.9d
-			y: 4.9d
+			y: 0.5d
+		}
+		{
+			dependencies: ["05AF0691B8749B54"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "65976CC75CB4574B"
+			rewards: [
+				{
+					id: "0262B7F21793FC52"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "4417BD0F3C80267E"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 240
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "2CB15E9E50D7F591"
+					table_id: 5365643345027758749L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "682326B33A041AEA"
+					type: "checkmark"
+				}
+			]
+			x: 6.9d
+			y: 2.1d
+		}
+		{
+			dependencies: ["65976CC75CB4574B"]
+			icon: {
+				id: "lsp_fixes:xp_bank"
+			}
+			id: "34E7B2E065E2C630"
+			rewards: [
+				{
+					id: "7F0CE5DA4C0C1F7C"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "01A2BAC9BDD3B8D7"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 480
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "0361856D78ABDB26"
+					table_id: 3642704314676522423L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "4A60A1601048C221"
+					item: {
+						count: 1
+						id: "lsp_fixes:xp_bank"
+					}
+					type: "item"
+				}
+			]
+			x: 9.2d
+			y: 1.5d
+		}
+		{
+			dependencies: ["34E7B2E065E2C630"]
+			icon: {
+				id: "lsp_fixes:xp_bank_upgrade_2"
+			}
+			id: "08895327882F58A3"
+			rewards: [
+				{
+					id: "1CD373500F8F4A9E"
+					type: "xp"
+					xp: 400
+				}
+				{
+					id: "360515915EE04D97"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 1280
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "0DE5CBD3DC3ACD3A"
+					table_id: 7777527461190354542L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "12A55B9D64782E3B"
+					item: {
+						count: 1
+						id: "lsp_fixes:xp_bank_upgrade_2"
+					}
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["08895327882F58A3"]
+			icon: {
+				id: "lsp_fixes:xp_bank_upgrade_3"
+			}
+			id: "19063A4BF4697B36"
+			rewards: [
+				{
+					id: "0A55DB6920153883"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					id: "688D148D1AC2FDDE"
+					item: {
+						components: {
+							"lsp_fixes:coin_amount": 5120
+						}
+						count: 1
+						id: "lsp_fixes:gold_coins"
+					}
+					type: "item"
+				}
+				{
+					id: "63CB0E6D007783C6"
+					table_id: 1080448268447668683L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "39AD7541AD2523AC"
+					item: {
+						count: 1
+						id: "lsp_fixes:xp_bank_upgrade_3"
+					}
+					type: "item"
+				}
+			]
+			x: 13.8d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0B25E869C216CBC7"]
@@ -275,7 +448,7 @@
 				}
 			]
 			x: 4.6d
-			y: 1.75d
+			y: 4.25d
 		}
 		{
 			dependencies: ["6DB6A9AAE90900A7"]
@@ -315,7 +488,7 @@
 				}
 			]
 			x: 6.9d
-			y: 1.45d
+			y: 3.9d
 		}
 		{
 			dependencies: ["7B5466088C1AE9D9"]
@@ -355,7 +528,7 @@
 				}
 			]
 			x: 9.2d
-			y: 2.1d
+			y: 3.1d
 		}
 		{
 			dependencies: ["7B5466088C1AE9D9"]
@@ -395,7 +568,7 @@
 				}
 			]
 			x: 9.2d
-			y: 0.5d
+			y: 4.7d
 		}
 		{
 			dependencies: ["05AF0691B8749B54"]
@@ -435,7 +608,7 @@
 				}
 			]
 			x: 6.9d
-			y: 3.3d
+			y: 5.9d
 		}
 		{
 			dependencies: ["16EAAB5FF0BF63C9"]
@@ -478,7 +651,7 @@
 				}
 			]
 			x: 9.2d
-			y: 3.7d
+			y: 6.3d
 		}
 		{
 			dependencies: ["29D3275A9C4CADFA"]
@@ -518,7 +691,7 @@
 				}
 			]
 			x: 11.5d
-			y: 2.1d
+			y: 3.3d
 		}
 		{
 			dependencies: ["6647694AC0AF423F"]
@@ -558,7 +731,7 @@
 				}
 			]
 			x: 13.8d
-			y: 2.1d
+			y: 3.5d
 		}
 		{
 			dependencies: ["14CCBBB982256773", "57CCDF67B574720D", "210C30021F4A3817"]
@@ -616,7 +789,7 @@
 				}
 			]
 			x: 16.1d
-			y: 2.1d
+			y: 4.7d
 		}
 	]
 }

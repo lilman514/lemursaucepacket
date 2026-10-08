@@ -455,6 +455,30 @@
     },
     {
       "skill": "crafting",
+      "level": 40,
+      "what": "XP Banks (keep 10% of the XP machines earn while nobody is near)",
+      "items": [
+        "lsp_fixes:xp_bank"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 60,
+      "what": "Tier II XP Bank upgrades (the bank keeps 25%)",
+      "items": [
+        "lsp_fixes:xp_bank_upgrade_2"
+      ]
+    },
+    {
+      "skill": "crafting",
+      "level": 80,
+      "what": "Tier III XP Bank upgrades (the bank keeps 50%)",
+      "items": [
+        "lsp_fixes:xp_bank_upgrade_3"
+      ]
+    },
+    {
+      "skill": "crafting",
       "level": 20,
       "what": "Item vaults",
       "items": [
@@ -1974,5 +1998,15 @@
       "what": "Wither skeleton skulls (the Wither)"
     }
   ],
-  "fishingTreasure": 20
+  "fishingTreasure": 20,
+  "machineXp": {
+    "playerRange": 16,
+    "bankRange": 8,
+    "generatedShare": 0.1,
+    "bankKeeps": [
+      0.1,
+      0.25,
+      0.5
+    ]
+  }
 }

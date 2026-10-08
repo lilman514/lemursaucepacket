@@ -1,0 +1,42 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+credits="${mod_credits}"
+# Upstream's page (the original Fabric mod).
+displayURL="https://modrinth.com/mod/nekomas-fixed"
+logoFile="assets/nekomasfixed/icon.png"
+description='''
+${mod_description}
+'''
+
+# The Redstone Striker's signal hooks (no NeoForge event covers redstone power).
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# Optional: the kiln's recipe category in JEI.
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="[19.0,)"
+    ordering="NONE"
+    side="BOTH"

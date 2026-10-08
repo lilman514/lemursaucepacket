@@ -19,8 +19,8 @@ These are the rules this server adds, or changes from the mods' defaults, that y
 ## Training skills
 
 - **Blocks you placed pay nothing.** Breaking a block you placed yourself pays no skill XP. Someone else's placed blocks still pay, and fully grown crops always do.
-- **Create machines train nobody.** Whatever drills, saws, harvesters, fans, crushing wheels, mechanical crafters and deployers mine, chop, cook or make earns no one skill XP. Train by hand.
-- **Machines don't build for XP either.** Blocks a deployer or a schematicannon places pay no Construction XP.
+- **Machines pay whoever stands near.** What a drill, saw, harvester, mechanical crafter, Crafter, basin or fan mines, chops, reaps, makes or cooks pays every player within 16 blocks of it the XP the same work pays by hand. Nobody near, and an XP Bank keeps a share ([Machine XP](create-tips.md#machine-xp)). A cobblestone generator's blocks pay a machine a tenth.
+- **Machines don't build for XP.** Blocks a deployer or a schematicannon places pay no Construction XP.
 - **Quest XP isn't skill XP.** It's the vanilla kind, for enchanting ([Quests](quests.md#how-rewards-scale)).
 - **Train together.** A skill party gives everyone in it within 50 blocks the XP any of you earns ([Skill party](social.md#skill-party)).
 

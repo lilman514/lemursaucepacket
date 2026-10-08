@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ENE",
+    "HXH",
+    "ENE"
+  ],
+  "key": {
+    "E": {
+      "item": "create:experience_block"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "H": {
+      "item": "minecraft:echo_shard"
+    },
+    "X": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "id": "lsp_fixes:xp_bank_upgrade_3",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

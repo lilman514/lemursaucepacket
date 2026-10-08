@@ -21,6 +21,9 @@ export const LIFESTEAL_ITEMS = ['heart', 'incomplete_heart', 'grave_essence', 'l
 // The economy's items (lsp_fixes 1.6.0, mods-src/lemursaucepacket-fixes: economy/EconomyContent).
 export const ECONOMY_ITEMS = ['lsp_fixes:gold_coins', 'lsp_fixes:coin_pouch']
 
+// The XP Bank and its upgrades (lsp_fixes 1.16.0: xpbank/XpBankModule).
+export const XP_BANK_ITEMS = ['lsp_fixes:xp_bank', 'lsp_fixes:xp_bank_upgrade_2', 'lsp_fixes:xp_bank_upgrade_3']
+
 // Ice and Fire CE 2.0 (added in pack 1.6.0): the items the main quests show (iceandfire-2.0.jar, assets/iceandfire/models/item).
 export const ICEANDFIRE_ITEMS = ['dragon_skull_fire', 'dragon_skull_ice', 'dragon_skull_lightning', 'dragonbone', 'fire_dragon_blood', 'dragonscales_red'].map((id) => `iceandfire:${id}`)
 

@@ -1,0 +1,131 @@
+// Same setup as ../lemursaucepacket-fixes (itself started from the NeoForge 1.21.1 ModDevGradle MDK).
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.147'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+repositories {
+    // Mods compiled against, straight from Modrinth (the same files the pack installs).
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
+}
+
+base {
+    archivesName = mod_id
+}
+
+// Mojang ships Java 21 to end users in 1.21.1, so mods should target Java 21.
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    // gradlew runClient / runServer start a dev game with this mod.
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        configureEach {
+            logLevel = org.slf4j.event.Level.INFO
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+// 'localRuntime' is on the dev runs' classpath but never becomes a dependency of the built jar.
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    // JEI: the kiln's recipe category. Compile-only; the plugin class is only loaded by JEI itself.
+    compileOnly "maven.modrinth:u6dRKJwZ:${jei_modrinth_version}"
+}
+
+// Expands ${...} properties in src/main/templates (neoforge.mods.toml).
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_credits            : mod_credits,
+            mod_description        : mod_description,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// The upstream MIT notice travels inside the jar too.
+tasks.named('jar', Jar) {
+    from('LICENSE') {
+        rename { 'LICENSE_nekomasfixed' }
+    }
+}
+
+// gradlew copyToPack: builds the jar and puts it in the modpack (../../pack/mods), removing older
+// nekomasfixed-*.jar first so two versions never end up side by side.
+def packModsDir = layout.projectDirectory.dir('../../pack/mods')
+def packJarPrefix = "${mod_id}-".toString()
+tasks.register('copyToPack', Copy) {
+    group = 'build'
+    description = 'Copies the mod jar into ../../pack/mods, replacing any older version.'
+    from tasks.named('jar')
+    into packModsDir
+    doFirst {
+        packModsDir.asFile.listFiles()
+                .findAll { it.name.startsWith(packJarPrefix) && it.name.endsWith('.jar') }
+                .each { it.delete() }
+    }
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

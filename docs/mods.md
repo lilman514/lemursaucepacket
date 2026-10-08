@@ -5,7 +5,7 @@ icon: puzzle-piece
 
 # Mods in the pack
 
-184 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+187 mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
 ## On the server and every client (137)
 
@@ -202,3 +202,11 @@ Visuals, sound, performance and interface. The ones marked optional in the launc
 ## Server only (0)
 
 - (none)
+
+## Made for the pack (3)
+
+On the server and every client, from the pack itself rather than Modrinth.
+
+- LemurSaucePacket Fixes: the pack's own code (skills and their gates, machine XP and the XP Bank, the economy, graves, the HUD layout editor, Lemurton and more)
+- LemurSaucePacket Instances: the Fight Pits' and the Inferno's private arenas
+- [Nekoma's Fixed](nekomas-fixed.md): the pack's NeoForge port of GreenJAB's Fabric mod (new colours, froglights, the kiln, clocks, the Redstone Striker)

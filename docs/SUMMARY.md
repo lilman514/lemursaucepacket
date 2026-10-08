@@ -69,6 +69,7 @@
 * [Create know-how](create-tips.md)
 * [Redstone, wired and wireless](redstone.md)
 * [Building and decorating](building.md)
+* [Nekoma's Fixed: new colours, clocks and the kiln](nekomas-fixed.md)
 
 ## Reference
 

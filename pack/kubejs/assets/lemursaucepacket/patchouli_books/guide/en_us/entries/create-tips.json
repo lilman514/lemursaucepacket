@@ -78,7 +78,37 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Machines earn nobody skill XP.$() Mine, chop and cook by hand to level. Blocks placed by a deployer or a schematicannon pay no Construction XP either.$(br)$(li)$(bold)Making the machines$() takes levels too: see $(l:lemursaucepacket:create)Create basics$(/l) and $(l:lemursaucepacket:skills)Skills$(/l)."
+      "text": "$(li)$(bold)The operator decides what a machine can make, not who gets its XP.$() That goes to whoever is near (Machine XP).$(br)$(li)$(bold)Making the machines$() takes levels too: see $(l:lemursaucepacket:create)Create basics$(/l) and $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Machine XP",
+      "text": "When a machine does a skill's work, every player within $(bold)16 blocks$() of it gets the XP that work pays by hand. Two of you standing by it both get all of it, whoever owns it.$(br2)$(li)$(bold)What pays.$() Drills, saws, mechanical harvesters, ploughs and rollers pay the Mining, Woodcutting or Farming for each block they break, standing still or on a contraption. A saw pays for every log of the tree it fells. Mechanical crafters, the Crafter and basins under a mixer or press pay what crafting their result by hand pays. A fan that blasts or smokes pays what a furnace or smoker would, for every item."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)What pays less.$() A block someone placed pays nothing, as it does by hand; a fully grown crop still pays. A block lava and water made, such as a cobblestone generator's, pays a tenth: a cobblestone pays 1 Mining by hand, and a machine gets that 1 for about one cobblestone in ten, so a generator levels you, slowly.$(br)$(li)$(bold)What pays nothing.$() Crushing wheels, millstones, deployers, spouts, fans that wash or haunt, and the ore vein drilling machine. Blocks a deployer or a schematicannon places pay no Construction XP."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Nobody near?$() The XP is lost, unless an XP Bank is in reach."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The XP Bank",
+      "text": "An XP Bank keeps a share of the XP that machines within $(bold)8 blocks$() of it earn while nobody is within 16 blocks of them. Come back and right-click it to take the XP.$(br2)$(#b9a98a)Tier - Keeps - How you get it - To make it$()$(br)$(bold)I$() - 10% - An XP Bank: brass sheets, Blocks of Experience, framed glass, a brass casing and a precision mechanism - Crafting 40$(br)$(bold)II$() - 25% - A Tier II upgrade used on a Tier I bank: diamonds, Blocks of Experience and an echo shard - Crafting 60"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)III$() - 50% - A Tier III upgrade used on a Tier II bank: netherite ingots, Blocks of Experience, echo shards and a nether star - Crafting 80$(br2)$(li)$(bold)Right-click$() it with an empty hand to take what it holds; $(bold)sneak-right-click$() to see what it holds and what you'd take. Its window glows green while it holds anything, and a comparator reads how much."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)You take at your own tier.$() Someone who can make only a Tier I bank takes 10% from a Tier III one, and a chat line with a ding says why. Until you can make an XP Bank at all, you can't take from one. Taking empties the bank, and the share your tier can't take is lost.$(br)$(li)$(bold)Upgrades go on in place.$() Use the upgrade on the bank. What it held already stays at the share it came in at.$(br)$(li)$(bold)Break it and it keeps everything.$() The item carries its tier and its XP, and places back the same."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The nearest bank catches the XP;$() of two as near, the higher tier. A bank doesn't ride on a contraption: a moving drill's XP goes to a bank within 8 blocks of where the drill is.$(br)$(li)$(bold)Anyone can take from your bank$(), as from your chests (there are no claims), so build it where you can keep an eye on it."
     },
     {
       "type": "patchouli:text",

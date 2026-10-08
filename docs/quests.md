@@ -80,7 +80,7 @@ The fight itself, step by step: [Elvarg's Lair](elvarg.md).
 
 | Chapter | What it covers | Ends with |
 |---|---|---|
-| Factory Floor | Fan processing, harvesters, compacting, automated assembly, arms with ten targets, a level 8 boiler | Factory gauges ordering their own ingredients |
+| Factory Floor | Fan processing, harvesters, machine XP and the XP Bank with its upgrades, compacting, automated assembly, arms with ten targets, a level 8 boiler | Factory gauges ordering their own ingredients |
 | Railway Company | Whistles, conductors, signals, timetables, the Nether express, a 5000-block trip, a six-carriage train, a track factory | Grand Central: a station where three lines meet |
 | The Foundry | Infinite lava, crushing wheels at full speed, sturdy sheets, industrial iron, ancient debris, netherite, lava diving | Four compacted netherite |
 | The Enchanter | The first table, Telekinesis, Mending, levels past the vanilla max, and the five Hardness tomes | A book of Sharpness X |

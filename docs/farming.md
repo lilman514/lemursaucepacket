@@ -86,7 +86,7 @@ Planks and sticks make one. Right-click the board with an ingredient to set it d
 ## Farms that run themselves
 
 {% hint style="info" %}
-Machines earn nobody skill XP. Level Farming by hand (or with the scythe), then let the machines take over.
+A harvester pays the Farming for each crop it reaps to everyone within 16 blocks of it, and an XP Bank keeps a share while nobody's near ([Machine XP](create-tips.md#machine-xp)). Crops you planted pay once they're fully grown.
 {% endhint %}
 
 - **Mechanical Harvester** (Farming 15 to make). On a moving contraption (a piston, bearing, gantry, minecart or train), it harvests fully grown crops and replants them, and leaves young ones alone. The harvest goes into the contraption's chests.

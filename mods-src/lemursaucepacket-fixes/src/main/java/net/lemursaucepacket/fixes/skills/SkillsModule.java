@@ -64,6 +64,7 @@ public final class SkillsModule {
     private static Field potOfMenu;
 
     public static void init(IEventBus modBus) {
+        MachineXp.init(ATTACHMENTS);
         ATTACHMENTS.register(modBus);
         NeoForge.EVENT_BUS.addListener((PlayerBrewedPotionEvent e) -> Gates.onBrewed(e));
         NeoForge.EVENT_BUS.addListener((LivingDropsEvent e) -> Gates.onDrops(e));
@@ -146,6 +147,34 @@ public final class SkillsModule {
             }
             (found ? in : missing).add(g[0]);
         }
+        // Machine XP's hooks (MachineXp): the same check, by their own handlers' name.
+        String[][] machineXp = {
+                {"drills and saws", "create", "com.simibubi.create.content.kinetics.base.BlockBreakingKineticBlockEntity"},
+                {"saws' felled trees", "create", "com.simibubi.create.content.kinetics.saw.SawBlockEntity"},
+                {"actors on contraptions", "create", "com.simibubi.create.content.kinetics.base.BlockBreakingMovementBehaviour"},
+                {"harvesters", "create", "com.simibubi.create.content.contraptions.actors.harvester.HarvesterMovementBehaviour"},
+                {"what machines break", "create", "com.simibubi.create.foundation.utility.BlockHelper"},
+                {"fans", "create", "com.simibubi.create.content.kinetics.fan.AirCurrent"},
+                {"fans' smelting", "create", "com.simibubi.create.content.kinetics.fan.processing.AllFanProcessingTypes$BlastingType"},
+                {"fans' smoking", "create", "com.simibubi.create.content.kinetics.fan.processing.AllFanProcessingTypes$SmokingType"},
+                {"basins", "create", "com.simibubi.create.content.processing.basin.BasinRecipe"},
+                {"mechanical crafters", "create", "com.simibubi.create.content.kinetics.crafter.RecipeGridHandler"},
+                {"the Crafter", "minecraft", "net.minecraft.world.level.block.CrafterBlock"},
+        };
+        List<String> xpIn = new ArrayList<>(), xpMissing = new ArrayList<>();
+        for (String[] g : machineXp) {
+            if (!"minecraft".equals(g[1]) && !ModList.get().isLoaded(g[1])) continue;
+            try {
+                Class.forName(g[2], false, SkillsModule.class.getClassLoader()); // loads it, so its mixins apply now
+            } catch (ClassNotFoundException | LinkageError ex) {
+                // counted as missing below
+            }
+            // The mixin plugin notes each class that got a handler (LspFixesMixinPlugin.noteMachineXp).
+            boolean found = System.getProperty("lsp_fixes.machineXpHooked", "").contains("|" + g[2] + "|");
+            (found ? xpIn : xpMissing).add(g[0]);
+        }
+        if (xpMissing.isEmpty()) LOGGER.info("Machine XP in: {}", String.join(", ", xpIn));
+        else LOGGER.error("Machine XP MISSING: {} (in: {})", String.join(", ", xpMissing), String.join(", ", xpIn));
         // Friends & Foes' totems are hooked by the mixin plugin, not a named handler (LspFixesMixinPlugin).
         if (ModList.get().isLoaded("friendsandfoes")) ("true".equals(System.getProperty("lsp_fixes.friendsAndFoesTotemsGated")) ? in : missing).add("Friends & Foes totems");
         if (missing.isEmpty()) LOGGER.info("Skill gates in: {}", String.join(", ", in));

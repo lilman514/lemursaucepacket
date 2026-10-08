@@ -2315,6 +2315,47 @@ export default {
           tasks: [{ item: 'createoreexcavation:vein_finder' }]
         },
         {
+          key: 'machine_xp',
+          title: 'Paid to Watch',
+          after: ['actors'],
+          tier: 2,
+          desc: [
+            'Machines pay XP to whoever is near: every player within 16 blocks of a drill, saw, harvester, crafter, basin or fan gets the XP its work would pay by hand, all of it.',
+            '',
+            tip('A block someone placed pays nothing, a cobblestone generator a tenth. With nobody near, the XP is lost, unless an XP Bank catches it.')
+          ],
+          tasks: [{ checkmark: true, title: 'I stand by my machines' }],
+          icon: 'create:mechanical_drill'
+        },
+        {
+          key: 'xp_bank',
+          title: 'Saving for Later',
+          after: ['machine_xp'],
+          tier: 3,
+          desc: [
+            'An XP Bank keeps 10% of the XP machines within 8 blocks of it earn while nobody is near them. Right-click it to take the XP, sneak-right-click to see what it holds.',
+            '',
+            tip('It needs Crafting 40 to make. You take from any bank at the tier you could make yourself, and nothing before you can make one.')
+          ],
+          tasks: [{ item: 'lsp_fixes:xp_bank' }]
+        },
+        {
+          key: 'xp_bank_2',
+          title: 'Interest',
+          after: ['xp_bank'],
+          tier: 4,
+          desc: ['Use a Tier II upgrade on a placed XP Bank and it keeps 25% of what it catches.', '', tip('Diamonds, Blocks of Experience and an echo shard, at Crafting 60.')],
+          tasks: [{ item: 'lsp_fixes:xp_bank_upgrade_2' }]
+        },
+        {
+          key: 'xp_bank_3',
+          title: 'Compound Interest',
+          after: ['xp_bank_2'],
+          tier: 5,
+          desc: ['A Tier III upgrade on a Tier II bank: it keeps half of what it catches.', '', tip('Netherite ingots, Blocks of Experience, echo shards and a nether star, at Crafting 80.')],
+          tasks: [{ item: 'lsp_fixes:xp_bank_upgrade_3' }]
+        },
+        {
           key: 'compacting',
           title: 'Compactification',
           after: ['fan_processing'],

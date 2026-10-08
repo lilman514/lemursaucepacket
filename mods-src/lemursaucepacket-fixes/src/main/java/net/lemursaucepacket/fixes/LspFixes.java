@@ -40,6 +40,7 @@ public final class LspFixes {
         CapesModule.init(modBus);
         SkillsModule.init(modBus);
         ConstructionModule.init(modBus);
+        net.lemursaucepacket.fixes.xpbank.XpBankModule.init(modBus);
         net.lemursaucepacket.fixes.relics.RelicsModule.init(modBus);
         HiscoresModule.init();
         if (FMLEnvironment.dist.isClient()) net.lemursaucepacket.fixes.hud.HudLayoutClient.init(modBus, container);

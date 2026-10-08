@@ -42,7 +42,14 @@
     "sophisticatedcore.PickupHardnessMixin",
     "sophisticatedbackpacks.PlacedBackpackOperatorMixin",
     "sophisticatedbackpacks.BackpackClosedByDefaultMixin",
-    "friendsandfoes.FriendsAndFoesTotemHookMixin"
+    "friendsandfoes.FriendsAndFoesTotemHookMixin",
+    "create.MachineXpBreakerMixin",
+    "create.MachineXpSawMixin",
+    "create.MachineXpMovingMixin",
+    "create.MachineXpHarvesterMixin",
+    "create.MachineXpBlockHelperMixin",
+    "create.MachineXpFanMixin",
+    "create.MachineXpFanSmeltMixin"
   ],
   "client": [
     "CapeSkinMixin",

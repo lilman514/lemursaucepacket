@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DED",
+    "EHE",
+    "DED"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "create:experience_block"
+    },
+    "H": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "id": "lsp_fixes:xp_bank_upgrade_2",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

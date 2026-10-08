@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stained_glass",
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    },
+    "X": {
+      "item": "nekomasfixed:maroon_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "nekomasfixed:maroon_stained_glass"
+  }
+}

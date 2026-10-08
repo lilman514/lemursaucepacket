@@ -86,7 +86,7 @@ Like a RuneScape skill guide: the level each thing needs.
 
 - **Making things.** If a recipe needs a level you don't have, its result stays in the crafting grid (or the smithing table, or the cooking pot) and a message says what it takes. The item's tooltip says it too. Create's crafting blueprint asks the same of whoever clicks it.
 - **Create's machines** each wait on the skill they take over: Mining for drills, Woodcutting for saws, Farming for harvesters and ploughs, Cooking for fans, Crafting for mechanical crafters, Construction for the schematicannon, Smithing for steam engines, Agility for trains and Enchanting for the blaze enchanter and the printer. The [Create machines](#create-machines) table lists them by level. Anyone can use a machine someone else made.
-- **Machines.** The Crafter and Create's mechanical crafters, basins (with their mixer or press) and spouts work at the skill levels of the player who last placed or right-clicked them. If that player doesn't have the level an item or recipe on these lists needs, the machine won't make it (and a mixer won't brew with an ingredient past their Brewing), and they get a chat message with a ding saying which. Drills and saws are held to the same levels: they won't break a block past their operator's level (a log past their Woodcutting chop level stays standing). On a moving contraption, a drill or saw keeps the operator it had when the contraption was put together. Right-click a machine to make it run at your levels. A machine nobody has placed or clicked makes nothing gated.
+- **Machines.** The Crafter and Create's mechanical crafters, basins (with their mixer or press) and spouts work at the skill levels of the player who last placed or right-clicked them. If that player doesn't have the level an item or recipe on these lists needs, the machine won't make it (and a mixer won't brew with an ingredient past their Brewing), and they get a chat message with a ding saying which. Drills and saws are held to the same levels: they won't break a block past their operator's level (a log past their Woodcutting chop level stays standing). On a moving contraption, a drill or saw keeps the operator it had when the contraption was put together. Right-click a machine to make it run at your levels. A machine nobody has placed or clicked makes nothing gated. Whoever its operator is, its work pays XP to every player within 16 blocks of it ([Machine XP](create-tips.md#machine-xp)).
 - **Backpacks, relics and totems.** A backpack upgrade only works once you have the level it takes to make it; a backpack set down as a block works at the levels of whoever last placed or opened it. A relic's abilities wait for the level it needs to wear, and a Totem of Undying only saves you at Hitpoints 50. Each tells you in chat, with a ding, what's missing.
 
 <figure><img src="images/skill_gate.jpg" alt="A crafting table with a mechanical drill's recipe: the drill sits in the result slot, and its tooltip says making it needs Mining 15"><figcaption><p>A mechanical drill at Mining 1: the result stays in the grid</p></figcaption></figure>
@@ -300,12 +300,15 @@ Like a RuneScape skill guide: the level each thing needs.
 | 35 | Agility | Train stations and train controls |
 | 35 | Enchanting | Blaze enchanters |
 | 35 | Smithing | Steam engines |
+| 40 | Crafting | XP Banks (keep 10% of the XP machines earn while nobody is near) |
 | 40 | Mining | Borehead bearings and rock-cutting wheels |
 | 50 | Enchanting | Printers (they copy enchanted books) |
 | 50 | Mining | Drill heads for the ore vein drilling machine |
 | 55 | Enchanting | Blaze forgers |
+| 60 | Crafting | Tier II XP Bank upgrades (the bank keeps 25%) |
 | 65 | Mining | Diamond drill heads |
 | 70 | Smithing | Dragonforge cores |
+| 80 | Crafting | Tier III XP Bank upgrades (the bank keeps 50%) |
 | 80 | Mining | Netherite drill heads |
 
 ### Other skills: making

@@ -27,6 +27,10 @@ Inside the walls are the market square with the **Lemurton waystone**, a cathedr
 
 The world has more cities: Luki's Grand Capitals turns its villages into **grand capitals** in five styles (plains, desert, savanna, snowy and taiga), at least 1,100 blocks apart. There are smaller villages too (Towns and Towers). Every town has a name of its own, which shows on screen as you walk in. World spawn is never inside a town: if a new world would start you in one, the server moves spawn to clear land nearby.
 
+### Where you start
+
+A new world starts everyone in **easy land**: a temperate forest or plains whose trees anyone can chop at Woodcutting 1 (oak, birch, spruce), with nothing harder within about 128 blocks and little within 256. Harder land means any tree that needs a Woodcutting level (acacia, jungle, dark oak, cherry, mangrove and the rest), and deserts, savannas, snow, jungles, swamps, mountains and caves. If the world would put spawn somewhere else, the server moves it to the nearest easy land when the world is made, before it builds Lemurton nearby.
+
 ## What's different from vanilla
 
 - **Create is the spine.** Every stage of progress runs through Create machines; other mods feed it (ore veins, crops) or give it a reason to exist (structures, an economy, airships).

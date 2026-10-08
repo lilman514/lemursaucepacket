@@ -85,7 +85,7 @@ const gearIds = [
 const later = await import('./later-ids.mjs')
 const known = {
   // Numismatics left the pack in 1.5.0 (Gold Coins replaced it); the registry dump still lists its items.
-  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS, ...later.ECONOMY_ITEMS, ...later.ICEANDFIRE_ITEMS].filter((id) => !id.startsWith('numismatics:'))),
+  item: new Set([...index.item, ...gearIds, ...later.WAYSTONES_ITEMS, ...later.LIFESTEAL_ITEMS, ...later.ECONOMY_ITEMS, ...later.XP_BANK_ITEMS, ...later.ICEANDFIRE_ITEMS].filter((id) => !id.startsWith('numismatics:'))),
   entity: new Set(index.entity),
   biome: new Set([...index.biome, ...index.biomeTag, ...later.REGIONS_UNEXPLORED_BIOMES]),
   structure: new Set([...index.structure, ...index.structureTag, ...later.ICEANDFIRE_STRUCTURES]),

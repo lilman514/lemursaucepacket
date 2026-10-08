@@ -1565,6 +1565,12 @@
     },
     {
      "level": 40,
+     "kind": "machine",
+     "title": "XP Banks (keep 10% of the XP machines earn while nobody is near)",
+     "icon": "lsp_fixes:xp_bank"
+    },
+    {
+     "level": 40,
      "kind": "make",
      "title": "Advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2",
      "icon": "sophisticatedbackpacks:advanced_restock_upgrade"
@@ -1631,6 +1637,12 @@
     },
     {
      "level": 60,
+     "kind": "machine",
+     "title": "Tier II XP Bank upgrades (the bank keeps 25%)",
+     "icon": "lsp_fixes:xp_bank_upgrade_2"
+    },
+    {
+     "level": 60,
      "kind": "make",
      "title": "Flamed, iced and lightning dragonbone swords",
      "icon": "iceandfire:dragonbone_sword_fire"
@@ -1676,6 +1688,12 @@
      "kind": "make",
      "title": "Respawn anchors and lodestones",
      "icon": "minecraft:respawn_anchor"
+    },
+    {
+     "level": 80,
+     "kind": "machine",
+     "title": "Tier III XP Bank upgrades (the bank keeps 50%)",
+     "icon": "lsp_fixes:xp_bank_upgrade_3"
     },
     {
      "level": 99,

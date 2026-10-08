@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "maroon_dye",
+  "ingredients": [
+    {
+      "item": "minecraft:torchflower"
+    },
+    {
+      "item": "minecraft:torchflower"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "nekomasfixed:maroon_dye"
+  }
+}

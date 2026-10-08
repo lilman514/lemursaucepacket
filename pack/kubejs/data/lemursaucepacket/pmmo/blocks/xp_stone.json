@@ -3,7 +3,8 @@
   "isTagFor": [
     "#minecraft:base_stone_overworld",
     "#minecraft:base_stone_nether",
-    "#c:stones"
+    "#c:stones",
+    "#c:cobblestones"
   ],
   "xp_values": {
     "BLOCK_BREAK": {

@@ -9,5 +9,12 @@
   "relics.description.climbing_boots.ability.foothold": "Foothold",
   "relics.description.climbing_boots.ability.foothold.description": "Steps the wearer up ledges up to %1$s blocks high without jumping. Each ledge stepped up gives %2$s%% more speed for two seconds.",
   "relics.description.climbing_boots.ability.foothold.experience_source.climbing": "+1 experience point for each ledge stepped up",
-  "relics.description.climbing_boots.ability.foothold.statistic.ledges_climbed": "Ledges Stepped Up"
+  "relics.description.climbing_boots.ability.foothold.statistic.ledges_climbed": "Ledges Stepped Up",
+  "block.lsp_fixes.xp_bank": "XP Bank",
+  "block.lsp_fixes.xp_bank.tier": "%s (Tier %s)",
+  "block.lsp_fixes.xp_bank.tooltip": "Keeps %s of the XP machines within %s blocks earn while nobody is within %s blocks of them. Right-click it to take the XP, sneak-right-click to see what it holds.",
+  "block.lsp_fixes.xp_bank.holds": "Holds %s",
+  "item.lsp_fixes.xp_bank_upgrade_2": "XP Bank Upgrade (Tier II)",
+  "item.lsp_fixes.xp_bank_upgrade_3": "XP Bank Upgrade (Tier III)",
+  "item.lsp_fixes.xp_bank_upgrade.tooltip": "Use it on a Tier %s XP Bank to make it Tier %s: it then keeps %s."
 }

@@ -133,6 +133,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(bold)$(l:lemursaucepacket:nekomas-fixed)Nekoma's Fixed$(/l)$() - Amber, aqua, indigo and maroon versions of every dyed block (wool, terracotta, concrete, glass, candles, beds, shulker boxes), dyed bricks in all 20 colours, seventeen new froglights, a torch that burns under water, and a kiln that fires building blocks twice as fast as a furnace"
+    },
+    {
+      "type": "patchouli:text",
       "title": "Keeping it safe",
       "text": "Nothing stops a player who's set on breaking in, but these slow them down:$(br2)$(li)$(bold)Light it up.$() Hold or ring a $(bold)Haunted Bell$() and the nearby spots dark enough for monsters to spawn light up. Make one by placing a Peculiar Bell right above soul fire.$(br)$(li)$(bold)Doors that need redstone.$() Create Deco's Locked doors and Macaw's metal doors only open with a redstone signal: hide the switch with a copycat button.$(br)$(li)$(bold)Hidden ways in.$() A Copycat Ghost Block looks like part of the wall and lets you walk through."
     },

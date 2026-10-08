@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "lsp_fixes:block/xp_bank_side_2",
+    "top": "lsp_fixes:block/xp_bank_top_2",
+    "bottom": "lsp_fixes:block/xp_bank_bottom_2"
+  }
+}

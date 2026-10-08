@@ -94,6 +94,8 @@ Create turns redstone into a control system. Signals travel without wires, senso
 |---|---|---|
 | Minecraft | Crafter | Crafts one item per pulse; click a slot to lock it; a hopper feeds it. Here it works at its operator's skill levels, like Create's machines ([Create know-how](create-tips.md#machines-and-your-skills)) |
 | Minecraft | Wind charge | Where one bursts, it presses buttons, flips levers and opens doors and trapdoors |
+| [Nekoma's Fixed](nekomas-fixed.md) | Redstone Striker | Right-click a block to power that spot at 15 for 16 ticks (one tick when sneaking): dust, a block, a lamp, door or piston; an observer pulses |
+| [Nekoma's Fixed](nekomas-fixed.md) | Clock | Right-click a block with a clock to hang it. A comparator reads the hour; record a time on the clock (right-click the air) and, placed, it pulses at that time every day |
 | Friends&Foes | Copper golem | A lightning rod on a carved pumpkin on a copper block. It wanders about and now and then presses a copper button: a random pulse. It weathers until it freezes as a statue; scrape it with an axe, wax it with honeycomb |
 | Create Deco | Cage lamps | Dark until the block they hang on gets a signal. Right-click one with an empty hand to swap that: lit until powered |
 | Create Deco | Locked doors | Craft one of Create Deco's metal doors with a redstone torch: the Locked door opens only with redstone |

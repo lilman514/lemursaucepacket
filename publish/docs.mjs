@@ -47,6 +47,19 @@ function writeModsPage() {
       return { name: tomlString(text, 'name') ?? f, side: tomlString(text, 'side') ?? 'both', url: modId && text.includes('[update.modrinth]') ? `https://modrinth.com/project/${modId}` : undefined }
     })
     .sort((a, b) => a.name.localeCompare(b.name))
+  // The pack's own jars (pack/mods/*.jar): not on Modrinth, so described here, by file name.
+  const LOCAL = {
+    lsp_fixes: "LemurSaucePacket Fixes: the pack's own code (skills and their gates, machine XP and the XP Bank, the economy, graves, the HUD layout editor, Lemurton and more)",
+    lsp_instances: "LemurSaucePacket Instances: the Fight Pits' and the Inferno's private arenas",
+    nekomasfixed: "[Nekoma's Fixed](nekomas-fixed.md): the pack's NeoForge port of GreenJAB's Fabric mod (new colours, froglights, the kiln, clocks, the Redstone Striker)"
+  }
+  const local = readdirSync(modsDir)
+    .filter((f) => f.endsWith('.jar'))
+    .map((f) => {
+      const key = Object.keys(LOCAL).find((k) => f.startsWith(`${k}-`))
+      return key ? LOCAL[key] : f.replace(/\.jar$/, '')
+    })
+    .sort()
   const list = (side) =>
     mods
       .filter((m) => m.side === side)
@@ -59,7 +72,7 @@ icon: puzzle-piece
 
 # Mods in the pack
 
-${mods.length} mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
+${mods.length + local.length} mods, kept identical to the server's by the launcher. This page is generated from the pack's mod list, so it's always current.
 
 ## On the server and every client (${mods.filter((m) => m.side === 'both').length})
 
@@ -74,6 +87,12 @@ ${list('client')}
 ## Server only (${mods.filter((m) => m.side === 'server').length})
 
 ${list('server') || '- (none)'}
+
+## Made for the pack (${local.length})
+
+On the server and every client, from the pack itself rather than Modrinth.
+
+${local.map((m) => `- ${m}`).join('\n')}
 `
   writeFileSync(path.join(docsDir, 'mods.md'), text)
   return mods.length
@@ -137,6 +156,7 @@ const ICONS = {
   'create-tips': 'emblems/brass_age.webp',
   redstone: 'icons/link.webp',
   building: 'skills/construction.webp',
+  'nekomas-fixed': 'emblems/banners.webp',
   'good-to-know': 'icons/news.webp',
   'inventory-tips': 'emblems/backpack_workshop.webp',
   interface: 'icons/settings.webp',

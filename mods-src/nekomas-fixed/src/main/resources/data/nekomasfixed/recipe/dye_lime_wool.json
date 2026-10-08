@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    [
+      {
+        "item": "nekomasfixed:amber_wool"
+      },
+      {
+        "item": "nekomasfixed:aqua_wool"
+      },
+      {
+        "item": "nekomasfixed:indigo_wool"
+      },
+      {
+        "item": "nekomasfixed:maroon_wool"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:lime_wool"
+  }
+}

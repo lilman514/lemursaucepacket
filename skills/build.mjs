@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url'
 import { ENCHANT_XP } from '../enchanting/enchanting.mjs'
 import { MODDED } from './modded.mjs'
 import {
-  BREW, BREW_XP, CHOP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, MODDED_POTION_LEVEL, PALETTE, PLANT, POTION_FORM_LEVEL,
+  BREW, BREW_XP, CHOP, MACHINE_XP, CONSTRUCTION_RECIPES, CONSTRUCTION_SAVE_NEVER, CONSTRUCTION_SAVE_PER_LEVEL, CONSTRUCTION_XP, CRAFT, DROPS, FISHING_TREASURE, MODDED_POTION_LEVEL, PALETTE, PLANT, POTION_FORM_LEVEL,
   POTION_LEVEL, QUEST_REQUIREMENTS, RANGED, RELIC_WEAR, SKILL_INFO
 } from './unlocks.mjs'
 
@@ -166,7 +166,9 @@ const DAMAGE_XP = {
 
 // [file name, blocks or tags, BLOCK_BREAK xp]
 const BLOCK_XP = [
-  ['stone', ['#minecraft:base_stone_overworld', '#minecraft:base_stone_nether', '#c:stones'], { mining: 1 }],
+  // Cobblestone pays as stone does (pack 1.16.0: the owner wants cobblestone generators to pay "very little", and a
+  // machine on one gets a tenth of this, see skills/unlocks.mjs MACHINE_XP).
+  ['stone', ['#minecraft:base_stone_overworld', '#minecraft:base_stone_nether', '#c:stones', '#c:cobblestones'], { mining: 1 }],
   ['coal_ore', ['#c:ores/coal'], { mining: 10 }],
   ['copper_ore', ['#c:ores/copper'], { mining: 12 }],
   ['zinc_ore', ['#c:ores/zinc'], { mining: 20 }],
@@ -355,10 +357,12 @@ write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'skill_gates.json'),
   ),
   potionForms: POTION_FORM_LEVEL,
   drops: DROPS,
-  fishingTreasure: FISHING_TREASURE
+  fishingTreasure: FISHING_TREASURE,
+  machineXp: MACHINE_XP
 })
 writeSkillGuide()
 writeGuideData()
+writeStarterBiomes()
 
 const fileCount = requirements.length + ITEM_XP.length + BLOCK_XP.length
 console.log(`${allSkills.length} skills, ${requirements.length} requirement rules, ${ITEM_XP.length + BLOCK_XP.length} XP rules (${fileCount} files), ${PLANT.length + CHOP.length} planting/chopping rules, ${CRAFT.length} making gates, ${BREW.length} brewing gates, ${CONSTRUCTION_RECIPES.length} Construction recipes, ${PALETTE.categories.length} palette categories; level 99 costs ${RUNESCAPE_LEVELS.reduce((a, b) => a + b, 0).toLocaleString('en')} XP`)
@@ -492,4 +496,44 @@ function writeGuideData() {
   mkdirSync(path.dirname(file), { recursive: true })
   writeFileSync(file, JSON.stringify({ comment: 'Written by skills/build.mjs from skills/unlocks.mjs: do not edit by hand.', groups, skills }, null, 1) + '\n')
   console.log(`skills: the in-game guide lists ${Object.values(skills).reduce((n, x) => n + x.unlocks.length, 0)} unlocks over ${Object.keys(skills).length} skills`)
+}
+
+/**
+ * Starter land for a new world's spawn (lsp_fixes hub/StarterSpawn; the owner, 2026-10-08: "make sure that the spawn
+ * area doesnt contain high tier biomes right away, so the player is actually able to play and collect resources and
+ * not die. spawn ... is in acacia biome and you cant even break trees"). From the wiki's atlas (wiki/atlas.json) and
+ * the chopping levels (CHOP): a temperate forest or plains whose trees all come down at Woodcutting 1 is starter land;
+ * a biome with any tree that needs a level, or snowy, desert, savanna, jungle, swamp, cave or mountain land, is in the
+ * way; the rest (treeless plains, rivers, beaches, the sea) is neither.
+ */
+function writeStarterBiomes() {
+  const atlas = JSON.parse(readFileSync(path.join(root, 'wiki', 'atlas.json'), 'utf8'))
+  const woodOf = (id) => id.split(':')[1].replace(/^stripped_/, '').replace(/_(log|wood|stem|hyphae)$/, '').replace(/_/g, ' ')
+  const gatedWoods = new Set(CHOP.flatMap((c) => c.blocks).filter((b) => !b.startsWith('#')).map(woodOf))
+  // The atlas names trees by their wood ("Big spruce trees", "Dark oak trees"); azaleas grow oak logs.
+  const treeWoods = (b) => (b.plants ?? []).filter((p) => / trees$/.test(p) || p === 'Azaleas').map((p) => (p === 'Azaleas' ? 'oak' : p.replace(/^Big /, '').replace(/ trees$/, '').toLowerCase()))
+  // Savannas too: their treeless parts lie among acacias (the owner's first spawn was in acacia land).
+  const IN_THE_WAY = new Set(['snowy', 'deserts', 'jungles', 'wetlands', 'caves', 'mountains', 'savannas'])
+  // Gentle land in a hard category, and starter-looking land that isn't (islands, bare windswept hills).
+  const NEITHER = new Set(['minecraft:meadow', 'minecraft:windswept_hills', 'minecraft:windswept_gravelly_hills', 'terralith:alpha_islands'])
+  const starter = []
+  const neutral = []
+  for (const b of atlas.biomes.filter((x) => x.dimension === 'overworld')) {
+    const woods = treeWoods(b)
+    const gated = woods.some((w) => gatedWoods.has(w))
+    if (gated || (IN_THE_WAY.has(b.category) && !NEITHER.has(b.id))) continue
+    if (['forests', 'plains'].includes(b.category) && woods.length && !NEITHER.has(b.id)) starter.push(b.id)
+    else neutral.push(b.id)
+  }
+  write(path.join(root, 'pack', 'config', 'lemursaucepacket', 'starter_biomes.json'), {
+    comment: 'Written by skills/build.mjs from wiki/atlas.json and the chopping levels in skills/unlocks.mjs: do not edit by hand. A new world spawns in starter land with none of the rest within innerRadius, at least minStarterShare starter land there, and at most maxBadShare of the rest within outerRadius.',
+    innerRadius: 128,
+    outerRadius: 256,
+    minStarterShare: 0.5,
+    maxBadShare: 0.2,
+    searchRadius: 2500,
+    starter: starter.sort(),
+    neutral: neutral.sort()
+  })
+  console.log(`starter land: ${starter.length} biomes, ${neutral.length} neither, the rest in the way`)
 }

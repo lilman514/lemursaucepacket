@@ -52,6 +52,7 @@ public final class SkillGates {
     private static final Map<Item, Integer> POTION_FORMS = new HashMap<>();
     private static int fishingTreasure = 0;
     private static double xpBase = 8, xpPerLevel = 2.2;
+    private static MachineXp.Rules machineXp = MachineXp.Rules.DEFAULT;
     /** Every skill some gate asks for (what a machine's operator snapshot keeps). */
     private static final java.util.Set<String> SKILLS = new java.util.TreeSet<>(List.of("brewing", "cooking"));
 
@@ -108,6 +109,19 @@ public final class SkillGates {
             if (root.has("brewXp")) {
                 xpBase = root.getAsJsonObject("brewXp").get("base").getAsDouble();
                 xpPerLevel = root.getAsJsonObject("brewXp").get("perLevel").getAsDouble();
+            }
+            if (root.has("machineXp")) {
+                JsonObject m = root.getAsJsonObject("machineXp");
+                MachineXp.Rules d = MachineXp.Rules.DEFAULT;
+                double[] keeps = d.bankKeeps();
+                if (m.has("bankKeeps")) {
+                    var list = m.getAsJsonArray("bankKeeps");
+                    keeps = new double[list.size()];
+                    for (int i = 0; i < keeps.length; i++) keeps[i] = list.get(i).getAsDouble();
+                }
+                machineXp = new MachineXp.Rules(m.has("playerRange") ? m.get("playerRange").getAsDouble() : d.playerRange(),
+                        m.has("bankRange") ? m.get("bankRange").getAsInt() : d.bankRange(),
+                        m.has("generatedShare") ? m.get("generatedShare").getAsDouble() : d.generatedShare(), keeps);
             }
             for (Map<?, Need> m : List.of(CRAFT, CRAFT_TAGS, BREW, WEAR, RECIPES)) for (Need n : m.values()) SKILLS.addAll(List.of(n.skill().split("\\|")));
             for (Drop d : DROPS) SKILLS.add(d.need().skill());
@@ -181,6 +195,12 @@ public final class SkillGates {
         Integer level = POTIONS.get(id);
         if (level == null) return -1;
         return Math.max(level, POTION_FORMS.getOrDefault(stack.getItem(), 0));
+    }
+
+    /** Machine XP's ranges and shares (see {@link MachineXp}). */
+    public static MachineXp.Rules machineXp() {
+        ensureLoaded();
+        return machineXp;
     }
 
     public static double brewXp(int level) {

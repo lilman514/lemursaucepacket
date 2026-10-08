@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.lemursaucepacket.nekomasfixed.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockStateBaseMixin",
+    "ObserverBlockInvoker",
+    "PistonBaseBlockMixin",
+    "RedStoneWireBlockMixin",
+    "SignalGetterMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

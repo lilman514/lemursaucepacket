@@ -108,9 +108,22 @@ export const CRAFT = [
   { skill: 'mining', level: 50, machine: true, what: 'Drill heads for the ore vein drilling machine', items: ['createoreexcavation:drill'] },
   { skill: 'mining', level: 65, machine: true, what: 'Diamond drill heads', items: ['createoreexcavation:diamond_drill'] },
   { skill: 'mining', level: 80, machine: true, what: 'Netherite drill heads', items: ['createoreexcavation:netherite_drill'] },
+  // The XP Bank (lsp_fixes xpbank): what its tiers keep is MACHINE_XP's bankKeeps; a player takes from one at the
+  // highest of these they could make.
+  { skill: 'crafting', level: 40, machine: true, what: 'XP Banks (keep 10% of the XP machines earn while nobody is near)', items: ['lsp_fixes:xp_bank'] },
+  { skill: 'crafting', level: 60, machine: true, what: 'Tier II XP Bank upgrades (the bank keeps 25%)', items: ['lsp_fixes:xp_bank_upgrade_2'] },
+  { skill: 'crafting', level: 80, machine: true, what: 'Tier III XP Bank upgrades (the bank keeps 50%)', items: ['lsp_fixes:xp_bank_upgrade_3'] },
   // The modded items' making gates (skills/modded.mjs).
   ...modded('craft').map(({ skill, level, machine, what, items }) => ({ skill, level, ...(machine ? { machine } : {}), what, items }))
 ]
+
+/**
+ * Machine XP (lsp_fixes skills/MachineXp): a Create machine's work pays every player within playerRange blocks of it
+ * what the same work pays by hand; a block lava and water made pays generatedShare of it (the owner: cobblestone
+ * generators should pay, but very little). With nobody near, an XP Bank within bankRange blocks (each way) keeps
+ * bankKeeps[tier - 1] of it.
+ */
+export const MACHINE_XP = { playerRange: 16, bankRange: 8, generatedShare: 0.1, bankKeeps: [0.1, 0.25, 0.5] }
 
 /** Brewing: what each ingredient brews and the level it needs (manual or by hopper: a stand brews at the level of whoever last used it). */
 export const BREW = [

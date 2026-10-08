@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lsp_fixes:item/xp_bank_upgrade_3"
+  }
+}

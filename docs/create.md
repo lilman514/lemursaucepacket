@@ -58,7 +58,7 @@ Belts carry items; chutes drop them; funnels put them in and take them out; depo
 
 ## Milestones your skills unlock
 
-Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see [Skills](skills.md#what-each-skill-unlocks)).
+Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see [Skills](skills.md#what-each-skill-unlocks)). Their work pays XP to every player within 16 blocks of them, and an XP Bank keeps a share while nobody's near ([Machine XP](create-tips.md#machine-xp)).
 
 | Level | Skill | Machine |
 |---|---|---|
@@ -73,6 +73,8 @@ Create's machines wait on the skill they take over. Making them is gated, and so
 | 35 | Enchanting | Blaze enchanter |
 | 50 | Enchanting | Printer |
 | 50, 65, 80 | Mining | Ore vein drill heads: iron, diamond, netherite |
+| 40 | Crafting | XP Bank (keeps 10% of the XP machines earn while nobody's near) |
+| 60, 80 | Crafting | XP Bank upgrades: Tier II (25%), Tier III (50%) |
 
 The full list is in [Skills](skills.md#create-machines).
 

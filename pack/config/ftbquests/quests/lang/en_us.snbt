@@ -193,6 +193,8 @@
 	quest.083571FE4041D397.title: "Shelving"
 	quest.086572A7A4E6D0A9.quest_desc: ["Press &eH&r. Six missions a week, refreshed on a timer. Pick the ones your factory already does."]
 	quest.086572A7A4E6D0A9.title: "The Mission Board"
+	quest.08895327882F58A3.quest_desc: ["Use a Tier II upgrade on a placed XP Bank and it keeps 25% of what it catches.", "", "&7Diamonds, Blocks of Experience and an echo shard, at Crafting 60."]
+	quest.08895327882F58A3.title: "Interest"
 	quest.08C430BAB9BD170F.quest_desc: ["Not a place to visit alone."]
 	quest.08C430BAB9BD170F.title: "Plague Asylum"
 	quest.08CB68987F5A93F5.quest_desc: ["Reach &eStrength 75&r. Strength gives +0.3% melee crit chance per level."]
@@ -308,9 +310,11 @@
 	quest.18F4D883CEADC699.title: "Rider Flute"
 	quest.18FDC07B9A38D5E2.quest_desc: ["Speak to Grull the Pitmaster at the pit mouth to go down. You fight alone: thirty waves of pit beasts, each wave a few seconds after the last falls.", "", "&6Kiln-Kih&r: embers. &6Kiln-Kek&r: split when they die. &6Kiln-Xil&r: shoot flaming arrows. &6Kiln-MejKot&r: hit hard and heal the beasts near them. &6Kiln-Zek&r: throw fire that Fire Resistance does not stop.", "", "&cKiln-Tok-Jad&r comes last. When flame gathers in him, &eraise your shield toward him&r. When he rises and a ring burns round your feet, &eget out of the ring&r. At half health he calls menders: strike one and they all turn on you instead of healing him.", "", "&7If you fall, Grull pulls you out alive with everything you had: only the run is lost. Bring food, potions, a shield and a bow for the Xil."]
 	quest.18FDC07B9A38D5E2.title: "&cThe Fight Pits"
+	quest.19063A4BF4697B36.quest_desc: ["A Tier III upgrade on a Tier II bank: it keeps half of what it catches.", "", "&7Netherite ingots, Blocks of Experience, echo shards and a nether star, at Crafting 80."]
+	quest.19063A4BF4697B36.title: "Compound Interest"
 	quest.190D30D37AF325E2.quest_desc: ["Brass needs heat, and heat means blazes. Build a portal.", "", "&7Obsidian as an item needs Hardness III. Cast the frame in place with lava and water, or use a ruined portal."]
 	quest.190D30D37AF325E2.title: "Through the Portal"
-	quest.1917D6689D0B2836.quest_desc: ["Reach &eCrafting 75&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 55: dragonbone tools, sword and bow", "• 60: end crystals; flamed, iced and lightning dragonbone swords; dragonscale armour (all twelve colours)", "• 65: shulker boxes; summoning crystals", "• 70: conduits", "• 75: beacons"]
+	quest.1917D6689D0B2836.quest_desc: ["Reach &eCrafting 75&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 55: dragonbone tools, sword and bow", "• 60: end crystals; Tier II XP Bank upgrades (the bank keeps 25%); flamed, iced and lightning dragonbone swords; dragonscale armour (all twelve colours)", "• 65: shulker boxes; summoning crystals", "• 70: conduits", "• 75: beacons"]
 	quest.1917D6689D0B2836.title: "&6Crafting 75"
 	quest.1AB048DD42AAA115.quest_desc: ["Reach &eEnchanting 99&r. Enchanting gives enchantments past their vanilla max: the caps open with the skill.", "", "&eUnlocked on the way:&r", "• 80: level IX", "• 99: level X", "", "&6The Enchanting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.1AB048DD42AAA115.title: "&6Enchanting 99"
@@ -379,7 +383,7 @@
 	quest.23D0C909F4F34B0D.title: "Warp Stone"
 	quest.24A74A9AE03817A1.quest_desc: ["Wake it on purpose, and win. Bring the whole server.", "", "&eChapter prize:&r a totem, a relic and two rolls on the Legend's Hoard."]
 	quest.24A74A9AE03817A1.title: "&cThe Warden"
-	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour; mechanical crafters; pressing upgrades; magnet, compacting and advanced pickup/filter upgrades; diamond knives", "• 35: Aeronaut's Rigging (for the Aeronaut set); capacitors (and so electric motors, tesla coils and accumulators); mixing upgrades; gold backpacks", "• 40: enchanting tables; Duelist's Filigree (for the Brass Duelist set); advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2", "• 45: stock tickers, redstone requesters and factory gauges; advanced magnet and advanced compacting upgrades; dragon horns; dragon seekers; horns of Sight", "• 50: ender chests; diamond backpacks; ender linkers"]
+	quest.25B714A6FCD8983E.quest_desc: ["Reach &eCrafting 50&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 30: the Builder's Wand; diamond tools, weapons and armour; mechanical crafters; pressing upgrades; magnet, compacting and advanced pickup/filter upgrades; diamond knives", "• 35: Aeronaut's Rigging (for the Aeronaut set); capacitors (and so electric motors, tesla coils and accumulators); mixing upgrades; gold backpacks", "• 40: enchanting tables; Duelist's Filigree (for the Brass Duelist set); XP Banks (keep 10% of the XP machines earn while nobody is near); advanced restock, deposit, refill, void and tool swapper upgrades, and stack tier 2", "• 45: stock tickers, redstone requesters and factory gauges; advanced magnet and advanced compacting upgrades; dragon horns; dragon seekers; horns of Sight", "• 50: ender chests; diamond backpacks; ender linkers"]
 	quest.25B714A6FCD8983E.title: "&6Crafting 50"
 	quest.26C3A5928BAFE1CB.quest_desc: ["Run a pair of crushing wheels at maximum speed. Everything that goes in comes out doubled."]
 	quest.26C3A5928BAFE1CB.title: "Crushing It"
@@ -465,7 +469,7 @@
 	quest.2F6270CB2985EC5F.quest_desc: ["Copper and zinc in a heated basin give brass."]
 	quest.2F6270CB2985EC5F.title: "Brass"
 	quest.2FAE318E17AE49CB.title: "Mission Virtuoso"
-	quest.30292594BC7586F9.quest_desc: ["Reach &eCrafting 99&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 80: respawn anchors and lodestones", "", "&6The Crafting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
+	quest.30292594BC7586F9.quest_desc: ["Reach &eCrafting 99&r. Crafting gives XP from everything you craft.", "", "&eUnlocked on the way:&r", "• 80: respawn anchors and lodestones; Tier III XP Bank upgrades (the bank keeps 50%)", "", "&6The Crafting Cape is yours at 99:&r it lands in your bag. Right-click it to wear it (ESC → Capes shows every cape)."]
 	quest.30292594BC7586F9.title: "&6Crafting 99"
 	quest.3073E0625A50D025.quest_desc: ["Smart and gyroscopic propellers give you finer control over thrust and direction."]
 	quest.3073E0625A50D025.title: "Steering"
@@ -486,6 +490,8 @@
 	quest.34AF677B29FF0802.title: "Glacial Chasm"
 	quest.34D2EB9666F0B4E7.quest_desc: ["Every Overworld biome, Terralith included. The Explorer Cape comes with it.", "", "&eChapter prize:&r a waystone of your own, a warp stone, a relic and a roll on the Legend's Hoard."]
 	quest.34D2EB9666F0B4E7.title: "&aAdventuring Time"
+	quest.34E7B2E065E2C630.quest_desc: ["An XP Bank keeps 10% of the XP machines within 8 blocks of it earn while nobody is near them. Right-click it to take the XP, sneak-right-click to see what it holds.", "", "&7It needs Crafting 40 to make. You take from any bank at the tier you could make yourself, and nothing before you can make one."]
+	quest.34E7B2E065E2C630.title: "Saving for Later"
 	quest.3536D4075D5DBE2D.title: "Volcanic Peaks"
 	quest.3572EA16FB19CC9E.quest_desc: ["Taverns sit along the roads. Travellers trade here."]
 	quest.3572EA16FB19CC9E.title: "A Warm Tavern"
@@ -848,6 +854,8 @@
 	quest.6524A67A3C268BA2.title: "&eTotal 500"
 	quest.65362757C5786E54.quest_desc: ["Glue blocks to a mechanical bearing or piston and they move as one contraption. Drills and saws mine and cut as they go.", "", "&7Drills on a contraption mine iron and zinc ore without a Hardness tome. This is how the Andesite Age gets its metal."]
 	quest.65362757C5786E54.title: "It Moves!"
+	quest.65976CC75CB4574B.quest_desc: ["Machines pay XP to whoever is near: every player within 16 blocks of a drill, saw, harvester, crafter, basin or fan gets the XP its work would pay by hand, all of it.", "", "&7A block someone placed pays nothing, a cobblestone generator a tenth. With nobody near, the XP is lost, unless an XP Bank catches it."]
+	quest.65976CC75CB4574B.title: "Paid to Watch"
 	quest.65D1AFE50D8ECE8E.quest_desc: ["Seven hundred and fifty levels.", "", "&7Your total level is every skill added together, 16 to 1584."]
 	quest.65D1AFE50D8ECE8E.title: "&eTotal 750"
 	quest.65DD30A5E415DC7A.quest_desc: ["A windmill bearing plus sails (wool, or sail blocks) glued together turns in the wind. More sails, more power."]
@@ -1261,6 +1269,7 @@
 	task.66B7B361C4CA44DA.title: "Ranged level 99"
 	task.66E7BFB36BCBD166.title: "Defence level 50"
 	task.681D2FB4E0CCA481.title: "Mining level 99"
+	task.682326B33A041AEA.title: "I stand by my machines"
 	task.6901C474B82E9ED1.title: "Hold 100,000 coins"
 	task.690B6C71D0AB6018.title: "Total level 1000"
 	task.6965B4E3CDB16836.title: "Kill a mob near a sculk catalyst"

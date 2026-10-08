@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "full=false,tier=1": {
+      "model": "lsp_fixes:block/xp_bank_1"
+    },
+    "full=true,tier=1": {
+      "model": "lsp_fixes:block/xp_bank_1_full"
+    },
+    "full=false,tier=2": {
+      "model": "lsp_fixes:block/xp_bank_2"
+    },
+    "full=true,tier=2": {
+      "model": "lsp_fixes:block/xp_bank_2_full"
+    },
+    "full=false,tier=3": {
+      "model": "lsp_fixes:block/xp_bank_3"
+    },
+    "full=true,tier=3": {
+      "model": "lsp_fixes:block/xp_bank_3_full"
+    }
+  }
+}

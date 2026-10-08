@@ -49,7 +49,7 @@
     {
       "type": "patchouli:text",
       "title": "Milestones your skills unlock",
-      "text": "Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see $(l:lemursaucepacket:skills)Skills$(/l))."
+      "text": "Create's machines wait on the skill they take over. Making them is gated, and so is what they make: a machine works at the levels of whoever last placed or right-clicked it (see $(l:lemursaucepacket:skills)Skills$(/l)). Their work pays XP to every player within 16 blocks of them, and an XP Bank keeps a share while nobody's near ($(l:lemursaucepacket:create-tips)Machine XP$(/l))."
     },
     {
       "type": "patchouli:text",
@@ -57,7 +57,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "The full list is in $(l:lemursaucepacket:skills)Skills$(/l)."
+      "text": "$(bold)40$() - Crafting - XP Bank (keeps 10% of the XP machines earn while nobody's near)$(br)$(bold)60, 80$() - Crafting - XP Bank upgrades: Tier II (25%), Tier III (50%)$(br2)The full list is in $(l:lemursaucepacket:skills)Skills$(/l)."
     },
     {
       "type": "patchouli:text",

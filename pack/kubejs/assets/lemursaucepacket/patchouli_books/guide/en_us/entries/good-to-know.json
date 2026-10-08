@@ -20,11 +20,11 @@
     {
       "type": "patchouli:text",
       "title": "Training skills",
-      "text": "$(li)$(bold)Blocks you placed pay nothing.$() Breaking a block you placed yourself pays no skill XP. Someone else's placed blocks still pay, and fully grown crops always do.$(br)$(li)$(bold)Create machines train nobody.$() Whatever drills, saws, harvesters, fans, crushing wheels, mechanical crafters and deployers mine, chop, cook or make earns no one skill XP. Train by hand.$(br)$(li)$(bold)Machines don't build for XP either.$() Blocks a deployer or a schematicannon places pay no Construction XP."
+      "text": "$(li)$(bold)Blocks you placed pay nothing.$() Breaking a block you placed yourself pays no skill XP. Someone else's placed blocks still pay, and fully grown crops always do.$(br)$(li)$(bold)Machines pay whoever stands near.$() What a drill, saw, harvester, mechanical crafter, Crafter, basin or fan mines, chops, reaps, makes or cooks pays every player within 16 blocks of it the XP the same work pays by hand. Nobody near, and an XP Bank keeps a share ($(l:lemursaucepacket:create-tips)Machine XP$(/l)). A cobblestone generator's blocks pay a machine a tenth."
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(bold)Quest XP isn't skill XP.$() It's the vanilla kind, for enchanting ($(l:lemursaucepacket:quests)Quests$(/l)).$(br)$(li)$(bold)Train together.$() A skill party gives everyone in it within 50 blocks the XP any of you earns ($(l:lemursaucepacket:social)Skill party$(/l))."
+      "text": "$(li)$(bold)Machines don't build for XP.$() Blocks a deployer or a schematicannon places pay no Construction XP.$(br)$(li)$(bold)Quest XP isn't skill XP.$() It's the vanilla kind, for enchanting ($(l:lemursaucepacket:quests)Quests$(/l)).$(br)$(li)$(bold)Train together.$() A skill party gives everyone in it within 50 blocks the XP any of you earns ($(l:lemursaucepacket:social)Skill party$(/l))."
     },
     {
       "type": "patchouli:text",

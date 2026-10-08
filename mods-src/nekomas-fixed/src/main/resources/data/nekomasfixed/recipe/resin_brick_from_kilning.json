@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:resin_clump"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:resin_brick"
+    }
+  ],
+  "type": "nekomasfixed:kilning",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:resin_clump"
+  },
+  "result": {
+    "id": "minecraft:resin_brick"
+  }
+}

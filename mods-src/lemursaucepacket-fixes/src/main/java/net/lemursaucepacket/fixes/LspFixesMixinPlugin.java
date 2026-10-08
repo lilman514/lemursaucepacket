@@ -60,6 +60,22 @@ public final class LspFixesMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
         if (mixinClassName.endsWith(".friendsandfoes.FriendsAndFoesTotemHookMixin")) hookFriendsAndFoesTotems(targetClass);
+        noteMachineXp(targetClassName, targetClass);
+    }
+
+    /**
+     * Machine XP's hooks, for the startup self-check (skills.SkillsModule): which classes got a {@code lsp$machineXp}
+     * handler. Kept in a system property, as the plugin's own statics live in another class loader; read from the
+     * class itself it can't be, since some of these (Create's harvester) declare client-only methods a server can't list.
+     */
+    private static void noteMachineXp(String targetClassName, ClassNode targetClass) {
+        for (org.objectweb.asm.tree.MethodNode m : targetClass.methods) {
+            if (!m.name.endsWith("lsp$machineXp")) continue;
+            String name = targetClassName.replace('/', '.');
+            String was = System.getProperty("lsp_fixes.machineXpHooked", "|");
+            if (!was.contains("|" + name + "|")) System.setProperty("lsp_fixes.machineXpHooked", was + name + "|");
+            return;
+        }
     }
 
     /** The descriptor of Friends & Foes' totem handler, merged into Player by its PlayerEntityMixin. */

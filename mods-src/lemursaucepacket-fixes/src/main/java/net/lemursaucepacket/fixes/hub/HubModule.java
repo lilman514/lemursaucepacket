@@ -73,8 +73,11 @@ public final class HubModule {
             HubBuilder.LOGGER.info("This world existed before the capital did ({} ticks old): not building one. /lsp hub build makes one by hand.", age);
             return;
         }
-        // A brand-new world (nobody has spawned yet): keep world spawn out of the towns it will generate.
-        if (state.status() == HubState.Status.UNDECIDED) keepSpawnOutOfTowns(server.overworld());
+        // A brand-new world (nobody has spawned yet): spawn in starter land, out of the towns it will generate.
+        if (state.status() == HubState.Status.UNDECIDED) {
+            StarterSpawn.choose(server.overworld());
+            keepSpawnOutOfTowns(server.overworld());
+        }
         // A brand-new world, or a build that was interrupted by a restart: (re)build.
         start(server, null);
     }
