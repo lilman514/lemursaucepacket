@@ -1,0 +1,90 @@
+{
+  "name": "Creatures",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:bone",
+  "sortnum": 21,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Over a hundred creatures spawn in this world. Next to vanilla's:$(br2)$(li)$(bold)Naturalist$() adds real animals, each in the biomes it belongs in: bears and deer in the woods, elephants, giraffes, lions and zebras on the savanna, alligators in the swamps, whales and sharks at sea, and birds, snakes, butterflies and fireflies.$(br)$(li)$(bold)Friends & Foes$() brings back Mojang's mob-vote creatures: the glare, the mauler, the moobloom, the crab, the rascal, and the iceologer and illusioner illagers."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Creeper Overhaul$() gives most biomes a creeper of their own, each with a trick of its own when it blows.$(br)$(li)$(bold)Variants & Ventures$() adds biome variants of zombies and skeletons.$(br)$(li)$(bold)Ice and Fire$() adds fire, ice and lightning dragons, which live in caves and roosts rather than spawning in the open: see $(l:lemursaucepacket:where-to-find)Where to find things$(/l).$(br)$(li)$(bold)Illager Invasion$() adds new illagers who live in their own forts, towers and huts (see $(l:lemursaucepacket:structures)Structures and dungeons$(/l)), not in the open."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A creature's card lists every biome it spawns in; click one to see that biome. Monsters spawn in the dark almost anywhere, so \"spawns in\" for them means where they can, not where you'll always meet them."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bosses",
+      "text": "$(#b9a98a)Boss - Where - Notes$()$(br)$(bold)Ender Dragon$() - The End - Dragon Slayer I. See $(l:lemursaucepacket:end)The End$(/l)$(br)$(bold)Elvarg$() - Elvarg's Lair, at the Crandor memorial - Dragon Slayer II. See $(l:lemursaucepacket:elvarg)Elvarg's Lair$(/l)$(br)$(bold)Kiln-Tok-Jad, Kiln-Kal-Zuk$() - Kiln Hollow - The Fight Pits and the Inferno. See $(l:lemursaucepacket:fight-pits)The Fight Pits and the Inferno$(/l)$(br)$(bold)The Wither$() - Wherever you build it - Three wither skeleton skulls (combat level 75 for the drops) on soul sand"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The Warden$() - The deep dark - Summoned by sculk shriekers. Best avoided$(br)$(bold)Elder Guardian$() - Ocean monuments - Three per monument; they give mining fatigue"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Every creature",
+      "text": "$(#b9a98a)Creature - From - Kind - Lives in$()$(br)$(bold)Alligator$() - Naturalist - Animal - Wetlands, Coasts, Deserts$(br)$(bold)Anglerfish$() - Naturalist - Sea life - Coasts$(br)$(bold)Armadillo$() - Vanilla - Animal - Deserts, Savannas, Mountains$(br)$(bold)Ashen$() - Regions Unexplored - Hostile - Plains, Caves$(br)$(bold)Axolotl$() - Vanilla - Axolotl - Caves, Wetlands$(br)$(bold)Badlands Creeper$() - Creeper Overhaul - Hostile - Deserts, Mountains, Snowy lands$(br)$(bold)Bamboo Creeper$() - Creeper Overhaul - Hostile - Deserts, Jungles, Mountains"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bass$() - Naturalist - Sea life - Coasts, Wetlands, Deserts, Snowy lands$(br)$(bold)Bat$() - Vanilla - Ambient - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Beach Creeper$() - Creeper Overhaul - Hostile - Coasts$(br)$(bold)Bear$() - Naturalist - Animal - Forests, Snowy lands, Jungles, Mountains…$(br)$(bold)Birch Creeper$() - Creeper Overhaul - Hostile - Forests$(br)$(bold)Black Bear$() - Naturalist - Animal - Forests, Snowy lands, Jungles, Mountains$(br)$(bold)Blobfish$() - Naturalist - Sea life - Coasts$(br)$(bold)Boar$() - Naturalist - Animal - Forests, Snowy lands, Savannas, Jungles…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bogged$() - Vanilla - Hostile - Wetlands, Snowy lands$(br)$(bold)Butterfly$() - Naturalist - Animal - Forests, Snowy lands, Wetlands, Plains…$(br)$(bold)Camel$() - Vanilla - Animal - Deserts, Mountains$(br)$(bold)Capybara$() - Naturalist - Animal - Jungles, Wetlands$(br)$(bold)Catfish$() - Naturalist - Sea life - Wetlands, Deserts, Snowy lands, Coasts$(br)$(bold)Cave Creeper$() - Creeper Overhaul - Hostile - Forests, Coasts, Plains, Caves…$(br)$(bold)Cave Spider$() - Vanilla - Hostile - Caves$(br)$(bold)Chicken$() - Vanilla - Animal - Jungles, Forests, Snowy lands, Plains…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Clam$() - Naturalist - Sea life - Coasts$(br)$(bold)Cod$() - Vanilla - Fish - Coasts, Plains$(br)$(bold)Cow$() - Vanilla - Animal - Jungles, Forests, Snowy lands, Plains…$(br)$(bold)Crab$() - Naturalist - Animal - Coasts$(br)$(bold)Crab$() - Friends & Foes - Animal - Coasts, Wetlands$(br)$(bold)Creeper$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Dark Oak Creeper$() - Creeper Overhaul - Hostile - Forests$(br)$(bold)Deer$() - Naturalist - Animal - Forests, Mountains, Snowy lands, Jungles…$(br)$(bold)Desert Creeper$() - Creeper Overhaul - Hostile - Deserts, Mountains"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Desert Scorpion$() - Naturalist - Hostile - Deserts, Mountains, Snowy lands$(br)$(bold)Dolphin$() - Vanilla - Sea life - Coasts, Plains$(br)$(bold)Donkey$() - Vanilla - Animal - Mountains, Plains, Savannas, Deserts…$(br)$(bold)Dragonfly$() - Naturalist - Animal - Wetlands, Deserts, Coasts$(br)$(bold)Dripstone Creeper$() - Creeper Overhaul - Hostile - Caves$(br)$(bold)Drowned$() - Vanilla - Hostile - Coasts, Caves, Plains$(br)$(bold)Duck$() - Naturalist - Animal - Coasts, Wetlands, Forests, Savannas…$(br)$(bold)Elephant$() - Naturalist - Animal - Savannas, Mountains, Deserts"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Enderman$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Firefly$() - Naturalist - Animal - Forests, Snowy lands, Wetlands, Plains…$(br)$(bold)Fox$() - Vanilla - Animal - Snowy lands, Forests, Mountains, Plains$(br)$(bold)Frog$() - Vanilla - Animal - Wetlands, Caves, Snowy lands$(br)$(bold)Ghast$() - Vanilla - Hostile - The Nether$(br)$(bold)Giant Isopod$() - Naturalist - Sea life - Coasts$(br)$(bold)Giraffe$() - Naturalist - Animal - Savannas, Mountains, Deserts$(br)$(bold)Glare$() - Friends & Foes - Animal - Caves"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Glow Squid$() - Vanilla - Cave water - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Goat$() - Vanilla - Animal - Snowy lands, Mountains, Plains$(br)$(bold)Great White Shark$() - Naturalist - Sea life - Coasts$(br)$(bold)Hedgehog$() - Naturalist - Animal - Forests, Mountains, Plains$(br)$(bold)Hills Creeper$() - Creeper Overhaul - Hostile - Savannas, Mountains$(br)$(bold)Hippo$() - Naturalist - Animal - Jungles, Savannas, Deserts, Mountains…$(br)$(bold)Hoglin$() - Vanilla - Hostile - The Nether$(br)$(bold)Horse$() - Vanilla - Animal - Plains, Savannas, Deserts, Mountains…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Husk$() - Vanilla - Hostile - Deserts, Savannas, Mountains$(br)$(bold)Iceologer$() - Friends & Foes - Hostile - Snowy lands$(br)$(bold)Illusioner$() - Friends & Foes - Hostile - Forests, Snowy lands, Mountains, Savannas$(br)$(bold)Jellyfish$() - Naturalist - Sea life - Coasts$(br)$(bold)Jungle Creeper$() - Creeper Overhaul - Hostile - Deserts, Jungles, Mountains$(br)$(bold)Jungle Scorpion$() - Naturalist - Hostile - Jungles, Deserts, Mountains$(br)$(bold)Komodo Dragon$() - Naturalist - Animal - Deserts, Jungles, Savannas, Mountains…$(br)$(bold)Lion$() - Naturalist - Animal - Savannas, Mountains, Deserts"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Lizard$() - Naturalist - Animal - Jungles, Forests, Deserts, Snowy lands…$(br)$(bold)Llama$() - Vanilla - Animal - Savannas, Forests, Plains, Mountains…$(br)$(bold)Magma Cube$() - Vanilla - Hostile - The Nether$(br)$(bold)Mammoth$() - Naturalist - Animal - Snowy lands$(br)$(bold)Mauler$() - Friends & Foes - Hostile - Deserts, Savannas, Mountains, Snowy lands$(br)$(bold)Mole$() - Naturalist - Animal - Forests, Snowy lands, Mountains, Plains…$(br)$(bold)Moobloom$() - Friends & Foes - Animal - Mountains, Forests, Plains$(br)$(bold)Mooshroom$() - Vanilla - Animal - Plains, Wetlands"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mushroom Creeper$() - Creeper Overhaul - Hostile - Plains, Caves, Forests, Wetlands…$(br)$(bold)Ocean Creeper$() - Creeper Overhaul - Hostile - Coasts$(br)$(bold)Ocelot$() - Vanilla - Animal - Jungles, Deserts, Mountains$(br)$(bold)Ostrich$() - Naturalist - Animal - Savannas, Mountains, Deserts$(br)$(bold)Panda$() - Vanilla - Animal - Jungles, Deserts, Mountains$(br)$(bold)Parrot$() - Vanilla - Animal - Jungles, Deserts, Mountains, Plains$(br)$(bold)Phantom$() - Vanilla - Hostile - The End$(br)$(bold)Pig$() - Vanilla - Animal - Jungles, Mountains, Forests, Plains…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Piglin$() - Vanilla - Hostile - The Nether$(br)$(bold)Piglin Alchemist$() - Piglin Proliferation - Animal - The Nether$(br)$(bold)Piranha$() - Naturalist - Sea life - Jungles, Caves, Deserts, Mountains$(br)$(bold)Polar Bear$() - Vanilla - Animal - Coasts, Snowy lands$(br)$(bold)Pufferfish$() - Vanilla - Fish - Coasts$(br)$(bold)Rabbit$() - Vanilla - Animal - Mountains, Deserts, Forests, Snowy lands…$(br)$(bold)Rascal$() - Friends & Foes - Animal - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Rat$() - Naturalist - Animal - Forests, Snowy lands, Plains, Jungles…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Ray$() - Naturalist - Sea life - Coasts$(br)$(bold)Rhino$() - Naturalist - Animal - Savannas, Mountains, Deserts$(br)$(bold)Salmon$() - Vanilla - Fish - Coasts$(br)$(bold)Savannah Creeper$() - Creeper Overhaul - Hostile - Mountains, Savannas, Deserts$(br)$(bold)Sheep$() - Vanilla - Animal - Jungles, Forests, Mountains, Snowy lands…$(br)$(bold)Skeleton$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Slime$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Snail$() - Naturalist - Animal - Forests, Mountains, Caves, Snowy lands…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Snake$() - Naturalist - Animal - Forests, Snowy lands, Wetlands, Plains…$(br)$(bold)Snowy Creeper$() - Creeper Overhaul - Hostile - Snowy lands$(br)$(bold)Spider$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Spruce Creeper$() - Creeper Overhaul - Hostile - Snowy lands, Forests, Mountains$(br)$(bold)Squid$() - Vanilla - Sea life - Coasts, Plains$(br)$(bold)Starfish$() - Naturalist - Sea life - Coasts$(br)$(bold)Stray$() - Vanilla - Hostile - Snowy lands, Caves, Plains$(br)$(bold)Strider$() - Vanilla - Animal - The Nether"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Swamp Creeper$() - Creeper Overhaul - Hostile - Wetlands, Snowy lands$(br)$(bold)Tiger$() - Naturalist - Animal - Deserts, Jungles, Mountains, Forests…$(br)$(bold)Tortoise$() - Naturalist - Animal - Jungles, Deserts, Wetlands, Mountains$(br)$(bold)Tropical Fish$() - Vanilla - Fish - Coasts, Caves, Wetlands$(br)$(bold)Turkey$() - Naturalist - Animal - Forests, Snowy lands$(br)$(bold)Turtle$() - Vanilla - Animal - Coasts, Caves$(br)$(bold)Vulture$() - Naturalist - Animal - Deserts, Savannas, Mountains, Snowy lands$(br)$(bold)Whale$() - Naturalist - Sea life - Coasts"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Witch$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Wither Skeleton$() - Vanilla - Hostile - The Nether$(br)$(bold)Wolf$() - Vanilla - Animal - Forests, Snowy lands, Savannas, Jungles…$(br)$(bold)Zebra$() - Naturalist - Animal - Savannas, Mountains, Deserts$(br)$(bold)Zombie$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Zombie Villager$() - Vanilla - Hostile - Deserts, Jungles, Coasts, Forests…$(br)$(bold)Zombified Piglin$() - Vanilla - Hostile - The Nether"
+    }
+  ]
+}

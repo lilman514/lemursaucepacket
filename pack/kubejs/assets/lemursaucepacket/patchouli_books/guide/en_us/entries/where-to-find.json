@@ -2,7 +2,7 @@
   "name": "Where to find things",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:spyglass",
-  "sortnum": 12,
+  "sortnum": 29,
   "pages": [
     {
       "type": "patchouli:text",

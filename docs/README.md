@@ -13,6 +13,16 @@ layout:
 
 # LemurSaucePacket
 
+<!-- infobox: The server -->
+| | |
+|---|---|
+| Address | `mc.limas.ca` |
+| Minecraft | 1.21.1 on NeoForge 21.1.252 |
+| Mods | about 180, kept in sync by the launcher |
+| Players | about 8, whitelisted |
+| PvP | On, with proximity voice chat |
+| Hosted | On the owner's PC |
+
 A Create-powered survival server for about eight friends that still feels like Minecraft. Build factories, rail networks and airships, level RuneScape-style skills, chase quests and missions, and fight your way up the ages. PvP is on.
 
 {% hint style="info" %}
@@ -20,15 +30,6 @@ A Create-powered survival server for about eight friends that still feels like M
 {% endhint %}
 
 ![The ESC menu](images/esc_menu.jpg)
-
-## Facts
-
-| | |
-|---|---|
-| Minecraft | 1.21.1 on NeoForge 21.1.252 |
-| Mods | about 180, kept in sync by the launcher |
-| Players | about 8, PvP on, proximity voice chat |
-| Server | `mc.limas.ca`, whitelisted, hosted on the owner's PC |
 
 ## Where to go next
 

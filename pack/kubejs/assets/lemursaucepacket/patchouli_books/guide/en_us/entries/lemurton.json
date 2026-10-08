@@ -2,7 +2,7 @@
   "name": "Lemurton",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:bell",
-  "sortnum": 5,
+  "sortnum": 22,
   "pages": [
     {
       "type": "patchouli:text",

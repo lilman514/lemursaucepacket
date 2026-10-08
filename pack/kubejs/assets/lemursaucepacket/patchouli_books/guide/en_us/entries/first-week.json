@@ -1,0 +1,52 @@
+{
+  "name": "Your first week",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:clock",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "There's no wrong way to play, but there is a quick way to get going. This is it: what most people do in their first few evenings, in roughly the order that works."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Day one: find Lemurton",
+      "text": "You wake up in the wild, a few minutes' walk from the capital, holding a $(bold)Compass to Lemurton$(). On the way:$(br2)$(li)Punch a tree for wood and make wooden tools. Stone tools need level 5 in the tool's skill (Mining for a pickaxe, Woodcutting for an axe), and those first levels take minutes.$(br)$(li)Pick up whatever you find: every vendor in Lemurton buys everything.$(br2)When you arrive:"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)[ ] $(bold)Touch the Lemurton waystone$() in the market square, so you can always come back. See $(l:lemursaucepacket:waystones)Waystones$(/l).$(br)$(li)[ ] $(bold)Talk to Mayor Thaddeus.$() He starts $(italic)Welcome to Lemurton$(), the first questline, and pays in Gold Coins. See $(l:lemursaucepacket:lemurton)Lemurton$(/l).$(br)$(li)[ ] $(bold)Open the quest book$() (ESC → Quests). The first chapter, $(italic)Landfall$(), is the tutorial and pays coins too."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)[ ] $(bold)Find a place to live$() outside the walls: Lemurton is a safe zone where nobody can build. PvP is on everywhere else and there are no land claims, so pick your spot with care. See $(l:lemursaucepacket:world)The world and its rules$(/l).$(br2)When you die your things wait in a $(bold)grave$() where you fell, and you drop a $(bold)Heart$(): run out of hearts and you're eliminated. Read $(l:lemursaucepacket:lifesteal)Hearts, graves and elimination$(/l) before you take risks."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Days two to four: levels and coins",
+      "text": "Skills level up as you use them: mining, chopping, farming, fishing, cooking, crafting, fighting, building. The first ten levels of anything come fast. See $(l:lemursaucepacket:skills)Skills$(/l).$(br2)$(li)$(bold)Iron$() needs Mining 15 for the tools and a $(bold)Hardness I$() tome on your pickaxe to mine the ore (the tome is crafted from andesite, copper and a book). See $(l:lemursaucepacket:enchanting)Enchanting$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Coins$() come from quests, from selling to vendors (try $(#e0ac46)/worth$() on anything), and from $(bold)weekly missions$() (ESC → Missions, or $(bold)H$()), which pay Coin Pouches. See $(l:lemursaucepacket:economy)Coins, vendors and trading$(/l).$(br)$(li)$(bold)Cook's Assistant$() is the first main quest: the Cook in the butcher's shop wants milk, an egg and a pot of flour. The flour is wheat ground in a Create millstone, so it's also your first taste of Create. See $(l:lemursaucepacket:quests)Quests$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Days four to seven: Create",
+      "text": "Every stage of progress runs through Create. A first factory is a water wheel, some shafts and cogwheels, and a millstone; then a mechanical press for iron sheets, and a mixer over a blaze burner for $(bold)brass$(). See $(l:lemursaucepacket:create)Create basics$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)The Knight's Sword$() (Mining 10, Smithing 10) is the second main quest, and it's built around Create: Brann the Smith wants a brass ingot, a precision mechanism and two iron ingots.$(br)$(li)$(bold)Create's machines unlock with skills$(), a milestone or two a skill: mechanical drills at Mining 15, saws at Woodcutting 15, harvesters at Farming 15, mechanical crafters at Crafting 30. Anyone can use a machine a friend made. See the table in $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "After that",
+      "text": "$(li)$(bold)Dragon Slayer I$() (combat level 40, Brewing 55 for the eyes of ender) takes you to the End. See $(l:lemursaucepacket:end)The End$(/l).$(br)$(li)$(bold)The Fight Pits$() and $(bold)the Inferno$() are the hardest fights on the server, for the Fire and Infernal capes. See $(l:lemursaucepacket:fight-pits)The Fight Pits and the Inferno$(/l).$(br)$(li)$(bold)Ore veins$() never run out: find one with a vein finder and drill it with Create Ore Excavation's drilling machine (its drill heads need Mining 50)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Trains$() (Agility 35 for stations and controls) and $(bold)airships$() carry you and your goods across the world.$(br)$(li)Every skill at 99 earns its $(bold)cape$(), and the $(l:lemursaucepacket:hiscores)hiscores$(/l) show how you stack up."
+    }
+  ]
+}

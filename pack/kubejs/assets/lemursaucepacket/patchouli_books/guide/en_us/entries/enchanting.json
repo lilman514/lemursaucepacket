@@ -2,7 +2,7 @@
   "name": "Enchanting",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:enchanting_table",
-  "sortnum": 14,
+  "sortnum": 31,
   "pages": [
     {
       "type": "patchouli:text",

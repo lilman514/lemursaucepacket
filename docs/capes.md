@@ -97,7 +97,7 @@ Animated, and exceedingly hard to earn.
 
 Not earnable.
 
-<figure><img src="images/capes_owner.jpg" alt="The the owner's cape as worn in game"><figcaption><p>The the owner's cape, worn</p></figcaption></figure>
+<figure><img src="images/capes_owner.jpg" alt="The owner's cape as worn in game"><figcaption><p>The owner's cape, worn</p></figcaption></figure>
 
 | Cape | How to earn it | Perk |
 |---|---|---|

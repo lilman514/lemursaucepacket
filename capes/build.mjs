@@ -104,7 +104,9 @@ for (const kind of ['skill', 'quest', 'achievement', 'legendary', 'owner']) {
   const capes = CAPES.filter((c) => c.kind === kind)
   if (capes.length === 0) continue
   lines.push(`## ${KIND_TITLE[kind]}`, '', KIND_TEXT[kind], '')
-  if (existsSync(path.join(root, 'docs', 'images', `capes_${kind}.jpg`))) lines.push(picture(`capes_${kind}.jpg`, `The ${KIND_TITLE[kind].toLowerCase()} as worn in game`, `The ${KIND_TITLE[kind].toLowerCase()}, worn`), '')
+  // "The skill capes", "The owner's cape" (its title already starts with "The").
+  const what = `The ${KIND_TITLE[kind].replace(/^The /, '').toLowerCase()}`
+  if (existsSync(path.join(root, 'docs', 'images', `capes_${kind}.jpg`))) lines.push(picture(`capes_${kind}.jpg`, `${what} as worn in game`, `${what}, worn`), '')
   if (kind === 'legendary' && existsSync(path.join(root, 'docs', 'images', 'capes_animated.webp'))) lines.push(picture('capes_animated.webp', 'The animated capes in motion', 'In motion'), '')
   lines.push('| Cape | How to earn it | Perk |', '|---|---|---|')
   for (const c of capes) lines.push(`| ${c.name}${c.animated ? ' *(animated)*' : ''} | ${c.description} | ${c.perkText ?? '—'} |`)

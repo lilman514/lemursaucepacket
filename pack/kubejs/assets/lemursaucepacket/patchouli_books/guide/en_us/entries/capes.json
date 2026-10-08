@@ -2,7 +2,7 @@
   "name": "Capes",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:white_banner",
-  "sortnum": 16,
+  "sortnum": 33,
   "pages": [
     {
       "type": "patchouli:text",

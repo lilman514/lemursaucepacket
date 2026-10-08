@@ -1,0 +1,48 @@
+{
+  "name": "The Nether",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:netherrack",
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Nether is vanilla's, filled out: Regions Unexplored adds four biomes of its own, YUNG's Better Nether Fortresses rebuilds the fortresses, and half a dozen structure mods add keeps, ports, castles, towers and camps. It's where blaze rods, nether wart, quartz and netherite come from, and Ashes of the Kiln sends you to its wither skeletons."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting there",
+      "text": "Build a portal: a frame of obsidian four wide and five tall, lit with flint and steel. Obsidian needs $(bold)Hardness III$() on your pickaxe to mine, so early on take it from ruined-portal and bastion chests, or cast it in place by pouring water over lava. Portals here are linked both ways: one always leads back to the portal you came through.$(br2)Bring fire resistance if you can brew it, a stack of blocks to bridge lava, and gold armour (one piece is enough) so piglins leave you alone. Don't sleep in a bed: it explodes."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What's there",
+      "text": "$(li)$(bold)Fortresses$() (YUNG's Better Nether Fortresses): blazes for blaze rods, nether wart, and wither skeletons. A wither skeleton's skull only drops for a killer of $(bold)combat level 75$(). See $(l:lemursaucepacket:skills)Skills$(/l).$(br)$(li)$(bold)Bastions$(): piglin strongholds full of gold, and hoglins in the stables. Create: Structures Arise adds a brass bastion of its own.$(br)$(li)$(bold)Dungeons and Taverns$(): nether keeps and ports, piglin camps, donjons and outstations, a hamlet, and skeleton towers and camps in every biome."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Piglin Proliferation$(): piglin alchemists, who brew potions for their kin, and piglin travellers' camps.$(br)$(li)$(bold)Structory and Towers of the Wild$(): towers and outposts with a view.$(br2)The creatures and structures that set each biome apart are on its card below; $(l:lemursaucepacket:structures)Structures and dungeons$(/l) and $(l:lemursaucepacket:creatures)Creatures$(/l) have everything."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - About$()$(br)$(bold)Basalt Deltas$() - Vanilla - Basalt pillars, blackstone and magma cubes: hard going.$(br)$(bold)Blackstone Basin$() - Regions Unexplored - A basin of blackstone in the Nether.$(br)$(bold)Crimson Forest$() - Vanilla - Red fungus trees and weeping vines; hoglins and piglins.$(br)$(bold)Glistering Meadow$() - Regions Unexplored - A Nether meadow of glowing glister plants.$(br)$(bold)Infernal Holt$() - Regions Unexplored - A burning Nether woodland of brimwood.$(br)$(bold)Mycotoxic Undergrowth$() - Regions Unexplored - Poisonous Nether fungus thickets."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Nether Wastes$() - Vanilla - Netherrack, lava seas and glowstone: the Nether as it always was.$(br)$(bold)Soul Sand Valley$() - Vanilla - Soul sand and fossils; skeletons and ghasts, and blue soul fire.$(br)$(bold)Warped Forest$() - Vanilla - Blue-green fungus trees; endermen, and nothing much else hostile."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Its structures",
+      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Bastion remnant$() - Vanilla - The Nether$(br)$(bold)Brass bastion$() - Create: Structures Arise - The Nether$(br)$(bold)Citadel$() - Friends & Foes - The Nether$(br)$(bold)Dark castle$() - Create: Structures Arise - The Nether$(br)$(bold)Dead lord's house$() - Create: Structures Arise - The Nether$(br)$(bold)Fortress$() - YUNG's Better Nether Fortresses - The Nether$(br)$(bold)Fortress Tower$() - Structory: Towers - The Nether$(br)$(bold)Hamlet$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether$() - Towers of the Wild - The Nether"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Nether Fossil$() - Vanilla - The Nether$(br)$(bold)Nether Keep$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether Port$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether skeleton camps$() - Dungeons and Taverns - The Nether$(br)$(bold)Nether skeleton towers$() - Dungeons and Taverns - The Nether$(br)$(bold)Obsidian temple$() - Create: Structures Arise - The Nether$(br)$(bold)Piglin Camp$() - Dungeons and Taverns - The Nether$(br)$(bold)Piglin Donjon$() - Dungeons and Taverns - The Nether$(br)$(bold)Piglin Outstation$() - Dungeons and Taverns - The Nether"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Piglin traveller camps$() - Piglin Proliferation - The Nether$(br)$(bold)Small Nether Dungeon$() - YUNG's Better Dungeons - The Nether$(br)$(bold)Strange Outpost$() - Structory: Towers - The Nether$(br)$(bold)Warped Outpost$() - Structory: Towers - The Nether"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Plains, meadows and fields",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:sunflower",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Flat and open, with good sight lines and room to build: most bases start on plains. Villages favour them, horses and donkeys graze on them, and the flower fields (vanilla's sunflower plains and meadows, Regions Unexplored's poppy, clover and barley fields, Terralith's blooming valleys) are where to farm dyes, bees and honey.$(br2)Sunflowers always face east, so a field of them is a compass."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Alpha Islands$() - Terralith - Temperate, Wet - Oak trees, Flowers$(br)$(bold)Ashen Woodland$() - Regions Unexplored - Hot, Dry - Ashen trees$(br)$(bold)Blooming Plateau$() - Terralith - Temperate, Wet - Oak trees, Birch trees, Flowers$(br)$(bold)Clover Plains$() - Regions Unexplored - Warm, Dry$(br)$(bold)Flower Fields$() - Regions Unexplored - Warm, Wet - Flowers$(br)$(bold)Grassland$() - Regions Unexplored - Temperate, Rain - Oak trees$(br)$(bold)Lush Valley$() - Terralith - Temperate, Wet - Spruce trees, Birch trees, Oak trees, Ferns…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mushroom Fields$() - Vanilla - Warm, Wet - Giant mushrooms$(br)$(bold)Pine Slopes$() - Regions Unexplored - Temperate, Rain - Pine trees, Ferns$(br)$(bold)Plains$() - Vanilla - Temperate, Rain - Oak trees, Flowers$(br)$(bold)Poppy Fields$() - Regions Unexplored - Temperate, Rain - Magnolia trees$(br)$(bold)Shield Clearing$() - Terralith - Temperate, Dry$(br)$(bold)Skylands (Autumn)$() - Terralith - Temperate, Rain - Oak trees, Birch trees, Dark oak trees$(br)$(bold)Skylands (Spring)$() - Terralith - Temperate, Rain - Birch trees, Cherry trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Skylands (Summer)$() - Terralith - Temperate, Rain - Jungle trees, Acacia trees, Oak trees, Sweet berries…$(br)$(bold)Skylands (Winter)$() - Terralith - Cold, Rain - Dark oak trees, Spruce trees$(br)$(bold)Sunflower Plains$() - Vanilla - Temperate, Rain - Oak trees, Sunflowers, Flowers$(br)$(bold)Valley Clearing$() - Terralith - Temperate, Dry$(br)$(bold)Windswept Gravelly Hills$() - Vanilla - Cold, Dry - Spruce trees, Oak trees$(br)$(bold)Windswept Hills$() - Vanilla - Cold, Dry - Spruce trees, Oak trees"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Yellowstone$() - Terralith - Cold, Wet - Big spruce trees, Birch trees, Ferns, Sweet berries"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Savannas, steppes and shrublands",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:acacia_sapling",
+  "sortnum": 14,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Dry grassland under flat-topped acacias and Regions Unexplored's huge baobabs. This is where Naturalist's big animals live: $(bold)elephants$(), $(bold)giraffes$(), $(bold)zebras$() (which you can ride), $(bold)rhinos$() and $(bold)lions$() (which hunt you back). Horses, llamas and villages too.$(br2)Acacia needs $(bold)Woodcutting 30$() to chop. See $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Baobab Savanna$() - Regions Unexplored - Hot, No rain - Baobab trees, Acacia trees, Oak trees$(br)$(bold)Brushland$() - Terralith - Warm, No rain - Flowers$(br)$(bold)Dry Bushland$() - Regions Unexplored - Hot, No rain$(br)$(bold)Fractured Savanna$() - Terralith - Warm, No rain$(br)$(bold)Hot Shrubland$() - Terralith - Temperate, Rain - Oak trees, Flowers$(br)$(bold)Prairie$() - Regions Unexplored - Temperate, Wet - Oak trees, Flowers$(br)$(bold)Savanna$() - Vanilla - Warm, No rain - Acacia trees, Oak trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Savanna Plateau$() - Vanilla - Warm, No rain - Acacia trees, Oak trees, Flowers$(br)$(bold)Shrubland$() - Terralith - Warm, No rain - Oak trees$(br)$(bold)Shrubland$() - Regions Unexplored - Temperate, Rain - Flowers, Ferns$(br)$(bold)Steppe$() - Terralith - Temperate, Dry$(br)$(bold)Windswept Savanna$() - Vanilla - Hot, No rain - Acacia trees, Oak trees"
+    }
+  ]
+}

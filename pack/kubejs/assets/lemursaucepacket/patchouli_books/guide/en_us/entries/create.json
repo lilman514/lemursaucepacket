@@ -1,0 +1,72 @@
+{
+  "name": "Create basics",
+  "category": "lemursaucepacket:wiki",
+  "icon": "create:cogwheel",
+  "sortnum": 35,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create is the spine of the pack: every stage of progress runs through its machines. Its idea is simple. $(bold)Something makes things turn$() (a water wheel, a windmill, a steam engine), $(bold)shafts, cogwheels and belts carry the turning$() across your base, and $(bold)machines use it$() to grind, press, mix, saw, drill and build.$(br2)Hold $(bold)W$() over any Create item to $(bold)Ponder$() it: an animated lesson that shows how it works. The tooltip says $(italic)Hold [W] to Ponder$(). JEI's $(bold)R$() (recipe) and $(bold)U$() (uses) show what makes an item and what it's for."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Speed and stress",
+      "text": "Turning has two numbers. $(bold)Speed$() (RPM) is how fast: faster machines work faster. $(bold)Stress$() (SU) is how hard: every machine puts a load on the network, every power source supplies so much, and if the load is more than the supply, the whole network stops. Engineer's goggles show both when you look at a part."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Cogwheels of different sizes change speed: a big one turning a small one doubles it.$(br)$(li)A gearbox turns the turning round a corner; a clutch or gearshift stops or reverses it with redstone.$(br)$(li)Most processing machines need a minimum speed. If one won't work, check its speed first."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Power",
+      "text": "$(#b9a98a)Source - How - Notes$()$(br)$(bold)Water wheel$() - Place it in flowing water (or water falling past it) - The first power anyone builds. The large one gives more$(br)$(bold)Windmill$() - Sails or wool round a windmill bearing, then right-click the bearing to start it - Needs room; more sails, more power$(br)$(bold)Steam engine$() - A fluid tank of water over blaze burners, with engines on its sides - Big power. Steam engines need $(bold)Smithing 35$() to make$(br)$(bold)Hand crank$() - Turn it yourself - For testing"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Processing",
+      "text": "$(#b9a98a)Machine - What it does - Skill$()$(br)$(bold)Millstone$() - Grinds: wheat into flour, flowers into dyes, gravel into flint$(br)$(bold)Crushing wheels$() - A pair of them crush ore into crushed ore (more ingots per ore), stone into gravel - Made in mechanical crafters$(br)$(bold)Encased fan$() - Blows through lava (blasting), fire (smoking), water (washing) or soul fire (haunting) to process items in bulk - $(bold)Cooking 20$()$(br)$(bold)Mechanical press$() - Presses ingots into sheets; over a basin, compacts$(br)$(bold)Mechanical mixer$() - Over a basin, mixes: over a blaze burner it makes brass"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mechanical saw$() - Cuts logs into planks, and stone like a stonecutter - $(bold)Woodcutting 15$()$(br)$(bold)Mechanical drill$() - Breaks the block in front of it (up to Hardness tier II on a contraption) - $(bold)Mining 15$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brass",
+      "text": "Brass is the turning point: most of Create's better parts need it. Mix $(bold)copper$() and $(bold)zinc$() in a basin under a mechanical mixer, with a $(bold)blaze burner$() under the basin to heat it. Zinc ore turns up in the Overworld's stone like the other ores. A blaze burner is an empty blaze burner with a blaze caught in it: right-click a blaze (or a blaze spawner) with the empty burner."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Moving things",
+      "text": "Belts carry items; chutes drop them; funnels put them in and take them out; depots hold one stack for a machine to work on; $(bold)mechanical arms$() move items from anywhere to anywhere in reach. Smart funnels and filters choose which items go where."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Making things by themselves",
+      "text": "$(li)$(bold)Mechanical crafters$() craft any recipe, laid out in a grid of them. They need $(bold)Crafting 30$() to make, and make the pack's gear sets and Create's bigger parts (crushing wheels among them).$(br)$(li)$(bold)Sequenced assembly$() builds an item in steps on a belt: a deployer, a press and a saw each do their part. The $(bold)precision mechanism$() is the first one you'll make (a golden sheet, then cogwheels, large cogwheels and iron nuggets, five times round).$(br)$(li)$(bold)Deployers$() act like a player: place, use, click."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Milestones your skills unlock",
+      "text": "Create's machines wait on the skill they take over. Only making them is gated: anyone can use one a friend made.$(br2)$(#b9a98a)Level - Skill - Machine$()$(br)$(bold)15$() - Mining - Mechanical drill$(br)$(bold)15$() - Woodcutting - Mechanical saw$(br)$(bold)15$() - Farming - Mechanical harvester and plough$(br)$(bold)20$() - Cooking - Encased fan$(br)$(bold)30$() - Crafting - Mechanical crafter$(br)$(bold)30$() - Construction - Schematicannon$(br)$(bold)35$() - Smithing - Steam engine$(br)$(bold)35$() - Agility - Train station and train controls$(br)$(bold)35$() - Enchanting - Blaze enchanter"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)50$() - Enchanting - Printer$(br)$(bold)50, 65, 80$() - Mining - Ore vein drill heads: iron, diamond, netherite$(br2)The full list is in $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Add-ons in the pack",
+      "text": "$(#b9a98a)Add-on - What it adds$()$(br)$(bold)$(bold)Create Ore Excavation$()$() - Ore veins that never run out: find one with a vein finder, drill it with a drilling machine$(br)$(bold)$(bold)Create Aeronautics$()$() - Airships and other moving builds: lift them with envelopes, push them with propellers, and assemble them with a physics assembler$(br)$(bold)$(bold)Create Crafts & Additions$()$() - Electricity: alternators, electric motors, accumulators and wires$(br)$(bold)$(bold)Create Enchantment Industry$()$() - Liquid experience, the blaze enchanter and the printer"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)$(bold)Create: Central Kitchen$()$() - Farmer's Delight cooking, automated$(br)$(bold)$(bold)Create: Connected$()$() - Extra parts: more gearboxes and clutches, crank wheels, sequenced pulse generators$(br)$(bold)$(bold)Create Deco$()$() - Bricks, metal blocks, lamps, doors and windows for building$(br)$(bold)$(bold)Create: Railways Navigator$()$() - Plans routes across the train network for you$(br)$(bold)$(bold)Copycats+$()$() - Copycat blocks that take the look of any block"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)$(bold)Create: Structures Arise$() and $(bold)Let The Adventure Begin$()$() - Create-themed ruins to find (see $(l:lemursaucepacket:structures)Structures and dungeons$(/l))"
+    }
+  ]
+}

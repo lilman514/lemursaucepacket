@@ -2,7 +2,7 @@
   "name": "Keybinds",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:tripwire_hook",
-  "sortnum": 3,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",

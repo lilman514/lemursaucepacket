@@ -1,0 +1,21 @@
+{
+  "name": "Jungles and rainforests",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:jungle_sapling",
+  "sortnum": 13,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Thick, tall and green. Jungle trees grow huge (two blocks across), with vines, cocoa pods and melons underneath, and bamboo thickets where the pandas live. Parrots and ocelots live here, and jungle temples (rebuilt by YUNG's Better Jungle Temples) hide traps and loot.$(br2)Jungle wood needs $(bold)Woodcutting 15$() to chop. See $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Amethyst Rainforest$() - Terralith - Warm, Wet - Acacia trees, Jungle trees, Bamboo, Flowers…$(br)$(bold)Bamboo Forest$() - Regions Unexplored - Temperate, Wet - Bamboo trees, Bamboo, Ferns$(br)$(bold)Bamboo Jungle$() - Vanilla - Warm, Wet - Jungle trees, Bamboo, Flowers, Melons$(br)$(bold)Eucalyptus Forest$() - Regions Unexplored - Warm, Wet - Eucalyptus trees, Oak trees, Melons$(br)$(bold)Jungle$() - Vanilla - Warm, Wet - Jungle trees, Bamboo, Flowers, Melons"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rainforest$() - Regions Unexplored - Warm, Wet - Palm trees, Kapok trees, Jungle trees, Oak trees…$(br)$(bold)Rocky Jungle$() - Terralith - Warm, Wet - Jungle trees, Oak trees, Bamboo, Flowers…$(br)$(bold)Sparse Jungle$() - Vanilla - Warm, Wet - Jungle trees, Oak trees, Flowers, Melons$(br)$(bold)Sparse Rainforest$() - Regions Unexplored - Warm, Wet - Palm trees, Kapok trees, Jungle trees, Oak trees…$(br)$(bold)Tropics$() - Regions Unexplored - Warm, Wet - Palm trees, Jungle trees, Oak trees, Melons"
+    }
+  ]
+}

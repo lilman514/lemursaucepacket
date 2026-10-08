@@ -2,7 +2,7 @@
   "name": "The ESC menu",
   "category": "lemursaucepacket:wiki",
   "icon": "create:brass_casing",
-  "sortnum": 18,
+  "sortnum": 36,
   "pages": [
     {
       "type": "patchouli:text",

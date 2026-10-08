@@ -18,13 +18,23 @@ const TYPES = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.webp': 'image/webp',
+  '.gif': 'image/gif',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.mjs': 'text/javascript; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
+  '.woff2': 'font/woff2',
+  '.mp4': 'video/mp4',
   '.html': 'text/html; charset=utf-8'
 }
 
 http
   .createServer((req, res) => {
     const urlPath = decodeURIComponent(new URL(req.url ?? '/', 'http://localhost').pathname)
-    const file = path.resolve(siteDir, '.' + urlPath)
+    let file = path.resolve(siteDir, '.' + urlPath)
     if (!file.startsWith(siteDir + path.sep)) {
       res.writeHead(403).end()
       return
@@ -32,6 +42,11 @@ http
     let st
     try {
       st = statSync(file)
+      // Like GitHub Pages: a folder serves its index.html.
+      if (st.isDirectory()) {
+        file = path.join(file, 'index.html')
+        st = statSync(file)
+      }
     } catch {
       res.writeHead(404).end('not found')
       console.log(`404 ${urlPath}`)

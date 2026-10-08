@@ -1,0 +1,25 @@
+{
+  "name": "Deserts, badlands and canyons",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:cactus",
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Hot and dry: it never rains here. Deserts hold cacti, dead bushes, husks (zombies that make you hungry), camels and armadillos, and desert temples rebuilt by YUNG's Better Desert Temples. The badlands' banded terracotta mesas have extra gold ore near the surface, and Terralith's canyons (Bryce Canyon's hoodoos, painted and white mesas, desert spires and oases) are some of the most striking ground in the world.$(br2)Friends & Foes' $(bold)mauler$() hides under the sand with only its back showing. Watch for sand that moves."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Amethyst Canyon$() - Terralith - Warm, Wet - Acacia trees, Jungle trees, Bamboo, Flowers…$(br)$(bold)Ancient Sands$() - Terralith - Hot, No rain$(br)$(bold)Badlands$() - Vanilla - Hot, No rain - Dead bushes, Cacti$(br)$(bold)Bryce Canyon$() - Terralith - Hot, No rain - Big spruce trees, Dead bushes, Cacti$(br)$(bold)Desert$() - Vanilla - Hot, No rain - Dead bushes, Cacti$(br)$(bold)Desert Canyon$() - Terralith - Hot, No rain - Dead bushes, Cacti$(br)$(bold)Desert Oasis$() - Terralith - Hot, No rain - Jungle trees, Moss, Lily pads, Dead bushes…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Eroded Badlands$() - Vanilla - Hot, No rain - Dead bushes, Cacti$(br)$(bold)Joshua Desert$() - Regions Unexplored - Hot, No rain - Joshua trees, Dead bushes, Cacti$(br)$(bold)Lush Desert$() - Terralith - Hot, No rain - Cacti, Dead bushes$(br)$(bold)Outback$() - Regions Unexplored - Hot, No rain - Acacia trees, Dead bushes, Cacti$(br)$(bold)Red Oasis$() - Terralith - Hot, No rain - Jungle trees, Moss, Lily pads, Dead bushes…$(br)$(bold)Saguaro Desert$() - Regions Unexplored - Hot, No rain - Dead bushes, Cacti"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Sandstone Valley$() - Terralith - Hot, No rain - Jungle trees, Moss, Lily pads, Dead bushes…$(br)$(bold)Savanna Badlands$() - Terralith - Warm, No rain - Acacia trees, Oak trees, Flowers$(br)$(bold)Warped Mesa$() - Terralith - Hot, No rain - Dead bushes, Cacti$(br)$(bold)White Mesa$() - Terralith - Hot, No rain - Dead bushes, Cacti$(br)$(bold)Wooded Badlands$() - Vanilla - Hot, No rain - Oak trees, Dead bushes, Cacti"
+    }
+  ]
+}

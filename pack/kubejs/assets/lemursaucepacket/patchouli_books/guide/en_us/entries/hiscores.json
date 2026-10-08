@@ -2,7 +2,7 @@
   "name": "Hiscores",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:gold_block",
-  "sortnum": 17,
+  "sortnum": 34,
   "pages": [
     {
       "type": "patchouli:text",

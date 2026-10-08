@@ -1,0 +1,34 @@
+{
+  "name": "Biomes",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:filled_map",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Overworld here is a lot bigger on the inside than vanilla's. $(bold)Terralith$() reshapes the land and adds nearly a hundred biomes (canyons, volcanoes, floating skylands, Yellowstone and Yosemite), $(bold)Regions Unexplored$() adds nearly eighty more (redwoods, baobab savannas, bayous, glowing caves), and $(bold)Tectonic$() pushes mountains higher and valleys deeper. $(bold)Nullscape$() remakes the End's outer islands. Vanilla's own biomes are all still there, some of them with Terralith's touches."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "These pages are written from the game's own data, so they're never out of date: when a mod updates, so do they.$(br2)Press $(bold)F3$() to see the biome you're standing in (the line $(italic)Biome:$()). Biome ids name their mod: $(#e0ac46)terralith:yellowstone$(), $(#e0ac46)regions_unexplored:redwoods$(), $(#e0ac46)minecraft:plains$()."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How to read a biome's card",
+      "text": "$(li)$(bold)The picture.$() Until a biome has been photographed, its card shows a painting made from the game's own data: the biome's sky, grass, leaf and water colours, and the trees and plants that really grow there.$(br)$(li)$(bold)Climate.$() How warm it is, and whether it rains, snows or stays dry. Snow settles where it's freezing; crops grow anywhere you can water them.$(br)$(li)$(bold)Grows here.$() The trees first, by the wood they give (what your Woodcutting level asks about), then the plants that set the biome apart. Grass and sugar cane grow nearly everywhere, so they aren't listed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(bold)Creatures$() and $(bold)Structures.$() Only the ones that make the biome worth a visit: zombies and dungeons turn up nearly everywhere, so they're left out, and what most of a page's biomes share (the bears and deer of the forests) is said once, above their cards. Click one to see every biome it's found in."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Overworld's biomes",
+      "text": "$(li)$(l:lemursaucepacket:biomes-forests)Forests and taigas$(/l): 37 biomes$(br)$(li)$(l:lemursaucepacket:biomes-plains)Plains, meadows and fields$(/l): 21 biomes$(br)$(li)$(l:lemursaucepacket:biomes-snowy)Snowy and frozen lands$(/l): 31 biomes$(br)$(li)$(l:lemursaucepacket:biomes-mountains)Mountains, peaks and highlands$(/l): 28 biomes$(br)$(li)$(l:lemursaucepacket:biomes-deserts)Deserts, badlands and canyons$(/l): 18 biomes$(br)$(li)$(l:lemursaucepacket:biomes-jungles)Jungles and rainforests$(/l): 10 biomes$(br)$(li)$(l:lemursaucepacket:biomes-savannas)Savannas, steppes and shrublands$(/l): 12 biomes"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(l:lemursaucepacket:biomes-wetlands)Swamps and wetlands$(/l): 8 biomes$(br)$(li)$(l:lemursaucepacket:biomes-oceans)Oceans, rivers and coasts$(/l): 25 biomes$(br)$(li)$(l:lemursaucepacket:biomes-caves)Caves and the deep$(/l): 20 biomes$(br2)The Nether and the End have pages of their own: $(l:lemursaucepacket:nether)The Nether$(/l) and $(l:lemursaucepacket:end)The End$(/l)."
+    }
+  ]
+}

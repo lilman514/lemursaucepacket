@@ -1,0 +1,29 @@
+{
+  "name": "Mountains, peaks and highlands",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:stone",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Tectonic makes the mountains here much taller and steeper than vanilla's, and Terralith adds cliffs, spires, highlands and volcanoes to them. Up high you'll find goats, emerald ore (it only generates in mountain biomes), snow and ice at the top, and views worth a waystone.$(br2)Falls are the real danger up here. Carry a water bucket, and train $(bold)Agility$(): each level softens fall damage. See $(l:lemursaucepacket:skills)Skills$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Alpine Highlands$() - Terralith - Temperate, Dry - Sweet berries$(br)$(bold)Arid Highlands$() - Terralith - Hot, No rain - Dead bushes, Flowers$(br)$(bold)Ashen Savanna$() - Terralith - Warm, No rain - Acacia trees, Flowers$(br)$(bold)Basalt Cliffs$() - Terralith - Temperate, Dry$(br)$(bold)Caldera$() - Terralith - Temperate, Wet - Ferns, Sweet berries$(br)$(bold)Chalk Cliffs$() - Regions Unexplored - Temperate, Wet - Oak trees$(br)$(bold)Cherry Grove$() - Vanilla - Temperate, Wet - Cherry trees, Bamboo, Flowers, Azaleas"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Desert Spires$() - Terralith - Hot, No rain - Jungle trees, Moss, Lily pads, Dead bushes…$(br)$(bold)Forested Highlands$() - Terralith - Cold, Dry - Dark oak trees, Big spruce trees, Spruce trees, Flowers$(br)$(bold)Granite Cliffs$() - Terralith - Temperate, Dry - Birch trees$(br)$(bold)Haze Mountain$() - Terralith - Cold, Rain - Oak trees, Birch trees, Spruce trees$(br)$(bold)Highland Fields$() - Regions Unexplored - Temperate, Rain - Pine trees$(br)$(bold)Highlands$() - Terralith - Temperate, Rain - Spruce trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Jungle Mountains$() - Terralith - Warm, Wet - Jungle trees, Oak trees, Bamboo, Flowers…$(br)$(bold)Meadow$() - Vanilla - Temperate, Wet - Oak trees, Birch trees, Flowers$(br)$(bold)Painted Mountains$() - Terralith - Warm, Dry - Dead bushes$(br)$(bold)Savanna Slopes$() - Terralith - Warm, No rain - Acacia trees, Oak trees, Flowers$(br)$(bold)Stony Peaks$() - Vanilla - Warm, Dry$(br)$(bold)Stony Spires$() - Terralith - Temperate, Dry - Oak trees, Azaleas$(br)$(bold)Temperate Highlands$() - Terralith - Temperate, Dry - Oak trees, Dark oak trees, Birch trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Towering Cliffs$() - Regions Unexplored - Temperate, Wet - Pine trees, Ferns$(br)$(bold)Tropical Jungle$() - Terralith - Warm, Wet - Jungle trees, Bamboo, Flowers, Melons$(br)$(bold)Volcanic Crater$() - Terralith - Warm, Dry$(br)$(bold)Volcanic Peaks$() - Terralith - Warm, Dry$(br)$(bold)White Cliffs$() - Terralith - Temperate, Dry - Birch trees$(br)$(bold)Windswept Spires$() - Terralith - Cold, Dry - Spruce trees$(br)$(bold)Wisteria Grove$() - Regions Unexplored - Warm, Wet - Wisteria trees, Flowers$(br)$(bold)Yosemite Cliffs$() - Terralith - Cold, Wet - Ferns, Sweet berries"
+    }
+  ]
+}

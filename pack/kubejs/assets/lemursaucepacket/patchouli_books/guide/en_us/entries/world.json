@@ -2,7 +2,7 @@
   "name": "The world and its rules",
   "category": "lemursaucepacket:wiki",
   "icon": "minecraft:grass_block",
-  "sortnum": 4,
+  "sortnum": 6,
   "pages": [
     {
       "type": "patchouli:text",

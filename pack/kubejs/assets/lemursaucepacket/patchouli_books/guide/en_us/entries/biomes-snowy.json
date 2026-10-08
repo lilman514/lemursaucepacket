@@ -1,0 +1,33 @@
+{
+  "name": "Snowy and frozen lands",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:snowball",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Cold lands: snowy plains and taigas, ice spikes, frozen marshes and chasms, and Terralith's wintry forests and Siberian groves. Snow falls instead of rain, water freezes, and the animals change: white foxes, polar bears near the ice, and Naturalist's $(bold)mammoths$() in the coldest places. Strays (skeletons with slowing arrows) take the place of skeletons on the surface.$(br2)$(bold)Powder snow$() looks like snow, but you sink into it and freeze. Leather boots let you walk on top of it, and a bucket picks it up."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - Climate - Grows here$()$(br)$(bold)Alpha Islands (Winter)$() - Terralith - Freezing, Snow - Oak trees, Flowers$(br)$(bold)Alpine Grove$() - Terralith - Freezing, Snow - Spruce trees$(br)$(bold)Cold Boreal Taiga$() - Regions Unexplored - Freezing, Snow - Larch trees, Birch trees, Oak trees, Ferns…$(br)$(bold)Cold Shrubland$() - Terralith - Freezing, Snow - Oak trees, Flowers$(br)$(bold)Emerald Peaks$() - Terralith - Freezing, Snow$(br)$(bold)Frozen Cliffs$() - Terralith - Freezing, Snow - Spruce trees$(br)$(bold)Frozen Peaks$() - Vanilla - Freezing, Snow"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frozen Pine Taiga$() - Regions Unexplored - Freezing, Snow - Pine trees, Ferns, Sweet berries, Flowers$(br)$(bold)Glacial Chasm$() - Terralith - Freezing, Snow$(br)$(bold)Gravel Desert$() - Terralith - Freezing, Snow - Coral reefs$(br)$(bold)Grove$() - Vanilla - Freezing, Snow - Big spruce trees, Spruce trees$(br)$(bold)Ice Marsh$() - Terralith - Freezing, Snow - Mangrove trees, Flowers, Dead bushes, Lily pads$(br)$(bold)Ice Spikes$() - Vanilla - Freezing, Snow - Spruce trees, Ice spikes$(br)$(bold)Icy Heights$() - Regions Unexplored - Freezing, Snow - Pine trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Jagged Peaks$() - Vanilla - Freezing, Snow$(br)$(bold)Rocky Mountains$() - Terralith - Cold, No rain$(br)$(bold)Rocky Shrubland$() - Terralith - Freezing, Snow - Oak trees, Flowers$(br)$(bold)Scarlet Mountains$() - Terralith - Freezing, Snow$(br)$(bold)Siberian Grove$() - Terralith - Freezing, Snow - Ferns, Sweet berries$(br)$(bold)Siberian Taiga$() - Terralith - Freezing, No rain - Ferns, Sweet berries$(br)$(bold)Snowy Badlands$() - Terralith - Freezing, Snow - Dead bushes, Cacti$(br)$(bold)Snowy Cherry Grove$() - Terralith - Freezing, Snow - Cherry trees, Azaleas"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Snowy Maple Forest$() - Terralith - Freezing, Snow - Dark oak trees, Big spruce trees, Spruce trees, Flowers$(br)$(bold)Snowy Plains$() - Vanilla - Freezing, Snow - Spruce trees$(br)$(bold)Snowy Shield$() - Terralith - Freezing, Snow - Spruce trees, Birch trees, Oak trees, Ferns…$(br)$(bold)Snowy Slopes$() - Vanilla - Freezing, Snow$(br)$(bold)Snowy Taiga$() - Vanilla - Freezing, Snow - Big spruce trees, Spruce trees, Ferns, Sweet berries$(br)$(bold)Spires$() - Regions Unexplored - Freezing, Snow - Spruce trees, Flowers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tundra$() - Regions Unexplored - Freezing, No rain - Pine trees, Spruce trees, Flowers, Ferns$(br)$(bold)Wintry Forest$() - Terralith - Freezing, Snow - Spruce trees, Big spruce trees, Ferns, Sweet berries$(br)$(bold)Wintry Lowlands$() - Terralith - Freezing, Snow - Spruce trees, Big spruce trees, Ferns, Sweet berries"
+    }
+  ]
+}

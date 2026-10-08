@@ -1,0 +1,45 @@
+{
+  "name": "The End",
+  "category": "lemursaucepacket:wiki",
+  "icon": "minecraft:ender_eye",
+  "sortnum": 19,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The End is where Dragon Slayer I ends: the Ender Dragon on her island, rebuilt by YUNG's Better End Island. Past her, Nullscape remakes the outer islands into broken barrens, crystal peaks and shadowlands, and Dungeons and Taverns, Structory, Towers of the Wild and When Dungeons Arise add castles, ships, towers and an aviary to the end cities that were already there."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Getting there",
+      "text": "1. $(bold)Eyes of ender.$() They need $(bold)Brewing 55$() to make (blaze powder and an ender pearl). See $(l:lemursaucepacket:skills)Skills$(/l).$(br)2. $(bold)A stronghold.$() Dragon Slayer I's three pieces make a $(bold)Map to the Stronghold$(), which points at one; thrown eyes of ender lead to it too. Strongholds are rebuilt by YUNG's Better Strongholds: bigger, and more dangerous.$(br)3. $(bold)The portal.$() Fill the frame in the portal room with eyes and jump in."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Bring blocks to bridge the void, a stack of ender pearls, a bow, and slow falling if you can brew it. The void is a long way down, and nothing comes back up."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Ender Dragon",
+      "text": "Her fight is Dragon Slayer I's last step: everyone on the quest who is near her when she falls gets her head for Oziach. Destroy the end crystals on the obsidian pillars first (some are caged), then fight her when she perches on the portal. See $(l:lemursaucepacket:quests)Quests$(/l)."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The outer islands",
+      "text": "Through the gateway that opens when she dies are the outer islands: vanilla's highlands, midlands and barrens, and Nullscape's void barrens, crystal peaks and shadowlands. $(bold)End cities$() stand here, with shulkers, loot and sometimes an end ship carrying an $(bold)elytra$() (it needs $(bold)Agility 30$() to wear). Shulker boxes need $(bold)Crafting 65$() to make."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The biomes",
+      "text": "$(#b9a98a)Biome - From - About$()$(br)$(bold)Crystal Peaks$() - Nullscape - Spires of purpur crystal out in the End.$(br)$(bold)End Barrens$() - Vanilla - The outer islands’ edges.$(br)$(bold)End Highlands$() - Vanilla - The outer islands’ high ground: end cities and chorus trees.$(br)$(bold)End Midlands$() - Vanilla - The outer islands’ slopes.$(br)$(bold)Shadowlands$() - Nullscape - Dark, jagged End islands.$(br)$(bold)Small End Islands$() - Vanilla - Little floating islands between the big ones.$(br)$(bold)The End$() - Vanilla - The dragon’s island."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Void Barrens$() - Nullscape - Bare, broken islands over the void."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Its structures",
+      "text": "$(#b9a98a)Structure - From - Found in$()$(br)$(bold)Aviary$() - When Dungeons Arise - The End$(br)$(bold)Dragon Skeleton$() - Nullscape - The End$(br)$(bold)End$() - Towers of the Wild - The End$(br)$(bold)End Castle$() - Dungeons and Taverns - The End$(br)$(bold)End City$() - Vanilla - The End$(br)$(bold)End Lighthouse$() - Dungeons and Taverns - The End$(br)$(bold)End Ship$() - Dungeons and Taverns - The End$(br)$(bold)End Tower$() - Structory: Towers - The End$(br)$(bold)The Rift$() - Nullscape - The End"
+    }
+  ]
+}
