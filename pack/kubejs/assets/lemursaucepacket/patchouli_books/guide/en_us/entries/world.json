@@ -29,6 +29,11 @@
     },
     {
       "type": "patchouli:text",
+      "title": "Where you start",
+      "text": "A new world starts everyone in $(bold)easy land$(): a temperate forest or plains whose trees anyone can chop at Woodcutting 1 (oak, birch, spruce), with nothing harder within about 128 blocks and little within 256. Harder land means any tree that needs a Woodcutting level (acacia, jungle, dark oak, cherry, mangrove and the rest), and deserts, savannas, snow, jungles, swamps, mountains and caves. If the world would put spawn somewhere else, the server moves it to the nearest easy land when the world is made, before it builds Lemurton nearby."
+    },
+    {
+      "type": "patchouli:text",
       "title": "What's different from vanilla",
       "text": "$(li)$(bold)Create is the spine.$() Every stage of progress runs through Create machines; other mods feed it (ore veins, crops) or give it a reason to exist (structures, an economy, airships).$(br)$(li)$(bold)Terrain:$() Terralith, Regions Unexplored and Nullscape rework the Overworld and the End, with new trees and woods.$(br)$(li)$(bold)Structures:$() When Dungeons Arise, YUNG's structures, Create-themed ruins and towns, and tall towers with a waystone on top. Loot chests are per player (Lootr), so nobody gets beaten to one."
     },

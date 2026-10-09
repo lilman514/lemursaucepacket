@@ -1,5 +1,5 @@
 // play.limas.ca/hiscores: everyone who plays on mc.limas.ca, ranked RuneScape-style. The game server uploads each
-// player's record (lsp_fixes, every ten minutes) to /api/hiscores-ingest; /api/hiscores hands them all over, and this
+// player's record (lsp_fixes, every half hour) to /api/hiscores-ingest; /api/hiscores hands them all over, and this
 // works the tables out, the same way /hiscores does in game: Overall by total level then XP, skills by XP, everything
 // else by count (nobody with none is ranked), ties A to Z. ?table=mining shows a table, ?player=Name a player.
 ;(() => {

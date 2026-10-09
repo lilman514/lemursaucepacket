@@ -1,4 +1,5 @@
-// POST /api/hiscores-ingest: the game server's records (lsp_fixes hiscores package, every ten minutes and on shutdown).
+// POST /api/hiscores-ingest: the game server's records (lsp_fixes hiscores package, every half hour while anyone plays,
+// and on shutdown; hiscores/hiscores.mjs UPLOAD_EVERY keeps it there for Neon's free plan).
 // Each upload is signed with the server's own Ed25519 key (made in game by /lsp hiscores keygen, kept on the server); only
 // the public half is here, so nothing secret lives in this project. A signature older than fifteen minutes is refused,
 // and a record never replaces a newer one.

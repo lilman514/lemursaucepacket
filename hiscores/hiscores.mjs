@@ -68,9 +68,15 @@ export const COLLECTIONS = [
   { id: 'heads', name: 'Mob heads', what: 'Skeleton, wither skeleton, zombie, creeper, piglin and dragon heads', match: ['minecraft:skeleton_skull', 'minecraft:wither_skeleton_skull', 'minecraft:zombie_head', 'minecraft:creeper_head', 'minecraft:piglin_head', 'minecraft:dragon_head'] }
 ]
 
-/** How often the server records everyone online, and uploads what changed (seconds). */
+/**
+ * How often the server records everyone online (in game only), and uploads what changed (seconds). Uploads are kept to
+ * half an hour for Neon's free plan (the owner, 2026-10-08: "make sure the hiscores polling rate is low enough to not
+ * destroy our neon plan"): 100 CU-hours a month, and the database sleeps after 5 idle minutes, so each upload costs about
+ * five minutes awake at 0.25 CU. Every 30 minutes with someone always online is ~30 CU-hours a month; nothing is sent
+ * while nobody plays. The website's reads are cached for as long (website/api/hiscores.js).
+ */
 export const RECORD_EVERY = 300
-export const UPLOAD_EVERY = 600
+export const UPLOAD_EVERY = 1800
 
 /** Where the server sends its records: the website's ingest function (signed with the server's own key). */
 export const UPLOAD_URL = 'https://play.limas.ca/api/hiscores-ingest'

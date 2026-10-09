@@ -11,7 +11,7 @@
     {
       "type": "patchouli:text",
       "title": "Finding it",
-      "text": "You don't wake up in the city: it stands a few minutes' walk from spawn (usually 400 to 700 blocks), out of sight on purpose, in open green country. If there's none that close (a world that starts you in a desert or on the ice), it goes further out to find some, and failing that it's laid out in the land it finds: on sand among palms, or under snow among spruces. Either way it eases into the hills around it rather than standing on a platform. Your first login hands you a $(bold)Compass to Lemurton$(), and a line in chat says how far it is and which way. Finding the city is the first quest."
+      "text": "You don't wake up in the city: it stands a few minutes' walk from spawn (usually 400 to 700 blocks), out of sight on purpose, in open green country. If there's none that close, it goes further out to find some, and failing that it's laid out in the land it finds: on sand among palms, or under snow among spruces. Either way it eases into the hills around it rather than standing on a platform. Your first login hands you a $(bold)Compass to Lemurton$(), and a line in chat says how far it is and which way. Finding the city is the first quest."
     },
     {
       "type": "patchouli:text",

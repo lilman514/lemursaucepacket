@@ -370,7 +370,7 @@ hash = "b80b597ed27966bfba1ba10411dd197871f72890389a6168172206365599d768"
 
 [[files]]
 file = "config/lemursaucepacket/hiscores.json"
-hash = "d6ce148c777c5178f0f336446b90ede04739394e12943c5879952511f0adafb2"
+hash = "87163c1c9e806a4ee5ceb90609cb6f6aaea5c9b9d9723569e66cfea2649ca579"
 
 [[files]]
 file = "config/lemursaucepacket/hub_layout.json"
@@ -826,7 +826,7 @@ hash = "8088120c6fb9f2b105d95b2f95723baf574c7217d010dcd8cc382dd0d31a9173"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/hiscores.json"
-hash = "52a1d507aec694704f54b81ab20feb04becd4881fc5cbfe5f3e136cb0b0fab52"
+hash = "db4a7da07ce0a5cec12120145bc2b90bbd633867e20d3096cc885cd045c2321b"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/interface.json"
@@ -846,7 +846,7 @@ hash = "306e74e32068ecf21adf7a505036a1fb01e6a8a5f8f75e58b66cbfb45a440eba"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lemurton.json"
-hash = "4de4ed6a6da6b39a4c132112a9924d47eabc1a872f99ba4c4b41e15c993fe6bd"
+hash = "d38c75c06e5a78eaf75242068d73c1173dd2f489af63748fc6b7ed96d01ee7be"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/lifesteal.json"
@@ -902,7 +902,7 @@ hash = "85b49ef98a7fb59158f1d160ee361e4af775c8a1f31d24ae57dfe1746321f1f3"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/patchouli_books/guide/en_us/entries/world.json"
-hash = "cc673c480193ec10bd09fb800519b9c55fb7582578d71a21802b7afcab2b5c98"
+hash = "98e66deefd14d02df71953cfbcb30e497e40738c1cb340762c89457881d822f4"
 
 [[files]]
 file = "kubejs/assets/lemursaucepacket/skill_guide.json"

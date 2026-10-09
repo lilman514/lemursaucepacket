@@ -29,7 +29,7 @@ Each table shows the top ten and where you are. Click a name for that player's h
 - **Overall** ranks by total level, and total XP between players on the same total. **Skills** rank by XP. Everything else ranks by count.
 - You're on a table once you have something on it: a skill you've trained, a boss you've killed. Overall and combat level have everyone.
 - Ties go in name order.
-- The server writes everyone online down every five minutes, and when you join or leave. What changed goes to the website every ten minutes, so the website can be a few minutes behind the game.
+- The server writes everyone online down every five minutes, and when you join or leave. What changed goes to the website every half hour, so the website can be up to an hour behind the game: an upload, then the site's own half-hour cache.
 - Elvarg counts for everyone who was in the fight when she fell; a Fight Pits or Inferno win counts for the one who won it.
 
 ## What's ranked

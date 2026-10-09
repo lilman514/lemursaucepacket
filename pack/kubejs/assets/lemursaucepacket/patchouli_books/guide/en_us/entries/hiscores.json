@@ -20,7 +20,7 @@
     {
       "type": "patchouli:text",
       "title": "How the ranking works",
-      "text": "$(li)$(bold)Overall$() ranks by total level, and total XP between players on the same total. $(bold)Skills$() rank by XP. Everything else ranks by count.$(br)$(li)You're on a table once you have something on it: a skill you've trained, a boss you've killed. Overall and combat level have everyone.$(br)$(li)Ties go in name order.$(br)$(li)The server writes everyone online down every five minutes, and when you join or leave. What changed goes to the website every ten minutes, so the website can be a few minutes behind the game."
+      "text": "$(li)$(bold)Overall$() ranks by total level, and total XP between players on the same total. $(bold)Skills$() rank by XP. Everything else ranks by count.$(br)$(li)You're on a table once you have something on it: a skill you've trained, a boss you've killed. Overall and combat level have everyone.$(br)$(li)Ties go in name order.$(br)$(li)The server writes everyone online down every five minutes, and when you join or leave. What changed goes to the website every half hour, so the website can be up to an hour behind the game: an upload, then the site's own half-hour cache."
     },
     {
       "type": "patchouli:text",

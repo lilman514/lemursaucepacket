@@ -190,6 +190,6 @@
     }
   ],
   "recordEvery": 300,
-  "uploadEvery": 600,
+  "uploadEvery": 1800,
   "uploadUrl": "https://play.limas.ca/api/hiscores-ingest"
 }

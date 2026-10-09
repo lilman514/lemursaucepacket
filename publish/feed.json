@@ -44,6 +44,12 @@
   ],
   "news": [
     {
+      "title": "1.16.1: The hiscores are on the website",
+      "date": "2026-10-08",
+      "body": "play.limas.ca/hiscores is live: everyone on the server ranked RuneScape-style, by every skill, total and combat level, quest points, bosses and collections. The server sends what changed every half hour while anyone plays, so the website can be up to an hour behind; /hiscores in game is always up to the minute.",
+      "url": "https://play.limas.ca/hiscores"
+    },
+    {
       "title": "1.16.0: A fresh world that starts you in easy land, machines that pay whoever stands by them, and Nekoma's Fixed",
       "date": "2026-10-08",
       "body": "The server's world has been reset, and new worlds now start everyone in easy land: a forest or plains whose trees anyone can chop at Woodcutting 1, with no acacia, jungle, desert, snow or mountains close by. Create's machines now pay skill XP: when a drill, saw, harvester, mechanical crafter, Crafter, basin or fan does a skill's work, every player within 16 blocks of it gets the XP that work pays by hand, all of it each. A block someone placed pays nothing, and a cobblestone generator's blocks pay a tenth (cobblestone now pays 1 Mining, as stone does). With nobody near, the new XP Bank keeps a share of what machines within 8 blocks of it earn: 10% at Tier I (Crafting 40), 25% with its Tier II upgrade (Crafting 60), 50% at Tier III (Crafting 80). You take from any bank at the tier you could make yourself, and a chat message with a ding says when you get less. Nekoma's Fixed joins the pack: amber, aqua, indigo and maroon dyes for every dyed block, dyed bricks in 20 colours, seventeen froglights, a torch that burns under water, the Redstone Striker, clocks you can hang up, and a kiln that fires building blocks twice as fast. Four new quests in the Factory Floor cover machine XP and the bank.",
